@@ -89,6 +89,24 @@ Rien à copier : le dépôt lit directement `/mnt/c/PalExports`. Les scripts du
 projet pointent dessus via la variable d'environnement `RAW_DIR`
 (défaut : `/mnt/c/PalExports/Exports`).
 
+## Convertir une save serveur en JSON (import de progression)
+
+Les saves v1.0+ sont au format `PlM` (compression Oodle) : l'outil PyPI
+`palworld-save-tools` (0.24.0, format `PlZ`) ne les lit PAS. Utiliser le fork
+`palsav` + `palooz` du repo PalworldSaveTools :
+
+```bash
+cd packages/pipeline
+python3 -m venv .venv
+git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/pst
+.venv/bin/pip install /tmp/pst/src/palsav/palooz   # compile ooz (g++ requis)
+.venv/bin/pip install /tmp/pst/src/palsav
+.venv/bin/python -m palsav.commands.convert raw/save/<GUID>.sav --to-json -o raw/save/player.sav.json
+```
+
+Copier depuis le serveur dédié uniquement les `Players/<GUID>.sav`
+(quelques centaines de Ko) — jamais `Level.sav`.
+
 ## À chaque mise à jour du jeu
 
 1. Steam met à jour le pak → relancer FModel, recharger l'archive.

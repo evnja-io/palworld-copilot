@@ -52,3 +52,58 @@ de transformation `worldToMap` s'appliquent partout.
 **Conséquence** : Phase 2 importe ce dataset (vérifier la licence du repo et
 créditer) ; les GUID sont ceux que les saves référencent → corrélation d'import
 de save attendue directe (à confirmer en Task 7).
+
+## 2026-07-21 — Format de save PlM et outillage de conversion
+
+**Constat** : les saves du serveur (v1.0+) portent le magic `PlM` (Oodle) ;
+`palworld-save-tools` PyPI/GitHub (PlZ, zlib) échoue. Le fork `palsav` de
+deafdudecomputers/PalworldSaveTools + `palooz` (ooz compilé localement)
+convertit correctement (runbook, section « Convertir une save serveur »).
+**Conséquence** : le parseur TS « maison » prévu en Phase 5 est redimensionné —
+décompression Oodle non triviale en pur TS. Options pour la Phase 5 : (a)
+sous-processus Python (palsav) derrière l'endpoint d'import — impossible sur
+Vercel, donc import exécuté côté opérateur (script CLI local qui POST le
+résultat), ou (b) portage/binding ooz en WASM. Décision à prendre au plan de
+Phase 5 ; le spike valide en tout cas le contenu.
+
+## 2026-07-21 — Contenu de RecordData (save joueur) et corrélation
+
+**Constat** (save réelle du serveur) : `RecordData` contient notamment
+`PaldeckUnlockFlag` (41), `PalCaptureCount`/`PalCaptureBonusCount` (compteurs
+10/10), `RelicObtainForInstanceFlag` (GUIDs — **2/2 retrouvés dans
+effigies.json : corrélation directe confirmée**),
+`NoteObtainForInstanceFlag`, `FastTravelPointUnlockFlag`,
+`TowerBossDefeatFlag`, `NormalBossDefeatFlag`, compteurs de donjons. Les
+technologies débloquées sont ailleurs : `SaveData.UnlockedRecipeTechnologyNames`.
+**Conséquence** : l'import de save peut couvrir Paldex, technos ET collectibles
+carte (effigies/notes/voyages rapides/boss) — le repli « pals+technos seulement »
+n'est pas nécessaire.
+
+## 2026-07-21 — Couverture du dataset d'effigies
+
+**Constat** : effigies.json (save-pal) = 153 entrées ; le wiki annonce 605
+effigies en v1.0+ (toutes îles). Le dataset est donc partiel (probablement
+île principale, pré-DLC).
+**Conséquence** : Phase 2 doit regénérer le dataset complet via un scan des
+cellules umap (outillage type arkive) ou une source plus récente. Les 153
+suffisent pour développer la mécanique.
+
+## 2026-07-21 — Validation visuelle des coordonnées : différée en Phase 3
+
+**Constat** : aucune source publique de coordonnées d'effigies pour un
+recoupement numérique (carte interactive du wiki = stub vide). Validation
+interne : 109/153 effigies dans les bornes de l'île principale, le reste en
+zones DLC — cohérent ; grille monde unique confirmée par les positions des
+boss DLC.
+**Conséquence** : la validation fine se fera en Phase 3 au premier rendu des
+marqueurs sur les tuiles réelles (un décalage systématique y serait flagrant).
+Risque résiduel : faible. Au passage : MapCollectablesMod publie
+`TeleportCoordinates.json` (voyages rapides, open source) — utile en Phase 2.
+
+## 2026-07-21 — Divers Phase 0
+
+- `T_TreeMap` (carte Arbre-Monde) non exporté — à faire à la prochaine session
+  FModel, non bloquant.
+- Le script `spike:chests` prévu au plan n'a pas été écrit : la table qu'il
+  devait inspecter n'existe pas (constat établi par recherche communautaire,
+  décision coffres prise sans lui).
