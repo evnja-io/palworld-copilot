@@ -8,3 +8,6 @@ packages/pipeline/out/
 .svelte-kit/
 __pycache__/
 .venv/
+.vercel
+.env*
+!.env.example
