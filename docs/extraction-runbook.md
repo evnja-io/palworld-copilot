@@ -10,9 +10,12 @@ spike et corrigés ici.
 3. Au premier lancement, ajouter le jeu : Directory selector →
    `C:\Program Files (x86)\Steam\steamapps\common\Palworld`.
 4. Settings → General : UE Versions = `GAME_UE5_1`.
-5. Récupérer sur https://github.com/elliotks/Palworld-FModel :
-   - le fichier `.usmap` (mappings) → Settings → Advanced → Mappings file path ;
-   - la clé AES → Directory → AES Keys → coller la clé principale.
+5. Récupérer le fichier `.usmap` (mappings) et la clé AES :
+   - source à jour : https://github.com/PalworldModding/UsefulFiles (les mappings
+     de https://github.com/elliotks/Palworld-FModel sont antérieurs à la v1.0 et
+     peuvent échouer sur les tables récentes) ;
+   - `.usmap` → Settings → Advanced → Mappings file path ;
+   - clé AES → Directory → AES Keys → coller la clé principale.
 6. Créer `C:\PalExports`. Settings → General → Output Directory = `C:\PalExports`.
 7. Charger l'archive : onglet Archives → double-clic sur `Pal-Windows.pak`.
    ⚠️ Le pak fait 38 Go : la première indexation prend plusieurs minutes.
@@ -27,17 +30,58 @@ Naviguer dans l'arborescence (onglet Folders) → clic droit sur l'asset →
 
 Clic droit sur l'asset texture → **Save Texture (.png)**.
 
-## Où chercher (à confirmer pendant le spike)
+## Liste des assets à exporter (vérifiée — recherche communautaire juillet 2026)
 
-- DataTables : `Pal/Content/Pal/DataTable/` (sous-dossiers par domaine).
-  Croiser avec les noms d'assets cités dans le code de
-  https://github.com/oMaN-Rod/palworld-save-pal et
-  https://github.com/blaynem/paldex si un nom ne saute pas aux yeux.
-- Localisation : `Pal/Content/L10N/en/` et `Pal/Content/L10N/fr/`
-  (DataTables de texte : noms de Pals, d'items, descriptions…).
-- Carte du monde : `Pal/Content/Pal/Texture/UI/Map/T_WorldMap`.
-  Chercher aussi les textures des îles DLC (Sakurajima, Feybreak) dans le même
-  voisinage — noter leurs chemins exacts ici.
+Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
+`DT_Xxx_Common` (CompositeDataTable). **Exporter les deux quand les deux existent.**
+
+### DataTables (`Pal/Content/Pal/DataTable/…`) — Save Properties (.json)
+
+| Domaine | Asset |
+|---|---|
+| Pals | `Character/DT_PalMonsterParameter` |
+| Items | `Item/DT_ItemDataTable` |
+| Icônes d'items | `Item/DT_ItemIconDataTable` |
+| Recettes de craft | `Item/DT_ItemRecipeDataTable` |
+| Arbre technologique | `Technology/DT_TechnologyRecipeUnlock` |
+| Icônes de technos | `Technology/DT_TechnologyIconData` |
+| Constructions | `MapObject/Building/DT_BuildObjectDataTable` |
+| Objets de map (master) | `MapObject/DT_MapObjectMasterDataTable` |
+| Boss Alpha (positions !) | `UI/DT_BossSpawnerLoactionData` — la faute « Loaction » est dans le vrai nom |
+| Donjons | `Dungeon/DT_DungeonLevelDataTable`, `Dungeon/DT_DungeonSpawnAreaDataTable` |
+| Bornes de la carte | `WorldMapUIData/DT_WorldMapUIData` (landScapeRealPositionMin/Max) |
+
+### L10N (`Pal/Content/L10N/{en,fr}/Pal/DataTable/Text/…`) — Save Properties (.json)
+
+⚠️ Utiliser les copies sous `L10N/` — les tables du même nom sous
+`Pal/Content/Pal/DataTable/Text/` sont le texte source japonais.
+
+`DT_PalNameText_Common`, `DT_ItemNameText_Common`, `DT_ItemDescriptionText_Common`,
+`DT_SkillNameText_Common`, `DT_TechnologyNameText_Common`,
+`DT_MapObjectNameText_Common`, `DT_MapRespawnPointInfoText`
+(+ descriptions longues si présentes : `DT_PalLongDescriptionText_Common`,
+`DT_TechnologyDescText_Common`, `DT_BuildObjectDescText_Common`).
+
+### Textures — Save Texture (.png)
+
+- `Pal/Content/Pal/Texture/UI/Map/T_WorldMap` — carte unique 8192×8192 :
+  **Sakurajima et Feybreak sont peints dedans**, il n'existe pas de textures
+  DLC séparées.
+- `Pal/Content/Pal/Texture/UI/Map/T_TreeMap` — carte de l'Arbre-Monde (v1.0).
+
+### Ce qui ne s'exporte PAS depuis FModel (et d'où ça vient à la place)
+
+- **Effigies Lifmunk, coffres, voyage rapide** : acteurs placés dans ~10 000
+  cellules World Partition (`Maps/MainWorld_5/PL_MainWorld5/_Generated_/*.umap`)
+  — inexploitable à la main. Source utilisée : datasets dérivés open source de
+  https://github.com/oMaN-Rod/palworld-save-pal (`data/json/effigies.json`,
+  GUID → coordonnées — les mêmes GUID que ceux des saves) et outillage
+  https://github.com/arkive-games/arkive pour regénérer au besoin.
+- **Positions des tours de boss** : absentes des assets (prouvé par
+  catrenelle/PalDex) — coordonnées HUD relevées à la main (elles sont peu
+  nombreuses et fixes).
+- Référence de datamining la plus complète :
+  https://github.com/catrenelle/PalDex/blob/master/NOTES.md
 
 ## Rapatrier vers WSL
 
