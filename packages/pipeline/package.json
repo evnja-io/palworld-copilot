@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "spike:smoke": "tsx spike/smoke.ts",
-    "spike:inventory": "tsx spike/inventory.ts"
+    "spike:inventory": "tsx spike/inventory.ts",
+    "spike:pals": "tsx spike/pals.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
