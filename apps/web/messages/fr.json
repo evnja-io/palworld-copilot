@@ -1,0 +1,15 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "app_title": "Palworld Companion",
+  "nav_paldex": "Paldex",
+  "nav_items": "Objets",
+  "nav_craft": "Craft",
+  "nav_tech": "Technologies",
+  "nav_buildings": "Constructions",
+  "nav_map": "Carte",
+  "common_soon": "Bientôt disponible",
+  "auth_login_discord": "Se connecter avec Discord",
+  "auth_logout": "Se déconnecter",
+  "auth_denied_title": "Accès privé",
+  "auth_denied_body": "Cet outil est réservé au groupe. Demande à Sephi de t'ajouter à la liste."
+}

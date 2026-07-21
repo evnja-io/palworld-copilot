@@ -1,0 +1,15 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "app_title": "Palworld Companion",
+  "nav_paldex": "Paldex",
+  "nav_items": "Items",
+  "nav_craft": "Crafting",
+  "nav_tech": "Technology",
+  "nav_buildings": "Buildings",
+  "nav_map": "Map",
+  "common_soon": "Coming soon",
+  "auth_login_discord": "Sign in with Discord",
+  "auth_logout": "Sign out",
+  "auth_denied_title": "Private access",
+  "auth_denied_body": "This tool is group-only. Ask Sephi to add you to the allowlist."
+}
