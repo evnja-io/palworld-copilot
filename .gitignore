@@ -1,0 +1,10 @@
+node_modules/
+packages/pipeline/raw/
+packages/pipeline/out/
+.env
+.env.*
+!.env.example
+.vercel/
+.svelte-kit/
+__pycache__/
+.venv/
