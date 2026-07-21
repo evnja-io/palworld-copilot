@@ -5,7 +5,8 @@
   "scripts": {
     "spike:smoke": "tsx spike/smoke.ts",
     "spike:inventory": "tsx spike/inventory.ts",
-    "spike:pals": "tsx spike/pals.ts"
+    "spike:pals": "tsx spike/pals.ts",
+    "spike:coords": "tsx spike/coords.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
