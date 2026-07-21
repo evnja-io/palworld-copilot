@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "spike:smoke": "tsx spike/smoke.ts"
+    "spike:smoke": "tsx spike/smoke.ts",
+    "spike:inventory": "tsx spike/inventory.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
