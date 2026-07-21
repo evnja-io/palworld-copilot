@@ -29,6 +29,7 @@ immédiate, techniquement simple), **carte ensuite** (plus complexe : tuiles, Le
 | Stack | SvelteKit (Svelte 5) + Vercel + Neon Postgres (Drizzle) |
 | Données | Extraction depuis les fichiers du jeu (FModel), l'utilisateur possède Palworld |
 | i18n | Paraglide (UI) + noms/descriptions du jeu issus des L10N officiels FR/EN du pak |
+| Import .sav | Feature v1 : import centralisé des `Players/*.sav` du serveur dédié (accès fichiers confirmé), additif uniquement, cochage manuel toujours possible |
 
 ## Contraintes de données (recherche vérifiée juillet 2026)
 
@@ -103,7 +104,9 @@ Les données du jeu restent **hors BDD** (statiques, identiques pour tous, versi
 en git). La BDD ne stocke que le généré-par-humain. Groupe unique implicite en v1.
 
 ```
-users        id uuid pk, discordId unique, username, avatarUrl, createdAt
+users        id uuid pk, discordId unique, username, avatarUrl,
+             palPlayerGuid text unique null,   -- GUID du joueur dans les saves du serveur
+             createdAt
 sessions     id text pk (hash du token), userId fk cascade, expiresAt
 allowlist    discordId pk, addedBy fk null, note
 progress     (userId, kind, entityId) pk, checkedAt ; index sur (kind, entityId)
@@ -180,13 +183,40 @@ Update optimiste + refetch au focus de la fenêtre + polling 60 s si onglet visi
 `{ mine: string[], group: Record<entityId, discordId[]> }`. Pas de websockets/SSE
 (≤6 joueurs) ; déclencheur isolé pour évoluer plus tard.
 
+## Import de sauvegarde (.sav) — cochage automatique
+
+Le groupe joue sur un **serveur dédié dont on a l'accès fichiers**. Les saves par
+joueur (`Players/<GUID>.sav`, GVAS compressé, quelques centaines de Ko) contiennent
+un `RecordData` listant exactement ce que l'outil coche : Pals enregistrés au
+Paldex, technologies débloquées, effigies ramassées, notes lues, voyages rapides
+débloqués, boss/Alphas vaincus.
+
+- **Flux** : un membre uploade un zip du dossier `Players/` (page Import). Le
+  serveur parse chaque `.sav`, extrait les flags de `RecordData` et écrit dans
+  `progress` pour chaque joueur lié.
+- **Liaison GUID ↔ compte** : après le premier import, la page liste les GUIDs
+  trouvés (avec pseudo in-game si présent) ; chaque membre revendique le sien une
+  fois → `users.palPlayerGuid`. Les GUIDs non revendiqués sont ignorés.
+- **Sémantique additive** : l'import ne fait que cocher (jamais décocher) et ne
+  touche pas aux coches manuelles. `Level.sav` (volumineux) n'est pas utilisé.
+- **Parsing** : parseur GVAS minimal en TypeScript ciblant `RecordData` uniquement
+  (format documenté par cheahjs/palworld-save-tools et palworld-save-pal, qui
+  servent de références). Validé sur une vraie save du serveur en Phase 0.
+- **Fiabilité par domaine** : Pals et technologies utilisent des IDs d'espèce/de
+  recette → mapping direct vers nos datasets. Les collectibles carte (effigies,
+  notes…) sont référencés par **GUID d'instance du monde** : la corrélation avec
+  les IDs de nos DataTables dataminées doit être prouvée en Phase 0 ; l'import
+  carte n'arrive qu'une fois cette corrélation validée.
+
 ## Plan par phases
 
 - **Phase 0 — Spike d'extraction (avant tout code app)** : FModel installé ;
   vérifier qu'on obtient : (a) DataTables Pals/items/recettes/tech exploitables
   avec IDs stables, (b) L10N FR/EN joignables aux IDs, (c) icônes exportables,
   (d) carte PNG + une DataTable POI avec 5 effigies dont les coordonnées
-  transformées collent au wiki, (e) **décision coffres** (fixes vs spawners).
+  transformées collent au wiki, (e) **décision coffres** (fixes vs spawners),
+  (f) **spike save** : parser une vraie `Players/*.sav` du serveur, vérifier le
+  contenu de `RecordData` et la corrélation GUIDs d'instance ↔ IDs dataminés.
   S'aider des noms d'assets de oMaN-Rod/palworld-save-pal et blaynem/paldex.
   Runbook rédigé. *Sortie : chaque domaine de données prouvé sur un échantillon.*
 - **Phase 1 — Squelette + auth** : scaffold SvelteKit workspace, Vercel + Neon,
@@ -202,14 +232,22 @@ Update optimiste + refetch au focus de la fenêtre + polling 60 s si onglet visi
 - **Phase 4 — Items, Craft, Technologies, Constructions** : les quatre sections,
   liens croisés (item ↔ recette ↔ techno ↔ construction), tracking technos.
   *Sortie : "comment crafter X" trouvable en <10 s depuis la recherche.*
-- **Phase 5 — Carte (Palpagos)** : tiling + upload Blob, `maps.json`, LeafletMap,
+- **Phase 5 — Import de sauvegarde (Pals + technos)** : page Import (zip de
+  `Players/`), parseur GVAS TS, liaison GUID ↔ compte, écriture additive dans
+  `progress` pour `pal_caught` et `tech_unlocked`.
+  *Sortie : un upload du dossier Players/ coche automatiquement les Paldex et
+  technos de tous les membres liés.*
+- **Phase 6 — Carte (Palpagos)** : tiling + upload Blob, `maps.json`, LeafletMap,
   contrôleur, filtres, popups, progression `kind: marker`.
   *Sortie : test multi-comptes comme Phase 3.*
-- **Phase 6 — Cartes DLC + polish + ship** : Sakurajima/Feybreak (calibration de
+- **Phase 7 — Cartes DLC + polish + ship** : Sakurajima/Feybreak (calibration de
   transform **par carte**, fit sur points de voyage rapide connus), switch de
   carte, polish mobile (les amis consulteront sur téléphone en jouant), prod.
+  Si la corrélation GUIDs ↔ IDs a été validée en Phase 0 : extension de l'import
+  de save aux collectibles carte (effigies, notes, voyages rapides, boss).
 - **Plus tard (hors périmètre)** : solveur de breeding complet, liens fiche Pal →
-  zones sur la carte, admin UI allowlist, import de sauvegardes.
+  zones sur la carte, admin UI allowlist, import automatique planifié (cron
+  depuis le serveur de jeu).
 
 ## Risques
 
@@ -217,6 +255,8 @@ Update optimiste + refetch au focus de la fenêtre + polling 60 s si onglet visi
 |---|---|---|
 | Volume/complexité des DataTables (recettes/tech éclatées sur plusieurs tables) | Moyenne | Phase 0 échantillonne chaque domaine avant d'écrire les transforms ; référence : blaynem/paldex, palcalc GenDB |
 | Coffres = spawners aléatoires, incompatibles avec le check-off | Haute | Décision Phase 0 ; repli = "spots de spawn" ou report |
+| GUIDs d'instance des saves non corrélables aux IDs dataminés (collectibles carte) | Moyenne | Spike Phase 0 sur une vraie save ; repli = import limité à Pals + technos (fiables), collectibles cochés à la main |
+| Format de save modifié par une MAJ du jeu | Moyenne | Parseur ciblé RecordData + versionné ; l'import échoue proprement, le cochage manuel reste |
 | Offsets de coordonnées différents sur les îles DLC | Haute | Params de transform par carte, calibration empirique Phase 6 |
 | POI dans des assets de level/blueprint plutôt que des DataTables propres | Moyenne | Précédent paldb.cc/save-pal ; pire cas : bootstrap depuis wiki.gg (CC BY-SA, attribution) |
 | FModel/mappings cassés par une MAJ moteur | Moyenne | Artefacts committés → l'app tourne sur données figées en attendant |
@@ -225,5 +265,5 @@ Update optimiste + refetch au focus de la fenêtre + polling 60 s si onglet visi
 
 ## Hors périmètre v1 (délibéré)
 
-Table groups, admin UI, temps réel, import de sauvegardes, solveur de breeding,
-SEO, comptes non-Discord.
+Table groups, admin UI, temps réel, solveur de breeding, import automatique
+planifié depuis le serveur de jeu, SEO, comptes non-Discord.
