@@ -134,3 +134,13 @@ transform (ZukanIndex>0 + nom + IsPal) l'exclut à tort. Sa capture ne peut donc
 pas être fusionnée par l'import.
 **À faire** (phase données ultérieure) : examiner sa ligne DT_PalMonsterParameter
 et ajuster le filtre de transform/pals.ts.
+
+## 2026-07-22 — Pseudos in-game : Level.sav plutôt que l'API REST
+
+**Constat** : l'hébergeur (OuiHeberg) n'expose pas le port REST 8212 (seul le
+port de jeu est mappé) ; et le Level.sav du serveur ne pèse que 2 Mo (~2 s de
+conversion palsav), contenant les pseudos de TOUS les joueurs
+(CharacterSaveParameterMap → IsPlayer → NickName + PlayerUId).
+**Décision** : les pseudos sont extraits de Level.sav (téléchargé en SFTP avec
+les saves), pas de l'API REST. Normalisation GUID : UUID → 32 hex majuscules
+sans tirets (format des noms de fichiers Players/).
