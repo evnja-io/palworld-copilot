@@ -6,7 +6,6 @@ export const users = pgTable("users", {
   discordId: text("discord_id").notNull().unique(),
   username: text("username").notNull(),
   avatarUrl: text("avatar_url"),
-  palPlayerGuid: text("pal_player_guid").unique(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
@@ -60,7 +59,9 @@ export const serverMembers = pgTable(
 export const progress = pgTable(
   "progress",
   {
-    serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
     userId: uuid("user_id")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
@@ -69,26 +70,34 @@ export const progress = pgTable(
     checkedAt: timestamp("checked_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
-    primaryKey({ columns: [t.userId, t.kind, t.entityId] }),
-    index("progress_kind_entity_idx").on(t.kind, t.entityId),
+    primaryKey({ columns: [t.serverId, t.userId, t.kind, t.entityId] }),
+    index("progress_server_kind_idx").on(t.serverId, t.kind),
   ],
 );
 
-export const savePlayers = pgTable("save_players", {
-  serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
-  playerGuid: text("player_guid").primaryKey(),
-  nickname: text("nickname").notNull(),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
-});
+export const savePlayers = pgTable(
+  "save_players",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    playerGuid: text("player_guid").notNull(),
+    nickname: text("nickname").notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.serverId, t.playerGuid] })],
+);
 
 export const saveSnapshots = pgTable(
   "save_snapshots",
   {
-    serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
     playerGuid: text("player_guid").notNull(),
     kind: text("kind").notNull(),
     entityId: text("entity_id").notNull(),
     importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [primaryKey({ columns: [t.playerGuid, t.kind, t.entityId] })],
+  (t) => [primaryKey({ columns: [t.serverId, t.playerGuid, t.kind, t.entityId] })],
 );
