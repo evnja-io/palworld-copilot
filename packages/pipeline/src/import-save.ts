@@ -33,72 +33,100 @@ const techIdsLower = new Map<string, string>(
 );
 
 // 3. Par fichier .sav : convertir (palsav -> JSON temporaire), extraire, snapshoter
-const savs = readdirSync(dir).filter((f) => f.endsWith(".sav"));
-if (savs.length === 0) throw new Error(`Aucun .sav dans ${dir}`);
+const allSavs = readdirSync(dir).filter((f) => f.endsWith(".sav"));
+if (allSavs.length === 0) throw new Error(`Aucun .sav dans ${dir}`);
+
+// Garde sur les noms : seuls les fichiers <guid 32 hex>.sav sont traités.
+const guidFilePattern = /^[0-9A-Fa-f]{32}\.sav$/;
+const savs = allSavs.filter((f) => {
+  if (guidFilePattern.test(f)) return true;
+  console.log(`ignoré : ${f}`);
+  return false;
+});
+
+const failures: Array<{ file: string; message: string }> = [];
+
 for (const sav of savs) {
-  const guid = basename(sav, ".sav");
-  const jsonPath = join(dir, `${guid}.sav.json`);
-  execFileSync(venvPython, ["-m", "palsav.commands.convert", join(dir, sav), "--to-json", "-o", jsonPath, "--force"]);
-  const save = JSON.parse(readFileSync(jsonPath, "utf8"));
-  const sd = save.properties.SaveData.value;
-  const rd = sd.RecordData.value;
+  try {
+    const guid = basename(sav, ".sav");
+    const jsonPath = join(dir, `${guid}.sav.json`);
+    execFileSync(venvPython, [
+      "-m",
+      "palsav.commands.convert",
+      join(dir, sav),
+      "--to-json",
+      "-o",
+      jsonPath,
+      "--force",
+    ]);
+    const save = JSON.parse(readFileSync(jsonPath, "utf8"));
+    const sd = save.properties.SaveData.value;
+    const rd = sd.RecordData.value;
 
-  // Extracteurs : règles reprises telles quelles du spike Task 1
-  // (packages/pipeline/spike/import-mapping.ts).
+    // Extracteurs : règles reprises telles quelles du spike Task 1
+    // (packages/pipeline/spike/import-mapping.ts).
 
-  // PaldeckUnlockFlag est une MapProperty { key: string, value: boolean }[] —
-  // on ne garde que value===true (défensif, les entrées observées le sont
-  // toutes) et on résout le nom interne (casse variable) vers l'ID canonique.
-  const paldeckEntries = (rd.PaldeckUnlockFlag.value as Array<{ key: string; value: boolean }>)
-    .filter((entry) => entry.value === true)
-    .map((entry) => entry.key);
-  const pals = [
-    ...new Set(
-      paldeckEntries
-        .map((id) => palIdsLower.get(id.toLowerCase()))
-        .filter((id): id is string => id !== undefined),
-    ),
-  ];
+    // PaldeckUnlockFlag est une MapProperty { key: string, value: boolean }[] —
+    // absente sur une save fraîche (défensif), on ne garde que value===true
+    // et on résout le nom interne (casse variable) vers l'ID canonique.
+    const paldeckEntries = (
+      (rd.PaldeckUnlockFlag?.value ?? []) as Array<{ key: string; value: boolean }>
+    )
+      .filter((entry) => entry.value === true)
+      .map((entry) => entry.key);
+    const pals = [
+      ...new Set(
+        paldeckEntries
+          .map((id) => palIdsLower.get(id.toLowerCase()))
+          .filter((id): id is string => id !== undefined),
+      ),
+    ];
 
-  // UnlockedRecipeTechnologyNames est une ArrayProperty { values: string[] } —
-  // chaque élément est déjà le row name (comparaison toujours case-insensitive).
-  const techEntries = sd.UnlockedRecipeTechnologyNames.value.values as string[];
-  const techs = [
-    ...new Set(
-      techEntries.map((id) => techIdsLower.get(id.toLowerCase())).filter((id): id is string => id !== undefined),
-    ),
-  ];
+    // UnlockedRecipeTechnologyNames est une ArrayProperty { values: string[] } —
+    // absente sur une save fraîche (défensif) ; sinon chaque élément est déjà
+    // le row name (comparaison toujours case-insensitive).
+    const techEntries = (sd.UnlockedRecipeTechnologyNames?.value?.values ?? []) as string[];
+    const techs = [
+      ...new Set(
+        techEntries.map((id) => techIdsLower.get(id.toLowerCase())).filter((id): id is string => id !== undefined),
+      ),
+    ];
 
-  // RelicObtainForInstanceFlag (effigies) : même forme MapProperty que le
-  // Paldeck, mais les keys sont des GUIDs bruts (Phase 7, non fusionnés) —
-  // stockés normalisés (minuscules, sans tirets).
-  const relicEntries = (
-    (rd.RelicObtainForInstanceFlag?.value ?? []) as Array<{ key: string; value: boolean }>
-  )
-    .filter((entry) => entry.value === true)
-    .map((entry) => entry.key.replaceAll("-", "").toLowerCase());
-  const relics = [...new Set(relicEntries)];
+    // RelicObtainForInstanceFlag (effigies) : même forme MapProperty que le
+    // Paldeck, mais les keys sont des GUIDs bruts (Phase 7, non fusionnés) —
+    // stockés normalisés (minuscules, sans tirets).
+    const relicEntries = (
+      (rd.RelicObtainForInstanceFlag?.value ?? []) as Array<{ key: string; value: boolean }>
+    )
+      .filter((entry) => entry.value === true)
+      .map((entry) => entry.key.replaceAll("-", "").toLowerCase());
+    const relics = [...new Set(relicEntries)];
 
-  const rows = [
-    ...pals.map((id) => ({ kind: "pal_caught", id })),
-    ...techs.map((id) => ({ kind: "tech_unlocked", id })),
-    ...relics.map((id) => ({ kind: "raw:relic", id })),
-  ];
+    const rows = [
+      ...pals.map((id) => ({ kind: "pal_caught", id })),
+      ...techs.map((id) => ({ kind: "tech_unlocked", id })),
+      ...relics.map((id) => ({ kind: "raw:relic", id })),
+    ];
 
-  // 4. Remplacement idempotent du snapshot de CE guid — delete + insert par
-  // lots (unnest) dans une seule transaction non-interactive.
-  const kinds = rows.map((r) => r.kind);
-  const ids = rows.map((r) => r.id);
-  await sql.transaction([
-    sql.query("delete from save_snapshots where player_guid = $1", [guid]),
-    sql.query(
-      `insert into save_snapshots (player_guid, kind, entity_id)
-       select $1, k, e from unnest($2::text[], $3::text[]) as t(k, e)
-       on conflict do nothing`,
-      [guid, kinds, ids],
-    ),
-  ]);
-  console.log(`${guid} : ${pals.length} pals, ${techs.length} techs, ${relics.length} effigies (snapshot)`);
+    // 4. Remplacement idempotent du snapshot de CE guid — delete + insert par
+    // lots (unnest) dans une seule transaction non-interactive.
+    const kinds = rows.map((r) => r.kind);
+    const ids = rows.map((r) => r.id);
+    await sql.transaction([
+      sql.query("delete from save_snapshots where player_guid = $1", [guid]),
+      sql.query(
+        `insert into save_snapshots (player_guid, kind, entity_id)
+         select $1, k, e from unnest($2::text[], $3::text[]) as t(k, e)
+         on conflict do nothing`,
+        [guid, kinds, ids],
+      ),
+    ]);
+    console.log(`${guid} : ${pals.length} pals, ${techs.length} techs, ${relics.length} effigies (snapshot)`);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error(`ÉCHEC ${sav} : ${message}`);
+    failures.push({ file: sav, message });
+  }
 }
 
 // 5. Fusion additive vers progress pour les GUIDs revendiqués (kinds officiels seulement)
@@ -118,3 +146,10 @@ const unclaimed = await sql`
   left join users u on u.pal_player_guid = s.player_guid
   where u.id is null group by s.player_guid`;
 for (const r of unclaimed) console.log(`non revendiqué : ${r.player_guid} (${r.n} entrées) — page /import`);
+
+// 7. Récapitulatif des échecs — sortie non-zéro si des fichiers ont échoué
+if (failures.length > 0) {
+  console.error(`\n${failures.length} fichier(s) en échec :`);
+  for (const f of failures) console.error(`  - ${f.file} : ${f.message}`);
+  process.exit(1);
+}
