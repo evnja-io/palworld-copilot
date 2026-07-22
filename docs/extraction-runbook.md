@@ -111,6 +111,49 @@ git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/
 Copier depuis le serveur dédié uniquement les `Players/<GUID>.sav`
 (quelques centaines de Ko) — jamais `Level.sav`.
 
+## Importer les saves du serveur (CLI `import-save`)
+
+Le CLI `import-save` automatise la conversion + extraction + écriture en base
+pour un dossier entier de `.sav` (un par joueur). Il utilise le même venv
+`palsav` que ci-dessus (aucune installation supplémentaire si la section
+précédente a déjà été suivie).
+
+1. Récupérer sur le serveur dédié le dossier `Players/` (uniquement les
+   fichiers `<GUID>.sav`, jamais `Level.sav`) et le copier quelque part en WSL,
+   par exemple `packages/pipeline/raw/save/` (les autres membres peuvent y
+   déposer leur propre `.sav`).
+2. Lancer, depuis `packages/pipeline` (le script résout les chemins relatifs
+   à ce dossier) :
+   ```bash
+   pnpm --filter @palworld-companion/pipeline import-save raw/save
+   ```
+   (`DATABASE_URL` est chargé automatiquement depuis `apps/web/.env` via
+   `--env-file` ; le dossier `.venv` doit exister — cf. section précédente.)
+3. Le CLI imprime, pour chaque `.sav` traité :
+   - `<GUID> : n pals, n techs, n effigies (snapshot)` ;
+   - à la fin, `fusion : n nouvelles coches appliquées` (nombre total de
+     nouvelles lignes ajoutées à `progress`, tous GUIDs confondus) ;
+   - une ligne `non revendiqué : <GUID> (n entrées) — page /import` pour
+     chaque GUID qui ne correspond à aucun compte (le joueur doit renseigner
+     son GUID sur la page `/import` du site pour déclencher la fusion).
+
+### Sémantique (additive, idempotente)
+
+- Le CLI **remplace** intégralement le snapshot `save_snapshots` du GUID
+  traité (delete + insert de ce GUID uniquement) — relancer le CLI sur la même
+  save produit exactement le même résultat (idempotent).
+- La fusion vers `progress` est **strictement additive** :
+  `INSERT ... ON CONFLICT DO NOTHING`, jamais de suppression. Une case déjà
+  cochée manuellement ne peut pas être « décochée » par un import de save, et
+  relancer l'import ne duplique rien (`fusion : 0` au deuxième passage).
+- Seuls les kinds `pal_caught` et `tech_unlocked` sont fusionnés vers
+  `progress`. Les effigies (`raw:relic`) restent dans `save_snapshots` sans
+  fusion — elles alimenteront la Phase 7 (carte).
+- La fusion ne s'applique qu'aux GUIDs déjà revendiqués (table `users`,
+  colonne `pal_player_guid`) : un joueur non revendiqué voit son snapshot
+  stocké mais pas fusionné tant qu'il n'a pas renseigné son GUID via
+  `/import`.
+
 ## À chaque mise à jour du jeu
 
 1. Steam met à jour le pak → relancer FModel, recharger l'archive.

@@ -11,7 +11,8 @@
     "spike:import": "tsx spike/import-mapping.ts",
     "all": "tsx src/all.ts",
     "verify": "tsx src/verify.ts",
-    "icons": "tsx src/icons.ts"
+    "icons": "tsx src/icons.ts",
+    "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -20,6 +21,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "sharp": "^0.35.3"
   }
 }
