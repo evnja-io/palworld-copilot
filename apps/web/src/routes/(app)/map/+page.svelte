@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { mount, unmount } from 'svelte';
+	import { page } from '$app/state';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
 	import { ProgressStore } from '$lib/game/progress.svelte';
@@ -70,6 +71,32 @@
 	// Svelte -> Leaflet : re-sync sur tout changement de filtre/progression.
 	$effect(() => {
 		markerController?.sync(visible, store.mine);
+	});
+
+	// Focus depuis la palette de recherche : /map?focus=<markerId>.
+	let focusedId: string | null = null;
+	$effect(() => {
+		const id = page.url.searchParams.get('focus');
+		const controller = markerController;
+		if (!id || !controller || id === focusedId) return;
+		const mk = markers.find((m) => m.id === id);
+		if (!mk) return;
+		focusedId = id;
+		if (!mapState.filters[mk.type]) {
+			mapState.filters[mk.type] = true;
+			mapState.persist();
+		}
+		if (mk.type === 'relic' && mapState.filters.hideChecked && store.mine.has(id)) {
+			mapState.filters.hideChecked = false;
+			mapState.persist();
+		}
+		// Après le flush des effets, le sync a (re)créé le marqueur.
+		setTimeout(() => {
+			const lm = controller.get(id);
+			if (!lm || !mapRef) return;
+			mapRef.setView(lm.getLatLng(), 4);
+			onMarkerClick(mk, lm);
+		}, 0);
 	});
 </script>
 

@@ -78,6 +78,11 @@ export class MarkerController {
     }
   }
 
+  /** Marqueur Leaflet d'un id donné, s'il est actuellement visible. */
+  get(id: string): L.Marker | undefined {
+    return this.#byId.get(id);
+  }
+
   destroy(): void {
     this.#layer.remove();
     this.#byId.clear();

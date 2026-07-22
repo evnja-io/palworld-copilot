@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
-	import GlobalSearch from '$lib/components/GlobalSearch.svelte';
+	import CommandPalette from '$lib/components/CommandPalette.svelte';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { data, children } = $props();
+
+	let palette: CommandPalette | undefined = $state();
+	const isMac = typeof navigator !== 'undefined' && /Mac|iP(hone|ad|od)/.test(navigator.platform);
 
 	const nav = [
 		{ href: '/paldex', label: m.nav_paldex },
@@ -26,7 +29,11 @@
 				</a>
 			{/each}
 		</nav>
-		<GlobalSearch />
+		<button class="search-btn" onclick={() => palette?.show()} aria-label={m.search_button()}>
+			<span aria-hidden="true">🔍</span>
+			<span class="search-label">{m.search_button()}</span>
+			<kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
+		</button>
 		<div class="user">
 			<a href="/import" class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
 			<LangSwitch />
@@ -41,6 +48,7 @@
 	</header>
 	<main>{@render children()}</main>
 </div>
+<CommandPalette bind:this={palette} />
 
 <style>
 	.shell {
@@ -88,6 +96,29 @@
 		color: var(--accent);
 		background: var(--accent-soft);
 	}
+	.search-btn {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background: var(--input-bg);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--r-md);
+		color: var(--text-3);
+		font-size: 13px;
+		padding: 5px 10px;
+		white-space: nowrap;
+	}
+	.search-btn:hover {
+		color: var(--text-2);
+		border-color: var(--focus-ring);
+	}
+	.search-btn kbd {
+		font-size: 10px;
+		color: var(--text-4);
+		border: 1px solid var(--border);
+		border-radius: 4px;
+		padding: 1px 5px;
+	}
 	.user {
 		display: flex;
 		align-items: center;
@@ -133,6 +164,10 @@
 			padding: 0 12px 8px;
 		}
 		.username {
+			display: none;
+		}
+		.search-label,
+		.search-btn kbd {
 			display: none;
 		}
 	}

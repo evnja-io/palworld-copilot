@@ -12,7 +12,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "node --env-file=.env node_modules/drizzle-kit/bin.cjs migrate",
-		"allowlist:add": "node --env-file=.env --experimental-strip-types scripts/allowlist-add.ts"
+		"allowlist:add": "node --env-file=.env --experimental-strip-types scripts/allowlist-add.ts",
+		"test": "vitest run"
 	},
 	"devDependencies": {
 		"@inlang/paraglide-js": "^2.22.0",
@@ -35,6 +36,7 @@
 		"@palworld-companion/game-data": "workspace:*",
 		"arctic": "^3.7.0",
 		"drizzle-orm": "^0.45.2",
+		"fuzzysort": "^3.1.0",
 		"leaflet": "^1.9.4"
 	}
 }
