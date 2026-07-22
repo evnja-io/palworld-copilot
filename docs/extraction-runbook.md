@@ -64,6 +64,9 @@ Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
 
 ### Textures — Save Texture (.png)
 
+- Icônes (textures, clic droit dossier → Save Folder.s Packages Textures) :
+  `Pal/Content/Pal/Texture/PalIcon/Normal` et
+  `Pal/Content/Others/InventoryItemIcon/Texture`.
 - `Pal/Content/Pal/Texture/UI/Map/T_WorldMap` — carte unique 8192×8192 :
   **Sakurajima et Feybreak sont peints dedans**, il n'existe pas de textures
   DLC séparées.
