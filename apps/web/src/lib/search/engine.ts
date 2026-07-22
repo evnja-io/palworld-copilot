@@ -49,6 +49,20 @@ export function rawId(e: SearchEntry): string {
 
 const GROUP_ORDER: Ns[] = ["pal", "item", "skill", "marker", "tech", "building"];
 
+/** Recherche insensible aux diacritiques : « defense » doit matcher « défense ».
+ *  La normalisation NFD + retrait des accents préserve la longueur (précomposés
+ *  uniquement) → les indices de surlignage restent valides sur le nom original. */
+const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const normCache = new WeakMap<SearchEntry, { fr: string; en: string }>();
+function normNames(e: SearchEntry): { fr: string; en: string } {
+  let n = normCache.get(e);
+  if (!n) {
+    n = { fr: norm(e.fr), en: norm(e.en) };
+    normCache.set(e, n);
+  }
+  return n;
+}
+
 function matchesToken(e: SearchEntry, t: Token, ctx: SearchContext): boolean {
   switch (t.kind) {
     case "ns":
@@ -92,15 +106,22 @@ export function runSearch(
 
   let items: ResultItem[];
   if (query) {
+    // Le nom dans la langue de l'utilisateur est affiché dès qu'il matche ;
+    // l'autre langue ne sert (affichage + surlignage) que s'il ne matche pas.
+    const localeIdx = ctx.locale === "fr" ? 0 : 1;
+    const otherLocale: Locale = ctx.locale === "fr" ? "en" : "fr";
     items = fuzzysort
-      .go(query, filtered, { keys: ["fr", "en"], limit: 200 })
+      .go(norm(query), filtered, {
+        keys: [(e) => normNames(e).fr, (e) => normNames(e).en],
+        limit: 200,
+      })
       .map((r) => {
-        const frBetter = (r[0]?.score ?? 0) >= (r[1]?.score ?? 0);
-        const key = frBetter ? r[0] : r[1];
+        const localMatch = (r[localeIdx]?.score ?? 0) > 0;
+        const key = localMatch ? r[localeIdx] : r[1 - localeIdx];
         return {
           entry: r.obj,
           indexes: key?.indexes,
-          matchLocale: (frBetter ? "fr" : "en") as Locale,
+          matchLocale: localMatch ? ctx.locale : otherLocale,
         };
       });
   } else {

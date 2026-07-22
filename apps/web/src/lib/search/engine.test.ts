@@ -46,6 +46,20 @@ describe("runSearch — fuzzy", () => {
     expect(byEn.map((i) => i.entry.id)).toContain("pal:Foxparks");
   });
 
+  it("affiche le nom FR dès qu'il matche, même sans accents dans la requête", () => {
+    // « sphere » matche « Sphère » (FR) ET « Pal Sphere » (EN) : la langue de
+    // l'utilisateur doit gagner, peu importe le score EN.
+    const [sphere] = runSearch(INDEX, [], "sphere", ctx)
+      .flatMap((g) => g.items)
+      .filter((i) => i.entry.id === "item:PalSphere");
+    expect(sphere.matchLocale).toBe("fr");
+    // Le nom EN ne sert que quand le nom FR ne matche pas du tout.
+    const [fox] = runSearch(INDEX, [], "foxparks", ctx)
+      .flatMap((g) => g.items)
+      .filter((i) => i.entry.id === "pal:Foxparks");
+    expect(fox.matchLocale).toBe("en");
+  });
+
   it("expose les indices de surlignage", () => {
     const [pal] = runSearch(INDEX, [], "pyren", ctx).flatMap((g) => g.items);
     expect(pal.matchLocale).toBe("fr");
