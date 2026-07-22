@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { m } from '$lib/paraglide/messages';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	let { data, form } = $props();
 
@@ -22,7 +23,17 @@
 	}
 
 	function formatDate(iso: string) {
-		return new Date(iso).toLocaleString();
+		const locale = getLocale();
+		return new Date(iso).toLocaleDateString(locale);
+	}
+
+	function getErrorMessage(code: string): string {
+		const errorMap: Record<string, string> = {
+			guid_missing: m.import_err_guid_missing(),
+			already_claimed_user: m.import_err_already_claimed_user(),
+			guid_taken: m.import_err_guid_taken()
+		};
+		return errorMap[code] ?? code;
 	}
 </script>
 
@@ -31,7 +42,7 @@
 </div>
 
 {#if form?.error}
-	<p class="error">{form.error}</p>
+	<p class="error">{getErrorMessage(form.error)}</p>
 {/if}
 
 {#if data.snapshots.length === 0}

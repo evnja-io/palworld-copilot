@@ -64,5 +64,8 @@
   "import_empty": "No import yet.",
   "import_kind_pal_caught": "{count} pals",
   "import_kind_tech_unlocked": "{count} techs",
-  "import_kind_relic": "{count} raw relics"
+  "import_kind_relic": "{count} raw relics",
+  "import_err_guid_missing": "Missing GUID.",
+  "import_err_already_claimed_user": "You already have a claimed GUID.",
+  "import_err_guid_taken": "This GUID is already claimed by someone else."
 }

@@ -8,8 +8,17 @@ export type SnapshotSummary = {
   lastImport: string;
 };
 
-/** Erreur propre exposée à la page (message affichable tel quel). */
-export class ClaimError extends Error {}
+export type ClaimErrorCode = "already_claimed_user" | "guid_taken" | "claim_failed";
+
+/** Erreur avec code traduisible. */
+export class ClaimError extends Error {
+  constructor(
+    public code: ClaimErrorCode,
+    message?: string
+  ) {
+    super(message);
+  }
+}
 
 /** Liste les GUIDs de sauvegarde connus, regroupés avec leurs stats par kind. */
 export async function listSnapshots(): Promise<SnapshotSummary[]> {
@@ -49,10 +58,10 @@ export async function claimGuid(userId: string, guid: string): Promise<void> {
       .set({ palPlayerGuid: guid })
       .where(and(eq(tables.users.id, userId), isNull(tables.users.palPlayerGuid)))
       .returning();
-    if (updated.length === 0) throw new ClaimError("Tu as déjà un GUID revendiqué.");
+    if (updated.length === 0) throw new ClaimError("already_claimed_user");
   } catch (err) {
     if (err instanceof ClaimError) throw err;
-    if (isUniqueViolation(err)) throw new ClaimError("Ce GUID est déjà revendiqué par quelqu'un d'autre.");
+    if (isUniqueViolation(err)) throw new ClaimError("guid_taken");
     throw err;
   }
   await db.execute(sql`

@@ -14,12 +14,12 @@ export const actions: Actions = {
     const data = await request.formData();
     const guid = data.get("guid");
     if (typeof guid !== "string" || guid.length === 0) {
-      return fail(400, { error: "GUID manquant." });
+      return fail(400, { error: "guid_missing" });
     }
     try {
       await claimGuid(locals.user!.id, guid);
     } catch (err) {
-      if (err instanceof ClaimError) return fail(409, { error: err.message });
+      if (err instanceof ClaimError) return fail(409, { error: err.code });
       throw err;
     }
     return { success: true };

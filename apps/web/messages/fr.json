@@ -64,5 +64,8 @@
   "import_empty": "Aucun import pour l'instant.",
   "import_kind_pal_caught": "{count} pals",
   "import_kind_tech_unlocked": "{count} techs",
-  "import_kind_relic": "{count} effigies brutes"
+  "import_kind_relic": "{count} effigies brutes",
+  "import_err_guid_missing": "GUID manquant.",
+  "import_err_already_claimed_user": "Tu as déjà un GUID revendiqué.",
+  "import_err_guid_taken": "Ce GUID est déjà revendiqué par quelqu'un d'autre."
 }
