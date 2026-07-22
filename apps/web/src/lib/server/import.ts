@@ -1,5 +1,10 @@
 import { and, eq, isNull, sql } from "drizzle-orm";
+import markers from "@palworld-companion/game-data/markers.json";
 import { getDb, tables } from "$lib/server/db";
+
+const RELIC_IDS = (markers as Array<{ id: string; type: string }>)
+  .filter((mk) => mk.type === "relic")
+  .map((mk) => mk.id);
 
 export type SnapshotSummary = {
   guid: string;
@@ -88,6 +93,10 @@ export async function claimGuid(userId: string, guid: string): Promise<void> {
     insert into progress (user_id, kind, entity_id)
     select ${userId}, kind, entity_id from save_snapshots
     where player_guid = ${guid} and kind in ('pal_caught', 'tech_unlocked')
+    union
+    select ${userId}, 'marker', 'relic_' || entity_id from save_snapshots
+    where player_guid = ${guid} and kind = 'raw:relic'
+      and ('relic_' || entity_id) = any(${RELIC_IDS}::text[])
     on conflict do nothing`);
 }
 

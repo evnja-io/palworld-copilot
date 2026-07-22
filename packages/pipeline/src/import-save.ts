@@ -129,13 +129,25 @@ for (const sav of savs) {
   }
 }
 
-// 5. Fusion additive vers progress pour les GUIDs revendiqués (kinds officiels seulement)
+// 5. Fusion additive vers progress pour les GUIDs revendiqués.
+// Kinds directs (pal_caught, tech_unlocked) + effigies : raw:relic -> marker
+// 'relic_<guid>' — uniquement celles présentes dans markers.json (les
+// effigies de l'Arbre-Monde/hors dataset attendent dans les snapshots).
+const markersJson = JSON.parse(
+  readFileSync(new URL("../../game-data/markers.json", import.meta.url).pathname, "utf8"),
+) as Array<{ id: string; type: string }>;
+const relicIds = markersJson.filter((mk) => mk.type === "relic").map((mk) => mk.id);
 const merged = await sql`
   insert into progress (user_id, kind, entity_id)
   select u.id, s.kind, s.entity_id
   from save_snapshots s
   join users u on u.pal_player_guid = s.player_guid
   where s.kind in ('pal_caught', 'tech_unlocked')
+  union
+  select u.id, 'marker', 'relic_' || s.entity_id
+  from save_snapshots s
+  join users u on u.pal_player_guid = s.player_guid
+  where s.kind = 'raw:relic' and ('relic_' || s.entity_id) = any(${relicIds}::text[])
   on conflict do nothing
   returning user_id`;
 console.log(`fusion : ${merged.length} nouvelles coches appliquées`);

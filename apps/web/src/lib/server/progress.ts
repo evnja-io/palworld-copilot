@@ -1,6 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import pals from "@palworld-companion/game-data/pals.json";
 import tech from "@palworld-companion/game-data/tech.json";
+import markers from "@palworld-companion/game-data/markers.json";
 import { getDb, tables } from "$lib/server/db";
 import type { GroupUser } from "$lib/types";
 
@@ -9,6 +10,12 @@ import type { GroupUser } from "$lib/types";
 const REGISTRY: Record<string, Set<string>> = {
   pal_caught: new Set((pals as Array<{ id: string }>).map((p) => p.id)),
   tech_unlocked: new Set((tech as Array<{ id: string }>).map((t) => t.id)),
+  // Seules les effigies sont cochables — boss et voyages rapides sont des repères.
+  marker: new Set(
+    (markers as Array<{ id: string; type: string }>)
+      .filter((mk) => mk.type === "relic")
+      .map((mk) => mk.id),
+  ),
 };
 
 export function isValidEntity(kind: string, entityId: string): boolean {
