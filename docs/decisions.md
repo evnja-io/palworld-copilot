@@ -197,3 +197,8 @@ items.ts encyclopédise les variantes dont l'override résout (items.json
 1875 → 2344, rareté distinctive déjà émise) ; les recettes d'un produit
 toujours non nommable sont écartées (6 : FlameThrower jamais nommé + Hotmilk
 sans ligne d'item). Icônes déjà couvertes par la passe d'alias IconName.
+
+## Backlog / Évolutions
+
+- Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;
+  spec `docs/superpowers/specs/2026-07-22-multi-tenant-design.md`.
