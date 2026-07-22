@@ -1,0 +1,9197 @@
+[
+ {
+  "category": "PalOther",
+  "id": "Altar",
+  "mapObjectId": "Altar",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Electricity",
+  "energyType": "Electric",
+  "id": "Ancient_AirConditioner",
+  "mapObjectId": "Ancient_AirConditioner",
+  "materials": [
+   {
+    "count": 30,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 10,
+    "id": "AIcore"
+   },
+   {
+    "count": 5,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 100000
+ },
+ {
+  "category": "Health",
+  "id": "Ancient_Clinic",
+  "mapObjectId": "Ancient_Clinic",
+  "materials": [
+   {
+    "count": 50,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 15,
+    "id": "Computer"
+   },
+   {
+    "count": 45,
+    "id": "WorldTreeHolyWater"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Medical",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_DiagonalWall",
+  "mapObjectId": "Ancient_DiagonalWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_DoorWall",
+  "mapObjectId": "Ancient_DoorWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_Fence",
+  "mapObjectId": "Ancient_Fence",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_foundation",
+  "mapObjectId": "Ancient_foundation",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Bed",
+  "id": "Ancient_MedicalPalBed",
+  "mapObjectId": "Ancient_MedicalPalBed",
+  "materials": [
+   {
+    "count": 10,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 2,
+    "id": "WorldTreeHolyWater"
+   },
+   {
+    "count": 3,
+    "id": "Wood_WorldTree"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 100000
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_Pillars",
+  "mapObjectId": "Ancient_Pillars",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_PyramidRoof",
+  "mapObjectId": "Ancient_PyramidRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_roof",
+  "mapObjectId": "Ancient_roof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_SlantedRoof",
+  "mapObjectId": "Ancient_SlantedRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_SlopedRoofCorner",
+  "mapObjectId": "Ancient_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_SlopedRoofCornerReverse",
+  "mapObjectId": "Ancient_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Health",
+  "id": "Ancient_Spa",
+  "mapObjectId": "Ancient_Spa",
+  "materials": [
+   {
+    "count": 100,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 10,
+    "id": "WorldTreeHolyWater"
+   },
+   {
+    "count": 20,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 20,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 100000
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_stair",
+  "mapObjectId": "Ancient_stair",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_TriangleFoundation",
+  "mapObjectId": "Ancient_TriangleFoundation",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_TriangleRoof",
+  "mapObjectId": "Ancient_TriangleRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_TriangleStairsCorner",
+  "mapObjectId": "Ancient_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_TriangleWall",
+  "mapObjectId": "Ancient_TriangleWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_TriangleWallReverse",
+  "mapObjectId": "Ancient_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_wall",
+  "mapObjectId": "Ancient_wall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_WallGate",
+  "mapObjectId": "Ancient_WallGate",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ancient",
+  "id": "Ancient_WindowWall",
+  "mapObjectId": "Ancient_WindowWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "SkyislandIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Refine",
+  "energyType": "Electric",
+  "id": "AncientBlastFurnace",
+  "mapObjectId": "AncientBlastFurnace",
+  "materials": [
+   {
+    "count": 100,
+    "id": "ManganeseIngot"
+   },
+   {
+    "count": 20,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 30,
+    "id": "Computer"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Furnace",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Cooking",
+  "id": "AncientCookingStove",
+  "mapObjectId": "AncientCookingStove",
+  "materials": [
+   {
+    "count": 80,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 30,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 50,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Electricity",
+  "id": "AncientElectricGenerator",
+  "mapObjectId": "AncientElectricGenerator",
+  "materials": [
+   {
+    "count": 100,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 200,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_GeneratePower",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Farm",
+  "id": "AncientFarmBlock",
+  "mapObjectId": "AncientFarmBlock",
+  "materials": [
+   {
+    "count": 50,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 50,
+    "id": "WorldTreeHolyWater"
+   },
+   {
+    "count": 100,
+    "id": "Wood_WorldTree"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Agriculture",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Deforest_Mining",
+  "energyType": "Electric",
+  "id": "AncientMultiProduct",
+  "mapObjectId": "AncientMultiProduct",
+  "materials": [
+   {
+    "count": 50,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 10,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "AncientRelicRecycler",
+  "mapObjectId": "AncientRelicRecycler",
+  "materials": [
+   {
+    "count": 50,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 50,
+    "id": "Wood_WorldTree"
+   },
+   {
+    "count": 30,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 20,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "AncientWorkBench",
+  "mapObjectId": "AncientWorkBench",
+  "materials": [
+   {
+    "count": 50,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 5,
+    "id": "AIcore"
+   },
+   {
+    "count": 20,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Freestanding",
+  "id": "Andon",
+  "mapObjectId": "Andon",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 3,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "ArcadeVideoGame",
+  "mapObjectId": "ArcadeVideoGame",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Other",
+  "id": "Banyan_Big",
+  "mapObjectId": "Banyan_Big",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Barrel_Wood",
+  "mapObjectId": "Barrel_Wood",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Barrel01_Iron",
+  "mapObjectId": "Barrel01_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "Barrel02_Iron",
+  "mapObjectId": "Barrel02_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "Barrel03_Iron",
+  "mapObjectId": "Barrel03_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Interception",
+  "id": "BaseCampBattleDirector",
+  "mapObjectId": "BaseCampBattleDirector",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 3000
+ },
+ {
+  "category": "Chest",
+  "id": "BaseCampItemDispenser",
+  "mapObjectId": "BaseCampItemDispenser",
+  "materials": [
+   {
+    "count": 100,
+    "id": "StealIngot"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 4,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 30000
+ },
+ {
+  "category": "PalManagement",
+  "id": "BaseCampWorkerExtraStation",
+  "mapObjectId": "BaseCampWorkerExtraStation",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 10000
+ },
+ {
+  "category": "PalManagement",
+  "id": "BaseCampWorkHard",
+  "mapObjectId": "BaseCampWorkHard",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "PalManagement",
+  "id": "BaseCampWorkHard02",
+  "mapObjectId": "BaseCampWorkHard02",
+  "materials": [
+   {
+    "count": 100,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 30,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 30000
+ },
+ {
+  "category": "PalManagement",
+  "id": "BaseCampWorkHard03",
+  "mapObjectId": "BaseCampWorkHard03",
+  "materials": [
+   {
+    "count": 100,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 5,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Ornament",
+  "id": "BathTub_Stone",
+  "mapObjectId": "BathTub_Stone",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Cloth"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 4000
+ },
+ {
+  "category": "Flag",
+  "id": "Believer_Banner",
+  "mapObjectId": "Believer_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Believer_Flag",
+  "mapObjectId": "Believer_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Bench_Wood",
+  "mapObjectId": "Bench_Wood",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Refine",
+  "id": "BlastFurnace",
+  "mapObjectId": "BlastFurnace",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 40,
+    "id": "Stone"
+   },
+   {
+    "count": 3,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Furnace",
+  "workAmount": 5000
+ },
+ {
+  "category": "Refine",
+  "id": "BlastFurnace2",
+  "mapObjectId": "BlastFurnace2",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   },
+   {
+    "count": 30,
+    "id": "Cement"
+   },
+   {
+    "count": 15,
+    "id": "FireOrgan"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Furnace",
+  "workAmount": 30000
+ },
+ {
+  "category": "Refine",
+  "energyType": "Electric",
+  "id": "BlastFurnace3",
+  "mapObjectId": "BlastFurnace3",
+  "materials": [
+   {
+    "count": 50,
+    "id": "IronIngot"
+   },
+   {
+    "count": 4,
+    "id": "Bio_Battery"
+   },
+   {
+    "count": 20,
+    "id": "Polymer"
+   },
+   {
+    "count": 10,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Furnace",
+  "workAmount": 100000
+ },
+ {
+  "category": "Refine",
+  "energyType": "Electric",
+  "id": "BlastFurnace4",
+  "mapObjectId": "BlastFurnace4",
+  "materials": [
+   {
+    "count": 150,
+    "id": "Plastic"
+   },
+   {
+    "count": 100,
+    "id": "Polymer"
+   },
+   {
+    "count": 200,
+    "id": "FireOrgan"
+   },
+   {
+    "count": 12,
+    "id": "Computer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Furnace",
+  "workAmount": 600000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Bonsai",
+  "mapObjectId": "Bonsai",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 1,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Box_Wood",
+  "mapObjectId": "Box_Wood",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Box01_Iron",
+  "mapObjectId": "Box01_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Box01_Stone",
+  "mapObjectId": "Box01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1500
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Box02_Iron",
+  "mapObjectId": "Box02_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 15,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "PalTraining",
+  "id": "BreedFarm",
+  "mapObjectId": "BreedFarm",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 50,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 15000
+ },
+ {
+  "category": "PalTraining",
+  "id": "BuildableGoddessStatue",
+  "mapObjectId": "BuildableGoddessStatue",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 5000
+ },
+ {
+  "category": "Ornament",
+  "id": "Byobu",
+  "mapObjectId": "Byobu",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "CableCoil01_Iron",
+  "mapObjectId": "CableCoil01_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 6000
+ },
+ {
+  "category": "Cooking",
+  "id": "CampFire",
+  "mapObjectId": "Campfire",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 1000
+ },
+ {
+  "category": "Freestanding",
+  "id": "CandleStand",
+  "mapObjectId": "CandleStand",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "Cauldron",
+  "mapObjectId": "Cauldron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 3,
+    "id": "PalOil"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 60000
+ },
+ {
+  "category": "Ceiling",
+  "energyType": "Electric",
+  "id": "CeilingLamp",
+  "mapObjectId": "CeilingLamp",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair01_Iron",
+  "mapObjectId": "Chair01_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "Leather"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair01_Pal",
+  "mapObjectId": "Chair01_Pal",
+  "materials": [
+   {
+    "count": 2,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Leather"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair01_Stone",
+  "mapObjectId": "Chair01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair01_Wood",
+  "mapObjectId": "Chair01_Wood",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair02_Iron",
+  "mapObjectId": "Chair02_Iron",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Chair02_Stone",
+  "mapObjectId": "Chair02_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 1,
+    "id": "Venom"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "PalTraining",
+  "id": "CharacterRankUp",
+  "mapObjectId": "CharacterRankUp",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 5,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Modify",
+  "workAmount": 30000
+ },
+ {
+  "category": "Health",
+  "id": "Clinic",
+  "mapObjectId": "Clinic",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   },
+   {
+    "count": 15,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Medical",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Clock01_Stone",
+  "mapObjectId": "Clock01_Stone",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 4000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Clock01_Wall_Iron",
+  "mapObjectId": "Clock01_Wall_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "CoalPit",
+  "mapObjectId": "CoalPit",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   },
+   {
+    "count": 100,
+    "id": "Coal"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 30000
+ },
+ {
+  "category": "Product_Repair",
+  "id": "CompositeDesk",
+  "mapObjectId": "CompositeDesk",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "HighGrade_Processed_Wood"
+   },
+   {
+    "count": 30,
+    "id": "Charcoal"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 20000
+ },
+ {
+  "category": "Flag",
+  "id": "ConservationGroupBannerA",
+  "mapObjectId": "ConservationGroupBannerA",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 10,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "ConservationGroupBannerB",
+  "mapObjectId": "ConservationGroupBannerB",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 10,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Container01_Iron",
+  "mapObjectId": "Container01_Iron",
+  "materials": [
+   {
+    "count": 100,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 50000
+ },
+ {
+  "category": "Cooking",
+  "id": "CookingStove",
+  "mapObjectId": "CookingStove",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 15,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 10000
+ },
+ {
+  "category": "Electricity",
+  "id": "Cooler",
+  "mapObjectId": "Cooler",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "IceOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Chest",
+  "id": "CoolerBox",
+  "mapObjectId": "CoolerBox",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "IceOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "FeedBox",
+  "id": "CoolerPalFoodBox",
+  "mapObjectId": "CoolerPalFoodBox",
+  "materials": [
+   {
+    "count": 20,
+    "id": "StealIngot"
+   },
+   {
+    "count": 20,
+    "id": "Plastic"
+   },
+   {
+    "count": 15,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 50000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "CopperPit",
+  "mapObjectId": "CopperPit",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 25,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 10000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "CopperPit_2",
+  "mapObjectId": "CopperPit_2",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   },
+   {
+    "count": 50,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 40,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 10000
+ },
+ {
+  "category": "Desk",
+  "id": "Counter_Wood",
+  "mapObjectId": "Counter_Wood",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Milling_Crusher",
+  "id": "Crusher",
+  "mapObjectId": "Crusher",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 8000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "CrystalPit",
+  "mapObjectId": "CrystalPit",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   },
+   {
+    "count": 100,
+    "id": "RainbowCrystal"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 50000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Curtain01_Wall_Stone",
+  "mapObjectId": "Curtain01_Wall_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Other",
+  "id": "DamagedScarecrow",
+  "mapObjectId": "DamagedScarecrow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 5,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 2000
+ },
+ {
+  "category": "Other",
+  "id": "DamagedScarecrow_Test",
+  "mapObjectId": "DamagedScarecrow_Test",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 5,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "DarkIsland_Banner",
+  "mapObjectId": "DarkIsland_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "DarkIsland_Flag",
+  "mapObjectId": "DarkIsland_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Other",
+  "id": "Decal_PalSticker_PinkCat",
+  "mapObjectId": "Decal_PalSticker_PinkCat",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Interception",
+  "id": "DefenseBowGun",
+  "mapObjectId": "DefenseBowGun",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 15,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 10000
+ },
+ {
+  "category": "Interception",
+  "id": "DefenseMachinegun",
+  "mapObjectId": "DefenseMachinegun",
+  "materials": [
+   {
+    "count": 15,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   },
+   {
+    "count": 15,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 50000
+ },
+ {
+  "category": "Interception",
+  "energyType": "Electric",
+  "id": "DefenseMachinegun_AutoTurret",
+  "mapObjectId": "DefenseMachinegun_AutoTurret",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   },
+   {
+    "count": 15,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 1000000
+ },
+ {
+  "category": "Interception",
+  "energyType": "Electric",
+  "id": "DefenseMissile",
+  "mapObjectId": "DefenseMissile",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 5,
+    "id": "Computer"
+   },
+   {
+    "count": 3,
+    "id": "Bio_Battery"
+   },
+   {
+    "count": 30,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 150000
+ },
+ {
+  "category": "Interception",
+  "id": "DefenseWait",
+  "mapObjectId": "DefenseWait",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 3000
+ },
+ {
+  "category": "Barieer",
+  "id": "DefenseWall",
+  "mapObjectId": "DefenseWall",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Barieer",
+  "id": "DefenseWall_Metal",
+  "mapObjectId": "DefenseWall_Metal",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Barieer",
+  "id": "DefenseWall_Wood",
+  "mapObjectId": "DefenseWall_Wood",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Desk",
+  "id": "Desk01_Iron",
+  "mapObjectId": "Desk01_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 15,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 8000
+ },
+ {
+  "category": "Desk",
+  "id": "Desk01_Stone",
+  "mapObjectId": "Desk01_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "PalManagement",
+  "id": "DimensionPalStorage",
+  "mapObjectId": "DimensionPalStorage",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 40,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 20000
+ },
+ {
+  "category": "PalOther",
+  "id": "DismantlingConveyor",
+  "mapObjectId": "DismantlingConveyor",
+  "materials": [
+   {
+    "count": 100,
+    "id": "StealIngot"
+   },
+   {
+    "count": 15,
+    "id": "Computer"
+   },
+   {
+    "count": 30,
+    "id": "MachineParts"
+   },
+   {
+    "count": 30,
+    "id": "Plastic"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Modify",
+  "workAmount": 120000
+ },
+ {
+  "category": "PalOther",
+  "id": "DisplayCharacter",
+  "mapObjectId": "DisplayCharacter",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 5000
+ },
+ {
+  "category": "Electricity",
+  "energyType": "Electric",
+  "id": "ElectricCooler",
+  "mapObjectId": "ElectricCooler",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 10,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 100000
+ },
+ {
+  "category": "Electricity",
+  "id": "ElectricGenerator",
+  "mapObjectId": "ElectricGenerator",
+  "materials": [
+   {
+    "count": 50,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_GeneratePower",
+  "workAmount": 50000
+ },
+ {
+  "category": "Electricity",
+  "id": "ElectricGenerator_Large",
+  "mapObjectId": "ElectricGenerator_Large",
+  "materials": [
+   {
+    "count": 200,
+    "id": "StealIngot"
+   },
+   {
+    "count": 200,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_GeneratePower",
+  "workAmount": 500000
+ },
+ {
+  "category": "PalTraining",
+  "energyType": "Electric",
+  "id": "ElectricHatchingPalEgg",
+  "mapObjectId": "ElectricHatchingPalEgg",
+  "materials": [
+   {
+    "count": 50,
+    "id": "IronIngot"
+   },
+   {
+    "count": 15,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 2,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 5000
+ },
+ {
+  "category": "Electricity",
+  "energyType": "Electric",
+  "id": "ElectricHeater",
+  "mapObjectId": "ElectricHeater",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 10,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 100000
+ },
+ {
+  "category": "Cooking",
+  "energyType": "Electric",
+  "id": "ElectricKitchen",
+  "mapObjectId": "ElectricKitchen",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 20,
+    "id": "Charcoal"
+   },
+   {
+    "count": 5,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 70000
+ },
+ {
+  "category": "Electricity",
+  "id": "EnergyStorage_Electric",
+  "mapObjectId": "EnergyStorage_Electric",
+  "materials": [
+   {
+    "count": 50,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 5,
+    "id": "Corrosive_Solvent"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_GeneratePower",
+  "workAmount": 50000
+ },
+ {
+  "category": "PalManagement",
+  "id": "Expedition",
+  "mapObjectId": "Expedition",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 100,
+    "id": "Stone"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 20,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 10000
+ },
+ {
+  "category": "Product_Repair",
+  "id": "Factory_Hard_01",
+  "mapObjectId": "Factory_Hard_01",
+  "materials": [
+   {
+    "count": 8,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 3000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "Factory_Hard_02",
+  "mapObjectId": "Factory_Hard_02",
+  "materials": [
+   {
+    "count": 100,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 5,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "MachineParts"
+   },
+   {
+    "count": 10,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 10000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "Factory_Hard_03",
+  "mapObjectId": "Factory_Hard_03",
+  "materials": [
+   {
+    "count": 100,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 30,
+    "id": "Cement"
+   },
+   {
+    "count": 5,
+    "id": "Corrosive_Solvent"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 50000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "Factory_Hard_04",
+  "mapObjectId": "Factory_Hard_04",
+  "materials": [
+   {
+    "count": 50,
+    "id": "ManganeseIngot"
+   },
+   {
+    "count": 50,
+    "id": "StainlessSteel"
+   },
+   {
+    "count": 30,
+    "id": "Computer"
+   },
+   {
+    "count": 20,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 500000
+ },
+ {
+  "category": "Product_Repair",
+  "energyType": "Electric",
+  "id": "Factory_Money",
+  "mapObjectId": "Factory_Money",
+  "materials": [
+   {
+    "count": 100,
+    "id": "SkyislandIngot"
+   },
+   {
+    "count": 20,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 10,
+    "id": "AIcore"
+   },
+   {
+    "count": 5,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 10000
+ },
+ {
+  "category": "Farm",
+  "id": "Farm_SkillFruits",
+  "mapObjectId": "Farm_SkillFruits",
+  "materials": [
+   {
+    "count": 200,
+    "id": "Wood_WorldTree"
+   },
+   {
+    "count": 500,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 150,
+    "id": "SkyIslandOre"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 100000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_Berries",
+  "mapObjectId": "FarmBlockV2_Berries",
+  "materials": [
+   {
+    "count": 3,
+    "id": "BerrySeeds"
+   },
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 3000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_Carrot",
+  "mapObjectId": "FarmBlockV2_Carrot",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CarrotSeeds"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "stone"
+   },
+   {
+    "count": 1,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 20000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_Lettuce",
+  "mapObjectId": "FarmBlockV2_Lettuce",
+  "materials": [
+   {
+    "count": 3,
+    "id": "LettuceSeeds"
+   },
+   {
+    "count": 100,
+    "id": "Wood"
+   },
+   {
+    "count": 70,
+    "id": "stone"
+   },
+   {
+    "count": 10,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 40000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_Onion",
+  "mapObjectId": "FarmBlockV2_Onion",
+  "materials": [
+   {
+    "count": 3,
+    "id": "OnionSeeds"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "stone"
+   },
+   {
+    "count": 2,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 20000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_Potato",
+  "mapObjectId": "FarmBlockV2_Potato",
+  "materials": [
+   {
+    "count": 3,
+    "id": "PotatoSeeds"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "stone"
+   },
+   {
+    "count": 3,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 20000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_tomato",
+  "mapObjectId": "FarmBlockV2_tomato",
+  "materials": [
+   {
+    "count": 3,
+    "id": "TomatoSeeds"
+   },
+   {
+    "count": 70,
+    "id": "Wood"
+   },
+   {
+    "count": 50,
+    "id": "stone"
+   },
+   {
+    "count": 5,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 20000
+ },
+ {
+  "category": "Farm",
+  "id": "FarmBlockV2_wheet",
+  "mapObjectId": "FarmBlockV2_wheet",
+  "materials": [
+   {
+    "count": 3,
+    "id": "WheatSeeds"
+   },
+   {
+    "count": 15,
+    "id": "Wood"
+   },
+   {
+    "count": 15,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 8000
+ },
+ {
+  "category": "Other",
+  "id": "FastTravelPoint",
+  "mapObjectId": "FastTravelPoint",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Flag",
+  "id": "FireCult_Banner",
+  "mapObjectId": "FireCult_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "FireCult_Flag",
+  "mapObjectId": "FireCult_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Freestanding",
+  "id": "FireStand",
+  "mapObjectId": "FireStand",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "FireOrgan"
+   },
+   {
+    "count": 2,
+    "id": "Charcoal"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "FishingPond",
+  "id": "FishingPond1",
+  "mapObjectId": "FishingPond1",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 30,
+    "id": "Cement"
+   },
+   {
+    "count": 3,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 23500
+ },
+ {
+  "category": "FishingPond",
+  "id": "FishingPond2",
+  "mapObjectId": "FishingPond2",
+  "materials": [
+   {
+    "count": 20,
+    "id": "HighGrade_Processed_Wood"
+   },
+   {
+    "count": 30,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "ManganeseIngot"
+   },
+   {
+    "count": 20,
+    "id": "PalOil"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 85000
+ },
+ {
+  "category": "Milling_Crusher",
+  "id": "FlourMill",
+  "mapObjectId": "FlourMill",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 40,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 8000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "FlowerBed",
+  "mapObjectId": "FlowerBed",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 20,
+    "id": "Cement"
+   },
+   {
+    "count": 10,
+    "id": "Poppy"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 32000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "Fountain",
+  "mapObjectId": "Fountain",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 8,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 20000
+ },
+ {
+  "category": "Desk",
+  "id": "Fudukue",
+  "mapObjectId": "Fudukue",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush01_Flower",
+  "mapObjectId": "FurnitureBush01_Flower",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush01_Green",
+  "mapObjectId": "FurnitureBush01_Green",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush01_Snow",
+  "mapObjectId": "FurnitureBush01_Snow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush01_Tropical",
+  "mapObjectId": "FurnitureBush01_Tropical",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush01_Yellow",
+  "mapObjectId": "FurnitureBush01_Yellow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureBush02_Flower",
+  "mapObjectId": "FurnitureBush02_Flower",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "FurnitureStone01",
+  "mapObjectId": "FurnitureStone01",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Bamboo",
+  "mapObjectId": "FurnitureTree01_Bamboo",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Cherry",
+  "mapObjectId": "FurnitureTree01_Cherry",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Desert",
+  "mapObjectId": "FurnitureTree01_Desert",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Green",
+  "mapObjectId": "FurnitureTree01_Green",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Red",
+  "mapObjectId": "FurnitureTree01_Red",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Snow",
+  "mapObjectId": "FurnitureTree01_Snow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Tropical",
+  "mapObjectId": "FurnitureTree01_Tropical",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree01_Yellow",
+  "mapObjectId": "FurnitureTree01_Yellow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Bamboo",
+  "mapObjectId": "FurnitureTree02_Bamboo",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Cherry",
+  "mapObjectId": "FurnitureTree02_Cherry",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Desert",
+  "mapObjectId": "FurnitureTree02_Desert",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Green",
+  "mapObjectId": "FurnitureTree02_Green",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Red",
+  "mapObjectId": "FurnitureTree02_Red",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Snow",
+  "mapObjectId": "FurnitureTree02_Snow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Tropical",
+  "mapObjectId": "FurnitureTree02_Tropical",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree02_Yellow",
+  "mapObjectId": "FurnitureTree02_Yellow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Bamboo",
+  "mapObjectId": "FurnitureTree03_Bamboo",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Cherry",
+  "mapObjectId": "FurnitureTree03_Cherry",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Desert",
+  "mapObjectId": "FurnitureTree03_Desert",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Green",
+  "mapObjectId": "FurnitureTree03_Green",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Red",
+  "mapObjectId": "FurnitureTree03_Red",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Snow",
+  "mapObjectId": "FurnitureTree03_Snow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Tropical",
+  "mapObjectId": "FurnitureTree03_Tropical",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Houseplants",
+  "id": "FurnitureTree03_Yellow",
+  "mapObjectId": "FurnitureTree03_Yellow",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "GarbageBag_Iron",
+  "mapObjectId": "GarbageBag_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_DiagonalWall",
+  "mapObjectId": "Glass_DiagonalWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_DoorWall",
+  "mapObjectId": "Glass_DoorWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_Fence",
+  "mapObjectId": "Glass_Fence",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   },
+   {
+    "count": 1,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_foundation",
+  "mapObjectId": "Glass_foundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_pillars",
+  "mapObjectId": "Glass_Pillars",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_PyramidRoof",
+  "mapObjectId": "Glass_PyramidRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_roof",
+  "mapObjectId": "Glass_roof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_SlantedRoof",
+  "mapObjectId": "Glass_SlantedRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_SlopedRoofCorner",
+  "mapObjectId": "Glass_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_SlopedRoofCornerReverse",
+  "mapObjectId": "Glass_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_stair",
+  "mapObjectId": "Glass_stair",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_TriangleFoundation",
+  "mapObjectId": "Glass_TriangleFoundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_TriangleRoof",
+  "mapObjectId": "Glass_TriangleRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_TriangleStairsCorner",
+  "mapObjectId": "Glass_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_TriangleWall",
+  "mapObjectId": "Glass_TriangleWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_TriangleWallReverse",
+  "mapObjectId": "Glass_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_wall",
+  "mapObjectId": "Glass_wall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_WallGate",
+  "mapObjectId": "Glass_WallGate",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Glass",
+  "id": "Glass_WindowWall",
+  "mapObjectId": "Glass_WindowWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "PalManagement",
+  "id": "GlobalPalStorage",
+  "mapObjectId": "GlobalPalStorage",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 15,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "Ornament",
+  "id": "Globe01_Stone",
+  "mapObjectId": "Globe01_Stone",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Ornament",
+  "id": "GoalSoccer_Iron",
+  "mapObjectId": "GoalSoccer_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Ornament",
+  "id": "GuardianDogStatue",
+  "mapObjectId": "GuardianDogStatue",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chest",
+  "id": "GuildChest",
+  "mapObjectId": "GuildChest",
+  "materials": [
+   {
+    "count": 50,
+    "id": "IronIngot"
+   },
+   {
+    "count": 100,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Storage",
+  "workAmount": 120000
+ },
+ {
+  "category": "PalTraining",
+  "id": "HatchingPalEgg",
+  "mapObjectId": "HatchingPalEgg",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "Cloth"
+   },
+   {
+    "count": 30,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 5000
+ },
+ {
+  "category": "Other",
+  "id": "Headstone",
+  "mapObjectId": "Headstone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "Electricity",
+  "id": "Heater",
+  "mapObjectId": "Heater",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Charcoal"
+   },
+   {
+    "count": 5,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Cooking",
+  "id": "HugeKitchen",
+  "mapObjectId": "HugeKitchen",
+  "materials": [
+   {
+    "count": 200,
+    "id": "Cement"
+   },
+   {
+    "count": 200,
+    "id": "Charcoal"
+   },
+   {
+    "count": 25,
+    "id": "HighGrade_Processed_Wood"
+   },
+   {
+    "count": 13,
+    "id": "Bio_Coolant"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 200000
+ },
+ {
+  "category": "Flag",
+  "id": "Hunter_Banner",
+  "mapObjectId": "Hunter_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Hunter_Flag",
+  "mapObjectId": "Hunter_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Hunter_GangFlag",
+  "mapObjectId": "Hunter_GangFlag",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Milling_Crusher",
+  "energyType": "Electric",
+  "id": "IceCrusher",
+  "mapObjectId": "IceCrusher",
+  "materials": [
+   {
+    "count": 50,
+    "id": "StealIngot"
+   },
+   {
+    "count": 30,
+    "id": "Plastic"
+   },
+   {
+    "count": 25,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 20,
+    "id": "Corrosive_Solvent"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 100000
+ },
+ {
+  "category": "Ornament",
+  "id": "IceHorseStatue",
+  "mapObjectId": "IceHorseStatue",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_DiagonalWall",
+  "mapObjectId": "Iron_DiagonalWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_Fence",
+  "mapObjectId": "Iron_Fence",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_PyramidRoof",
+  "mapObjectId": "Iron_PyramidRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_SlopedRoofCorner",
+  "mapObjectId": "Iron_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_SlopedRoofCornerReverse",
+  "mapObjectId": "Iron_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_TriangleFoundation",
+  "mapObjectId": "Iron_TriangleFoundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_TriangleRoof",
+  "mapObjectId": "Iron_TriangleRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_TriangleStairsCorner",
+  "mapObjectId": "Iron_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_TriangleWallReverse",
+  "mapObjectId": "Iron_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Iron_WallGate",
+  "mapObjectId": "Iron_WallGate",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ornament",
+  "id": "Irori",
+  "mapObjectId": "Irori",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Charcoal"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Other",
+  "id": "ItemBooth",
+  "mapObjectId": "ItemBooth",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 4,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 3,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 9000
+ },
+ {
+  "category": "Chest",
+  "id": "ItemChest",
+  "mapObjectId": "ItemChest",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Storage",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chest",
+  "id": "ItemChest_02",
+  "mapObjectId": "ItemChest_02",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Storage",
+  "workAmount": 8000
+ },
+ {
+  "category": "Chest",
+  "id": "ItemChest_03",
+  "mapObjectId": "ItemChest_03",
+  "materials": [
+   {
+    "count": 5,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Storage",
+  "workAmount": 50000
+ },
+ {
+  "category": "Chest",
+  "id": "ItemChest_04",
+  "mapObjectId": "ItemChest_04",
+  "materials": [
+   {
+    "count": 20,
+    "id": "StainlessSteel"
+   },
+   {
+    "count": 20,
+    "id": "CarbonFiber"
+   },
+   {
+    "count": 2,
+    "id": "Computer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Storage",
+  "workAmount": 50000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Ivy01",
+  "mapObjectId": "Ivy01",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 0
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Ivy02",
+  "mapObjectId": "Ivy02",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 0
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Ivy03",
+  "mapObjectId": "Ivy03",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_DiagonalWall",
+  "mapObjectId": "JapaneseStyle_DiagonalWall",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_DoorWall_01",
+  "mapObjectId": "JapaneseStyle_DoorWall_01",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_DoorWall_02",
+  "mapObjectId": "JapaneseStyle_DoorWall_02",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_DoorWall_03",
+  "mapObjectId": "JapaneseStyle_DoorWall_03",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_Fence",
+  "mapObjectId": "JapaneseStyle_Fence",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_foundation",
+  "mapObjectId": "JapaneseStyle_foundation",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_Pillar",
+  "mapObjectId": "JapaneseStyle_Pillar",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_PyramidRoof",
+  "mapObjectId": "JapaneseStyle_PyramidRoof",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_roof_01",
+  "mapObjectId": "JapaneseStyle_roof_01",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_roof_02",
+  "mapObjectId": "JapaneseStyle_roof_02",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_SlantedRoof",
+  "mapObjectId": "JapaneseStyle_SlantedRoof",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_SlopedRoofCorner",
+  "mapObjectId": "JapaneseStyle_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_SlopedRoofCornerReverse",
+  "mapObjectId": "JapaneseStyle_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_stair",
+  "mapObjectId": "JapaneseStyle_stair",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleFoundation",
+  "mapObjectId": "JapaneseStyle_TriangleFoundation",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleRoof_01",
+  "mapObjectId": "JapaneseStyle_TriangleRoof_01",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleRoof_02",
+  "mapObjectId": "JapaneseStyle_TriangleRoof_02",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleStairsCorner_01",
+  "mapObjectId": "JapaneseStyle_TriangleStairsCorner_01",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleStairsCorner_02",
+  "mapObjectId": "JapaneseStyle_TriangleStairsCorner_02",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleWall",
+  "mapObjectId": "JapaneseStyle_TriangleWall",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_TriangleWallReverse",
+  "mapObjectId": "JapaneseStyle_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_wall_01",
+  "mapObjectId": "JapaneseStyle_wall_01",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_WallGate",
+  "mapObjectId": "JapaneseStyle_WallGate",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "JapaneseStyle",
+  "id": "JapaneseStyle_WindowWall",
+  "mapObjectId": "JapaneseStyle_WindowWall",
+  "materials": [
+   {
+    "count": 4,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ornament",
+  "id": "JetDragonStatue",
+  "mapObjectId": "JetDragonStatue",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Kakejiku",
+  "mapObjectId": "Kakejiku",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Koro",
+  "mapObjectId": "Koro",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 5,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "PalManagement",
+  "id": "Lab",
+  "mapObjectId": "Lab",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 5000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Lamp",
+  "mapObjectId": "Lamp",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   },
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Ceiling",
+  "id": "LanternTop",
+  "mapObjectId": "LanternTop",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Ceiling",
+  "energyType": "Electric",
+  "id": "LargeCeilingLamp",
+  "mapObjectId": "LargeCeilingLamp",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   },
+   {
+    "count": 1,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 30000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "LargeLamp",
+  "mapObjectId": "LargeLamp",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   },
+   {
+    "count": 1,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 30000
+ },
+ {
+  "category": "Ceiling",
+  "energyType": "Electric",
+  "id": "Light_CandleSticks_Top",
+  "mapObjectId": "Light_CandleSticks_Top",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "WallHanging",
+  "energyType": "Electric",
+  "id": "Light_CandleSticks_Wall",
+  "mapObjectId": "Light_CandleSticks_Wall",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 2,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Freestanding",
+  "id": "Light_FirePlace01",
+  "mapObjectId": "Light_FirePlace01",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 15,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Freestanding",
+  "id": "Light_FirePlace02",
+  "mapObjectId": "Light_FirePlace02",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Wood"
+   },
+   {
+    "count": 30,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_FloorLamp01",
+  "mapObjectId": "Light_FloorLamp01",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_FloorLamp02",
+  "mapObjectId": "Light_FloorLamp02",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_LightPole01",
+  "mapObjectId": "Light_LightPole01",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_LightPole02",
+  "mapObjectId": "Light_LightPole02",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_LightPole03",
+  "mapObjectId": "Light_LightPole03",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Freestanding",
+  "energyType": "Electric",
+  "id": "Light_LightPole04",
+  "mapObjectId": "Light_LightPole04",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Ornament",
+  "id": "LilyQueenStatue",
+  "mapObjectId": "LilyQueenStatue",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "MachineGame01_Iron",
+  "mapObjectId": "MachineGame01_Iron",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 5,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 12000
+ },
+ {
+  "category": "Ornament",
+  "id": "MachineVending01_Iron",
+  "mapObjectId": "MachineVending01_Iron",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "IceOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Electricity",
+  "id": "ManualElectricGenerator",
+  "mapObjectId": "ManualElectricGenerator",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 5,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_GeneratePower",
+  "workAmount": 5000
+ },
+ {
+  "category": "Bed",
+  "id": "MedicalPalBed_02",
+  "mapObjectId": "MedicalPalBed_02",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 2000
+ },
+ {
+  "category": "Bed",
+  "id": "MedicalPalBed_03",
+  "mapObjectId": "MedicalPalBed_03",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Cloth"
+   },
+   {
+    "count": 3,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 10000
+ },
+ {
+  "category": "Bed",
+  "id": "MedicalPalBed_04",
+  "mapObjectId": "MedicalPalBed_04",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Cloth2"
+   },
+   {
+    "count": 5,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 20,
+    "id": "MachineParts"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 50000
+ },
+ {
+  "category": "Bed",
+  "id": "MedicalPalBed_05",
+  "mapObjectId": "MedicalPalBed_05",
+  "materials": [
+   {
+    "count": 10,
+    "id": "StealIngot"
+   },
+   {
+    "count": 6,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 3,
+    "id": "Computer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 50000
+ },
+ {
+  "category": "Medicine",
+  "id": "MedicineFacility_01",
+  "mapObjectId": "MedicineFacility_01",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Medicine",
+  "workAmount": 3000
+ },
+ {
+  "category": "Medicine",
+  "energyType": "Electric",
+  "id": "MedicineFacility_02",
+  "mapObjectId": "MedicineFacility_02",
+  "materials": [
+   {
+    "count": 40,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 10,
+    "id": "CarbonFiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Medicine",
+  "workAmount": 50000
+ },
+ {
+  "category": "Medicine",
+  "energyType": "Electric",
+  "id": "MedicineFacility_03",
+  "mapObjectId": "MedicineFacility_03",
+  "materials": [
+   {
+    "count": 50,
+    "id": "StainlessSteel"
+   },
+   {
+    "count": 50,
+    "id": "Plastic"
+   },
+   {
+    "count": 30,
+    "id": "MachineParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Medicine",
+  "workAmount": 500000
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_DoorWall",
+  "mapObjectId": "Metal_DoorWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_foundation",
+  "mapObjectId": "Metal_foundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Barieer",
+  "id": "Metal_Gate",
+  "mapObjectId": "Metal_Gate",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 15000
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_pillars",
+  "mapObjectId": "Metal_Pillars",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_roof",
+  "mapObjectId": "Metal_roof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_SlantedRoof",
+  "mapObjectId": "Metal_SlantedRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_stair",
+  "mapObjectId": "Metal_stair",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_TriangleWall",
+  "mapObjectId": "Metal_TriangleWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_wall",
+  "mapObjectId": "Metal_wall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Metal",
+  "id": "Metal_WindowWall",
+  "mapObjectId": "Metal_WindowWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "MiningTool",
+  "mapObjectId": "MiningTool",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 15,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 48000
+ },
+ {
+  "category": "Ornament",
+  "id": "Mirror01_Stone",
+  "mapObjectId": "Mirror01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Mirror01_Wall_Stone",
+  "mapObjectId": "Mirror01_Wall_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "Mirror02_Stone",
+  "mapObjectId": "Mirror02_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 8,
+    "id": "Stone"
+   },
+   {
+    "count": 1,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "PalTraining",
+  "id": "MonsterFarm",
+  "mapObjectId": "MonsterFarm",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 30,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 15000
+ },
+ {
+  "category": "PalTraining",
+  "energyType": "Electric",
+  "id": "MultiElectricHatchingPalEgg",
+  "mapObjectId": "MultiElectricHatchingPalEgg",
+  "materials": [
+   {
+    "count": 100,
+    "id": "StainlessSteel"
+   },
+   {
+    "count": 50,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 30,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 20,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 5000
+ },
+ {
+  "category": "PalTraining",
+  "energyType": "Electric",
+  "id": "MultiElectricHatchingPalEggWithBreed",
+  "mapObjectId": "MultiElectricHatchingPalEggWithBreed",
+  "materials": [
+   {
+    "count": 100,
+    "id": "WorldTreeIngot"
+   },
+   {
+    "count": 50,
+    "id": "AIcore"
+   },
+   {
+    "count": 30,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 20,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 1000000
+ },
+ {
+  "category": "PalTraining",
+  "id": "MultiHatchingPalEgg",
+  "mapObjectId": "MultiHatchingPalEgg",
+  "materials": [
+   {
+    "count": 50,
+    "id": "StealIngot"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   },
+   {
+    "count": 20,
+    "id": "PalCrystal_Ex"
+   },
+   {
+    "count": 4,
+    "id": "AncientParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Breed",
+  "workAmount": 5000
+ },
+ {
+  "category": "Flag",
+  "id": "Ninja_Banner",
+  "mapObjectId": "Ninja_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Ninja_Flag",
+  "mapObjectId": "Ninja_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Deforest_Mining",
+  "energyType": "Electric",
+  "id": "OilPump",
+  "mapObjectId": "OilPump",
+  "materials": [
+   {
+    "count": 250,
+    "id": "StealIngot"
+   },
+   {
+    "count": 50,
+    "id": "MachineParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 500000
+ },
+ {
+  "category": "Deforest_Mining",
+  "energyType": "Electric",
+  "id": "OilPump02",
+  "mapObjectId": "OilPump02",
+  "materials": [
+   {
+    "count": 300,
+    "id": "StealIngot"
+   },
+   {
+    "count": 50,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 50,
+    "id": "Bio_Battery"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 500000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "OlympicCauldron",
+  "mapObjectId": "OlympicCauldron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 16000
+ },
+ {
+  "category": "PalTraining",
+  "id": "OperatingTable",
+  "mapObjectId": "OperatingTable",
+  "materials": [
+   {
+    "count": 30,
+    "id": "IronIngot"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   },
+   {
+    "count": 10,
+    "id": "Corrosive_Solvent"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "Other",
+  "id": "PalBooth",
+  "mapObjectId": "PalBooth",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 4,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 5,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 9000
+ },
+ {
+  "category": "PalManagement",
+  "id": "PalBoxV2",
+  "mapObjectId": "PalBoxV2",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 8,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "Other",
+  "id": "PalCage",
+  "mapObjectId": "PalCage",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "FeedBox",
+  "id": "PalFoodBox",
+  "mapObjectId": "PalFoodBox",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 1000
+ },
+ {
+  "category": "Health",
+  "id": "PalMedicineBox",
+  "mapObjectId": "PalMedicineBox",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 5,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Food_Basic",
+  "workAmount": 10000
+ },
+ {
+  "category": "Ornament",
+  "id": "Partition_Stone",
+  "mapObjectId": "Partition_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Piano01_Stone",
+  "mapObjectId": "Piano01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   },
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Ornament",
+  "id": "Piano02_Stone",
+  "mapObjectId": "Piano02_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   },
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "Ornament",
+  "id": "PipeClay01_Iron",
+  "mapObjectId": "PipeClay01_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Plant01_Plant",
+  "mapObjectId": "Plant01_Plant",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Plant02_Plant",
+  "mapObjectId": "Plant02_Plant",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Plant03_Plant",
+  "mapObjectId": "Plant03_Plant",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Plant04_Plant",
+  "mapObjectId": "Plant04_Plant",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Stone"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Bed",
+  "id": "PlayerBed_02",
+  "mapObjectId": "PlayerBed_02",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 1,
+    "id": "Wool"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Medical",
+  "workAmount": 2000
+ },
+ {
+  "category": "Bed",
+  "id": "PlayerBed_03",
+  "mapObjectId": "PlayerBed_03",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Cloth"
+   },
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Medical",
+  "workAmount": 20000
+ },
+ {
+  "category": "Flag",
+  "id": "Police_Banner",
+  "mapObjectId": "Police_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Police_Flag",
+  "mapObjectId": "Police_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "QuartzPit",
+  "mapObjectId": "QuartzPit",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   },
+   {
+    "count": 100,
+    "id": "Quartz"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 50000
+ },
+ {
+  "category": "Chest",
+  "energyType": "Electric",
+  "id": "Refrigerator",
+  "mapObjectId": "Refrigerator",
+  "materials": [
+   {
+    "count": 50,
+    "id": "IronIngot"
+   },
+   {
+    "count": 20,
+    "id": "Polymer"
+   },
+   {
+    "count": 10,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 50000
+ },
+ {
+  "category": "Product_Repair",
+  "id": "RepairBench",
+  "mapObjectId": "RepairBench",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 3000
+ },
+ {
+  "category": "Carpet",
+  "id": "Rug_Wood",
+  "mapObjectId": "Rug_Wood",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Carpet",
+  "id": "Rug01_Stone",
+  "mapObjectId": "Rug01_Stone",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "Venom"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Carpet",
+  "id": "Rug02_Stone",
+  "mapObjectId": "Rug02_Stone",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1500
+ },
+ {
+  "category": "Carpet",
+  "id": "Rug03_Stone",
+  "mapObjectId": "Rug03_Stone",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "PalOil"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1500
+ },
+ {
+  "category": "Carpet",
+  "id": "Rug04_Stone",
+  "mapObjectId": "Rug04_Stone",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "SanityDecrease1",
+  "mapObjectId": "SanityDecrease1",
+  "materials": [
+   {
+    "count": 40,
+    "id": "IronIngot"
+   },
+   {
+    "count": 20,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 10,
+    "id": "Corrosive_Solvent"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 50000
+ },
+ {
+  "category": "Flag",
+  "id": "Scientist_Banner",
+  "mapObjectId": "Scientist_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "Scientist_Flag",
+  "mapObjectId": "Scientist_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Houseplants",
+  "id": "Seika",
+  "mapObjectId": "Seika",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 1,
+    "id": "Poppy"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "SF_Chair",
+  "mapObjectId": "SF_Chair",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Desk",
+  "id": "SF_Desk",
+  "mapObjectId": "SF_Desk",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Clean",
+  "id": "SF_DiagonalWall",
+  "mapObjectId": "SF_DiagonalWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_DoorWall",
+  "mapObjectId": "SF_DoorWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_Fence",
+  "mapObjectId": "SF_Fence",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_foundation",
+  "mapObjectId": "SF_foundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_pillars",
+  "mapObjectId": "SF_Pillars",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_PyramidRoof",
+  "mapObjectId": "SF_PyramidRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_roof",
+  "mapObjectId": "SF_roof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_SlantedRoof",
+  "mapObjectId": "SF_SlantedRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_SlopedRoofCorner",
+  "mapObjectId": "SF_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_SlopedRoofCornerReverse",
+  "mapObjectId": "SF_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_stair",
+  "mapObjectId": "SF_stair",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_TriangleFoundation",
+  "mapObjectId": "SF_TriangleFoundation",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_TriangleRoof",
+  "mapObjectId": "SF_TriangleRoof",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_TriangleStairsCorner",
+  "mapObjectId": "SF_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_TriangleWall",
+  "mapObjectId": "SF_TriangleWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_TriangleWallReverse",
+  "mapObjectId": "SF_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_wall",
+  "mapObjectId": "SF_wall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_WallGate",
+  "mapObjectId": "SF_WallGate",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Clean",
+  "id": "SF_WindowWall",
+  "mapObjectId": "SF_WindowWall",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf_Cask_Wood",
+  "mapObjectId": "Shelf_Cask_Wood",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf_Hang01_Wood",
+  "mapObjectId": "Shelf_Hang01_Wood",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "Shelf_Hang02_Wood",
+  "mapObjectId": "Shelf_Hang02_Wood",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf_Wood",
+  "mapObjectId": "Shelf_Wood",
+  "materials": [
+   {
+    "count": 40,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf01_Iron",
+  "mapObjectId": "Shelf01_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 8000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf01_Stone",
+  "mapObjectId": "Shelf01_Stone",
+  "materials": [
+   {
+    "count": 40,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf01_Wall_Iron",
+  "mapObjectId": "Shelf01_Wall_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 4000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf01_Wall_Stone",
+  "mapObjectId": "Shelf01_Wall_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   },
+   {
+    "count": 3,
+    "id": "Berries"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf02_Iron",
+  "mapObjectId": "Shelf02_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 8000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf02_Stone",
+  "mapObjectId": "Shelf02_Stone",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 10000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf03_Iron",
+  "mapObjectId": "Shelf03_Iron",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 12000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf03_Stone",
+  "mapObjectId": "Shelf03_Stone",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf04_Iron",
+  "mapObjectId": "Shelf04_Iron",
+  "materials": [
+   {
+    "count": 30,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 12000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf04_Stone",
+  "mapObjectId": "Shelf04_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2500
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf05_Stone",
+  "mapObjectId": "Shelf05_Stone",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf06_Stone",
+  "mapObjectId": "Shelf06_Stone",
+  "materials": [
+   {
+    "count": 40,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Shelf07_Stone",
+  "mapObjectId": "Shelf07_Stone",
+  "materials": [
+   {
+    "count": 40,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 8000
+ },
+ {
+  "category": "Ornament",
+  "id": "Shishiodoshi",
+  "mapObjectId": "Shishiodoshi",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 3,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Freestanding",
+  "id": "Shrine_Lantern",
+  "mapObjectId": "Shrine_Lantern",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "ElectricOrgan"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 7000
+ },
+ {
+  "category": "Other",
+  "id": "Signboard",
+  "mapObjectId": "Signboard",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "SignExit_Ceiling_Iron",
+  "mapObjectId": "SignExit_Ceiling_Iron",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   },
+   {
+    "count": 1,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "WallDecoration",
+  "id": "SignExit_Wall_Iron",
+  "mapObjectId": "SignExit_Wall_Iron",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   },
+   {
+    "count": 1,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "Silo",
+  "mapObjectId": "Silo",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 30,
+    "id": "Fiber"
+   },
+   {
+    "count": 10,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 40000
+ },
+ {
+  "category": "PalOther",
+  "id": "SkinChange",
+  "mapObjectId": "SkinChange",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Modify",
+  "workAmount": 3000
+ },
+ {
+  "category": "Flag",
+  "id": "SkyIsland_Banner",
+  "mapObjectId": "SkyIsland_Banner",
+  "materials": [
+   {
+    "count": 10,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Flag",
+  "id": "SkyIsland_Flag",
+  "mapObjectId": "SkyIsland_Flag",
+  "materials": [
+   {
+    "count": 20,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   },
+   {
+    "count": 20,
+    "id": "Cloth2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "SkyIslandOrePit",
+  "mapObjectId": "SkyIslandOrePit",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   },
+   {
+    "count": 100,
+    "id": "SkyIslandOre"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 100000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "Snowman",
+  "mapObjectId": "Snowman",
+  "materials": [
+   {
+    "count": 5,
+    "id": "IceOrgan"
+   },
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 40000
+ },
+ {
+  "category": "Chair",
+  "id": "Sofa01_Iron",
+  "mapObjectId": "Sofa01_Iron",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Leather"
+   },
+   {
+    "count": 1,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Sofa01_Stone",
+  "mapObjectId": "Sofa01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2500
+ },
+ {
+  "category": "Chair",
+  "id": "Sofa02_Iron",
+  "mapObjectId": "Sofa02_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "Leather"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 4000
+ },
+ {
+  "category": "Chair",
+  "id": "Sofa02_Stone",
+  "mapObjectId": "Sofa02_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "Cloth"
+   },
+   {
+    "count": 2,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Chair",
+  "id": "Sofa03_Stone",
+  "mapObjectId": "Sofa03_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 1,
+    "id": "Cloth"
+   },
+   {
+    "count": 1,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1500
+ },
+ {
+  "category": "Health",
+  "id": "Spa",
+  "mapObjectId": "Spa",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 15,
+    "id": "Stone"
+   },
+   {
+    "count": 7,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 3,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 8000
+ },
+ {
+  "category": "Health",
+  "id": "Spa2",
+  "mapObjectId": "Spa2",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 3,
+    "id": "Bio_Coolant"
+   },
+   {
+    "count": 10,
+    "id": "Cement"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 50000
+ },
+ {
+  "category": "Health",
+  "id": "Spa3",
+  "mapObjectId": "Spa3",
+  "materials": [
+   {
+    "count": 30,
+    "id": "ManganeseIngot"
+   },
+   {
+    "count": 10,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 20,
+    "id": "Wood_Fine"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 50000
+ },
+ {
+  "category": "PalCaptureItem",
+  "id": "SphereFactory_Black_01",
+  "mapObjectId": "SphereFactory_Black_01",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   },
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Capture",
+  "workAmount": 5000
+ },
+ {
+  "category": "PalCaptureItem",
+  "energyType": "Electric",
+  "id": "SphereFactory_Black_02",
+  "mapObjectId": "SphereFactory_Black_02",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 100,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Capture",
+  "workAmount": 30000
+ },
+ {
+  "category": "PalCaptureItem",
+  "energyType": "Electric",
+  "id": "SphereFactory_Black_03",
+  "mapObjectId": "SphereFactory_Black_03",
+  "materials": [
+   {
+    "count": 100,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 30,
+    "id": "MachineParts"
+   },
+   {
+    "count": 50,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Capture",
+  "workAmount": 120000
+ },
+ {
+  "category": "PalCaptureItem",
+  "energyType": "Electric",
+  "id": "SphereFactory_Black_04",
+  "mapObjectId": "SphereFactory_Black_04",
+  "materials": [
+   {
+    "count": 50,
+    "id": "StainlessSteel"
+   },
+   {
+    "count": 50,
+    "id": "Plastic"
+   },
+   {
+    "count": 10,
+    "id": "Computer"
+   },
+   {
+    "count": 10,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Pal_Capture",
+  "workAmount": 500000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "StationDeforest2",
+  "mapObjectId": "StationDeforest2",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 10000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "StationDeforest3",
+  "mapObjectId": "StationDeforest3",
+  "materials": [
+   {
+    "count": 100,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 20,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 5,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 30000
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_DiagonalWall",
+  "mapObjectId": "Stone_DiagonalWall",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_DoorWall",
+  "mapObjectId": "Stone_DoorWall",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_Fence",
+  "mapObjectId": "Stone_Fence",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_foundation",
+  "mapObjectId": "Stone_foundation",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Barieer",
+  "id": "Stone_Gate",
+  "mapObjectId": "Stone_Gate",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 5000
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_pillar",
+  "mapObjectId": "Stone_Pillar",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_PyramidRoof",
+  "mapObjectId": "Stone_PyramidRoof",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_roof",
+  "mapObjectId": "Stone_roof",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_SlantedRoof",
+  "mapObjectId": "Stone_SlantedRoof",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_SlopedRoofCorner",
+  "mapObjectId": "Stone_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_SlopedRoofCornerReverse",
+  "mapObjectId": "Stone_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_stair",
+  "mapObjectId": "Stone_stair",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_TriangleFoundation",
+  "mapObjectId": "Stone_TriangleFoundation",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_TriangleRoof",
+  "mapObjectId": "Stone_TriangleRoof",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_TriangleStairsCorner",
+  "mapObjectId": "Stone_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_TriangleWall",
+  "mapObjectId": "Stone_TriangleWall",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_TriangleWallReverse",
+  "mapObjectId": "Stone_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_wall",
+  "mapObjectId": "Stone_wall",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_WallGate",
+  "mapObjectId": "Stone_WallGate",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Stone",
+  "id": "Stone_WindowWall",
+  "mapObjectId": "Stone_WindowWall",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "StonePit",
+  "mapObjectId": "StonePit",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Stone"
+   },
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 10000
+ },
+ {
+  "category": "Chair",
+  "id": "Stool_High_Wood",
+  "mapObjectId": "Stool_High_Wood",
+  "materials": [
+   {
+    "count": 8,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chair",
+  "id": "Stool_Wood",
+  "mapObjectId": "Stool_Wood",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Chair",
+  "id": "Stool01_Iron",
+  "mapObjectId": "Stool01_Iron",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Stool01_Stone",
+  "mapObjectId": "Stool01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Ornament",
+  "id": "Stove01_Stone",
+  "mapObjectId": "Stove01_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 5,
+    "id": "Charcoal"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 8000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "Stump",
+  "mapObjectId": "Stump",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 30,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 32000
+ },
+ {
+  "category": "Deforest_Mining",
+  "id": "SulfurPit",
+  "mapObjectId": "SulfurPit",
+  "materials": [
+   {
+    "count": 70,
+    "id": "Stone"
+   },
+   {
+    "count": 100,
+    "id": "Sulfur"
+   },
+   {
+    "count": 30,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 10,
+    "id": "PalCrystal_Ex"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Resource",
+  "workAmount": 30000
+ },
+ {
+  "category": "Desk",
+  "id": "TableCircular_Wood",
+  "mapObjectId": "TableCircular_Wood",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Berries"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Desk",
+  "id": "TableCircular_Wood_None",
+  "mapObjectId": "TableCircular_Wood_None",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Desk",
+  "id": "TableCircular01_Iron",
+  "mapObjectId": "TableCircular01_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 4000
+ },
+ {
+  "category": "Desk",
+  "id": "TableCircular01_Stone",
+  "mapObjectId": "TableCircular01_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Fiber"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "TableDresser01_Stone",
+  "mapObjectId": "TableDresser01_Stone",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "Fiber"
+   },
+   {
+    "count": 30,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2500
+ },
+ {
+  "category": "Desk",
+  "id": "TableSide01_Iron",
+  "mapObjectId": "TableSide01_Iron",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 2,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1500
+ },
+ {
+  "category": "Ornament",
+  "id": "TableSink01_Stone",
+  "mapObjectId": "TableSink01_Stone",
+  "materials": [
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 1,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Desk",
+  "id": "TableSquare_Wood",
+  "mapObjectId": "TableSquare_Wood",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Berries"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Desk",
+  "id": "TableSquare_Wood_None",
+  "mapObjectId": "TableSquare_Wood_None",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Desk",
+  "id": "TableSquare01_Iron",
+  "mapObjectId": "TableSquare01_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Berries"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Desk",
+  "id": "TableSquare02_Iron",
+  "mapObjectId": "TableSquare02_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 2,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "StorageFurniture",
+  "id": "Tansu",
+  "mapObjectId": "Tansu",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Television01_Iron",
+  "mapObjectId": "Television01_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "Wood"
+   },
+   {
+    "count": 1,
+    "id": "MachineParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 5000
+ },
+ {
+  "category": "Ornament",
+  "id": "Tire01_Iron",
+  "mapObjectId": "Tire01_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "PalOil"
+   },
+   {
+    "count": 2,
+    "id": "PalFluid"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "Toilet01_Stone",
+  "mapObjectId": "Toilet01_Stone",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 20,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "ToiletHolder01_Stone",
+  "mapObjectId": "ToiletHolder01_Stone",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 3,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 500
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "ToolBoxV1",
+  "mapObjectId": "ToolBoxV1",
+  "materials": [
+   {
+    "count": 10,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 50,
+    "id": "Wood"
+   },
+   {
+    "count": 15,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 12000
+ },
+ {
+  "category": "Freestanding",
+  "id": "Torch",
+  "mapObjectId": "Torch",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Ornament",
+  "id": "Toro",
+  "mapObjectId": "Toro",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TowlRack01_Stone",
+  "mapObjectId": "TowlRack01_Stone",
+  "materials": [
+   {
+    "count": 1,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficBarricade01_Iron",
+  "mapObjectId": "TrafficBarricade01_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficBarricade02_Iron",
+  "mapObjectId": "TrafficBarricade02_Iron",
+  "materials": [
+   {
+    "count": 3,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficBarricade03_Iron",
+  "mapObjectId": "TrafficBarricade03_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 1,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficBarricade04_Iron",
+  "mapObjectId": "TrafficBarricade04_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficBarricade05_Iron",
+  "mapObjectId": "TrafficBarricade05_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficCone01_Iron",
+  "mapObjectId": "TrafficCone01_Iron",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficCone02_Iron",
+  "mapObjectId": "TrafficCone02_Iron",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 3000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficCone03_Iron",
+  "mapObjectId": "TrafficCone03_Iron",
+  "materials": [
+   {
+    "count": 1,
+    "id": "Polymer"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficLight01_Iron",
+  "mapObjectId": "TrafficLight01_Iron",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 6000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficSign01_Iron",
+  "mapObjectId": "TrafficSign01_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficSign02_Iron",
+  "mapObjectId": "TrafficSign02_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficSign03_Iron",
+  "mapObjectId": "TrafficSign03_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Ornament",
+  "id": "TrafficSign04_Iron",
+  "mapObjectId": "TrafficSign04_Iron",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "TransmissionTower",
+  "mapObjectId": "TransmissionTower",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "Bio_Battery"
+   },
+   {
+    "count": 5,
+    "id": "MachineParts2"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 60000
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_LegHold",
+  "mapObjectId": "Trap_LegHold",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_LegHold_Big",
+  "mapObjectId": "Trap_LegHold_Big",
+  "materials": [
+   {
+    "count": 20,
+    "id": "CopperIngot"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_MineAttack",
+  "mapObjectId": "Trap_MineAttack",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_MineElecShock",
+  "mapObjectId": "Trap_MineElecShock",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "ElectricOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_MineFreeze",
+  "mapObjectId": "Trap_MineFreeze",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 2,
+    "id": "IceOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_MovingPanel",
+  "mapObjectId": "Trap_MovingPanel",
+  "materials": [
+   {
+    "count": 50,
+    "id": "Pal_crystal_S"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Interception",
+  "id": "Trap_Noose",
+  "mapObjectId": "Trap_Noose",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Defense",
+  "workAmount": 0
+ },
+ {
+  "category": "Other",
+  "id": "WallSignboard",
+  "mapObjectId": "WallSignboard",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "WallHanging",
+  "id": "WallTorch",
+  "mapObjectId": "WallTorch",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "WallHanging",
+  "id": "WallTorch02",
+  "mapObjectId": "WallTorch02",
+  "materials": [
+   {
+    "count": 5,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Stone"
+   },
+   {
+    "count": 2,
+    "id": "FireOrgan"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 1000
+ },
+ {
+  "category": "Weapon",
+  "id": "WeaponFactory_Dirty_01",
+  "mapObjectId": "WeaponFactory_Dirty_01",
+  "materials": [
+   {
+    "count": 15,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 5000
+ },
+ {
+  "category": "Weapon",
+  "energyType": "Electric",
+  "id": "WeaponFactory_Dirty_02",
+  "mapObjectId": "WeaponFactory_Dirty_02",
+  "materials": [
+   {
+    "count": 100,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 20,
+    "id": "Processed_Wood"
+   },
+   {
+    "count": 20,
+    "id": "MachineParts"
+   },
+   {
+    "count": 10,
+    "id": "PalOil"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 30000
+ },
+ {
+  "category": "Weapon",
+  "energyType": "Electric",
+  "id": "WeaponFactory_Dirty_03",
+  "mapObjectId": "WeaponFactory_Dirty_03",
+  "materials": [
+   {
+    "count": 100,
+    "id": "IronIngot"
+   },
+   {
+    "count": 10,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "Corrosive_Solvent"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 120000
+ },
+ {
+  "category": "Weapon",
+  "energyType": "Electric",
+  "id": "WeaponFactory_Dirty_04",
+  "mapObjectId": "WeaponFactory_Dirty_04",
+  "materials": [
+   {
+    "count": 50,
+    "id": "ManganeseIngot"
+   },
+   {
+    "count": 10,
+    "id": "Thermal_Core"
+   },
+   {
+    "count": 30,
+    "id": "Corrosive_Solvent"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 600000
+ },
+ {
+  "category": "Ornament",
+  "id": "Wire_Fence",
+  "mapObjectId": "Wire_Fence",
+  "materials": [
+   {
+    "count": 5,
+    "id": "CopperIngot"
+   },
+   {
+    "count": 10,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Wood",
+  "id": "Wood_Fence",
+  "mapObjectId": "Wood_Fence",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Barieer",
+  "id": "Wood_Gate",
+  "mapObjectId": "Wood_Gate",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 2000
+ },
+ {
+  "category": "Wood",
+  "id": "Wood_SlantedRoof",
+  "mapObjectId": "Wood_SlantedRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wood_TriangleWall",
+  "mapObjectId": "Wood_TriangleWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wood_TriangleWallReverse",
+  "mapObjectId": "Wood_TriangleWallReverse",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wood_WindowWall",
+  "mapObjectId": "Wood_WindowWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Other",
+  "id": "WoodCreator",
+  "mapObjectId": "WoodCreator",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Wood"
+   },
+   {
+    "count": 5,
+    "id": "Stone"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Other",
+  "workAmount": 1000
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_DiagonalWall",
+  "mapObjectId": "Wooden_DiagonalWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_DoorWall",
+  "mapObjectId": "Wooden_DoorWall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_foundation",
+  "mapObjectId": "Wooden_foundation",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_ladder",
+  "mapObjectId": "Wooden_ladder",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_pillar",
+  "mapObjectId": "Wooden_Pillar",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_PyramidRoof",
+  "mapObjectId": "Wooden_PyramidRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_roof",
+  "mapObjectId": "Wooden_roof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_SlopedRoofCorner",
+  "mapObjectId": "Wooden_SlopedRoofCorner",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_SlopedRoofCornerReverse",
+  "mapObjectId": "Wooden_SlopedRoofCornerReverse",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_stair",
+  "mapObjectId": "Wooden_stair",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_TriangleFoundation",
+  "mapObjectId": "Wooden_TriangleFoundation",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_TriangleRoof",
+  "mapObjectId": "Wooden_TriangleRoof",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_TriangleStairsCorner",
+  "mapObjectId": "Wooden_TriangleStairsCorner",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_wall",
+  "mapObjectId": "Wooden_wall",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Wood",
+  "id": "Wooden_WallGate",
+  "mapObjectId": "Wooden_WallGate",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Found_Basic",
+  "workAmount": 0
+ },
+ {
+  "category": "Ornament",
+  "id": "WoodenBarricade",
+  "mapObjectId": "WoodenBarricade",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Wood"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Product_Repair",
+  "id": "WorkBench",
+  "mapObjectId": "WorkBench",
+  "materials": [
+   {
+    "count": 2,
+    "id": "Wood"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 500
+ },
+ {
+  "category": "Product_Repair",
+  "id": "WorkBench_SkillUnlock",
+  "mapObjectId": "WorkBench_SkillUnlock",
+  "materials": [
+   {
+    "count": 10,
+    "id": "Pal_crystal_S"
+   },
+   {
+    "count": 30,
+    "id": "Wood"
+   },
+   {
+    "count": 2,
+    "id": "Cloth"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Prod_Craft",
+  "workAmount": 5000
+ },
+ {
+  "category": "EfficiencEnhancement",
+  "id": "WorkSpeedIncrease1",
+  "mapObjectId": "WorkSpeedIncrease1",
+  "materials": [
+   {
+    "count": 40,
+    "id": "StealIngot"
+   },
+   {
+    "count": 30,
+    "id": "MachineParts2"
+   },
+   {
+    "count": 5,
+    "id": "Bio_Battery"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 120000
+ },
+ {
+  "category": "Ornament",
+  "id": "YakushimaBoss002_Relic",
+  "mapObjectId": "YakushimaBoss002_Relic",
+  "materials": [
+   {
+    "count": 100,
+    "id": "YakushimaIngot001"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Zabuton",
+  "mapObjectId": "Zabuton",
+  "materials": [
+   {
+    "count": 3,
+    "id": "Cloth"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ },
+ {
+  "category": "Chair",
+  "id": "Zaisu",
+  "mapObjectId": "Zaisu",
+  "materials": [
+   {
+    "count": 15,
+    "id": "Wood_Fine"
+   },
+   {
+    "count": 3,
+    "id": "Cloth"
+   },
+   {
+    "count": 10,
+    "id": "Fiber"
+   }
+  ],
+  "rank": 1,
+  "typeB": "Infra_Environment",
+  "workAmount": 2000
+ }
+]
