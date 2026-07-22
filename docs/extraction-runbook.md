@@ -159,3 +159,12 @@ précédente a déjà été suivie).
 1. Steam met à jour le pak → relancer FModel, recharger l'archive.
 2. Refaire les exports listés ci-dessus (mêmes assets).
 3. Côté WSL : relancer le pipeline (voir README du package pipeline, Phase 2).
+
+## Import automatique (GitHub Actions)
+
+Le workflow `import-saves` tourne toutes les 6 h (et à la demande :
+`gh workflow run import-saves`). Il télécharge `Players/*.sav` + `Level.sav`
+en SFTP, importe les progressions (additif) et met à jour les pseudos.
+Secrets requis (GitHub → Settings → Secrets) : `DATABASE_URL`, `SFTP_HOST`
+(URL sftp://hôte:port), `SFTP_USER`, `SFTP_PASSWORD`, `SAVE_REMOTE_DIR`
+(dossier du monde). Logs : onglet Actions du repo.

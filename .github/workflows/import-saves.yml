@@ -1,0 +1,55 @@
+name: import-saves
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+concurrency: import-saves
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances node (pipeline seul)
+        run: pnpm install --filter @palworld-companion/pipeline
+
+      - name: venv palsav + palooz + paramiko
+        run: |
+          cd packages/pipeline
+          python3 -m venv .venv
+          git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/pst
+          .venv/bin/pip -q install /tmp/pst/src/palsav/palooz /tmp/pst/src/palsav paramiko
+
+      - name: Télécharger les saves (SFTP)
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SAVE_REMOTE_DIR: ${{ secrets.SAVE_REMOTE_DIR }}
+        run: packages/pipeline/.venv/bin/python packages/pipeline/scripts/fetch-saves.py /tmp/saves
+
+      - name: Import des saves joueurs
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: cd packages/pipeline && node --experimental-strip-types src/import-save.ts /tmp/saves
+
+      - name: Pseudos in-game (Level.sav — non bloquant)
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: cd packages/pipeline && node --experimental-strip-types src/extract-players.ts /tmp/saves
