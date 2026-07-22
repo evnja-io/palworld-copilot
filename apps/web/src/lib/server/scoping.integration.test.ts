@@ -1,17 +1,17 @@
 // Test d'intégration multi-tenant : nécessite une base migrée (A + backfill + B).
 // Gated : ne tourne que si TEST_DATABASE_URL est posée (branche Neon, Tâche 8).
-//   TEST_DATABASE_URL=<url branche> pnpm --filter web test
+// Invocation — les DEUX variables sont nécessaires, sur la MÊME branche :
+//   TEST_DATABASE_URL=<url> DATABASE_URL=<url> pnpm --filter web test
+// TEST_DATABASE_URL déclenche la suite ; DATABASE_URL doit aussi pointer la
+// branche car getDb() lit $env/dynamic/private, que le plugin SvelteKit fige
+// depuis process.env/.env à l'init de Vite — muter process.env dans un
+// beforeAll serait trop tardif (l'env est déjà capturé).
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { randomUUID } from "node:crypto";
 
 const url = process.env.TEST_DATABASE_URL;
 
 describe.skipIf(!url)("scoping multi-tenant", () => {
-  // getDb() lit $env/dynamic/private → process.env au runtime sous vitest.
-  beforeAll(() => {
-    process.env.DATABASE_URL = url;
-  });
-
   const tag = randomUUID().slice(0, 8);
   const GUID = "AAAA0000000000000000000000000000";
   let db: Awaited<ReturnType<typeof mkDb>>;

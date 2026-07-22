@@ -1034,7 +1034,10 @@ et cohérence : `select count(*) from server_members;` = nombre de lignes de `us
 
 - [ ] **Step 3: Tests d'intégration de scoping**
 
-Run: `TEST_DATABASE_URL="$BRANCH_URL" pnpm --filter web test`
+Run: `TEST_DATABASE_URL="$BRANCH_URL" DATABASE_URL="$BRANCH_URL" pnpm --filter web test`
+(les deux variables sur la même branche : `TEST_DATABASE_URL` déclenche la suite,
+`DATABASE_URL` est lue par `getDb()` via `$env/dynamic/private`, figée par le
+plugin SvelteKit à l'init de Vite — la poser dans un `beforeAll` serait trop tard.)
 Expected: la suite `scoping multi-tenant` passe (plus aucun `skipped`), le reste inchangé.
 
 - [ ] **Step 4: Passe manuelle UI sur la branche**
