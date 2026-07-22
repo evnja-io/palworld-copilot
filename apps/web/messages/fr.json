@@ -29,5 +29,6 @@
   "pal_breeding_partner": "Partenaire…",
   "pal_breeding_child": "Enfant",
   "pal_breeding_parents": "Paires de parents possibles",
-  "pal_not_found": "Pal introuvable"
+  "pal_not_found": "Pal introuvable",
+  "pal_toggle_caught": "Capturé"
 }
