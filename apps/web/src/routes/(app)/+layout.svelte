@@ -46,7 +46,7 @@
 			</form>
 		</div>
 	</header>
-	<main>{@render children()}</main>
+	<main class:fullscreen={page.route.id === '/(app)/map'}>{@render children()}</main>
 </div>
 <CommandPalette bind:this={palette} />
 
@@ -146,6 +146,13 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 20px 16px 48px;
+	}
+	main.fullscreen {
+		max-width: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
 	}
 	@media (max-width: 640px) {
 		.topbar {

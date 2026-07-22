@@ -108,7 +108,7 @@
 <style>
 	.map-wrap {
 		position: relative;
-		height: calc(100dvh - 128px);
+		flex: 1;
 		min-height: 420px;
 	}
 	/* Popups Leaflet aux couleurs du design system */
@@ -135,5 +135,12 @@
 	}
 	:global(.leaflet-bar a:hover) {
 		background: var(--surface-3);
+	}
+	/* Contrôles à l'écart de l'encoche / barre home iOS en plein écran */
+	:global(.leaflet-bottom) {
+		bottom: env(safe-area-inset-bottom, 0px);
+	}
+	:global(.leaflet-right) {
+		right: env(safe-area-inset-right, 0px);
 	}
 </style>

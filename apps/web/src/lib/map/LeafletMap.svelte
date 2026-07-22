@@ -11,6 +11,7 @@
 
 	let container: HTMLDivElement;
 	let map: LType.Map | undefined;
+	let ro: ResizeObserver | undefined;
 
 	onMount(async () => {
 		const leaflet = (await import('leaflet')).default;
@@ -37,21 +38,28 @@
 			.addTo(map);
 		map.setMaxBounds(bounds.pad(0.05));
 		map.fitBounds(bounds);
+		// La hauteur du conteneur dépend du flex (topbar à hauteur variable) :
+		// resync Leaflet sur tout redimensionnement, pas seulement window.resize.
+		ro = new ResizeObserver(() => map?.invalidateSize());
+		ro.observe(container);
 		onready(leaflet, map, toLatLng);
 	});
 
-	onDestroy(() => map?.remove());
+	onDestroy(() => {
+		ro?.disconnect();
+		map?.remove();
+	});
 </script>
 
 <div class="map" bind:this={container}></div>
 
 <style>
 	.map {
-		width: 100%;
-		height: 100%;
+		/* Remplit le wrapper positionné : height:100% ne se résout pas
+		   quand la hauteur du parent vient de flex (min-height sur .shell). */
+		position: absolute;
+		inset: 0;
 		background: hsl(200 60% 25%); /* océan de la texture, évite le noir au chargement */
-		border-radius: var(--r-lg);
-		border: 1px solid var(--border);
 	}
 	/* Marqueurs (html de divIcon — hors scope Svelte, d'où :global) */
 	:global(.mk) {
