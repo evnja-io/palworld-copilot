@@ -3,6 +3,7 @@
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { itemIcon } from '$lib/game/icons';
 	import { buildings, techUnlocking } from '$lib/game/indexes';
+	import { appHref } from '$lib/nav';
 
 	let { data } = $props();
 
@@ -10,7 +11,7 @@
 	const tech = $derived(techUnlocking.get(data.buildingId));
 </script>
 
-<a href="/buildings" class="back">← {m.buildings_title()}</a>
+<a href={appHref('/buildings')} class="back">← {m.buildings_title()}</a>
 
 <header class="hero">
 	<div class="identity">
@@ -38,7 +39,7 @@
 		<ul class="mats">
 			{#each building.materials as mat (mat.id)}
 				<li>
-					<a href="/items/{mat.id}">
+					<a href={appHref(`/items/${mat.id}`)}>
 						{#if itemIcon(mat.id)}<img src={itemIcon(mat.id)} alt="" width="22" height="22" />{/if}
 						{gameName(`item:${mat.id}`)}
 					</a>
@@ -52,7 +53,7 @@
 {#if tech}
 	<section>
 		<h2>{m.item_tech_required()}</h2>
-		<a class="tech" href="/tech#{tech.id}">
+		<a class="tech" href={`${appHref('/tech')}#${tech.id}`}>
 			{gameName(`tech:${tech.nameId}`)} · {m.craft_level({ level: tech.level })} ·
 			{m.tech_cost({ cost: tech.cost })}
 		</a>

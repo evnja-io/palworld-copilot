@@ -3,6 +3,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { itemIcon } from '$lib/game/icons';
+	import { appHref } from '$lib/nav';
 
 	const CATS = [...new Set(items.map((i) => i.typeA).filter(Boolean))].sort() as string[];
 
@@ -38,7 +39,7 @@
 
 <div class="grid">
 	{#each shown as item (item.id)}
-		<a href="/items/{item.id}" class="card">
+		<a href={appHref(`/items/${item.id}`)} class="card">
 			{#if itemIcon(item.id)}
 				<img src={itemIcon(item.id)} alt="" loading="lazy" width="36" height="36" />
 			{:else}

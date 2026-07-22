@@ -21,7 +21,7 @@
 
 	$effect(() => {
 		mapState.restore();
-		store.init('marker', data.progress.mine, data.progress.group);
+		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group);
 		store.startSync();
 		return () => {
 			store.stopSync();

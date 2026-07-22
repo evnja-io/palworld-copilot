@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
+	import { appHref } from '$lib/nav';
 	import CommandPalette from '$lib/components/CommandPalette.svelte';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
@@ -24,7 +25,7 @@
 		<a href="/" class="brand">{m.app_title()}</a>
 		<nav>
 			{#each nav as item (item.href)}
-				<a href={item.href} class:active={page.url.pathname.startsWith(item.href)}>
+				<a href={appHref(item.href)} class:active={page.url.pathname.startsWith(appHref(item.href))}>
 					{item.label()}
 				</a>
 			{/each}
@@ -35,7 +36,7 @@
 			<kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
 		</button>
 		<div class="user">
-			<a href="/import" class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
+			<a href={appHref('/import')} class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
 			<LangSwitch />
 			{#if data.user.avatarUrl}
 				<img src={data.user.avatarUrl} alt="" width="26" height="26" class="avatar" />
@@ -46,7 +47,7 @@
 			</form>
 		</div>
 	</header>
-	<main class:fullscreen={page.route.id === '/(app)/map'}>{@render children()}</main>
+	<main class:fullscreen={page.route.id === '/s/[slug]/map'}>{@render children()}</main>
 </div>
 <CommandPalette bind:this={palette} />
 

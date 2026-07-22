@@ -2,11 +2,13 @@
 	import pals from '@palworld-companion/game-data/pals.json';
 	import skills from '@palworld-companion/game-data/skills.json';
 	import moves from '@palworld-companion/game-data/pal-moves.json';
+	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { palIcon, itemIcon } from '$lib/game/icons';
 	import { childOf, parentsOf } from '$lib/game/breeding';
 	import { ProgressStore } from '$lib/game/progress.svelte';
+	import { appHref } from '$lib/nav';
 	import ElementBadge from '$lib/components/ElementBadge.svelte';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
@@ -23,7 +25,7 @@
 
 	const store = new ProgressStore();
 	$effect(() => {
-		store.init('pal_caught', data.progress.mine, data.progress.group);
+		store.init('pal_caught', page.params.slug!, data.progress.mine, data.progress.group);
 		store.startSync();
 		return () => store.stopSync();
 	});
@@ -42,7 +44,7 @@
 	};
 </script>
 
-<a href="/paldex" class="back">← {m.paldex_title()}</a>
+<a href={appHref('/paldex')} class="back">← {m.paldex_title()}</a>
 
 <header class="hero" class:caught>
 	{#if palIcon(pal.id)}
@@ -103,7 +105,7 @@
 		<ul class="drops">
 			{#each pal.drops as d (d.itemId)}
 				<li>
-					<a href="/items/{d.itemId}">
+					<a href={appHref(`/items/${d.itemId}`)}>
 						{#if itemIcon(d.itemId)}<img src={itemIcon(d.itemId)} alt="" width="22" height="22" />{/if}
 						{gameName(`item:${d.itemId}`)}
 					</a>
@@ -142,7 +144,7 @@
 	{#if child}
 		<p class="child">
 			{m.pal_breeding_child()} :
-			<a href="/paldex/{child}" class="child-link">
+			<a href={appHref(`/paldex/${child}`)} class="child-link">
 				{#if palIcon(child)}<img src={palIcon(child)} alt="" width="28" height="28" />{/if}
 				{gameName(`pal:${child}`)}
 			</a>
@@ -153,9 +155,9 @@
 		<ul class="pairs">
 			{#each pairs as [a, b] (a + b)}
 				<li>
-					<a href="/paldex/{a}">{gameName(`pal:${a}`)}</a>
+					<a href={appHref(`/paldex/${a}`)}>{gameName(`pal:${a}`)}</a>
 					<span class="x">×</span>
-					<a href="/paldex/{b}">{gameName(`pal:${b}`)}</a>
+					<a href={appHref(`/paldex/${b}`)}>{gameName(`pal:${b}`)}</a>
 				</li>
 			{/each}
 		</ul>

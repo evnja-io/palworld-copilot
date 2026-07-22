@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
+	import { appHref } from '$lib/nav';
 	import ElementBadge from './ElementBadge.svelte';
 
 	let {
@@ -17,7 +18,7 @@
 </script>
 
 <div class="card" class:caught>
-	<a href="/paldex/{pal.id}" class="body">
+	<a href={appHref(`/paldex/${pal.id}`)} class="body">
 		{#if palIcon(pal.id)}
 			<img src={palIcon(pal.id)} alt="" loading="lazy" width="56" height="56" />
 		{:else}

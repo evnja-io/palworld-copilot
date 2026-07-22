@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
+	import { appHref } from '$lib/nav';
 
 	let { data } = $props();
 
@@ -55,7 +56,7 @@
 
 	<div class="cards">
 		{#each cards as c, i (c.href)}
-			<a class="card" href={c.href} style="--delay: {i * 0.06}s">
+			<a class="card" href={appHref(c.href)} style="--delay: {i * 0.06}s">
 				<div class="card-head">
 					<img src={c.icon} alt="" width="26" height="26" loading="lazy" decoding="async" />
 					<h2>{c.title}</h2>

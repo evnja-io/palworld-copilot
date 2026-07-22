@@ -4,6 +4,7 @@
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { itemIcon, palIcon } from '$lib/game/icons';
 	import { palsDropping, recipesByProduct, recipesUsingItem } from '$lib/game/indexes';
+	import { appHref } from '$lib/nav';
 	import RecipeCard from '$lib/components/RecipeCard.svelte';
 
 	let { data } = $props();
@@ -15,7 +16,7 @@
 	const usedInShown = $derived(usedIn.slice(0, 40));
 </script>
 
-<a href="/items" class="back">← {m.items_title()}</a>
+<a href={appHref('/items')} class="back">← {m.items_title()}</a>
 
 <header class="hero">
 	{#if itemIcon(item.id)}
@@ -51,7 +52,7 @@
 		<ul class="droppers">
 			{#each droppers as d (d.palId)}
 				<li>
-					<a href="/paldex/{d.palId}">
+					<a href={appHref(`/paldex/${d.palId}`)}>
 						{#if palIcon(d.palId)}<img src={palIcon(d.palId)} alt="" width="26" height="26" />{/if}
 						{gameName(`pal:${d.palId}`)}
 						<span class="qty tnum"
@@ -70,7 +71,7 @@
 		<ul class="used">
 			{#each usedInShown as r (r.id)}
 				<li>
-					<a href="/items/{r.productId}">
+					<a href={appHref(`/items/${r.productId}`)}>
 						{#if itemIcon(r.productId)}<img src={itemIcon(r.productId)} alt="" width="20" height="20" />{/if}
 						{gameName(`item:${r.productId}`)}
 					</a>

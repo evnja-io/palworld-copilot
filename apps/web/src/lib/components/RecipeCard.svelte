@@ -3,6 +3,7 @@
 	import { gameName } from '$lib/game/names';
 	import { itemIcon } from '$lib/game/icons';
 	import { techUnlocking, type Recipe } from '$lib/game/indexes';
+	import { appHref } from '$lib/nav';
 
 	let { recipe }: { recipe: Recipe } = $props();
 
@@ -10,7 +11,7 @@
 </script>
 
 <div class="recipe">
-	<a class="product" href="/items/{recipe.productId}">
+	<a class="product" href={appHref(`/items/${recipe.productId}`)}>
 		{#if itemIcon(recipe.productId)}<img src={itemIcon(recipe.productId)} alt="" width="26" height="26" />{/if}
 		{gameName(`item:${recipe.productId}`)}
 		{#if recipe.count > 1}<span class="tnum count">×{recipe.count}</span>{/if}
@@ -18,7 +19,7 @@
 	<ul class="mats">
 		{#each recipe.materials as mat (mat.id)}
 			<li>
-				<a href="/items/{mat.id}">
+				<a href={appHref(`/items/${mat.id}`)}>
 					{#if itemIcon(mat.id)}<img src={itemIcon(mat.id)} alt="" width="18" height="18" />{/if}
 					{gameName(`item:${mat.id}`)}
 				</a>
@@ -27,7 +28,7 @@
 		{/each}
 	</ul>
 	{#if tech}
-		<a class="tech" href="/tech#{tech.id}">
+		<a class="tech" href={`${appHref('/tech')}#${tech.id}`}>
 			{m.item_tech_required()} : {gameName(`tech:${tech.nameId}`)} · Niv. {tech.level}
 		</a>
 	{/if}

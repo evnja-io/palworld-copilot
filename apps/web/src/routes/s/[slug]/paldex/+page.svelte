@@ -1,5 +1,6 @@
 <script lang="ts">
 	import pals from '@palworld-companion/game-data/pals.json';
+	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { ProgressStore } from '$lib/game/progress.svelte';
@@ -12,7 +13,7 @@
 
 	const store = new ProgressStore();
 	$effect(() => {
-		store.init('pal_caught', data.progress.mine, data.progress.group);
+		store.init('pal_caught', page.params.slug!, data.progress.mine, data.progress.group);
 		store.startSync();
 		return () => store.stopSync();
 	});

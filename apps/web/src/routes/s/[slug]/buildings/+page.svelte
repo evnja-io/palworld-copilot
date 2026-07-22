@@ -2,6 +2,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { buildings, type Building } from '$lib/game/indexes';
+	import { appHref } from '$lib/nav';
 
 	let search = $state('');
 
@@ -42,7 +43,7 @@
 		<h2>{cat} <span class="tnum h-count">({group.length})</span></h2>
 		<div class="grid">
 			{#each group as b (b.id)}
-				<a href="/buildings/{b.id}" class="card">
+				<a href={appHref(`/buildings/${b.id}`)} class="card">
 					<span class="name">{gameName(`building:${b.mapObjectId}`)}</span>
 					{#if b.rank > 1}<span class="rank tnum">R{b.rank}</span>{/if}
 				</a>

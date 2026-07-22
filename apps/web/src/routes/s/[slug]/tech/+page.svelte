@@ -1,16 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { itemIcon, techIcon } from '$lib/game/icons';
 	import { buildings, recipes, tech, type Tech } from '$lib/game/indexes';
 	import { ProgressStore } from '$lib/game/progress.svelte';
+	import { appHref } from '$lib/nav';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
 	let { data } = $props();
 
 	const store = new ProgressStore();
 	$effect(() => {
-		store.init('tech_unlocked', data.progress.mine, data.progress.group);
+		store.init('tech_unlocked', page.params.slug!, data.progress.mine, data.progress.group);
 		store.startSync();
 		return () => store.stopSync();
 	});
@@ -24,14 +26,17 @@
 		const recipe = recipeById.get(u);
 		if (recipe) {
 			return {
-				href: `/items/${recipe.productId}`,
+				href: appHref(`/items/${recipe.productId}`),
 				label: gameName(`item:${recipe.productId}`),
 				icon: itemIcon(recipe.productId)
 			};
 		}
 		const building = buildingById.get(u);
 		if (building) {
-			return { href: `/buildings/${building.id}`, label: gameName(`building:${building.mapObjectId}`) };
+			return {
+				href: appHref(`/buildings/${building.id}`),
+				label: gameName(`building:${building.mapObjectId}`)
+			};
 		}
 		return null;
 	}
