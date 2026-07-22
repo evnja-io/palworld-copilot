@@ -43,6 +43,14 @@ for (const locale of ["en", "fr"] as const) {
       console.warn(`  (description absente pour ${table} en ${locale} — toléré)`);
     }
   }
+  // Les descriptions embarquent les mêmes templates que les noms.
+  for (const [key, text] of Object.entries(descs)) {
+    if (text.includes("<")) {
+      descs[key] = text
+        .replace(/<itemName id=\|([^|]+)\|\/>/gi, (_, id) => names[`item:${id}`] ?? id)
+        .replace(/<mapObjectName id=\|([^|]+)\|\/>/gi, (_, id) => names[`building:${id}`] ?? id);
+    }
+  }
   if (Object.keys(names).length < 800) throw new Error(`Trop peu de noms ${locale}`);
   writeGameData(`l10n/names.${locale}.json`, names);
   writeGameData(`l10n/descriptions.${locale}.json`, descs);

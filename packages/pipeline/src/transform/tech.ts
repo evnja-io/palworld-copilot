@@ -4,10 +4,12 @@ const rows = loadDataTableRows(/DT_TechnologyRecipeUnlock/);
 const tech = Object.entries(rows)
   .map(([id, row]: [string, any]) => {
     const requireTech = pick<string>(row, "RequireTechnology");
+    const descId = pick<string>(row, "Description");
     return {
       id,
       // Clé L10N portée par la ligne : "NAME_RECIPE_PALBOX" -> tech:RECIPE_PALBOX
       nameId: must(pick<string>(row, "Name"), `${id}.Name`).replace(/^NAME_/, ""),
+      descId: descId && descId !== "None" ? descId.replace(/^DESC_/, "") : undefined,
       level: must(pick<number>(row, "LevelCap"), `${id}.LevelCap`),
       tier: pick<number>(row, "Tier") ?? 0,
       cost: pick<number>(row, "Cost") ?? 0,
@@ -30,7 +32,10 @@ const tech = Object.entries(rows)
       ],
     };
   })
-  .sort((a, b) => a.level - b.level || a.id.localeCompare(b.id));
+  // Tri stable par niveau uniquement : à niveau égal, l'ordre des lignes de la
+  // DataTable est préservé — c'est l'ordre d'affichage des nœuds dans l'écran
+  // Technologie du jeu.
+  .sort((a, b) => a.level - b.level);
 if (tech.length < 100) throw new Error(`Comptage tech suspect : ${tech.length}`);
 writeGameData("tech.json", tech);
 console.log(`tech OK (${tech.length})`);

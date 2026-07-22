@@ -1,54 +1,7 @@
 [
  {
   "cost": 1,
-  "iconName": "Bat",
-  "id": "Battle_MeleeWeapon_Bat",
-  "isBoss": false,
-  "level": 1,
-  "nameId": "RECIPE_BAT",
-  "tier": 0,
-  "unlocks": [
-   "Bat"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Torch",
-  "id": "HandTorch",
-  "isBoss": false,
-  "level": 1,
-  "nameId": "RECIPE_HandTorch",
-  "tier": 0,
-  "unlocks": [
-   "Torch"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Axe_Default",
-  "id": "Product_Axe_Grade_01",
-  "isBoss": false,
-  "level": 1,
-  "nameId": "RECIPE_AXE1",
-  "tier": 0,
-  "unlocks": [
-   "Axe_Tier_00"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Pickaxe_Default",
-  "id": "Product_Pickaxe_Grade_01",
-  "isBoss": false,
-  "level": 1,
-  "nameId": "RECIPE_PICKEAXE1",
-  "tier": 0,
-  "unlocks": [
-   "Pickaxe_Tier_00"
-  ]
- },
- {
-  "cost": 1,
+  "descId": "RECIPE_WORKBENCH",
   "iconName": "WorkBench",
   "id": "Workbench",
   "isBoss": false,
@@ -61,18 +14,59 @@
  },
  {
   "cost": 1,
-  "iconName": "Chest",
-  "id": "Infra_ItemChest_Grade_01",
+  "descId": "RECIPE_AXE1",
+  "iconName": "Axe_Default",
+  "id": "Product_Axe_Grade_01",
   "isBoss": false,
-  "level": 2,
-  "nameId": "RECIPE_ITEM_CHEST_01",
+  "level": 1,
+  "nameId": "RECIPE_AXE1",
   "tier": 0,
   "unlocks": [
-   "ItemChest"
+   "Axe_Tier_00"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_PICKEAXE1",
+  "iconName": "Pickaxe_Default",
+  "id": "Product_Pickaxe_Grade_01",
+  "isBoss": false,
+  "level": 1,
+  "nameId": "RECIPE_PICKEAXE1",
+  "tier": 0,
+  "unlocks": [
+   "Pickaxe_Tier_00"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_HandTorch",
+  "iconName": "Torch",
+  "id": "HandTorch",
+  "isBoss": false,
+  "level": 1,
+  "nameId": "RECIPE_HandTorch",
+  "tier": 0,
+  "unlocks": [
+   "Torch"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_BAT",
+  "iconName": "Bat",
+  "id": "Battle_MeleeWeapon_Bat",
+  "isBoss": false,
+  "level": 1,
+  "nameId": "RECIPE_BAT",
+  "tier": 0,
+  "unlocks": [
+   "Bat"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_PALBOX",
   "iconName": "PalBoxV2",
   "id": "PALBOX",
   "isBoss": false,
@@ -85,6 +79,20 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_SPHERE1",
+  "iconName": "CapturePrism",
+  "id": "Special_PalSphere_Grade_01",
+  "isBoss": false,
+  "level": 2,
+  "nameId": "RECIPE_SPHERE1",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_CAMPFIRE",
   "iconName": "Campfire",
   "id": "Product_Cooking_Grade_01",
   "isBoss": false,
@@ -97,6 +105,20 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_ITEM_CHEST_01",
+  "iconName": "Chest",
+  "id": "Infra_ItemChest_Grade_01",
+  "isBoss": false,
+  "level": 2,
+  "nameId": "RECIPE_ITEM_CHEST_01",
+  "tier": 0,
+  "unlocks": [
+   "ItemChest"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_RepairBench",
   "iconName": "RepairBench",
   "id": "RepairBench",
   "isBoss": false,
@@ -108,31 +130,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "SkinChange",
-  "id": "SkinChange",
-  "isBoss": false,
-  "level": 2,
-  "nameId": "RECIPE_SkinChange",
-  "tier": 0,
-  "unlocks": [
-   "SkinChange"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "CapturePrism",
-  "id": "Special_PalSphere_Grade_01",
-  "isBoss": false,
-  "level": 2,
-  "nameId": "RECIPE_SPHERE1",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere"
-  ]
- },
- {
   "cost": 2,
+  "descId": "RECIPE_Wooden_Houseset",
   "iconName": "Wooden_foundation",
   "id": "Wooden_houseset",
   "isBoss": false,
@@ -163,18 +162,20 @@
  },
  {
   "cost": 1,
-  "iconName": "Arrow",
-  "id": "Arrow",
+  "descId": "BUILDOBJECT_DESC_SkinChange",
+  "iconName": "SkinChange",
+  "id": "SkinChange",
   "isBoss": false,
-  "level": 3,
-  "nameId": "RECIPE_ARROW",
+  "level": 2,
+  "nameId": "RECIPE_SkinChange",
   "tier": 0,
   "unlocks": [
-   "Arrow"
+   "SkinChange"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_BOW",
   "iconName": "Bow",
   "id": "Battle_RangeWeapon_Bow1",
   "isBoss": false,
@@ -187,30 +188,33 @@
  },
  {
   "cost": 1,
-  "iconName": "GlobalPalStorage",
-  "id": "GlobalPalStorage",
+  "descId": "RECIPE_ARROW",
+  "iconName": "Arrow",
+  "id": "Arrow",
   "isBoss": false,
   "level": 3,
-  "nameId": "RECIPE_GlobalPalStorage",
+  "nameId": "RECIPE_ARROW",
   "tier": 0,
   "unlocks": [
-   "GlobalPalStorage"
+   "Arrow"
   ]
  },
  {
   "cost": 2,
-  "iconName": "MedicalPalBed_02",
-  "id": "Infra_PalBed_Grade_01",
+  "descId": "ITEM_DESC_Spear",
+  "iconName": "Spear",
+  "id": "Spear",
   "isBoss": false,
   "level": 3,
-  "nameId": "RECIPE_PALBED",
+  "nameId": "RECIPE_Spear",
   "tier": 0,
   "unlocks": [
-   "MedicalPalBed_02"
+   "Spear"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_PLAYER_BED_02",
   "iconName": "PlayerBed_02",
   "id": "Infra_PlayerBed_Grade_01",
   "isBoss": false,
@@ -223,54 +227,33 @@
  },
  {
   "cost": 2,
-  "iconName": "Spear",
-  "id": "Spear",
+  "descId": "RECIPE_PALBED",
+  "iconName": "MedicalPalBed_02",
+  "id": "Infra_PalBed_Grade_01",
   "isBoss": false,
   "level": 3,
-  "nameId": "RECIPE_Spear",
+  "nameId": "RECIPE_PALBED",
   "tier": 0,
   "unlocks": [
-   "Spear"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "LeatherClothing",
-  "id": "Battle_Armor_Grade_01_Cloth",
-  "isBoss": false,
-  "level": 4,
-  "nameId": "RECIPE_ARMOR1",
-  "tier": 0,
-  "unlocks": [
-   "ClothArmor"
+   "MedicalPalBed_02"
   ]
  },
  {
   "cost": 1,
-  "iconName": "Cloth",
-  "id": "Battle_Cloth",
+  "descId": "BUILDOBJECT_DESC_GlobalPalStorage",
+  "iconName": "GlobalPalStorage",
+  "id": "GlobalPalStorage",
   "isBoss": false,
-  "level": 4,
-  "nameId": "RECIPE_CLOTH",
+  "level": 3,
+  "nameId": "RECIPE_GlobalPalStorage",
   "tier": 0,
   "unlocks": [
-   "Cloth"
+   "GlobalPalStorage"
   ]
  },
  {
   "cost": 2,
-  "iconName": "PalFoodBox",
-  "id": "PalFoodBox",
-  "isBoss": false,
-  "level": 4,
-  "nameId": "RECIPE_PalFoodBox",
-  "tier": 0,
-  "unlocks": [
-   "PalFoodBox"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_Shield_01",
   "iconName": "Shield_01",
   "id": "Shield_01",
   "isBoss": false,
@@ -283,6 +266,72 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_ARMOR1",
+  "iconName": "LeatherClothing",
+  "id": "Battle_Armor_Grade_01_Cloth",
+  "isBoss": false,
+  "level": 4,
+  "nameId": "RECIPE_ARMOR1",
+  "tier": 0,
+  "unlocks": [
+   "ClothArmor"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_Cloth",
+  "iconName": "Cloth",
+  "id": "Battle_Cloth",
+  "isBoss": false,
+  "level": 4,
+  "nameId": "RECIPE_CLOTH",
+  "tier": 0,
+  "unlocks": [
+   "Cloth"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_PalFoodBox",
+  "iconName": "PalFoodBox",
+  "id": "PalFoodBox",
+  "isBoss": false,
+  "level": 4,
+  "nameId": "RECIPE_PalFoodBox",
+  "tier": 0,
+  "unlocks": [
+   "PalFoodBox"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Berries_plantation",
+  "iconName": "FarmBlockV2_Berries",
+  "id": "Product_Farm_Berries",
+  "isBoss": false,
+  "level": 5,
+  "nameId": "RECIPE_Berries_plantation",
+  "tier": 0,
+  "unlocks": [
+   "FarmBlockV2_Berries"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_MonsterFarm",
+  "iconName": "MonsterFarm",
+  "id": "MonsterFarm",
+  "isBoss": false,
+  "level": 5,
+  "nameId": "RECIPE_MonsterFarm",
+  "tier": 0,
+  "unlocks": [
+   "MonsterFarm"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Battle_Glider_Grade_01",
   "iconName": "Glider_Old",
   "id": "Battle_Glider_Grade_01",
   "isBoss": false,
@@ -295,6 +344,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_1",
   "iconName": "TableSquare_Wood",
   "id": "FurnitureSet_1",
   "isBoss": false,
@@ -312,6 +362,21 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_3",
+  "iconName": "Counter_Wood",
+  "id": "FurnitureSet_3",
+  "isBoss": false,
+  "level": 5,
+  "nameId": "RECIPE_FurnitureSet_3",
+  "tier": 0,
+  "unlocks": [
+   "Counter_Wood",
+   "Shelf_Hang02_Wood"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_2",
   "iconName": "Barrel_Wood",
   "id": "FurnitureSet_2",
   "isBoss": false,
@@ -327,44 +392,21 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Counter_Wood",
-  "id": "FurnitureSet_3",
-  "isBoss": false,
-  "level": 5,
-  "nameId": "RECIPE_FurnitureSet_3",
-  "tier": 0,
-  "unlocks": [
-   "Counter_Wood",
-   "Shelf_Hang02_Wood"
-  ]
- },
- {
   "cost": 2,
-  "iconName": "MonsterFarm",
-  "id": "MonsterFarm",
+  "descId": "RECIPE_WORKBENCH_SKILLUNLOCK",
+  "iconName": "WorkBench_SkillUnlock",
+  "id": "Product_WorkBench_SkillUnlock",
   "isBoss": false,
-  "level": 5,
-  "nameId": "RECIPE_MonsterFarm",
+  "level": 6,
+  "nameId": "RECIPE_WORKBENCH_SKILLUNLOCK",
   "tier": 0,
   "unlocks": [
-   "MonsterFarm"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FarmBlockV2_Berries",
-  "id": "Product_Farm_Berries",
-  "isBoss": false,
-  "level": 5,
-  "nameId": "RECIPE_Berries_plantation",
-  "tier": 0,
-  "unlocks": [
-   "FarmBlockV2_Berries"
+   "WorkBench_SkillUnlock"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_ARROW_FIRE",
   "iconName": "Arrow_Fire",
   "id": "Arrow_Fire",
   "isBoss": false,
@@ -376,7 +418,73 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_Torch",
+  "iconName": "TorchStand",
+  "id": "Torch",
+  "isBoss": false,
+  "level": 6,
+  "nameId": "RECIPE_Torch",
+  "tier": 0,
+  "unlocks": [
+   "Torch"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_Signboard",
+  "iconName": "Signboard",
+  "id": "Signboard",
+  "isBoss": false,
+  "level": 6,
+  "nameId": "RECIPE_Signboard",
+  "tier": 0,
+  "unlocks": [
+   "Signboard"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_WallSignboard",
+  "iconName": "WallSignboard",
+  "id": "WallSignboard",
+  "isBoss": false,
+  "level": 6,
+  "nameId": "RECIPE_WallSignboard",
+  "tier": 0,
+  "unlocks": [
+   "WallSignboard"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Boar",
+  "iconName": "Boar",
+  "id": "SkillUnlock_Boar",
+  "isBoss": false,
+  "level": 6,
+  "nameId": "RECIPE_SkillUnlock_Boar",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Boar"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Kitsunebi",
+  "iconName": "Kitsunebi",
+  "id": "SkillUnlock_Kitsunebi",
+  "isBoss": false,
+  "level": 6,
+  "nameId": "RECIPE_SkillUnlock_Kitsunebi",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Kitsunebi"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_9",
   "iconName": "Plant01_Plant",
   "id": "FurnitureSet_9",
   "isBoss": false,
@@ -392,90 +500,7 @@
  },
  {
   "cost": 2,
-  "iconName": "WorkBench_SkillUnlock",
-  "id": "Product_WorkBench_SkillUnlock",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_WORKBENCH_SKILLUNLOCK",
-  "tier": 0,
-  "unlocks": [
-   "WorkBench_SkillUnlock"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Signboard",
-  "id": "Signboard",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_Signboard",
-  "tier": 0,
-  "unlocks": [
-   "Signboard"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Boar",
-  "id": "SkillUnlock_Boar",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_SkillUnlock_Boar",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Boar"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Kitsunebi",
-  "id": "SkillUnlock_Kitsunebi",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_SkillUnlock_Kitsunebi",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Kitsunebi"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "TorchStand",
-  "id": "Torch",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_Torch",
-  "tier": 0,
-  "unlocks": [
-   "Torch"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "WallSignboard",
-  "id": "WallSignboard",
-  "isBoss": false,
-  "level": 6,
-  "nameId": "RECIPE_WallSignboard",
-  "tier": 0,
-  "unlocks": [
-   "WallSignboard"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "BaseCampBattleDirector",
-  "id": "BaseCampBattleDirector",
-  "isBoss": false,
-  "level": 7,
-  "nameId": "RECIPE_BaseCampBattleDirector",
-  "tier": 0,
-  "unlocks": [
-   "BaseCampBattleDirector"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_BaseCampWorkHard",
   "iconName": "BaseCampWorkHard",
   "id": "BaseCampWorkHard",
   "isBoss": false,
@@ -488,6 +513,7 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_BAT2",
   "iconName": "Bat2",
   "id": "Battle_MeleeWeapon_Bat2",
   "isBoss": false,
@@ -500,6 +526,33 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_StationDeforest2",
+  "iconName": "StationDeforest2",
+  "id": "Product_StationDeforest",
+  "isBoss": false,
+  "level": 7,
+  "nameId": "RECIPE_StationDeforest2",
+  "tier": 0,
+  "unlocks": [
+   "StationDeforest2"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_StonePit",
+  "iconName": "StonePit",
+  "id": "Product_StonePit",
+  "isBoss": false,
+  "level": 7,
+  "nameId": "RECIPE_StonePit",
+  "tier": 0,
+  "unlocks": [
+   "StonePit"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_DefenseWait",
   "iconName": "DefenseWait",
   "id": "DefenseWait",
   "isBoss": false,
@@ -512,6 +565,33 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_BaseCampBattleDirector",
+  "iconName": "BaseCampBattleDirector",
+  "id": "BaseCampBattleDirector",
+  "isBoss": false,
+  "level": 7,
+  "nameId": "RECIPE_BaseCampBattleDirector",
+  "tier": 0,
+  "unlocks": [
+   "BaseCampBattleDirector"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Alpaca",
+  "iconName": "Alpaca",
+  "id": "SkillUnlock_Alpaca",
+  "isBoss": false,
+  "level": 7,
+  "nameId": "RECIPE_SkillUnlock_Alpaca",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Alpaca"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_4",
   "iconName": "Ivy01",
   "id": "FurnitureSet_4",
   "isBoss": false,
@@ -526,54 +606,7 @@
  },
  {
   "cost": 2,
-  "iconName": "StationDeforest2",
-  "id": "Product_StationDeforest",
-  "isBoss": false,
-  "level": 7,
-  "nameId": "RECIPE_StationDeforest2",
-  "tier": 0,
-  "unlocks": [
-   "StationDeforest2"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "StonePit",
-  "id": "Product_StonePit",
-  "isBoss": false,
-  "level": 7,
-  "nameId": "RECIPE_StonePit",
-  "tier": 0,
-  "unlocks": [
-   "StonePit"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Alpaca",
-  "id": "SkillUnlock_Alpaca",
-  "isBoss": false,
-  "level": 7,
-  "nameId": "RECIPE_SkillUnlock_Alpaca",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Alpaca"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Arrow_Poison",
-  "id": "Arrow_Poison",
-  "isBoss": false,
-  "level": 8,
-  "nameId": "RECIPE_ARROW_POISON",
-  "tier": 0,
-  "unlocks": [
-   "Arrow_Poison"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_Crusher",
   "iconName": "Crusher",
   "id": "Crusher",
   "isBoss": false,
@@ -586,6 +619,20 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_ARROW_POISON",
+  "iconName": "Arrow_Poison",
+  "id": "Arrow_Poison",
+  "isBoss": false,
+  "level": 8,
+  "nameId": "RECIPE_ARROW_POISON",
+  "tier": 0,
+  "unlocks": [
+   "Arrow_Poison"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_DefenseWall_Wood",
   "iconName": "DefenseWall_Wood",
   "id": "DefenseWall_Wood",
   "isBoss": false,
@@ -597,32 +644,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Light_FirePlace01",
-  "id": "FurnitureSet_28",
-  "isBoss": false,
-  "level": 8,
-  "nameId": "RECIPE_FurnitureSet_28",
-  "tier": 0,
-  "unlocks": [
-   "Light_FirePlace01",
-   "Light_FirePlace02"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Trap_Noose",
-  "id": "Trap_Noose",
-  "isBoss": false,
-  "level": 8,
-  "nameId": "RECIPE_Trap_Noose",
-  "tier": 0,
-  "unlocks": [
-   "Trap_Noose"
-  ]
- },
- {
   "cost": 2,
+  "descId": "RECIPE_Wood_Gate",
   "iconName": "Wood_Gate",
   "id": "Wood_Gate",
   "isBoss": false,
@@ -635,42 +658,34 @@
  },
  {
   "cost": 1,
-  "iconName": "AutoMealPouch_Tier1",
-  "id": "AutoMealPouch_Tier1",
+  "descId": "RECIPE_Trap_Noose",
+  "iconName": "Trap_Noose",
+  "id": "Trap_Noose",
   "isBoss": false,
-  "level": 9,
-  "nameId": "RECIPE_AutoMealPouch_Tier1",
+  "level": 8,
+  "nameId": "RECIPE_Trap_Noose",
   "tier": 0,
   "unlocks": [
-   "AutoMealPouch_Tier1"
+   "Trap_Noose"
   ]
  },
  {
-  "cost": 3,
-  "iconName": "ClothArmorCold",
-  "id": "Battle_Armor_Grade_01_Cloth_Cold",
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_28",
+  "iconName": "Light_FirePlace01",
+  "id": "FurnitureSet_28",
   "isBoss": false,
-  "level": 9,
-  "nameId": "RECIPE_ARMOR1_Cold",
+  "level": 8,
+  "nameId": "RECIPE_FurnitureSet_28",
   "tier": 0,
   "unlocks": [
-   "ClothArmorCold"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "ClothArmorHeat",
-  "id": "Battle_Armor_Grade_01_Cloth_Heat",
-  "isBoss": false,
-  "level": 9,
-  "nameId": "RECIPE_ARMOR1_Heat",
-  "tier": 0,
-  "unlocks": [
-   "ClothArmorHeat"
+   "Light_FirePlace01",
+   "Light_FirePlace02"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_BuildableGoddessStatue",
   "iconName": "BuildableGoddessStatue",
   "id": "BuildableGoddessStatue",
   "isBoss": false,
@@ -683,6 +698,72 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_AutoMealPouch_Tier1",
+  "iconName": "AutoMealPouch_Tier1",
+  "id": "AutoMealPouch_Tier1",
+  "isBoss": false,
+  "level": 9,
+  "nameId": "RECIPE_AutoMealPouch_Tier1",
+  "tier": 0,
+  "unlocks": [
+   "AutoMealPouch_Tier1"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_ARMOR1_Heat",
+  "iconName": "ClothArmorHeat",
+  "id": "Battle_Armor_Grade_01_Cloth_Heat",
+  "isBoss": false,
+  "level": 9,
+  "nameId": "RECIPE_ARMOR1_Heat",
+  "tier": 0,
+  "unlocks": [
+   "ClothArmorHeat"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_ARMOR1_Cold",
+  "iconName": "ClothArmorCold",
+  "id": "Battle_Armor_Grade_01_Cloth_Cold",
+  "isBoss": false,
+  "level": 9,
+  "nameId": "RECIPE_ARMOR1_Cold",
+  "tier": 0,
+  "unlocks": [
+   "ClothArmorCold"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Spa",
+  "iconName": "Spa",
+  "id": "Spa",
+  "isBoss": false,
+  "level": 9,
+  "nameId": "RECIPE_Spa",
+  "tier": 0,
+  "unlocks": [
+   "Spa"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Garm",
+  "iconName": "Garm",
+  "id": "SkillUnlock_Garm",
+  "isBoss": false,
+  "level": 9,
+  "nameId": "RECIPE_SkillUnlock_Garm",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Garm"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_17",
   "iconName": "Rug01_Stone",
   "id": "FurnitureSet_17",
   "isBoss": false,
@@ -697,43 +778,21 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Garm",
-  "id": "SkillUnlock_Garm",
-  "isBoss": false,
-  "level": 9,
-  "nameId": "RECIPE_SkillUnlock_Garm",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Garm"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Spa",
-  "id": "Spa",
-  "isBoss": false,
-  "level": 9,
-  "nameId": "RECIPE_Spa",
-  "tier": 0,
-  "unlocks": [
-   "Spa"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FurHelmet",
-  "id": "Battle_Helm_Grade_02_Fur",
+  "cost": 3,
+  "descId": "RECIPE_BLAST_FURNACE",
+  "iconName": "BlastFurnace",
+  "id": "Product_Ingot_Grade_01_Copper",
   "isBoss": false,
   "level": 10,
-  "nameId": "RECIPE_HELMET2",
+  "nameId": "RECIPE_BLAST_FURNACE",
   "tier": 0,
   "unlocks": [
-   "FurHelmet"
+   "BlastFurnace"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_BOW3",
   "iconName": "Bow3",
   "id": "Battle_RangeWeapon_Bow3",
   "isBoss": false,
@@ -745,7 +804,74 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_HELMET2",
+  "iconName": "FurHelmet",
+  "id": "Battle_Helm_Grade_02_Fur",
+  "isBoss": false,
+  "level": 10,
+  "nameId": "RECIPE_HELMET2",
+  "tier": 0,
+  "unlocks": [
+   "FurHelmet"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "ITEM_DESC_MachineParts",
+  "iconName": "MachineParts",
+  "id": "Infra_MachineParts",
+  "isBoss": false,
+  "level": 10,
+  "nameId": "RECIPE_MachineParts",
+  "tier": 0,
+  "unlocks": [
+   "MachineParts"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "BUILDOBJECT_DESC_Wooden_ladder",
+  "iconName": "Wooden_ladder",
+  "id": "Wooden_ladder",
+  "isBoss": false,
+  "level": 10,
+  "nameId": "RECIPE_Wooden_ladder",
+  "tier": 0,
+  "unlocks": [
+   "Wooden_ladder"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_Trap_LegHold",
+  "iconName": "Trap_LegHold",
+  "id": "Trap_LegHold",
+  "isBoss": false,
+  "level": 10,
+  "nameId": "RECIPE_Trap_LegHold",
+  "tier": 0,
+  "unlocks": [
+   "Trap_LegHold"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_HatchingPalEgg",
+  "iconName": "HatchingPalEgg",
+  "id": "Special_HatchingPalEgg",
+  "isBoss": true,
+  "level": 10,
+  "nameId": "RECIPE_HatchingPalEgg",
+  "requireBoss": "GrassBoss",
+  "tier": 0,
+  "unlocks": [
+   "HatchingPalEgg"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_21",
   "iconName": "Shelf01_Stone",
   "id": "FurnitureSet_21",
   "isBoss": false,
@@ -761,82 +887,47 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "MachineParts",
-  "id": "Infra_MachineParts",
+  "cost": 2,
+  "descId": "RECIPE_AXE2",
+  "iconName": "Axe_Default",
+  "id": "Product_Axe_Grade_02",
   "isBoss": false,
-  "level": 10,
-  "nameId": "RECIPE_MachineParts",
+  "level": 11,
+  "nameId": "RECIPE_AXE2",
   "tier": 0,
   "unlocks": [
-   "MachineParts"
+   "Axe_Tier_01"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_PICKEAXE2",
+  "iconName": "Pickaxe_Default",
+  "id": "Product_Pickaxe_Grade_02",
+  "isBoss": false,
+  "level": 11,
+  "nameId": "RECIPE_PICKEAXE2",
+  "tier": 0,
+  "unlocks": [
+   "Pickaxe_Tier_01"
   ]
  },
  {
   "cost": 3,
-  "iconName": "BlastFurnace",
-  "id": "Product_Ingot_Grade_01_Copper",
-  "isBoss": false,
-  "level": 10,
-  "nameId": "RECIPE_BLAST_FURNACE",
-  "tier": 0,
-  "unlocks": [
-   "BlastFurnace"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "HatchingPalEgg",
-  "id": "Special_HatchingPalEgg",
-  "isBoss": true,
-  "level": 10,
-  "nameId": "RECIPE_HatchingPalEgg",
-  "requireBoss": "GrassBoss",
-  "tier": 0,
-  "unlocks": [
-   "HatchingPalEgg"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Trap_LegHold",
-  "id": "Trap_LegHold",
-  "isBoss": false,
-  "level": 10,
-  "nameId": "RECIPE_Trap_LegHold",
-  "tier": 0,
-  "unlocks": [
-   "Trap_LegHold"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Wooden_ladder",
-  "id": "Wooden_ladder",
-  "isBoss": false,
-  "level": 10,
-  "nameId": "RECIPE_Wooden_ladder",
-  "tier": 0,
-  "unlocks": [
-   "Wooden_ladder"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Chair01_Stone",
-  "id": "FurnitureSet_19",
+  "descId": "RECIPE_FACTORY_HARD_01",
+  "iconName": "Factory_Hard_01",
+  "id": "Product_Factory_Hard_Grade_01",
   "isBoss": false,
   "level": 11,
-  "nameId": "RECIPE_FurnitureSet_19",
+  "nameId": "RECIPE_FACTORY_HARD_01",
   "tier": 0,
   "unlocks": [
-   "Chair01_Stone",
-   "Chair02_Stone",
-   "Stool01_Stone"
+   "Factory_Hard_01"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_HunterFlagSet",
   "iconName": "Hunter_Flag",
   "id": "HunterFlagSet",
   "isBoss": false,
@@ -851,54 +942,7 @@
  },
  {
   "cost": 2,
-  "iconName": "Axe_Default",
-  "id": "Product_Axe_Grade_02",
-  "isBoss": false,
-  "level": 11,
-  "nameId": "RECIPE_AXE2",
-  "tier": 0,
-  "unlocks": [
-   "Axe_Tier_01"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Factory_Hard_01",
-  "id": "Product_Factory_Hard_Grade_01",
-  "isBoss": false,
-  "level": 11,
-  "nameId": "RECIPE_FACTORY_HARD_01",
-  "tier": 0,
-  "unlocks": [
-   "Factory_Hard_01"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Pickaxe_Default",
-  "id": "Product_Pickaxe_Grade_02",
-  "isBoss": false,
-  "level": 11,
-  "nameId": "RECIPE_PICKEAXE2",
-  "tier": 0,
-  "unlocks": [
-   "Pickaxe_Tier_01"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Carbunclo",
-  "id": "SkillUnlock_Carbunclo",
-  "isBoss": false,
-  "level": 11,
-  "nameId": "RECIPE_SkillUnlock_Carbunclo",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Carbunclo"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_WeaselDragon",
   "iconName": "WeaselDragon",
   "id": "SkillUnlock_WeaselDragon",
   "isBoss": false,
@@ -910,7 +954,36 @@
   ]
  },
  {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Carbunclo",
+  "iconName": "Carbunclo",
+  "id": "SkillUnlock_Carbunclo",
+  "isBoss": false,
+  "level": 11,
+  "nameId": "RECIPE_SkillUnlock_Carbunclo",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Carbunclo"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_19",
+  "iconName": "Chair01_Stone",
+  "id": "FurnitureSet_19",
+  "isBoss": false,
+  "level": 11,
+  "nameId": "RECIPE_FurnitureSet_19",
+  "tier": 0,
+  "unlocks": [
+   "Chair01_Stone",
+   "Chair02_Stone",
+   "Stool01_Stone"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_ARMOR2",
   "iconName": "FurArmor",
   "id": "Battle_Armor_Grade_02_Fur",
   "isBoss": false,
@@ -922,7 +995,73 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_MeatCutterKnife",
+  "iconName": "MeatCutterKnife",
+  "id": "MeatCutterKnife",
+  "isBoss": false,
+  "level": 12,
+  "nameId": "RECIPE_MeatCutterKnife",
+  "tier": 0,
+  "unlocks": [
+   "MeatCutterKnife"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_MEDICINE_FACILITY_01",
+  "iconName": "MedicineFacility_01",
+  "id": "Product_Medicine_Grade_01",
+  "isBoss": false,
+  "level": 12,
+  "nameId": "RECIPE_MEDICINE_FACILITY_01",
+  "tier": 0,
+  "unlocks": [
+   "MedicineFacility_01"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Monkey",
+  "iconName": "Monkey",
+  "id": "SkillUnlock_Monkey",
+  "isBoss": false,
+  "level": 12,
+  "nameId": "RECIPE_SkillUnlock_Monkey",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Monkey"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Deer",
+  "iconName": "Deer",
+  "id": "SkillUnlock_Deer",
+  "isBoss": false,
+  "level": 12,
+  "nameId": "RECIPE_SkillUnlock_Deer",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Deer"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_GrapplingGun_1",
+  "iconName": "GrapplingGun",
+  "id": "GrapplingGun",
+  "isBoss": true,
+  "level": 12,
+  "nameId": "RECIPE_GrapplingGun",
+  "tier": 0,
+  "unlocks": [
+   "GrapplingGun"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Green",
   "iconName": "FurnitureTree01_Green",
   "id": "FurnitureTree_Green",
   "isBoss": false,
@@ -938,66 +1077,7 @@
  },
  {
   "cost": 1,
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun",
-  "isBoss": true,
-  "level": 12,
-  "nameId": "RECIPE_GrapplingGun",
-  "tier": 0,
-  "unlocks": [
-   "GrapplingGun"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "MeatCutterKnife",
-  "id": "MeatCutterKnife",
-  "isBoss": false,
-  "level": 12,
-  "nameId": "RECIPE_MeatCutterKnife",
-  "tier": 0,
-  "unlocks": [
-   "MeatCutterKnife"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "MedicineFacility_01",
-  "id": "Product_Medicine_Grade_01",
-  "isBoss": false,
-  "level": 12,
-  "nameId": "RECIPE_MEDICINE_FACILITY_01",
-  "tier": 0,
-  "unlocks": [
-   "MedicineFacility_01"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Deer",
-  "id": "SkillUnlock_Deer",
-  "isBoss": false,
-  "level": 12,
-  "nameId": "RECIPE_SkillUnlock_Deer",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Deer"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Monkey",
-  "id": "SkillUnlock_Monkey",
-  "isBoss": false,
-  "level": 12,
-  "nameId": "RECIPE_SkillUnlock_Monkey",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Monkey"
-  ]
- },
- {
-  "cost": 1,
+  "descId": "RECIPE_TableCircular",
   "iconName": "TableCircular_Wood_None",
   "id": "TableCircular",
   "isBoss": false,
@@ -1011,6 +1091,7 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_BOWGUN",
   "iconName": "BowGun",
   "id": "Battle_RangeWeapon_BowGun",
   "isBoss": false,
@@ -1023,6 +1104,33 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_Spear_2",
+  "iconName": "Spear",
+  "id": "Spear_2",
+  "isBoss": false,
+  "level": 13,
+  "nameId": "RECIPE_Spear_2",
+  "tier": 0,
+  "unlocks": [
+   "Spear_2"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_ITEM_CHEST_02",
+  "iconName": "Chest2",
+  "id": "Infra_ItemChest_Grade_02",
+  "isBoss": false,
+  "level": 13,
+  "nameId": "RECIPE_ITEM_CHEST_02",
+  "tier": 0,
+  "unlocks": [
+   "ItemChest_02"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_CoolerBox",
   "iconName": "CoolerBox",
   "id": "CoolerBox",
   "isBoss": false,
@@ -1035,6 +1143,7 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_DamagedScarecrow",
   "iconName": "DamagedScarecrow",
   "id": "DamagedScarecrow",
   "isBoss": false,
@@ -1046,7 +1155,21 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Monkey_Fire",
+  "iconName": "Monkey_Fire",
+  "id": "SkillUnlock_Monkey_Fire",
+  "isBoss": false,
+  "level": 13,
+  "nameId": "RECIPE_SkillUnlock_Monkey_Fire",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Monkey_Fire"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_22",
   "iconName": "Shelf05_Stone",
   "id": "FurnitureSet_22",
   "isBoss": false,
@@ -1062,42 +1185,33 @@
  },
  {
   "cost": 2,
-  "iconName": "Chest2",
-  "id": "Infra_ItemChest_Grade_02",
+  "descId": "RECIPE_SPHERE2",
+  "iconName": "PalSphere_Mega",
+  "id": "Special_PalSphere_Grade_02",
   "isBoss": false,
-  "level": 13,
-  "nameId": "RECIPE_ITEM_CHEST_02",
+  "level": 14,
+  "nameId": "RECIPE_SPHERE2",
   "tier": 0,
   "unlocks": [
-   "ItemChest_02"
+   "PalSphere_Mega"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_SPHERE_FACTORY_BLACK_01",
+  "iconName": "SphereFactory_Black_01",
+  "id": "Special_SphereFactory_Black_Grade_01",
+  "isBoss": false,
+  "level": 14,
+  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_01",
+  "tier": 0,
+  "unlocks": [
+   "SphereFactory_Black_01"
   ]
  },
  {
   "cost": 2,
-  "iconName": "Monkey_Fire",
-  "id": "SkillUnlock_Monkey_Fire",
-  "isBoss": false,
-  "level": 13,
-  "nameId": "RECIPE_SkillUnlock_Monkey_Fire",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Monkey_Fire"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Spear",
-  "id": "Spear_2",
-  "isBoss": false,
-  "level": 13,
-  "nameId": "RECIPE_Spear_2",
-  "tier": 0,
-  "unlocks": [
-   "Spear_2"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_AutoMealPouch_Tier2",
   "iconName": "AutoMealPouch_Tier2",
   "id": "AutoMealPouch_Tier2",
   "isBoss": false,
@@ -1110,20 +1224,47 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Desk01_Stone",
-  "id": "FurnitureSet_24",
+  "cost": 2,
+  "descId": "RECIPE_WallTorch",
+  "iconName": "WallTorch",
+  "id": "WallTorch",
   "isBoss": false,
   "level": 14,
-  "nameId": "RECIPE_FurnitureSet_24",
+  "nameId": "RECIPE_WallTorch",
   "tier": 0,
   "unlocks": [
-   "Desk01_Stone",
-   "TableCircular01_Stone"
+   "WallTorch"
   ]
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Kirin",
+  "iconName": "Kirin",
+  "id": "SkillUnlock_Kirin",
+  "isBoss": false,
+  "level": 14,
+  "nameId": "RECIPE_SkillUnlock_Kirin",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Kirin"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_PALLABO",
+  "iconName": "CharacterRankUp",
+  "id": "Special_PalRankUp",
+  "isBoss": true,
+  "level": 14,
+  "nameId": "RECIPE_PALLABO",
+  "tier": 0,
+  "unlocks": [
+   "CharacterRankUp"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Red",
   "iconName": "FurnitureTree01_Red",
   "id": "FurnitureTree_Red",
   "isBoss": false,
@@ -1139,78 +1280,21 @@
  },
  {
   "cost": 1,
-  "iconName": "Kirin",
-  "id": "SkillUnlock_Kirin",
+  "descId": "RECIPE_FurnitureSet_24",
+  "iconName": "Desk01_Stone",
+  "id": "FurnitureSet_24",
   "isBoss": false,
   "level": 14,
-  "nameId": "RECIPE_SkillUnlock_Kirin",
+  "nameId": "RECIPE_FurnitureSet_24",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_Kirin"
+   "Desk01_Stone",
+   "TableCircular01_Stone"
   ]
  },
  {
   "cost": 2,
-  "iconName": "CharacterRankUp",
-  "id": "Special_PalRankUp",
-  "isBoss": true,
-  "level": 14,
-  "nameId": "RECIPE_PALLABO",
-  "tier": 0,
-  "unlocks": [
-   "CharacterRankUp"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "PalSphere_Mega",
-  "id": "Special_PalSphere_Grade_02",
-  "isBoss": false,
-  "level": 14,
-  "nameId": "RECIPE_SPHERE2",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Mega"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SphereFactory_Black_01",
-  "id": "Special_SphereFactory_Black_Grade_01",
-  "isBoss": false,
-  "level": 14,
-  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_01",
-  "tier": 0,
-  "unlocks": [
-   "SphereFactory_Black_01"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "WallTorch",
-  "id": "WallTorch",
-  "isBoss": false,
-  "level": 14,
-  "nameId": "RECIPE_WallTorch",
-  "tier": 0,
-  "unlocks": [
-   "WallTorch"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "DisplayCharacter",
-  "id": "DisplayCharacter",
-  "isBoss": false,
-  "level": 15,
-  "nameId": "RECIPE_DisplayCharacter",
-  "tier": 0,
-  "unlocks": [
-   "DisplayCharacter"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_FishingSet1",
   "iconName": "FishingRod_1",
   "id": "FishingSet1",
   "isBoss": false,
@@ -1224,6 +1308,20 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_wheat_plantation",
+  "iconName": "FarmBlockV2_wheet",
+  "id": "Product_Farm_wheat",
+  "isBoss": false,
+  "level": 15,
+  "nameId": "RECIPE_wheat_plantation",
+  "tier": 0,
+  "unlocks": [
+   "FarmBlockV2_wheet"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_FlourMill",
   "iconName": "FlourMill",
   "id": "FlourMill",
   "isBoss": false,
@@ -1235,19 +1333,8 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "Lantern",
-  "id": "Lantern",
-  "isBoss": true,
-  "level": 15,
-  "nameId": "RECIPE_Lantern",
-  "tier": 0,
-  "unlocks": [
-   "Lantern"
-  ]
- },
- {
   "cost": 1,
+  "descId": "ITEM_DESC_Processed_Wood",
   "iconName": "Processed_Wood",
   "id": "Processed_Wood",
   "isBoss": false,
@@ -1260,18 +1347,20 @@
  },
  {
   "cost": 2,
-  "iconName": "FarmBlockV2_wheet",
-  "id": "Product_Farm_wheat",
+  "descId": "RECIPE_DisplayCharacter",
+  "iconName": "DisplayCharacter",
+  "id": "DisplayCharacter",
   "isBoss": false,
   "level": 15,
-  "nameId": "RECIPE_wheat_plantation",
+  "nameId": "RECIPE_DisplayCharacter",
   "tier": 0,
   "unlocks": [
-   "FarmBlockV2_wheet"
+   "DisplayCharacter"
   ]
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_FlameBuffalo",
   "iconName": "FlameBuffalo",
   "id": "SkillUnlock_FlameBuffalo",
   "isBoss": false,
@@ -1284,6 +1373,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_HawkBird",
   "iconName": "HawkBird",
   "id": "SkillUnlock_HawkBird",
   "isBoss": false,
@@ -1295,7 +1385,34 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_Lantern",
+  "iconName": "Lantern",
+  "id": "Lantern",
+  "isBoss": true,
+  "level": 15,
+  "nameId": "RECIPE_Lantern",
+  "tier": 0,
+  "unlocks": [
+   "Lantern"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Shield_02",
+  "iconName": "Shield_02",
+  "id": "Shield_02",
+  "isBoss": false,
+  "level": 16,
+  "nameId": "RECIPE_Shield_02",
+  "tier": 0,
+  "unlocks": [
+   "Shield_02"
+  ]
+ },
+ {
   "cost": 3,
+  "descId": "RECIPE_ARMOR2_Heat",
   "iconName": "FurArmorHeat",
   "id": "Battle_Armor_Grade_02_Fur_Heat",
   "isBoss": false,
@@ -1308,20 +1425,49 @@
  },
  {
   "cost": 1,
-  "iconName": "Mirror01_Stone",
-  "id": "FurnitureSet_16",
+  "descId": "ITEM_DESC_SkillUnlock_Serpent",
+  "iconName": "Serpent",
+  "id": "SkillUnlock_Serpent",
   "isBoss": false,
   "level": 16,
-  "nameId": "RECIPE_FurnitureSet_16",
+  "nameId": "RECIPE_SkillUnlock_Serpent",
   "tier": 0,
   "unlocks": [
-   "Mirror01_Stone",
-   "Mirror02_Stone",
-   "Mirror01_Wall_Stone"
+   "SkillUnlock_Serpent"
   ]
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_Unlock_Picking_Tier1",
+  "iconName": "Unlock_Picking",
+  "id": "Unlock_Picking_Tier1",
+  "isBoss": true,
+  "level": 16,
+  "nameId": "RECIPE_Unlock_Picking_Tier1",
+  "tier": 0,
+  "unlocks": [
+   "Unlock_Picking_Tier1"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Yellow",
+  "iconName": "FurnitureTree01_Yellow",
+  "id": "FurnitureTree_Yellow",
+  "isBoss": false,
+  "level": 16,
+  "nameId": "RECIPE_FurnitureTree_Yellow",
+  "tier": 0,
+  "unlocks": [
+   "FurnitureTree01_Yellow",
+   "FurnitureTree02_Yellow",
+   "FurnitureTree03_Yellow",
+   "FurnitureBush01_Yellow"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_20",
   "iconName": "BathTub_Stone",
   "id": "FurnitureSet_20",
   "isBoss": false,
@@ -1337,57 +1483,22 @@
  },
  {
   "cost": 1,
-  "iconName": "FurnitureTree01_Yellow",
-  "id": "FurnitureTree_Yellow",
+  "descId": "RECIPE_FurnitureSet_16",
+  "iconName": "Mirror01_Stone",
+  "id": "FurnitureSet_16",
   "isBoss": false,
   "level": 16,
-  "nameId": "RECIPE_FurnitureTree_Yellow",
+  "nameId": "RECIPE_FurnitureSet_16",
   "tier": 0,
   "unlocks": [
-   "FurnitureTree01_Yellow",
-   "FurnitureTree02_Yellow",
-   "FurnitureTree03_Yellow",
-   "FurnitureBush01_Yellow"
+   "Mirror01_Stone",
+   "Mirror02_Stone",
+   "Mirror01_Wall_Stone"
   ]
  },
  {
   "cost": 2,
-  "iconName": "Shield_02",
-  "id": "Shield_02",
-  "isBoss": false,
-  "level": 16,
-  "nameId": "RECIPE_Shield_02",
-  "tier": 0,
-  "unlocks": [
-   "Shield_02"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Serpent",
-  "id": "SkillUnlock_Serpent",
-  "isBoss": false,
-  "level": 16,
-  "nameId": "RECIPE_SkillUnlock_Serpent",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Serpent"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Unlock_Picking",
-  "id": "Unlock_Picking_Tier1",
-  "isBoss": true,
-  "level": 16,
-  "nameId": "RECIPE_Unlock_Picking_Tier1",
-  "tier": 0,
-  "unlocks": [
-   "Unlock_Picking_Tier1"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_BronzeSword",
   "iconName": "BronzeSword",
   "id": "BronzeSword",
   "isBoss": false,
@@ -1399,7 +1510,74 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_COOKINGSTOVE",
+  "iconName": "CookingStove",
+  "id": "Product_Cooking_Grade_02",
+  "isBoss": false,
+  "level": 17,
+  "nameId": "RECIPE_COOKINGSTOVE",
+  "tier": 0,
+  "unlocks": [
+   "CookingStove"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Heater",
+  "iconName": "Heater",
+  "id": "Heater",
+  "isBoss": false,
+  "level": 17,
+  "nameId": "RECIPE_Heater",
+  "tier": 0,
+  "unlocks": [
+   "Heater"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "BUILDOBJECT_DESC_Headstone",
+  "iconName": "Headstone",
+  "id": "Headstone",
+  "isBoss": false,
+  "level": 17,
+  "nameId": "RECIPE_Headstone",
+  "tier": 0,
+  "unlocks": [
+   "Headstone"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Penguin",
+  "iconName": "Penguin",
+  "id": "SkillUnlock_Penguin",
+  "isBoss": false,
+  "level": 17,
+  "nameId": "RECIPE_SkillUnlock_Penguin",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Penguin"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_GrapplingGun_2",
+  "iconName": "GrapplingGun",
+  "id": "GrapplingGun2",
+  "isBoss": true,
+  "level": 17,
+  "nameId": "RECIPE_GrapplingGun2",
+  "requireTech": "GrapplingGun",
+  "tier": 0,
+  "unlocks": [
+   "GrapplingGun2"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_15",
   "iconName": "Piano01_Stone",
   "id": "FurnitureSet_15",
   "isBoss": false,
@@ -1413,6 +1591,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_30",
   "iconName": "Shelf01_Iron",
   "id": "FurnitureSet_30",
   "isBoss": false,
@@ -1428,79 +1607,20 @@
  },
  {
   "cost": 2,
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun2",
-  "isBoss": true,
-  "level": 17,
-  "nameId": "RECIPE_GrapplingGun2",
-  "requireTech": "GrapplingGun",
-  "tier": 0,
-  "unlocks": [
-   "GrapplingGun2"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Headstone",
-  "id": "Headstone",
+  "descId": "RECIPE_Battle_Glider_Grade_02",
+  "iconName": "Glider_Good",
+  "id": "Battle_Glider_Grade_02",
   "isBoss": false,
-  "level": 17,
-  "nameId": "RECIPE_Headstone",
-  "tier": 0,
-  "unlocks": [
-   "Headstone"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Heater",
-  "id": "Heater",
-  "isBoss": false,
-  "level": 17,
-  "nameId": "RECIPE_Heater",
-  "tier": 0,
-  "unlocks": [
-   "Heater"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "CookingStove",
-  "id": "Product_Cooking_Grade_02",
-  "isBoss": false,
-  "level": 17,
-  "nameId": "RECIPE_COOKINGSTOVE",
-  "tier": 0,
-  "unlocks": [
-   "CookingStove"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Penguin",
-  "id": "SkillUnlock_Penguin",
-  "isBoss": false,
-  "level": 17,
-  "nameId": "RECIPE_SkillUnlock_Penguin",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Penguin"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Accessory_Nonkilling",
-  "id": "Accessory_Nonkilling",
-  "isBoss": true,
   "level": 18,
-  "nameId": "RECIPE_Accessory_Nonkilling",
+  "nameId": "RECIPE_Battle_Glider_Grade_02",
   "tier": 0,
   "unlocks": [
-   "Accessory_Nonkilling"
+   "Glider_Good"
   ]
  },
  {
   "cost": 3,
+  "descId": "RECIPE_ARMOR2_Cold",
   "iconName": "FurArmorCold",
   "id": "Battle_Armor_Grade_02_Fur_Cold",
   "isBoss": false,
@@ -1513,18 +1633,7 @@
  },
  {
   "cost": 2,
-  "iconName": "Glider_Good",
-  "id": "Battle_Glider_Grade_02",
-  "isBoss": false,
-  "level": 18,
-  "nameId": "RECIPE_Battle_Glider_Grade_02",
-  "tier": 0,
-  "unlocks": [
-   "Glider_Good"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_Cooler",
   "iconName": "Cooler",
   "id": "Cooler",
   "isBoss": false,
@@ -1536,7 +1645,47 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_ColorfulBird",
+  "iconName": "ColorfulBird",
+  "id": "SkillUnlock_ColorfulBird",
+  "isBoss": false,
+  "level": 18,
+  "nameId": "RECIPE_SkillUnlock_ColorfulBird",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_ColorfulBird"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Penguin_Electric",
+  "iconName": "Penguin_Electric",
+  "id": "SkillUnlock_Penguin_Electric",
+  "isBoss": false,
+  "level": 18,
+  "nameId": "RECIPE_SkillUnlock_Penguin_Electric",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Penguin_Electric"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Accessory_Nonkilling",
+  "iconName": "Accessory_Nonkilling",
+  "id": "Accessory_Nonkilling",
+  "isBoss": true,
+  "level": 18,
+  "nameId": "RECIPE_Accessory_Nonkilling",
+  "tier": 0,
+  "unlocks": [
+   "Accessory_Nonkilling"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_25",
   "iconName": "Toilet01_Stone",
   "id": "FurnitureSet_25",
   "isBoss": false,
@@ -1551,6 +1700,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_32",
   "iconName": "Curtain01_Wall_Stone",
   "id": "FurnitureSet_32",
   "isBoss": false,
@@ -1565,30 +1715,7 @@
  },
  {
   "cost": 2,
-  "iconName": "ColorfulBird",
-  "id": "SkillUnlock_ColorfulBird",
-  "isBoss": false,
-  "level": 18,
-  "nameId": "RECIPE_SkillUnlock_ColorfulBird",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_ColorfulBird"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Penguin_Electric",
-  "id": "SkillUnlock_Penguin_Electric",
-  "isBoss": false,
-  "level": 18,
-  "nameId": "RECIPE_SkillUnlock_Penguin_Electric",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Penguin_Electric"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_BreedFarm",
   "iconName": "BreedFarm",
   "id": "BreedFarm",
   "isBoss": true,
@@ -1601,31 +1728,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Cement",
-  "id": "Cement",
-  "isBoss": false,
-  "level": 19,
-  "nameId": "RECIPE_Cement",
-  "tier": 0,
-  "unlocks": [
-   "Cement"
-  ]
- },
- {
   "cost": 2,
-  "iconName": "DefenseWall",
-  "id": "DefenseWall",
-  "isBoss": false,
-  "level": 19,
-  "nameId": "RECIPE_DefenseWall",
-  "tier": 0,
-  "unlocks": [
-   "DefenseWall"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Lab",
   "iconName": "Lab",
   "id": "Lab",
   "isBoss": false,
@@ -1638,18 +1742,7 @@
  },
  {
   "cost": 1,
-  "iconName": "NaughtyCat",
-  "id": "SkillUnlock_NaughtyCat",
-  "isBoss": false,
-  "level": 19,
-  "nameId": "RECIPE_SkillUnlock_NaughtyCat",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_NaughtyCat"
-  ]
- },
- {
-  "cost": 1,
+  "descId": "ITEM_DESC_SphereModule_Heavy",
   "iconName": "SphereModule_Heavy",
   "id": "SphereModule_Heavy",
   "isBoss": false,
@@ -1661,19 +1754,21 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "Stone_Gate",
-  "id": "Stone_Gate",
+  "cost": 1,
+  "descId": "ITEM_DESC_Cement",
+  "iconName": "Cement",
+  "id": "Cement",
   "isBoss": false,
   "level": 19,
-  "nameId": "RECIPE_Stone_Gate",
+  "nameId": "RECIPE_Cement",
   "tier": 0,
   "unlocks": [
-   "Stone_Gate"
+   "Cement"
   ]
  },
  {
   "cost": 3,
+  "descId": "RECIPE_Stone_Houseset",
   "iconName": "Stone_foundation",
   "id": "Stone_houseset",
   "isBoss": false,
@@ -1703,7 +1798,86 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_DefenseWall",
+  "iconName": "DefenseWall",
+  "id": "DefenseWall",
+  "isBoss": false,
+  "level": 19,
+  "nameId": "RECIPE_DefenseWall",
+  "tier": 0,
+  "unlocks": [
+   "DefenseWall"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Stone_Gate",
+  "iconName": "Stone_Gate",
+  "id": "Stone_Gate",
+  "isBoss": false,
+  "level": 19,
+  "nameId": "RECIPE_Stone_Gate",
+  "tier": 0,
+  "unlocks": [
+   "Stone_Gate"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_NaughtyCat",
+  "iconName": "NaughtyCat",
+  "id": "SkillUnlock_NaughtyCat",
+  "isBoss": false,
+  "level": 19,
+  "nameId": "RECIPE_SkillUnlock_NaughtyCat",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_NaughtyCat"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_SPHERE3",
+  "iconName": "PalSphere_Giga",
+  "id": "Special_PalSphere_Grade_03",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_SPHERE3",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere_Giga"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_WEAPONFACTRY",
+  "iconName": "WeaponFactory_Dirty_01",
+  "id": "Product_WeaponFactory_Dirty_Grade_01",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_WEAPONFACTRY",
+  "tier": 0,
+  "unlocks": [
+   "WeaponFactory_Dirty_01"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_ToolBoxV1",
+  "iconName": "ToolBoxV1",
+  "id": "ToolBoxV1",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_ToolBoxV1",
+  "tier": 0,
+  "unlocks": [
+   "ToolBoxV1"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_BelieverFlagSet",
   "iconName": "Believer_Flag",
   "id": "BelieverFlagSet",
   "isBoss": false,
@@ -1718,6 +1892,46 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FairyDragon",
+  "iconName": "FairyDragon",
+  "id": "SkillUnlock_FairyDragon",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_SkillUnlock_FairyDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_FairyDragon"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_PurpleSpider",
+  "iconName": "PurpleSpider",
+  "id": "SkillUnlock_PurpleSpider",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_SkillUnlock_PurpleSpider",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_PurpleSpider"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_MopKing",
+  "iconName": "MopKing",
+  "id": "SkillUnlock_MopKing",
+  "isBoss": false,
+  "level": 20,
+  "nameId": "RECIPE_SkillUnlock_MopKing",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_MopKing"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_DimensionPalStorage",
   "iconName": "DimensionPalStorage",
   "id": "DimensionPalStorage",
   "isBoss": true,
@@ -1730,6 +1944,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_18",
   "iconName": "Sofa01_Stone",
   "id": "FurnitureSet_18",
   "isBoss": false,
@@ -1744,90 +1959,7 @@
  },
  {
   "cost": 3,
-  "iconName": "WeaponFactory_Dirty_01",
-  "id": "Product_WeaponFactory_Dirty_Grade_01",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_WEAPONFACTRY",
-  "tier": 0,
-  "unlocks": [
-   "WeaponFactory_Dirty_01"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FairyDragon",
-  "id": "SkillUnlock_FairyDragon",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_SkillUnlock_FairyDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_FairyDragon"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "MopKing",
-  "id": "SkillUnlock_MopKing",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_SkillUnlock_MopKing",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_MopKing"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "PurpleSpider",
-  "id": "SkillUnlock_PurpleSpider",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_SkillUnlock_PurpleSpider",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_PurpleSpider"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "PalSphere_Giga",
-  "id": "Special_PalSphere_Grade_03",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_SPHERE3",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Giga"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "ToolBoxV1",
-  "id": "ToolBoxV1",
-  "isBoss": false,
-  "level": 20,
-  "nameId": "RECIPE_ToolBoxV1",
-  "tier": 0,
-  "unlocks": [
-   "ToolBoxV1"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "GunPowder2",
-  "id": "Battle_GunPowder_Grade_02",
-  "isBoss": false,
-  "level": 21,
-  "nameId": "RECIPE_Gunpowder2",
-  "tier": 0,
-  "unlocks": [
-   "Gunpowder2"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "RECIPE_Musket",
   "iconName": "Musket",
   "id": "Musket",
   "isBoss": false,
@@ -1840,30 +1972,20 @@
  },
  {
   "cost": 2,
-  "iconName": "OlympicCauldron",
-  "id": "OlympicCauldron",
+  "descId": "RECIPE_Gunpowder2",
+  "iconName": "GunPowder2",
+  "id": "Battle_GunPowder_Grade_02",
   "isBoss": false,
   "level": 21,
-  "nameId": "RECIPE_OlympicCauldron",
+  "nameId": "RECIPE_Gunpowder2",
   "tier": 0,
   "unlocks": [
-   "OlympicCauldron"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FarmBlockV2_tomato",
-  "id": "Product_Farm_tomato",
-  "isBoss": false,
-  "level": 21,
-  "nameId": "RECIPE_tomato_plantation",
-  "tier": 0,
-  "unlocks": [
-   "FarmBlockV2_tomato"
+   "Gunpowder2"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_RoughBullet",
   "iconName": "RoughBullet",
   "id": "RoughBullet",
   "isBoss": false,
@@ -1876,42 +1998,33 @@
  },
  {
   "cost": 2,
-  "iconName": "BirdDragon",
-  "id": "SkillUnlock_BirdDragon",
+  "descId": "RECIPE_tomato_plantation",
+  "iconName": "FarmBlockV2_tomato",
+  "id": "Product_Farm_tomato",
   "isBoss": false,
   "level": 21,
-  "nameId": "RECIPE_SkillUnlock_BirdDragon",
+  "nameId": "RECIPE_tomato_plantation",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_BirdDragon"
+   "FarmBlockV2_tomato"
   ]
  },
  {
   "cost": 2,
-  "iconName": "Deer_Ground",
-  "id": "SkillUnlock_Deer_Ground",
+  "descId": "BUILDOBJECT_DESC_OlympicCauldron",
+  "iconName": "OlympicCauldron",
+  "id": "OlympicCauldron",
   "isBoss": false,
   "level": 21,
-  "nameId": "RECIPE_SkillUnlock_Deer_Ground",
+  "nameId": "RECIPE_OlympicCauldron",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_Deer_Ground"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "TableDresser01_Stone",
-  "id": "TableDresser01_Stone",
-  "isBoss": true,
-  "level": 21,
-  "nameId": "RECIPE_TableDresser01_Stone",
-  "tier": 0,
-  "unlocks": [
-   "TableDresser01_Stone"
+   "OlympicCauldron"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_Trap_LegHold_Big",
   "iconName": "Trap_LegHold",
   "id": "Trap_LegHold_Big",
   "isBoss": false,
@@ -1924,18 +2037,46 @@
  },
  {
   "cost": 2,
-  "iconName": "ElecBaton",
-  "id": "ElecBaton",
+  "descId": "ITEM_DESC_SkillUnlock_BirdDragon",
+  "iconName": "BirdDragon",
+  "id": "SkillUnlock_BirdDragon",
   "isBoss": false,
-  "level": 22,
-  "nameId": "RECIPE_ELECBATON",
+  "level": 21,
+  "nameId": "RECIPE_SkillUnlock_BirdDragon",
   "tier": 0,
   "unlocks": [
-   "ElecBaton"
+   "SkillUnlock_BirdDragon"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Deer_Ground",
+  "iconName": "Deer_Ground",
+  "id": "SkillUnlock_Deer_Ground",
+  "isBoss": false,
+  "level": 21,
+  "nameId": "RECIPE_SkillUnlock_Deer_Ground",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Deer_Ground"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "BUILDOBJECT_DESC_TableDresser01_Stone",
+  "iconName": "TableDresser01_Stone",
+  "id": "TableDresser01_Stone",
+  "isBoss": true,
+  "level": 21,
+  "nameId": "RECIPE_TableDresser01_Stone",
+  "tier": 0,
+  "unlocks": [
+   "TableDresser01_Stone"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Expedition",
   "iconName": "Expedition",
   "id": "Expedition",
   "isBoss": false,
@@ -1947,7 +2088,21 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "RECIPE_ELECBATON",
+  "iconName": "ElecBaton",
+  "id": "ElecBaton",
+  "isBoss": false,
+  "level": 22,
+  "nameId": "RECIPE_ELECBATON",
+  "tier": 0,
+  "unlocks": [
+   "ElecBaton"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "ITEM_DESC_FishingBait_2",
   "iconName": "FishingBait_2",
   "id": "FishingBait_2",
   "isBoss": false,
@@ -1959,7 +2114,74 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_ITEMBooth",
+  "iconName": "ItemBooth",
+  "id": "ItemBooth",
+  "isBoss": false,
+  "level": 22,
+  "nameId": "RECIPE_ITEMBooth",
+  "tier": 0,
+  "unlocks": [
+   "ItemBooth"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_PalBooth",
+  "iconName": "PalBooth",
+  "id": "PalBooth",
+  "isBoss": false,
+  "level": 22,
+  "nameId": "RECIPE_PalBooth",
+  "tier": 0,
+  "unlocks": [
+   "PalBooth"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_BirdDragon_Ice",
+  "iconName": "BirdDragon_Ice",
+  "id": "SkillUnlock_BirdDragon_Ice",
+  "isBoss": false,
+  "level": 22,
+  "nameId": "RECIPE_SkillUnlock_BirdDragon_Ice",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BirdDragon_Ice"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Homeward",
+  "iconName": "Homeward",
+  "id": "Homeward",
+  "isBoss": true,
+  "level": 22,
+  "nameId": "RECIPE_Homeward",
+  "tier": 0,
+  "unlocks": [
+   "Homeward"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_23",
+  "iconName": "Clock01_Wall_Iron",
+  "id": "FurnitureSet_23",
+  "isBoss": false,
+  "level": 22,
+  "nameId": "RECIPE_FurnitureSet_23",
+  "tier": 0,
+  "unlocks": [
+   "Clock01_Wall_Iron",
+   "Clock01_Stone"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_13",
   "iconName": "Stool01_Iron",
   "id": "FurnitureSet_13",
   "isBoss": false,
@@ -1974,68 +2196,47 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Clock01_Wall_Iron",
-  "id": "FurnitureSet_23",
+  "cost": 2,
+  "descId": "RECIPE_ARMOR3",
+  "iconName": "CopperArmor",
+  "id": "Battle_Armor_Grade_03_Copper",
   "isBoss": false,
-  "level": 22,
-  "nameId": "RECIPE_FurnitureSet_23",
+  "level": 23,
+  "nameId": "RECIPE_ARMOR3",
   "tier": 0,
   "unlocks": [
-   "Clock01_Wall_Iron",
-   "Clock01_Stone"
+   "CopperArmor"
   ]
  },
  {
   "cost": 2,
-  "iconName": "Homeward",
-  "id": "Homeward",
-  "isBoss": true,
-  "level": 22,
-  "nameId": "RECIPE_Homeward",
+  "descId": "RECIPE_HELMET3",
+  "iconName": "CopperHelmet",
+  "id": "Battle_Helm_Grade_03_Copper",
+  "isBoss": false,
+  "level": 23,
+  "nameId": "RECIPE_HELMET3",
   "tier": 0,
   "unlocks": [
-   "Homeward"
+   "CopperHelmet"
   ]
  },
  {
   "cost": 2,
-  "iconName": "ItemBooth",
-  "id": "ItemBooth",
+  "descId": "ITEM_DESC_SphereModule_Curve",
+  "iconName": "SphereModule_Curve",
+  "id": "SphereModule_Curve",
   "isBoss": false,
-  "level": 22,
-  "nameId": "RECIPE_ITEMBooth",
+  "level": 23,
+  "nameId": "RECIPE_SphereModule_Curve",
   "tier": 0,
   "unlocks": [
-   "ItemBooth"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "PalBooth",
-  "id": "PalBooth",
-  "isBoss": false,
-  "level": 22,
-  "nameId": "RECIPE_PalBooth",
-  "tier": 0,
-  "unlocks": [
-   "PalBooth"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "BirdDragon_Ice",
-  "id": "SkillUnlock_BirdDragon_Ice",
-  "isBoss": false,
-  "level": 22,
-  "nameId": "RECIPE_SkillUnlock_BirdDragon_Ice",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BirdDragon_Ice"
+   "SphereModule_Curve"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_AutoMealPouch_Tier3",
   "iconName": "AutoMealPouch_Tier3",
   "id": "AutoMealPouch_Tier3",
   "isBoss": false,
@@ -2049,30 +2250,7 @@
  },
  {
   "cost": 2,
-  "iconName": "CopperArmor",
-  "id": "Battle_Armor_Grade_03_Copper",
-  "isBoss": false,
-  "level": 23,
-  "nameId": "RECIPE_ARMOR3",
-  "tier": 0,
-  "unlocks": [
-   "CopperArmor"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "CopperHelmet",
-  "id": "Battle_Helm_Grade_03_Copper",
-  "isBoss": false,
-  "level": 23,
-  "nameId": "RECIPE_HELMET3",
-  "tier": 0,
-  "unlocks": [
-   "CopperHelmet"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Fountain",
   "iconName": "Fountain",
   "id": "Fountain",
   "isBoss": false,
@@ -2084,21 +2262,21 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Container01_Iron",
-  "id": "FurnitureSet_6",
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_KingAlpaca",
+  "iconName": "KingAlpaca",
+  "id": "SkillUnlock_KingAlpaca",
   "isBoss": false,
   "level": 23,
-  "nameId": "RECIPE_FurnitureSet_6",
+  "nameId": "RECIPE_SkillUnlock_KingAlpaca",
   "tier": 0,
   "unlocks": [
-   "Container01_Iron",
-   "Box01_Iron",
-   "Box02_Iron"
+   "SkillUnlock_KingAlpaca"
   ]
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Bamboo",
   "iconName": "FurnitureTree01_Bamboo",
   "id": "FurnitureTree_Bamboo",
   "isBoss": false,
@@ -2114,67 +2292,23 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "KingAlpaca",
-  "id": "SkillUnlock_KingAlpaca",
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_6",
+  "iconName": "Container01_Iron",
+  "id": "FurnitureSet_6",
   "isBoss": false,
   "level": 23,
-  "nameId": "RECIPE_SkillUnlock_KingAlpaca",
+  "nameId": "RECIPE_FurnitureSet_6",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_KingAlpaca"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "SphereModule_Curve",
-  "id": "SphereModule_Curve",
-  "isBoss": false,
-  "level": 23,
-  "nameId": "RECIPE_SphereModule_Curve",
-  "tier": 0,
-  "unlocks": [
-   "SphereModule_Curve"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Clinic",
-  "id": "Clinic",
-  "isBoss": false,
-  "level": 24,
-  "nameId": "RECIPE_Clinic",
-  "tier": 0,
-  "unlocks": [
-   "Clinic"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FlowerBed",
-  "id": "FlowerBed",
-  "isBoss": false,
-  "level": 24,
-  "nameId": "RECIPE_FlowerBed",
-  "tier": 0,
-  "unlocks": [
-   "FlowerBed"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "MedicalPalBed_03",
-  "id": "Infra_PalBed_Grade_02",
-  "isBoss": false,
-  "level": 24,
-  "nameId": "RECIPE_MEDICAL_PALBED_02",
-  "tier": 0,
-  "unlocks": [
-   "MedicalPalBed_03"
+   "Container01_Iron",
+   "Box01_Iron",
+   "Box02_Iron"
   ]
  },
  {
   "cost": 3,
+  "descId": "RECIPE_MAKESHIFTHANDGUN",
   "iconName": "MakeshiftHandgun",
   "id": "MakeshiftHandgun",
   "isBoss": false,
@@ -2187,6 +2321,20 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_MEDICAL_PALBED_02",
+  "iconName": "MedicalPalBed_03",
+  "id": "Infra_PalBed_Grade_02",
+  "isBoss": false,
+  "level": 24,
+  "nameId": "RECIPE_MEDICAL_PALBED_02",
+  "tier": 0,
+  "unlocks": [
+   "MedicalPalBed_03"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_PalMedicineBox",
   "iconName": "PalMedicineBox",
   "id": "PalMedicineBox",
   "isBoss": false,
@@ -2199,42 +2347,33 @@
  },
  {
   "cost": 2,
-  "iconName": "CopperPit",
-  "id": "Product_CopperPit",
-  "isBoss": true,
-  "level": 24,
-  "nameId": "RECIPE_CopperPit",
-  "tier": 0,
-  "unlocks": [
-   "CopperPit"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "BlueDragon",
-  "id": "SkillUnlock_BlueDragon",
+  "descId": "BUILDOBJECT_DESC_Clinic",
+  "iconName": "Clinic",
+  "id": "Clinic",
   "isBoss": false,
   "level": 24,
-  "nameId": "RECIPE_SkillUnlock_BlueDragon",
+  "nameId": "RECIPE_Clinic",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_BlueDragon"
+   "Clinic"
   ]
  },
  {
   "cost": 2,
-  "iconName": "FlowerDinosaur",
-  "id": "SkillUnlock_FlowerDinosaur",
+  "descId": "BUILDOBJECT_DESC_FlowerBed",
+  "iconName": "FlowerBed",
+  "id": "FlowerBed",
   "isBoss": false,
   "level": 24,
-  "nameId": "RECIPE_SkillUnlock_FlowerDinosaur",
+  "nameId": "RECIPE_FlowerBed",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_FlowerDinosaur"
+   "FlowerBed"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Kitsunebi_Ice",
   "iconName": "Kitsunebi_Ice",
   "id": "SkillUnlock_Kitsunebi_Ice",
   "isBoss": false,
@@ -2247,30 +2386,46 @@
  },
  {
   "cost": 2,
-  "iconName": "CopperArmorHeat",
-  "id": "Battle_Armor_Grade_03_Copper_Heat",
+  "descId": "ITEM_DESC_SkillUnlock_BlueDragon",
+  "iconName": "BlueDragon",
+  "id": "SkillUnlock_BlueDragon",
   "isBoss": false,
-  "level": 25,
-  "nameId": "RECIPE_ARMOR3_Heat",
+  "level": 24,
+  "nameId": "RECIPE_SkillUnlock_BlueDragon",
   "tier": 0,
   "unlocks": [
-   "CopperArmorHeat"
+   "SkillUnlock_BlueDragon"
   ]
  },
  {
   "cost": 2,
-  "iconName": "FragGrenade",
-  "id": "FragGrenade",
+  "descId": "ITEM_DESC_SkillUnlock_FlowerDinosaur",
+  "iconName": "FlowerDinosaur",
+  "id": "SkillUnlock_FlowerDinosaur",
   "isBoss": false,
-  "level": 25,
-  "nameId": "RECIPE_FragGrenade",
+  "level": 24,
+  "nameId": "RECIPE_SkillUnlock_FlowerDinosaur",
   "tier": 0,
   "unlocks": [
-   "FragGrenade"
+   "SkillUnlock_FlowerDinosaur"
   ]
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_CopperPit",
+  "iconName": "CopperPit",
+  "id": "Product_CopperPit",
+  "isBoss": true,
+  "level": 24,
+  "nameId": "RECIPE_CopperPit",
+  "tier": 0,
+  "unlocks": [
+   "CopperPit"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_PalDopingShot",
   "iconName": "PalDopingShot",
   "id": "PalDopingShot",
   "isBoss": false,
@@ -2283,6 +2438,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_PalDopingShotBullet",
   "iconName": "PalDopingShotBullet",
   "id": "PalDopingShotBullet",
   "isBoss": false,
@@ -2295,6 +2451,20 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_ARMOR3_Heat",
+  "iconName": "CopperArmorHeat",
+  "id": "Battle_Armor_Grade_03_Copper_Heat",
+  "isBoss": false,
+  "level": 25,
+  "nameId": "RECIPE_ARMOR3_Heat",
+  "tier": 0,
+  "unlocks": [
+   "CopperArmorHeat"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Lettuce_plantation",
   "iconName": "FarmBlockV2_Lettuce",
   "id": "Product_Farm_Lettuce",
   "isBoss": false,
@@ -2307,6 +2477,7 @@
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Silo",
   "iconName": "Silo",
   "id": "Silo",
   "isBoss": false,
@@ -2318,19 +2489,21 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "HadesBird",
-  "id": "SkillUnlock_HadesBird",
+  "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade",
+  "iconName": "FragGrenade",
+  "id": "FragGrenade",
   "isBoss": false,
   "level": 25,
-  "nameId": "RECIPE_SkillUnlock_HadesBird",
+  "nameId": "RECIPE_FragGrenade",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_HadesBird"
+   "FragGrenade"
   ]
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_SkillUnlock_Serpent_Ground",
   "iconName": "Serpent_Ground",
   "id": "SkillUnlock_Serpent_Ground",
   "isBoss": false,
@@ -2342,7 +2515,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_HadesBird",
+  "iconName": "HadesBird",
+  "id": "SkillUnlock_HadesBird",
+  "isBoss": false,
+  "level": 25,
+  "nameId": "RECIPE_SkillUnlock_HadesBird",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_HadesBird"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_Unlock_Picking_Tier2",
   "iconName": "Unlock_Picking_Tier2",
   "id": "Unlock_Picking_Tier2",
   "isBoss": true,
@@ -2355,7 +2542,60 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_MakeshiftSubmachineGun",
+  "iconName": "MakeshiftSubmachineGun",
+  "id": "MakeshiftSubmachineGun",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_MakeshiftSubmachineGun",
+  "tier": 0,
+  "unlocks": [
+   "MakeshiftSubmachineGun"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_ELECTRIX_GENERATOR",
+  "iconName": "ElectricGenerator",
+  "id": "Infra_ElectricGenerator_Grade_01",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_ELECTRIX_GENERATOR",
+  "tier": 0,
+  "unlocks": [
+   "ElectricGenerator"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_Lamp",
+  "iconName": "Lamp",
+  "id": "Lamp",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_Lamp",
+  "tier": 0,
+  "unlocks": [
+   "Lamp"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "BUILDOBJECT_DESC_ManualElectricGenerator",
+  "iconName": "ManualElectricGenerator",
+  "id": "ManualElectricGenerator",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_ManualElectricGenerator",
+  "tier": 0,
+  "unlocks": [
+   "ManualElectricGenerator"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_DEFENCE_BOWGUN",
   "iconName": "DefenseBowGun",
   "id": "Battle_Defense_BowGun",
   "isBoss": false,
@@ -2367,7 +2607,34 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_FengyunDeeper",
+  "iconName": "FengyunDeeper",
+  "id": "SkillUnlock_FengyunDeeper",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_SkillUnlock_FengyunDeeper",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_FengyunDeeper"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_IceSeal",
+  "iconName": "IceSeal",
+  "id": "SkillUnlock_IceSeal",
+  "isBoss": false,
+  "level": 26,
+  "nameId": "RECIPE_SkillUnlock_IceSeal",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_IceSeal"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "RECIPE_SPHERE_LAUNCHER_ONCE",
   "iconName": "SphereLauncher_Once",
   "id": "Battle_RangeWeapon_SphereLauncher_Once",
   "isBoss": true,
@@ -2380,6 +2647,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_29",
   "iconName": "Light_FloorLamp01",
   "id": "FurnitureSet_29",
   "isBoss": false,
@@ -2395,90 +2663,33 @@
  },
  {
   "cost": 3,
-  "iconName": "ElectricGenerator",
-  "id": "Infra_ElectricGenerator_Grade_01",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_ELECTRIX_GENERATOR",
-  "tier": 0,
-  "unlocks": [
-   "ElectricGenerator"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "Lamp",
-  "id": "Lamp",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_Lamp",
-  "tier": 0,
-  "unlocks": [
-   "Lamp"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "MakeshiftSubmachineGun",
-  "id": "MakeshiftSubmachineGun",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_MakeshiftSubmachineGun",
-  "tier": 0,
-  "unlocks": [
-   "MakeshiftSubmachineGun"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "ManualElectricGenerator",
-  "id": "ManualElectricGenerator",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_ManualElectricGenerator",
-  "tier": 0,
-  "unlocks": [
-   "ManualElectricGenerator"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "FengyunDeeper",
-  "id": "SkillUnlock_FengyunDeeper",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_SkillUnlock_FengyunDeeper",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_FengyunDeeper"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "IceSeal",
-  "id": "SkillUnlock_IceSeal",
-  "isBoss": false,
-  "level": 26,
-  "nameId": "RECIPE_SkillUnlock_IceSeal",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_IceSeal"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "AdditionalInventory_001",
-  "id": "AdditionalInventory_001",
+  "descId": "RECIPE_SPHERE4",
+  "iconName": "PalSphere_Tera",
+  "id": "Special_PalSphere_Grade_04",
   "isBoss": false,
   "level": 27,
-  "nameId": "RECIPE_AdditionalInventory_001",
+  "nameId": "RECIPE_SPHERE4",
   "tier": 0,
   "unlocks": [
-   "AdditionalInventory_001"
+   "PalSphere_Tera"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_SPHERE_FACTORY_BLACK_02",
+  "iconName": "SphereFactory_Black_02",
+  "id": "Special_SphereFactory_Black_Grade_02",
+  "isBoss": false,
+  "level": 27,
+  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_02",
+  "tier": 0,
+  "unlocks": [
+   "SphereFactory_Black_02"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_ARMOR3_Cold",
   "iconName": "CopperArmorCold",
   "id": "Battle_Armor_Grade_03_Copper_Cold",
   "isBoss": false,
@@ -2490,7 +2701,21 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_AdditionalInventory_001",
+  "iconName": "AdditionalInventory_001",
+  "id": "AdditionalInventory_001",
+  "isBoss": false,
+  "level": 27,
+  "nameId": "RECIPE_AdditionalInventory_001",
+  "tier": 0,
+  "unlocks": [
+   "AdditionalInventory_001"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_CeilingLamp",
   "iconName": "CeilingLamp",
   "id": "CeilingLamp",
   "isBoss": false,
@@ -2503,6 +2728,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Elec",
   "iconName": "FragGrenade_Elec",
   "id": "FragGrenade_Elec",
   "isBoss": false,
@@ -2514,7 +2740,35 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "ITEM_DESC_UnlockEquipmentSlot_Weapon_01",
+  "iconName": "UnlockEquipmentSlot_Weapon_01",
+  "id": "UnlockEquipmentSlot_Weapon_01",
+  "isBoss": true,
+  "level": 27,
+  "nameId": "RECIPE_UnlockEquipmentSlot_Weapon_01",
+  "requireBoss": "ElectricBoss",
+  "tier": 0,
+  "unlocks": [
+   "UnlockEquipmentSlot_Weapon_01"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_BlueDragon_Ice",
+  "iconName": "BlueDragon_Ice",
+  "id": "SkillUnlock_BlueDragon_Ice",
+  "isBoss": false,
+  "level": 27,
+  "nameId": "RECIPE_SkillUnlock_BlueDragon_Ice",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BlueDragon_Ice"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Tropical",
   "iconName": "FurnitureTree01_Tropical",
   "id": "FurnitureTree_Tropical",
   "isBoss": false,
@@ -2530,79 +2784,7 @@
  },
  {
   "cost": 3,
-  "iconName": "BlueDragon_Ice",
-  "id": "SkillUnlock_BlueDragon_Ice",
-  "isBoss": false,
-  "level": 27,
-  "nameId": "RECIPE_SkillUnlock_BlueDragon_Ice",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BlueDragon_Ice"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "PalSphere_Tera",
-  "id": "Special_PalSphere_Grade_04",
-  "isBoss": false,
-  "level": 27,
-  "nameId": "RECIPE_SPHERE4",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Tera"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SphereFactory_Black_02",
-  "id": "Special_SphereFactory_Black_Grade_02",
-  "isBoss": false,
-  "level": 27,
-  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_02",
-  "tier": 0,
-  "unlocks": [
-   "SphereFactory_Black_02"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "UnlockEquipmentSlot_Weapon_01",
-  "id": "UnlockEquipmentSlot_Weapon_01",
-  "isBoss": true,
-  "level": 27,
-  "nameId": "RECIPE_UnlockEquipmentSlot_Weapon_01",
-  "requireBoss": "ElectricBoss",
-  "tier": 0,
-  "unlocks": [
-   "UnlockEquipmentSlot_Weapon_01"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Accessory_JumpPower_Increase",
-  "id": "Accessory_JumpPower_Increase",
-  "isBoss": true,
-  "level": 28,
-  "nameId": "RECIPE_Accessory_JumpPower_Increase",
-  "tier": 0,
-  "unlocks": [
-   "Accessory_JumpPower_Increase"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "BaseCampWorkHard02",
-  "id": "BaseCampWorkHard02",
-  "isBoss": false,
-  "level": 28,
-  "nameId": "RECIPE_BaseCampWorkHard02",
-  "tier": 0,
-  "unlocks": [
-   "BaseCampWorkHard02"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "RECIPE_HUNDGUN",
   "iconName": "HandGun_Default",
   "id": "Battle_RangeWeapon_HandGun",
   "isBoss": false,
@@ -2615,6 +2797,59 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_HANDGUNBULLET",
+  "iconName": "HandgunBullet",
+  "id": "HandgunBullet",
+  "isBoss": false,
+  "level": 28,
+  "nameId": "RECIPE_HANDGUNBULLET",
+  "tier": 0,
+  "unlocks": [
+   "HandgunBullet"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_PLAYER_BED_03",
+  "iconName": "PlayerBed_03",
+  "id": "Infra_PlayerBed_Grade_02",
+  "isBoss": false,
+  "level": 28,
+  "nameId": "RECIPE_PLAYER_BED_03",
+  "tier": 0,
+  "unlocks": [
+   "PlayerBed_03"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_BaseCampWorkHard02",
+  "iconName": "BaseCampWorkHard02",
+  "id": "BaseCampWorkHard02",
+  "isBoss": false,
+  "level": 28,
+  "nameId": "RECIPE_BaseCampWorkHard02",
+  "tier": 0,
+  "unlocks": [
+   "BaseCampWorkHard02"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Stump",
+  "iconName": "Stump",
+  "id": "Stump",
+  "isBoss": false,
+  "level": 28,
+  "nameId": "RECIPE_Stump",
+  "tier": 0,
+  "unlocks": [
+   "Stump"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FireCultFlagSet",
   "iconName": "FireCult_Flag",
   "id": "FireCultFlagSet",
   "isBoss": false,
@@ -2628,31 +2863,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "HandgunBullet",
-  "id": "HandgunBullet",
-  "isBoss": false,
-  "level": 28,
-  "nameId": "RECIPE_HANDGUNBULLET",
-  "tier": 0,
-  "unlocks": [
-   "HandgunBullet"
-  ]
- },
- {
   "cost": 2,
-  "iconName": "PlayerBed_03",
-  "id": "Infra_PlayerBed_Grade_02",
-  "isBoss": false,
-  "level": 28,
-  "nameId": "RECIPE_PLAYER_BED_03",
-  "tier": 0,
-  "unlocks": [
-   "PlayerBed_03"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FeatherOstrich",
   "iconName": "FeatherOstrich",
   "id": "SkillUnlock_FeatherOstrich",
   "isBoss": false,
@@ -2665,6 +2877,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GrassMammoth",
   "iconName": "GrassMammoth",
   "id": "SkillUnlock_GrassMammoth",
   "isBoss": false,
@@ -2677,92 +2890,20 @@
  },
  {
   "cost": 2,
-  "iconName": "Stump",
-  "id": "Stump",
-  "isBoss": false,
-  "level": 28,
-  "nameId": "RECIPE_Stump",
-  "tier": 0,
-  "unlocks": [
-   "Stump"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Sword",
-  "id": "Battle_MeleeWeapon_Sword",
-  "isBoss": false,
-  "level": 29,
-  "nameId": "RECIPE_SWORD",
-  "tier": 0,
-  "unlocks": [
-   "Sword"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FishingRod_3",
-  "id": "FishingRod_02_1",
-  "isBoss": false,
-  "level": 29,
-  "nameId": "RECIPE_FishingRod_02_1",
-  "tier": 0,
-  "unlocks": [
-   "FishingRod_02_1",
-   "FishingBait_1"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FragGrenade_Ice",
-  "id": "FragGrenade_Ice",
-  "isBoss": false,
-  "level": 29,
-  "nameId": "RECIPE_FragGrenade_Ice",
-  "tier": 0,
-  "unlocks": [
-   "FragGrenade_Ice"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Lantern_High",
-  "id": "Lantern_High",
+  "descId": "ITEM_DESC_Accessory_JumpPower_Increase",
+  "iconName": "Accessory_JumpPower_Increase",
+  "id": "Accessory_JumpPower_Increase",
   "isBoss": true,
-  "level": 29,
-  "nameId": "RECIPE_Lantern_High",
-  "requireTech": "Lantern",
+  "level": 28,
+  "nameId": "RECIPE_Accessory_JumpPower_Increase",
   "tier": 0,
   "unlocks": [
-   "Lantern_High"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Factory_Hard_02",
-  "id": "Product_Factory_Hard_Grade_02",
-  "isBoss": false,
-  "level": 29,
-  "nameId": "RECIPE_FACTORY_HARD_02",
-  "tier": 0,
-  "unlocks": [
-   "Factory_Hard_02"
+   "Accessory_JumpPower_Increase"
   ]
  },
  {
   "cost": 2,
-  "iconName": "FarmBlockV2_Potato",
-  "id": "Product_Farm_Potato",
-  "isBoss": false,
-  "level": 29,
-  "nameId": "RECIPE_FarmBlockV2_Potato",
-  "tier": 0,
-  "unlocks": [
-   "FarmBlockV2_Potato"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "RECIPE_Shield_03",
   "iconName": "Shield_03",
   "id": "Shield_03",
   "isBoss": false,
@@ -2775,6 +2916,73 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_SWORD",
+  "iconName": "Sword",
+  "id": "Battle_MeleeWeapon_Sword",
+  "isBoss": false,
+  "level": 29,
+  "nameId": "RECIPE_SWORD",
+  "tier": 0,
+  "unlocks": [
+   "Sword"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_FishingRod_02_1",
+  "iconName": "FishingRod_3",
+  "id": "FishingRod_02_1",
+  "isBoss": false,
+  "level": 29,
+  "nameId": "RECIPE_FishingRod_02_1",
+  "tier": 0,
+  "unlocks": [
+   "FishingRod_02_1",
+   "FishingBait_1"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_FACTORY_HARD_02",
+  "iconName": "Factory_Hard_02",
+  "id": "Product_Factory_Hard_Grade_02",
+  "isBoss": false,
+  "level": 29,
+  "nameId": "RECIPE_FACTORY_HARD_02",
+  "tier": 0,
+  "unlocks": [
+   "Factory_Hard_02"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_FarmBlockV2_Potato",
+  "iconName": "FarmBlockV2_Potato",
+  "id": "Product_Farm_Potato",
+  "isBoss": false,
+  "level": 29,
+  "nameId": "RECIPE_FarmBlockV2_Potato",
+  "tier": 0,
+  "unlocks": [
+   "FarmBlockV2_Potato"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Ice",
+  "iconName": "FragGrenade_Ice",
+  "id": "FragGrenade_Ice",
+  "isBoss": false,
+  "level": 29,
+  "nameId": "RECIPE_FragGrenade_Ice",
+  "tier": 0,
+  "unlocks": [
+   "FragGrenade_Ice"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FireKirin",
   "iconName": "FireKirin",
   "id": "SkillUnlock_FireKirin",
   "isBoss": false,
@@ -2787,6 +2995,7 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_ThunderBird",
   "iconName": "ThunderBird",
   "id": "SkillUnlock_ThunderBird",
   "isBoss": false,
@@ -2798,31 +3007,22 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "Cake02",
-  "id": "Cake02",
-  "isBoss": false,
-  "level": 30,
-  "nameId": "RECIPE_Cake02",
+  "cost": 2,
+  "descId": "ITEM_DESC_Lantern_High",
+  "iconName": "Lantern_High",
+  "id": "Lantern_High",
+  "isBoss": true,
+  "level": 29,
+  "nameId": "RECIPE_Lantern_High",
+  "requireTech": "Lantern",
   "tier": 0,
   "unlocks": [
-   "Cake02"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "DefenseWall_Metal",
-  "id": "DefenseWall_Metal",
-  "isBoss": false,
-  "level": 30,
-  "nameId": "RECIPE_DefenseWall_Metal",
-  "tier": 0,
-  "unlocks": [
-   "DefenseWall_Metal"
+   "Lantern_High"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_MakeshiftShotgun",
   "iconName": "MakeshiftShotgun",
   "id": "MakeshiftShotgun",
   "isBoss": false,
@@ -2835,18 +3035,20 @@
  },
  {
   "cost": 2,
-  "iconName": "Metal_Gate",
-  "id": "Metal_Gate",
+  "descId": "RECIPE_Trap_MineAttack",
+  "iconName": "Trap_MineAttack",
+  "id": "Trap_MineAttack",
   "isBoss": false,
   "level": 30,
-  "nameId": "RECIPE_Metal_Gate",
+  "nameId": "RECIPE_Trap_MineAttack",
   "tier": 0,
   "unlocks": [
-   "Metal_Gate"
+   "Trap_MineAttack"
   ]
  },
  {
   "cost": 4,
+  "descId": "RECIPE_Metal_Houseset",
   "iconName": "Metal_foundation",
   "id": "Metal_houseset",
   "isBoss": false,
@@ -2876,7 +3078,34 @@
   ]
  },
  {
+  "cost": 1,
+  "descId": "RECIPE_DefenseWall_Metal",
+  "iconName": "DefenseWall_Metal",
+  "id": "DefenseWall_Metal",
+  "isBoss": false,
+  "level": 30,
+  "nameId": "RECIPE_DefenseWall_Metal",
+  "tier": 0,
+  "unlocks": [
+   "DefenseWall_Metal"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_Metal_Gate",
+  "iconName": "Metal_Gate",
+  "id": "Metal_Gate",
+  "isBoss": false,
+  "level": 30,
+  "nameId": "RECIPE_Metal_Gate",
+  "tier": 0,
+  "unlocks": [
+   "Metal_Gate"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_MiningTool",
   "iconName": "MiningTool",
   "id": "MiningTool",
   "isBoss": false,
@@ -2888,7 +3117,21 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "ITEM_DESC_Cake02",
+  "iconName": "Cake02",
+  "id": "Cake02",
+  "isBoss": false,
+  "level": 30,
+  "nameId": "RECIPE_Cake02",
+  "tier": 0,
+  "unlocks": [
+   "Cake02"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_ThunderDog",
   "iconName": "ThunderDog",
   "id": "SkillUnlock_ThunderDog",
   "isBoss": false,
@@ -2901,18 +3144,7 @@
  },
  {
   "cost": 2,
-  "iconName": "Trap_MineAttack",
-  "id": "Trap_MineAttack",
-  "isBoss": false,
-  "level": 30,
-  "nameId": "RECIPE_Trap_MineAttack",
-  "tier": 0,
-  "unlocks": [
-   "Trap_MineAttack"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_YakushimaBlade",
   "iconName": "YakushimaBlade",
   "id": "YakushimaBlade",
   "isBoss": true,
@@ -2925,6 +3157,33 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_MakeshiftAssaultRifle",
+  "iconName": "MakeshiftAssaultRifle",
+  "id": "MakeshiftAssaultRifle",
+  "isBoss": false,
+  "level": 31,
+  "nameId": "RECIPE_MakeshiftAssaultRifle",
+  "tier": 0,
+  "unlocks": [
+   "MakeshiftAssaultRifle"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SphereModule_Sniper",
+  "iconName": "SphereModule_Sniper",
+  "id": "SphereModule_Sniper",
+  "isBoss": false,
+  "level": 31,
+  "nameId": "RECIPE_SphereModule_Sniper",
+  "tier": 0,
+  "unlocks": [
+   "SphereModule_Sniper"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Bio_Coolant",
   "iconName": "Bio_Coolant",
   "id": "Bio_Coolant",
   "isBoss": false,
@@ -2937,6 +3196,7 @@
  },
  {
   "cost": 3,
+  "descId": "BUILDOBJECT_DESC_FishingPond1",
   "iconName": "FishingPond1",
   "id": "FishingPond1",
   "isBoss": false,
@@ -2948,19 +3208,21 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "FragGrenade_Fire",
-  "id": "FragGrenade_Fire",
+  "cost": 3,
+  "descId": "RECIPE_Spa2",
+  "iconName": "Spa2",
+  "id": "Spa2",
   "isBoss": false,
   "level": 31,
-  "nameId": "RECIPE_FragGrenade_Fire",
+  "nameId": "RECIPE_Spa2",
   "tier": 0,
   "unlocks": [
-   "FragGrenade_Fire"
+   "Spa2"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_GrapplingGun_3",
   "iconName": "GrapplingGun",
   "id": "GrapplingGun3",
   "isBoss": true,
@@ -2974,18 +3236,20 @@
  },
  {
   "cost": 2,
-  "iconName": "MakeshiftAssaultRifle",
-  "id": "MakeshiftAssaultRifle",
+  "descId": "ITEM_DESC_FragGrenade_Fire",
+  "iconName": "FragGrenade_Fire",
+  "id": "FragGrenade_Fire",
   "isBoss": false,
   "level": 31,
-  "nameId": "RECIPE_MakeshiftAssaultRifle",
+  "nameId": "RECIPE_FragGrenade_Fire",
   "tier": 0,
   "unlocks": [
-   "MakeshiftAssaultRifle"
+   "FragGrenade_Fire"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_GhostAnglerfish",
   "iconName": "GhostAnglerfish",
   "id": "SkillUnlock_GhostAnglerfish",
   "isBoss": false,
@@ -2998,6 +3262,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_IceDeer",
   "iconName": "IceDeer",
   "id": "SkillUnlock_IceDeer",
   "isBoss": false,
@@ -3010,54 +3275,7 @@
  },
  {
   "cost": 3,
-  "iconName": "Spa2",
-  "id": "Spa2",
-  "isBoss": false,
-  "level": 31,
-  "nameId": "RECIPE_Spa2",
-  "tier": 0,
-  "unlocks": [
-   "Spa2"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SphereModule_Sniper",
-  "id": "SphereModule_Sniper",
-  "isBoss": false,
-  "level": 31,
-  "nameId": "RECIPE_SphereModule_Sniper",
-  "tier": 0,
-  "unlocks": [
-   "SphereModule_Sniper"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "BaseCampWorkerExtraStation",
-  "id": "BaseCampWorkerExtraStation",
-  "isBoss": false,
-  "level": 32,
-  "nameId": "RECIPE_BaseCampWorkerExtraStation",
-  "tier": 0,
-  "unlocks": [
-   "BaseCampWorkerExtraStation"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Cauldron",
-  "id": "Cauldron",
-  "isBoss": false,
-  "level": 32,
-  "nameId": "RECIPE_Cauldron",
-  "tier": 0,
-  "unlocks": [
-   "Cauldron"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "RECIPE_OctaviaSet01",
   "iconName": "Octavia001_Armor",
   "id": "OctaviaSet01",
   "isBoss": true,
@@ -3071,6 +3289,20 @@
  },
  {
   "cost": 3,
+  "descId": "RECIPE_WEAPON_FACTORY_DIRTY_02",
+  "iconName": "WeaponFactory_Dirty_02",
+  "id": "Product_WeaponFactory_Dirty_Grade_02",
+  "isBoss": false,
+  "level": 32,
+  "nameId": "RECIPE_WEAPON_FACTORY_DIRTY_02",
+  "tier": 0,
+  "unlocks": [
+   "WeaponFactory_Dirty_02"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_PalHealingGrenade",
   "iconName": "PalHealingGrenade",
   "id": "PalHealingGrenade",
   "isBoss": false,
@@ -3083,6 +3315,7 @@
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_FarmBlockV2_Carrot",
   "iconName": "FarmBlockV2_Carrot",
   "id": "Product_Farm_Carrot",
   "isBoss": false,
@@ -3094,19 +3327,34 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "WeaponFactory_Dirty_02",
-  "id": "Product_WeaponFactory_Dirty_Grade_02",
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Cauldron",
+  "iconName": "Cauldron",
+  "id": "Cauldron",
   "isBoss": false,
   "level": 32,
-  "nameId": "RECIPE_WEAPON_FACTORY_DIRTY_02",
+  "nameId": "RECIPE_Cauldron",
   "tier": 0,
   "unlocks": [
-   "WeaponFactory_Dirty_02"
+   "Cauldron"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_BaseCampWorkerExtraStation",
+  "iconName": "BaseCampWorkerExtraStation",
+  "id": "BaseCampWorkerExtraStation",
+  "isBoss": false,
+  "level": 32,
+  "nameId": "RECIPE_BaseCampWorkerExtraStation",
+  "tier": 0,
+  "unlocks": [
+   "BaseCampWorkerExtraStation"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FairyDragon_Water",
   "iconName": "FairyDragon_Water",
   "id": "SkillUnlock_FairyDragon_Water",
   "isBoss": false,
@@ -3119,6 +3367,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GrassPanda",
   "iconName": "GrassPanda",
   "id": "SkillUnlock_GrassPanda",
   "isBoss": false,
@@ -3131,6 +3380,7 @@
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Thunderdog_Ice",
   "iconName": "Thunderdog_Ice",
   "id": "SkillUnlock_Thunderdog_Ice",
   "isBoss": false,
@@ -3143,6 +3393,7 @@
  },
  {
   "cost": 3,
+  "descId": "BUILDOBJECT_DESC_Altar",
   "iconName": "Altar",
   "id": "Altar",
   "isBoss": true,
@@ -3155,6 +3406,7 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_OldRevolver",
   "iconName": "OldRevolver",
   "id": "Battle_RangeWeapon_OldRevolver",
   "isBoss": false,
@@ -3167,6 +3419,33 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_Polymer",
+  "iconName": "Polymer",
+  "id": "Polymer",
+  "isBoss": false,
+  "level": 33,
+  "nameId": "RECIPE_Polymer",
+  "tier": 0,
+  "unlocks": [
+   "Polymer"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Trap_MineElecShock",
+  "iconName": "Trap_MineElecShock",
+  "id": "Trap_MineElecShock",
+  "isBoss": false,
+  "level": 33,
+  "nameId": "RECIPE_Trap_MineElecShock",
+  "tier": 0,
+  "unlocks": [
+   "Trap_MineElecShock"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Water",
   "iconName": "FragGrenade_Water",
   "id": "FragGrenade_Water",
   "isBoss": false,
@@ -3179,18 +3458,20 @@
  },
  {
   "cost": 2,
-  "iconName": "Polymer",
-  "id": "Polymer",
+  "descId": "BUILDOBJECT_DESC_Snowman",
+  "iconName": "Snowman",
+  "id": "Snowman",
   "isBoss": false,
   "level": 33,
-  "nameId": "RECIPE_Polymer",
+  "nameId": "RECIPE_Snowman",
   "tier": 0,
   "unlocks": [
-   "Polymer"
+   "Snowman"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_Manticore",
   "iconName": "Manticore",
   "id": "SkillUnlock_Manticore",
   "isBoss": false,
@@ -3203,6 +3484,7 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_RedArmorBird",
   "iconName": "RedArmorBird",
   "id": "SkillUnlock_RedArmorBird",
   "isBoss": false,
@@ -3215,6 +3497,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_SakuraSaurus",
   "iconName": "SakuraSaurus",
   "id": "SkillUnlock_SakuraSaurus",
   "isBoss": false,
@@ -3226,31 +3509,8 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "Snowman",
-  "id": "Snowman",
-  "isBoss": false,
-  "level": 33,
-  "nameId": "RECIPE_Snowman",
-  "tier": 0,
-  "unlocks": [
-   "Snowman"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Trap_MineElecShock",
-  "id": "Trap_MineElecShock",
-  "isBoss": false,
-  "level": 33,
-  "nameId": "RECIPE_Trap_MineElecShock",
-  "tier": 0,
-  "unlocks": [
-   "Trap_MineElecShock"
-  ]
- },
- {
   "cost": 4,
+  "descId": "ITEM_DESC_Accessory_TalentChecker",
   "iconName": "Accessory_TalentChecker",
   "id": "Accessory_TalentChecker",
   "isBoss": true,
@@ -3262,7 +3522,99 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "RECIPE_IRON_INGOT",
+  "iconName": "BlastFurnace2",
+  "id": "Product_Ingot_Grade_02_Iron",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_IRON_INGOT",
+  "tier": 0,
+  "unlocks": [
+   "BlastFurnace2"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_AXE3",
+  "iconName": "Axe_Default",
+  "id": "Product_Axe_Grade_03",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_AXE3",
+  "tier": 0,
+  "unlocks": [
+   "Axe_Tier_02"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_PICKEAXE3",
+  "iconName": "Pickaxe_Default",
+  "id": "Product_Pickaxe_Grade_03",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_PICKEAXE3",
+  "tier": 0,
+  "unlocks": [
+   "Pickaxe_Tier_02"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_Spear_3",
+  "iconName": "Spear",
+  "id": "Spear_3",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_Spear_3",
+  "tier": 0,
+  "unlocks": [
+   "Spear_3"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FireKirin_Dark",
+  "iconName": "FireKirin_Dark",
+  "id": "SkillUnlock_FireKirin_Dark",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_SkillUnlock_FireKirin_Dark",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_FireKirin_Dark"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GrassPanda_Electric",
+  "iconName": "GrassPanda_Electric",
+  "id": "SkillUnlock_GrassPanda_Electric",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_SkillUnlock_GrassPanda_Electric",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GrassPanda_Electric"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_FlowerDinosaur_Electric",
+  "iconName": "FlowerDinosaur_Electric",
+  "id": "SkillUnlock_FlowerDinosaur_Electric",
+  "isBoss": false,
+  "level": 34,
+  "nameId": "RECIPE_SkillUnlock_FlowerDinosaur_Electric",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_FlowerDinosaur_Electric"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_5",
   "iconName": "Barrel01_Iron",
   "id": "FurnitureSet_5",
   "isBoss": false,
@@ -3277,90 +3629,7 @@
  },
  {
   "cost": 2,
-  "iconName": "Axe_Default",
-  "id": "Product_Axe_Grade_03",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_AXE3",
-  "tier": 0,
-  "unlocks": [
-   "Axe_Tier_02"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "BlastFurnace2",
-  "id": "Product_Ingot_Grade_02_Iron",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_IRON_INGOT",
-  "tier": 0,
-  "unlocks": [
-   "BlastFurnace2"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Pickaxe_Default",
-  "id": "Product_Pickaxe_Grade_03",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_PICKEAXE3",
-  "tier": 0,
-  "unlocks": [
-   "Pickaxe_Tier_02"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FireKirin_Dark",
-  "id": "SkillUnlock_FireKirin_Dark",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_SkillUnlock_FireKirin_Dark",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_FireKirin_Dark"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FlowerDinosaur_Electric",
-  "id": "SkillUnlock_FlowerDinosaur_Electric",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_SkillUnlock_FlowerDinosaur_Electric",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_FlowerDinosaur_Electric"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "GrassPanda_Electric",
-  "id": "SkillUnlock_GrassPanda_Electric",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_SkillUnlock_GrassPanda_Electric",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GrassPanda_Electric"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Spear",
-  "id": "Spear_3",
-  "isBoss": false,
-  "level": 34,
-  "nameId": "RECIPE_Spear_3",
-  "tier": 0,
-  "unlocks": [
-   "Spear_3"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_Accessory_AirDash1",
   "iconName": "Accessory_AirDash1",
   "id": "Accessory_AirDash1",
   "isBoss": true,
@@ -3372,7 +3641,47 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "RECIPE_SPHERE5",
+  "iconName": "PalSphere_Master",
+  "id": "Special_PalSphere_Grade_05",
+  "isBoss": false,
+  "level": 35,
+  "nameId": "RECIPE_SPHERE5",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere_Master"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_SPHERE_FACTORY_BLACK_03",
+  "iconName": "SphereFactory_Black_03",
+  "id": "Special_SphereFactory_Black_Grade_03",
+  "isBoss": false,
+  "level": 35,
+  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_03",
+  "tier": 0,
+  "unlocks": [
+   "SphereFactory_Black_03"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_MachineParts2",
+  "iconName": "ElectronicCircuit",
+  "id": "Infra_ElectronicCircuit",
+  "isBoss": false,
+  "level": 35,
+  "nameId": "RECIPE_MachineParts2",
+  "tier": 0,
+  "unlocks": [
+   "MachineParts2"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_CarbonFiber",
   "iconName": "CarbonFiber",
   "id": "CarbonFiber",
   "isBoss": false,
@@ -3386,6 +3695,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Leaf",
   "iconName": "FragGrenade_Leaf",
   "id": "FragGrenade_Leaf",
   "isBoss": false,
@@ -3397,7 +3707,34 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_Manticore_Dark",
+  "iconName": "Manticore_Dark",
+  "id": "SkillUnlock_Manticore_Dark",
+  "isBoss": false,
+  "level": 35,
+  "nameId": "RECIPE_SkillUnlock_Manticore_Dark",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Manticore_Dark"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_TropicalOstrich",
+  "iconName": "TropicalOstrich",
+  "id": "SkillUnlock_TropicalOstrich",
+  "isBoss": false,
+  "level": 35,
+  "nameId": "RECIPE_SkillUnlock_TropicalOstrich",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_TropicalOstrich"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_14",
   "iconName": "TableSide01_Iron",
   "id": "FurnitureSet_14",
   "isBoss": false,
@@ -3411,67 +3748,73 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "RECIPE_RIFLE",
+  "iconName": "SingleShotRifle",
+  "id": "Battle_RangeWeapon_Rifle",
+  "isBoss": false,
+  "level": 36,
+  "nameId": "RECIPE_RIFLE",
+  "tier": 0,
+  "unlocks": [
+   "SingleShotRifle"
+  ]
+ },
+ {
   "cost": 2,
-  "iconName": "ElectronicCircuit",
-  "id": "Infra_ElectronicCircuit",
+  "descId": "RECIPE_RIFLEBULLET",
+  "iconName": "RifleBullet",
+  "id": "RifleBullet",
   "isBoss": false,
-  "level": 35,
-  "nameId": "RECIPE_MachineParts2",
+  "level": 36,
+  "nameId": "RECIPE_RIFLEBULLET",
   "tier": 0,
   "unlocks": [
-   "MachineParts2"
+   "RifleBullet"
   ]
  },
  {
-  "cost": 3,
-  "iconName": "Manticore_Dark",
-  "id": "SkillUnlock_Manticore_Dark",
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_FarmBlockV2_Onion",
+  "iconName": "FarmBlockV2_Onion",
+  "id": "Product_Farm_Onion",
   "isBoss": false,
-  "level": 35,
-  "nameId": "RECIPE_SkillUnlock_Manticore_Dark",
+  "level": 36,
+  "nameId": "RECIPE_FarmBlockV2_Onion",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_Manticore_Dark"
+   "FarmBlockV2_Onion"
   ]
  },
  {
-  "cost": 3,
-  "iconName": "TropicalOstrich",
-  "id": "SkillUnlock_TropicalOstrich",
+  "cost": 2,
+  "descId": "RECIPE_Cloth2",
+  "iconName": "Cloth",
+  "id": "Cloth2",
   "isBoss": false,
-  "level": 35,
-  "nameId": "RECIPE_SkillUnlock_TropicalOstrich",
+  "level": 36,
+  "nameId": "RECIPE_Cloth2",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_TropicalOstrich"
+   "Cloth2"
   ]
  },
  {
-  "cost": 4,
-  "iconName": "PalSphere_Master",
-  "id": "Special_PalSphere_Grade_05",
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_MedicalPalBed_04",
+  "iconName": "MedicalPalBed_04",
+  "id": "MedicalPalBed_04",
   "isBoss": false,
-  "level": 35,
-  "nameId": "RECIPE_SPHERE5",
+  "level": 36,
+  "nameId": "RECIPE_MedicalPalBed_04",
   "tier": 0,
   "unlocks": [
-   "PalSphere_Master"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "SphereFactory_Black_03",
-  "id": "Special_SphereFactory_Black_Grade_03",
-  "isBoss": false,
-  "level": 35,
-  "nameId": "RECIPE_SPHERE_FACTORY_BLACK_03",
-  "tier": 0,
-  "unlocks": [
-   "SphereFactory_Black_03"
+   "MedicalPalBed_04"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_AutoMealPouch_Tier4",
   "iconName": "AutoMealPouch_Tier4",
   "id": "AutoMealPouch_Tier4",
   "isBoss": false,
@@ -3485,66 +3828,7 @@
  },
  {
   "cost": 3,
-  "iconName": "SingleShotRifle",
-  "id": "Battle_RangeWeapon_Rifle",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_RIFLE",
-  "tier": 0,
-  "unlocks": [
-   "SingleShotRifle"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Cloth",
-  "id": "Cloth2",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_Cloth2",
-  "tier": 0,
-  "unlocks": [
-   "Cloth2"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "MedicalPalBed_04",
-  "id": "MedicalPalBed_04",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_MedicalPalBed_04",
-  "tier": 0,
-  "unlocks": [
-   "MedicalPalBed_04"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "FarmBlockV2_Onion",
-  "id": "Product_Farm_Onion",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_FarmBlockV2_Onion",
-  "tier": 0,
-  "unlocks": [
-   "FarmBlockV2_Onion"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "RifleBullet",
-  "id": "RifleBullet",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_RIFLEBULLET",
-  "tier": 0,
-  "unlocks": [
-   "RifleBullet"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_Plesiosaur",
   "iconName": "Plesiosaur",
   "id": "SkillUnlock_Plesiosaur",
   "isBoss": false,
@@ -3556,19 +3840,8 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "VolcanoDragon",
-  "id": "SkillUnlock_VolcanoDragon",
-  "isBoss": false,
-  "level": 36,
-  "nameId": "RECIPE_SkillUnlock_VolcanoDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_VolcanoDragon"
-  ]
- },
- {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_ElectricHatchingPalEgg",
   "iconName": "ElectricHatchingPalEgg",
   "id": "Special_ElectricHatchingPalEgg",
   "isBoss": true,
@@ -3582,7 +3855,34 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_VolcanoDragon",
+  "iconName": "VolcanoDragon",
+  "id": "SkillUnlock_VolcanoDragon",
+  "isBoss": false,
+  "level": 36,
+  "nameId": "RECIPE_SkillUnlock_VolcanoDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_VolcanoDragon"
+  ]
+ },
+ {
   "cost": 3,
+  "descId": "ITEM_DESC_SubmachineGun",
+  "iconName": "SubmachineGun",
+  "id": "Battle_RangeWeapon_SubmachineGun",
+  "isBoss": false,
+  "level": 37,
+  "nameId": "RECIPE_SubmachineGun",
+  "tier": 0,
+  "unlocks": [
+   "SubmachineGun"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_ARMOR4",
   "iconName": "IronArmor",
   "id": "Battle_Armor_Grade_03_Iron",
   "isBoss": false,
@@ -3595,6 +3895,7 @@
  },
  {
   "cost": 3,
+  "descId": "RECIPE_HELMET4",
   "iconName": "IronHelmet",
   "id": "Battle_Helm_Grade_04_Iron",
   "isBoss": false,
@@ -3606,19 +3907,8 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "SubmachineGun",
-  "id": "Battle_RangeWeapon_SubmachineGun",
-  "isBoss": false,
-  "level": 37,
-  "nameId": "RECIPE_SubmachineGun",
-  "tier": 0,
-  "unlocks": [
-   "SubmachineGun"
-  ]
- },
- {
   "cost": 2,
+  "descId": "ITEM_DESC_Corrosive_Solvent",
   "iconName": "Corrosive_Solvent",
   "id": "Corrosive_Solvent",
   "isBoss": false,
@@ -3631,6 +3921,7 @@
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_EnergyStorage_Electric",
   "iconName": "EnergyStorage_Electric",
   "id": "EnergyStorage_Electric",
   "isBoss": false,
@@ -3642,7 +3933,49 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GhostBeast",
+  "iconName": "GhostBeast",
+  "id": "SkillUnlock_GhostBeast",
+  "isBoss": false,
+  "level": 37,
+  "nameId": "RECIPE_SkillUnlock_GhostBeast",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GhostBeast"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_CoalPit",
+  "iconName": "CoalPit",
+  "id": "Product_CoalPit",
+  "isBoss": true,
+  "level": 37,
+  "nameId": "RECIPE_CoalPit",
+  "tier": 0,
+  "unlocks": [
+   "CoalPit"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Desert",
+  "iconName": "FurnitureTree01_Desert",
+  "id": "FurnitureTree_Desert",
+  "isBoss": false,
+  "level": 37,
+  "nameId": "RECIPE_FurnitureTree_Desert",
+  "tier": 0,
+  "unlocks": [
+   "FurnitureTree01_Desert",
+   "FurnitureTree02_Desert",
+   "FurnitureTree03_Desert"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_31",
   "iconName": "CableCoil01_Iron",
   "id": "FurnitureSet_31",
   "isBoss": false,
@@ -3657,45 +3990,21 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "FurnitureTree01_Desert",
-  "id": "FurnitureTree_Desert",
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_OperatingTable",
+  "iconName": "OperatingTable",
+  "id": "OperatingTable",
   "isBoss": false,
-  "level": 37,
-  "nameId": "RECIPE_FurnitureTree_Desert",
+  "level": 38,
+  "nameId": "RECIPE_OperatingTable",
   "tier": 0,
   "unlocks": [
-   "FurnitureTree01_Desert",
-   "FurnitureTree02_Desert",
-   "FurnitureTree03_Desert"
+   "OperatingTable"
   ]
  },
  {
   "cost": 5,
-  "iconName": "CoalPit",
-  "id": "Product_CoalPit",
-  "isBoss": true,
-  "level": 37,
-  "nameId": "RECIPE_CoalPit",
-  "tier": 0,
-  "unlocks": [
-   "CoalPit"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "GhostBeast",
-  "id": "SkillUnlock_GhostBeast",
-  "isBoss": false,
-  "level": 37,
-  "nameId": "RECIPE_SkillUnlock_GhostBeast",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GhostBeast"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "RECIPE_SPHERE_LAUNCHER",
   "iconName": "SphereLauncher",
   "id": "Battle_RangeWeapon_SphereLauncher",
   "isBoss": true,
@@ -3707,7 +4016,22 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "RECIPE_Launcher_Meteor",
+  "iconName": "Launcher_Meteor",
+  "id": "Launcher_Meteor",
+  "isBoss": false,
+  "level": 38,
+  "nameId": "RECIPE_Launcher_Meteor",
+  "tier": 0,
+  "unlocks": [
+   "Launcher_Meteor",
+   "MeteorBullet"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_FishingBait_3",
   "iconName": "FishingBait_3",
   "id": "FishingBait_3",
   "isBoss": false,
@@ -3720,6 +4044,33 @@
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_Refrigerator",
+  "iconName": "Refrigerator",
+  "id": "Refrigerator",
+  "isBoss": false,
+  "level": 38,
+  "nameId": "RECIPE_Refrigerator",
+  "tier": 0,
+  "unlocks": [
+   "Refrigerator"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_Trap_MineFreeze",
+  "iconName": "Trap_MineFreeze",
+  "id": "Trap_MineFreeze",
+  "isBoss": false,
+  "level": 38,
+  "nameId": "RECIPE_Trap_MineFreeze",
+  "tier": 0,
+  "unlocks": [
+   "Trap_MineFreeze"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Ground",
   "iconName": "FragGrenade_Ground",
   "id": "FragGrenade_Ground",
   "isBoss": false,
@@ -3731,7 +4082,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_SkyDragon",
+  "iconName": "SkyDragon",
+  "id": "SkillUnlock_SkyDragon",
+  "isBoss": false,
+  "level": 38,
+  "nameId": "RECIPE_SkillUnlock_SkyDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_SkyDragon"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_7",
   "iconName": "Sofa01_Iron",
   "id": "FurnitureSet_7",
   "isBoss": false,
@@ -3746,92 +4111,8 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "Launcher_Meteor",
-  "id": "Launcher_Meteor",
-  "isBoss": false,
-  "level": 38,
-  "nameId": "RECIPE_Launcher_Meteor",
-  "tier": 0,
-  "unlocks": [
-   "Launcher_Meteor",
-   "MeteorBullet"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "OperatingTable",
-  "id": "OperatingTable",
-  "isBoss": false,
-  "level": 38,
-  "nameId": "RECIPE_OperatingTable",
-  "tier": 0,
-  "unlocks": [
-   "OperatingTable"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Refrigerator",
-  "id": "Refrigerator",
-  "isBoss": false,
-  "level": 38,
-  "nameId": "RECIPE_Refrigerator",
-  "tier": 0,
-  "unlocks": [
-   "Refrigerator"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SkyDragon",
-  "id": "SkillUnlock_SkyDragon",
-  "isBoss": false,
-  "level": 38,
-  "nameId": "RECIPE_SkillUnlock_SkyDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_SkyDragon"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Trap_MineFreeze",
-  "id": "Trap_MineFreeze",
-  "isBoss": false,
-  "level": 38,
-  "nameId": "RECIPE_Trap_MineFreeze",
-  "tier": 0,
-  "unlocks": [
-   "Trap_MineFreeze"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "DoubleBarrelShotgun",
-  "id": "Battle_RangeWeapon_ShotGun",
-  "isBoss": false,
-  "level": 39,
-  "nameId": "RECIPE_SHOTGUN",
-  "tier": 0,
-  "unlocks": [
-   "DoubleBarrelShotgun"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Chest3",
-  "id": "Infra_ItemChest_Grade_03",
-  "isBoss": false,
-  "level": 39,
-  "nameId": "RECIPE_ITEM_CHEST_03",
-  "tier": 0,
-  "unlocks": [
-   "ItemChest_03"
-  ]
- },
- {
   "cost": 1,
+  "descId": "RECIPE_PoliceFlagSet",
   "iconName": "Police_Flag",
   "id": "PoliceFlagSet",
   "isBoss": false,
@@ -3846,6 +4127,7 @@
  },
  {
   "cost": 3,
+  "descId": "BUILDOBJECT_DESC_CopperPit_2",
   "iconName": "CopperPit_2",
   "id": "Product_CopperPit_2",
   "isBoss": true,
@@ -3858,7 +4140,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "RECIPE_SHOTGUN",
+  "iconName": "DoubleBarrelShotgun",
+  "id": "Battle_RangeWeapon_ShotGun",
+  "isBoss": false,
+  "level": 39,
+  "nameId": "RECIPE_SHOTGUN",
+  "tier": 0,
+  "unlocks": [
+   "DoubleBarrelShotgun"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_SHOTGUNBULLET",
   "iconName": "ShotGunBullet",
   "id": "ShotGunBullet",
   "isBoss": false,
@@ -3870,7 +4166,34 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SphereModule_Curve2",
+  "iconName": "SphereModule_Curve2",
+  "id": "SphereModule_Curve2",
+  "isBoss": false,
+  "level": 39,
+  "nameId": "RECIPE_SphereModule_Curve2",
+  "tier": 0,
+  "unlocks": [
+   "SphereModule_Curve2"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_ITEM_CHEST_03",
+  "iconName": "Chest3",
+  "id": "Infra_ItemChest_Grade_03",
+  "isBoss": false,
+  "level": 39,
+  "nameId": "RECIPE_ITEM_CHEST_03",
+  "tier": 0,
+  "unlocks": [
+   "ItemChest_03"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_BlackMetalDragon",
   "iconName": "BlackMetalDragon",
   "id": "SkillUnlock_BlackMetalDragon",
   "isBoss": false,
@@ -3883,6 +4206,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_MushroomDragon",
   "iconName": "MushroomDragon",
   "id": "SkillUnlock_MushroomDragon",
   "isBoss": false,
@@ -3895,6 +4219,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_MushroomDragon_Dark",
   "iconName": "MushroomDragon_Dark",
   "id": "SkillUnlock_MushroomDragon_Dark",
   "isBoss": false,
@@ -3907,30 +4232,7 @@
  },
  {
   "cost": 3,
-  "iconName": "SphereModule_Curve2",
-  "id": "SphereModule_Curve2",
-  "isBoss": false,
-  "level": 39,
-  "nameId": "RECIPE_SphereModule_Curve2",
-  "tier": 0,
-  "unlocks": [
-   "SphereModule_Curve2"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Accessory_JumpCount_Increase1",
-  "id": "Accessory_JumpCount_Increase1",
-  "isBoss": true,
-  "level": 40,
-  "nameId": "RECIPE_Accessory_JumpCount_Increase1",
-  "tier": 0,
-  "unlocks": [
-   "Accessory_JumpCount_Increase1"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_Bat3",
   "iconName": "Bat3",
   "id": "Bat3",
   "isBoss": false,
@@ -3942,7 +4244,21 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_Accessory_JumpCount_Increase1",
+  "iconName": "Accessory_JumpCount_Increase1",
+  "id": "Accessory_JumpCount_Increase1",
+  "isBoss": true,
+  "level": 40,
+  "nameId": "RECIPE_Accessory_JumpCount_Increase1",
+  "tier": 0,
+  "unlocks": [
+   "Accessory_JumpCount_Increase1"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "RECIPE_ARMOR4_Heat",
   "iconName": "IronArmorHeat",
   "id": "Battle_Armor_Grade_03_Iron_Heat",
   "isBoss": false,
@@ -3955,18 +4271,7 @@
  },
  {
   "cost": 3,
-  "iconName": "DefenseMachinegun",
-  "id": "Battle_Defense_MachineGun",
-  "isBoss": false,
-  "level": 40,
-  "nameId": "RECIPE_DEFENCE_MACHINE_GUN",
-  "tier": 0,
-  "unlocks": [
-   "DefenseMachinegun"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "RECIPE_Battle_Glider_Grade_03",
   "iconName": "Glider_Super",
   "id": "Battle_Glider_Grade_03",
   "isBoss": false,
@@ -3978,7 +4283,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "RECIPE_DEFENCE_MACHINE_GUN",
+  "iconName": "DefenseMachinegun",
+  "id": "Battle_Defense_MachineGun",
+  "isBoss": false,
+  "level": 40,
+  "nameId": "RECIPE_DEFENCE_MACHINE_GUN",
+  "tier": 0,
+  "unlocks": [
+   "DefenseMachinegun"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Dark",
   "iconName": "FragGrenade_Dark",
   "id": "FragGrenade_Dark",
   "isBoss": false,
@@ -3990,7 +4309,21 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Umihebi",
+  "iconName": "Umihebi",
+  "id": "SkillUnlock_Umihebi",
+  "isBoss": false,
+  "level": 40,
+  "nameId": "RECIPE_SkillUnlock_Umihebi",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_Umihebi"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_ElecPanda",
   "iconName": "ElecPanda",
   "id": "SkillUnlock_ElecPanda",
   "isBoss": false,
@@ -4003,18 +4336,7 @@
  },
  {
   "cost": 2,
-  "iconName": "Umihebi",
-  "id": "SkillUnlock_Umihebi",
-  "isBoss": false,
-  "level": 40,
-  "nameId": "RECIPE_SkillUnlock_Umihebi",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_Umihebi"
-  ]
- },
- {
-  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_WeaselDragon_Fire",
   "iconName": "WeaselDragon_Fire",
   "id": "SkillUnlock_WeaselDragon_Fire",
   "isBoss": false,
@@ -4027,42 +4349,7 @@
  },
  {
   "cost": 4,
-  "iconName": "IronArmorCold",
-  "id": "Battle_Armor_Grade_03_Iron_Cold",
-  "isBoss": false,
-  "level": 41,
-  "nameId": "RECIPE_ARMOR4_Cold",
-  "tier": 0,
-  "unlocks": [
-   "IronArmorCold"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SemiAutoRifle",
-  "id": "Battle_RangeWeapon_SemiAutoRifle",
-  "isBoss": false,
-  "level": 41,
-  "nameId": "RECIPE_SemiAutoRifle",
-  "tier": 0,
-  "unlocks": [
-   "SemiAutoRifle"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "ElectricHeater",
-  "id": "ElectricHeater",
-  "isBoss": false,
-  "level": 41,
-  "nameId": "RECIPE_ElectricHeater",
-  "tier": 0,
-  "unlocks": [
-   "ElectricHeater"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_GuildChest",
   "iconName": "GuildChest",
   "id": "GuildChest",
   "isBoss": true,
@@ -4075,6 +4362,33 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SemiAutoRifle",
+  "iconName": "SemiAutoRifle",
+  "id": "Battle_RangeWeapon_SemiAutoRifle",
+  "isBoss": false,
+  "level": 41,
+  "nameId": "RECIPE_SemiAutoRifle",
+  "tier": 0,
+  "unlocks": [
+   "SemiAutoRifle"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_ARMOR4_Cold",
+  "iconName": "IronArmorCold",
+  "id": "Battle_Armor_Grade_03_Iron_Cold",
+  "isBoss": false,
+  "level": 41,
+  "nameId": "RECIPE_ARMOR4_Cold",
+  "tier": 0,
+  "unlocks": [
+   "IronArmorCold"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_COOKING_ELECTRIC_KITCHEN",
   "iconName": "ElectricKitchen",
   "id": "Product_Cooking_Grade_03",
   "isBoss": false,
@@ -4087,6 +4401,7 @@
  },
  {
   "cost": 3,
+  "descId": "BUILDOBJECT_DESC_SanityDecrease1",
   "iconName": "SanityDecrease1",
   "id": "SanityDecrease1",
   "isBoss": false,
@@ -4098,31 +4413,21 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "GrassMammoth_Ice",
-  "id": "SkillUnlock_GrassMammoth_Ice",
+  "cost": 3,
+  "descId": "RECIPE_ElectricHeater",
+  "iconName": "ElectricHeater",
+  "id": "ElectricHeater",
   "isBoss": false,
   "level": 41,
-  "nameId": "RECIPE_SkillUnlock_GrassMammoth_Ice",
+  "nameId": "RECIPE_ElectricHeater",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_GrassMammoth_Ice"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "GuardianDog",
-  "id": "SkillUnlock_GuardianDog",
-  "isBoss": false,
-  "level": 41,
-  "nameId": "RECIPE_SkillUnlock_GuardianDog",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GuardianDog"
+   "ElectricHeater"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_WhiteAlienDragon",
   "iconName": "WhiteAlienDragon",
   "id": "SkillUnlock_WhiteAlienDragon",
   "isBoss": false,
@@ -4134,7 +4439,34 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GuardianDog",
+  "iconName": "GuardianDog",
+  "id": "SkillUnlock_GuardianDog",
+  "isBoss": false,
+  "level": 41,
+  "nameId": "RECIPE_SkillUnlock_GuardianDog",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GuardianDog"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_GrassMammoth_Ice",
+  "iconName": "GrassMammoth_Ice",
+  "id": "SkillUnlock_GrassMammoth_Ice",
+  "isBoss": false,
+  "level": 41,
+  "nameId": "RECIPE_SkillUnlock_GrassMammoth_Ice",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GrassMammoth_Ice"
+  ]
+ },
+ {
   "cost": 3,
+  "descId": "ITEM_DESC_CompoundBow",
   "iconName": "CompoundBow",
   "id": "Battle_RangeWeapon_CompoundBow",
   "isBoss": false,
@@ -4146,7 +4478,34 @@
   ]
  },
  {
+  "cost": 1,
+  "descId": "ITEM_DESC_ReinforcedArrow",
+  "iconName": "ReinforcedArrow",
+  "id": "ReinforcedArrow",
+  "isBoss": false,
+  "level": 42,
+  "nameId": "RECIPE_ReinforcedArrow",
+  "tier": 0,
+  "unlocks": [
+   "ReinforcedArrow"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_FACTORY_HARD_03",
+  "iconName": "Factory_Hard_03",
+  "id": "Product_Factory_Hard_Grade_03",
+  "isBoss": false,
+  "level": 42,
+  "nameId": "RECIPE_FACTORY_HARD_03",
+  "tier": 0,
+  "unlocks": [
+   "Factory_Hard_03"
+  ]
+ },
+ {
   "cost": 3,
+  "descId": "RECIPE_ElectricCooler",
   "iconName": "ElectricCooler",
   "id": "ElectricCooler",
   "isBoss": false,
@@ -4159,6 +4518,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_FragGrenade_Dragon",
   "iconName": "FragGrenade_Dragon",
   "id": "FragGrenade_Dragon",
   "isBoss": false,
@@ -4170,43 +4530,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "Factory_Hard_03",
-  "id": "Product_Factory_Hard_Grade_03",
-  "isBoss": false,
-  "level": 42,
-  "nameId": "RECIPE_FACTORY_HARD_03",
-  "tier": 0,
-  "unlocks": [
-   "Factory_Hard_03"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "ReinforcedArrow",
-  "id": "ReinforcedArrow",
-  "isBoss": false,
-  "level": 42,
-  "nameId": "RECIPE_ReinforcedArrow",
-  "tier": 0,
-  "unlocks": [
-   "ReinforcedArrow"
-  ]
- },
- {
   "cost": 3,
-  "iconName": "GhostAnglerfish_Fire",
-  "id": "SkillUnlock_GhostAnglerfish_Fire",
-  "isBoss": false,
-  "level": 42,
-  "nameId": "RECIPE_SkillUnlock_GhostAnglerfish_Fire",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GhostAnglerfish_Fire"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_IceNarwhal",
   "iconName": "IceNarwhal",
   "id": "SkillUnlock_IceNarwhal",
   "isBoss": false,
@@ -4218,7 +4543,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_GhostAnglerfish_Fire",
+  "iconName": "GhostAnglerfish_Fire",
+  "id": "SkillUnlock_GhostAnglerfish_Fire",
+  "isBoss": false,
+  "level": 42,
+  "nameId": "RECIPE_SkillUnlock_GhostAnglerfish_Fire",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GhostAnglerfish_Fire"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_VolcanicMonster",
   "iconName": "VolcanicMonster",
   "id": "SkillUnlock_VolcanicMonster",
   "isBoss": false,
@@ -4230,7 +4569,34 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "RECIPE_SHOTGUN2",
+  "iconName": "ShotGun_Default",
+  "id": "Battle_RangeWeapon_ShotGun_Multi",
+  "isBoss": false,
+  "level": 43,
+  "nameId": "RECIPE_SHOTGUN2",
+  "tier": 0,
+  "unlocks": [
+   "PumpActionShotgun"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_Shield_04",
+  "iconName": "Shield_04",
+  "id": "Shield_04",
+  "isBoss": false,
+  "level": 43,
+  "nameId": "RECIPE_Shield_04",
+  "tier": 0,
+  "unlocks": [
+   "Shield_04"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "ITEM_DESC_AdditionalInventory_002",
   "iconName": "AdditionalInventory_002",
   "id": "AdditionalInventory_002",
   "isBoss": false,
@@ -4243,19 +4609,8 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "ShotGun_Default",
-  "id": "Battle_RangeWeapon_ShotGun_Multi",
-  "isBoss": false,
-  "level": 43,
-  "nameId": "RECIPE_SHOTGUN2",
-  "tier": 0,
-  "unlocks": [
-   "PumpActionShotgun"
-  ]
- },
- {
   "cost": 2,
+  "descId": "ITEM_DESC_HighGrade_Processed_Wood",
   "iconName": "HighGrade_Processed_Wood",
   "id": "HighGrade_Processed_Wood",
   "isBoss": false,
@@ -4268,6 +4623,7 @@
  },
  {
   "cost": 3,
+  "descId": "RECIPE_MEDICINE_FACILITY_02",
   "iconName": "MedicineFacility_02",
   "id": "Product_Medicine_Grade_02",
   "isBoss": false,
@@ -4279,31 +4635,8 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "StationDeforest3",
-  "id": "Product_StationDeforest2",
-  "isBoss": true,
-  "level": 43,
-  "nameId": "RECIPE_StationDeforest3",
-  "tier": 0,
-  "unlocks": [
-   "StationDeforest3"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Shield_04",
-  "id": "Shield_04",
-  "isBoss": false,
-  "level": 43,
-  "nameId": "RECIPE_Shield_04",
-  "tier": 0,
-  "unlocks": [
-   "Shield_04"
-  ]
- },
- {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Suzaku",
   "iconName": "Suzaku",
   "id": "SkillUnlock_Suzaku",
   "isBoss": false,
@@ -4316,6 +4649,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_VolcanicMonster_Ice",
   "iconName": "VolcanicMonster_Ice",
   "id": "SkillUnlock_VolcanicMonster_Ice",
   "isBoss": false,
@@ -4327,55 +4661,34 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "Axe_Steal",
-  "id": "Battle_MeleeWeapon_Axe_Steal",
-  "isBoss": false,
-  "level": 44,
-  "nameId": "RECIPE_Axe_Steal",
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_StationDeforest3",
+  "iconName": "StationDeforest3",
+  "id": "Product_StationDeforest2",
+  "isBoss": true,
+  "level": 43,
+  "nameId": "RECIPE_StationDeforest3",
   "tier": 0,
   "unlocks": [
-   "Axe_Steal"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Pickaxe_Steal",
-  "id": "Battle_MeleeWeapon_Pickaxe_Steal",
-  "isBoss": false,
-  "level": 44,
-  "nameId": "RECIPE_Pickaxe_Steal",
-  "tier": 0,
-  "unlocks": [
-   "Pickaxe_Steal"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Bio_Battery",
-  "id": "Bio_Battery",
-  "isBoss": false,
-  "level": 44,
-  "nameId": "RECIPE_Bio_Battery",
-  "tier": 0,
-  "unlocks": [
-   "Bio_Battery"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "Katana",
-  "id": "Katana",
-  "isBoss": false,
-  "level": 44,
-  "nameId": "RECIPE_Katana",
-  "tier": 0,
-  "unlocks": [
-   "Katana"
+   "StationDeforest3"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_SPHERE6",
+  "iconName": "PalSphere_Legend",
+  "id": "Special_PalSphere_Grade_06",
+  "isBoss": false,
+  "level": 44,
+  "nameId": "RECIPE_SPHERE6",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere_Legend"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_STEAL_INGOT",
   "iconName": "BlastFurnace3",
   "id": "Product_Ingot_Grade_03_Steal",
   "isBoss": false,
@@ -4388,18 +4701,59 @@
  },
  {
   "cost": 2,
-  "iconName": "SakuraSaurus_Water",
-  "id": "SkillUnlock_SakuraSaurus_Water",
+  "descId": "ITEM_DESC_Bio_Battery",
+  "iconName": "Bio_Battery",
+  "id": "Bio_Battery",
   "isBoss": false,
   "level": 44,
-  "nameId": "RECIPE_SkillUnlock_SakuraSaurus_Water",
+  "nameId": "RECIPE_Bio_Battery",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_Sakurasaurus_Water"
+   "Bio_Battery"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Katana",
+  "iconName": "Katana",
+  "id": "Katana",
+  "isBoss": false,
+  "level": 44,
+  "nameId": "RECIPE_Katana",
+  "tier": 0,
+  "unlocks": [
+   "Katana"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Pickaxe_Steal",
+  "iconName": "Pickaxe_Steal",
+  "id": "Battle_MeleeWeapon_Pickaxe_Steal",
+  "isBoss": false,
+  "level": 44,
+  "nameId": "RECIPE_Pickaxe_Steal",
+  "tier": 0,
+  "unlocks": [
+   "Pickaxe_Steal"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_Axe_Steal",
+  "iconName": "Axe_Steal",
+  "id": "Battle_MeleeWeapon_Axe_Steal",
+  "isBoss": false,
+  "level": 44,
+  "nameId": "RECIPE_Axe_Steal",
+  "tier": 0,
+  "unlocks": [
+   "Axe_Steal"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Suzaku_Water",
   "iconName": "Suzaku_Water",
   "id": "SkillUnlock_Suzaku_Water",
   "isBoss": false,
@@ -4411,85 +4765,21 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "PalSphere_Legend",
-  "id": "Special_PalSphere_Grade_06",
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_SakuraSaurus_Water",
+  "iconName": "SakuraSaurus_Water",
+  "id": "SkillUnlock_SakuraSaurus_Water",
   "isBoss": false,
   "level": 44,
-  "nameId": "RECIPE_SPHERE6",
+  "nameId": "RECIPE_SkillUnlock_SakuraSaurus_Water",
   "tier": 0,
   "unlocks": [
-   "PalSphere_Legend"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "AssaultRifleBullet",
-  "id": "AssaultRifleBullet",
-  "isBoss": false,
-  "level": 45,
-  "nameId": "RECIPE_AssaultRifleBullet",
-  "tier": 0,
-  "unlocks": [
-   "AssaultRifleBullet"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "AssaultRifle_Default",
-  "id": "Battle_RangeWeapon_AssaultRifle",
-  "isBoss": false,
-  "level": 45,
-  "nameId": "RECIPE_ASSAULTRIFLE",
-  "tier": 0,
-  "unlocks": [
-   "AssaultRifle_Default1"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "CompositeDesk",
-  "id": "CompositeDesk",
-  "isBoss": false,
-  "level": 45,
-  "nameId": "RECIPE_CompositeDesk",
-  "tier": 0,
-  "unlocks": [
-   "CompositeDesk"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "InkBullet",
-  "id": "DecalGunSet",
-  "isBoss": true,
-  "level": 45,
-  "nameId": "RECIPE_DecalGunSet",
-  "tier": 0,
-  "unlocks": [
-   "DecalGun_1",
-   "DecalGun_2",
-   "DecalGun_3",
-   "DecalGun_4",
-   "DecalGun_5",
-   "InkBullet"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "FishingRod_5",
-  "id": "FishingRod_03_1",
-  "isBoss": false,
-  "level": 45,
-  "nameId": "RECIPE_FishingRod_03_1",
-  "tier": 0,
-  "unlocks": [
-   "FishingRod_03_1",
-   "FishingBait_1"
+   "SkillUnlock_Sakurasaurus_Water"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_Glass_Houseset",
   "iconName": "Glass_foundation",
   "id": "Glass_houseset",
   "isBoss": false,
@@ -4519,19 +4809,79 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "LazyDragon",
-  "id": "SkillUnlock_LazyDragon",
-  "isBoss": false,
+  "cost": 1,
+  "descId": "RECIPE_DecalGunSet",
+  "iconName": "InkBullet",
+  "id": "DecalGunSet",
+  "isBoss": true,
   "level": 45,
-  "nameId": "RECIPE_SkillUnlock_LazyDragon",
+  "nameId": "RECIPE_DecalGunSet",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_LazyDragon"
+   "DecalGun_1",
+   "DecalGun_2",
+   "DecalGun_3",
+   "DecalGun_4",
+   "DecalGun_5",
+   "InkBullet"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_ASSAULTRIFLE",
+  "iconName": "AssaultRifle_Default",
+  "id": "Battle_RangeWeapon_AssaultRifle",
+  "isBoss": false,
+  "level": 45,
+  "nameId": "RECIPE_ASSAULTRIFLE",
+  "tier": 0,
+  "unlocks": [
+   "AssaultRifle_Default1"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_AssaultRifleBullet",
+  "iconName": "AssaultRifleBullet",
+  "id": "AssaultRifleBullet",
+  "isBoss": false,
+  "level": 45,
+  "nameId": "RECIPE_AssaultRifleBullet",
+  "tier": 0,
+  "unlocks": [
+   "AssaultRifleBullet"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_FishingRod_03_1",
+  "iconName": "FishingRod_5",
+  "id": "FishingRod_03_1",
+  "isBoss": false,
+  "level": 45,
+  "nameId": "RECIPE_FishingRod_03_1",
+  "tier": 0,
+  "unlocks": [
+   "FishingRod_03_1",
+   "FishingBait_1"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_CompositeDesk",
+  "iconName": "CompositeDesk",
+  "id": "CompositeDesk",
+  "isBoss": false,
+  "level": 45,
+  "nameId": "RECIPE_CompositeDesk",
+  "tier": 0,
+  "unlocks": [
+   "CompositeDesk"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_SkyDragon_Grass",
   "iconName": "SkyDragon_Grass",
   "id": "SkillUnlock_SkyDragon_Grass",
   "isBoss": false,
@@ -4544,6 +4894,20 @@
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_LazyDragon",
+  "iconName": "LazyDragon",
+  "id": "SkillUnlock_LazyDragon",
+  "isBoss": false,
+  "level": 45,
+  "nameId": "RECIPE_SkillUnlock_LazyDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_LazyDragon"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Yeti",
   "iconName": "Yeti",
   "id": "SkillUnlock_Yeti",
   "isBoss": false,
@@ -4555,7 +4919,21 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_SulfurPit",
+  "iconName": "SulfurPit",
+  "id": "Product_SulfurPit",
+  "isBoss": true,
+  "level": 46,
+  "nameId": "RECIPE_SulfurPit",
+  "tier": 0,
+  "unlocks": [
+   "SulfurPit"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "RECIPE_ARMOR5",
   "iconName": "StealArmor",
   "id": "Battle_Armor_Grade_04_Steal",
   "isBoss": false,
@@ -4568,6 +4946,7 @@
  },
  {
   "cost": 4,
+  "descId": "RECIPE_HELMET5",
   "iconName": "StealHelmet",
   "id": "Battle_Helm_Grade_05_Steal",
   "isBoss": false,
@@ -4579,7 +4958,76 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_WorkSpeedIncrease1",
+  "iconName": "WorkSpeedIncrease1",
+  "id": "WorkSpeedIncrease1",
+  "isBoss": false,
+  "level": 46,
+  "nameId": "RECIPE_WorkSpeedIncrease1",
+  "tier": 0,
+  "unlocks": [
+   "WorkSpeedIncrease1"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_LargeLamp",
+  "iconName": "LargeLamp",
+  "id": "LargeLamp",
+  "isBoss": false,
+  "level": 46,
+  "nameId": "RECIPE_LargeLamp",
+  "tier": 0,
+  "unlocks": [
+   "LargeLamp"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_KingBahamut",
+  "iconName": "KingBahamut",
+  "id": "SkillUnlock_KingBahamut",
+  "isBoss": false,
+  "level": 46,
+  "nameId": "RECIPE_SkillUnlock_KingBahamut",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_KingBahamut"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_KingAlpaca_Ice",
+  "iconName": "KingAlpaca_Ice",
+  "id": "SkillUnlock_KingAlpaca_Ice",
+  "isBoss": false,
+  "level": 46,
+  "nameId": "RECIPE_SkillUnlock_KingAlpaca_Ice",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_KingAlpaca_Ice"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_27",
+  "iconName": "Light_LightPole01",
+  "id": "FurnitureSet_27",
+  "isBoss": false,
+  "level": 46,
+  "nameId": "RECIPE_FurnitureSet_27",
+  "tier": 0,
+  "unlocks": [
+   "Light_LightPole01",
+   "Light_LightPole02",
+   "Light_LightPole03",
+   "Light_LightPole04"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_26",
   "iconName": "GoalSoccer_Iron",
   "id": "FurnitureSet_26",
   "isBoss": false,
@@ -4595,95 +5043,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "Light_LightPole01",
-  "id": "FurnitureSet_27",
-  "isBoss": false,
-  "level": 46,
-  "nameId": "RECIPE_FurnitureSet_27",
-  "tier": 0,
-  "unlocks": [
-   "Light_LightPole01",
-   "Light_LightPole02",
-   "Light_LightPole03",
-   "Light_LightPole04"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "LargeLamp",
-  "id": "LargeLamp",
-  "isBoss": false,
-  "level": 46,
-  "nameId": "RECIPE_LargeLamp",
-  "tier": 0,
-  "unlocks": [
-   "LargeLamp"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "SulfurPit",
-  "id": "Product_SulfurPit",
-  "isBoss": true,
-  "level": 46,
-  "nameId": "RECIPE_SulfurPit",
-  "tier": 0,
-  "unlocks": [
-   "SulfurPit"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "KingAlpaca_Ice",
-  "id": "SkillUnlock_KingAlpaca_Ice",
-  "isBoss": false,
-  "level": 46,
-  "nameId": "RECIPE_SkillUnlock_KingAlpaca_Ice",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_KingAlpaca_Ice"
-  ]
- },
- {
   "cost": 4,
-  "iconName": "KingBahamut",
-  "id": "SkillUnlock_KingBahamut",
-  "isBoss": false,
-  "level": 46,
-  "nameId": "RECIPE_SkillUnlock_KingBahamut",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_KingBahamut"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "WorkSpeedIncrease1",
-  "id": "WorkSpeedIncrease1",
-  "isBoss": false,
-  "level": 46,
-  "nameId": "RECIPE_WorkSpeedIncrease1",
-  "tier": 0,
-  "unlocks": [
-   "WorkSpeedIncrease1"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "AutoMealPouch_Tier5",
-  "id": "AutoMealPouch_Tier5",
-  "isBoss": false,
-  "level": 47,
-  "nameId": "RECIPE_AutoMealPouch_Tier5",
-  "requireTech": "AutoMealPouch_Tier4",
-  "tier": 0,
-  "unlocks": [
-   "AutoMealPouch_Tier5"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "ITEM_DESC_SemiAutoShotgun",
   "iconName": "SemiAutoShotgun",
   "id": "Battle_RangeWeapon_SemiAutoShotgun",
   "isBoss": false,
@@ -4695,44 +5056,8 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "Cake03",
-  "id": "Cake03",
-  "isBoss": false,
-  "level": 47,
-  "nameId": "RECIPE_Cake03",
-  "tier": 0,
-  "unlocks": [
-   "Cake03"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "SignExit_Ceiling_Iron",
-  "id": "FurnitureSet_8",
-  "isBoss": false,
-  "level": 47,
-  "nameId": "RECIPE_FurnitureSet_8",
-  "tier": 0,
-  "unlocks": [
-   "SignExit_Ceiling_Iron",
-   "SignExit_Wall_Iron"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "LargeCeilingLamp",
-  "id": "LargeCeilingLamp",
-  "isBoss": false,
-  "level": 47,
-  "nameId": "RECIPE_LargeCeilingLamp",
-  "tier": 0,
-  "unlocks": [
-   "LargeCeilingLamp"
-  ]
- },
- {
   "cost": 5,
+  "descId": "RECIPE_WEAPON_FACTORY_DIRTY_03",
   "iconName": "WeaponFactory_Dirty_03",
   "id": "Product_WeaponFactory_Dirty_Grade_03",
   "isBoss": false,
@@ -4745,18 +5070,47 @@
  },
  {
   "cost": 4,
-  "iconName": "BlackGriffon",
-  "id": "SkillUnlock_BlackGriffon",
+  "descId": "ITEM_DESC_Cake03",
+  "iconName": "Cake03",
+  "id": "Cake03",
   "isBoss": false,
   "level": 47,
-  "nameId": "RECIPE_SkillUnlock_BlackGriffon",
+  "nameId": "RECIPE_Cake03",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_BlackGriffon"
+   "Cake03"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_AutoMealPouch_Tier5",
+  "iconName": "AutoMealPouch_Tier5",
+  "id": "AutoMealPouch_Tier5",
+  "isBoss": false,
+  "level": 47,
+  "nameId": "RECIPE_AutoMealPouch_Tier5",
+  "requireTech": "AutoMealPouch_Tier4",
+  "tier": 0,
+  "unlocks": [
+   "AutoMealPouch_Tier5"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_LargeCeilingLamp",
+  "iconName": "LargeCeilingLamp",
+  "id": "LargeCeilingLamp",
+  "isBoss": false,
+  "level": 47,
+  "nameId": "RECIPE_LargeCeilingLamp",
+  "tier": 0,
+  "unlocks": [
+   "LargeCeilingLamp"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_HadesBird_Electric",
   "iconName": "HadesBird_Electric",
   "id": "SkillUnlock_HadesBird_Electric",
   "isBoss": false,
@@ -4768,7 +5122,49 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_BlackGriffon",
+  "iconName": "BlackGriffon",
+  "id": "SkillUnlock_BlackGriffon",
+  "isBoss": false,
+  "level": 47,
+  "nameId": "RECIPE_SkillUnlock_BlackGriffon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BlackGriffon"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_8",
+  "iconName": "SignExit_Ceiling_Iron",
+  "id": "FurnitureSet_8",
+  "isBoss": false,
+  "level": 47,
+  "nameId": "RECIPE_FurnitureSet_8",
+  "tier": 0,
+  "unlocks": [
+   "SignExit_Ceiling_Iron",
+   "SignExit_Wall_Iron"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_MultiHatchingPalEgg",
+  "iconName": "MultiHatchingPalEgg",
+  "id": "MultiHatchingPalEgg",
+  "isBoss": true,
+  "level": 48,
+  "nameId": "RECIPE_MultiHatchingPalEgg",
+  "requireBoss": "SnowBoss",
+  "tier": 0,
+  "unlocks": [
+   "MultiHatchingPalEgg"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_ARMOR5_Heat",
   "iconName": "StealArmorHeat",
   "id": "Battle_Armor_Grade_04_Steal_Heat",
   "isBoss": false,
@@ -4780,7 +5176,73 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "ITEM_DESC_SphereModule_Sniper2",
+  "iconName": "SphereModule_Sniper2",
+  "id": "SphereModule_Sniper2",
+  "isBoss": false,
+  "level": 48,
+  "nameId": "RECIPE_SphereModule_Sniper2",
+  "tier": 0,
+  "unlocks": [
+   "SphereModule_Sniper2"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_TransmissionTower",
+  "iconName": "TransmissionTower",
+  "id": "TransmissionTower",
+  "isBoss": false,
+  "level": 48,
+  "nameId": "RECIPE_TransmissionTower",
+  "tier": 0,
+  "unlocks": [
+   "TransmissionTower"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_LazyDragon_Electric",
+  "iconName": "LazyDragon_Electric",
+  "id": "SkillUnlock_LazyDragon_Electric",
+  "isBoss": false,
+  "level": 48,
+  "nameId": "RECIPE_SkillUnlock_LazyDragon_Electric",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_LazyDragon_Electric"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_GrassGolem",
+  "iconName": "GrassGolem",
+  "id": "SkillUnlock_GrassGolem",
+  "isBoss": false,
+  "level": 48,
+  "nameId": "RECIPE_SkillUnlock_GrassGolem",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GrassGolem"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_CubeTurtle",
+  "iconName": "CubeTurtle",
+  "id": "SkillUnlock_CubeTurtle",
+  "isBoss": false,
+  "level": 48,
+  "nameId": "RECIPE_SkillUnlock_CubeTurtle",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_CubeTurtle"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureSet_11",
   "iconName": "TrafficCone01_Iron",
   "id": "FurnitureSet_11",
   "isBoss": false,
@@ -4795,138 +5257,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "MultiHatchingPalEgg",
-  "id": "MultiHatchingPalEgg",
-  "isBoss": true,
-  "level": 48,
-  "nameId": "RECIPE_MultiHatchingPalEgg",
-  "requireBoss": "SnowBoss",
-  "tier": 0,
-  "unlocks": [
-   "MultiHatchingPalEgg"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "CubeTurtle",
-  "id": "SkillUnlock_CubeTurtle",
-  "isBoss": false,
-  "level": 48,
-  "nameId": "RECIPE_SkillUnlock_CubeTurtle",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_CubeTurtle"
-  ]
- },
- {
   "cost": 4,
-  "iconName": "GrassGolem",
-  "id": "SkillUnlock_GrassGolem",
-  "isBoss": false,
-  "level": 48,
-  "nameId": "RECIPE_SkillUnlock_GrassGolem",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GrassGolem"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "LazyDragon_Electric",
-  "id": "SkillUnlock_LazyDragon_Electric",
-  "isBoss": false,
-  "level": 48,
-  "nameId": "RECIPE_SkillUnlock_LazyDragon_Electric",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_LazyDragon_Electric"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "SphereModule_Sniper2",
-  "id": "SphereModule_Sniper2",
-  "isBoss": false,
-  "level": 48,
-  "nameId": "RECIPE_SphereModule_Sniper2",
-  "tier": 0,
-  "unlocks": [
-   "SphereModule_Sniper2"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "TransmissionTower",
-  "id": "TransmissionTower",
-  "isBoss": false,
-  "level": 48,
-  "nameId": "RECIPE_TransmissionTower",
-  "tier": 0,
-  "unlocks": [
-   "TransmissionTower"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "BaseCampItemDispenser",
-  "id": "BaseCampItemDispenser",
-  "isBoss": false,
-  "level": 49,
-  "nameId": "RECIPE_BaseCampItemDispenser",
-  "tier": 0,
-  "unlocks": [
-   "BaseCampItemDispenser"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "TrafficBarricade01_Iron",
-  "id": "FurnitureSet_10",
-  "isBoss": false,
-  "level": 49,
-  "nameId": "RECIPE_FurnitureSet_10",
-  "tier": 0,
-  "unlocks": [
-   "TrafficBarricade01_Iron",
-   "TrafficBarricade02_Iron",
-   "TrafficBarricade03_Iron",
-   "TrafficBarricade04_Iron",
-   "TrafficBarricade05_Iron"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "TrafficSign01_Iron",
-  "id": "FurnitureSet_12",
-  "isBoss": false,
-  "level": 49,
-  "nameId": "RECIPE_FurnitureSet_12",
-  "tier": 0,
-  "unlocks": [
-   "TrafficSign01_Iron",
-   "TrafficSign02_Iron",
-   "TrafficSign03_Iron",
-   "TrafficSign04_Iron"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "FurnitureTree01_Snow",
-  "id": "FurnitureTree_Snow",
-  "isBoss": false,
-  "level": 49,
-  "nameId": "RECIPE_FurnitureTree_Snow",
-  "tier": 0,
-  "unlocks": [
-   "FurnitureTree01_Snow",
-   "FurnitureTree02_Snow",
-   "FurnitureTree03_Snow",
-   "FurnitureBush01_Snow"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "ITEM_DESC_GrapplingGun_4",
   "iconName": "GrapplingGun",
   "id": "GrapplingGun4",
   "isBoss": true,
@@ -4940,6 +5272,20 @@
  },
  {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_BaseCampItemDispenser",
+  "iconName": "BaseCampItemDispenser",
+  "id": "BaseCampItemDispenser",
+  "isBoss": false,
+  "level": 49,
+  "nameId": "RECIPE_BaseCampItemDispenser",
+  "tier": 0,
+  "unlocks": [
+   "BaseCampItemDispenser"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_HugeKitchen",
   "iconName": "HugeKitchen",
   "id": "HugeKitchen",
   "isBoss": false,
@@ -4952,6 +5298,7 @@
  },
  {
   "cost": 2,
+  "descId": "RECIPE_JapaneseStyle_Houseset",
   "iconName": "JapaneseStyle_foundation",
   "id": "JapaneseStyle_houseset",
   "isBoss": false,
@@ -4985,43 +5332,57 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "StealArmorCold",
-  "id": "Battle_Armor_Grade_04_Steal_Cold",
+  "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Snow",
+  "iconName": "FurnitureTree01_Snow",
+  "id": "FurnitureTree_Snow",
   "isBoss": false,
-  "level": 50,
-  "nameId": "RECIPE_ARMOR5_Cold",
+  "level": 49,
+  "nameId": "RECIPE_FurnitureTree_Snow",
   "tier": 0,
   "unlocks": [
-   "StealArmorCold"
+   "FurnitureTree01_Snow",
+   "FurnitureTree02_Snow",
+   "FurnitureTree03_Snow",
+   "FurnitureBush01_Snow"
   ]
  },
  {
-  "cost": 3,
-  "iconName": "DefenseMissile",
-  "id": "Battle_Defense_Missile",
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_12",
+  "iconName": "TrafficSign01_Iron",
+  "id": "FurnitureSet_12",
   "isBoss": false,
-  "level": 50,
-  "nameId": "RECIPE_DEFENCE_MISSILE",
+  "level": 49,
+  "nameId": "RECIPE_FurnitureSet_12",
   "tier": 0,
   "unlocks": [
-   "DefenseMissile"
+   "TrafficSign01_Iron",
+   "TrafficSign02_Iron",
+   "TrafficSign03_Iron",
+   "TrafficSign04_Iron"
   ]
  },
  {
-  "cost": 2,
-  "iconName": "Computer",
-  "id": "Computer",
+  "cost": 1,
+  "descId": "RECIPE_FurnitureSet_10",
+  "iconName": "TrafficBarricade01_Iron",
+  "id": "FurnitureSet_10",
   "isBoss": false,
-  "level": 50,
-  "nameId": "RECIPE_Computer",
+  "level": 49,
+  "nameId": "RECIPE_FurnitureSet_10",
   "tier": 0,
   "unlocks": [
-   "Computer"
+   "TrafficBarricade01_Iron",
+   "TrafficBarricade02_Iron",
+   "TrafficBarricade03_Iron",
+   "TrafficBarricade04_Iron",
+   "TrafficBarricade05_Iron"
   ]
  },
  {
   "cost": 4,
+  "descId": "BUILDOBJECT_DESC_ElectricGenerator_Large",
   "iconName": "ElectricGenerator_Large",
   "id": "ElectricGenerator_Large",
   "isBoss": true,
@@ -5033,7 +5394,21 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "RECIPE_ARMOR5_Cold",
+  "iconName": "StealArmorCold",
+  "id": "Battle_Armor_Grade_04_Steal_Cold",
+  "isBoss": false,
+  "level": 50,
+  "nameId": "RECIPE_ARMOR5_Cold",
+  "tier": 0,
+  "unlocks": [
+   "StealArmorCold"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_OilPump",
   "iconName": "OilPump",
   "id": "OilPump",
   "isBoss": false,
@@ -5046,6 +5421,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_Plastic",
   "iconName": "Plastic",
   "id": "Plastic",
   "isBoss": false,
@@ -5057,7 +5433,34 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_Computer",
+  "iconName": "Computer",
+  "id": "Computer",
+  "isBoss": false,
+  "level": 50,
+  "nameId": "RECIPE_Computer",
+  "tier": 0,
+  "unlocks": [
+   "Computer"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "RECIPE_DEFENCE_MISSILE",
+  "iconName": "DefenseMissile",
+  "id": "Battle_Defense_Missile",
+  "isBoss": false,
+  "level": 50,
+  "nameId": "RECIPE_DEFENCE_MISSILE",
+  "tier": 0,
+  "unlocks": [
+   "DefenseMissile"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_ScientistFlagSet",
   "iconName": "Scientist_Flag",
   "id": "ScientistFlagSet",
   "isBoss": false,
@@ -5071,7 +5474,34 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_OilPump02",
+  "iconName": "OilPump02",
+  "id": "OilPump02",
+  "isBoss": true,
+  "level": 51,
+  "nameId": "RECIPE_OilPump02",
+  "tier": 0,
+  "unlocks": [
+   "OilPump02"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "RECIPE_SPHERE7",
+  "iconName": "PalSphere_Ultimate",
+  "id": "Special_PalSphere_Grade_07",
+  "isBoss": false,
+  "level": 51,
+  "nameId": "RECIPE_SPHERE7",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere_Ultimate"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_ARMOR6",
   "iconName": "PlasticArmor",
   "id": "Battle_Armor_Grade_05_Plastic",
   "isBoss": false,
@@ -5084,6 +5514,7 @@
  },
  {
   "cost": 4,
+  "descId": "RECIPE_HELMET6",
   "iconName": "PlasticHelmet",
   "id": "Battle_Helm_Grade_06_Plastic",
   "isBoss": false,
@@ -5096,6 +5527,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_LaserRifle",
   "iconName": "LaserRifle",
   "id": "Battle_RangeWeapon_LaserRifle",
   "isBoss": false,
@@ -5107,19 +5539,8 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "CoolerPalFoodBox",
-  "id": "CoolerPalFoodBox",
-  "isBoss": false,
-  "level": 51,
-  "nameId": "RECIPE_CoolerPalFoodBox",
-  "tier": 0,
-  "unlocks": [
-   "CoolerPalFoodBox"
-  ]
- },
- {
   "cost": 1,
+  "descId": "ITEM_DESC_LaserBullet",
   "iconName": "LaserBullet",
   "id": "LaserBullet",
   "isBoss": false,
@@ -5131,19 +5552,21 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "OilPump02",
-  "id": "OilPump02",
-  "isBoss": true,
+  "cost": 2,
+  "descId": "BUILDOBJECT_DESC_CoolerPalFoodBox",
+  "iconName": "CoolerPalFoodBox",
+  "id": "CoolerPalFoodBox",
+  "isBoss": false,
   "level": 51,
-  "nameId": "RECIPE_OilPump02",
+  "nameId": "RECIPE_CoolerPalFoodBox",
   "tier": 0,
   "unlocks": [
-   "OilPump02"
+   "CoolerPalFoodBox"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Yeti_Grass",
   "iconName": "Yeti_Grass",
   "id": "SkillUnlock_Yeti_Grass",
   "isBoss": false,
@@ -5155,19 +5578,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "PalSphere_Ultimate",
-  "id": "Special_PalSphere_Grade_07",
-  "isBoss": false,
-  "level": 51,
-  "nameId": "RECIPE_SPHERE7",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Ultimate"
-  ]
- },
- {
   "cost": 4,
+  "descId": "RECIPE_Battle_Glider_Grade_04",
   "iconName": "Glider_Legendary",
   "id": "Battle_Glider_Grade_04",
   "isBoss": false,
@@ -5180,6 +5592,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_FlameThrower",
   "iconName": "FlameThrower",
   "id": "Battle_RangeWeapon_FlameThrower",
   "isBoss": false,
@@ -5191,19 +5604,8 @@
   ]
  },
  {
-  "cost": 2,
-  "iconName": "FishingBait_3_A",
-  "id": "FishingBait_3_A",
-  "isBoss": false,
-  "level": 52,
-  "nameId": "RECIPE_FishingBait_3_A",
-  "tier": 0,
-  "unlocks": [
-   "FishingBait_3_A"
-  ]
- },
- {
   "cost": 1,
+  "descId": "ITEM_DESC_FlamethrowerBullet",
   "iconName": "FlamethrowerBullet",
   "id": "FlamethrowerBullet",
   "isBoss": false,
@@ -5215,7 +5617,34 @@
   ]
  },
  {
+  "cost": 2,
+  "descId": "ITEM_DESC_FishingBait_3_A",
+  "iconName": "FishingBait_3_A",
+  "id": "FishingBait_3_A",
+  "isBoss": false,
+  "level": 52,
+  "nameId": "RECIPE_FishingBait_3_A",
+  "tier": 0,
+  "unlocks": [
+   "FishingBait_3_A"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_BadCatgirl",
+  "iconName": "BadCatgirl",
+  "id": "SkillUnlock_BadCatgirl",
+  "isBoss": false,
+  "level": 52,
+  "nameId": "RECIPE_SkillUnlock_BadCatgirl",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BadCatgirl"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_QuartzPit",
   "iconName": "QuartzPit",
   "id": "Product_QuartzPit",
   "isBoss": true,
@@ -5228,18 +5657,7 @@
  },
  {
   "cost": 3,
-  "iconName": "BadCatgirl",
-  "id": "SkillUnlock_BadCatgirl",
-  "isBoss": false,
-  "level": 52,
-  "nameId": "RECIPE_SkillUnlock_BadCatgirl",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BadCatgirl"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_AdditionalInventory_003",
   "iconName": "AdditionalInventory_003",
   "id": "AdditionalInventory_003",
   "isBoss": false,
@@ -5253,6 +5671,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_ARMOR6_Heat",
   "iconName": "PlasticArmorHeat",
   "id": "Battle_Armor_Grade_05_Plastic_Heat",
   "isBoss": false,
@@ -5265,6 +5684,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_GrenadeLauncher",
   "iconName": "GrenadeLauncher",
   "id": "Battle_RangeWeapon_GrenadeLauncher",
   "isBoss": false,
@@ -5276,19 +5696,8 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "FragGrenade_Super",
-  "id": "FragGrenade_Super",
-  "isBoss": false,
-  "level": 53,
-  "nameId": "RECIPE_FragGrenade_Super",
-  "tier": 0,
-  "unlocks": [
-   "FragGrenade_Super"
-  ]
- },
- {
   "cost": 1,
+  "descId": "ITEM_DESC_GrenadeBullet",
   "iconName": "GrenadeBullet",
   "id": "GrenadeBullet",
   "isBoss": false,
@@ -5300,7 +5709,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_FragGrenade_Super",
+  "iconName": "FragGrenade_Super",
+  "id": "FragGrenade_Super",
+  "isBoss": false,
+  "level": 53,
+  "nameId": "RECIPE_FragGrenade_Super",
+  "tier": 0,
+  "unlocks": [
+   "FragGrenade_Super"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_MoonQueen",
   "iconName": "MoonQueen",
   "id": "SkillUnlock_MoonQueen",
   "isBoss": false,
@@ -5313,18 +5736,7 @@
  },
  {
   "cost": 3,
-  "iconName": "SumoDog",
-  "id": "SkillUnlock_SumoDog",
-  "isBoss": false,
-  "level": 53,
-  "nameId": "RECIPE_SkillUnlock_SumoDog",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_SumoDog"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_Unlock_Picking_Tier3",
   "iconName": "Unlock_Picking_Tier3",
   "id": "Unlock_Picking_Tier3",
   "isBoss": true,
@@ -5337,7 +5749,34 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_SumoDog",
+  "iconName": "SumoDog",
+  "id": "SkillUnlock_SumoDog",
+  "isBoss": false,
+  "level": 53,
+  "nameId": "RECIPE_SkillUnlock_SumoDog",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_SumoDog"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_LaserMiningTool",
+  "iconName": "LaserMiningTool",
+  "id": "LaserMiningTool",
+  "isBoss": false,
+  "level": 54,
+  "nameId": "RECIPE_LaserMiningTool",
+  "tier": 0,
+  "unlocks": [
+   "LaserMiningTool"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "RECIPE_ARMOR6_Cold",
   "iconName": "PlasticArmorCold",
   "id": "Battle_Armor_Grade_05_Plastic_Cold",
   "isBoss": false,
@@ -5350,6 +5789,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_GatlingGun",
   "iconName": "GatlingGun",
   "id": "Battle_RangeWeapon_GatlingGun",
   "isBoss": false,
@@ -5362,6 +5802,7 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_GatlingBullet",
   "iconName": "GatlingBullet",
   "id": "GatlingBullet",
   "isBoss": false,
@@ -5374,6 +5815,7 @@
  },
  {
   "cost": 2,
+  "descId": "BUILDOBJECT_DESC_IceCrusher",
   "iconName": "IceCrusher",
   "id": "IceCrusher",
   "isBoss": false,
@@ -5385,43 +5827,8 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "LaserMiningTool",
-  "id": "LaserMiningTool",
-  "isBoss": false,
-  "level": 54,
-  "nameId": "RECIPE_LaserMiningTool",
-  "tier": 0,
-  "unlocks": [
-   "LaserMiningTool"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "GoldenHorse",
-  "id": "SkillUnlock_GoldenHorse",
-  "isBoss": false,
-  "level": 54,
-  "nameId": "RECIPE_SkillUnlock_GoldenHorse",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GoldenHorse"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "WhiteDeer",
-  "id": "SkillUnlock_WhiteDeer",
-  "isBoss": false,
-  "level": 54,
-  "nameId": "RECIPE_SkillUnlock_WhiteDeer",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_WhiteDeer"
-  ]
- },
- {
   "cost": 5,
+  "descId": "ITEM_DESC_UnlockEquipmentSlot_Weapon_02",
   "iconName": "UnlockEquipmentSlot_Weapon_02",
   "id": "UnlockEquipmentSlot_Weapon_02",
   "isBoss": true,
@@ -5434,7 +5841,61 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_GoldenHorse",
+  "iconName": "GoldenHorse",
+  "id": "SkillUnlock_GoldenHorse",
+  "isBoss": false,
+  "level": 54,
+  "nameId": "RECIPE_SkillUnlock_GoldenHorse",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GoldenHorse"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_WhiteDeer",
+  "iconName": "WhiteDeer",
+  "id": "SkillUnlock_WhiteDeer",
+  "isBoss": false,
+  "level": 54,
+  "nameId": "RECIPE_SkillUnlock_WhiteDeer",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_WhiteDeer"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_Spear_ForestBoss",
+  "iconName": "Spear_ForestBoss",
+  "id": "Spear_ForestBoss",
+  "isBoss": false,
+  "level": 55,
+  "nameId": "RECIPE_Spear_ForestBoss",
+  "requireBoss": "ForestBoss",
+  "tier": 0,
+  "unlocks": [
+   "Spear_ForestBoss"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_Shield_Ultra",
+  "iconName": "Shield_05",
+  "id": "Shield_05",
+  "isBoss": false,
+  "level": 55,
+  "nameId": "RECIPE_Shield_Ultra",
+  "tier": 0,
+  "unlocks": [
+   "Shield_Ultra"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "RECIPE_ARMOR6_Weight",
   "iconName": "PlasticArmorWeight",
   "id": "Battle_Armor_Grade_05_Plastic_Weight",
   "isBoss": false,
@@ -5446,19 +5907,34 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "HomingSphereLauncher",
-  "id": "Battle_RangeWeapon_HomingSphereLauncher",
-  "isBoss": true,
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_IceSeal_Ground",
+  "iconName": "IceSeal_Ground",
+  "id": "SkillUnlock_IceSeal_Ground",
+  "isBoss": false,
   "level": 55,
-  "nameId": "RECIPE_HOMING_SPHERE_LAUNCHER",
+  "nameId": "RECIPE_SkillUnlock_IceSeal_Ground",
   "tier": 0,
   "unlocks": [
-   "HomingSphereLauncher"
+   "SkillUnlock_IceSeal_Ground"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_KingBahamut_Dragon",
+  "iconName": "KingBahamut_Dragon",
+  "id": "SkillUnlock_KingBahamut_Dragon",
+  "isBoss": false,
+  "level": 55,
+  "nameId": "RECIPE_SkillUnlock_KingBahamut_Dragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_KingBahamut_Dragon"
   ]
  },
  {
   "cost": 2,
+  "descId": "RECIPE_JapaneseStyle_FurnitureSet",
   "iconName": "Byobu",
   "id": "FurnitureSet_Japanese",
   "isBoss": false,
@@ -5483,6 +5959,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_NinjaFlagSet",
   "iconName": "Ninja_Flag",
   "id": "NinjaFlagSet",
   "isBoss": false,
@@ -5496,56 +5973,21 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "Shield_05",
-  "id": "Shield_05",
-  "isBoss": false,
+  "cost": 5,
+  "descId": "RECIPE_HOMING_SPHERE_LAUNCHER",
+  "iconName": "HomingSphereLauncher",
+  "id": "Battle_RangeWeapon_HomingSphereLauncher",
+  "isBoss": true,
   "level": 55,
-  "nameId": "RECIPE_Shield_Ultra",
+  "nameId": "RECIPE_HOMING_SPHERE_LAUNCHER",
   "tier": 0,
   "unlocks": [
-   "Shield_Ultra"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "IceSeal_Ground",
-  "id": "SkillUnlock_IceSeal_Ground",
-  "isBoss": false,
-  "level": 55,
-  "nameId": "RECIPE_SkillUnlock_IceSeal_Ground",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_IceSeal_Ground"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "KingBahamut_Dragon",
-  "id": "SkillUnlock_KingBahamut_Dragon",
-  "isBoss": false,
-  "level": 55,
-  "nameId": "RECIPE_SkillUnlock_KingBahamut_Dragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_KingBahamut_Dragon"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Spear_ForestBoss",
-  "id": "Spear_ForestBoss",
-  "isBoss": false,
-  "level": 55,
-  "nameId": "RECIPE_Spear_ForestBoss",
-  "requireBoss": "ForestBoss",
-  "tier": 0,
-  "unlocks": [
-   "Spear_ForestBoss"
+   "HomingSphereLauncher"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_GuidedMissileLauncher",
   "iconName": "GuidedMissileLauncher",
   "id": "Battle_RangeWeapon_GuidedMissileLauncher",
   "isBoss": false,
@@ -5557,7 +5999,21 @@
   ]
  },
  {
+  "cost": 1,
+  "descId": "ITEM_DESC_MissileBullet",
+  "iconName": "MissileBullet",
+  "id": "MissileBullet",
+  "isBoss": false,
+  "level": 56,
+  "nameId": "RECIPE_MissileBullet",
+  "tier": 0,
+  "unlocks": [
+   "MissileBullet"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_DismantlingConveyor",
   "iconName": "DismantlingConveyor",
   "id": "DismantlingConveyor",
   "isBoss": false,
@@ -5569,7 +6025,35 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_MedicalPalBed_05",
+  "iconName": "MedicalPalBed_05",
+  "id": "MedicalPalBed_05",
+  "isBoss": false,
+  "level": 56,
+  "nameId": "RECIPE_MedicalPalBed_05",
+  "tier": 0,
+  "unlocks": [
+   "MedicalPalBed_05"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_OctaviaSet02",
+  "iconName": "Octavia002_Armor",
+  "id": "OctaviaSet02",
+  "isBoss": true,
+  "level": 56,
+  "nameId": "RECIPE_OctaviaSet02",
+  "tier": 0,
+  "unlocks": [
+   "Octavia002_Armor",
+   "OctaviaShotgun"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "RECIPE_FurnitureTree_Cherry",
   "iconName": "FurnitureTree01_Cherry",
   "id": "FurnitureTree_Cherry",
   "isBoss": false,
@@ -5583,44 +6067,34 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "MedicalPalBed_05",
-  "id": "MedicalPalBed_05",
+  "cost": 3,
+  "descId": "ITEM_DESC_SFBow",
+  "iconName": "SFBow",
+  "id": "SFBow",
   "isBoss": false,
-  "level": 56,
-  "nameId": "RECIPE_MedicalPalBed_05",
+  "level": 57,
+  "nameId": "RECIPE_SFBow",
   "tier": 0,
   "unlocks": [
-   "MedicalPalBed_05"
+   "SFBow"
   ]
  },
  {
   "cost": 1,
-  "iconName": "MissileBullet",
-  "id": "MissileBullet",
+  "descId": "ITEM_DESC_SFArrow",
+  "iconName": "SFArrow",
+  "id": "SFArrow",
   "isBoss": false,
-  "level": 56,
-  "nameId": "RECIPE_MissileBullet",
+  "level": 57,
+  "nameId": "RECIPE_SFArrow",
   "tier": 0,
   "unlocks": [
-   "MissileBullet"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "Octavia002_Armor",
-  "id": "OctaviaSet02",
-  "isBoss": true,
-  "level": 56,
-  "nameId": "RECIPE_OctaviaSet02",
-  "tier": 0,
-  "unlocks": [
-   "Octavia002_Armor",
-   "OctaviaShotgun"
+   "SFArrow"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_AdditionalInventory_004",
   "iconName": "AdditionalInventory_004",
   "id": "AdditionalInventory_004",
   "isBoss": false,
@@ -5634,6 +6108,7 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_BeamSword",
   "iconName": "BeamSword",
   "id": "BeamSword",
   "isBoss": false,
@@ -5645,55 +6120,8 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "SFArrow",
-  "id": "SFArrow",
-  "isBoss": false,
-  "level": 57,
-  "nameId": "RECIPE_SFArrow",
-  "tier": 0,
-  "unlocks": [
-   "SFArrow"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "SFBow",
-  "id": "SFBow",
-  "isBoss": false,
-  "level": 57,
-  "nameId": "RECIPE_SFBow",
-  "tier": 0,
-  "unlocks": [
-   "SFBow"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "AmaterasuWolf",
-  "id": "SkillUnlock_AmaterasuWolf",
-  "isBoss": false,
-  "level": 57,
-  "nameId": "RECIPE_SkillUnlock_AmaterasuWolf",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_AmaterasuWolf"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "FengyunDeeper_Electric",
-  "id": "SkillUnlock_FengyunDeeper_Electric",
-  "isBoss": false,
-  "level": 57,
-  "nameId": "RECIPE_SkillUnlock_FengyunDeeper_Electric",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_FengyunDeeper_Electric"
-  ]
- },
- {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_NightBlueHorse",
   "iconName": "NightBlueHorse",
   "id": "SkillUnlock_NightBlueHorse",
   "isBoss": false,
@@ -5705,44 +6133,34 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "BlastFurnace4",
-  "id": "BlastFurnace4",
-  "isBoss": false,
-  "level": 58,
-  "nameId": "RECIPE_BlastFurnace4",
-  "tier": 0,
-  "unlocks": [
-   "BlastFurnace4"
-  ]
- },
- {
   "cost": 3,
-  "iconName": "MetalDetector",
-  "id": "MetalDetector",
+  "descId": "ITEM_DESC_SkillUnlock_FengyunDeeper_Electric",
+  "iconName": "FengyunDeeper_Electric",
+  "id": "SkillUnlock_FengyunDeeper_Electric",
   "isBoss": false,
-  "level": 58,
-  "nameId": "RECIPE_MetalDetector",
+  "level": 57,
+  "nameId": "RECIPE_SkillUnlock_FengyunDeeper_Electric",
   "tier": 0,
   "unlocks": [
-   "MetalDetector"
+   "SkillUnlock_FengyunDeeper_Electric"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_AmaterasuWolf",
+  "iconName": "AmaterasuWolf",
+  "id": "SkillUnlock_AmaterasuWolf",
+  "isBoss": false,
+  "level": 57,
+  "nameId": "RECIPE_SkillUnlock_AmaterasuWolf",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_AmaterasuWolf"
   ]
  },
  {
   "cost": 5,
-  "iconName": "MultiElectricHatchingPalEgg",
-  "id": "MultiElectricHatchingPalEgg",
-  "isBoss": true,
-  "level": 58,
-  "nameId": "RECIPE_MultiElectricHatchingPalEgg",
-  "requireBoss": "VikingBoss",
-  "tier": 0,
-  "unlocks": [
-   "MultiElectricHatchingPalEgg"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "ITEM_DESC_PalSphere_Exotic",
   "iconName": "PalSphere_Exotic",
   "id": "PalSphere_Exotic",
   "isBoss": false,
@@ -5754,31 +6172,8 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "BlackPuppy",
-  "id": "SkillUnlock_BlackPuppy",
-  "isBoss": false,
-  "level": 58,
-  "nameId": "RECIPE_SkillUnlock_BlackPuppy",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BlackPuppy"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "BlueThunderHorse",
-  "id": "SkillUnlock_BlueThunderHorse",
-  "isBoss": false,
-  "level": 58,
-  "nameId": "RECIPE_SkillUnlock_BlueThunderHorse",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BlueThunderHorse"
-  ]
- },
- {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_SphereFactory_Black_04",
   "iconName": "SphereFactory_Black_04",
   "id": "SphereFactory_Black_04",
   "isBoss": false,
@@ -5791,6 +6186,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_StainlessSteel",
   "iconName": "StainlessSteel",
   "id": "StainlessSteel",
   "isBoss": false,
@@ -5802,7 +6198,74 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_BlastFurnace4",
+  "iconName": "BlastFurnace4",
+  "id": "BlastFurnace4",
+  "isBoss": false,
+  "level": 58,
+  "nameId": "RECIPE_BlastFurnace4",
+  "tier": 0,
+  "unlocks": [
+   "BlastFurnace4"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_MetalDetector",
+  "iconName": "MetalDetector",
+  "id": "MetalDetector",
+  "isBoss": false,
+  "level": 58,
+  "nameId": "RECIPE_MetalDetector",
+  "tier": 0,
+  "unlocks": [
+   "MetalDetector"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_BlackPuppy",
+  "iconName": "BlackPuppy",
+  "id": "SkillUnlock_BlackPuppy",
+  "isBoss": false,
+  "level": 58,
+  "nameId": "RECIPE_SkillUnlock_BlackPuppy",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BlackPuppy"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_BlueThunderHorse",
+  "iconName": "BlueThunderHorse",
+  "id": "SkillUnlock_BlueThunderHorse",
+  "isBoss": false,
+  "level": 58,
+  "nameId": "RECIPE_SkillUnlock_BlueThunderHorse",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_BlueThunderHorse"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_MultiElectricHatchingPalEgg",
+  "iconName": "MultiElectricHatchingPalEgg",
+  "id": "MultiElectricHatchingPalEgg",
+  "isBoss": true,
+  "level": 58,
+  "nameId": "RECIPE_MultiElectricHatchingPalEgg",
+  "requireBoss": "VikingBoss",
+  "tier": 0,
+  "unlocks": [
+   "MultiElectricHatchingPalEgg"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_ItemChest_04",
   "iconName": "ItemChest_04",
   "id": "ItemChest_04",
   "isBoss": false,
@@ -5814,7 +6277,21 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "ITEM_DESC_LaserGatlingGun",
+  "iconName": "LaserGatlingGun",
+  "id": "LaserGatlingGun",
+  "isBoss": false,
+  "level": 59,
+  "nameId": "RECIPE_LaserGatlingGun",
+  "tier": 0,
+  "unlocks": [
+   "LaserGatlingGun"
+  ]
+ },
+ {
   "cost": 1,
+  "descId": "ITEM_DESC_LaserGatlingBullet",
   "iconName": "LaserGatlingBullet",
   "id": "LaserGatlingBullet",
   "isBoss": false,
@@ -5827,18 +6304,7 @@
  },
  {
   "cost": 5,
-  "iconName": "LaserGatlingGun",
-  "id": "LaserGatlingGun",
-  "isBoss": false,
-  "level": 59,
-  "nameId": "RECIPE_LaserGatlingGun",
-  "tier": 0,
-  "unlocks": [
-   "LaserGatlingGun"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "ITEM_DESC_SFArmor",
   "iconName": "SFArmor",
   "id": "SFArmor",
   "isBoss": false,
@@ -5851,18 +6317,20 @@
  },
  {
   "cost": 3,
-  "iconName": "AmaterasuWolf_Dark",
-  "id": "SkillUnlock_AmaterasuWolf_Dark",
+  "descId": "ITEM_DESC_Thermal_Core",
+  "iconName": "Thermal_Core",
+  "id": "Thermal_Core",
   "isBoss": false,
   "level": 59,
-  "nameId": "RECIPE_SkillUnlock_AmaterasuWolf_Dark",
+  "nameId": "RECIPE_Thermal_Core",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_AmaterasuWolf_Dark"
+   "Thermal_Core"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkillUnlock_Umihebi_Fire",
   "iconName": "Umihebi_Fire",
   "id": "SkillUnlock_Umihebi_Fire",
   "isBoss": false,
@@ -5875,18 +6343,46 @@
  },
  {
   "cost": 3,
-  "iconName": "Thermal_Core",
-  "id": "Thermal_Core",
+  "descId": "ITEM_DESC_SkillUnlock_AmaterasuWolf_Dark",
+  "iconName": "AmaterasuWolf_Dark",
+  "id": "SkillUnlock_AmaterasuWolf_Dark",
   "isBoss": false,
   "level": 59,
-  "nameId": "RECIPE_Thermal_Core",
+  "nameId": "RECIPE_SkillUnlock_AmaterasuWolf_Dark",
   "tier": 0,
   "unlocks": [
-   "Thermal_Core"
+   "SkillUnlock_AmaterasuWolf_Dark"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_Shield_SF",
+  "iconName": "Shield_SF",
+  "id": "Shield_SF",
+  "isBoss": false,
+  "level": 60,
+  "nameId": "RECIPE_Shield_SF",
+  "tier": 0,
+  "unlocks": [
+   "Shield_SF"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SFHelmet",
+  "iconName": "SFHelmet",
+  "id": "SFHelmet",
+  "isBoss": false,
+  "level": 60,
+  "nameId": "RECIPE_SFHelmet",
+  "tier": 0,
+  "unlocks": [
+   "SFHelmet"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_Cake04",
   "iconName": "Cake04",
   "id": "Cake04",
   "isBoss": false,
@@ -5899,6 +6395,7 @@
  },
  {
   "cost": 1,
+  "descId": "RECIPE_DarkIslandFlagSet",
   "iconName": "DarkIsland_Flag",
   "id": "DarkIslandFlagSet",
   "isBoss": false,
@@ -5912,31 +6409,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "SFHelmet",
-  "id": "SFHelmet",
-  "isBoss": false,
-  "level": 60,
-  "nameId": "RECIPE_SFHelmet",
-  "tier": 0,
-  "unlocks": [
-   "SFHelmet"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "Shield_SF",
-  "id": "Shield_SF",
-  "isBoss": false,
-  "level": 60,
-  "nameId": "RECIPE_Shield_SF",
-  "tier": 0,
-  "unlocks": [
-   "Shield_SF"
-  ]
- },
- {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_Horus",
   "iconName": "Horus",
   "id": "SkillUnlock_Horus",
   "isBoss": false,
@@ -5949,6 +6423,7 @@
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Horus_Water",
   "iconName": "Horus_Water",
   "id": "SkillUnlock_Horus_Water",
   "isBoss": false,
@@ -5961,6 +6436,7 @@
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_WhiteShieldDragon",
   "iconName": "WhiteShieldDragon",
   "id": "SkillUnlock_WhiteShieldDragon",
   "isBoss": false,
@@ -5973,30 +6449,7 @@
  },
  {
   "cost": 5,
-  "iconName": "Accessory_AirDash2",
-  "id": "Accessory_AirDash2",
-  "isBoss": true,
-  "level": 61,
-  "nameId": "RECIPE_Accessory_AirDash2",
-  "tier": 0,
-  "unlocks": [
-   "Accessory_AirDash2"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "EnergyLauncherBullet",
-  "id": "EnergyLauncherBullet",
-  "isBoss": false,
-  "level": 61,
-  "nameId": "RECIPE_EnergyLauncherBullet",
-  "tier": 0,
-  "unlocks": [
-   "EnergyLauncherBullet"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "ITEM_DESC_EnergyRocketLauncher",
   "iconName": "EnergyRocketLauncher",
   "id": "EnergyRocketLauncher",
   "isBoss": false,
@@ -6008,31 +6461,21 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "MedicineFacility_03",
-  "id": "MedicineFacility_03",
+  "cost": 1,
+  "descId": "ITEM_DESC_EnergyLauncherBullet",
+  "iconName": "EnergyLauncherBullet",
+  "id": "EnergyLauncherBullet",
   "isBoss": false,
   "level": 61,
-  "nameId": "RECIPE_MedicineFacility_03",
+  "nameId": "RECIPE_EnergyLauncherBullet",
   "tier": 0,
   "unlocks": [
-   "MedicineFacility_03"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "PalRevive",
-  "id": "PalRevive",
-  "isBoss": false,
-  "level": 61,
-  "nameId": "RECIPE_PalRevive",
-  "tier": 0,
-  "unlocks": [
-   "PalRevive"
+   "EnergyLauncherBullet"
   ]
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_Potion_Extreme",
   "iconName": "Potion_Extreme",
   "id": "Potion_Extreme",
   "isBoss": false,
@@ -6044,19 +6487,34 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "BlackCentaur",
-  "id": "SkillUnlock_BlackCentaur",
+  "cost": 3,
+  "descId": "ITEM_DESC_PalRevive",
+  "iconName": "PalRevive",
+  "id": "PalRevive",
   "isBoss": false,
   "level": 61,
-  "nameId": "RECIPE_SkillUnlock_BlackCentaur",
+  "nameId": "RECIPE_PalRevive",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_BlackCentaur"
+   "PalRevive"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_MedicineFacility_03",
+  "iconName": "MedicineFacility_03",
+  "id": "MedicineFacility_03",
+  "isBoss": false,
+  "level": 61,
+  "nameId": "RECIPE_MedicineFacility_03",
+  "tier": 0,
+  "unlocks": [
+   "MedicineFacility_03"
   ]
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_SaintCentaur",
   "iconName": "SaintCentaur",
   "id": "SkillUnlock_SaintCentaur",
   "isBoss": false,
@@ -6069,42 +6527,33 @@
  },
  {
   "cost": 5,
-  "iconName": "CrystalPit",
-  "id": "CrystalPit",
-  "isBoss": true,
-  "level": 62,
-  "nameId": "RECIPE_CrystalPit",
+  "descId": "ITEM_DESC_SkillUnlock_BlackCentaur",
+  "iconName": "BlackCentaur",
+  "id": "SkillUnlock_BlackCentaur",
+  "isBoss": false,
+  "level": 61,
+  "nameId": "RECIPE_SkillUnlock_BlackCentaur",
   "tier": 0,
   "unlocks": [
-   "CrystalPit"
+   "SkillUnlock_BlackCentaur"
   ]
  },
  {
   "cost": 5,
-  "iconName": "Factory_Hard_04",
-  "id": "Factory_Hard_04",
-  "isBoss": false,
-  "level": 62,
-  "nameId": "RECIPE_Factory_Hard_04",
+  "descId": "ITEM_DESC_Accessory_AirDash2",
+  "iconName": "Accessory_AirDash2",
+  "id": "Accessory_AirDash2",
+  "isBoss": true,
+  "level": 61,
+  "nameId": "RECIPE_Accessory_AirDash2",
   "tier": 0,
   "unlocks": [
-   "Factory_Hard_04"
+   "Accessory_AirDash2"
   ]
  },
  {
   "cost": 3,
-  "iconName": "ManganeseIngot",
-  "id": "ManganeseIngot",
-  "isBoss": false,
-  "level": 62,
-  "nameId": "RECIPE_ManganeseIngot",
-  "tier": 0,
-  "unlocks": [
-   "ManganeseIngot"
-  ]
- },
- {
-  "cost": 3,
+  "descId": "ITEM_DESC_Salvage_TreasureBoxKey02",
   "iconName": "Salvage_TreasureBoxKey02",
   "id": "Salvage_TreasureBoxKey02",
   "isBoss": false,
@@ -6116,7 +6565,34 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "ITEM_DESC_ManganeseIngot",
+  "iconName": "ManganeseIngot",
+  "id": "ManganeseIngot",
+  "isBoss": false,
+  "level": 62,
+  "nameId": "RECIPE_ManganeseIngot",
+  "tier": 0,
+  "unlocks": [
+   "ManganeseIngot"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_Factory_Hard_04",
+  "iconName": "Factory_Hard_04",
+  "id": "Factory_Hard_04",
+  "isBoss": false,
+  "level": 62,
+  "nameId": "RECIPE_Factory_Hard_04",
+  "tier": 0,
+  "unlocks": [
+   "Factory_Hard_04"
+  ]
+ },
+ {
   "cost": 2,
+  "descId": "RECIPE_SF_Houseset",
   "iconName": "SF_foundation",
   "id": "SF_houseset",
   "isBoss": false,
@@ -6147,6 +6623,20 @@
  },
  {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_CrystalPit",
+  "iconName": "CrystalPit",
+  "id": "CrystalPit",
+  "isBoss": true,
+  "level": 62,
+  "nameId": "RECIPE_CrystalPit",
+  "tier": 0,
+  "unlocks": [
+   "CrystalPit"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_IceHorse",
   "iconName": "IceHorse",
   "id": "SkillUnlock_IceHorse",
   "isBoss": false,
@@ -6159,6 +6649,7 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_IceHorse_Dark",
   "iconName": "IceHorse_Dark",
   "id": "SkillUnlock_IceHorse_Dark",
   "isBoss": false,
@@ -6171,6 +6662,7 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_EnergyShotgun",
   "iconName": "EnergyShotgun",
   "id": "EnergyShotgun",
   "isBoss": false,
@@ -6183,6 +6675,7 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_EnergyShotgunBullet",
   "iconName": "EnergyShotgunBullet",
   "id": "EnergyShotgunBullet",
   "isBoss": false,
@@ -6195,19 +6688,33 @@
  },
  {
   "cost": 5,
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun5",
-  "isBoss": true,
+  "descId": "BUILDOBJECT_DESC_WeaponFactory_Dirty_04",
+  "iconName": "WeaponFactory_Dirty_04",
+  "id": "WeaponFactory_Dirty_04",
+  "isBoss": false,
   "level": 63,
-  "nameId": "RECIPE_GrapplingGun5",
-  "requireTech": "GrapplingGun4",
+  "nameId": "RECIPE_WeaponFactory_Dirty_04",
   "tier": 0,
   "unlocks": [
-   "GrapplingGun5"
+   "WeaponFactory_Dirty_04"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SFArmorHeat",
+  "iconName": "SFArmorHeat",
+  "id": "SFArmorHeat",
+  "isBoss": false,
+  "level": 63,
+  "nameId": "RECIPE_SFArmorHeat",
+  "tier": 0,
+  "unlocks": [
+   "SFArmorHeat"
   ]
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_PalDopingShot_2",
   "iconName": "PalDopingShot_2",
   "id": "PalDopingShot_2",
   "isBoss": false,
@@ -6220,42 +6727,21 @@
  },
  {
   "cost": 5,
-  "iconName": "SFArmorHeat",
-  "id": "SFArmorHeat",
-  "isBoss": false,
+  "descId": "ITEM_DESC_GrapplingGun_5",
+  "iconName": "GrapplingGun",
+  "id": "GrapplingGun5",
+  "isBoss": true,
   "level": 63,
-  "nameId": "RECIPE_SFArmorHeat",
+  "nameId": "RECIPE_GrapplingGun5",
+  "requireTech": "GrapplingGun4",
   "tier": 0,
   "unlocks": [
-   "SFArmorHeat"
+   "GrapplingGun5"
   ]
  },
  {
   "cost": 5,
-  "iconName": "WeaponFactory_Dirty_04",
-  "id": "WeaponFactory_Dirty_04",
-  "isBoss": false,
-  "level": 63,
-  "nameId": "RECIPE_WeaponFactory_Dirty_04",
-  "tier": 0,
-  "unlocks": [
-   "WeaponFactory_Dirty_04"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "IceHorseStatue",
-  "id": "IceHorseStatue",
-  "isBoss": false,
-  "level": 64,
-  "nameId": "RECIPE_IceHorseStatue",
-  "tier": 0,
-  "unlocks": [
-   "IceHorseStatue"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "ITEM_DESC_OverheatRifle",
   "iconName": "OverheatRifle",
   "id": "OverheatRifle",
   "isBoss": false,
@@ -6268,6 +6754,7 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_OverheatRifleBullet",
   "iconName": "OverheatRifleBullet",
   "id": "OverheatRifleBullet",
   "isBoss": false,
@@ -6280,6 +6767,7 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_SFArmorCold",
   "iconName": "SFArmorCold",
   "id": "SFArmorCold",
   "isBoss": false,
@@ -6291,7 +6779,21 @@
   ]
  },
  {
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_Spa3",
+  "iconName": "Spa3",
+  "id": "Spa3",
+  "isBoss": false,
+  "level": 64,
+  "nameId": "RECIPE_Spa3",
+  "tier": 0,
+  "unlocks": [
+   "Spa3"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_Kirin_Ice",
   "iconName": "Kirin_Ice",
   "id": "SkillUnlock_Kirin_Ice",
   "isBoss": false,
@@ -6304,6 +6806,7 @@
  },
  {
   "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_PoseidonOrca",
   "iconName": "PoseidonOrca",
   "id": "SkillUnlock_PoseidonOrca",
   "isBoss": false,
@@ -6315,19 +6818,99 @@
   ]
  },
  {
-  "cost": 3,
-  "iconName": "Spa3",
-  "id": "Spa3",
+  "cost": 1,
+  "descId": "BUILDOBJECT_DESC_IceHorseStatue",
+  "iconName": "IceHorseStatue",
+  "id": "IceHorseStatue",
   "isBoss": false,
   "level": 64,
-  "nameId": "RECIPE_Spa3",
+  "nameId": "RECIPE_IceHorseStatue",
   "tier": 0,
   "unlocks": [
-   "Spa3"
+   "IceHorseStatue"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_ROCKET_LAUNCHER",
+  "iconName": "Launcher_Default",
+  "id": "Battle_RangeWeapon_RocketLauncher",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_ROCKET_LAUNCHER",
+  "tier": 0,
+  "unlocks": [
+   "Launcher_Default"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "RECIPE_LAUNCHERBULLET",
+  "iconName": "ExplosiveBullet",
+  "id": "LauncherBullet",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_LAUNCHERBULLET",
+  "tier": 0,
+  "unlocks": [
+   "ExplosiveBullet"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_ChargeLaserRifle",
+  "iconName": "ChargeLaserRifle",
+  "id": "ChargeLaserRifle",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_ChargeLaserRifle",
+  "tier": 0,
+  "unlocks": [
+   "ChargeLaserRifle"
+  ]
+ },
+ {
+  "cost": 1,
+  "descId": "ITEM_DESC_ChargeLaserRifleBullet",
+  "iconName": "ChargeLaserRifleBullet",
+  "id": "ChargeLaserRifleBullet",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_ChargeLaserRifleBullet",
+  "tier": 0,
+  "unlocks": [
+   "ChargeLaserRifleBullet"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SFArmorWeight",
+  "iconName": "SFArmorWeight",
+  "id": "SFArmorWeight",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_SFArmorWeight",
+  "tier": 0,
+  "unlocks": [
+   "SFArmorWeight"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "ITEM_DESC_SkillUnlock_KingSunfish",
+  "iconName": "KingSunfish",
+  "id": "SkillUnlock_KingSunfish",
+  "isBoss": false,
+  "level": 65,
+  "nameId": "RECIPE_SkillUnlock_KingSunfish",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_KingSunfish"
   ]
  },
  {
   "cost": 6,
+  "descId": "ITEM_DESC_Accessory_AirDash3",
   "iconName": "Accessory_AirDash3",
   "id": "Accessory_AirDash3",
   "isBoss": true,
@@ -6341,78 +6924,7 @@
  },
  {
   "cost": 5,
-  "iconName": "Launcher_Default",
-  "id": "Battle_RangeWeapon_RocketLauncher",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_ROCKET_LAUNCHER",
-  "tier": 0,
-  "unlocks": [
-   "Launcher_Default"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "ChargeLaserRifle",
-  "id": "ChargeLaserRifle",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_ChargeLaserRifle",
-  "tier": 0,
-  "unlocks": [
-   "ChargeLaserRifle"
-  ]
- },
- {
-  "cost": 1,
-  "iconName": "ChargeLaserRifleBullet",
-  "id": "ChargeLaserRifleBullet",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_ChargeLaserRifleBullet",
-  "tier": 0,
-  "unlocks": [
-   "ChargeLaserRifleBullet"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "ExplosiveBullet",
-  "id": "LauncherBullet",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_LAUNCHERBULLET",
-  "tier": 0,
-  "unlocks": [
-   "ExplosiveBullet"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "SFArmorWeight",
-  "id": "SFArmorWeight",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_SFArmorWeight",
-  "tier": 0,
-  "unlocks": [
-   "SFArmorWeight"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "KingSunfish",
-  "id": "SkillUnlock_KingSunfish",
-  "isBoss": false,
-  "level": 65,
-  "nameId": "RECIPE_SkillUnlock_KingSunfish",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_KingSunfish"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "RECIPE_AncientBlastFurnace",
   "iconName": "AncientBlastFurnace",
   "id": "AncientBlastFurnace",
   "isBoss": false,
@@ -6424,43 +6936,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "DarkMechaDragon",
-  "id": "SkillUnlock_DarkMechaDragon",
-  "isBoss": false,
-  "level": 66,
-  "nameId": "RECIPE_SkillUnlock_DarkMechaDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_DarkMechaDragon"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "KingSunfish_Thunder",
-  "id": "SkillUnlock_KingSunfish_Thunder",
-  "isBoss": false,
-  "level": 66,
-  "nameId": "RECIPE_SkillUnlock_KingSunfish_Thunder",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_KingSunfish_Thunder"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "ThunderFluffyBird",
-  "id": "SkillUnlock_ThunderFluffyBird",
-  "isBoss": false,
-  "level": 66,
-  "nameId": "RECIPE_SkillUnlock_ThunderFluffyBird",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_ThunderFluffyBird"
-  ]
- },
- {
   "cost": 3,
+  "descId": "ITEM_DESC_SkyislandIngot",
   "iconName": "SkyislandIngot",
   "id": "SkyislandIngot",
   "isBoss": false,
@@ -6473,6 +6950,7 @@
  },
  {
   "cost": 4,
+  "descId": "RECIPE_WaterBuildKit",
   "iconName": "WaterBuildKit",
   "id": "WaterBuildKit",
   "isBoss": true,
@@ -6485,6 +6963,85 @@
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_KingSunfish_Thunder",
+  "iconName": "KingSunfish_Thunder",
+  "id": "SkillUnlock_KingSunfish_Thunder",
+  "isBoss": false,
+  "level": 66,
+  "nameId": "RECIPE_SkillUnlock_KingSunfish_Thunder",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_KingSunfish_Thunder"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_ThunderFluffyBird",
+  "iconName": "ThunderFluffyBird",
+  "id": "SkillUnlock_ThunderFluffyBird",
+  "isBoss": false,
+  "level": 66,
+  "nameId": "RECIPE_SkillUnlock_ThunderFluffyBird",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_ThunderFluffyBird"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_DarkMechaDragon",
+  "iconName": "DarkMechaDragon",
+  "id": "SkillUnlock_DarkMechaDragon",
+  "isBoss": false,
+  "level": 66,
+  "nameId": "RECIPE_SkillUnlock_DarkMechaDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_DarkMechaDragon"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_PalSphere_Ancient_1",
+  "iconName": "PalSphere_Ancient_1",
+  "id": "PalSphere_Ancient_1",
+  "isBoss": false,
+  "level": 67,
+  "nameId": "RECIPE_PalSphere_Ancient_1",
+  "tier": 0,
+  "unlocks": [
+   "PalSphere_Ancient_1"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_SkyBow",
+  "iconName": "SkyBow",
+  "id": "SkyBow",
+  "isBoss": false,
+  "level": 67,
+  "nameId": "RECIPE_SkyBow",
+  "tier": 0,
+  "unlocks": [
+   "SkyBow"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkyBowArrow",
+  "iconName": "SkyBowArrow",
+  "id": "SkyBowArrow",
+  "isBoss": false,
+  "level": 67,
+  "nameId": "RECIPE_SkyBowArrow",
+  "tier": 0,
+  "unlocks": [
+   "SkyBowArrow"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_AIcore",
   "iconName": "AIcore",
   "id": "AIcore",
   "isBoss": false,
@@ -6496,7 +7053,21 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "RECIPE_AncientWorkBench",
+  "iconName": "AncientWorkBench",
+  "id": "AncientWorkBench",
+  "isBoss": false,
+  "level": 67,
+  "nameId": "RECIPE_AncientWorkBench",
+  "tier": 0,
+  "unlocks": [
+   "AncientWorkBench"
+  ]
+ },
+ {
   "cost": 3,
+  "descId": "RECIPE_Ancient_Houseset",
   "iconName": "Ancient_foundation",
   "id": "Ancient_Houseset",
   "isBoss": false,
@@ -6526,115 +7097,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "AncientWorkBench",
-  "id": "AncientWorkBench",
-  "isBoss": false,
-  "level": 67,
-  "nameId": "RECIPE_AncientWorkBench",
-  "tier": 0,
-  "unlocks": [
-   "AncientWorkBench"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "PalSphere_Ancient_1",
-  "id": "PalSphere_Ancient_1",
-  "isBoss": false,
-  "level": 67,
-  "nameId": "RECIPE_PalSphere_Ancient_1",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Ancient_1"
-  ]
- },
- {
   "cost": 4,
-  "iconName": "SkyBow",
-  "id": "SkyBow",
-  "isBoss": false,
-  "level": 67,
-  "nameId": "RECIPE_SkyBow",
-  "tier": 0,
-  "unlocks": [
-   "SkyBow"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "SkyBowArrow",
-  "id": "SkyBowArrow",
-  "isBoss": false,
-  "level": 67,
-  "nameId": "RECIPE_SkyBowArrow",
-  "tier": 0,
-  "unlocks": [
-   "SkyBowArrow"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "AncientArmor",
-  "id": "AncientArmor",
-  "isBoss": false,
-  "level": 68,
-  "nameId": "RECIPE_AncientArmor",
-  "tier": 0,
-  "unlocks": [
-   "AncientArmor"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "AncientHelmet",
-  "id": "AncientHelmet",
-  "isBoss": false,
-  "level": 68,
-  "nameId": "RECIPE_AncientHelmet",
-  "tier": 0,
-  "unlocks": [
-   "AncientHelmet"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "GhostDragon",
-  "id": "SkillUnlock_GhostDragon",
-  "isBoss": false,
-  "level": 68,
-  "nameId": "RECIPE_SkillUnlock_GhostDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GhostDragon"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "SkySubmachineGun",
-  "id": "SkySubmachineGun",
-  "isBoss": false,
-  "level": 68,
-  "nameId": "RECIPE_SkySubmachineGun",
-  "tier": 0,
-  "unlocks": [
-   "SkySubmachineGun"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "SkySubmachineGunBullet",
-  "id": "SkySubmachineGunBullet",
-  "isBoss": false,
-  "level": 68,
-  "nameId": "RECIPE_SkySubmachineGunBullet",
-  "tier": 0,
-  "unlocks": [
-   "SkySubmachineGunBullet"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "RECIPE_Spear_ForestBoss2",
   "iconName": "Spear_ForestBoss2",
   "id": "Spear_ForestBoss2",
   "isBoss": false,
@@ -6647,30 +7111,72 @@
  },
  {
   "cost": 4,
-  "iconName": "FishingPond2",
-  "id": "FishingPond2",
+  "descId": "RECIPE_SkySubmachineGun",
+  "iconName": "SkySubmachineGun",
+  "id": "SkySubmachineGun",
   "isBoss": false,
-  "level": 69,
-  "nameId": "RECIPE_FishingPond2",
+  "level": 68,
+  "nameId": "RECIPE_SkySubmachineGun",
   "tier": 0,
   "unlocks": [
-   "FishingPond2"
+   "SkySubmachineGun"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkySubmachineGunBullet",
+  "iconName": "SkySubmachineGunBullet",
+  "id": "SkySubmachineGunBullet",
+  "isBoss": false,
+  "level": 68,
+  "nameId": "RECIPE_SkySubmachineGunBullet",
+  "tier": 0,
+  "unlocks": [
+   "SkySubmachineGunBullet"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_AncientArmor",
+  "iconName": "AncientArmor",
+  "id": "AncientArmor",
+  "isBoss": false,
+  "level": 68,
+  "nameId": "RECIPE_AncientArmor",
+  "tier": 0,
+  "unlocks": [
+   "AncientArmor"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_AncientHelmet",
+  "iconName": "AncientHelmet",
+  "id": "AncientHelmet",
+  "isBoss": false,
+  "level": 68,
+  "nameId": "RECIPE_AncientHelmet",
+  "tier": 0,
+  "unlocks": [
+   "AncientHelmet"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_GhostDragon",
+  "iconName": "GhostDragon",
+  "id": "SkillUnlock_GhostDragon",
+  "isBoss": false,
+  "level": 68,
+  "nameId": "RECIPE_SkillUnlock_GhostDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GhostDragon"
   ]
  },
  {
   "cost": 4,
-  "iconName": "GrassGolem_Dark",
-  "id": "SkillUnlock_GrassGolem_Dark",
-  "isBoss": false,
-  "level": 69,
-  "nameId": "RECIPE_SkillUnlock_GrassGolem_Dark",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_GrassGolem_Dark"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "RECIPE_SkyShotgun",
   "iconName": "SkyShotgun",
   "id": "SkyShotgun",
   "isBoss": false,
@@ -6683,6 +7189,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkyShotgunBullet",
   "iconName": "SkyShotgunBullet",
   "id": "SkyShotgunBullet",
   "isBoss": false,
@@ -6695,6 +7202,7 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_SphereModule_Homing",
   "iconName": "SphereModule_Homing",
   "id": "SphereModule_Homing",
   "isBoss": false,
@@ -6706,7 +7214,86 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_FishingPond2",
+  "iconName": "FishingPond2",
+  "id": "FishingPond2",
+  "isBoss": false,
+  "level": 69,
+  "nameId": "RECIPE_FishingPond2",
+  "tier": 0,
+  "unlocks": [
+   "FishingPond2"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_GrassGolem_Dark",
+  "iconName": "GrassGolem_Dark",
+  "id": "SkillUnlock_GrassGolem_Dark",
+  "isBoss": false,
+  "level": 69,
+  "nameId": "RECIPE_SkillUnlock_GrassGolem_Dark",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_GrassGolem_Dark"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_SkyAssaultRifle",
+  "iconName": "SkyAssaultRifle",
+  "id": "SkyAssaultRifle",
+  "isBoss": false,
+  "level": 70,
+  "nameId": "RECIPE_SkyAssaultRifle",
+  "tier": 0,
+  "unlocks": [
+   "SkyAssaultRifle"
+  ]
+ },
+ {
+  "cost": 2,
+  "descId": "ITEM_DESC_SkyAssaultRifleBullet",
+  "iconName": "SkyAssaultRifleBullet",
+  "id": "SkyAssaultRifleBullet",
+  "isBoss": false,
+  "level": 70,
+  "nameId": "RECIPE_SkyAssaultRifleBullet",
+  "tier": 0,
+  "unlocks": [
+   "SkyAssaultRifleBullet"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "RECIPE_AncientCookingStove",
+  "iconName": "AncientCookingStove",
+  "id": "AncientCookingStove",
+  "isBoss": false,
+  "level": 70,
+  "nameId": "RECIPE_AncientCookingStove",
+  "tier": 0,
+  "unlocks": [
+   "AncientCookingStove"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_LegendDeer",
+  "iconName": "LegendDeer",
+  "id": "SkillUnlock_LegendDeer",
+  "isBoss": false,
+  "level": 70,
+  "nameId": "RECIPE_SkillUnlock_LegendDeer",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_LegendDeer"
+  ]
+ },
+ {
   "cost": 6,
+  "descId": "ITEM_DESC_Accessory_JumpCount_Increase2",
   "iconName": "Accessory_JumpCount_Increase2",
   "id": "Accessory_JumpCount_Increase2",
   "isBoss": true,
@@ -6720,30 +7307,7 @@
  },
  {
   "cost": 4,
-  "iconName": "AncientCookingStove",
-  "id": "AncientCookingStove",
-  "isBoss": false,
-  "level": 70,
-  "nameId": "RECIPE_AncientCookingStove",
-  "tier": 0,
-  "unlocks": [
-   "AncientCookingStove"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "LegendDeer",
-  "id": "SkillUnlock_LegendDeer",
-  "isBoss": false,
-  "level": 70,
-  "nameId": "RECIPE_SkillUnlock_LegendDeer",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_LegendDeer"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_VolcanoDragon_Ice",
   "iconName": "VolcanoDragon_Ice",
   "id": "SkillUnlock_VolcanoDragon_Ice",
   "isBoss": false,
@@ -6756,30 +7320,20 @@
  },
  {
   "cost": 5,
-  "iconName": "SkyAssaultRifle",
-  "id": "SkyAssaultRifle",
+  "descId": "ITEM_DESC_Shield_07",
+  "iconName": "Shield_07",
+  "id": "Shield_07",
   "isBoss": false,
-  "level": 70,
-  "nameId": "RECIPE_SkyAssaultRifle",
+  "level": 71,
+  "nameId": "RECIPE_Shield_07",
   "tier": 0,
   "unlocks": [
-   "SkyAssaultRifle"
-  ]
- },
- {
-  "cost": 2,
-  "iconName": "SkyAssaultRifleBullet",
-  "id": "SkyAssaultRifleBullet",
-  "isBoss": false,
-  "level": 70,
-  "nameId": "RECIPE_SkyAssaultRifleBullet",
-  "tier": 0,
-  "unlocks": [
-   "SkyAssaultRifleBullet"
+   "Shield_07"
   ]
  },
  {
   "cost": 5,
+  "descId": "BUILDOBJECT_DESC_BaseCampWorkHard03",
   "iconName": "BaseCampWorkHard03",
   "id": "BaseCampWorkHard03",
   "isBoss": false,
@@ -6792,6 +7346,7 @@
  },
  {
   "cost": 3,
+  "descId": "BUILDOBJECT_DESC_Farm_SkillFruits",
   "iconName": "Farm_SkillFruits",
   "id": "Farm_SkillFruits",
   "isBoss": false,
@@ -6803,43 +7358,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "Shield_07",
-  "id": "Shield_07",
-  "isBoss": false,
-  "level": 71,
-  "nameId": "RECIPE_Shield_07",
-  "tier": 0,
-  "unlocks": [
-   "Shield_07"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "IceNarwhal_Fire",
-  "id": "SkillUnlock_IceNarwhal_Fire",
-  "isBoss": false,
-  "level": 71,
-  "nameId": "RECIPE_SkillUnlock_IceNarwhal_Fire",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_IceNarwhal_Fire"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "ThunderBird_Ice",
-  "id": "SkillUnlock_ThunderBird_Ice",
-  "isBoss": false,
-  "level": 71,
-  "nameId": "RECIPE_SkillUnlock_ThunderBird_Ice",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_ThunderBird_Ice"
-  ]
- },
- {
   "cost": 1,
+  "descId": "RECIPE_SkyIslandFlagSet",
   "iconName": "SkyIsland_Flag",
   "id": "SkyIslandFlagSet",
   "isBoss": false,
@@ -6854,30 +7374,33 @@
  },
  {
   "cost": 4,
-  "iconName": "LotusDragon",
-  "id": "SkillUnlock_LotusDragon",
+  "descId": "ITEM_DESC_SkillUnlock_ThunderBird_Ice",
+  "iconName": "ThunderBird_Ice",
+  "id": "SkillUnlock_ThunderBird_Ice",
   "isBoss": false,
-  "level": 72,
-  "nameId": "RECIPE_SkillUnlock_LotusDragon",
+  "level": 71,
+  "nameId": "RECIPE_SkillUnlock_ThunderBird_Ice",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_LotusDragon"
+   "SkillUnlock_ThunderBird_Ice"
   ]
  },
  {
   "cost": 4,
-  "iconName": "ThiefBird",
-  "id": "SkillUnlock_ThiefBird",
+  "descId": "ITEM_DESC_SkillUnlock_IceNarwhal_Fire",
+  "iconName": "IceNarwhal_Fire",
+  "id": "SkillUnlock_IceNarwhal_Fire",
   "isBoss": false,
-  "level": 72,
-  "nameId": "RECIPE_SkillUnlock_ThiefBird",
+  "level": 71,
+  "nameId": "RECIPE_SkillUnlock_IceNarwhal_Fire",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_ThiefBird"
+   "SkillUnlock_IceNarwhal_Fire"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_SkyGrenadeLauncher",
   "iconName": "SkyGrenadeLauncher",
   "id": "SkyGrenadeLauncher",
   "isBoss": false,
@@ -6890,6 +7413,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_SkyGrenadeLauncherBullet",
   "iconName": "SkyGrenadeLauncherBullet",
   "id": "SkyGrenadeLauncherBullet",
   "isBoss": false,
@@ -6902,6 +7426,7 @@
  },
  {
   "cost": 7,
+  "descId": "BUILDOBJECT_DESC_SkyIslandOrePit",
   "iconName": "SkyIslandOrePit",
   "id": "SkyIslandOrePit",
   "isBoss": true,
@@ -6914,30 +7439,46 @@
  },
  {
   "cost": 4,
-  "iconName": "Ancient_Clinic",
-  "id": "Ancient_Clinic",
+  "descId": "ITEM_DESC_SkillUnlock_ThiefBird",
+  "iconName": "ThiefBird",
+  "id": "SkillUnlock_ThiefBird",
   "isBoss": false,
-  "level": 73,
-  "nameId": "RECIPE_Ancient_Clinic",
+  "level": 72,
+  "nameId": "RECIPE_SkillUnlock_ThiefBird",
   "tier": 0,
   "unlocks": [
-   "Ancient_Clinic"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "Ancient_MedicalPalBed",
-  "id": "Ancient_MedicalPalBed",
-  "isBoss": false,
-  "level": 73,
-  "nameId": "RECIPE_Ancient_MedicalPalBed",
-  "tier": 0,
-  "unlocks": [
-   "Ancient_MedicalPalBed"
+   "SkillUnlock_ThiefBird"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_LotusDragon",
+  "iconName": "LotusDragon",
+  "id": "SkillUnlock_LotusDragon",
+  "isBoss": false,
+  "level": 72,
+  "nameId": "RECIPE_SkillUnlock_LotusDragon",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_LotusDragon"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "RECIPE_SkyBeamSword",
+  "iconName": "SkyBeamSword",
+  "id": "SkyBeamSword",
+  "isBoss": false,
+  "level": 73,
+  "nameId": "RECIPE_SkyBeamSword",
+  "tier": 0,
+  "unlocks": [
+   "SkyBeamSword"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "BUILDOBJECT_DESC_Factory_Money",
   "iconName": "Factory_Money",
   "id": "Factory_Money",
   "isBoss": false,
@@ -6950,6 +7491,33 @@
  },
  {
   "cost": 4,
+  "descId": "BUILDOBJECT_DESC_Ancient_Clinic",
+  "iconName": "Ancient_Clinic",
+  "id": "Ancient_Clinic",
+  "isBoss": false,
+  "level": 73,
+  "nameId": "RECIPE_Ancient_Clinic",
+  "tier": 0,
+  "unlocks": [
+   "Ancient_Clinic"
+  ]
+ },
+ {
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_Ancient_MedicalPalBed",
+  "iconName": "Ancient_MedicalPalBed",
+  "id": "Ancient_MedicalPalBed",
+  "isBoss": false,
+  "level": 73,
+  "nameId": "RECIPE_Ancient_MedicalPalBed",
+  "tier": 0,
+  "unlocks": [
+   "Ancient_MedicalPalBed"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_SnowTigerBeastman",
   "iconName": "SnowTigerBeastman",
   "id": "SkillUnlock_SnowTigerBeastman",
   "isBoss": false,
@@ -6961,55 +7529,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "SkyBeamSword",
-  "id": "SkyBeamSword",
-  "isBoss": false,
-  "level": 73,
-  "nameId": "RECIPE_SkyBeamSword",
-  "tier": 0,
-  "unlocks": [
-   "SkyBeamSword"
-  ]
- },
- {
-  "cost": 3,
-  "iconName": "AncientRelicRecycler",
-  "id": "AncientRelicRecycler",
-  "isBoss": false,
-  "level": 74,
-  "nameId": "RECIPE_AncientRelicRecycler",
-  "tier": 0,
-  "unlocks": [
-   "AncientRelicRecycler"
-  ]
- },
- {
   "cost": 4,
-  "iconName": "Cake05",
-  "id": "Cake05",
-  "isBoss": false,
-  "level": 74,
-  "nameId": "RECIPE_Cake05",
-  "tier": 0,
-  "unlocks": [
-   "Cake05"
-  ]
- },
- {
-  "cost": 5,
-  "iconName": "PalSphere_Ancient_2",
-  "id": "PalSphere_Ancient_2",
-  "isBoss": false,
-  "level": 74,
-  "nameId": "RECIPE_PalSphere_Ancient_2",
-  "tier": 0,
-  "unlocks": [
-   "PalSphere_Ancient_2"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "RECIPE_WorldTreeIngot",
   "iconName": "WorldTreeIngot",
   "id": "WorldTreeIngot",
   "isBoss": false,
@@ -7022,42 +7543,46 @@
  },
  {
   "cost": 5,
-  "iconName": "AncientArmorHeat",
-  "id": "AncientArmorHeat",
+  "descId": "RECIPE_PalSphere_Ancient_2",
+  "iconName": "PalSphere_Ancient_2",
+  "id": "PalSphere_Ancient_2",
   "isBoss": false,
-  "level": 75,
-  "nameId": "RECIPE_AncientArmorHeat",
+  "level": 74,
+  "nameId": "RECIPE_PalSphere_Ancient_2",
   "tier": 0,
   "unlocks": [
-   "AncientArmorHeat"
+   "PalSphere_Ancient_2"
   ]
  },
  {
-  "cost": 5,
-  "iconName": "AncientElectricGenerator",
-  "id": "AncientElectricGenerator",
+  "cost": 3,
+  "descId": "BUILDOBJECT_DESC_AncientRelicRecycler",
+  "iconName": "AncientRelicRecycler",
+  "id": "AncientRelicRecycler",
   "isBoss": false,
-  "level": 75,
-  "nameId": "RECIPE_AncientElectricGenerator",
+  "level": 74,
+  "nameId": "RECIPE_AncientRelicRecycler",
   "tier": 0,
   "unlocks": [
-   "AncientElectricGenerator"
+   "AncientRelicRecycler"
   ]
  },
  {
   "cost": 4,
-  "iconName": "CubeTurtle_Neutral",
-  "id": "SkillUnlock_CubeTurtle_Neutral",
+  "descId": "ITEM_DESC_Cake05",
+  "iconName": "Cake05",
+  "id": "Cake05",
   "isBoss": false,
-  "level": 75,
-  "nameId": "RECIPE_SkillUnlock_CubeTurtle_Neutral",
+  "level": 74,
+  "nameId": "RECIPE_Cake05",
   "tier": 0,
   "unlocks": [
-   "SkillUnlock_CubeTurtle_Neutral"
+   "Cake05"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_WidePenetrateShotgun",
   "iconName": "WidePenetrateShotgun",
   "id": "WidePenetrateShotgun",
   "isBoss": false,
@@ -7070,6 +7595,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_WidePenetrateShotgunBullet",
   "iconName": "WidePenetrateShotgunBullet",
   "id": "WidePenetrateShotgunBullet",
   "isBoss": false,
@@ -7082,18 +7608,46 @@
  },
  {
   "cost": 5,
-  "iconName": "Accessory_ExplosionResist",
-  "id": "Accessory_ExplosionResist",
+  "descId": "RECIPE_AncientArmorHeat",
+  "iconName": "AncientArmorHeat",
+  "id": "AncientArmorHeat",
   "isBoss": false,
-  "level": 76,
-  "nameId": "RECIPE_Accessory_ExplosionResist",
+  "level": 75,
+  "nameId": "RECIPE_AncientArmorHeat",
   "tier": 0,
   "unlocks": [
-   "Accessory_ExplosionResist"
+   "AncientArmorHeat"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_AncientElectricGenerator",
+  "iconName": "AncientElectricGenerator",
+  "id": "AncientElectricGenerator",
+  "isBoss": false,
+  "level": 75,
+  "nameId": "RECIPE_AncientElectricGenerator",
+  "tier": 0,
+  "unlocks": [
+   "AncientElectricGenerator"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_CubeTurtle_Neutral",
+  "iconName": "CubeTurtle_Neutral",
+  "id": "SkillUnlock_CubeTurtle_Neutral",
+  "isBoss": false,
+  "level": 75,
+  "nameId": "RECIPE_SkillUnlock_CubeTurtle_Neutral",
+  "tier": 0,
+  "unlocks": [
+   "SkillUnlock_CubeTurtle_Neutral"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "BUILDOBJECT_DESC_Ancient_Spa",
   "iconName": "Ancient_Spa",
   "id": "Ancient_Spa",
   "isBoss": false,
@@ -7105,19 +7659,8 @@
   ]
  },
  {
-  "cost": 5,
-  "iconName": "GasMask",
-  "id": "GasMask",
-  "isBoss": false,
-  "level": 76,
-  "nameId": "RECIPE_GasMask",
-  "tier": 0,
-  "unlocks": [
-   "GasMask"
-  ]
- },
- {
   "cost": 8,
+  "descId": "BUILDOBJECT_DESC_MultiElectricHatchingPalEggWithBreed",
   "iconName": "MultiElectricHatchingPalEggWithBreed",
   "id": "MultiElectricHatchingPalEggWithBreed",
   "isBoss": true,
@@ -7130,6 +7673,33 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_GasMask",
+  "iconName": "GasMask",
+  "id": "GasMask",
+  "isBoss": false,
+  "level": 76,
+  "nameId": "RECIPE_GasMask",
+  "tier": 0,
+  "unlocks": [
+   "GasMask"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_Accessory_ExplosionResist",
+  "iconName": "Accessory_ExplosionResist",
+  "id": "Accessory_ExplosionResist",
+  "isBoss": false,
+  "level": 76,
+  "nameId": "RECIPE_Accessory_ExplosionResist",
+  "tier": 0,
+  "unlocks": [
+   "Accessory_ExplosionResist"
+  ]
+ },
+ {
+  "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_GhostDragon_Fire",
   "iconName": "GhostDragon_Fire",
   "id": "SkillUnlock_GhostDragon_Fire",
   "isBoss": false,
@@ -7141,7 +7711,21 @@
   ]
  },
  {
+  "cost": 4,
+  "descId": "RECIPE_DroneLauncher",
+  "iconName": "DroneLauncher",
+  "id": "DroneLauncher",
+  "isBoss": false,
+  "level": 77,
+  "nameId": "RECIPE_DroneLauncher",
+  "tier": 0,
+  "unlocks": [
+   "DroneLauncher"
+  ]
+ },
+ {
   "cost": 5,
+  "descId": "RECIPE_AncientArmorCold",
   "iconName": "AncientArmorCold",
   "id": "AncientArmorCold",
   "isBoss": false,
@@ -7154,30 +7738,7 @@
  },
  {
   "cost": 4,
-  "iconName": "DroneLauncher",
-  "id": "DroneLauncher",
-  "isBoss": false,
-  "level": 77,
-  "nameId": "RECIPE_DroneLauncher",
-  "tier": 0,
-  "unlocks": [
-   "DroneLauncher"
-  ]
- },
- {
-  "cost": 4,
-  "iconName": "BlueSkyDragon",
-  "id": "SkillUnlock_BlueSkyDragon",
-  "isBoss": false,
-  "level": 77,
-  "nameId": "RECIPE_SkillUnlock_BlueSkyDragon",
-  "tier": 0,
-  "unlocks": [
-   "SkillUnlock_BlueSkyDragon"
-  ]
- },
- {
-  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_NightBlueHorse_Neutral",
   "iconName": "NightBlueHorse_Neutral",
   "id": "SkillUnlock_NightBlueHorse_Neutral",
   "isBoss": false,
@@ -7190,30 +7751,20 @@
  },
  {
   "cost": 4,
-  "iconName": "AncientFarmBlock",
-  "id": "AncientFarmBlock",
+  "descId": "ITEM_DESC_SkillUnlock_BlueSkyDragon",
+  "iconName": "BlueSkyDragon",
+  "id": "SkillUnlock_BlueSkyDragon",
   "isBoss": false,
-  "level": 78,
-  "nameId": "RECIPE_AncientFarmBlock",
+  "level": 77,
+  "nameId": "RECIPE_SkillUnlock_BlueSkyDragon",
   "tier": 0,
   "unlocks": [
-   "AncientFarmBlock"
+   "SkillUnlock_BlueSkyDragon"
   ]
  },
  {
   "cost": 5,
-  "iconName": "AncientMultiProduct",
-  "id": "AncientMultiProduct",
-  "isBoss": false,
-  "level": 78,
-  "nameId": "RECIPE_AncientMultiProduct",
-  "tier": 0,
-  "unlocks": [
-   "AncientMultiProduct"
-  ]
- },
- {
-  "cost": 5,
+  "descId": "RECIPE_ElectricArcAssaultRifle",
   "iconName": "ElectricArcAssaultRifle",
   "id": "ElectricArcAssaultRifle",
   "isBoss": false,
@@ -7226,6 +7777,7 @@
  },
  {
   "cost": 1,
+  "descId": "ITEM_DESC_ElectricArcAssaultRifleBullet",
   "iconName": "ElectricArcAssaultRifleBullet",
   "id": "ElectricArcAssaultRifleBullet",
   "isBoss": false,
@@ -7237,7 +7789,34 @@
   ]
  },
  {
+  "cost": 5,
+  "descId": "RECIPE_AncientMultiProduct",
+  "iconName": "AncientMultiProduct",
+  "id": "AncientMultiProduct",
+  "isBoss": false,
+  "level": 78,
+  "nameId": "RECIPE_AncientMultiProduct",
+  "tier": 0,
+  "unlocks": [
+   "AncientMultiProduct"
+  ]
+ },
+ {
   "cost": 4,
+  "descId": "RECIPE_AncientFarmBlock",
+  "iconName": "AncientFarmBlock",
+  "id": "AncientFarmBlock",
+  "isBoss": false,
+  "level": 78,
+  "nameId": "RECIPE_AncientFarmBlock",
+  "tier": 0,
+  "unlocks": [
+   "AncientFarmBlock"
+  ]
+ },
+ {
+  "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_WhiteDeer_Dark",
   "iconName": "WhiteDeer_Dark",
   "id": "SkillUnlock_WhiteDeer_Dark",
   "isBoss": false,
@@ -7250,6 +7829,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_AncientArmorWeight",
   "iconName": "AncientArmorWeight",
   "id": "AncientArmorWeight",
   "isBoss": false,
@@ -7261,19 +7841,21 @@
   ]
  },
  {
-  "cost": 1,
-  "iconName": "JetDragonStatue",
-  "id": "JetDragonStatue",
+  "cost": 4,
+  "descId": "ITEM_DESC_Supplement",
+  "iconName": "Supplement",
+  "id": "Supplement",
   "isBoss": false,
   "level": 79,
-  "nameId": "RECIPE_JetDragonStatue",
+  "nameId": "RECIPE_Supplement",
   "tier": 0,
   "unlocks": [
-   "JetDragonStatue"
+   "Supplement"
   ]
  },
  {
   "cost": 4,
+  "descId": "ITEM_DESC_SkillUnlock_DomeArmorDragon",
   "iconName": "DomeArmorDragon",
   "id": "SkillUnlock_DomeArmorDragon",
   "isBoss": false,
@@ -7286,6 +7868,7 @@
  },
  {
   "cost": 5,
+  "descId": "ITEM_DESC_SkillUnlock_JetDragon",
   "iconName": "JetDragon",
   "id": "SkillUnlock_JetDragon",
   "isBoss": false,
@@ -7297,19 +7880,21 @@
   ]
  },
  {
-  "cost": 4,
-  "iconName": "Supplement",
-  "id": "Supplement",
+  "cost": 1,
+  "descId": "BUILDOBJECT_DESC_JetDragonStatue",
+  "iconName": "JetDragonStatue",
+  "id": "JetDragonStatue",
   "isBoss": false,
   "level": 79,
-  "nameId": "RECIPE_Supplement",
+  "nameId": "RECIPE_JetDragonStatue",
   "tier": 0,
   "unlocks": [
-   "Supplement"
+   "JetDragonStatue"
   ]
  },
  {
   "cost": 5,
+  "descId": "RECIPE_BeamLauncher",
   "iconName": "BeamLauncher",
   "id": "BeamLauncher",
   "isBoss": false,
@@ -7322,6 +7907,7 @@
  },
  {
   "cost": 2,
+  "descId": "ITEM_DESC_BeamLauncherBullet",
   "iconName": "BeamLauncherBullet",
   "id": "BeamLauncherBullet",
   "isBoss": false,
@@ -7334,6 +7920,7 @@
  },
  {
   "cost": 9,
+  "descId": "RECIPE_WingGlider",
   "iconName": "WingGlider",
   "id": "WingGlider",
   "isBoss": true,
@@ -7346,6 +7933,7 @@
  },
  {
   "cost": 5,
+  "descId": "RECIPE_WingGlider_Fuel",
   "iconName": "WingGlider_Fuel",
   "id": "WingGlider_Fuel",
   "isBoss": false,

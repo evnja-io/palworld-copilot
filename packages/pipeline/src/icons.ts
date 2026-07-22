@@ -31,10 +31,39 @@ async function convert(kind: "pals" | "items", ns: string, tableHint: RegExp) {
   return present;
 }
 
+/** Icônes de constructions : pas de DataTable — on résout par nom de texture
+ *  `T_icon_buildObject_<Nom>`. Clés/fichiers en minuscules car la casse du
+ *  IconName des technos ne suit pas toujours celle de la texture.
+ *  0 converti = toléré : le dossier BuildObject/PNG n'est peut-être pas encore
+ *  exporté (runbook, section icônes). */
+async function convertBuildObjects() {
+  mkdirSync(join(ICONS_OUT, "build"), { recursive: true });
+  const present: Record<string, boolean> = {};
+  let converted = 0;
+  for (const [name, png] of pngByName) {
+    const m = name.match(/^t_icon_buildobject_(.+)$/);
+    if (!m) continue;
+    await sharp(png)
+      .resize(128, 128, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .webp({ quality: 82 })
+      .toFile(join(ICONS_OUT, "build", `${m[1]}.webp`));
+    present[`build:${m[1]}`] = true;
+    converted++;
+  }
+  console.log(`  icônes build : ${converted}`);
+  if (converted === 0) {
+    console.warn(
+      "  (aucune texture T_icon_buildObject_* — exporter Pal/Content/Pal/Texture/BuildObject/PNG depuis FModel)",
+    );
+  }
+  return present;
+}
+
 const pals = await convert("pals", "pal:", /DT_PalCharacterIconDataTable(_Common)?\.json$/);
 const items = await convert("items", "item:", /DT_ItemIconDataTable(_Common)?\.json$/);
+const builds = await convertBuildObjects();
 if (Object.keys(pals).length < 100 || Object.keys(items).length < 300) {
   throw new Error("Trop peu d'icônes converties — vérifier l'export des textures (runbook, section icônes)");
 }
-writeGameData("icons.json", { ...pals, ...items });
+writeGameData("icons.json", { ...pals, ...items, ...builds });
 console.log("icons OK");

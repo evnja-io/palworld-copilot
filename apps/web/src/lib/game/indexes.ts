@@ -13,10 +13,13 @@ export type Recipe = {
 export type Tech = {
   id: string;
   nameId: string;
+  descId?: string;
   level: number;
   cost: number;
   isBoss: boolean;
   requireBoss?: string;
+  requireTech?: string;
+  iconName?: string;
   unlocks: string[];
 };
 export type Building = {
