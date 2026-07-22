@@ -125,3 +125,12 @@ automatique (16 lignes) ; l'attribution recette→station vit dans les
 blueprints des stations, non extractible proprement.
 **Décision** : la section Craft groupe par niveau de technologie. Station
 ajoutable plus tard si une source fiable émerge.
+
+## 2026-07-22 — Trou de données : WindChimes (Hangyu)
+
+**Constat** (spike d'import Phase 5) : le pal `WindChimes` (Hangyu) est présent
+dans les saves et dans icons.json/l10n mais absent de pals.json — le filtre du
+transform (ZukanIndex>0 + nom + IsPal) l'exclut à tort. Sa capture ne peut donc
+pas être fusionnée par l'import.
+**À faire** (phase données ultérieure) : examiner sa ligne DT_PalMonsterParameter
+et ajuster le filtre de transform/pals.ts.
