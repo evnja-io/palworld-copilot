@@ -19,6 +19,7 @@
 		"@sveltejs/adapter-vercel": "^6.3.4",
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@types/leaflet": "^1.9.21",
 		"@types/pg": "^8.20.0",
 		"drizzle-kit": "^0.31.10",
 		"pg": "^8.22.0",
@@ -33,6 +34,7 @@
 		"@neondatabase/serverless": "^1.1.0",
 		"@palworld-companion/game-data": "workspace:*",
 		"arctic": "^3.7.0",
-		"drizzle-orm": "^0.45.2"
+		"drizzle-orm": "^0.45.2",
+		"leaflet": "^1.9.4"
 	}
 }

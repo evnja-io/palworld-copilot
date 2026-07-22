@@ -68,5 +68,16 @@
   "import_err_guid_missing": "GUID manquant.",
   "import_err_already_claimed_user": "Tu as déjà un GUID revendiqué.",
   "import_err_guid_taken": "Ce GUID est déjà revendiqué par quelqu'un d'autre.",
-  "import_err_guid_unknown": "Ce GUID ne correspond à aucun import."
+  "import_err_guid_unknown": "Ce GUID ne correspond à aucun import.",
+  "map_title": "Carte",
+  "map_filter_relic": "Effigies",
+  "map_filter_alpha": "Boss Alpha",
+  "map_filter_ft": "Voyage rapide",
+  "map_hide_checked": "Masquer mes trouvées",
+  "map_counter_me": "{count}/{total} effigies",
+  "map_counter_group": "{count}/{total} par le groupe",
+  "map_relic_name": "Effigie Lifmunk",
+  "map_found": "Trouvée",
+  "map_level": "Niv. {level}",
+  "map_view_pal": "Voir la fiche"
 }

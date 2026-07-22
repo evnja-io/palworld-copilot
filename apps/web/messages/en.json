@@ -68,5 +68,16 @@
   "import_err_guid_missing": "Missing GUID.",
   "import_err_already_claimed_user": "You already have a claimed GUID.",
   "import_err_guid_taken": "This GUID is already claimed by someone else.",
-  "import_err_guid_unknown": "This GUID does not match any import."
+  "import_err_guid_unknown": "This GUID does not match any import.",
+  "map_title": "Map",
+  "map_filter_relic": "Effigies",
+  "map_filter_alpha": "Alpha bosses",
+  "map_filter_ft": "Fast travel",
+  "map_hide_checked": "Hide found",
+  "map_counter_me": "{count}/{total} effigies",
+  "map_counter_group": "{count}/{total} by the group",
+  "map_relic_name": "Lifmunk Effigy",
+  "map_found": "Found",
+  "map_level": "Lv. {level}",
+  "map_view_pal": "View Pal"
 }
