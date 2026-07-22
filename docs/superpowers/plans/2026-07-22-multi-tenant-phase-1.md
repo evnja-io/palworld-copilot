@@ -999,13 +999,25 @@ git commit -m "docs: runbook de rollout multi-tenant phase 1"
 
 - [ ] **Step 1: Appliquer les migrations A puis B sur la branche**
 
+`drizzle-kit migrate` applique toutes les migrations en attente dans une seule
+transaction Postgres — comme la branche contient des données legacy (copie de
+prod), un `migrate` brut avec 0003 et 0004 toutes deux en attente échouerait
+sur le `SET NOT NULL` de 0004 (server_id encore NULL partout) et annulerait
+aussi 0003. Basculer le dossier de migrations comme dans le runbook
+(`docs/deploy-multi-tenant.md`) : appliquer 0003 seule, backfill, restaurer
+0004, puis appliquer 0004.
+
+Run: `git checkout ae8ccda -- apps/web/drizzle` (dossier migrations à l'état A, 0003 seul)
+
 Run: `cd apps/web && DATABASE_URL="$BRANCH_URL" node node_modules/drizzle-kit/bin.cjs migrate`
-Expected: `0003_*` et `0004_*` appliquées sans erreur… **sauf si** la branche contient des données legacy (elle en contient : c'est une copie de prod) — dans ce cas la 0004 échoue sur `SET NOT NULL`. Procéder en deux temps comme le runbook : appliquer jusqu'à 0003 (si les deux fichiers partent d'un coup, exécuter d'abord le backfill puis relancer `migrate`) :
+Expected: `0003_*` appliquée sans erreur.
 
 Run: `cd apps/web && DATABASE_URL="$BRANCH_URL" node --experimental-strip-types scripts/backfill-legacy-server.ts 106026755659145216`
 Expected: `serveur legacy <uuid> : +N membres, … rattachés` avec N ≥ 1.
 
-Run (re-migration B): `cd apps/web && DATABASE_URL="$BRANCH_URL" node node_modules/drizzle-kit/bin.cjs migrate`
+Run: `git checkout HEAD -- apps/web/drizzle` (restaure 0004 et le journal complet)
+
+Run (migration B): `cd apps/web && DATABASE_URL="$BRANCH_URL" node node_modules/drizzle-kit/bin.cjs migrate`
 Expected: succès. C'est le **go/no-go** du spike : si drizzle-kit échoue sur les échanges de PK, corriger le SQL de 0004 à la main (Tâche 6 Step 2) et re-tester ici avant tout rollout prod.
 
 - [ ] **Step 2: Contrôles SQL**
