@@ -107,3 +107,13 @@ Risque résiduel : faible. Au passage : MapCollectablesMod publie
 - Le script `spike:chests` prévu au plan n'a pas été écrit : la table qu'il
   devait inspecter n'existe pas (constat établi par recherche communautaire,
   décision coffres prise sans lui).
+
+## 2026-07-22 — Préfixes L10N réels (Phase 2)
+
+**Constat** : `DT_SkillNameText` mélange `ACTION_SKILL_`, `PASSIVE_`,
+`PARTNERSKILL_`, `COOP_` ; technologies sous `NAME_`/`DESC_` (ids de la forme
+`RECIPE_XXX`) ; constructions sous `MAPOBJECT_NAME_` ; descriptions de Pals
+dans `DT_PalLongDescriptionText` (sans variante _Common), préfixe
+`PAL_LONG_DESC_`.
+**Conséquence** : namespaces de sortie `skill:`, `passive:`, `partnerskill:`
+en plus de `pal:`/`item:`/`tech:`/`building:` (transform/l10n.ts).
