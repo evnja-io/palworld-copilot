@@ -8,7 +8,7 @@ export type SnapshotSummary = {
   lastImport: string;
 };
 
-export type ClaimErrorCode = "already_claimed_user" | "guid_taken" | "claim_failed";
+export type ClaimErrorCode = "already_claimed_user" | "guid_taken" | "guid_unknown";
 
 /** Erreur avec code traduisible. */
 export class ClaimError extends Error {
@@ -52,6 +52,12 @@ export async function listSnapshots(): Promise<SnapshotSummary[]> {
 /** Revendique guid pour userId puis fusionne additivement ses kinds officiels vers progress. */
 export async function claimGuid(userId: string, guid: string): Promise<void> {
   const db = getDb();
+  const known = await db
+    .select({ playerGuid: tables.saveSnapshots.playerGuid })
+    .from(tables.saveSnapshots)
+    .where(eq(tables.saveSnapshots.playerGuid, guid))
+    .limit(1);
+  if (known.length === 0) throw new ClaimError("guid_unknown");
   try {
     const updated = await db
       .update(tables.users)

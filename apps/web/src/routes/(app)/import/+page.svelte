@@ -31,7 +31,8 @@
 		const errorMap: Record<string, string> = {
 			guid_missing: m.import_err_guid_missing(),
 			already_claimed_user: m.import_err_already_claimed_user(),
-			guid_taken: m.import_err_guid_taken()
+			guid_taken: m.import_err_guid_taken(),
+			guid_unknown: m.import_err_guid_unknown()
 		};
 		return errorMap[code] ?? code;
 	}
