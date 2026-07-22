@@ -14660,93 +14660,93 @@
   "id": "tech:BOSS_DEFEAT_001"
  },
  {
-  "en": "<itemName id=|Accessory_AirDash1|/>",
-  "fr": "<itemName id=|Accessory_AirDash1|/>",
+  "en": "Air Dash Boots",
+  "fr": "Bottes de ruée aérienne",
   "id": "tech:RECIPE_Accessory_AirDash1"
  },
  {
-  "en": "<itemName id=|Accessory_AirDash2|/>",
-  "fr": "<itemName id=|Accessory_AirDash2|/>",
+  "en": "Double Air Dash Boots",
+  "fr": "Bottes de double ruée aérienne",
   "id": "tech:RECIPE_Accessory_AirDash2"
  },
  {
-  "en": "<itemName id=|Accessory_AirDash3|/>",
-  "fr": "<itemName id=|Accessory_AirDash3|/>",
+  "en": "Triple Air Dash Boots",
+  "fr": "Bottes de triple ruée aérienne",
   "id": "tech:RECIPE_Accessory_AirDash3"
  },
  {
-  "en": "<itemName id=|Accessory_AirDash4|/>",
-  "fr": "<itemName id=|Accessory_AirDash4|/>",
+  "en": "Quadruple Air Dash Boots",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_Accessory_AirDash4"
  },
  {
-  "en": "<itemName id=|Accessory_ExplosionResist|/>",
-  "fr": "<itemName id=|Accessory_ExplosionResist|/>",
+  "en": "Explosion-Resistant Undershirt",
+  "fr": "Sous-vêtement anti-explosion",
   "id": "tech:RECIPE_Accessory_ExplosionResist"
  },
  {
-  "en": "<itemName id=|Accessory_JumpCount_Increase1|/>",
-  "fr": "<itemName id=|Accessory_JumpCount_Increase1|/>",
+  "en": "Double Jump Boots",
+  "fr": "Bottes de double saut",
   "id": "tech:RECIPE_Accessory_JumpCount_Increase1"
  },
  {
-  "en": "<itemName id=|Accessory_JumpCount_Increase2|/>",
-  "fr": "<itemName id=|Accessory_JumpCount_Increase2|/>",
+  "en": "Triple Jump Boots",
+  "fr": "Bottes de triple saut",
   "id": "tech:RECIPE_Accessory_JumpCount_Increase2"
  },
  {
-  "en": "<itemName id=|Accessory_JumpCount_Increase3|/>",
-  "fr": "<itemName id=|Accessory_JumpCount_Increase3|/>",
+  "en": "Quadruple Jump Boots",
+  "fr": "Bottes de quadruple saut",
   "id": "tech:RECIPE_Accessory_JumpCount_Increase3"
  },
  {
-  "en": "<itemName id=|Accessory_JumpPower_Increase|/>",
-  "fr": "<itemName id=|Accessory_JumpPower_Increase|/>",
+  "en": "Anti-Gravity Belt",
+  "fr": "Ceinture anti-gravité",
   "id": "tech:RECIPE_Accessory_JumpPower_Increase"
  },
  {
-  "en": "<itemName id=|Accessory_Nonkilling|/>",
-  "fr": "<itemName id=|Accessory_Nonkilling|/>",
+  "en": "Ring of Mercy",
+  "fr": "Bague de pitié",
   "id": "tech:RECIPE_Accessory_Nonkilling"
  },
  {
-  "en": "<itemName id=|Accessory_TalentChecker|/>",
-  "fr": "<itemName id=|Accessory_TalentChecker|/>",
+  "en": "Ability Glasses",
+  "fr": "Lunettes de clairvoyance",
   "id": "tech:RECIPE_Accessory_TalentChecker"
  },
  {
-  "en": "<itemName id=|AdditionalInventory_001|/>",
-  "fr": "<itemName id=|AdditionalInventory_001|/>",
+  "en": "Small Pouch",
+  "fr": "Petite sacoche d'extension",
   "id": "tech:RECIPE_AdditionalInventory_001"
  },
  {
-  "en": "<itemName id=|AdditionalInventory_002|/>",
-  "fr": "<itemName id=|AdditionalInventory_002|/>",
+  "en": "Medium Pouch",
+  "fr": "Sacoche d'extension",
   "id": "tech:RECIPE_AdditionalInventory_002"
  },
  {
-  "en": "<itemName id=|AdditionalInventory_003|/>",
-  "fr": "<itemName id=|AdditionalInventory_003|/>",
+  "en": "Large Pouch",
+  "fr": "Grande sacoche d'extension",
   "id": "tech:RECIPE_AdditionalInventory_003"
  },
  {
-  "en": "<itemName id=|AdditionalInventory_004|/>",
-  "fr": "<itemName id=|AdditionalInventory_004|/>",
+  "en": "Giant Pouch",
+  "fr": "Énorme sacoche d'extension",
   "id": "tech:RECIPE_AdditionalInventory_004"
  },
  {
-  "en": "<itemName id=|AIcore|/>",
-  "fr": "<itemName id=|AIcore|/>",
+  "en": "AI Core",
+  "fr": "Noyau IA",
   "id": "tech:RECIPE_AIcore"
  },
  {
-  "en": "<mapObjectName id=|Altar|/>",
-  "fr": "<mapObjectName id=|Altar|/>",
+  "en": "Summoning Altar",
+  "fr": "Autel d'invocation",
   "id": "tech:RECIPE_Altar"
  },
  {
-  "en": "<mapObjectname id=|Ancient_Clinic|/>",
-  "fr": "<mapObjectname id=|Ancient_Clinic|/>",
+  "en": "Ancient Clinic",
+  "fr": "Clinique antique",
   "id": "tech:RECIPE_Ancient_Clinic"
  },
  {
@@ -14755,188 +14755,188 @@
   "id": "tech:RECIPE_Ancient_Houseset"
  },
  {
-  "en": "<mapObjectname id=|Ancient_MedicalPalBed|/>",
-  "fr": "<mapObjectname id=|Ancient_MedicalPalBed|/>",
+  "en": "Ancient Pal Bed",
+  "fr": "Lit antique pour Pal",
   "id": "tech:RECIPE_Ancient_MedicalPalBed"
  },
  {
-  "en": "<mapObjectname id=|Ancient_Spa|/>",
-  "fr": "<mapObjectname id=|Ancient_Spa|/>",
+  "en": "Ancient Hot Spring",
+  "fr": "Source chaude antique",
   "id": "tech:RECIPE_Ancient_Spa"
  },
  {
-  "en": "<itemName id=|AncientArmor|/>",
-  "fr": "<itemName id=|AncientArmor|/>",
+  "en": "Ancient Armor",
+  "fr": "Armure antique",
   "id": "tech:RECIPE_AncientArmor"
  },
  {
-  "en": "<itemName id=|AncientArmorCold|/>",
-  "fr": "<itemName id=|AncientArmorCold|/>",
+  "en": "Cold-Resistant Ancient Armor",
+  "fr": "Armure antique anti-froid",
   "id": "tech:RECIPE_AncientArmorCold"
  },
  {
-  "en": "<itemName id=|AncientArmorHeat|/>",
-  "fr": "<itemName id=|AncientArmorHeat|/>",
+  "en": "Heat-Resistant Ancient Armor",
+  "fr": "Armure antique anti-chaleur",
   "id": "tech:RECIPE_AncientArmorHeat"
  },
  {
-  "en": "<itemName id=|AncientArmorWeight|/>",
-  "fr": "<itemName id=|AncientArmorWeight|/>",
+  "en": "Lightweight Ancient Armor",
+  "fr": "Armure antique légère",
   "id": "tech:RECIPE_AncientArmorWeight"
  },
  {
-  "en": "<mapObjectname id=|AncientBlastFurnace|/>",
-  "fr": "<mapObjectname id=|AncientBlastFurnace|/>",
+  "en": "Ancient Furnace",
+  "fr": "Four antique",
   "id": "tech:RECIPE_AncientBlastFurnace"
  },
  {
-  "en": "<mapObjectname id=|AncientCookingStove|/>",
-  "fr": "<mapObjectname id=|AncientCookingStove|/>",
+  "en": "Ancient Kitchen",
+  "fr": "Cuisine antique",
   "id": "tech:RECIPE_AncientCookingStove"
  },
  {
-  "en": "<mapObjectname id=|AncientElectricGenerator|/>",
-  "fr": "<mapObjectname id=|AncientElectricGenerator|/>",
+  "en": "Ancient Power Generator",
+  "fr": "Générateur antique",
   "id": "tech:RECIPE_AncientElectricGenerator"
  },
  {
-  "en": "<mapObjectname id=|AncientFarmBlock|/>",
-  "fr": "<mapObjectname id=|AncientFarmBlock|/>",
+  "en": "Ancient Farm",
+  "fr": "Plantation antique",
   "id": "tech:RECIPE_AncientFarmBlock"
  },
  {
-  "en": "<itemName id=|AncientHelmet|/>",
-  "fr": "<itemName id=|AncientHelmet|/>",
+  "en": "Ancient Helm",
+  "fr": "Casque antique",
   "id": "tech:RECIPE_AncientHelmet"
  },
  {
-  "en": "<mapObjectname id=|AncientMultiProduct|/>",
-  "fr": "<mapObjectname id=|AncientMultiProduct|/>",
+  "en": "Ancient Material Synthesizer",
+  "fr": "Synthétiseur de matière antique",
   "id": "tech:RECIPE_AncientMultiProduct"
  },
  {
-  "en": "<mapObjectname id=|AncientRelicRecycler|/>",
-  "fr": "<mapObjectname id=|AncientRelicRecycler|/>",
+  "en": "Ancient Relic Recycler",
+  "fr": "Recycleur de reliques antique",
   "id": "tech:RECIPE_AncientRelicRecycler"
  },
  {
-  "en": "<mapObjectname id=|AncientWorkBench|/>",
-  "fr": "<mapObjectname id=|AncientWorkBench|/>",
+  "en": "Ancient Workbench",
+  "fr": "Établi antique",
   "id": "tech:RECIPE_AncientWorkBench"
  },
  {
-  "en": "<itemName id=|ClothArmor|/>",
-  "fr": "<itemName id=|ClothArmor|/>",
+  "en": "Cloth Outfit",
+  "fr": "Vêtement en tissu",
   "id": "tech:RECIPE_ARMOR1"
  },
  {
-  "en": "<itemName id=|ClothArmorCold|/>",
-  "fr": "<itemName id=|ClothArmorCold|/>",
+  "en": "Tundra Outfit",
+  "fr": "Tenue toundra",
   "id": "tech:RECIPE_ARMOR1_Cold"
  },
  {
-  "en": "<itemName id=|ClothArmorHeat|/>",
-  "fr": "<itemName id=|ClothArmorHeat|/>",
+  "en": "Tropical Outfit",
+  "fr": "Tenue tropicale",
   "id": "tech:RECIPE_ARMOR1_Heat"
  },
  {
-  "en": "<itemName id=|FurArmor|/>",
-  "fr": "<itemName id=|FurArmor|/>",
+  "en": "Pelt Armor",
+  "fr": "Armure en cuir",
   "id": "tech:RECIPE_ARMOR2"
  },
  {
-  "en": "<itemName id=|FurArmorCold|/>",
-  "fr": "<itemName id=|FurArmorCold|/>",
+  "en": "Cold Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-froid",
   "id": "tech:RECIPE_ARMOR2_Cold"
  },
  {
-  "en": "<itemName id=|FurArmorHeat|/>",
-  "fr": "<itemName id=|FurArmorHeat|/>",
+  "en": "Heat Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-chaleur",
   "id": "tech:RECIPE_ARMOR2_Heat"
  },
  {
-  "en": "<itemName id=|CopperArmor|/>",
-  "fr": "<itemName id=|CopperArmor|/>",
+  "en": "Metal Armor",
+  "fr": "Armure en métal",
   "id": "tech:RECIPE_ARMOR3"
  },
  {
-  "en": "<itemName id=|CopperArmorCold|/>",
-  "fr": "<itemName id=|CopperArmorCold|/>",
+  "en": "Cold Resistant Metal Armor",
+  "fr": "Armure en métal anti-froid",
   "id": "tech:RECIPE_ARMOR3_Cold"
  },
  {
-  "en": "<itemName id=|CopperArmorHeat|/>",
-  "fr": "<itemName id=|CopperArmorHeat|/>",
+  "en": "Heat Resistant Metal Armor",
+  "fr": "Armure en métal anti-chaleur",
   "id": "tech:RECIPE_ARMOR3_Heat"
  },
  {
-  "en": "<itemName id=|IronArmor|/>",
-  "fr": "<itemName id=|IronArmor|/>",
+  "en": "Refined Metal Armor",
+  "fr": "Armure en métal raffiné",
   "id": "tech:RECIPE_ARMOR4"
  },
  {
-  "en": "<itemName id=|IronArmorCold|/>",
-  "fr": "<itemName id=|IronArmorCold|/>",
+  "en": "Cold Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-froid",
   "id": "tech:RECIPE_ARMOR4_Cold"
  },
  {
-  "en": "<itemName id=|IronArmorHeat|/>",
-  "fr": "<itemName id=|IronArmorHeat|/>",
+  "en": "Heat Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-chaleur",
   "id": "tech:RECIPE_ARMOR4_Heat"
  },
  {
-  "en": "<itemName id=|StealArmor|/>",
-  "fr": "<itemName id=|StealArmor|/>",
+  "en": "Pal Metal Armor",
+  "fr": "Armure en paluminium",
   "id": "tech:RECIPE_ARMOR5"
  },
  {
-  "en": "<itemName id=|StealArmorCold|/>",
-  "fr": "<itemName id=|StealArmorCold|/>",
+  "en": "Cold Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-froid",
   "id": "tech:RECIPE_ARMOR5_Cold"
  },
  {
-  "en": "<itemName id=|StealArmorHeat|/>",
-  "fr": "<itemName id=|StealArmorHeat|/>",
+  "en": "Heat Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-chaleur",
   "id": "tech:RECIPE_ARMOR5_Heat"
  },
  {
-  "en": "<itemName id=|PlasticArmor|/>",
-  "fr": "<itemName id=|PlasticArmor|/>",
+  "en": "Plasteel Armor",
+  "fr": "Armure en plastacier",
   "id": "tech:RECIPE_ARMOR6"
  },
  {
-  "en": "<itemName id=|PlasticArmorCold|/>",
-  "fr": "<itemName id=|PlasticArmorCold|/>",
+  "en": "Cold Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-froid",
   "id": "tech:RECIPE_ARMOR6_Cold"
  },
  {
-  "en": "<itemName id=|PlasticArmorHeat|/>",
-  "fr": "<itemName id=|PlasticArmorHeat|/>",
+  "en": "Heat Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-chaleur",
   "id": "tech:RECIPE_ARMOR6_Heat"
  },
  {
-  "en": "<itemName id=|PlasticArmorWeight|/>",
-  "fr": "<itemName id=|PlasticArmorWeight|/>",
+  "en": "Lightweight Plasteel Armor",
+  "fr": "Armure en plastacier légère",
   "id": "tech:RECIPE_ARMOR6_Weight"
  },
  {
-  "en": "<itemName id=|Arrow|/>",
-  "fr": "<itemName id=|Arrow|/>",
+  "en": "Arrow",
+  "fr": "Flèche",
   "id": "tech:RECIPE_ARROW"
  },
  {
-  "en": "<itemName id=|Arrow_Fire|/>",
-  "fr": "<itemName id=|Arrow_Fire|/>",
+  "en": "Fire Arrow",
+  "fr": "Flèche de feu",
   "id": "tech:RECIPE_ARROW_FIRE"
  },
  {
-  "en": "<itemName id=|Arrow_Poison|/>",
-  "fr": "<itemName id=|Arrow_Poison|/>",
+  "en": "Poison Arrow",
+  "fr": "Flèche empoisonnée",
   "id": "tech:RECIPE_ARROW_POISON"
  },
  {
-  "en": "<itemName id=|AssaultRifle_Default1|/>",
-  "fr": "<itemName id=|AssaultRifle_Default1|/>",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
   "id": "tech:RECIPE_ASSAULT_01"
  },
  {
@@ -14950,58 +14950,58 @@
   "id": "tech:RECIPE_ASSAULT_03"
  },
  {
-  "en": "<itemName id=|AssaultRifle_Default1|/>",
-  "fr": "<itemName id=|AssaultRifle_Default1|/>",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
   "id": "tech:RECIPE_ASSAULTRIFLE"
  },
  {
-  "en": "<itemName id=|AssaultRifleBullet|/>",
-  "fr": "<itemName id=|AssaultRifleBullet|/>",
+  "en": "Assault Rifle Ammo",
+  "fr": "Balles de fusil d'assaut",
   "id": "tech:RECIPE_AssaultRifleBullet"
  },
  {
-  "en": "<itemName id=|AutoMealPouch_Tier1|/>",
-  "fr": "<itemName id=|AutoMealPouch_Tier1|/>",
+  "en": "Small Feed Bag",
+  "fr": "Petit sac de nourriture",
   "id": "tech:RECIPE_AutoMealPouch_Tier1"
  },
  {
-  "en": "<itemName id=|AutoMealPouch_Tier2|/>",
-  "fr": "<itemName id=|AutoMealPouch_Tier2|/>",
+  "en": "Average Feed Bag",
+  "fr": "Sac de nourriture",
   "id": "tech:RECIPE_AutoMealPouch_Tier2"
  },
  {
-  "en": "<itemName id=|AutoMealPouch_Tier3|/>",
-  "fr": "<itemName id=|AutoMealPouch_Tier3|/>",
+  "en": "Large Feed Bag",
+  "fr": "Grand sac de nourriture",
   "id": "tech:RECIPE_AutoMealPouch_Tier3"
  },
  {
-  "en": "<itemName id=|AutoMealPouch_Tier4|/>",
-  "fr": "<itemName id=|AutoMealPouch_Tier4|/>",
+  "en": "Huge Feed Bag",
+  "fr": "Énorme sac de nourriture",
   "id": "tech:RECIPE_AutoMealPouch_Tier4"
  },
  {
-  "en": "<itemName id=|AutoMealPouch_Tier5|/>",
-  "fr": "<itemName id=|AutoMealPouch_Tier5|/>",
+  "en": "Giant Feed Bag",
+  "fr": "Sac de nourriture ultime",
   "id": "tech:RECIPE_AutoMealPouch_Tier5"
  },
  {
-  "en": "<itemName id=|Axe_Steal|/>",
-  "fr": "<itemName id=|Axe_Steal|/>",
+  "en": "Pal Metal Axe",
+  "fr": "Hache en paluminium",
   "id": "tech:RECIPE_Axe_Steal"
  },
  {
-  "en": "<itemName id=|Axe_Tier_00|/>",
-  "fr": "<itemName id=|Axe_Tier_00|/>",
+  "en": "Stone Axe",
+  "fr": "Hache en pierre",
   "id": "tech:RECIPE_AXE1"
  },
  {
-  "en": "<itemName id=|Axe_Tier_01|/>",
-  "fr": "<itemName id=|Axe_Tier_01|/>",
+  "en": "Metal Axe",
+  "fr": "Hache en métal",
   "id": "tech:RECIPE_AXE2"
  },
  {
-  "en": "<itemName id=|Axe_Tier_02|/>",
-  "fr": "<itemName id=|Axe_Tier_02|/>",
+  "en": "Refined Metal Axe",
+  "fr": "Hache en métal raffiné",
   "id": "tech:RECIPE_AXE3"
  },
  {
@@ -15015,108 +15015,108 @@
   "id": "tech:RECIPE_BANDAGE"
  },
  {
-  "en": "<mapObjectName id=|Barrel_Wood|/>",
-  "fr": "<mapObjectName id=|Barrel_Wood|/>",
+  "en": "Wooden Barrel",
+  "fr": "Tonneau en bois",
   "id": "tech:RECIPE_Barrel_Wood"
  },
  {
-  "en": "<mapObjectName id=|Barrel01_Iron|/>",
-  "fr": "<mapObjectName id=|Barrel01_Iron|/>",
+  "en": "Red Metal Barrel",
+  "fr": "Baril rouge",
   "id": "tech:RECIPE_Barrel01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Barrel02_Iron|/>",
-  "fr": "<mapObjectName id=|Barrel02_Iron|/>",
+  "en": "Blue Metal Barrel",
+  "fr": "Baril bleu",
   "id": "tech:RECIPE_Barrel02_Iron"
  },
  {
-  "en": "<mapObjectName id=|Barrel03_Iron|/>",
-  "fr": "<mapObjectName id=|Barrel03_Iron|/>",
+  "en": "Green Metal Barrel",
+  "fr": "Baril vert",
   "id": "tech:RECIPE_Barrel03_Iron"
  },
  {
-  "en": "<mapObjectName id=|BaseCampBattleDirector|/>",
-  "fr": "<mapObjectName id=|BaseCampBattleDirector|/>",
+  "en": "Alarm Bell",
+  "fr": "Alarme",
   "id": "tech:RECIPE_BaseCampBattleDirector"
  },
  {
-  "en": "<mapObjectName id=|BaseCampItemDispenser|/>",
-  "fr": "<mapObjectName id=|BaseCampItemDispenser|/>",
+  "en": "Item Retrieval Machine",
+  "fr": "Extracteur d'objets",
   "id": "tech:RECIPE_BaseCampItemDispenser"
  },
  {
-  "en": "<mapObjectname id=|BaseCampWorkerExtraStation|/>",
-  "fr": "<mapObjectname id=|BaseCampWorkerExtraStation|/>",
+  "en": "Palbox Control Device",
+  "fr": "Terminal de Gestion de Boîte à Pals",
   "id": "tech:RECIPE_BaseCampWorkerExtraStation"
  },
  {
-  "en": "<mapObjectName id=|BaseCampWorkHard|/>",
-  "fr": "<mapObjectName id=|BaseCampWorkHard|/>",
+  "en": "Monitoring Stand",
+  "fr": "Poste de surveillance",
   "id": "tech:RECIPE_BaseCampWorkHard"
  },
  {
-  "en": "<mapObjectname id=|BaseCampWorkHard02|/>",
-  "fr": "<mapObjectname id=|BaseCampWorkHard02|/>",
+  "en": "High Quality Monitoring Stand",
+  "fr": "Poste de surveillance amélioré",
   "id": "tech:RECIPE_BaseCampWorkHard02"
  },
  {
-  "en": "<mapObjectname id=|BaseCampWorkHard03|/>",
-  "fr": "<mapObjectname id=|BaseCampWorkHard03|/>",
+  "en": "Ancient Monitoring Stand",
+  "fr": "Poste de surveillance antique",
   "id": "tech:RECIPE_BaseCampWorkHard03"
  },
  {
-  "en": "<itemName id=|Bat|/>",
-  "fr": "<itemName id=|Bat|/>",
+  "en": "Wooden Club",
+  "fr": "Batte en bois",
   "id": "tech:RECIPE_BAT"
  },
  {
-  "en": "<itemName id=|Bat2|/>",
-  "fr": "<itemName id=|Bat2|/>",
+  "en": "Bat",
+  "fr": "Batte",
   "id": "tech:RECIPE_BAT2"
  },
  {
-  "en": "<itemName id=|Bat3|/>",
-  "fr": "<itemName id=|Bat3|/>",
+  "en": "Metal Bat",
+  "fr": "Batte en métal",
   "id": "tech:RECIPE_Bat3"
  },
  {
-  "en": "<mapObjectName id=|BathTub_Stone|/>",
-  "fr": "<mapObjectName id=|BathTub_Stone|/>",
+  "en": "Antique Bathtub",
+  "fr": "Baignoire ancienne",
   "id": "tech:RECIPE_BathTub_Stone"
  },
  {
-  "en": "<itemName id=|Glider_Old|/>",
-  "fr": "<itemName id=|Glider_Old|/>",
+  "en": "Normal Parachute",
+  "fr": "Parachute normal",
   "id": "tech:RECIPE_Battle_Glider_Grade_01"
  },
  {
-  "en": "<itemName id=|Glider_Good|/>",
-  "fr": "<itemName id=|Glider_Good|/>",
+  "en": "Mega Glider",
+  "fr": "Méga planeur",
   "id": "tech:RECIPE_Battle_Glider_Grade_02"
  },
  {
-  "en": "<itemName id=|Glider_Super|/>",
-  "fr": "<itemName id=|Glider_Super|/>",
+  "en": "Giga Glider",
+  "fr": "Giga planeur",
   "id": "tech:RECIPE_Battle_Glider_Grade_03"
  },
  {
-  "en": "<itemName id=|Glider_Tera|/>",
-  "fr": "<itemName id=|Glider_Tera|/>",
+  "en": "Glider_Tera",
+  "fr": "Glider_Tera",
   "id": "tech:RECIPE_Battle_Glider_Grade_04"
  },
  {
-  "en": "<itemName id=|BeamLauncher|/>",
-  "fr": "<itemName id=|BeamLauncher|/>",
+  "en": "Beam Launcher",
+  "fr": "Canon à impulsion",
   "id": "tech:RECIPE_BeamLauncher"
  },
  {
-  "en": "<itemName id=|BeamLauncherBullet|/>",
-  "fr": "<itemName id=|BeamLauncherBullet|/>",
+  "en": "Beam Launcher Ammo",
+  "fr": "Munitions de canon à impulsion",
   "id": "tech:RECIPE_BeamLauncherBullet"
  },
  {
-  "en": "<itemName id=|BeamSword|/>",
-  "fr": "<itemName id=|BeamSword|/>",
+  "en": "Beam Sword",
+  "fr": "Épée rayonnante",
   "id": "tech:RECIPE_BeamSword"
  },
  {
@@ -15125,28 +15125,28 @@
   "id": "tech:RECIPE_BelieverFlagSet"
  },
  {
-  "en": "<mapObjectName id=|Bench_Wood|/>",
-  "fr": "<mapObjectName id=|Bench_Wood|/>",
+  "en": "Wooden Bench",
+  "fr": "Banc en bois",
   "id": "tech:RECIPE_Bench_Wood"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_Berries|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_Berries|/>",
+  "en": "Berry Plantation",
+  "fr": "Plantation de baies",
   "id": "tech:RECIPE_Berries_plantation"
  },
  {
-  "en": "<itemName id=|Bio_Battery|/>",
-  "fr": "<itemName id=|Bio_Battery|/>",
+  "en": "Bio Battery",
+  "fr": "Bio-batterie",
   "id": "tech:RECIPE_Bio_Battery"
  },
  {
-  "en": "<itemName id=|Bio_Coolant|/>",
-  "fr": "<itemName id=|Bio_Coolant|/>",
+  "en": "Cryogenic Coolant",
+  "fr": "Réfrigérant cryogénique",
   "id": "tech:RECIPE_Bio_Coolant"
  },
  {
-  "en": "<mapObjectName id=|BlastFurnace|/>",
-  "fr": "<mapObjectName id=|BlastFurnace|/>",
+  "en": "Primitive Furnace",
+  "fr": "Fournaise de fortune",
   "id": "tech:RECIPE_BLAST_FURNACE"
  },
  {
@@ -15155,248 +15155,248 @@
   "id": "tech:RECIPE_BLAST_FURNACE_4"
  },
  {
-  "en": "<mapObjectName id=|BlastFurnace4|/>",
-  "fr": "<mapObjectName id=|BlastFurnace4|/>",
+  "en": "Gigantic Furnace",
+  "fr": "Fournaise géante",
   "id": "tech:RECIPE_BlastFurnace4"
  },
  {
-  "en": "<itemName id=|WeakerBow|/>",
-  "fr": "<itemName id=|WeakerBow|/>",
+  "en": "Old Bow",
+  "fr": "Vieil arc",
   "id": "tech:RECIPE_BOW"
  },
  {
-  "en": "<itemName id=|Bow_Fire|/>",
-  "fr": "<itemName id=|Bow_Fire|/>",
+  "en": "Fire Bow",
+  "fr": "Arc de feu",
   "id": "tech:RECIPE_BOW_FIRE"
  },
  {
-  "en": "<itemName id=|Bow_Poison|/>",
-  "fr": "<itemName id=|Bow_Poison|/>",
+  "en": "Poison Bow",
+  "fr": "Arc empoisonné",
   "id": "tech:RECIPE_BOW_POISON"
  },
  {
-  "en": "<itemName id=|Bow_Triple|/>",
-  "fr": "<itemName id=|Bow_Triple|/>",
+  "en": "Three Shot Bow",
+  "fr": "Arc triple",
   "id": "tech:RECIPE_BOW3"
  },
  {
-  "en": "<itemName id=|BowGun|/>",
-  "fr": "<itemName id=|BowGun|/>",
+  "en": "Crossbow",
+  "fr": "Arbalète",
   "id": "tech:RECIPE_BOWGUN"
  },
  {
-  "en": "<itemName id=|BowGun_Fire|/>",
-  "fr": "<itemName id=|BowGun_Fire|/>",
+  "en": "Fire Arrow Crossbow",
+  "fr": "Arbalète de feu",
   "id": "tech:RECIPE_BOWGUN_FIRE"
  },
  {
-  "en": "<itemName id=|BowGun_Poison|/>",
-  "fr": "<itemName id=|BowGun_Poison|/>",
+  "en": "Poison Arrow Crossbow",
+  "fr": "Arbalète empoisonnée",
   "id": "tech:RECIPE_BOWGUN_POISON"
  },
  {
-  "en": "<mapObjectName id=|Box_Wood|/>",
-  "fr": "<mapObjectName id=|Box_Wood|/>",
+  "en": "Wooden Box",
+  "fr": "Boîte en bois",
   "id": "tech:RECIPE_Box_Wood"
  },
  {
-  "en": "<mapObjectName id=|Box01_Iron|/>",
-  "fr": "<mapObjectName id=|Box01_Iron|/>",
+  "en": "Small Container",
+  "fr": "Petite boîte",
   "id": "tech:RECIPE_Box01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Box01_Stone|/>",
-  "fr": "<mapObjectName id=|Box01_Stone|/>",
+  "en": "Antique Braided Basket",
+  "fr": "Panier en toile de jute ancien",
   "id": "tech:RECIPE_Box01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Box02_Iron|/>",
-  "fr": "<mapObjectName id=|Box02_Iron|/>",
+  "en": "Cloth Covered Container",
+  "fr": "Boîte en tissu",
   "id": "tech:RECIPE_Box02_Iron"
  },
  {
-  "en": "<mapObjectName id=|BreedFarm|/>",
-  "fr": "<mapObjectName id=|BreedFarm|/>",
+  "en": "Breeding Farm",
+  "fr": "Élevage",
   "id": "tech:RECIPE_BreedFarm"
  },
  {
-  "en": "<itemName id=|BronzeSword|/>",
-  "fr": "<itemName id=|BronzeSword|/>",
+  "en": "Primitive Sword",
+  "fr": "Épée grossière",
   "id": "tech:RECIPE_BronzeSword"
  },
  {
-  "en": "<mapObjectName id=|BuildableGoddessStatue|/>",
-  "fr": "<mapObjectName id=|BuildableGoddessStatue|/>",
+  "en": "Statue of Power",
+  "fr": "Statue de puissance",
   "id": "tech:RECIPE_BuildableGoddessStatue"
  },
  {
-  "en": "<mapObjectName id=|BuildObject_Chair01_Pal|/>",
-  "fr": "<mapObjectName id=|BuildObject_Chair01_Pal|/>",
+  "en": "BuildObject_Chair01_Pal",
+  "fr": "BuildObject_Chair01_Pal",
   "id": "tech:RECIPE_BuildObject_Chair01_Pal"
  },
  {
-  "en": "<mapObjectName id=|CableCoil01_Iron|/>",
-  "fr": "<mapObjectName id=|CableCoil01_Iron|/>",
+  "en": "Cable Reel",
+  "fr": "Tambour de câble",
   "id": "tech:RECIPE_CableCoil01_Iron"
  },
  {
-  "en": "<itemName id=|Cake02|/>",
-  "fr": "<itemName id=|Cake02|/>",
+  "en": "Mushroom Cake",
+  "fr": "Gâteau aux champignons",
   "id": "tech:RECIPE_Cake02"
  },
  {
-  "en": "<itemName id=|Cake03|/>",
-  "fr": "<itemName id=|Cake03|/>",
+  "en": "Vegetable Cake",
+  "fr": "Gâteau aux légumes",
   "id": "tech:RECIPE_Cake03"
  },
  {
-  "en": "<itemName id=|Cake04|/>",
-  "fr": "<itemName id=|Cake04|/>",
+  "en": "Extravagant Vegetable Cake",
+  "fr": "Gâteau aux légumes raffiné",
   "id": "tech:RECIPE_Cake04"
  },
  {
-  "en": "<itemName id=|Cake05|/>",
-  "fr": "<itemName id=|Cake05|/>",
+  "en": "Special Cake",
+  "fr": "Gâteau spécial",
   "id": "tech:RECIPE_Cake05"
  },
  {
-  "en": "<mapObjectName id=|CampFire|/>",
-  "fr": "<mapObjectName id=|CampFire|/>",
+  "en": "Campfire",
+  "fr": "Feu de camp",
   "id": "tech:RECIPE_CAMPFIRE"
  },
  {
-  "en": "<itemName id=|CarbonFiber|/>",
-  "fr": "<itemName id=|CarbonFiber|/>",
+  "en": "Carbon Fiber",
+  "fr": "Fibre de carbone",
   "id": "tech:RECIPE_CarbonFiber"
  },
  {
-  "en": "<mapObjectName id=|Cauldron|/>",
-  "fr": "<mapObjectName id=|Cauldron|/>",
+  "en": "Witch Cauldron",
+  "fr": "Chaudron de sorcière",
   "id": "tech:RECIPE_Cauldron"
  },
  {
-  "en": "<mapObjectName id=|CeilingLamp|/>",
-  "fr": "<mapObjectName id=|CeilingLamp|/>",
+  "en": "Ceiling Lamp",
+  "fr": "Plafonnier",
   "id": "tech:RECIPE_CeilingLamp"
  },
  {
-  "en": "<itemName id=|Cement|/>",
-  "fr": "<itemName id=|Cement|/>",
+  "en": "Cement",
+  "fr": "Ciment",
   "id": "tech:RECIPE_Cement"
  },
  {
-  "en": "<mapObjectName id=|Chair01_Iron|/>",
-  "fr": "<mapObjectName id=|Chair01_Iron|/>",
+  "en": "Leather Chair",
+  "fr": "Chaise à revêtement en cuir",
   "id": "tech:RECIPE_Chair01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Chair01_Stone|/>",
-  "fr": "<mapObjectName id=|Chair01_Stone|/>",
+  "en": "Antique Wooden Chair",
+  "fr": "Chaise ancienne en bois",
   "id": "tech:RECIPE_Chair01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Chair01_Wood|/>",
-  "fr": "<mapObjectName id=|Chair01_Wood|/>",
+  "en": "Wooden Chair",
+  "fr": "Chaise en bois",
   "id": "tech:RECIPE_Chair01_Wood"
  },
  {
-  "en": "<mapObjectName id=|Chair02_Iron|/>",
-  "fr": "<mapObjectName id=|Chair02_Iron|/>",
+  "en": "Iron Chair",
+  "fr": "Chaise en fer",
   "id": "tech:RECIPE_Chair02_Iron"
  },
  {
-  "en": "<mapObjectName id=|Chair02_Stone|/>",
-  "fr": "<mapObjectName id=|Chair02_Stone|/>",
+  "en": "Antique Green Wooden Chair",
+  "fr": "Chaise verte ancienne en bois",
   "id": "tech:RECIPE_Chair02_Stone"
  },
  {
-  "en": "<itemName id=|ChargeLaserRifle|/>",
-  "fr": "<itemName id=|ChargeLaserRifle|/>",
+  "en": "Charge Rifle",
+  "fr": "Fusil chargé",
   "id": "tech:RECIPE_ChargeLaserRifle"
  },
  {
-  "en": "<itemName id=|ChargeLaserRifleBullet|/>",
-  "fr": "<itemName id=|ChargeLaserRifleBullet|/>",
+  "en": "Charge Rifle Ammo",
+  "fr": "Balles de fusil chargé",
   "id": "tech:RECIPE_ChargeLaserRifleBullet"
  },
  {
-  "en": "<mapObjectname id=|Clinic|/>",
-  "fr": "<mapObjectname id=|Clinic|/>",
+  "en": "Clinic",
+  "fr": "Clinique",
   "id": "tech:RECIPE_Clinic"
  },
  {
-  "en": "<mapObjectName id=|Clock01_Stone|/>",
-  "fr": "<mapObjectName id=|Clock01_Stone|/>",
+  "en": "Antique Grandfather Clock",
+  "fr": "Horloge murale ancienne",
   "id": "tech:RECIPE_Clock01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Clock01_Wall_Iron|/>",
-  "fr": "<mapObjectName id=|Clock01_Wall_Iron|/>",
+  "en": "Wall Clock",
+  "fr": "Horloge murale",
   "id": "tech:RECIPE_Clock01_Wall_Iron"
  },
  {
-  "en": "<itemName id=|Cloth|/>",
-  "fr": "<itemName id=|Cloth|/>",
+  "en": "Cloth",
+  "fr": "Tissu",
   "id": "tech:RECIPE_CLOTH"
  },
  {
-  "en": "<itemName id=|Cloth2|/>",
-  "fr": "<itemName id=|Cloth2|/>",
+  "en": "High Quality Cloth",
+  "fr": "Tissu de qualité",
   "id": "tech:RECIPE_CLOTH2"
  },
  {
-  "en": "<mapObjectName id=|CoalPit|/>",
-  "fr": "<mapObjectName id=|CoalPit|/>",
+  "en": "Coal Quarry",
+  "fr": "Mine de charbon",
   "id": "tech:RECIPE_CoalPit"
  },
  {
-  "en": "<mapObjectname id=|CompositeDesk|/>",
-  "fr": "<mapObjectname id=|CompositeDesk|/>",
+  "en": "Drafting Table",
+  "fr": "Table de dessin",
   "id": "tech:RECIPE_CompositeDesk"
  },
  {
-  "en": "<itemName id=|CompoundBow|/>",
-  "fr": "<itemName id=|CompoundBow|/>",
+  "en": "Compound Bow",
+  "fr": "Arc composite",
   "id": "tech:RECIPE_CompoundBow"
  },
  {
-  "en": "<itemName id=|Computer|/>",
-  "fr": "<itemName id=|Computer|/>",
+  "en": "Computer",
+  "fr": "Ordinateur",
   "id": "tech:RECIPE_Computer"
  },
  {
-  "en": "<mapObjectName id=|Container01_Iron|/>",
-  "fr": "<mapObjectName id=|Container01_Iron|/>",
+  "en": "Large Container",
+  "fr": "Grosse boîte",
   "id": "tech:RECIPE_Container01_Iron"
  },
  {
-  "en": "<mapObjectName id=|ElectricKitchen|/>",
-  "fr": "<mapObjectName id=|ElectricKitchen|/>",
+  "en": "Electric Kitchen",
+  "fr": "Cuisine électrique",
   "id": "tech:RECIPE_COOKING_ELECTRIC_KITCHEN"
  },
  {
-  "en": "<mapObjectName id=|HighTechKitchen|/>",
-  "fr": "<mapObjectName id=|HighTechKitchen|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_COOKING_HIGH_TECH_KITCHEN"
  },
  {
-  "en": "<mapObjectName id=|CookingStove|/>",
-  "fr": "<mapObjectName id=|CookingStove|/>",
+  "en": "Cooking Pot",
+  "fr": "Marmite",
   "id": "tech:RECIPE_COOKINGSTOVE"
  },
  {
-  "en": "<mapObjectName id=|Cooler|/>",
-  "fr": "<mapObjectName id=|Cooler|/>",
+  "en": "Cooler",
+  "fr": "Climatiseur",
   "id": "tech:RECIPE_Cooler"
  },
  {
-  "en": "<mapObjectName id=|CoolerBox|/>",
-  "fr": "<mapObjectName id=|CoolerBox|/>",
+  "en": "Cooler Box",
+  "fr": "Glacière",
   "id": "tech:RECIPE_CoolerBox"
  },
  {
-  "en": "<mapObjectName id=|CoolerPalFoodBox|/>",
-  "fr": "<mapObjectName id=|CoolerPalFoodBox|/>",
+  "en": "Cold Food Box",
+  "fr": "Boîte à nourriture réfrigérée",
   "id": "tech:RECIPE_CoolerPalFoodBox"
  },
  {
@@ -15410,13 +15410,13 @@
   "id": "tech:RECIPE_COPPER_INGOT"
  },
  {
-  "en": "<mapObjectName id=|CopperPit|/>",
-  "fr": "<mapObjectName id=|CopperPit|/>",
+  "en": "Ore Mining Site",
+  "fr": "Carrière de cuivre",
   "id": "tech:RECIPE_CopperPit"
  },
  {
-  "en": "<mapObjectName id=|CopperPit_2|/>",
-  "fr": "<mapObjectName id=|CopperPit_2|/>",
+  "en": "Ore Mining Site II",
+  "fr": "Carrière de cuivre II",
   "id": "tech:RECIPE_CopperPit_2"
  },
  {
@@ -15425,33 +15425,33 @@
   "id": "tech:RECIPE_Corn_plantation"
  },
  {
-  "en": "<itemName id=|Corrosive_Solvent|/>",
-  "fr": "<itemName id=|Corrosive_Solvent|/>",
+  "en": "Corrosive Solvent",
+  "fr": "Solvant corrosif",
   "id": "tech:RECIPE_Corrosive_Solvent"
  },
  {
-  "en": "<mapObjectName id=|Counter_Wood|/>",
-  "fr": "<mapObjectName id=|Counter_Wood|/>",
+  "en": "Wooden Counter",
+  "fr": "Comptoir en bois",
   "id": "tech:RECIPE_Counter_Wood"
  },
  {
-  "en": "<mapObjectName id=|Crusher|/>",
-  "fr": "<mapObjectName id=|Crusher|/>",
+  "en": "Crusher",
+  "fr": "Concasseur",
   "id": "tech:RECIPE_Crusher"
  },
  {
-  "en": "<mapObjectname id=|CrystalPit|/>",
-  "fr": "<mapObjectname id=|CrystalPit|/>",
+  "en": "Hexolite Quartz Mine",
+  "fr": "Mine d’hexoquartz",
   "id": "tech:RECIPE_CrystalPit"
  },
  {
-  "en": "<mapObjectName id=|Curtain01_Wall_Stone|/>",
-  "fr": "<mapObjectName id=|Curtain01_Wall_Stone|/>",
+  "en": "Antique Curtain",
+  "fr": "Rideau ancien",
   "id": "tech:RECIPE_Curtain01_Wall_Stone"
  },
  {
-  "en": "<mapObjectName id=|DamagedScarecrow|/>",
-  "fr": "<mapObjectName id=|DamagedScarecrow|/>",
+  "en": "Training Dummy",
+  "fr": "Mannequin d’entraînement",
   "id": "tech:RECIPE_DamagedScarecrow"
  },
  {
@@ -15460,33 +15460,33 @@
   "id": "tech:RECIPE_DarkIslandFlagSet"
  },
  {
-  "en": "<mapObjectName id=|Decal_PalSticker_PinkCat|/>",
-  "fr": "<mapObjectName id=|Decal_PalSticker_PinkCat|/>",
+  "en": "Tuppanyan sticker",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_Decal_PalSticker_PinkCat"
  },
  {
-  "en": "<itemName id=|DecalGun_1|/>",
-  "fr": "<itemName id=|DecalGun_1|/>",
+  "en": "Decal Gun 1",
+  "fr": "Arme décalco 1",
   "id": "tech:RECIPE_DecalGun_1"
  },
  {
-  "en": "<itemName id=|DecalGun_2|/>",
-  "fr": "<itemName id=|DecalGun_2|/>",
+  "en": "Decal Gun 2",
+  "fr": "Arme décalco 2",
   "id": "tech:RECIPE_DecalGun_2"
  },
  {
-  "en": "<itemName id=|DecalGun_3|/>",
-  "fr": "<itemName id=|DecalGun_3|/>",
+  "en": "Decal Gun 3",
+  "fr": "Arme décalco 3",
   "id": "tech:RECIPE_DecalGun_3"
  },
  {
-  "en": "<itemName id=|DecalGun_4|/>",
-  "fr": "<itemName id=|DecalGun_4|/>",
+  "en": "Decal Gun 4",
+  "fr": "Arme décalco 4",
   "id": "tech:RECIPE_DecalGun_4"
  },
  {
-  "en": "<itemName id=|DecalGun_5|/>",
-  "fr": "<itemName id=|DecalGun_5|/>",
+  "en": "Decal Gun 5",
+  "fr": "Arme décalco 5",
   "id": "tech:RECIPE_DecalGun_5"
  },
  {
@@ -15495,118 +15495,118 @@
   "id": "tech:RECIPE_DecalGunSet"
  },
  {
-  "en": "<mapObjectName id=|DefenseBowGun|/>",
-  "fr": "<mapObjectName id=|DefenseBowGun|/>",
+  "en": "Mounted Crossbow",
+  "fr": "Arbalète montée",
   "id": "tech:RECIPE_DEFENCE_BOWGUN"
  },
  {
-  "en": "<mapObjectName id=|DefenseGatlingGun|/>",
-  "fr": "<mapObjectName id=|DefenseGatlingGun|/>",
+  "en": "Mounted Gatling Gun",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_DEFENCE_GATLING_GUN"
  },
  {
-  "en": "<mapObjectName id=|DefenseMachinegun|/>",
-  "fr": "<mapObjectName id=|DefenseMachinegun|/>",
+  "en": "Mounted Machine Gun",
+  "fr": "Mitrailleuse montée",
   "id": "tech:RECIPE_DEFENCE_MACHINE_GUN"
  },
  {
-  "en": "<mapObjectName id=|DefenseMissile|/>",
-  "fr": "<mapObjectName id=|DefenseMissile|/>",
+  "en": "Mounted Missile Launcher",
+  "fr": "Lance-missiles monté",
   "id": "tech:RECIPE_DEFENCE_MISSILE"
  },
  {
-  "en": "<mapObjectname id=|DefenseMachinegun_AutoTurret|/>",
-  "fr": "<mapObjectname id=|DefenseMachinegun_AutoTurret|/>",
+  "en": "Ancient Turret",
+  "fr": "Tourelle antique",
   "id": "tech:RECIPE_DefenseMachinegun_AutoTurret"
  },
  {
-  "en": "<mapObjectName id=|DefenseWait|/>",
-  "fr": "<mapObjectName id=|DefenseWait|/>",
+  "en": "Sandbag",
+  "fr": "Sac de sable",
   "id": "tech:RECIPE_DefenseWait"
  },
  {
-  "en": "<mapObjectName id=|DefenseWall|/>",
-  "fr": "<mapObjectName id=|DefenseWall|/>",
+  "en": "Stone Defensive Wall",
+  "fr": "Rempart en pierre",
   "id": "tech:RECIPE_DefenseWall"
  },
  {
-  "en": "<mapObjectName id=|DefenseWall_Metal|/>",
-  "fr": "<mapObjectName id=|DefenseWall_Metal|/>",
+  "en": "Metal Defensive Wall",
+  "fr": "Rempart en métal",
   "id": "tech:RECIPE_DefenseWall_Metal"
  },
  {
-  "en": "<mapObjectName id=|DefenseWall_Wood|/>",
-  "fr": "<mapObjectName id=|DefenseWall_Wood|/>",
+  "en": "Wooden Defensive Wall",
+  "fr": "Rempart en bois",
   "id": "tech:RECIPE_DefenseWall_Wood"
  },
  {
-  "en": "<mapObjectName id=|Desk01_Iron|/>",
-  "fr": "<mapObjectName id=|Desk01_Iron|/>",
+  "en": "Iron Desk",
+  "fr": "Bureau en fer",
   "id": "tech:RECIPE_Desk01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Desk01_Stone|/>",
-  "fr": "<mapObjectName id=|Desk01_Stone|/>",
+  "en": "Antique Desk",
+  "fr": "Bureau ancien",
   "id": "tech:RECIPE_Desk01_Stone"
  },
  {
-  "en": "<mapObjectname id=|DimensionPalStorage|/>",
-  "fr": "<mapObjectname id=|DimensionPalStorage|/>",
+  "en": "Dimensional Pal Storage",
+  "fr": "Stockage de Pals dimensionnel",
   "id": "tech:RECIPE_DimensionPalStorage"
  },
  {
-  "en": "<mapObjectName id=|DismantlingConveyor|/>",
-  "fr": "<mapObjectName id=|DismantlingConveyor|/>",
+  "en": "Pal Disassembly Conveyor",
+  "fr": "Destructeur de Pals",
   "id": "tech:RECIPE_DismantlingConveyor"
  },
  {
-  "en": "<mapObjectName id=|DisplayCharacter|/>",
-  "fr": "<mapObjectName id=|DisplayCharacter|/>",
+  "en": "Viewing Cage",
+  "fr": "Cage d'observation",
   "id": "tech:RECIPE_DisplayCharacter"
  },
  {
-  "en": "<itemName id=|DroneLauncher|/>",
-  "fr": "<itemName id=|DroneLauncher|/>",
+  "en": "Drone Launcher",
+  "fr": "Lance-drones",
   "id": "tech:RECIPE_DroneLauncher"
  },
  {
-  "en": "<itemName id=|ElecBaton|/>",
-  "fr": "<itemName id=|ElecBaton|/>",
+  "en": "Stun Baton",
+  "fr": "Matraque électrique",
   "id": "tech:RECIPE_ELECBATON"
  },
  {
-  "en": "<itemName id=|ElectricArcAssaultRifle|/>",
-  "fr": "<itemName id=|ElectricArcAssaultRifle|/>",
+  "en": "Plasma Rifle",
+  "fr": "Fusil à plasma",
   "id": "tech:RECIPE_ElectricArcAssaultRifle"
  },
  {
-  "en": "<itemName id=|ElectricArcAssaultRifleBullet|/>",
-  "fr": "<itemName id=|ElectricArcAssaultRifleBullet|/>",
+  "en": "Plasma Rifle Ammo",
+  "fr": "Munitions de fusil à plasma",
   "id": "tech:RECIPE_ElectricArcAssaultRifleBullet"
  },
  {
-  "en": "<mapObjectName id=|ElectricCooler|/>",
-  "fr": "<mapObjectName id=|ElectricCooler|/>",
+  "en": "Electric Cooler",
+  "fr": "Climatiseur électrique",
   "id": "tech:RECIPE_ElectricCooler"
  },
  {
-  "en": "<mapObjectName id=|ElectricGenerator_Large|/>",
-  "fr": "<mapObjectName id=|ElectricGenerator_Large|/>",
+  "en": "Large Power Generator",
+  "fr": "Grand générateur",
   "id": "tech:RECIPE_ElectricGenerator_Large"
  },
  {
-  "en": "<mapObjectName id=|ElectricHatchingPalEgg|/>",
-  "fr": "<mapObjectName id=|ElectricHatchingPalEgg|/>",
+  "en": "Electric Egg Incubator",
+  "fr": "Incubateur électrique",
   "id": "tech:RECIPE_ElectricHatchingPalEgg"
  },
  {
-  "en": "<mapObjectName id=|ElectricHeater|/>",
-  "fr": "<mapObjectName id=|ElectricHeater|/>",
+  "en": "Electric Heater",
+  "fr": "Chauffage électrique",
   "id": "tech:RECIPE_ElectricHeater"
  },
  {
-  "en": "<mapObjectName id=|ElectricGenerator|/>",
-  "fr": "<mapObjectName id=|ElectricGenerator|/>",
+  "en": "Power Generator",
+  "fr": "Générateur",
   "id": "tech:RECIPE_ELECTRIX_GENERATOR"
  },
  {
@@ -15625,33 +15625,33 @@
   "id": "tech:RECIPE_ElectronicCircuit"
  },
  {
-  "en": "<itemName id=|EnergyLauncherBullet|/>",
-  "fr": "<itemName id=|EnergyLauncherBullet|/>",
+  "en": "Plasma Cartridge",
+  "fr": "Cartouche de plasma",
   "id": "tech:RECIPE_EnergyLauncherBullet"
  },
  {
-  "en": "<itemName id=|EnergyRocketLauncher|/>",
-  "fr": "<itemName id=|EnergyRocketLauncher|/>",
+  "en": "Plasma Cannon",
+  "fr": "Canon à plasma",
   "id": "tech:RECIPE_EnergyRocketLauncher"
  },
  {
-  "en": "<itemName id=|EnergyShotgun|/>",
-  "fr": "<itemName id=|EnergyShotgun|/>",
+  "en": "Energy Shotgun",
+  "fr": "Fusil à pompe énergétique",
   "id": "tech:RECIPE_EnergyShotgun"
  },
  {
-  "en": "<itemName id=|EnergyShotgunBullet|/>",
-  "fr": "<itemName id=|EnergyShotgunBullet|/>",
+  "en": "Energy Shotgun Ammo",
+  "fr": "Cartouches de fusil à pompe énergétique",
   "id": "tech:RECIPE_EnergyShotgunBullet"
  },
  {
-  "en": "<mapObjectName id=|EnergyStorage_Electric|/>",
-  "fr": "<mapObjectName id=|EnergyStorage_Electric|/>",
+  "en": "Accumulator",
+  "fr": "Condensateur",
   "id": "tech:RECIPE_EnergyStorage_Electric"
  },
  {
-  "en": "<mapObjectName id=|Expedition|/>",
-  "fr": "<mapObjectName id=|Expedition|/>",
+  "en": "Pal Expedition Station",
+  "fr": "Poste d'expédition pour Pals",
   "id": "tech:RECIPE_Expedition"
  },
  {
@@ -15665,28 +15665,28 @@
   "id": "tech:RECIPE_FACTORY_COMFORTABLE_02"
  },
  {
-  "en": "<mapObjectName id=|Factory_Hard_01|/>",
-  "fr": "<mapObjectName id=|Factory_Hard_01|/>",
+  "en": "High-Quality Workbench",
+  "fr": "Établi de qualité",
   "id": "tech:RECIPE_FACTORY_HARD_01"
  },
  {
-  "en": "<mapObjectName id=|Factory_Hard_02|/>",
-  "fr": "<mapObjectName id=|Factory_Hard_02|/>",
+  "en": "Production Assembly Line",
+  "fr": "Chaîne de production",
   "id": "tech:RECIPE_FACTORY_HARD_02"
  },
  {
-  "en": "<mapObjectName id=|Factory_Hard_03|/>",
-  "fr": "<mapObjectName id=|Factory_Hard_03|/>",
+  "en": "Production Assembly Line II",
+  "fr": "Chaîne de production II",
   "id": "tech:RECIPE_FACTORY_HARD_03"
  },
  {
-  "en": "<mapObjectName id=|Factory_Hard_04|/>",
-  "fr": "<mapObjectName id=|Factory_Hard_04|/>",
+  "en": "Advanced Workshop",
+  "fr": "Chaîne de production avancée",
   "id": "tech:RECIPE_Factory_Hard_04"
  },
  {
-  "en": "<mapObjectName id=|Factory_Money|/>",
-  "fr": "<mapObjectName id=|Factory_Money|/>",
+  "en": "Gold Coin Assembly Line",
+  "fr": "Usine de fabrication de pièces d'or",
   "id": "tech:RECIPE_Factory_Money"
  },
  {
@@ -15695,28 +15695,28 @@
   "id": "tech:RECIPE_FARM"
  },
  {
-  "en": "<mapObjectName id=|Farm_SkillFruits|/>",
-  "fr": "<mapObjectName id=|Farm_SkillFruits|/>",
+  "en": "Skillfruit Orchard",
+  "fr": "Plantation de Fruits de Maîtrise",
   "id": "tech:RECIPE_Farm_SkillFruits"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_Carrot|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_Carrot|/>",
+  "en": "Carrot Plantation",
+  "fr": "Plantation de carottes",
   "id": "tech:RECIPE_FarmBlockV2_Carrot"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_Onion|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_Onion|/>",
+  "en": "Onion Plantation",
+  "fr": "Plantation d'oignons",
   "id": "tech:RECIPE_FarmBlockV2_Onion"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_Potato|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_Potato|/>",
+  "en": "Potato Plantation",
+  "fr": "Plantation de pommes de terre",
   "id": "tech:RECIPE_FarmBlockV2_Potato"
  },
  {
-  "en": "<mapObjectName id=|FastTravelPoint|/>",
-  "fr": "<mapObjectName id=|FastTravelPoint|/>",
+  "en": "Great Eagle Statue",
+  "fr": "Statue du Grand Aigle",
   "id": "tech:RECIPE_FastTravelPoint"
  },
  {
@@ -15725,28 +15725,28 @@
   "id": "tech:RECIPE_FireCultFlagSet"
  },
  {
-  "en": "<itemName id=|FishingBait_2|/>",
-  "fr": "<itemName id=|FishingBait_2|/>",
+  "en": "High Quality Bait",
+  "fr": "Appât haut de gamme",
   "id": "tech:RECIPE_FishingBait_2"
  },
  {
-  "en": "<itemName id=|FishingBait_3|/>",
-  "fr": "<itemName id=|FishingBait_3|/>",
+  "en": "Deluxe Bait",
+  "fr": "Appât de luxe",
   "id": "tech:RECIPE_FishingBait_3"
  },
  {
-  "en": "<itemName id=|FishingBait_3_A|/>",
-  "fr": "<itemName id=|FishingBait_3_A|/>",
+  "en": "Alluring Bait",
+  "fr": "Appât séduisant",
   "id": "tech:RECIPE_FishingBait_3_A"
  },
  {
-  "en": "<itemName id=|FishingBait_4|/>",
-  "fr": "<itemName id=|FishingBait_4|/>",
+  "en": "FishingBait_4",
+  "fr": "FishingBait_4",
   "id": "tech:RECIPE_FishingBait_4"
  },
  {
-  "en": "<itemName id=|FishingBait_6|/>",
-  "fr": "<itemName id=|FishingBait_6|/>",
+  "en": "FishingBait_6",
+  "fr": "FishingBait_6",
   "id": "tech:RECIPE_FishingBait_6"
  },
  {
@@ -15765,38 +15765,38 @@
   "id": "tech:RECIPE_FishingBaitSet_3"
  },
  {
-  "en": "<mapObjectname id=|FishingPond1|/>",
-  "fr": "<mapObjectname id=|FishingPond1|/>",
+  "en": "Fishing Pond",
+  "fr": "Bassin de pêche",
   "id": "tech:RECIPE_FishingPond1"
  },
  {
-  "en": "<mapObjectname id=|FishingPond2|/>",
-  "fr": "<mapObjectname id=|FishingPond2|/>",
+  "en": "Large Fishing Pond",
+  "fr": "Grand bassin de pêche",
   "id": "tech:RECIPE_FishingPond2"
  },
  {
-  "en": "<itemName id=|FishingRod_02_1|/>",
-  "fr": "<itemName id=|FishingRod_02_1|/>",
+  "en": "Intermediate Fishing Rod (Cattiva)",
+  "fr": "Canne à pêche standard (Cattiva)",
   "id": "tech:RECIPE_FishingRod_02_1"
  },
  {
-  "en": "<itemName id=|FishingRod_03_1|/>",
-  "fr": "<itemName id=|FishingRod_03_1|/>",
+  "en": "Advanced Fishing Rod (Pengullet)",
+  "fr": "Canne à pêche avancée (Pengullet)",
   "id": "tech:RECIPE_FishingRod_03_1"
  },
  {
-  "en": "<itemName id=|FishingRod_1|/>",
-  "fr": "<itemName id=|FishingRod_1|/>",
+  "en": "FishingRod_1",
+  "fr": "FishingRod_1",
   "id": "tech:RECIPE_FishingRod_1"
  },
  {
-  "en": "<itemName id=|FishingRod_2|/>",
-  "fr": "<itemName id=|FishingRod_2|/>",
+  "en": "FishingRod_2",
+  "fr": "FishingRod_2",
   "id": "tech:RECIPE_FishingRod_2"
  },
  {
-  "en": "<itemName id=|FishingRod_3|/>",
-  "fr": "<itemName id=|FishingRod_3|/>",
+  "en": "FishingRod_3",
+  "fr": "FishingRod_3",
   "id": "tech:RECIPE_FishingRod_3"
  },
  {
@@ -15815,78 +15815,78 @@
   "id": "tech:RECIPE_FishingSet3"
  },
  {
-  "en": "<itemName id=|FlameThrower|/>",
-  "fr": "<itemName id=|FlameThrower|/>",
+  "en": "FlameThrower",
+  "fr": "FlameThrower",
   "id": "tech:RECIPE_FlameThrower"
  },
  {
-  "en": "<itemName id=|FlamethrowerBullet|/>",
-  "fr": "<itemName id=|FlamethrowerBullet|/>",
+  "en": "Flamethrower Fuel",
+  "fr": "Combustible pour lance-flammes",
   "id": "tech:RECIPE_FlamethrowerBullet"
  },
  {
-  "en": "<mapObjectName id=|FlourMill|/>",
-  "fr": "<mapObjectName id=|FlourMill|/>",
+  "en": "Mill",
+  "fr": "Broyeur",
   "id": "tech:RECIPE_FlourMill"
  },
  {
-  "en": "<mapObjectName id=|FlowerBed|/>",
-  "fr": "<mapObjectName id=|FlowerBed|/>",
+  "en": "Flower Bed",
+  "fr": "Parterre",
   "id": "tech:RECIPE_FlowerBed"
  },
  {
-  "en": "<mapObjectName id=|Fountain|/>",
-  "fr": "<mapObjectName id=|Fountain|/>",
+  "en": "Water Fountain",
+  "fr": "Fontaine",
   "id": "tech:RECIPE_Fountain"
  },
  {
-  "en": "<itemName id=|FragGrenade|/>",
-  "fr": "<itemName id=|FragGrenade|/>",
+  "en": "Frag Grenade",
+  "fr": "Grenade à fragmentation",
   "id": "tech:RECIPE_FragGrenade"
  },
  {
-  "en": "<itemName id=|FragGrenade_Dark|/>",
-  "fr": "<itemName id=|FragGrenade_Dark|/>",
+  "en": "Dark Grenade",
+  "fr": "Grenade tenebra",
   "id": "tech:RECIPE_FragGrenade_Dark"
  },
  {
-  "en": "<itemName id=|FragGrenade_Dragon|/>",
-  "fr": "<itemName id=|FragGrenade_Dragon|/>",
+  "en": "Dragon Grenade",
+  "fr": "Grenade draco",
   "id": "tech:RECIPE_FragGrenade_Dragon"
  },
  {
-  "en": "<itemName id=|FragGrenade_Elec|/>",
-  "fr": "<itemName id=|FragGrenade_Elec|/>",
+  "en": "Shock Grenade",
+  "fr": "Grenade fulgura",
   "id": "tech:RECIPE_FragGrenade_Elec"
  },
  {
-  "en": "<itemName id=|FragGrenade_Fire|/>",
-  "fr": "<itemName id=|FragGrenade_Fire|/>",
+  "en": "Incendiary Grenade",
+  "fr": "Grenade flamma",
   "id": "tech:RECIPE_FragGrenade_Fire"
  },
  {
-  "en": "<itemName id=|FragGrenade_Ground|/>",
-  "fr": "<itemName id=|FragGrenade_Ground|/>",
+  "en": "Ground Grenade",
+  "fr": "Grenade terra",
   "id": "tech:RECIPE_FragGrenade_Ground"
  },
  {
-  "en": "<itemName id=|FragGrenade_Ice|/>",
-  "fr": "<itemName id=|FragGrenade_Ice|/>",
+  "en": "Ice Grenade",
+  "fr": "Grenade glacia",
   "id": "tech:RECIPE_FragGrenade_Ice"
  },
  {
-  "en": "<itemName id=|FragGrenade_Leaf|/>",
-  "fr": "<itemName id=|FragGrenade_Leaf|/>",
+  "en": "Grass Grenade",
+  "fr": "Grenade herba",
   "id": "tech:RECIPE_FragGrenade_Leaf"
  },
  {
-  "en": "<itemName id=|FragGrenade_Super|/>",
-  "fr": "<itemName id=|FragGrenade_Super|/>",
+  "en": "Frag Grenade Mk2",
+  "fr": "Grenade à fragmentation améliorée",
   "id": "tech:RECIPE_FragGrenade_Super"
  },
  {
-  "en": "<itemName id=|FragGrenade_Water|/>",
-  "fr": "<itemName id=|FragGrenade_Water|/>",
+  "en": "Water Grenade",
+  "fr": "Grenade aqua",
   "id": "tech:RECIPE_FragGrenade_Water"
  },
  {
@@ -16090,28 +16090,28 @@
   "id": "tech:RECIPE_FurnitureTree_Yellow"
  },
  {
-  "en": "<mapObjectName id=|GarbageBag_Iron|/>",
-  "fr": "<mapObjectName id=|GarbageBag_Iron|/>",
+  "en": "Garbage Bag",
+  "fr": "Sac poubelle",
   "id": "tech:RECIPE_GarbageBag_Iron"
  },
  {
-  "en": "<itemName id=|GasMask|/>",
-  "fr": "<itemName id=|GasMask|/>",
+  "en": "Corrosive Mist Mask",
+  "fr": "Masque anti-corrosion",
   "id": "tech:RECIPE_GasMask"
  },
  {
-  "en": "<itemName id=|Gasoline|/>",
-  "fr": "<itemName id=|Gasoline|/>",
+  "en": "-",
+  "fr": "-",
   "id": "tech:RECIPE_Gasoline"
  },
  {
-  "en": "<itemName id=|GatlingBullet|/>",
-  "fr": "<itemName id=|GatlingBullet|/>",
+  "en": "Gatling Gun Ammo",
+  "fr": "Munitions de gatling",
   "id": "tech:RECIPE_GatlingBullet"
  },
  {
-  "en": "<itemName id=|GatlingGun|/>",
-  "fr": "<itemName id=|GatlingGun|/>",
+  "en": "Gatling Gun",
+  "fr": "Gatling",
   "id": "tech:RECIPE_GatlingGun"
  },
  {
@@ -16120,63 +16120,63 @@
   "id": "tech:RECIPE_Glass_Houseset"
  },
  {
-  "en": "<mapObjectname id=|GlobalPalStorage|/>",
-  "fr": "<mapObjectname id=|GlobalPalStorage|/>",
+  "en": "Global Palbox",
+  "fr": "Boîte à Pals globale",
   "id": "tech:RECIPE_GlobalPalStorage"
  },
  {
-  "en": "<mapObjectName id=|Globe01_Stone|/>",
-  "fr": "<mapObjectName id=|Globe01_Stone|/>",
+  "en": "Antique Globe",
+  "fr": "Mappemonde ancienne",
   "id": "tech:RECIPE_Globe01_Stone"
  },
  {
-  "en": "<mapObjectName id=|GoalSoccer_Iron|/>",
-  "fr": "<mapObjectName id=|GoalSoccer_Iron|/>",
+  "en": "Soccer Goal",
+  "fr": "Cage de foot",
   "id": "tech:RECIPE_GoalSoccer_Iron"
  },
  {
-  "en": "<itemName id=|GrapplingGun|/>",
-  "fr": "<itemName id=|GrapplingGun|/>",
+  "en": "GrapplingGun",
+  "fr": "GrapplingGun",
   "id": "tech:RECIPE_GrapplingGun"
  },
  {
-  "en": "<itemName id=|GrapplingGun2|/>",
-  "fr": "<itemName id=|GrapplingGun2|/>",
+  "en": "GrapplingGun2",
+  "fr": "GrapplingGun2",
   "id": "tech:RECIPE_GrapplingGun2"
  },
  {
-  "en": "<itemName id=|GrapplingGun3|/>",
-  "fr": "<itemName id=|GrapplingGun3|/>",
+  "en": "GrapplingGun3",
+  "fr": "GrapplingGun3",
   "id": "tech:RECIPE_GrapplingGun3"
  },
  {
-  "en": "<itemName id=|GrapplingGun4|/>",
-  "fr": "<itemName id=|GrapplingGun4|/>",
+  "en": "GrapplingGun4",
+  "fr": "GrapplingGun4",
   "id": "tech:RECIPE_GrapplingGun4"
  },
  {
-  "en": "<itemName id=|GrapplingGun5|/>",
-  "fr": "<itemName id=|GrapplingGun5|/>",
+  "en": "GrapplingGun5",
+  "fr": "GrapplingGun5",
   "id": "tech:RECIPE_GrapplingGun5"
  },
  {
-  "en": "<itemName id=|GrenadeBullet|/>",
-  "fr": "<itemName id=|GrenadeBullet|/>",
+  "en": "Grenade Ammo",
+  "fr": "Grenade",
   "id": "tech:RECIPE_GrenadeBullet"
  },
  {
-  "en": "<itemName id=|GrenadeLauncher|/>",
-  "fr": "<itemName id=|GrenadeLauncher|/>",
+  "en": "Grenade Launcher",
+  "fr": "Lance-grenades",
   "id": "tech:RECIPE_GrenadeLauncher"
  },
  {
-  "en": "<itemName id=|GuidedMissileLauncher|/>",
-  "fr": "<itemName id=|GuidedMissileLauncher|/>",
+  "en": "Guided Missile Launcher",
+  "fr": "Lance-missiles",
   "id": "tech:RECIPE_GuidedMissileLauncher"
  },
  {
-  "en": "<mapObjectName id=|GuildChest|/>",
-  "fr": "<mapObjectName id=|GuildChest|/>",
+  "en": "Guild Chest",
+  "fr": "Coffre de guilde",
   "id": "tech:RECIPE_GuildChest"
  },
  {
@@ -16185,83 +16185,83 @@
   "id": "tech:RECIPE_Gunpowder"
  },
  {
-  "en": "<itemName id=|Gunpowder2|/>",
-  "fr": "<itemName id=|Gunpowder2|/>",
+  "en": "Gunpowder",
+  "fr": "Poudre à canon",
   "id": "tech:RECIPE_Gunpowder2"
  },
  {
-  "en": "<itemName id=|HandgunBullet|/>",
-  "fr": "<itemName id=|HandgunBullet|/>",
+  "en": "Handgun Ammo",
+  "fr": "Balles de pistolet",
   "id": "tech:RECIPE_HANDGUNBULLET"
  },
  {
-  "en": "<itemName id=|Torch|/>",
-  "fr": "<itemName id=|Torch|/>",
+  "en": "Hand-Held Torch",
+  "fr": "Torche à porter",
   "id": "tech:RECIPE_HandTorch"
  },
  {
-  "en": "<mapObjectName id=|HatchingPalEgg|/>",
-  "fr": "<mapObjectName id=|HatchingPalEgg|/>",
+  "en": "Egg Incubator",
+  "fr": "Incubateur",
   "id": "tech:RECIPE_HatchingPalEgg"
  },
  {
-  "en": "<mapObjectName id=|Headstone|/>",
-  "fr": "<mapObjectName id=|Headstone|/>",
+  "en": "Tombstone",
+  "fr": "Pierre tombale",
   "id": "tech:RECIPE_Headstone"
  },
  {
-  "en": "<mapObjectName id=|Heater|/>",
-  "fr": "<mapObjectName id=|Heater|/>",
+  "en": "Heater",
+  "fr": "Chauffage",
   "id": "tech:RECIPE_Heater"
  },
  {
-  "en": "<itemName id=|ClothHat|/>",
-  "fr": "<itemName id=|ClothHat|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_HELMET1"
  },
  {
-  "en": "<itemName id=|FurHelmet|/>",
-  "fr": "<itemName id=|FurHelmet|/>",
+  "en": "Feathered Hair Band",
+  "fr": "Barrette à plumes",
   "id": "tech:RECIPE_HELMET2"
  },
  {
-  "en": "<itemName id=|CopperHelmet|/>",
-  "fr": "<itemName id=|CopperHelmet|/>",
+  "en": "Metal Helm",
+  "fr": "Heaume en métal",
   "id": "tech:RECIPE_HELMET3"
  },
  {
-  "en": "<itemName id=|IronHelmet|/>",
-  "fr": "<itemName id=|IronHelmet|/>",
+  "en": "Refined Metal Helm",
+  "fr": "Heaume en métal raffiné",
   "id": "tech:RECIPE_HELMET4"
  },
  {
-  "en": "<itemName id=|StealHelmet|/>",
-  "fr": "<itemName id=|StealHelmet|/>",
+  "en": "Pal Metal Helm",
+  "fr": "Heaume en paluminium",
   "id": "tech:RECIPE_HELMET5"
  },
  {
-  "en": "<itemName id=|PlasticHelmet|/>",
-  "fr": "<itemName id=|PlasticHelmet|/>",
+  "en": "Plasteel Helmet",
+  "fr": "Casque en plastacier",
   "id": "tech:RECIPE_HELMET6"
  },
  {
-  "en": "<itemName id=|HighGrade_Processed_Wood|/>",
-  "fr": "<itemName id=|HighGrade_Processed_Wood|/>",
+  "en": "High Quality Wooden Board",
+  "fr": "Planche de bois raffiné",
   "id": "tech:RECIPE_HighGrade_Processed_Wood"
  },
  {
-  "en": "<itemName id=|Homeward|/>",
-  "fr": "<itemName id=|Homeward|/>",
+  "en": "Homeward Thundercloud",
+  "fr": "Nuage d'orage",
   "id": "tech:RECIPE_Homeward"
  },
  {
-  "en": "<itemName id=|HomingSphereLauncher|/>",
-  "fr": "<itemName id=|HomingSphereLauncher|/>",
+  "en": "Homing Sphere Launcher",
+  "fr": "Lance-sphères à tête chercheuse",
   "id": "tech:RECIPE_HOMING_SPHERE_LAUNCHER"
  },
  {
-  "en": "<mapObjectName id=|HugeKitchen|/>",
-  "fr": "<mapObjectName id=|HugeKitchen|/>",
+  "en": "Large-Scale Stone Oven",
+  "fr": "Grande cuisine",
   "id": "tech:RECIPE_HugeKitchen"
  },
  {
@@ -16270,8 +16270,8 @@
   "id": "tech:RECIPE_HUMANBED"
  },
  {
-  "en": "<itemName id=|HandGun_Default|/>",
-  "fr": "<itemName id=|HandGun_Default|/>",
+  "en": "Handgun",
+  "fr": "Pistolet",
   "id": "tech:RECIPE_HUNDGUN"
  },
  {
@@ -16280,18 +16280,18 @@
   "id": "tech:RECIPE_HunterFlagSet"
  },
  {
-  "en": "<mapObjectName id=|IceCrusher|/>",
-  "fr": "<mapObjectName id=|IceCrusher|/>",
+  "en": "Cryogenic Crusher",
+  "fr": "Broyeur à glace",
   "id": "tech:RECIPE_IceCrusher"
  },
  {
-  "en": "<mapObjectname id=|IceHorseStatue|/>",
-  "fr": "<mapObjectname id=|IceHorseStatue|/>",
+  "en": "Frostallion Statue",
+  "fr": "Statue de Frostallion",
   "id": "tech:RECIPE_IceHorseStatue"
  },
  {
-  "en": "<itemName id=|InkBullet|/>",
-  "fr": "<itemName id=|InkBullet|/>",
+  "en": "Decal Ink",
+  "fr": "Encre pour décalco",
   "id": "tech:RECIPE_InkBullet"
  },
  {
@@ -16300,48 +16300,48 @@
   "id": "tech:RECIPE_IRON"
  },
  {
-  "en": "<mapObjectName id=|BlastFurnace2|/>",
-  "fr": "<mapObjectName id=|BlastFurnace2|/>",
+  "en": "Improved Furnace",
+  "fr": "Fournaise améliorée",
   "id": "tech:RECIPE_IRON_INGOT"
  },
  {
-  "en": "<mapObjectName id=|ItemChest|/>",
-  "fr": "<mapObjectName id=|ItemChest|/>",
+  "en": "Wooden Chest",
+  "fr": "Coffre en bois",
   "id": "tech:RECIPE_ITEM_CHEST_01"
  },
  {
-  "en": "<mapObjectName id=|ItemChest_02|/>",
-  "fr": "<mapObjectName id=|ItemChest_02|/>",
+  "en": "Metal Chest",
+  "fr": "Coffre en métal",
   "id": "tech:RECIPE_ITEM_CHEST_02"
  },
  {
-  "en": "<mapObjectName id=|ItemChest_03|/>",
-  "fr": "<mapObjectName id=|ItemChest_03|/>",
+  "en": "Refined Metal Chest",
+  "fr": "Coffre en métal raffiné",
   "id": "tech:RECIPE_ITEM_CHEST_03"
  },
  {
-  "en": "<mapObjectName id=|ItemBooth|/>",
-  "fr": "<mapObjectName id=|ItemBooth|/>",
+  "en": "Flea Market (Items)",
+  "fr": "Marché aux puces (Objets)",
   "id": "tech:RECIPE_ItemBooth"
  },
  {
-  "en": "<mapObjectName id=|ItemChest_04|/>",
-  "fr": "<mapObjectName id=|ItemChest_04|/>",
+  "en": "Advanced Chest",
+  "fr": "Coffre avancé",
   "id": "tech:RECIPE_ItemChest_04"
  },
  {
-  "en": "<mapObjectName id=|Ivy01|/>",
-  "fr": "<mapObjectName id=|Ivy01|/>",
+  "en": "Big Wall Ivy",
+  "fr": "Grand lierre mural",
   "id": "tech:RECIPE_Ivy01"
  },
  {
-  "en": "<mapObjectName id=|Ivy02|/>",
-  "fr": "<mapObjectName id=|Ivy02|/>",
+  "en": "Small Wall Ivy",
+  "fr": "Petit lierre mural",
   "id": "tech:RECIPE_Ivy02"
  },
  {
-  "en": "<mapObjectName id=|Ivy03|/>",
-  "fr": "<mapObjectName id=|Ivy03|/>",
+  "en": "Horizontal Wall Ivy",
+  "fr": "Lierre mural horizontal",
   "id": "tech:RECIPE_Ivy03"
  },
  {
@@ -16355,23 +16355,23 @@
   "id": "tech:RECIPE_JapaneseStyle_Houseset"
  },
  {
-  "en": "<mapObjectname id=|JetDragonStatue|/>",
-  "fr": "<mapObjectname id=|JetDragonStatue|/>",
+  "en": "Jetragon Statue",
+  "fr": "Statue de Jetragon",
   "id": "tech:RECIPE_JetDragonStatue"
  },
  {
-  "en": "<itemName id=|Katana|/>",
-  "fr": "<itemName id=|Katana|/>",
+  "en": "Katana",
+  "fr": "Katana",
   "id": "tech:RECIPE_Katana"
  },
  {
-  "en": "<mapObjectName id=|Lab|/>",
-  "fr": "<mapObjectName id=|Lab|/>",
+  "en": "Pal Labor Research Lab",
+  "fr": "Centre de recherche sur le travail des Pals",
   "id": "tech:RECIPE_Lab"
  },
  {
-  "en": "<mapObjectName id=|Lamp|/>",
-  "fr": "<mapObjectName id=|Lamp|/>",
+  "en": "Lamp",
+  "fr": "Lampadaire",
   "id": "tech:RECIPE_Lamp"
  },
  {
@@ -16380,23 +16380,23 @@
   "id": "tech:RECIPE_Lamp_set"
  },
  {
-  "en": "<itemName id=|Lantern|/>",
-  "fr": "<itemName id=|Lantern|/>",
+  "en": "Hip Lantern",
+  "fr": "Lanterne de taille",
   "id": "tech:RECIPE_Lantern"
  },
  {
-  "en": "<itemName id=|Lantern_High|/>",
-  "fr": "<itemName id=|Lantern_High|/>",
+  "en": "Enhanced Hip Lantern",
+  "fr": "Lanterne de taille améliorée",
   "id": "tech:RECIPE_Lantern_High"
  },
  {
-  "en": "<mapObjectName id=|LargeCeilingLamp|/>",
-  "fr": "<mapObjectName id=|LargeCeilingLamp|/>",
+  "en": "Large Ceiling Lamp",
+  "fr": "Plafonnier (grand)",
   "id": "tech:RECIPE_LargeCeilingLamp"
  },
  {
-  "en": "<mapObjectName id=|LargeLamp|/>",
-  "fr": "<mapObjectName id=|LargeLamp|/>",
+  "en": "Large Mounted Lamp",
+  "fr": "Lampadaire (grand)",
   "id": "tech:RECIPE_LargeLamp"
  },
  {
@@ -16405,98 +16405,98 @@
   "id": "tech:RECIPE_LargeLamp_set"
  },
  {
-  "en": "<itemName id=|LaserBullet|/>",
-  "fr": "<itemName id=|LaserBullet|/>",
+  "en": "Energy Cartridge",
+  "fr": "Cartouche d'énergie",
   "id": "tech:RECIPE_LaserBullet"
  },
  {
-  "en": "<itemName id=|LaserGatlingBullet|/>",
-  "fr": "<itemName id=|LaserGatlingBullet|/>",
+  "en": "Laser Gatling Cartridge",
+  "fr": "Cartouche de gatling laser",
   "id": "tech:RECIPE_LaserGatlingBullet"
  },
  {
-  "en": "<itemName id=|LaserGatlingGun|/>",
-  "fr": "<itemName id=|LaserGatlingGun|/>",
+  "en": "Laser Gatling Gun",
+  "fr": "Gatling laser",
   "id": "tech:RECIPE_LaserGatlingGun"
  },
  {
-  "en": "<itemName id=|LaserMiningTool|/>",
-  "fr": "<itemName id=|LaserMiningTool|/>",
+  "en": "Plasma Multicutter",
+  "fr": "Découpeur multi-plasma",
   "id": "tech:RECIPE_LaserMiningTool"
  },
  {
-  "en": "<itemName id=|LaserRifle|/>",
-  "fr": "<itemName id=|LaserRifle|/>",
+  "en": "Laser Rifle",
+  "fr": "Fusil laser",
   "id": "tech:RECIPE_LaserRifle"
  },
  {
-  "en": "<itemName id=|Launcher_Meat|/>",
-  "fr": "<itemName id=|Launcher_Meat|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_Launcher_Meat"
  },
  {
-  "en": "<itemName id=|Launcher_Meteor|/>",
-  "fr": "<itemName id=|Launcher_Meteor|/>",
+  "en": "Meteor Launcher",
+  "fr": "Lance-météorites",
   "id": "tech:RECIPE_Launcher_Meteor"
  },
  {
-  "en": "<itemName id=|ExplosiveBullet|/>",
-  "fr": "<itemName id=|ExplosiveBullet|/>",
+  "en": "Rocket Ammo",
+  "fr": "Munitions de roquette",
   "id": "tech:RECIPE_LAUNCHERBULLET"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_Lettuce|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_Lettuce|/>",
+  "en": "Lettuce Plantation",
+  "fr": "Plantation de laitue",
   "id": "tech:RECIPE_Lettuce_plantation"
  },
  {
-  "en": "<mapObjectName id=|Light_CandleSticks_Top|/>",
-  "fr": "<mapObjectName id=|Light_CandleSticks_Top|/>",
+  "en": "Chandelier",
+  "fr": "Chandelier",
   "id": "tech:RECIPE_Light_CandleSticks_Top"
  },
  {
-  "en": "<mapObjectName id=|Light_CandleSticks_Wall|/>",
-  "fr": "<mapObjectName id=|Light_CandleSticks_Wall|/>",
+  "en": "Wall Lamp",
+  "fr": "Lampe murale",
   "id": "tech:RECIPE_Light_CandleSticks_Wall"
  },
  {
-  "en": "<mapObjectName id=|Light_FirePlace01|/>",
-  "fr": "<mapObjectName id=|Light_FirePlace01|/>",
+  "en": "Brick Fireplace",
+  "fr": "Cheminée en briques",
   "id": "tech:RECIPE_Light_FirePlace01"
  },
  {
-  "en": "<mapObjectName id=|Light_FirePlace02|/>",
-  "fr": "<mapObjectName id=|Light_FirePlace02|/>",
+  "en": "Fireplace",
+  "fr": "Cheminée",
   "id": "tech:RECIPE_Light_FirePlace02"
  },
  {
-  "en": "<mapObjectName id=|Light_FloorLamp01|/>",
-  "fr": "<mapObjectName id=|Light_FloorLamp01|/>",
+  "en": "Antique Brown Floor Lamp",
+  "fr": "Lampadaire marron ancien",
   "id": "tech:RECIPE_Light_FloorLamp01"
  },
  {
-  "en": "<mapObjectName id=|Light_FloorLamp02|/>",
-  "fr": "<mapObjectName id=|Light_FloorLamp02|/>",
+  "en": "Antique Red Floor Lamp",
+  "fr": "Lampadaire rouge ancien",
   "id": "tech:RECIPE_Light_FloorLamp02"
  },
  {
-  "en": "<mapObjectName id=|Light_LightPole01|/>",
-  "fr": "<mapObjectName id=|Light_LightPole01|/>",
+  "en": "Simple Street Lamp",
+  "fr": "Réverbère simple",
   "id": "tech:RECIPE_Light_LightPole01"
  },
  {
-  "en": "<mapObjectName id=|Light_LightPole02|/>",
-  "fr": "<mapObjectName id=|Light_LightPole02|/>",
+  "en": "Double Street Lamp",
+  "fr": "Réverbère à deux branches",
   "id": "tech:RECIPE_Light_LightPole02"
  },
  {
-  "en": "<mapObjectName id=|Light_LightPole03|/>",
-  "fr": "<mapObjectName id=|Light_LightPole03|/>",
+  "en": "Retro Street Lamp",
+  "fr": "Réverbère rétro",
   "id": "tech:RECIPE_Light_LightPole03"
  },
  {
-  "en": "<mapObjectName id=|Light_LightPole04|/>",
-  "fr": "<mapObjectName id=|Light_LightPole04|/>",
+  "en": "Stylish Street Lamp",
+  "fr": "Réverbère chic",
   "id": "tech:RECIPE_Light_LightPole04"
  },
  {
@@ -16505,93 +16505,93 @@
   "id": "tech:RECIPE_LOGHOUSE"
  },
  {
-  "en": "<mapObjectName id=|MachineGame01_Iron|/>",
-  "fr": "<mapObjectName id=|MachineGame01_Iron|/>",
+  "en": "Claw Machine",
+  "fr": "Machine à pince",
   "id": "tech:RECIPE_MachineGame01_Iron"
  },
  {
-  "en": "<itemName id=|MachineParts|/>",
-  "fr": "<itemName id=|MachineParts|/>",
+  "en": "Nail",
+  "fr": "Clou",
   "id": "tech:RECIPE_MachineParts"
  },
  {
-  "en": "<itemName id=|MachineParts2|/>",
-  "fr": "<itemName id=|MachineParts2|/>",
+  "en": "Circuit Board",
+  "fr": "Circuit imprimé",
   "id": "tech:RECIPE_MachineParts2"
  },
  {
-  "en": "<mapObjectName id=|MachineVending01_Iron|/>",
-  "fr": "<mapObjectName id=|MachineVending01_Iron|/>",
+  "en": "Cola Vending Machine",
+  "fr": "Distributeur de cola",
   "id": "tech:RECIPE_MachineVending01_Iron"
  },
  {
-  "en": "<itemName id=|MachingunBullet|/>",
-  "fr": "<itemName id=|MachingunBullet|/>",
+  "en": "Machine Gun Ammo",
+  "fr": "Balles de mitrailleuse",
   "id": "tech:RECIPE_MachingunBullet"
  },
  {
-  "en": "<itemName id=|MagnumBullet|/>",
-  "fr": "<itemName id=|MagnumBullet|/>",
+  "en": "Magnum Ammo",
+  "fr": "Balles de magnum",
   "id": "tech:RECIPE_MagnumBullet"
  },
  {
-  "en": "<itemName id=|MakeshiftAssaultRifle|/>",
-  "fr": "<itemName id=|MakeshiftAssaultRifle|/>",
+  "en": "Makeshift Assault Rifle",
+  "fr": "Fusil d'assaut usé",
   "id": "tech:RECIPE_MakeshiftAssaultRifle"
  },
  {
-  "en": "<itemName id=|MakeshiftHandgun|/>",
-  "fr": "<itemName id=|MakeshiftHandgun|/>",
+  "en": "Makeshift Handgun",
+  "fr": "Pistolet rouillé",
   "id": "tech:RECIPE_MAKESHIFTHANDGUN"
  },
  {
-  "en": "<itemName id=|MakeshiftShotgun|/>",
-  "fr": "<itemName id=|MakeshiftShotgun|/>",
+  "en": "Makeshift Shotgun",
+  "fr": "Fusil à pompe usé",
   "id": "tech:RECIPE_MakeshiftShotgun"
  },
  {
-  "en": "<itemName id=|MakeshiftSubmachineGun|/>",
-  "fr": "<itemName id=|MakeshiftSubmachineGun|/>",
+  "en": "Makeshift SMG",
+  "fr": "Pistolet-mitrailleur usé",
   "id": "tech:RECIPE_MakeshiftSubmachineGun"
  },
  {
-  "en": "<itemName id=|ManganeseIngot|/>",
-  "fr": "<itemName id=|ManganeseIngot|/>",
+  "en": "Coralum Ingot",
+  "fr": "Lingot de korallium",
   "id": "tech:RECIPE_ManganeseIngot"
  },
  {
-  "en": "<mapObjectName id=|ManualElectricGenerator|/>",
-  "fr": "<mapObjectName id=|ManualElectricGenerator|/>",
+  "en": "Human-Powered Generator",
+  "fr": "Générateur manuel",
   "id": "tech:RECIPE_ManualElectricGenerator"
  },
  {
-  "en": "<itemName id=|MeatCutterKnife|/>",
-  "fr": "<itemName id=|MeatCutterKnife|/>",
+  "en": "Meat Cleaver",
+  "fr": "Couteau de boucher",
   "id": "tech:RECIPE_MeatCutterKnife"
  },
  {
-  "en": "<mapObjectName id=|MedicalPalBed_03|/>",
-  "fr": "<mapObjectName id=|MedicalPalBed_03|/>",
+  "en": "Fluffy Pal Bed",
+  "fr": "Lit pour Pal moelleux",
   "id": "tech:RECIPE_MEDICAL_PALBED_02"
  },
  {
-  "en": "<mapObjectName id=|MedicalPalBed_04|/>",
-  "fr": "<mapObjectName id=|MedicalPalBed_04|/>",
+  "en": "Large Pal Bed",
+  "fr": "Grand lit pour Pal",
   "id": "tech:RECIPE_MedicalPalBed_04"
  },
  {
-  "en": "<mapObjectName id=|MedicalPalBed_05|/>",
-  "fr": "<mapObjectName id=|MedicalPalBed_05|/>",
+  "en": "Pal Pod",
+  "fr": "Capsule pour Pal avancée",
   "id": "tech:RECIPE_MedicalPalBed_05"
  },
  {
-  "en": "<mapObjectName id=|MedicineFacility_01|/>",
-  "fr": "<mapObjectName id=|MedicineFacility_01|/>",
+  "en": "Medieval Medicine Workbench",
+  "fr": "Table pharmaceutique archaïque",
   "id": "tech:RECIPE_MEDICINE_FACILITY_01"
  },
  {
-  "en": "<mapObjectName id=|MedicineFacility_02|/>",
-  "fr": "<mapObjectName id=|MedicineFacility_02|/>",
+  "en": "Electric Medicine Workbench",
+  "fr": "Table pharmaceutique électrique",
   "id": "tech:RECIPE_MEDICINE_FACILITY_02"
  },
  {
@@ -16600,23 +16600,23 @@
   "id": "tech:RECIPE_MEDICINE_FACILITY_03"
  },
  {
-  "en": "<mapObjectName id=|MedicineFacility_03|/>",
-  "fr": "<mapObjectName id=|MedicineFacility_03|/>",
+  "en": "Advanced Medicine Workbench",
+  "fr": "Table pharmaceutique avancée",
   "id": "tech:RECIPE_MedicineFacility_03"
  },
  {
-  "en": "<mapObjectName id=|Metal_DoorWall|/>",
-  "fr": "<mapObjectName id=|Metal_DoorWall|/>",
+  "en": "Metal Door",
+  "fr": "Porte en métal",
   "id": "tech:RECIPE_Metal_DoorWall"
  },
  {
-  "en": "<mapObjectName id=|Metal_foundation|/>",
-  "fr": "<mapObjectName id=|Metal_foundation|/>",
+  "en": "Metal Foundation",
+  "fr": "Fondation en métal",
   "id": "tech:RECIPE_Metal_foundation"
  },
  {
-  "en": "<mapObjectName id=|Metal_Gate|/>",
-  "fr": "<mapObjectName id=|Metal_Gate|/>",
+  "en": "Iron Gate",
+  "fr": "Porte en métal",
   "id": "tech:RECIPE_Metal_Gate"
  },
  {
@@ -16625,93 +16625,93 @@
   "id": "tech:RECIPE_Metal_Houseset"
  },
  {
-  "en": "<mapObjectName id=|Metal_roof|/>",
-  "fr": "<mapObjectName id=|Metal_roof|/>",
+  "en": "Metal Roof",
+  "fr": "Toit en métal",
   "id": "tech:RECIPE_Metal_roof"
  },
  {
-  "en": "<mapObjectName id=|Metal_SlantedRoof|/>",
-  "fr": "<mapObjectName id=|Metal_SlantedRoof|/>",
+  "en": "Metal Slanted Roof",
+  "fr": "Toit incliné en métal",
   "id": "tech:RECIPE_Metal_SlantedRoof"
  },
  {
-  "en": "<mapObjectName id=|Metal_stair|/>",
-  "fr": "<mapObjectName id=|Metal_stair|/>",
+  "en": "Metal Stairs",
+  "fr": "Escalier en métal",
   "id": "tech:RECIPE_Metal_stair"
  },
  {
-  "en": "<mapObjectName id=|Metal_TriangleWall|/>",
-  "fr": "<mapObjectName id=|Metal_TriangleWall|/>",
+  "en": "Metal Triangular Wall",
+  "fr": "Mur triangulaire en métal",
   "id": "tech:RECIPE_Metal_TriangleWall"
  },
  {
-  "en": "<mapObjectName id=|Metal_wall|/>",
-  "fr": "<mapObjectName id=|Metal_wall|/>",
+  "en": "Metal Wall",
+  "fr": "Mur en métal",
   "id": "tech:RECIPE_Metal_wall"
  },
  {
-  "en": "<mapObjectName id=|Metal_WindowWall|/>",
-  "fr": "<mapObjectName id=|Metal_WindowWall|/>",
+  "en": "Metal Wall and Window",
+  "fr": "Mur avec fenêtres en métal",
   "id": "tech:RECIPE_Metal_WindowWall"
  },
  {
-  "en": "<itemName id=|MetalDetector|/>",
-  "fr": "<itemName id=|MetalDetector|/>",
+  "en": "Metal Detector",
+  "fr": "Détecteur de métaux",
   "id": "tech:RECIPE_MetalDetector"
  },
  {
-  "en": "<mapObjectName id=|MiningTool|/>",
-  "fr": "<mapObjectName id=|MiningTool|/>",
+  "en": "Mining Cart",
+  "fr": "Wagon minier",
   "id": "tech:RECIPE_MiningTool"
  },
  {
-  "en": "<mapObjectName id=|Mirror01_Stone|/>",
-  "fr": "<mapObjectName id=|Mirror01_Stone|/>",
+  "en": "Antique Oval Mirror",
+  "fr": "Miroir ovale ancien",
   "id": "tech:RECIPE_Mirror01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Mirror01_Wall_Stone|/>",
-  "fr": "<mapObjectName id=|Mirror01_Wall_Stone|/>",
+  "en": "Antique Wall Mirror",
+  "fr": "Miroir mural ancien",
   "id": "tech:RECIPE_Mirror01_Wall_Stone"
  },
  {
-  "en": "<mapObjectName id=|Mirror02_Stone|/>",
-  "fr": "<mapObjectName id=|Mirror02_Stone|/>",
+  "en": "Antique Mirror",
+  "fr": "Miroir ancien",
   "id": "tech:RECIPE_Mirror02_Stone"
  },
  {
-  "en": "<itemName id=|MissileBullet|/>",
-  "fr": "<itemName id=|MissileBullet|/>",
+  "en": "Missile Ammo",
+  "fr": "Missile",
   "id": "tech:RECIPE_MissileBullet"
  },
  {
-  "en": "<mapObjectName id=|MonsterFarm|/>",
-  "fr": "<mapObjectName id=|MonsterFarm|/>",
+  "en": "Ranch",
+  "fr": "Exploitation",
   "id": "tech:RECIPE_MonsterFarm"
  },
  {
-  "en": "<mapObjectName id=|MultiElectricHatchingPalEgg|/>",
-  "fr": "<mapObjectName id=|MultiElectricHatchingPalEgg|/>",
+  "en": "Large-Scale Electric Egg Incubator",
+  "fr": "Grand incubateur électrique",
   "id": "tech:RECIPE_MultiElectricHatchingPalEgg"
  },
  {
-  "en": "<mapObjectname id=|MultiElectricHatchingPalEggWithBreed|/>",
-  "fr": "<mapObjectname id=|MultiElectricHatchingPalEggWithBreed|/>",
+  "en": "Ancient Hatchery",
+  "fr": "Incubateur antique",
   "id": "tech:RECIPE_MultiElectricHatchingPalEggWithBreed"
  },
  {
-  "en": "<itemName id=|MultiGuidedMissileLauncher|/>",
-  "fr": "<itemName id=|MultiGuidedMissileLauncher|/>",
+  "en": "Multi Guided Missile Launcher",
+  "fr": "Lance-missiles multiple",
   "id": "tech:RECIPE_MultiGuidedMissileLauncher"
  },
  {
-  "en": "<mapObjectname id=|MultiHatchingPalEgg|/>",
-  "fr": "<mapObjectname id=|MultiHatchingPalEgg|/>",
+  "en": "Large Incubator",
+  "fr": "Incubateur géant",
   "id": "tech:RECIPE_MultiHatchingPalEgg"
  },
  {
-  "en": "<itemName id=|Musket|/>",
-  "fr": "<itemName id=|Musket|/>",
+  "en": "Musket",
+  "fr": "Fusil à mousquet",
   "id": "tech:RECIPE_Musket"
  },
  {
@@ -16730,118 +16730,118 @@
   "id": "tech:RECIPE_OctaviaSet02"
  },
  {
-  "en": "<mapObjectName id=|OilPump|/>",
-  "fr": "<mapObjectName id=|OilPump|/>",
+  "en": "Crude Oil Extractor",
+  "fr": "Pompe à pétrole brut",
   "id": "tech:RECIPE_OilPump"
  },
  {
-  "en": "<mapObjectName id=|OilPump02|/>",
-  "fr": "<mapObjectName id=|OilPump02|/>",
+  "en": "High-Pressure Crude Oil Extractor",
+  "fr": "Pompe à pétrole brut haute pression",
   "id": "tech:RECIPE_OilPump02"
  },
  {
-  "en": "<itemName id=|OldRevolver|/>",
-  "fr": "<itemName id=|OldRevolver|/>",
+  "en": "Old Revolver",
+  "fr": "Vieux revolver",
   "id": "tech:RECIPE_OldRevolver"
  },
  {
-  "en": "<mapObjectName id=|OlympicCauldron|/>",
-  "fr": "<mapObjectName id=|OlympicCauldron|/>",
+  "en": "Flame Cauldron",
+  "fr": "Brasero",
   "id": "tech:RECIPE_OlympicCauldron"
  },
  {
-  "en": "<mapObjectName id=|OperatingTable|/>",
-  "fr": "<mapObjectName id=|OperatingTable|/>",
+  "en": "Pal Surgery Table",
+  "fr": "Table d'opération pour Pals",
   "id": "tech:RECIPE_OperatingTable"
  },
  {
-  "en": "<itemName id=|OverheatRifle|/>",
-  "fr": "<itemName id=|OverheatRifle|/>",
+  "en": "Overheat Rifle",
+  "fr": "Fusil à surchauffe",
   "id": "tech:RECIPE_OverheatRifle"
  },
  {
-  "en": "<itemName id=|OverheatRifleBullet|/>",
-  "fr": "<itemName id=|OverheatRifleBullet|/>",
+  "en": "Overheat Rifle Ammo",
+  "fr": "Balles de fusil à surchauffe",
   "id": "tech:RECIPE_OverheatRifleBullet"
  },
  {
-  "en": "<mapObjectName id=|MedicalPalBed_02|/>",
-  "fr": "<mapObjectName id=|MedicalPalBed_02|/>",
+  "en": "Straw Pal Bed",
+  "fr": "Lit pour Pal en paille",
   "id": "tech:RECIPE_PALBED"
  },
  {
-  "en": "<mapObjectName id=|PalBooth|/>",
-  "fr": "<mapObjectName id=|PalBooth|/>",
+  "en": "Flea Market (Pals)",
+  "fr": "Marché aux puces (Pals)",
   "id": "tech:RECIPE_PalBooth"
  },
  {
-  "en": "<mapObjectName id=|PalBoxV2|/>",
-  "fr": "<mapObjectName id=|PalBoxV2|/>",
+  "en": "Palbox",
+  "fr": "Boîte à Pal",
   "id": "tech:RECIPE_PALBOX"
  },
  {
-  "en": "<itemName id=|PalDopingShot|/>",
-  "fr": "<itemName id=|PalDopingShot|/>",
+  "en": "Boost Gun",
+  "fr": "Pistolet dopant",
   "id": "tech:RECIPE_PalDopingShot"
  },
  {
-  "en": "<itemName id=|PalDopingShot_2|/>",
-  "fr": "<itemName id=|PalDopingShot_2|/>",
+  "en": "Megaboost Gun",
+  "fr": "Méga pistolet dopant",
   "id": "tech:RECIPE_PalDopingShot_2"
  },
  {
-  "en": "<itemName id=|PalDopingShotBullet|/>",
-  "fr": "<itemName id=|PalDopingShotBullet|/>",
+  "en": "Boost Gun Ammo",
+  "fr": "Balles de pistolet dopant",
   "id": "tech:RECIPE_PalDopingShotBullet"
  },
  {
-  "en": "<mapObjectName id=|PalFoodBox|/>",
-  "fr": "<mapObjectName id=|PalFoodBox|/>",
+  "en": "Feed Box",
+  "fr": "Boîte à nourriture",
   "id": "tech:RECIPE_PalFoodBox"
  },
  {
-  "en": "<itemName id=|PalHealingGrenade|/>",
-  "fr": "<itemName id=|PalHealingGrenade|/>",
+  "en": "Pal Recovery Grenade",
+  "fr": "Grenade de régénération de Pal",
   "id": "tech:RECIPE_PalHealingGrenade"
  },
  {
-  "en": "<mapObjectName id=|CharacterRankUp|/>",
-  "fr": "<mapObjectName id=|CharacterRankUp|/>",
+  "en": "Pal Essence Condenser",
+  "fr": "Capsule d’essence de Pal",
   "id": "tech:RECIPE_PALLABO"
  },
  {
-  "en": "<mapObjectName id=|PalMedicineBox|/>",
-  "fr": "<mapObjectName id=|PalMedicineBox|/>",
+  "en": "Medicine Rack",
+  "fr": "Étagère à remèdes",
   "id": "tech:RECIPE_PalMedicineBox"
  },
  {
-  "en": "<itemName id=|PalRevive|/>",
-  "fr": "<itemName id=|PalRevive|/>",
+  "en": "Revival Potion",
+  "fr": "Potion de résurrection",
   "id": "tech:RECIPE_PalRevive"
  },
  {
-  "en": "<itemName id=|PalSphere_Ancient_1|/>",
-  "fr": "<itemName id=|PalSphere_Ancient_1|/>",
+  "en": "Sol Sphere",
+  "fr": "Sphère Astrale",
   "id": "tech:RECIPE_PalSphere_Ancient_1"
  },
  {
-  "en": "<itemName id=|PalSphere_Ancient_2|/>",
-  "fr": "<itemName id=|PalSphere_Ancient_2|/>",
+  "en": "Ancient Sphere",
+  "fr": "Sphère Antique",
   "id": "tech:RECIPE_PalSphere_Ancient_2"
  },
  {
-  "en": "<itemName id=|PalSphere_Exotic|/>",
-  "fr": "<itemName id=|PalSphere_Exotic|/>",
+  "en": "Exotic Sphere",
+  "fr": "Sphère Exotique",
   "id": "tech:RECIPE_PalSphere_Exotic"
  },
  {
-  "en": "<itemName id=|PalSphere_Robbery|/>",
-  "fr": "<itemName id=|PalSphere_Robbery|/>",
+  "en": "Radar Sphere",
+  "fr": "Sphère Radar",
   "id": "tech:RECIPE_PalSphere_Robbery"
  },
  {
-  "en": "<mapObjectName id=|Partition_Stone|/>",
-  "fr": "<mapObjectName id=|Partition_Stone|/>",
+  "en": "Antique Partition",
+  "fr": "Paravent ancien",
   "id": "tech:RECIPE_Partition_Stone"
  },
  {
@@ -16850,33 +16850,33 @@
   "id": "tech:RECIPE_PENGUIN_LAUNCHER"
  },
  {
-  "en": "<mapObjectName id=|Piano01_Stone|/>",
-  "fr": "<mapObjectName id=|Piano01_Stone|/>",
+  "en": "Grand Piano",
+  "fr": "Piano à queue",
   "id": "tech:RECIPE_Piano01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Piano02_Stone|/>",
-  "fr": "<mapObjectName id=|Piano02_Stone|/>",
+  "en": "Upright Piano",
+  "fr": "Piano droit",
   "id": "tech:RECIPE_Piano02_Stone"
  },
  {
-  "en": "<itemName id=|Pickaxe_Steal|/>",
-  "fr": "<itemName id=|Pickaxe_Steal|/>",
+  "en": "Pal Metal Pickaxe",
+  "fr": "Pioche en paluminium",
   "id": "tech:RECIPE_Pickaxe_Steal"
  },
  {
-  "en": "<itemName id=|Pickaxe_Tier_00|/>",
-  "fr": "<itemName id=|Pickaxe_Tier_00|/>",
+  "en": "Stone Pickaxe",
+  "fr": "Pioche en pierre",
   "id": "tech:RECIPE_PICKEAXE1"
  },
  {
-  "en": "<itemName id=|Pickaxe_Tier_01|/>",
-  "fr": "<itemName id=|Pickaxe_Tier_01|/>",
+  "en": "Metal Pickaxe",
+  "fr": "Pioche en métal",
   "id": "tech:RECIPE_PICKEAXE2"
  },
  {
-  "en": "<itemName id=|Pickaxe_Tier_02|/>",
-  "fr": "<itemName id=|Pickaxe_Tier_02|/>",
+  "en": "Refined Metal Pickaxe",
+  "fr": "Pioche en métal raffiné",
   "id": "tech:RECIPE_PICKEAXE3"
  },
  {
@@ -16885,43 +16885,43 @@
   "id": "tech:RECIPE_PICKEAXE4"
  },
  {
-  "en": "<mapObjectName id=|PipeClay01_Iron|/>",
-  "fr": "<mapObjectName id=|PipeClay01_Iron|/>",
+  "en": "Earthen Pipe",
+  "fr": "Tuyau en terre cuite",
   "id": "tech:RECIPE_PipeClay01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Plant01_Plant|/>",
-  "fr": "<mapObjectName id=|Plant01_Plant|/>",
+  "en": "Houseplant",
+  "fr": "Plante décorative",
   "id": "tech:RECIPE_Plant01_Plant"
  },
  {
-  "en": "<mapObjectName id=|Plant02_Plant|/>",
-  "fr": "<mapObjectName id=|Plant02_Plant|/>",
+  "en": "Houseplant and Chair",
+  "fr": "Plante décorative avec chaise",
   "id": "tech:RECIPE_Plant02_Plant"
  },
  {
-  "en": "<mapObjectName id=|Plant03_Plant|/>",
-  "fr": "<mapObjectName id=|Plant03_Plant|/>",
+  "en": "Tabletop Houseplant",
+  "fr": "Plante décorative de bureau",
   "id": "tech:RECIPE_Plant03_Plant"
  },
  {
-  "en": "<mapObjectName id=|Plant04_Plant|/>",
-  "fr": "<mapObjectName id=|Plant04_Plant|/>",
+  "en": "Potted Houseplant",
+  "fr": "Plante décorative en pot",
   "id": "tech:RECIPE_Plant04_Plant"
  },
  {
-  "en": "<itemName id=|Plastic|/>",
-  "fr": "<itemName id=|Plastic|/>",
+  "en": "Plasteel",
+  "fr": "Plastacier",
   "id": "tech:RECIPE_Plastic"
  },
  {
-  "en": "<mapObjectName id=|PlayerBed_02|/>",
-  "fr": "<mapObjectName id=|PlayerBed_02|/>",
+  "en": "Shoddy Bed",
+  "fr": "Lit de fortune",
   "id": "tech:RECIPE_PLAYER_BED_02"
  },
  {
-  "en": "<mapObjectName id=|PlayerBed_03|/>",
-  "fr": "<mapObjectName id=|PlayerBed_03|/>",
+  "en": "Fine Bed",
+  "fr": "Lit de qualité",
   "id": "tech:RECIPE_PLAYER_BED_03"
  },
  {
@@ -16930,8 +16930,8 @@
   "id": "tech:RECIPE_PoliceFlagSet"
  },
  {
-  "en": "<itemName id=|Polymer|/>",
-  "fr": "<itemName id=|Polymer|/>",
+  "en": "Polymer",
+  "fr": "Polymère",
   "id": "tech:RECIPE_Polymer"
  },
  {
@@ -16940,18 +16940,18 @@
   "id": "tech:RECIPE_Potato_plantation"
  },
  {
-  "en": "<itemName id=|Potion_Extreme|/>",
-  "fr": "<itemName id=|Potion_Extreme|/>",
+  "en": "Advanced Recovery Meds",
+  "fr": "Potion suprême",
   "id": "tech:RECIPE_Potion_Extreme"
  },
  {
-  "en": "<itemName id=|Processed_Wood|/>",
-  "fr": "<itemName id=|Processed_Wood|/>",
+  "en": "Wooden Board",
+  "fr": "Planche de bois",
   "id": "tech:RECIPE_Processed_Wood"
  },
  {
-  "en": "<itemName id=|Propellant|/>",
-  "fr": "<itemName id=|Propellant|/>",
+  "en": "-",
+  "fr": "-",
   "id": "tech:RECIPE_Propellant"
  },
  {
@@ -16960,93 +16960,93 @@
   "id": "tech:RECIPE_Pumpkin_plantation"
  },
  {
-  "en": "<mapObjectName id=|QuartzPit|/>",
-  "fr": "<mapObjectName id=|QuartzPit|/>",
+  "en": "Pure Quartz Quarry",
+  "fr": "Carrière de quartz pur",
   "id": "tech:RECIPE_QuartzPit"
  },
  {
-  "en": "<mapObjectName id=|RecoverOtomo|/>",
-  "fr": "<mapObjectName id=|RecoverOtomo|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_RecoverOtomo"
  },
  {
-  "en": "<mapObjectName id=|Refrigerator|/>",
-  "fr": "<mapObjectName id=|Refrigerator|/>",
+  "en": "Refrigerator",
+  "fr": "Réfrigérateur",
   "id": "tech:RECIPE_Refrigerator"
  },
  {
-  "en": "<itemName id=|ReinforcedArrow|/>",
-  "fr": "<itemName id=|ReinforcedArrow|/>",
+  "en": "Reinforced Arrow",
+  "fr": "Flèche renforcée",
   "id": "tech:RECIPE_ReinforcedArrow"
  },
  {
-  "en": "<mapObjectName id=|RepairBench|/>",
-  "fr": "<mapObjectName id=|RepairBench|/>",
+  "en": "Repair Bench",
+  "fr": "Banc de réparation",
   "id": "tech:RECIPE_RepairBench"
  },
  {
-  "en": "<itemName id=|RepairKit|/>",
-  "fr": "<itemName id=|RepairKit|/>",
+  "en": "Building Repair Kit",
+  "fr": "Kit de réparation",
   "id": "tech:RECIPE_RepairKit"
  },
  {
-  "en": "<itemName id=|SingleShotRifle|/>",
-  "fr": "<itemName id=|SingleShotRifle|/>",
+  "en": "Single-Shot Rifle",
+  "fr": "Fusil à un coup",
   "id": "tech:RECIPE_RIFLE"
  },
  {
-  "en": "<itemName id=|RifleBullet|/>",
-  "fr": "<itemName id=|RifleBullet|/>",
+  "en": "Rifle Ammo",
+  "fr": "Balles de fusil",
   "id": "tech:RECIPE_RIFLEBULLET"
  },
  {
-  "en": "<itemName id=|Launcher_Default|/>",
-  "fr": "<itemName id=|Launcher_Default|/>",
+  "en": "Rocket Launcher",
+  "fr": "Lance-fusées",
   "id": "tech:RECIPE_ROCKET_LAUNCHER"
  },
  {
-  "en": "<itemName id=|RoughBullet|/>",
-  "fr": "<itemName id=|RoughBullet|/>",
+  "en": "Coarse Ammo",
+  "fr": "Munitions bas de gamme",
   "id": "tech:RECIPE_RoughBullet"
  },
  {
-  "en": "<mapObjectName id=|Rug_Wood|/>",
-  "fr": "<mapObjectName id=|Rug_Wood|/>",
+  "en": "Fur rug",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_Rug_Wood"
  },
  {
-  "en": "<mapObjectName id=|Rug01_Stone|/>",
-  "fr": "<mapObjectName id=|Rug01_Stone|/>",
+  "en": "Antique Carpet",
+  "fr": "Tapis ancien",
   "id": "tech:RECIPE_Rug01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Rug02_Stone|/>",
-  "fr": "<mapObjectName id=|Rug02_Stone|/>",
+  "en": "Antique Red Carpet",
+  "fr": "Tapis rouge ancien",
   "id": "tech:RECIPE_Rug02_Stone"
  },
  {
-  "en": "<mapObjectName id=|Rug03_Stone|/>",
-  "fr": "<mapObjectName id=|Rug03_Stone|/>",
+  "en": "Antique Green Carpet",
+  "fr": "Tapis vert ancien",
   "id": "tech:RECIPE_Rug03_Stone"
  },
  {
-  "en": "<mapObjectName id=|Rug04_Stone|/>",
-  "fr": "<mapObjectName id=|Rug04_Stone|/>",
+  "en": "Antique Long Carpet",
+  "fr": "Tapis long ancien",
   "id": "tech:RECIPE_Rug04_Stone"
  },
  {
-  "en": "<itemName id=|Salvage_TreasureBoxKey01|/>",
-  "fr": "<itemName id=|Salvage_TreasureBoxKey01|/>",
+  "en": "Fishing Magnet",
+  "fr": "Aimant de pêche",
   "id": "tech:RECIPE_Salvage_TreasureBoxKey01"
  },
  {
-  "en": "<itemName id=|Salvage_TreasureBoxKey02|/>",
-  "fr": "<itemName id=|Salvage_TreasureBoxKey02|/>",
+  "en": "Powerful Fishing Magnet",
+  "fr": "Aimant de pêche puissant",
   "id": "tech:RECIPE_Salvage_TreasureBoxKey02"
  },
  {
-  "en": "<mapObjectName id=|SanityDecrease1|/>",
-  "fr": "<mapObjectName id=|SanityDecrease1|/>",
+  "en": "Alpha Wave Generator",
+  "fr": "Dispositif de vague α",
   "id": "tech:RECIPE_SanityDecrease1"
  },
  {
@@ -17060,13 +17060,13 @@
   "id": "tech:RECIPE_ScientistFlagSet"
  },
  {
-  "en": "<itemName id=|SemiAutoRifle|/>",
-  "fr": "<itemName id=|SemiAutoRifle|/>",
+  "en": "Semi-Auto Rifle",
+  "fr": "Fusil semi-automatique",
   "id": "tech:RECIPE_SemiAutoRifle"
  },
  {
-  "en": "<itemName id=|SemiAutoShotgun|/>",
-  "fr": "<itemName id=|SemiAutoShotgun|/>",
+  "en": "Semi-Auto Shotgun",
+  "fr": "Fusil à pompe semi-automatique",
   "id": "tech:RECIPE_SemiAutoShotgun"
  },
  {
@@ -17075,143 +17075,143 @@
   "id": "tech:RECIPE_SF_Houseset"
  },
  {
-  "en": "<itemName id=|SFArmor|/>",
-  "fr": "<itemName id=|SFArmor|/>",
+  "en": "Hexolite Armor",
+  "fr": "Armure en hexolite",
   "id": "tech:RECIPE_SFArmor"
  },
  {
-  "en": "<itemName id=|SFArmorCold|/>",
-  "fr": "<itemName id=|SFArmorCold|/>",
+  "en": "Cold Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-froid",
   "id": "tech:RECIPE_SFArmorCold"
  },
  {
-  "en": "<itemName id=|SFArmorHeat|/>",
-  "fr": "<itemName id=|SFArmorHeat|/>",
+  "en": "Heat Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-chaleur",
   "id": "tech:RECIPE_SFArmorHeat"
  },
  {
-  "en": "<itemName id=|SFArmorWeight|/>",
-  "fr": "<itemName id=|SFArmorWeight|/>",
+  "en": "Lightweight Hexolite Armor",
+  "fr": "Armure en hexolite légère",
   "id": "tech:RECIPE_SFArmorWeight"
  },
  {
-  "en": "<itemName id=|SFArrow|/>",
-  "fr": "<itemName id=|SFArrow|/>",
+  "en": "Advanced Arrow",
+  "fr": "Flèche avancée",
   "id": "tech:RECIPE_SFArrow"
  },
  {
-  "en": "<itemName id=|SFBow|/>",
-  "fr": "<itemName id=|SFBow|/>",
+  "en": "Advanced Bow",
+  "fr": "Arc avancé",
   "id": "tech:RECIPE_SFBow"
  },
  {
-  "en": "<itemName id=|SFHelmet|/>",
-  "fr": "<itemName id=|SFHelmet|/>",
+  "en": "Hexolite Helmet",
+  "fr": "Casque en hexolite",
   "id": "tech:RECIPE_SFHelmet"
  },
  {
-  "en": "<mapObjectName id=|Shelf_Cask_Wood|/>",
-  "fr": "<mapObjectName id=|Shelf_Cask_Wood|/>",
+  "en": "Wooden Barrel Shelf",
+  "fr": "Tonneau de rangement en bois",
   "id": "tech:RECIPE_Shelf_Cask_Wood"
  },
  {
-  "en": "<mapObjectName id=|Shelf_Hang01_Wood|/>",
-  "fr": "<mapObjectName id=|Shelf_Hang01_Wood|/>",
+  "en": "Wooden Wall Shelf",
+  "fr": "Étagère murale en bois",
   "id": "tech:RECIPE_Shelf_Hang01_Wood"
  },
  {
-  "en": "<mapObjectName id=|Shelf_Hang02_Wood|/>",
-  "fr": "<mapObjectName id=|Shelf_Hang02_Wood|/>",
+  "en": "Wooden Decorative Wall Shelf",
+  "fr": "Décoration murale en bois",
   "id": "tech:RECIPE_Shelf_Hang02_Wood"
  },
  {
-  "en": "<mapObjectName id=|Shelf_Wood|/>",
-  "fr": "<mapObjectName id=|Shelf_Wood|/>",
+  "en": "Wooden Shelf",
+  "fr": "Étagère en bois",
   "id": "tech:RECIPE_Shelf_Wood"
  },
  {
-  "en": "<mapObjectName id=|Shelf01_Iron|/>",
-  "fr": "<mapObjectName id=|Shelf01_Iron|/>",
+  "en": "Iron Shelf",
+  "fr": "Étagère en fer",
   "id": "tech:RECIPE_Shelf01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Shelf01_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf01_Stone|/>",
+  "en": "Antique Bookshelf",
+  "fr": "Bibliothèque ancienne",
   "id": "tech:RECIPE_Shelf01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf01_Wall_Iron|/>",
-  "fr": "<mapObjectName id=|Shelf01_Wall_Iron|/>",
+  "en": "Iron Wall Shelf",
+  "fr": "Étagère murale en fer",
   "id": "tech:RECIPE_Shelf01_Wall_Iron"
  },
  {
-  "en": "<mapObjectName id=|Shelf01_Wall_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf01_Wall_Stone|/>",
+  "en": "Antique Wall Cabinet",
+  "fr": "Placard mural ancien",
   "id": "tech:RECIPE_Shelf01_Wall_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf02_Iron|/>",
-  "fr": "<mapObjectName id=|Shelf02_Iron|/>",
+  "en": "Long Iron Shelf",
+  "fr": "Étagère en fer rectangulaire",
   "id": "tech:RECIPE_Shelf02_Iron"
  },
  {
-  "en": "<mapObjectName id=|Shelf02_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf02_Stone|/>",
+  "en": "Antique Wardrobe",
+  "fr": "Penderie ancienne",
   "id": "tech:RECIPE_Shelf02_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf03_Iron|/>",
-  "fr": "<mapObjectName id=|Shelf03_Iron|/>",
+  "en": "Orange Locker",
+  "fr": "Casier orange",
   "id": "tech:RECIPE_Shelf03_Iron"
  },
  {
-  "en": "<mapObjectName id=|Shelf03_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf03_Stone|/>",
+  "en": "Antique Chest",
+  "fr": "Commode ancienne",
   "id": "tech:RECIPE_Shelf03_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf04_Iron|/>",
-  "fr": "<mapObjectName id=|Shelf04_Iron|/>",
+  "en": "Locker",
+  "fr": "Casier",
   "id": "tech:RECIPE_Shelf04_Iron"
  },
  {
-  "en": "<mapObjectName id=|Shelf04_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf04_Stone|/>",
+  "en": "Antique Side Chest",
+  "fr": "Table de chevet ancienne",
   "id": "tech:RECIPE_Shelf04_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf05_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf05_Stone|/>",
+  "en": "Antique Cabinet",
+  "fr": "Armoire ancienne",
   "id": "tech:RECIPE_Shelf05_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf06_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf06_Stone|/>",
+  "en": "Antique Long Cabinet",
+  "fr": "Meuble de rangement ancien",
   "id": "tech:RECIPE_Shelf06_Stone"
  },
  {
-  "en": "<mapObjectName id=|Shelf07_Stone|/>",
-  "fr": "<mapObjectName id=|Shelf07_Stone|/>",
+  "en": "Large Antique Cabinet",
+  "fr": "Grande armoire ancienne",
   "id": "tech:RECIPE_Shelf07_Stone"
  },
  {
-  "en": "<itemName id=|Shield_01|/>",
-  "fr": "<itemName id=|Shield_01|/>",
+  "en": "Common Shield",
+  "fr": "Bouclier normal",
   "id": "tech:RECIPE_Shield_01"
  },
  {
-  "en": "<itemName id=|Shield_02|/>",
-  "fr": "<itemName id=|Shield_02|/>",
+  "en": "Mega Shield",
+  "fr": "Méga bouclier",
   "id": "tech:RECIPE_Shield_02"
  },
  {
-  "en": "<itemName id=|Shield_03|/>",
-  "fr": "<itemName id=|Shield_03|/>",
+  "en": "Giga Shield",
+  "fr": "Giga bouclier",
   "id": "tech:RECIPE_Shield_03"
  },
  {
-  "en": "<itemName id=|Shield_04|/>",
-  "fr": "<itemName id=|Shield_04|/>",
+  "en": "Hyper Shield",
+  "fr": "Hyper bouclier",
   "id": "tech:RECIPE_Shield_04"
  },
  {
@@ -17220,18 +17220,18 @@
   "id": "tech:RECIPE_Shield_06"
  },
  {
-  "en": "<itemName id=|Shield_07|/>",
-  "fr": "<itemName id=|Shield_07|/>",
+  "en": "Ancient Shield",
+  "fr": "Bouclier antique",
   "id": "tech:RECIPE_Shield_07"
  },
  {
-  "en": "<itemName id=|Shield_SF|/>",
-  "fr": "<itemName id=|Shield_SF|/>",
+  "en": "Advanced Shield",
+  "fr": "Ultime bouclier",
   "id": "tech:RECIPE_Shield_SF"
  },
  {
-  "en": "<itemName id=|Shield_Ultra|/>",
-  "fr": "<itemName id=|Shield_Ultra|/>",
+  "en": "Shield_Ultra",
+  "fr": "Shield_Ultra",
   "id": "tech:RECIPE_Shield_Ultra"
  },
  {
@@ -17240,828 +17240,828 @@
   "id": "tech:RECIPE_ShippingItemBox"
  },
  {
-  "en": "<itemName id=|DoubleBarrelShotgun|/>",
-  "fr": "<itemName id=|DoubleBarrelShotgun|/>",
+  "en": "Double-Barreled Shotgun",
+  "fr": "Fusil à double canon",
   "id": "tech:RECIPE_SHOTGUN"
  },
  {
-  "en": "<itemName id=|PumpActionShotgun|/>",
-  "fr": "<itemName id=|PumpActionShotgun|/>",
+  "en": "Pump-Action Shotgun",
+  "fr": "Fusil à pompe",
   "id": "tech:RECIPE_SHOTGUN2"
  },
  {
-  "en": "<itemName id=|ShotgunBullet|/>",
-  "fr": "<itemName id=|ShotgunBullet|/>",
+  "en": "Shotgun Shell",
+  "fr": "Cartouches de fusil à pompe",
   "id": "tech:RECIPE_SHOTGUNBULLET"
  },
  {
-  "en": "<mapObjectName id=|Signboard|/>",
-  "fr": "<mapObjectName id=|Signboard|/>",
+  "en": "Sign",
+  "fr": "Pancarte",
   "id": "tech:RECIPE_Signboard"
  },
  {
-  "en": "<mapObjectName id=|SignExit_Ceiling_Iron|/>",
-  "fr": "<mapObjectName id=|SignExit_Ceiling_Iron|/>",
+  "en": "Emergency Exit Ceiling Sign",
+  "fr": "Panneau Sortie de secours pour plafond",
   "id": "tech:RECIPE_SignExit_Ceiling_Iron"
  },
  {
-  "en": "<mapObjectName id=|SignExit_Wall_Iron|/>",
-  "fr": "<mapObjectName id=|SignExit_Wall_Iron|/>",
+  "en": "Emergency Exit Wall Sign",
+  "fr": "Panneau Sortie de secours pour mur",
   "id": "tech:RECIPE_SignExit_Wall_Iron"
  },
  {
-  "en": "<itemName id=|Silicon|/>",
-  "fr": "<itemName id=|Silicon|/>",
+  "en": "Silicon",
+  "fr": "Silicium",
   "id": "tech:RECIPE_Silicon"
  },
  {
-  "en": "<mapObjectName id=|Silo|/>",
-  "fr": "<mapObjectName id=|Silo|/>",
+  "en": "Silo",
+  "fr": "Silo",
   "id": "tech:RECIPE_Silo"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Alpaca|/>",
-  "fr": "<itemName id=|SkillUnlock_Alpaca|/>",
+  "en": "Melpaca Saddle",
+  "fr": "Selle pour Melpaca",
   "id": "tech:RECIPE_SkillUnlock_Alpaca"
  },
  {
-  "en": "<itemName id=|SkillUnlock_AmaterasuWolf|/>",
-  "fr": "<itemName id=|SkillUnlock_AmaterasuWolf|/>",
+  "en": "Kitsun Saddle",
+  "fr": "Selle pour Kitsun",
   "id": "tech:RECIPE_SkillUnlock_AmaterasuWolf"
  },
  {
-  "en": "<itemName id=|SkillUnlock_AmaterasuWolf_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_AmaterasuWolf_Dark|/>",
+  "en": "Kitsun Noct Saddle",
+  "fr": "Selle pour Kitsun Noct",
   "id": "tech:RECIPE_SkillUnlock_AmaterasuWolf_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Anubis|/>",
-  "fr": "<itemName id=|SkillUnlock_Anubis|/>",
+  "en": "Anubis's Power Converter",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_Anubis"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BadCatgirl|/>",
-  "fr": "<itemName id=|SkillUnlock_BadCatgirl|/>",
+  "en": "Nyafia's Shotgun",
+  "fr": "Fusil à pompe de Nyafia",
   "id": "tech:RECIPE_SkillUnlock_BadCatgirl"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BirdDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_BirdDragon|/>",
+  "en": "Vanwyrm Saddle",
+  "fr": "Selle pour Vanwyrm",
   "id": "tech:RECIPE_SkillUnlock_BirdDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BirdDragon_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_BirdDragon_Ice|/>",
+  "en": "Vanwyrm Cryst Saddle",
+  "fr": "Selle pour Vanwyrm Cryst",
   "id": "tech:RECIPE_SkillUnlock_BirdDragon_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackCentaur|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackCentaur|/>",
+  "en": "Necromus Saddle",
+  "fr": "Selle pour Necromus",
   "id": "tech:RECIPE_SkillUnlock_BlackCentaur"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackFurDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackFurDragon|/>",
+  "en": "Dragostrophe's Shotgun",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_BlackFurDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackGriffon|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackGriffon|/>",
+  "en": "Shadowbeak Saddle",
+  "fr": "Selle pour Shadowbeak",
   "id": "tech:RECIPE_SkillUnlock_BlackGriffon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackMetalDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackMetalDragon|/>",
+  "en": "Astegon Saddle",
+  "fr": "Selle pour Astegon",
   "id": "tech:RECIPE_SkillUnlock_BlackMetalDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackPuppy|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackPuppy|/>",
+  "en": "Smokie's Harness",
+  "fr": "Harnais pour Smokie",
   "id": "tech:RECIPE_SkillUnlock_BlackPuppy"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlackPuppy_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_BlackPuppy_Ice|/>",
+  "en": "Smokie Cryst's Harness",
+  "fr": "Harnais pour Smokie Cryst",
   "id": "tech:RECIPE_SkillUnlock_BlackPuppy_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlueDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_BlueDragon|/>",
+  "en": "Azurobe Saddle",
+  "fr": "Selle pour Azurobe",
   "id": "tech:RECIPE_SkillUnlock_BlueDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlueDragon_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_BlueDragon_Ice|/>",
+  "en": "Azurobe Cryst Saddle",
+  "fr": "Selle pour Azurobe Cryst",
   "id": "tech:RECIPE_SkillUnlock_BlueDragon_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlueSkyDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_BlueSkyDragon|/>",
+  "en": "Shaolong Saddle",
+  "fr": "Selle pour Shaolong",
   "id": "tech:RECIPE_SkillUnlock_BlueSkyDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_BlueThunderHorse|/>",
-  "fr": "<itemName id=|SkillUnlock_BlueThunderHorse|/>",
+  "en": "Azurmane Saddle",
+  "fr": "Selle pour Azurmane",
   "id": "tech:RECIPE_SkillUnlock_BlueThunderHorse"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Boar|/>",
-  "fr": "<itemName id=|SkillUnlock_Boar|/>",
+  "en": "Rushoar Saddle",
+  "fr": "Selle pour Rushoar",
   "id": "tech:RECIPE_SkillUnlock_Boar"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Carbunclo|/>",
-  "fr": "<itemName id=|SkillUnlock_Carbunclo|/>",
+  "en": "Lifmunk's Submachine Gun",
+  "fr": "Pistolet-mitrailleur pour Lifmunk",
   "id": "tech:RECIPE_SkillUnlock_Carbunclo"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ColorfulBird|/>",
-  "fr": "<itemName id=|SkillUnlock_ColorfulBird|/>",
+  "en": "Tocotoco's Gloves",
+  "fr": "Gants pour Tocotoco",
   "id": "tech:RECIPE_SkillUnlock_ColorfulBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_CubeTurtle|/>",
-  "fr": "<itemName id=|SkillUnlock_CubeTurtle|/>",
+  "en": "Tetroise Saddle",
+  "fr": "Selle pour Tetroise",
   "id": "tech:RECIPE_SkillUnlock_CubeTurtle"
  },
  {
-  "en": "<itemName id=|SkillUnlock_CubeTurtle_Neutral|/>",
-  "fr": "<itemName id=|SkillUnlock_CubeTurtle_Neutral|/>",
+  "en": "Tetroise Primo Saddle",
+  "fr": "Selle pour Tetroise Primo",
   "id": "tech:RECIPE_SkillUnlock_CubeTurtle_Neutral"
  },
  {
-  "en": "<itemName id=|SkillUnlock_DarkMechaDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_DarkMechaDragon|/>",
+  "en": "Xenolord Saddle",
+  "fr": "Selle pour Xenolord",
   "id": "tech:RECIPE_SkillUnlock_DarkMechaDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Deer|/>",
-  "fr": "<itemName id=|SkillUnlock_Deer|/>",
+  "en": "Eikthyrdeer Saddle",
+  "fr": "Selle pour Eikthyrdeer",
   "id": "tech:RECIPE_SkillUnlock_Deer"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Deer_Ground|/>",
-  "fr": "<itemName id=|SkillUnlock_Deer_Ground|/>",
+  "en": "Eikthyrdeer Terra Saddle",
+  "fr": "Selle pour Eikthyrdeer Terra",
   "id": "tech:RECIPE_SkillUnlock_Deer_Ground"
  },
  {
-  "en": "<itemName id=|SkillUnlock_DomeArmorDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_DomeArmorDragon|/>",
+  "en": "Aegidron Saddle",
+  "fr": "Selle pour Aegidron",
   "id": "tech:RECIPE_SkillUnlock_DomeArmorDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_DreamDemon|/>",
-  "fr": "<itemName id=|SkillUnlock_DreamDemon|/>",
+  "en": "Daedream's Necklace",
+  "fr": "Collier pour Daedream",
   "id": "tech:RECIPE_SkillUnlock_DreamDemon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_DrillGame|/>",
-  "fr": "<itemName id=|SkillUnlock_DrillGame|/>",
+  "en": "Digtoise's Headband",
+  "fr": "Bandeau pour Digtoise",
   "id": "tech:RECIPE_SkillUnlock_DrillGame"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Eagle|/>",
-  "fr": "<itemName id=|SkillUnlock_Eagle|/>",
+  "en": "Galeclaw's Gloves",
+  "fr": "Gants pour Galeclaw",
   "id": "tech:RECIPE_SkillUnlock_Eagle"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ElecPanda|/>",
-  "fr": "<itemName id=|SkillUnlock_ElecPanda|/>",
+  "en": "Grizzbolt's Minigun",
+  "fr": "Minigun pour Grizzbolt",
   "id": "tech:RECIPE_SkillUnlock_ElecPanda"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FairyDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_FairyDragon|/>",
+  "en": "Elphidran Saddle",
+  "fr": "Selle pour Elphidran",
   "id": "tech:RECIPE_SkillUnlock_FairyDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FairyDragon_Water|/>",
-  "fr": "<itemName id=|SkillUnlock_FairyDragon_Water|/>",
+  "en": "Elphidran Aqua Saddle",
+  "fr": "Selle pour Elphidran Aqua",
   "id": "tech:RECIPE_SkillUnlock_FairyDragon_Water"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FeatherOstrich|/>",
-  "fr": "<itemName id=|SkillUnlock_FeatherOstrich|/>",
+  "en": "Dazemu Saddle",
+  "fr": "Selle pour Dazemu",
   "id": "tech:RECIPE_SkillUnlock_FeatherOstrich"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FengyunDeeper|/>",
-  "fr": "<itemName id=|SkillUnlock_FengyunDeeper|/>",
+  "en": "Fenglope Saddle",
+  "fr": "Selle pour Fenglope",
   "id": "tech:RECIPE_SkillUnlock_FengyunDeeper"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FengyunDeeper_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_FengyunDeeper_Electric|/>",
+  "en": "Fenglope Lux Saddle",
+  "fr": "Selle pour Fenglope Lux",
   "id": "tech:RECIPE_SkillUnlock_FengyunDeeper_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FireKirin|/>",
-  "fr": "<itemName id=|SkillUnlock_FireKirin|/>",
+  "en": "Pyrin Saddle",
+  "fr": "Selle pour Pyrin",
   "id": "tech:RECIPE_SkillUnlock_FireKirin"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FireKirin_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_FireKirin_Dark|/>",
+  "en": "Pyrin Noct Saddle",
+  "fr": "Selle pour Pyrin Noct",
   "id": "tech:RECIPE_SkillUnlock_FireKirin_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlameBuffalo|/>",
-  "fr": "<itemName id=|SkillUnlock_FlameBuffalo|/>",
+  "en": "Arsox Saddle",
+  "fr": "Selle pour Arsox",
   "id": "tech:RECIPE_SkillUnlock_FlameBuffalo"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlowerDinosaur|/>",
-  "fr": "<itemName id=|SkillUnlock_FlowerDinosaur|/>",
+  "en": "Dinossom Saddle",
+  "fr": "Selle pour Dinossom",
   "id": "tech:RECIPE_SkillUnlock_FlowerDinosaur"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlowerDinosaur_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_FlowerDinosaur_Electric|/>",
+  "en": "Dinossom Lux Saddle",
+  "fr": "Selle pour Dinossom Lux",
   "id": "tech:RECIPE_SkillUnlock_FlowerDinosaur_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlowerRabbit|/>",
-  "fr": "<itemName id=|SkillUnlock_FlowerRabbit|/>",
+  "en": "Flopie's Necklace",
+  "fr": "Collier pour Flopie",
   "id": "tech:RECIPE_SkillUnlock_FlowerRabbit"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlyingManta|/>",
-  "fr": "<itemName id=|SkillUnlock_FlyingManta|/>",
+  "en": "Celaray's Gloves",
+  "fr": "Gants pour Celaray",
   "id": "tech:RECIPE_SkillUnlock_FlyingManta"
  },
  {
-  "en": "<itemName id=|SkillUnlock_FlyingManta_Thunder|/>",
-  "fr": "<itemName id=|SkillUnlock_FlyingManta_Thunder|/>",
+  "en": "Celaray Lux's Gloves",
+  "fr": "Gants pour Celaray Lux",
   "id": "tech:RECIPE_SkillUnlock_FlyingManta_Thunder"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Garm|/>",
-  "fr": "<itemName id=|SkillUnlock_Garm|/>",
+  "en": "Direhowl's Saddled Harness",
+  "fr": "Harnais à selle pour Direhowl",
   "id": "tech:RECIPE_SkillUnlock_Garm"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GhostAnglerfish|/>",
-  "fr": "<itemName id=|SkillUnlock_GhostAnglerfish|/>",
+  "en": "Ghangler Saddle",
+  "fr": "Selle pour Ghangler",
   "id": "tech:RECIPE_SkillUnlock_GhostAnglerfish"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GhostAnglerfish_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_GhostAnglerfish_Fire|/>",
+  "en": "Ghangler Ignis Saddle",
+  "fr": "Selle pour Ghangler Ignis",
   "id": "tech:RECIPE_SkillUnlock_GhostAnglerfish_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GhostBeast|/>",
-  "fr": "<itemName id=|SkillUnlock_GhostBeast|/>",
+  "en": "Maraith Saddle",
+  "fr": "Selle pour Maraith",
   "id": "tech:RECIPE_SkillUnlock_GhostBeast"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GhostDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_GhostDragon|/>",
+  "en": "Eidrolon Saddle",
+  "fr": "Selle pour Eidrolon",
   "id": "tech:RECIPE_SkillUnlock_GhostDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GhostDragon_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_GhostDragon_Fire|/>",
+  "en": "Eidrolon Ignis Saddle",
+  "fr": "Selle pour Eidrolon Ignis",
   "id": "tech:RECIPE_SkillUnlock_GhostDragon_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GoldenHorse|/>",
-  "fr": "<itemName id=|SkillUnlock_GoldenHorse|/>",
+  "en": "Gildane Saddle",
+  "fr": "Selle pour Gildane",
   "id": "tech:RECIPE_SkillUnlock_GoldenHorse"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassGolem|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassGolem|/>",
+  "en": "Dualith Saddle",
+  "fr": "Selle pour Dualith",
   "id": "tech:RECIPE_SkillUnlock_GrassGolem"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassGolem_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassGolem_Dark|/>",
+  "en": "Dualith Noct Saddle",
+  "fr": "Selle pour Dualith Noct",
   "id": "tech:RECIPE_SkillUnlock_GrassGolem_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassMammoth|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassMammoth|/>",
+  "en": "Mammorest Saddle",
+  "fr": "Selle pour Mammorest",
   "id": "tech:RECIPE_SkillUnlock_GrassMammoth"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassMammoth_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassMammoth_Ice|/>",
+  "en": "Mammorest Cryst Saddle",
+  "fr": "Selle pour Mammorest Cryst",
   "id": "tech:RECIPE_SkillUnlock_GrassMammoth_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassPanda|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassPanda|/>",
+  "en": "Mossanda's Grenade Launcher",
+  "fr": "Lance-grenades pour Mossanda",
   "id": "tech:RECIPE_SkillUnlock_GrassPanda"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GrassPanda_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_GrassPanda_Electric|/>",
+  "en": "Mossanda Lux's Grenade Launcher",
+  "fr": "Lance-grenades pour Mossanda Lux",
   "id": "tech:RECIPE_SkillUnlock_GrassPanda_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_GuardianDog|/>",
-  "fr": "<itemName id=|SkillUnlock_GuardianDog|/>",
+  "en": "Yakumo Saddle",
+  "fr": "Selle pour Yakumo",
   "id": "tech:RECIPE_SkillUnlock_GuardianDog"
  },
  {
-  "en": "<itemName id=|SkillUnlock_HadesBird|/>",
-  "fr": "<itemName id=|SkillUnlock_HadesBird|/>",
+  "en": "Helzephyr Saddle",
+  "fr": "Selle pour Helzephyr",
   "id": "tech:RECIPE_SkillUnlock_HadesBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_HadesBird_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_HadesBird_Electric|/>",
+  "en": "Helzephyr Lux Saddle",
+  "fr": "Selle pour Helzephyr Lux",
   "id": "tech:RECIPE_SkillUnlock_HadesBird_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_HawkBird|/>",
-  "fr": "<itemName id=|SkillUnlock_HawkBird|/>",
+  "en": "Nitewing Saddle",
+  "fr": "Selle pour Nitewing",
   "id": "tech:RECIPE_SkillUnlock_HawkBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Hedgehog|/>",
-  "fr": "<itemName id=|SkillUnlock_Hedgehog|/>",
+  "en": "Jolthog's Gloves",
+  "fr": "Gants pour Jolthog",
   "id": "tech:RECIPE_SkillUnlock_Hedgehog"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Hedgehog_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_Hedgehog_Ice|/>",
+  "en": "Jolthog Cryst's Gloves",
+  "fr": "Gants pour Jolthog Cryst",
   "id": "tech:RECIPE_SkillUnlock_Hedgehog_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_HerculesBeetle|/>",
-  "fr": "<itemName id=|SkillUnlock_HerculesBeetle|/>",
+  "en": "Warsect Saddle",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_HerculesBeetle"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Horus|/>",
-  "fr": "<itemName id=|SkillUnlock_Horus|/>",
+  "en": "Faleris Saddle",
+  "fr": "Selle pour Faleris",
   "id": "tech:RECIPE_SkillUnlock_Horus"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Horus_Water|/>",
-  "fr": "<itemName id=|SkillUnlock_Horus_Water|/>",
+  "en": "Faleris Aqua Saddle",
+  "fr": "Selle pour Faleris Aqua",
   "id": "tech:RECIPE_SkillUnlock_Horus_Water"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceDeer|/>",
-  "fr": "<itemName id=|SkillUnlock_IceDeer|/>",
+  "en": "Reindrix Saddle",
+  "fr": "Selle pour Reindrix",
   "id": "tech:RECIPE_SkillUnlock_IceDeer"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceFox|/>",
-  "fr": "<itemName id=|SkillUnlock_IceFox|/>",
+  "en": "en_text Saddle",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_IceFox"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceHorse|/>",
-  "fr": "<itemName id=|SkillUnlock_IceHorse|/>",
+  "en": "Frostallion Saddle",
+  "fr": "Selle pour Frostallion",
   "id": "tech:RECIPE_SkillUnlock_IceHorse"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceHorse_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_IceHorse_Dark|/>",
+  "en": "Frostallion Noct Saddle",
+  "fr": "Selle pour Frostallion Noct",
   "id": "tech:RECIPE_SkillUnlock_IceHorse_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceNarwhal|/>",
-  "fr": "<itemName id=|SkillUnlock_IceNarwhal|/>",
+  "en": "Whalaska Saddle",
+  "fr": "Selle pour Whalaska",
   "id": "tech:RECIPE_SkillUnlock_IceNarwhal"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceNarwhal_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_IceNarwhal_Fire|/>",
+  "en": "Whalaska Ignis Saddle",
+  "fr": "Selle pour Whalaska Ignis",
   "id": "tech:RECIPE_SkillUnlock_IceNarwhal_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceSeal|/>",
-  "fr": "<itemName id=|SkillUnlock_IceSeal|/>",
+  "en": "Polapup Saddle",
+  "fr": "Selle pour Polapup",
   "id": "tech:RECIPE_SkillUnlock_IceSeal"
  },
  {
-  "en": "<itemName id=|SkillUnlock_IceSeal_Ground|/>",
-  "fr": "<itemName id=|SkillUnlock_IceSeal_Ground|/>",
+  "en": "Polapup Terra Saddle",
+  "fr": "Selle pour Polapup Terra",
   "id": "tech:RECIPE_SkillUnlock_IceSeal_Ground"
  },
  {
-  "en": "<itemName id=|SkillUnlock_JetDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_JetDragon|/>",
+  "en": "Jetragon's Missile Launcher",
+  "fr": "Lance-missiles pour Jetragon",
   "id": "tech:RECIPE_SkillUnlock_JetDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingAlpaca|/>",
-  "fr": "<itemName id=|SkillUnlock_KingAlpaca|/>",
+  "en": "Kingpaca Saddle",
+  "fr": "Selle pour Kingpaca",
   "id": "tech:RECIPE_SkillUnlock_KingAlpaca"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingAlpaca_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_KingAlpaca_Ice|/>",
+  "en": "Kingpaca Cryst Saddle",
+  "fr": "Selle pour Kingpaca Cryst",
   "id": "tech:RECIPE_SkillUnlock_KingAlpaca_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingBahamut|/>",
-  "fr": "<itemName id=|SkillUnlock_KingBahamut|/>",
+  "en": "Blazamut Saddle",
+  "fr": "Selle pour Blazamut",
   "id": "tech:RECIPE_SkillUnlock_KingBahamut"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingBahamut_Dragon|/>",
-  "fr": "<itemName id=|SkillUnlock_KingBahamut_Dragon|/>",
+  "en": "Blazamut Ryu Saddle",
+  "fr": "Selle pour Blazamut Ryu",
   "id": "tech:RECIPE_SkillUnlock_KingBahamut_Dragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingSunfish|/>",
-  "fr": "<itemName id=|SkillUnlock_KingSunfish|/>",
+  "en": "Solmora Saddle",
+  "fr": "Selle pour Solmora",
   "id": "tech:RECIPE_SkillUnlock_KingSunfish"
  },
  {
-  "en": "<itemName id=|SkillUnlock_KingSunfish_Thunder|/>",
-  "fr": "<itemName id=|SkillUnlock_KingSunfish_Thunder|/>",
+  "en": "Solmora Lux Saddle",
+  "fr": "Selle pour Solmora Lux",
   "id": "tech:RECIPE_SkillUnlock_KingSunfish_Thunder"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Kirin|/>",
-  "fr": "<itemName id=|SkillUnlock_Kirin|/>",
+  "en": "Univolt Saddle",
+  "fr": "Selle pour Univolt",
   "id": "tech:RECIPE_SkillUnlock_Kirin"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Kirin_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_Kirin_Ice|/>",
+  "en": "Univolt Cryst Saddle",
+  "fr": "Selle pour Univolt Cryst",
   "id": "tech:RECIPE_SkillUnlock_Kirin_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Kitsunebi|/>",
-  "fr": "<itemName id=|SkillUnlock_Kitsunebi|/>",
+  "en": "Foxparks' Harness",
+  "fr": "Harnais pour Foxparks",
   "id": "tech:RECIPE_SkillUnlock_Kitsunebi"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Kitsunebi_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_Kitsunebi_Ice|/>",
+  "en": "Foxparks Cryst's Harness",
+  "fr": "Harnais pour Foxparks Cryst",
   "id": "tech:RECIPE_SkillUnlock_Kitsunebi_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LazyDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_LazyDragon|/>",
+  "en": "Relaxaurus' Missile Launcher",
+  "fr": "Lance-missiles pour Relaxaurus",
   "id": "tech:RECIPE_SkillUnlock_LazyDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LazyDragon_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_LazyDragon_Electric|/>",
+  "en": "Relaxaurus Lux's Missile Launcher",
+  "fr": "Lance-missiles pour Relaxaurus Lux",
   "id": "tech:RECIPE_SkillUnlock_LazyDragon_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LeafMomonga|/>",
-  "fr": "<itemName id=|SkillUnlock_LeafMomonga|/>",
+  "en": "Herbil's Harness",
+  "fr": "Harnais pour Herbil",
   "id": "tech:RECIPE_SkillUnlock_LeafMomonga"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LegendDeer|/>",
-  "fr": "<itemName id=|SkillUnlock_LegendDeer|/>",
+  "en": "Hartalis Saddle",
+  "fr": "Selle pour Hartalis",
   "id": "tech:RECIPE_SkillUnlock_LegendDeer"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LilyQueen|/>",
-  "fr": "<itemName id=|SkillUnlock_LilyQueen|/>",
+  "en": "Lyleen's Floral Ornament",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_LilyQueen"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LilyQueen_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_LilyQueen_Dark|/>",
+  "en": "SkillUnlock_LilyQueen_Dark",
+  "fr": "SkillUnlock_LilyQueen_Dark",
   "id": "tech:RECIPE_SkillUnlock_LilyQueen_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_LotusDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_LotusDragon|/>",
+  "en": "Ophydia Saddle",
+  "fr": "Selle pour Ophydia",
   "id": "tech:RECIPE_SkillUnlock_LotusDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Manticore|/>",
-  "fr": "<itemName id=|SkillUnlock_Manticore|/>",
+  "en": "Blazehowl Saddle",
+  "fr": "Selle pour Blazehowl",
   "id": "tech:RECIPE_SkillUnlock_Manticore"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Manticore_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_Manticore_Dark|/>",
+  "en": "Blazehowl Noct Saddle",
+  "fr": "Selle pour Blazehowl Noct",
   "id": "tech:RECIPE_SkillUnlock_Manticore_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Monkey|/>",
-  "fr": "<itemName id=|SkillUnlock_Monkey|/>",
+  "en": "Tanzee's Assault Rifle",
+  "fr": "Fusil d'assaut pour Tanzee",
   "id": "tech:RECIPE_SkillUnlock_Monkey"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Monkey_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_Monkey_Fire|/>",
+  "en": "Tanzee Ignis's Assault Rifle",
+  "fr": "Fusil d'assaut pour Tanzee Ignis",
   "id": "tech:RECIPE_SkillUnlock_Monkey_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_MoonQueen|/>",
-  "fr": "<itemName id=|SkillUnlock_MoonQueen|/>",
+  "en": "Selyne Saddle",
+  "fr": "Selle pour Selyne",
   "id": "tech:RECIPE_SkillUnlock_MoonQueen"
  },
  {
-  "en": "<itemName id=|SkillUnlock_MopKing|/>",
-  "fr": "<itemName id=|SkillUnlock_MopKing|/>",
+  "en": "Sweepa Saddle",
+  "fr": "Selle pour Sweepa",
   "id": "tech:RECIPE_SkillUnlock_MopKing"
  },
  {
-  "en": "<itemName id=|SkillUnlock_MushroomDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_MushroomDragon|/>",
+  "en": "Shroomer Saddle",
+  "fr": "Selle pour Shroomer",
   "id": "tech:RECIPE_SkillUnlock_MushroomDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_MushroomDragon_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_MushroomDragon_Dark|/>",
+  "en": "Shroomer Noct Saddle",
+  "fr": "Selle pour Shroomer Noct",
   "id": "tech:RECIPE_SkillUnlock_MushroomDragon_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_NaughtyCat|/>",
-  "fr": "<itemName id=|SkillUnlock_NaughtyCat|/>",
+  "en": "Grintale Saddle",
+  "fr": "Selle pour Grintale",
   "id": "tech:RECIPE_SkillUnlock_NaughtyCat"
  },
  {
-  "en": "<itemName id=|SkillUnlock_NegativeOctopus|/>",
-  "fr": "<itemName id=|SkillUnlock_NegativeOctopus|/>",
+  "en": "Killamari's Gloves",
+  "fr": "Gants pour Killamari",
   "id": "tech:RECIPE_SkillUnlock_NegativeOctopus"
  },
  {
-  "en": "<itemName id=|SkillUnlock_NegativeOctopus_Neutral|/>",
-  "fr": "<itemName id=|SkillUnlock_NegativeOctopus_Neutral|/>",
+  "en": "Killamari Primo's Gloves",
+  "fr": "Gants pour Killamari Primo",
   "id": "tech:RECIPE_SkillUnlock_NegativeOctopus_Neutral"
  },
  {
-  "en": "<itemName id=|SkillUnlock_NightBlueHorse|/>",
-  "fr": "<itemName id=|SkillUnlock_NightBlueHorse|/>",
+  "en": "Starryon Saddle",
+  "fr": "Selle pour Starryon",
   "id": "tech:RECIPE_SkillUnlock_NightBlueHorse"
  },
  {
-  "en": "<itemName id=|SkillUnlock_NightBlueHorse_Neutral|/>",
-  "fr": "<itemName id=|SkillUnlock_NightBlueHorse_Neutral|/>",
+  "en": "Starryon Primo Saddle",
+  "fr": "Selle pour Starryon Primo",
   "id": "tech:RECIPE_SkillUnlock_NightBlueHorse_Neutral"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Penguin|/>",
-  "fr": "<itemName id=|SkillUnlock_Penguin|/>",
+  "en": "Pengullet Rocket Launcher",
+  "fr": "Lance-Roquettes pour Pengullet",
   "id": "tech:RECIPE_SkillUnlock_Penguin"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Penguin_Electric|/>",
-  "fr": "<itemName id=|SkillUnlock_Penguin_Electric|/>",
+  "en": "Pengullet Lux's Rocket Launcher",
+  "fr": "Lance-fusées pour Pengullet Lux",
   "id": "tech:RECIPE_SkillUnlock_Penguin_Electric"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Plesiosaur|/>",
-  "fr": "<itemName id=|SkillUnlock_Plesiosaur|/>",
+  "en": "Braloha Saddle",
+  "fr": "Selle pour Braloha",
   "id": "tech:RECIPE_SkillUnlock_Plesiosaur"
  },
  {
-  "en": "<itemName id=|SkillUnlock_PoseidonOrca|/>",
-  "fr": "<itemName id=|SkillUnlock_PoseidonOrca|/>",
+  "en": "Neptilius Saddle",
+  "fr": "Selle pour Neptilius",
   "id": "tech:RECIPE_SkillUnlock_PoseidonOrca"
  },
  {
-  "en": "<itemName id=|SkillUnlock_PurpleSpider|/>",
-  "fr": "<itemName id=|SkillUnlock_PurpleSpider|/>",
+  "en": "Tarantriss Saddle",
+  "fr": "Selle pour Tarantriss",
   "id": "tech:RECIPE_SkillUnlock_PurpleSpider"
  },
  {
-  "en": "<itemName id=|SkillUnlock_RaijinDaughter|/>",
-  "fr": "<itemName id=|SkillUnlock_RaijinDaughter|/>",
+  "en": "Dazzi's Necklace",
+  "fr": "Collier pour Dazzi",
   "id": "tech:RECIPE_SkillUnlock_RaijinDaughter"
  },
  {
-  "en": "<itemName id=|SkillUnlock_RaijinDaughter_Water|/>",
-  "fr": "<itemName id=|SkillUnlock_RaijinDaughter_Water|/>",
+  "en": "Dazzi Noct's Necklace",
+  "fr": "Collier pour Dazzi Noct",
   "id": "tech:RECIPE_SkillUnlock_RaijinDaughter_Water"
  },
  {
-  "en": "<itemName id=|SkillUnlock_RedArmorBird|/>",
-  "fr": "<itemName id=|SkillUnlock_RedArmorBird|/>",
+  "en": "Ragnahawk Saddle",
+  "fr": "Selle pour Ragnahawk",
   "id": "tech:RECIPE_SkillUnlock_RedArmorBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SaintCentaur|/>",
-  "fr": "<itemName id=|SkillUnlock_SaintCentaur|/>",
+  "en": "Paladius Saddle",
+  "fr": "Selle pour Paladius",
   "id": "tech:RECIPE_SkillUnlock_SaintCentaur"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SakuraSaurus|/>",
-  "fr": "<itemName id=|SkillUnlock_SakuraSaurus|/>",
+  "en": "Broncherry Saddle",
+  "fr": "Selle pour Broncherry",
   "id": "tech:RECIPE_SkillUnlock_SakuraSaurus"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SakuraSaurus_Water|/>",
-  "fr": "<itemName id=|SkillUnlock_SakuraSaurus_Water|/>",
+  "en": "Broncherry Aqua Saddle",
+  "fr": "Selle pour Broncherry Aqua",
   "id": "tech:RECIPE_SkillUnlock_SakuraSaurus_Water"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Serpent|/>",
-  "fr": "<itemName id=|SkillUnlock_Serpent|/>",
+  "en": "Surfent Saddle",
+  "fr": "Selle pour Surfent",
   "id": "tech:RECIPE_SkillUnlock_Serpent"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Serpent_Ground|/>",
-  "fr": "<itemName id=|SkillUnlock_Serpent_Ground|/>",
+  "en": "Surfent Terra Saddle",
+  "fr": "Selle pour Surfent Terra",
   "id": "tech:RECIPE_SkillUnlock_Serpent_Ground"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SkyDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_SkyDragon|/>",
+  "en": "Quivern Saddle",
+  "fr": "Selle pour Quivern",
   "id": "tech:RECIPE_SkillUnlock_SkyDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SkyDragon_Grass|/>",
-  "fr": "<itemName id=|SkillUnlock_SkyDragon_Grass|/>",
+  "en": "Quivern Botan Saddle",
+  "fr": "Selle pour Quivern Botan",
   "id": "tech:RECIPE_SkillUnlock_SkyDragon_Grass"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SnowTigerBeastman|/>",
-  "fr": "<itemName id=|SkillUnlock_SnowTigerBeastman|/>",
+  "en": "Bastigor's Hammer",
+  "fr": "Marteau de Bastigor",
   "id": "tech:RECIPE_SkillUnlock_SnowTigerBeastman"
  },
  {
-  "en": "<itemName id=|SkillUnlock_SumoDog|/>",
-  "fr": "<itemName id=|SkillUnlock_SumoDog|/>",
+  "en": "Bulldosu Saddle",
+  "fr": "Selle pour Bulldosu",
   "id": "tech:RECIPE_SkillUnlock_SumoDog"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Suzaku|/>",
-  "fr": "<itemName id=|SkillUnlock_Suzaku|/>",
+  "en": "Suzaku Saddle",
+  "fr": "Selle pour Suzaku",
   "id": "tech:RECIPE_SkillUnlock_Suzaku"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Suzaku_Water|/>",
-  "fr": "<itemName id=|SkillUnlock_Suzaku_Water|/>",
+  "en": "Suzaku Aqua Saddle",
+  "fr": "Selle pour Suzaku Aqua",
   "id": "tech:RECIPE_SkillUnlock_Suzaku_Water"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ThiefBird|/>",
-  "fr": "<itemName id=|SkillUnlock_ThiefBird|/>",
+  "en": "Roujay Saddle",
+  "fr": "Selle pour Roujay",
   "id": "tech:RECIPE_SkillUnlock_ThiefBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ThunderBird|/>",
-  "fr": "<itemName id=|SkillUnlock_ThunderBird|/>",
+  "en": "Beakon Saddle",
+  "fr": "Selle pour Beakon",
   "id": "tech:RECIPE_SkillUnlock_ThunderBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ThunderBird_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_ThunderBird_Ice|/>",
+  "en": "Beakon Cryst Saddle",
+  "fr": "Selle pour Beakon Cryst",
   "id": "tech:RECIPE_SkillUnlock_ThunderBird_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ThunderDog|/>",
-  "fr": "<itemName id=|SkillUnlock_ThunderDog|/>",
+  "en": "Rayhound Saddle",
+  "fr": "Selle pour Rayhound",
   "id": "tech:RECIPE_SkillUnlock_ThunderDog"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Thunderdog_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_Thunderdog_Ice|/>",
+  "en": "Rayhound Cryst Saddle",
+  "fr": "Selle pour Rayhound Cryst",
   "id": "tech:RECIPE_SkillUnlock_Thunderdog_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_ThunderFluffyBird|/>",
-  "fr": "<itemName id=|SkillUnlock_ThunderFluffyBird|/>",
+  "en": "Dynamoff Saddle",
+  "fr": "Selle pour Dynamoff",
   "id": "tech:RECIPE_SkillUnlock_ThunderFluffyBird"
  },
  {
-  "en": "<itemName id=|SkillUnlock_TropicalOstrich|/>",
-  "fr": "<itemName id=|SkillUnlock_TropicalOstrich|/>",
+  "en": "Palumba Saddle",
+  "fr": "Selle pour Palumba",
   "id": "tech:RECIPE_SkillUnlock_TropicalOstrich"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Umihebi|/>",
-  "fr": "<itemName id=|SkillUnlock_Umihebi|/>",
+  "en": "Jormuntide Saddle",
+  "fr": "Selle pour Jormuntide",
   "id": "tech:RECIPE_SkillUnlock_Umihebi"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Umihebi_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_Umihebi_Fire|/>",
+  "en": "Jormuntide Ignis Saddle",
+  "fr": "Selle pour Jormuntide Ignis",
   "id": "tech:RECIPE_SkillUnlock_Umihebi_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_VioletFairy|/>",
-  "fr": "<itemName id=|SkillUnlock_VioletFairy|/>",
+  "en": "SkillUnlock_VioletFairy",
+  "fr": "SkillUnlock_VioletFairy",
   "id": "tech:RECIPE_SkillUnlock_VioletFairy"
  },
  {
-  "en": "<itemName id=|SkillUnlock_VolcanicMonster|/>",
-  "fr": "<itemName id=|SkillUnlock_VolcanicMonster|/>",
+  "en": "Reptyro Saddle",
+  "fr": "Selle pour Reptyro",
   "id": "tech:RECIPE_SkillUnlock_VolcanicMonster"
  },
  {
-  "en": "<itemName id=|SkillUnlock_VolcanicMonster_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_VolcanicMonster_Ice|/>",
+  "en": "Reptyro Cryst Saddle",
+  "fr": "Selle pour Reptyro Cryst",
   "id": "tech:RECIPE_SkillUnlock_VolcanicMonster_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_VolcanoDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_VolcanoDragon|/>",
+  "en": "Moldron Saddle",
+  "fr": "Selle pour Moldron",
   "id": "tech:RECIPE_SkillUnlock_VolcanoDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_VolcanoDragon_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_VolcanoDragon_Ice|/>",
+  "en": "Moldron Cryst Saddle",
+  "fr": "Selle pour Moldron Cryst",
   "id": "tech:RECIPE_SkillUnlock_VolcanoDragon_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WeaselDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_WeaselDragon|/>",
+  "en": "Chillet Saddle",
+  "fr": "Selle pour Chillet",
   "id": "tech:RECIPE_SkillUnlock_WeaselDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WeaselDragon_Fire|/>",
-  "fr": "<itemName id=|SkillUnlock_WeaselDragon_Fire|/>",
+  "en": "Chillet Ignis Saddle",
+  "fr": "Selle pour Chillet Ignis",
   "id": "tech:RECIPE_SkillUnlock_WeaselDragon_Fire"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WhiteAlienDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_WhiteAlienDragon|/>",
+  "en": "Xenogard Saddle",
+  "fr": "Selle pour Xenogard",
   "id": "tech:RECIPE_SkillUnlock_WhiteAlienDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WhiteDeer|/>",
-  "fr": "<itemName id=|SkillUnlock_WhiteDeer|/>",
+  "en": "Celesdir Saddle",
+  "fr": "Selle pour Celesdir",
   "id": "tech:RECIPE_SkillUnlock_WhiteDeer"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WhiteDeer_Dark|/>",
-  "fr": "<itemName id=|SkillUnlock_WhiteDeer_Dark|/>",
+  "en": "Celesdir Noct Saddle",
+  "fr": "Selle pour Celesdir Noct",
   "id": "tech:RECIPE_SkillUnlock_WhiteDeer_Dark"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WhiteShieldDragon|/>",
-  "fr": "<itemName id=|SkillUnlock_WhiteShieldDragon|/>",
+  "en": "Silvegis Saddle",
+  "fr": "Selle pour Silvegis",
   "id": "tech:RECIPE_SkillUnlock_WhiteShieldDragon"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WindChimes|/>",
-  "fr": "<itemName id=|SkillUnlock_WindChimes|/>",
+  "en": "Hangyu's Gloves",
+  "fr": "Gants pour Hangyu",
   "id": "tech:RECIPE_SkillUnlock_WindChimes"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WindChimes_Ice|/>",
-  "fr": "<itemName id=|SkillUnlock_WindChimes_Ice|/>",
+  "en": "Hangyu Cryst's Glove",
+  "fr": "Gants pour Hangyu Cryst",
   "id": "tech:RECIPE_SkillUnlock_WindChimes_Ice"
  },
  {
-  "en": "<itemName id=|SkillUnlock_WingGolem|/>",
-  "fr": "<itemName id=|SkillUnlock_WingGolem|/>",
+  "en": "en_text Saddle",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_SkillUnlock_WingGolem"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Yeti|/>",
-  "fr": "<itemName id=|SkillUnlock_Yeti|/>",
+  "en": "Wumpo Saddle",
+  "fr": "Selle pour Wumpo",
   "id": "tech:RECIPE_SkillUnlock_Yeti"
  },
  {
-  "en": "<itemName id=|SkillUnlock_Yeti_Grass|/>",
-  "fr": "<itemName id=|SkillUnlock_Yeti_Grass|/>",
+  "en": "Wumpo Botan Saddle",
+  "fr": "Selle pour Wumpo Botan",
   "id": "tech:RECIPE_SkillUnlock_Yeti_Grass"
  },
  {
-  "en": "<mapObjectName id=|SkinChange|/>",
-  "fr": "<mapObjectName id=|SkinChange|/>",
+  "en": "Pal Dressing Facility",
+  "fr": "Atelier de style pour Pals",
   "id": "tech:RECIPE_SkinChange"
  },
  {
-  "en": "<itemName id=|SkyAssaultRifle|/>",
-  "fr": "<itemName id=|SkyAssaultRifle|/>",
+  "en": "Heavy Assault Rifle",
+  "fr": "Fusil d’assaut astral",
   "id": "tech:RECIPE_SkyAssaultRifle"
  },
  {
-  "en": "<itemName id=|SkyAssaultRifleBullet|/>",
-  "fr": "<itemName id=|SkyAssaultRifleBullet|/>",
+  "en": "Heavy Assault Rifle Ammo",
+  "fr": "Cartouches de fusil d’assaut astral",
   "id": "tech:RECIPE_SkyAssaultRifleBullet"
  },
  {
-  "en": "<itemName id=|SkyBeamSword|/>",
-  "fr": "<itemName id=|SkyBeamSword|/>",
+  "en": "Laser Sword",
+  "fr": "Épée laser",
   "id": "tech:RECIPE_SkyBeamSword"
  },
  {
-  "en": "<itemName id=|SkyBow|/>",
-  "fr": "<itemName id=|SkyBow|/>",
+  "en": "Mechanical Bow",
+  "fr": "Arc astral",
   "id": "tech:RECIPE_SkyBow"
  },
  {
-  "en": "<itemName id=|SkyBowArrow|/>",
-  "fr": "<itemName id=|SkyBowArrow|/>",
+  "en": "Mechanical Bow Ammo",
+  "fr": "Flèches d’arc astral",
   "id": "tech:RECIPE_SkyBowArrow"
  },
  {
-  "en": "<itemName id=|SkyGrenadeLauncher|/>",
-  "fr": "<itemName id=|SkyGrenadeLauncher|/>",
+  "en": "Tactical Grenade Launcher",
+  "fr": "Lance-grenades astral",
   "id": "tech:RECIPE_SkyGrenadeLauncher"
  },
  {
-  "en": "<itemName id=|SkyGrenadeLauncherBullet|/>",
-  "fr": "<itemName id=|SkyGrenadeLauncherBullet|/>",
+  "en": "Tactical Grenade Launcher Ammo",
+  "fr": "Munitions de lance-grenades astral",
   "id": "tech:RECIPE_SkyGrenadeLauncherBullet"
  },
  {
-  "en": "<itemName id=|SkyHeavyBullet|/>",
-  "fr": "<itemName id=|SkyHeavyBullet|/>",
+  "en": "Sunreach Single-Shot Ammo",
+  "fr": "en_text",
   "id": "tech:RECIPE_SkyHeavyBullet"
  },
  {
@@ -18070,8 +18070,8 @@
   "id": "tech:RECIPE_SkyIslandFlagSet"
  },
  {
-  "en": "<itemName id=|SkyislandIngot|/>",
-  "fr": "<itemName id=|SkyislandIngot|/>",
+  "en": "Soralite Ingot",
+  "fr": "Lingot de soralite",
   "id": "tech:RECIPE_SkyislandIngot"
  },
  {
@@ -18080,28 +18080,28 @@
   "id": "tech:RECIPE_SkyIslandOrePit"
  },
  {
-  "en": "<itemName id=|SkyLightBullet|/>",
-  "fr": "<itemName id=|SkyLightBullet|/>",
+  "en": "Sunreach Rapid-Fire Ammo",
+  "fr": "en_text",
   "id": "tech:RECIPE_SkyLightBullet"
  },
  {
-  "en": "<itemName id=|SkyShotgun|/>",
-  "fr": "<itemName id=|SkyShotgun|/>",
+  "en": "Prototype Shotgun",
+  "fr": "Fusil à pompe astral",
   "id": "tech:RECIPE_SkyShotgun"
  },
  {
-  "en": "<itemName id=|SkyShotgunBullet|/>",
-  "fr": "<itemName id=|SkyShotgunBullet|/>",
+  "en": "Prototype Shotgun Ammo",
+  "fr": "Cartouches de fusil à pompe astral",
   "id": "tech:RECIPE_SkyShotgunBullet"
  },
  {
-  "en": "<itemName id=|SkySubmachineGun|/>",
-  "fr": "<itemName id=|SkySubmachineGun|/>",
+  "en": "Combat SMG",
+  "fr": "Pistolet-mitrailleur astral",
   "id": "tech:RECIPE_SkySubmachineGun"
  },
  {
-  "en": "<itemName id=|SkySubmachineGunBullet|/>",
-  "fr": "<itemName id=|SkySubmachineGunBullet|/>",
+  "en": "Combat SMG Ammo",
+  "fr": "Balles de pistolet-mitrailleur astral",
   "id": "tech:RECIPE_SkySubmachineGunBullet"
  },
  {
@@ -18110,88 +18110,88 @@
   "id": "tech:RECIPE_SNIPER_RIFLE"
  },
  {
-  "en": "<mapObjectName id=|Snowman|/>",
-  "fr": "<mapObjectName id=|Snowman|/>",
+  "en": "Snowman",
+  "fr": "Bonhomme de neige",
   "id": "tech:RECIPE_Snowman"
  },
  {
-  "en": "<mapObjectName id=|Sofa01_Iron|/>",
-  "fr": "<mapObjectName id=|Sofa01_Iron|/>",
+  "en": "Leather Armchair",
+  "fr": "Canapé en cuir une place",
   "id": "tech:RECIPE_Sofa01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Sofa01_Stone|/>",
-  "fr": "<mapObjectName id=|Sofa01_Stone|/>",
+  "en": "Antique Armchair",
+  "fr": "Canapé une place ancien",
   "id": "tech:RECIPE_Sofa01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Sofa02_Iron|/>",
-  "fr": "<mapObjectName id=|Sofa02_Iron|/>",
+  "en": "Leather Couch",
+  "fr": "Canapé en cuir deux places",
   "id": "tech:RECIPE_Sofa02_Iron"
  },
  {
-  "en": "<mapObjectName id=|Sofa02_Stone|/>",
-  "fr": "<mapObjectName id=|Sofa02_Stone|/>",
+  "en": "Antique Couch",
+  "fr": "Canapé deux places ancien",
   "id": "tech:RECIPE_Sofa02_Stone"
  },
  {
-  "en": "<mapObjectName id=|Sofa03_Stone|/>",
-  "fr": "<mapObjectName id=|Sofa03_Stone|/>",
+  "en": "Antique Ottoman",
+  "fr": "Ottomane ancienne",
   "id": "tech:RECIPE_Sofa03_Stone"
  },
  {
-  "en": "<mapObjectName id=|Spa|/>",
-  "fr": "<mapObjectName id=|Spa|/>",
+  "en": "Hot Spring",
+  "fr": "Source chaude",
   "id": "tech:RECIPE_Spa"
  },
  {
-  "en": "<mapObjectName id=|Spa2|/>",
-  "fr": "<mapObjectName id=|Spa2|/>",
+  "en": "High Quality Hot Spring",
+  "fr": "Source chaude supérieure",
   "id": "tech:RECIPE_Spa2"
  },
  {
-  "en": "<mapObjectname id=|Spa3|/>",
-  "fr": "<mapObjectname id=|Spa3|/>",
+  "en": "Japanese-Style Hot Spring",
+  "fr": "Onsen",
   "id": "tech:RECIPE_Spa3"
  },
  {
-  "en": "<itemName id=|Spear|/>",
-  "fr": "<itemName id=|Spear|/>",
+  "en": "Stone Spear",
+  "fr": "Lance en pierre",
   "id": "tech:RECIPE_Spear"
  },
  {
-  "en": "<itemName id=|Spear_2|/>",
-  "fr": "<itemName id=|Spear_2|/>",
+  "en": "Metal Spear",
+  "fr": "Lance en métal",
   "id": "tech:RECIPE_Spear_2"
  },
  {
-  "en": "<itemName id=|Spear_3|/>",
-  "fr": "<itemName id=|Spear_3|/>",
+  "en": "Refined Metal Spear",
+  "fr": "Lance en métal raffiné",
   "id": "tech:RECIPE_Spear_3"
  },
  {
-  "en": "<itemName id=|Spear_ForestBoss|/>",
-  "fr": "<itemName id=|Spear_ForestBoss|/>",
+  "en": "Lily's Spear",
+  "fr": "Lance de Lily",
   "id": "tech:RECIPE_Spear_ForestBoss"
  },
  {
-  "en": "<itemName id=|Spear_ForestBoss2|/>",
-  "fr": "<itemName id=|Spear_ForestBoss2|/>",
+  "en": "Enhanced Lily's Spear",
+  "fr": "Lance de Lily améliorée",
   "id": "tech:RECIPE_Spear_ForestBoss2"
  },
  {
-  "en": "<mapObjectName id=|SphereFactory_Black_01|/>",
-  "fr": "<mapObjectName id=|SphereFactory_Black_01|/>",
+  "en": "Sphere Workbench",
+  "fr": "Établi pour sphères",
   "id": "tech:RECIPE_SPHERE_FACTORY_BLACK_01"
  },
  {
-  "en": "<mapObjectName id=|SphereFactory_Black_02|/>",
-  "fr": "<mapObjectName id=|SphereFactory_Black_02|/>",
+  "en": "Sphere Assembly Line",
+  "fr": "Chaîne de production de sphères",
   "id": "tech:RECIPE_SPHERE_FACTORY_BLACK_02"
  },
  {
-  "en": "<mapObjectName id=|SphereFactory_Black_03|/>",
-  "fr": "<mapObjectName id=|SphereFactory_Black_03|/>",
+  "en": "Sphere Assembly Line II",
+  "fr": "Chaîne de production de sphères II",
   "id": "tech:RECIPE_SPHERE_FACTORY_BLACK_03"
  },
  {
@@ -18210,118 +18210,118 @@
   "id": "tech:RECIPE_SPHERE_FACTORY_WHITE_03"
  },
  {
-  "en": "<itemName id=|SphereLauncher|/>",
-  "fr": "<itemName id=|SphereLauncher|/>",
+  "en": "Scatter Sphere Launcher",
+  "fr": "Lance-sphères à diffusion",
   "id": "tech:RECIPE_SPHERE_LAUNCHER"
  },
  {
-  "en": "<itemName id=|SphereLauncher_Once|/>",
-  "fr": "<itemName id=|SphereLauncher_Once|/>",
+  "en": "Single-Shot Sphere Launcher",
+  "fr": "Lance-sphères à un coup",
   "id": "tech:RECIPE_SPHERE_LAUNCHER_ONCE"
  },
  {
-  "en": "<itemName id=|PalSphere|/>",
-  "fr": "<itemName id=|PalSphere|/>",
+  "en": "Pal Sphere",
+  "fr": "Sphère de Pal",
   "id": "tech:RECIPE_SPHERE1"
  },
  {
-  "en": "<itemName id=|PalSphere_Mega|/>",
-  "fr": "<itemName id=|PalSphere_Mega|/>",
+  "en": "Mega Sphere",
+  "fr": "Méga Sphère",
   "id": "tech:RECIPE_SPHERE2"
  },
  {
-  "en": "<itemName id=|PalSphere_Giga|/>",
-  "fr": "<itemName id=|PalSphere_Giga|/>",
+  "en": "Giga Sphere",
+  "fr": "Giga Sphère",
   "id": "tech:RECIPE_SPHERE3"
  },
  {
-  "en": "<itemName id=|PalSphere_Tera|/>",
-  "fr": "<itemName id=|PalSphere_Tera|/>",
+  "en": "Hyper Sphere",
+  "fr": "Hyper Sphère",
   "id": "tech:RECIPE_SPHERE4"
  },
  {
-  "en": "<itemName id=|PalSphere_Master|/>",
-  "fr": "<itemName id=|PalSphere_Master|/>",
+  "en": "Ultra Sphere",
+  "fr": "Ultra Sphère",
   "id": "tech:RECIPE_SPHERE5"
  },
  {
-  "en": "<itemName id=|PalSphere_Legend|/>",
-  "fr": "<itemName id=|PalSphere_Legend|/>",
+  "en": "Legendary Sphere",
+  "fr": "Sphère Légendaire",
   "id": "tech:RECIPE_SPHERE6"
  },
  {
-  "en": "<itemName id=|PalSphere_Ultimate|/>",
-  "fr": "<itemName id=|PalSphere_Ultimate|/>",
+  "en": "Ultimate Sphere",
+  "fr": "Sphère Ultime",
   "id": "tech:RECIPE_SPHERE7"
  },
  {
-  "en": "<mapObjectName id=|SphereFactory_Black_04|/>",
-  "fr": "<mapObjectName id=|SphereFactory_Black_04|/>",
+  "en": "Advanced Sphere Assembly Line",
+  "fr": "Chaîne de production de sphères avancée",
   "id": "tech:RECIPE_SphereFactory_Black_04"
  },
  {
-  "en": "<itemName id=|SphereModule_Curve|/>",
-  "fr": "<itemName id=|SphereModule_Curve|/>",
+  "en": "Curve Module",
+  "fr": "Module courbe",
   "id": "tech:RECIPE_SphereModule_Curve"
  },
  {
-  "en": "<itemName id=|SphereModule_Curve2|/>",
-  "fr": "<itemName id=|SphereModule_Curve2|/>",
+  "en": "Slider Module",
+  "fr": "Module glisseur",
   "id": "tech:RECIPE_SphereModule_Curve2"
  },
  {
-  "en": "<itemName id=|SphereModule_Heavy|/>",
-  "fr": "<itemName id=|SphereModule_Heavy|/>",
+  "en": "Heavy Weight Module",
+  "fr": "Module poids lourd",
   "id": "tech:RECIPE_SphereModule_Heavy"
  },
  {
-  "en": "<itemName id=|SphereModule_Homing|/>",
-  "fr": "<itemName id=|SphereModule_Homing|/>",
+  "en": "Homing Module",
+  "fr": "Module tête chercheuse",
   "id": "tech:RECIPE_SphereModule_Homing"
  },
  {
-  "en": "<itemName id=|SphereModule_Sniper|/>",
-  "fr": "<itemName id=|SphereModule_Sniper|/>",
+  "en": "Sniper Module",
+  "fr": "Module sniper",
   "id": "tech:RECIPE_SphereModule_Sniper"
  },
  {
-  "en": "<itemName id=|SphereModule_Sniper2|/>",
-  "fr": "<itemName id=|SphereModule_Sniper2|/>",
+  "en": "Sniper Module II",
+  "fr": "Module sniper II",
   "id": "tech:RECIPE_SphereModule_Sniper2"
  },
  {
-  "en": "<itemName id=|StainlessSteel|/>",
-  "fr": "<itemName id=|StainlessSteel|/>",
+  "en": "Hexolite",
+  "fr": "Hexolite",
   "id": "tech:RECIPE_StainlessSteel"
  },
  {
-  "en": "<mapObjectName id=|StationDeforest2|/>",
-  "fr": "<mapObjectName id=|StationDeforest2|/>",
+  "en": "Logging Site",
+  "fr": "Scierie",
   "id": "tech:RECIPE_StationDeforest2"
  },
  {
-  "en": "<mapObjectname id=|StationDeforest3|/>",
-  "fr": "<mapObjectname id=|StationDeforest3|/>",
+  "en": "Logging Site II",
+  "fr": "Scierie II",
   "id": "tech:RECIPE_StationDeforest3"
  },
  {
-  "en": "<mapObjectName id=|BlastFurnace3|/>",
-  "fr": "<mapObjectName id=|BlastFurnace3|/>",
+  "en": "Electric Furnace",
+  "fr": "Fournaise électrique",
   "id": "tech:RECIPE_STEAL_INGOT"
  },
  {
-  "en": "<mapObjectName id=|Stone_DoorWall|/>",
-  "fr": "<mapObjectName id=|Stone_DoorWall|/>",
+  "en": "Stone Door",
+  "fr": "Porte en pierre",
   "id": "tech:RECIPE_Stone_DoorWall"
  },
  {
-  "en": "<mapObjectName id=|Stone_foundation|/>",
-  "fr": "<mapObjectName id=|Stone_foundation|/>",
+  "en": "Stone Foundation",
+  "fr": "Fondation en pierre",
   "id": "tech:RECIPE_Stone_foundation"
  },
  {
-  "en": "<mapObjectName id=|Stone_Gate|/>",
-  "fr": "<mapObjectName id=|Stone_Gate|/>",
+  "en": "Stone Gate",
+  "fr": "Portail en pierre",
   "id": "tech:RECIPE_Stone_Gate"
  },
  {
@@ -18330,33 +18330,33 @@
   "id": "tech:RECIPE_Stone_Houseset"
  },
  {
-  "en": "<mapObjectName id=|Stone_roof|/>",
-  "fr": "<mapObjectName id=|Stone_roof|/>",
+  "en": "Stone Roof",
+  "fr": "Toit en pierre",
   "id": "tech:RECIPE_Stone_roof"
  },
  {
-  "en": "<mapObjectName id=|Stone_SlantedRoof|/>",
-  "fr": "<mapObjectName id=|Stone_SlantedRoof|/>",
+  "en": "Stone Slanted Roof",
+  "fr": "Toit incliné en pierre",
   "id": "tech:RECIPE_Stone_SlantedRoof"
  },
  {
-  "en": "<mapObjectName id=|Stone_stair|/>",
-  "fr": "<mapObjectName id=|Stone_stair|/>",
+  "en": "Stone Stairs",
+  "fr": "Escalier en pierre",
   "id": "tech:RECIPE_Stone_stair"
  },
  {
-  "en": "<mapObjectName id=|Stone_TriangleWall|/>",
-  "fr": "<mapObjectName id=|Stone_TriangleWall|/>",
+  "en": "Stone Triangular Wall",
+  "fr": "Mur triangulaire en pierre",
   "id": "tech:RECIPE_Stone_TriangleWall"
  },
  {
-  "en": "<mapObjectName id=|Stone_wall|/>",
-  "fr": "<mapObjectName id=|Stone_wall|/>",
+  "en": "Stone Wall",
+  "fr": "Mur en pierre",
   "id": "tech:RECIPE_Stone_wall"
  },
  {
-  "en": "<mapObjectName id=|Stone_WindowWall|/>",
-  "fr": "<mapObjectName id=|Stone_WindowWall|/>",
+  "en": "Stone Wall and Window",
+  "fr": "Mur avec fenêtres en pierre",
   "id": "tech:RECIPE_Stone_WindowWall"
  },
  {
@@ -18365,58 +18365,58 @@
   "id": "tech:RECIPE_STONEHOUSE"
  },
  {
-  "en": "<mapObjectName id=|StonePit|/>",
-  "fr": "<mapObjectName id=|StonePit|/>",
+  "en": "Stone Pit",
+  "fr": "Carrière",
   "id": "tech:RECIPE_StonePit"
  },
  {
-  "en": "<mapObjectName id=|Stool_High_Wood|/>",
-  "fr": "<mapObjectName id=|Stool_High_Wood|/>",
+  "en": "Wooden Bar Stool",
+  "fr": "Tabouret de bar en bois",
   "id": "tech:RECIPE_Stool_High_Wood"
  },
  {
-  "en": "<mapObjectName id=|Stool_Wood|/>",
-  "fr": "<mapObjectName id=|Stool_Wood|/>",
+  "en": "Wooden Stool",
+  "fr": "Tabouret en bois",
   "id": "tech:RECIPE_Stool_Wood"
  },
  {
-  "en": "<mapObjectName id=|Stool01_Iron|/>",
-  "fr": "<mapObjectName id=|Stool01_Iron|/>",
+  "en": "Iron Stool",
+  "fr": "Tabouret en fer",
   "id": "tech:RECIPE_Stool01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Stool01_Stone|/>",
-  "fr": "<mapObjectName id=|Stool01_Stone|/>",
+  "en": "Antique Stool",
+  "fr": "Tabouret ancien",
   "id": "tech:RECIPE_Stool01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Stove01_Stone|/>",
-  "fr": "<mapObjectName id=|Stove01_Stone|/>",
+  "en": "Antique Stove",
+  "fr": "Poêle ancien",
   "id": "tech:RECIPE_Stove01_Stone"
  },
  {
-  "en": "<mapObjectName id=|Stump|/>",
-  "fr": "<mapObjectName id=|Stump|/>",
+  "en": "Stump and Axe",
+  "fr": "Souche et hache",
   "id": "tech:RECIPE_Stump"
  },
  {
-  "en": "<itemName id=|SubmachineGun|/>",
-  "fr": "<itemName id=|SubmachineGun|/>",
+  "en": "SMG",
+  "fr": "Pistolet-mitrailleur",
   "id": "tech:RECIPE_SubmachineGun"
  },
  {
-  "en": "<mapObjectName id=|SulfurPit|/>",
-  "fr": "<mapObjectName id=|SulfurPit|/>",
+  "en": "Sulfur Quarry",
+  "fr": "Mine de soufre",
   "id": "tech:RECIPE_SulfurPit"
  },
  {
-  "en": "<itemName id=|Supplement|/>",
-  "fr": "<itemName id=|Supplement|/>",
+  "en": "Nutrient Tonic",
+  "fr": "Tonique nutritif",
   "id": "tech:RECIPE_Supplement"
  },
  {
-  "en": "<itemName id=|Sword|/>",
-  "fr": "<itemName id=|Sword|/>",
+  "en": "Sword",
+  "fr": "Épée",
   "id": "tech:RECIPE_SWORD"
  },
  {
@@ -18425,88 +18425,88 @@
   "id": "tech:RECIPE_TableCircular"
  },
  {
-  "en": "<mapObjectName id=|TableCircular_Wood|/>",
-  "fr": "<mapObjectName id=|TableCircular_Wood|/>",
+  "en": "Round Table",
+  "fr": "Table ronde",
   "id": "tech:RECIPE_TableCircular_Wood"
  },
  {
-  "en": "<mapObjectName id=|TableCircular01_Iron|/>",
-  "fr": "<mapObjectName id=|TableCircular01_Iron|/>",
+  "en": "Round Iron Table",
+  "fr": "Table ronde en fer",
   "id": "tech:RECIPE_TableCircular01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TableCircular01_Stone|/>",
-  "fr": "<mapObjectName id=|TableCircular01_Stone|/>",
+  "en": "Antique Round Table",
+  "fr": "Table ronde ancienne",
   "id": "tech:RECIPE_TableCircular01_Stone"
  },
  {
-  "en": "<mapObjectName id=|TableDresser01_Stone|/>",
-  "fr": "<mapObjectName id=|TableDresser01_Stone|/>",
+  "en": "Antique Dresser",
+  "fr": "Buffet ancien",
   "id": "tech:RECIPE_TableDresser01_Stone"
  },
  {
-  "en": "<mapObjectName id=|TableSide01_Iron|/>",
-  "fr": "<mapObjectName id=|TableSide01_Iron|/>",
+  "en": "Ironwood Side Table",
+  "fr": "Table d'appoint en bois de fer",
   "id": "tech:RECIPE_TableSide01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TableSink01_Stone|/>",
-  "fr": "<mapObjectName id=|TableSink01_Stone|/>",
+  "en": "Antique Washstand",
+  "fr": "Lavabo ancien",
   "id": "tech:RECIPE_TableSink01_Stone"
  },
  {
-  "en": "<mapObjectName id=|TableSquare_Wood|/>",
-  "fr": "<mapObjectName id=|TableSquare_Wood|/>",
+  "en": "Square Table",
+  "fr": "Table carrée",
   "id": "tech:RECIPE_TableSquare_Wood"
  },
  {
-  "en": "<mapObjectName id=|TableSquare01_Iron|/>",
-  "fr": "<mapObjectName id=|TableSquare01_Iron|/>",
+  "en": "Ironwood Table",
+  "fr": "Table en bois de fer",
   "id": "tech:RECIPE_TableSquare01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TableSquare02_Iron|/>",
-  "fr": "<mapObjectName id=|TableSquare02_Iron|/>",
+  "en": "Ironwood Low Table",
+  "fr": "Table basse en bois de fer",
   "id": "tech:RECIPE_TableSquare02_Iron"
  },
  {
-  "en": "<mapObjectName id=|Television01_Iron|/>",
-  "fr": "<mapObjectName id=|Television01_Iron|/>",
+  "en": "Old TV",
+  "fr": "Vieux téléviseur",
   "id": "tech:RECIPE_Television01_Iron"
  },
  {
-  "en": "<itemName id=|Thermal_Core|/>",
-  "fr": "<itemName id=|Thermal_Core|/>",
+  "en": "Thermal Core",
+  "fr": "Cœur brûlant",
   "id": "tech:RECIPE_Thermal_Core"
  },
  {
-  "en": "<mapObjectName id=|Tire01_Iron|/>",
-  "fr": "<mapObjectName id=|Tire01_Iron|/>",
+  "en": "Tire",
+  "fr": "Pneu",
   "id": "tech:RECIPE_Tire01_Iron"
  },
  {
-  "en": "<mapObjectName id=|Toilet01_Stone|/>",
-  "fr": "<mapObjectName id=|Toilet01_Stone|/>",
+  "en": "Antique Toilet",
+  "fr": "Toilettes anciennes",
   "id": "tech:RECIPE_Toilet01_Stone"
  },
  {
-  "en": "<mapObjectName id=|ToiletHolder01_Stone|/>",
-  "fr": "<mapObjectName id=|ToiletHolder01_Stone|/>",
+  "en": "Antique Toilet Paper Holder",
+  "fr": "Porte-papier toilette ancien",
   "id": "tech:RECIPE_ToiletHolder01_Stone"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_tomato|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_tomato|/>",
+  "en": "Tomato Plantation",
+  "fr": "Plantation de tomates",
   "id": "tech:RECIPE_tomato_plantation"
  },
  {
-  "en": "<mapObjectName id=|ToolBoxV1|/>",
-  "fr": "<mapObjectName id=|ToolBoxV1|/>",
+  "en": "Large Toolbox",
+  "fr": "Grosse caisse à outils",
   "id": "tech:RECIPE_ToolBoxV1"
  },
  {
-  "en": "<mapObjectName id=|Torch|/>",
-  "fr": "<mapObjectName id=|Torch|/>",
+  "en": "Mounted Torch",
+  "fr": "Torche sur pied",
   "id": "tech:RECIPE_Torch"
  },
  {
@@ -18515,153 +18515,153 @@
   "id": "tech:RECIPE_Torch_set"
  },
  {
-  "en": "<mapObjectName id=|TowlRack01_Stone|/>",
-  "fr": "<mapObjectName id=|TowlRack01_Stone|/>",
+  "en": "Antique Towel Rack",
+  "fr": "Porte-serviettes ancien",
   "id": "tech:RECIPE_TowlRack01_Stone"
  },
  {
-  "en": "<mapObjectName id=|TrafficBarricade01_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficBarricade01_Iron|/>",
+  "en": "Barricade",
+  "fr": "Barricade",
   "id": "tech:RECIPE_TrafficBarricade01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficBarricade02_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficBarricade02_Iron|/>",
+  "en": "Orange Barricade",
+  "fr": "Barricade orange",
   "id": "tech:RECIPE_TrafficBarricade02_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficBarricade03_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficBarricade03_Iron|/>",
+  "en": "Red Iron Barricade",
+  "fr": "Barricade rouge en fer",
   "id": "tech:RECIPE_TrafficBarricade03_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficBarricade04_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficBarricade04_Iron|/>",
+  "en": "White Iron Barricade",
+  "fr": "Barricade blanche en fer",
   "id": "tech:RECIPE_TrafficBarricade04_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficBarricade05_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficBarricade05_Iron|/>",
+  "en": "Iron Fence",
+  "fr": "Clôture en fer",
   "id": "tech:RECIPE_TrafficBarricade05_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficCone01_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficCone01_Iron|/>",
+  "en": "Traffic Cone",
+  "fr": "Cône",
   "id": "tech:RECIPE_TrafficCone01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficCone02_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficCone02_Iron|/>",
+  "en": "Fat Traffic Cone",
+  "fr": "Cône de signalisation épais",
   "id": "tech:RECIPE_TrafficCone02_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficCone03_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficCone03_Iron|/>",
+  "en": "Skinny Traffic Cone",
+  "fr": "Cône de signalisation fin",
   "id": "tech:RECIPE_TrafficCone03_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficLight01_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficLight01_Iron|/>",
+  "en": "Traffic Light",
+  "fr": "Feu de circulation",
   "id": "tech:RECIPE_TrafficLight01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficSign01_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficSign01_Iron|/>",
+  "en": "No Pals Beyond Sign",
+  "fr": "Panneau Interdit aux Pals",
   "id": "tech:RECIPE_TrafficSign01_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficSign02_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficSign02_Iron|/>",
+  "en": "Stop Sign",
+  "fr": "Panneau stop",
   "id": "tech:RECIPE_TrafficSign02_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficSign03_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficSign03_Iron|/>",
+  "en": "Beware of Eikthyrdeer Sign",
+  "fr": "Panneau Attention aux Eikthyrdeer",
   "id": "tech:RECIPE_TrafficSign03_Iron"
  },
  {
-  "en": "<mapObjectName id=|TrafficSign04_Iron|/>",
-  "fr": "<mapObjectName id=|TrafficSign04_Iron|/>",
+  "en": "Beware of Mammorest Sign",
+  "fr": "Panneau Attention aux Mammorest",
   "id": "tech:RECIPE_TrafficSign04_Iron"
  },
  {
-  "en": "<mapObjectName id=|TransmissionTower|/>",
-  "fr": "<mapObjectName id=|TransmissionTower|/>",
+  "en": "Electric Pylon",
+  "fr": "Poteau électrique",
   "id": "tech:RECIPE_TransmissionTower"
  },
  {
-  "en": "<mapObjectName id=|Trap_LegHold|/>",
-  "fr": "<mapObjectName id=|Trap_LegHold|/>",
+  "en": "Bear Trap (Small)",
+  "fr": "Piège (petit)",
   "id": "tech:RECIPE_Trap_LegHold"
  },
  {
-  "en": "<mapObjectName id=|Trap_LegHold_Big|/>",
-  "fr": "<mapObjectName id=|Trap_LegHold_Big|/>",
+  "en": "Bear Trap (Large)",
+  "fr": "Piège (grand)",
   "id": "tech:RECIPE_Trap_LegHold_Big"
  },
  {
-  "en": "<mapObjectName id=|Trap_MineAttack|/>",
-  "fr": "<mapObjectName id=|Trap_MineAttack|/>",
+  "en": "Mine",
+  "fr": "Mine",
   "id": "tech:RECIPE_Trap_MineAttack"
  },
  {
-  "en": "<mapObjectName id=|Trap_MineElecShock|/>",
-  "fr": "<mapObjectName id=|Trap_MineElecShock|/>",
+  "en": "Electric Mine",
+  "fr": "Mine électrique",
   "id": "tech:RECIPE_Trap_MineElecShock"
  },
  {
-  "en": "<mapObjectName id=|Trap_MineFreeze|/>",
-  "fr": "<mapObjectName id=|Trap_MineFreeze|/>",
+  "en": "Ice Mine",
+  "fr": "Mine gelée",
   "id": "tech:RECIPE_Trap_MineFreeze"
  },
  {
-  "en": "<mapObjectName id=|Trap_MovingPanel|/>",
-  "fr": "<mapObjectName id=|Trap_MovingPanel|/>",
+  "en": "Moving Panels",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_Trap_MovingPanel"
  },
  {
-  "en": "<mapObjectName id=|Trap_Noose|/>",
-  "fr": "<mapObjectName id=|Trap_Noose|/>",
+  "en": "Hanging Trap",
+  "fr": "Piège suspendu",
   "id": "tech:RECIPE_Trap_Noose"
  },
  {
-  "en": "<itemName id=|Unlock_Picking_Tier1|/>",
-  "fr": "<itemName id=|Unlock_Picking_Tier1|/>",
+  "en": "Lockpicking Tool v1",
+  "fr": "Outil de crochetage basique",
   "id": "tech:RECIPE_Unlock_Picking_Tier1"
  },
  {
-  "en": "<itemName id=|Unlock_Picking_Tier2|/>",
-  "fr": "<itemName id=|Unlock_Picking_Tier2|/>",
+  "en": "Lockpicking Tool v2",
+  "fr": "Outil de crochetage avancé",
   "id": "tech:RECIPE_Unlock_Picking_Tier2"
  },
  {
-  "en": "<itemName id=|Unlock_Picking_Tier3|/>",
-  "fr": "<itemName id=|Unlock_Picking_Tier3|/>",
+  "en": "Lockpicking Tool v3",
+  "fr": "Outil de crochetage professionnel",
   "id": "tech:RECIPE_Unlock_Picking_Tier3"
  },
  {
-  "en": "<itemName id=|UnlockEquipmentSlot_Weapon_01|/>",
-  "fr": "<itemName id=|UnlockEquipmentSlot_Weapon_01|/>",
+  "en": "Extra Weapon Holster",
+  "fr": "Étui d'arme supplémentaire",
   "id": "tech:RECIPE_UnlockEquipmentSlot_Weapon_01"
  },
  {
-  "en": "<itemName id=|UnlockEquipmentSlot_Weapon_02|/>",
-  "fr": "<itemName id=|UnlockEquipmentSlot_Weapon_02|/>",
+  "en": "Extra Weapon Holster 2",
+  "fr": "Étui d'arme supplémentaire 2",
   "id": "tech:RECIPE_UnlockEquipmentSlot_Weapon_02"
  },
  {
-  "en": "<mapObjectName id=|WallSignBoard|/>",
-  "fr": "<mapObjectName id=|WallSignBoard|/>",
+  "en": "WallSignBoard",
+  "fr": "WallSignBoard",
   "id": "tech:RECIPE_WallSignBoard"
  },
  {
-  "en": "<mapObjectName id=|WallTorch|/>",
-  "fr": "<mapObjectName id=|WallTorch|/>",
+  "en": "Wall Torch",
+  "fr": "Torche murale",
   "id": "tech:RECIPE_WallTorch"
  },
  {
-  "en": "<itemName id=|WaterBuildKit|/>",
-  "fr": "<itemName id=|WaterBuildKit|/>",
+  "en": "Aquatic Construction Kit",
+  "fr": "Kit de construction flottante",
   "id": "tech:RECIPE_WaterBuildKit"
  },
  {
@@ -18680,93 +18680,93 @@
   "id": "tech:RECIPE_WEAPON_FACTORY_CLEAN_03"
  },
  {
-  "en": "<mapObjectName id=|WeaponFactory_Dirty_02|/>",
-  "fr": "<mapObjectName id=|WeaponFactory_Dirty_02|/>",
+  "en": "Weapon Assembly Line",
+  "fr": "Chaîne de production d’armes",
   "id": "tech:RECIPE_WEAPON_FACTORY_DIRTY_02"
  },
  {
-  "en": "<mapObjectName id=|WeaponFactory_Dirty_03|/>",
-  "fr": "<mapObjectName id=|WeaponFactory_Dirty_03|/>",
+  "en": "Weapon Assembly Line II",
+  "fr": "Chaîne de production d’armes II",
   "id": "tech:RECIPE_WEAPON_FACTORY_DIRTY_03"
  },
  {
-  "en": "<mapObjectName id=|WeaponFactory_Dirty_04|/>",
-  "fr": "<mapObjectName id=|WeaponFactory_Dirty_04|/>",
+  "en": "Advanced Weapon Assembly Line",
+  "fr": "Chaîne de production d’armes avancée",
   "id": "tech:RECIPE_WeaponFactory_Dirty_04"
  },
  {
-  "en": "<mapObjectName id=|WeaponFactory_Dirty_01|/>",
-  "fr": "<mapObjectName id=|WeaponFactory_Dirty_01|/>",
+  "en": "Weapon Workbench",
+  "fr": "Établi pour armes",
   "id": "tech:RECIPE_WEAPONFACTRY"
  },
  {
-  "en": "<mapObjectName id=|Well|/>",
-  "fr": "<mapObjectName id=|Well|/>",
+  "en": "Water Well",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_WELL"
  },
  {
-  "en": "<mapObjectName id=|FarmBlockV2_wheet|/>",
-  "fr": "<mapObjectName id=|FarmBlockV2_wheet|/>",
+  "en": "Wheat Plantation",
+  "fr": "Plantation de blé",
   "id": "tech:RECIPE_wheat_plantation"
  },
  {
-  "en": "<itemName id=|WidePenetrateShotgun|/>",
-  "fr": "<itemName id=|WidePenetrateShotgun|/>",
+  "en": "Beam Scatter",
+  "fr": "Disperseur à faisceau",
   "id": "tech:RECIPE_WidePenetrateShotgun"
  },
  {
-  "en": "<itemName id=|WidePenetrateShotgunBullet|/>",
-  "fr": "<itemName id=|WidePenetrateShotgunBullet|/>",
+  "en": "Beam Scatter Ammo",
+  "fr": "Munitions de disperseur à faisceau",
   "id": "tech:RECIPE_WidePenetrateShotgunBullet"
  },
  {
-  "en": "<itemName id=|WingGlider|/>",
-  "fr": "<itemName id=|WingGlider|/>",
+  "en": "Wing Pack",
+  "fr": "Ailes dorsales",
   "id": "tech:RECIPE_WingGlider"
  },
  {
-  "en": "<itemName id=|WingGlider_Fuel|/>",
-  "fr": "<itemName id=|WingGlider_Fuel|/>",
+  "en": "Wing Cell",
+  "fr": "Cellule ailée",
   "id": "tech:RECIPE_WingGlider_Fuel"
  },
  {
-  "en": "<mapObjectName id=|Wood_Gate|/>",
-  "fr": "<mapObjectName id=|Wood_Gate|/>",
+  "en": "Wooden Gate",
+  "fr": "Portail en bois",
   "id": "tech:RECIPE_Wood_Gate"
  },
  {
-  "en": "<mapObjectName id=|Wood_SlantedRoof|/>",
-  "fr": "<mapObjectName id=|Wood_SlantedRoof|/>",
+  "en": "Wooden Slanted Roof",
+  "fr": "Toit incliné en bois",
   "id": "tech:RECIPE_Wood_SlantedRoof"
  },
  {
-  "en": "<mapObjectName id=|Wood_TriangleWall|/>",
-  "fr": "<mapObjectName id=|Wood_TriangleWall|/>",
+  "en": "Wooden Triangular Wall",
+  "fr": "Mur triangulaire en bois",
   "id": "tech:RECIPE_Wood_TriangleWall"
  },
  {
-  "en": "<mapObjectName id=|Wood_WindowWall|/>",
-  "fr": "<mapObjectName id=|Wood_WindowWall|/>",
+  "en": "Wooden Wall and Window",
+  "fr": "Mur avec fenêtres en bois",
   "id": "tech:RECIPE_Wood_WindowWall"
  },
  {
-  "en": "<mapObjectName id=|WoodCreator|/>",
-  "fr": "<mapObjectName id=|WoodCreator|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_WoodCreator"
  },
  {
-  "en": "<mapObjectName id=|WoodCrusher|/>",
-  "fr": "<mapObjectName id=|WoodCrusher|/>",
+  "en": "Wood Dismantling Table",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_WoodCrusher"
  },
  {
-  "en": "<mapObjectName id=|Wooden_DoorWall|/>",
-  "fr": "<mapObjectName id=|Wooden_DoorWall|/>",
+  "en": "Wooden Door",
+  "fr": "Porte en bois",
   "id": "tech:RECIPE_Wooden_DoorWall"
  },
  {
-  "en": "<mapObjectName id=|Wooden_foundation|/>",
-  "fr": "<mapObjectName id=|Wooden_foundation|/>",
+  "en": "Wooden Foundation",
+  "fr": "Fondation en bois",
   "id": "tech:RECIPE_Wooden_foundation"
  },
  {
@@ -18775,58 +18775,58 @@
   "id": "tech:RECIPE_Wooden_Houseset"
  },
  {
-  "en": "<mapObjectName id=|Wooden_ladder|/>",
-  "fr": "<mapObjectName id=|Wooden_ladder|/>",
+  "en": "Ladder",
+  "fr": "Échelle",
   "id": "tech:RECIPE_Wooden_ladder"
  },
  {
-  "en": "<mapObjectName id=|Wooden_roof|/>",
-  "fr": "<mapObjectName id=|Wooden_roof|/>",
+  "en": "Wooden Roof",
+  "fr": "Toit en bois",
   "id": "tech:RECIPE_Wooden_roof"
  },
  {
-  "en": "<mapObjectName id=|Wooden_stair|/>",
-  "fr": "<mapObjectName id=|Wooden_stair|/>",
+  "en": "Wooden Stairs",
+  "fr": "Escalier en bois",
   "id": "tech:RECIPE_Wooden_stair"
  },
  {
-  "en": "<mapObjectName id=|Wooden_wall|/>",
-  "fr": "<mapObjectName id=|Wooden_wall|/>",
+  "en": "Wooden Wall",
+  "fr": "Mur en bois",
   "id": "tech:RECIPE_Wooden_wall"
  },
  {
-  "en": "<mapObjectName id=|WorkBench|/>",
-  "fr": "<mapObjectName id=|WorkBench|/>",
+  "en": "Primitive Workbench",
+  "fr": "Établi de fortune",
   "id": "tech:RECIPE_WORKBENCH"
  },
  {
-  "en": "<mapObjectName id=|WorkBench_SkillCard|/>",
-  "fr": "<mapObjectName id=|WorkBench_SkillCard|/>",
+  "en": "en Text",
+  "fr": "fr_Text",
   "id": "tech:RECIPE_WORKBENCH_SKILLCARD"
  },
  {
-  "en": "<mapObjectName id=|WorkBench_SkillUnlock|/>",
-  "fr": "<mapObjectName id=|WorkBench_SkillUnlock|/>",
+  "en": "Pal Gear Workbench",
+  "fr": "Établi pour équipement de Pal",
   "id": "tech:RECIPE_WORKBENCH_SKILLUNLOCK"
  },
  {
-  "en": "<mapObjectName id=|WorkSpeedIncrease1|/>",
-  "fr": "<mapObjectName id=|WorkSpeedIncrease1|/>",
+  "en": "Beta Wave Generator",
+  "fr": "Dispositif de vague β",
   "id": "tech:RECIPE_WorkSpeedIncrease1"
  },
  {
-  "en": "<itemName id=|WorldTreeIngot|/>",
-  "fr": "<itemName id=|WorldTreeIngot|/>",
+  "en": "Paloxite Ingot",
+  "fr": "Lingot de paloxite",
   "id": "tech:RECIPE_WorldTreeIngot"
  },
  {
-  "en": "<itemName id=|YakushimaBlade|/>",
-  "fr": "<itemName id=|YakushimaBlade|/>",
+  "en": "Meowmere",
+  "fr": "Épée Arc-en-ciel",
   "id": "tech:RECIPE_YakushimaBlade"
  },
  {
-  "en": "<itemName id=|YakushimaBlade005|/>",
-  "fr": "<itemName id=|YakushimaBlade005|/>",
+  "en": "Legendary Meowmere",
+  "fr": "Épée Arc-en-ciel Légendaire",
   "id": "tech:RECIPE_YakushimaBlade005"
  }
 ]

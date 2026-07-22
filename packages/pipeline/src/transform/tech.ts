@@ -18,10 +18,16 @@ const tech = Object.entries(rows)
         return b && b !== "None" ? b : undefined;
       })(),
       iconName: pick<string>(row, "IconName") || undefined,
-      unlocks: ([] as string[]).concat(
-        pick<string[]>(row, "UnlockItemRecipes") ?? [],
-        pick<string[]>(row, "UnlockBuildObjects") ?? [],
-      ),
+      // Dédoublonné : le jeu liste parfois le même unlock deux fois
+      // (ex. SF_TriangleFoundation), ce qui casserait les {#each} keyed.
+      unlocks: [
+        ...new Set(
+          ([] as string[]).concat(
+            pick<string[]>(row, "UnlockItemRecipes") ?? [],
+            pick<string[]>(row, "UnlockBuildObjects") ?? [],
+          ),
+        ),
+      ],
     };
   })
   .sort((a, b) => a.level - b.level || a.id.localeCompare(b.id));

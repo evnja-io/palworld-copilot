@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
+	import GlobalSearch from '$lib/components/GlobalSearch.svelte';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { data, children } = $props();
@@ -25,6 +26,7 @@
 				</a>
 			{/each}
 		</nav>
+		<GlobalSearch />
 		<div class="user">
 			<LangSwitch />
 			{#if data.user.avatarUrl}

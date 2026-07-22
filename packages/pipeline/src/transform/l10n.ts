@@ -24,6 +24,16 @@ for (const locale of ["en", "fr"] as const) {
     const hint = new RegExp(`/${locale}/.*${table.source}`);
     for (const [id, text] of Object.entries(l10nMap(hint, l10nPrefix))) names[ns + id] = text;
   }
+  // Certaines entrées (technos surtout) sont des templates du jeu référençant
+  // un item ou un objet de map : <itemName id=|X|/>, <mapObjectName id=|X|/>
+  // (casse variable) -> nom localisé correspondant.
+  for (const [key, text] of Object.entries(names)) {
+    if (text.includes("<")) {
+      names[key] = text
+        .replace(/<itemName id=\|([^|]+)\|\/>/gi, (_, id) => names[`item:${id}`] ?? id)
+        .replace(/<mapObjectName id=\|([^|]+)\|\/>/gi, (_, id) => names[`building:${id}`] ?? id);
+    }
+  }
   for (const [table, l10nPrefix, ns] of DESC_SOURCES) {
     const hint = new RegExp(`/${locale}/.*${table.source}`);
     try {
