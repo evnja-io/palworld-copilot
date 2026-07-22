@@ -45,14 +45,24 @@ export function childOf(aId: string, bId: string): string {
 /** Paires de parents produisant childId (échantillon représentatif, borné). */
 export function parentsOf(childId: string, limit = 50): Array<[string, string]> {
   const out: Array<[string, string]> = [];
+  // Les variantes ont un combo unique X×X→X en plus du vrai combo : la boucle
+  // brute retrouve les mêmes paires via childOf, d'où la déduplication par clé triée.
+  const seen = new Set<string>();
+  const add = (a: string, b: string) => {
+    const key = [a, b].sort().join("|");
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push([a, b]);
+    }
+  };
   for (const [key, child] of uniques)
-    if (child === childId) out.push(key.split("|") as [string, string]);
+    if (child === childId) add(...(key.split("|") as [string, string]));
   outer: for (let i = 0; i < pals.length; i++) {
     for (let j = i; j < pals.length; j++) {
       if (out.length >= limit) break outer;
       const a = pals[i].id,
         b = pals[j].id;
-      if (childOf(a, b) === childId) out.push([a, b]);
+      if (childOf(a, b) === childId) add(a, b);
     }
   }
   return out.slice(0, limit);
