@@ -1,5 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import pals from "@palworld-companion/game-data/pals.json";
+import tech from "@palworld-companion/game-data/tech.json";
 import { getDb, tables } from "$lib/server/db";
 import type { GroupUser } from "$lib/types";
 
@@ -7,6 +8,7 @@ import type { GroupUser } from "$lib/types";
 // tech_unlocked (tech.json) et marker (markers/*.json) ICI, nulle part ailleurs.
 const REGISTRY: Record<string, Set<string>> = {
   pal_caught: new Set((pals as Array<{ id: string }>).map((p) => p.id)),
+  tech_unlocked: new Set((tech as Array<{ id: string }>).map((t) => t.id)),
 };
 
 export function isValidEntity(kind: string, entityId: string): boolean {
