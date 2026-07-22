@@ -117,3 +117,11 @@ dans `DT_PalLongDescriptionText` (sans variante _Common), préfixe
 `PAL_LONG_DESC_`.
 **Conséquence** : namespaces de sortie `skill:`, `passive:`, `partnerskill:`
 en plus de `pal:`/`item:`/`tech:`/`building:` (transform/l10n.ts).
+
+## 2026-07-22 — Stations de craft : report
+
+**Constat** : `DT_MapObjectItemProductDataTable` ne couvre que la production
+automatique (16 lignes) ; l'attribution recette→station vit dans les
+blueprints des stations, non extractible proprement.
+**Décision** : la section Craft groupe par niveau de technologie. Station
+ajoutable plus tard si une source fiable émerge.
