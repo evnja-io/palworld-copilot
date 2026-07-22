@@ -1,4 +1,4 @@
-import { and, eq, isNull, sql } from "drizzle-orm";
+import { and, eq, isNull, or, sql } from "drizzle-orm";
 import markers from "@palworld-companion/game-data/markers.json";
 import { getDb, tables } from "$lib/server/db";
 
@@ -78,10 +78,18 @@ export async function claimGuid(userId: string, guid: string): Promise<void> {
     .limit(1);
   if (known.length === 0) throw new ClaimError("guid_unknown");
   try {
+    // Re-revendiquer son propre GUID est permis : le driver neon-http n'a pas
+    // de transactions, donc si la fusion ci-dessous échoue, l'utilisateur doit
+    // pouvoir recliquer pour la rejouer (elle est idempotente).
     const updated = await db
       .update(tables.users)
       .set({ palPlayerGuid: guid })
-      .where(and(eq(tables.users.id, userId), isNull(tables.users.palPlayerGuid)))
+      .where(
+        and(
+          eq(tables.users.id, userId),
+          or(isNull(tables.users.palPlayerGuid), eq(tables.users.palPlayerGuid, guid)),
+        ),
+      )
       .returning();
     if (updated.length === 0) throw new ClaimError("already_claimed_user");
   } catch (err) {
@@ -89,14 +97,17 @@ export async function claimGuid(userId: string, guid: string): Promise<void> {
     if (isUniqueViolation(err)) throw new ClaimError("guid_taken");
     throw err;
   }
+  // string_to_array côté SQL : passer un tableau JS en paramètre le fait
+  // exploser par drizzle en liste ($1, $2, …) incastable en text[].
+  // ::uuid explicite : dans un UNION, les paramètres sans type deviennent text.
   await db.execute(sql`
     insert into progress (user_id, kind, entity_id)
-    select ${userId}, kind, entity_id from save_snapshots
+    select ${userId}::uuid, kind, entity_id from save_snapshots
     where player_guid = ${guid} and kind in ('pal_caught', 'tech_unlocked')
     union
-    select ${userId}, 'marker', 'relic_' || entity_id from save_snapshots
+    select ${userId}::uuid, 'marker', 'relic_' || entity_id from save_snapshots
     where player_guid = ${guid} and kind = 'raw:relic'
-      and ('relic_' || entity_id) = any(${RELIC_IDS}::text[])
+      and ('relic_' || entity_id) = any(string_to_array(${RELIC_IDS.join(",")}, ','))
     on conflict do nothing`);
 }
 
