@@ -31,6 +31,7 @@
 		pal: '🐾',
 		item: '🎒',
 		skill: '💥',
+		passive: '✨',
 		tech: '🔬',
 		building: '🏗️'
 	};
@@ -74,7 +75,14 @@
 
 	const suggestions = $derived(data ? suggestTokens(text, tokens) : []);
 	const groups = $derived(
-		data ? runSearch(data.index, tokens, text, { locale, learners: data.learners, checked }) : []
+		data
+			? runSearch(data.index, tokens, text, {
+					locale,
+					learners: data.learners,
+					passiveHolders: data.passiveHolders,
+					checked
+				})
+			: []
 	);
 
 	/** Vue aplatie pour la navigation clavier : suggestions puis résultats groupés. */
@@ -147,6 +155,10 @@
 		const e = row.item.entry;
 		if (entryNs(e) === 'skill') {
 			addToken({ kind: 'skill', value: rawId(e), label: e[locale] ?? e.en });
+			return;
+		}
+		if (entryNs(e) === 'passive') {
+			addToken({ kind: 'passive', value: rawId(e), label: e[locale] ?? e.en });
 			return;
 		}
 		if (row.href) {

@@ -25,3 +25,13 @@ export const learners = new Map<string, ReadonlySet<string>>();
   }
   for (const [k, v] of acc) learners.set(k, v);
 }
+
+/** passiveId -> pals du Paldex qui possèdent le talent passif inné. */
+export const passiveHolders = new Map<string, ReadonlySet<string>>();
+for (const p of pals) {
+  for (const pv of p.passives ?? []) {
+    const set = passiveHolders.get(pv) as Set<string> | undefined;
+    if (set) set.add(p.id);
+    else passiveHolders.set(pv, new Set([p.id]));
+  }
+}

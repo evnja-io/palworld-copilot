@@ -1,7 +1,7 @@
 // Facettes de la palette de recherche : définitions, libellés FR/EN et
 // suggestion de tokens depuis le texte tapé. Module pur (testable sans Svelte).
 
-export type Ns = "pal" | "item" | "skill" | "tech" | "building" | "marker";
+export type Ns = "pal" | "item" | "skill" | "passive" | "tech" | "building" | "marker";
 export type MarkerType = "alpha" | "ft" | "relic";
 export type Locale = "fr" | "en";
 
@@ -12,7 +12,8 @@ export type Token =
   | { kind: "cat"; value: string }
   | { kind: "marker"; value: MarkerType }
   | { kind: "progress"; value: "unchecked" | "checked" }
-  | { kind: "skill"; value: string; label: string }; // pals apprenant la compétence
+  | { kind: "skill"; value: string; label: string } // pals apprenant la compétence
+  | { kind: "passive"; value: string; label: string }; // pals possédant le talent passif
 
 type L10n = { fr: string; en: string };
 
@@ -20,6 +21,7 @@ export const NS_LABELS: Record<Ns, L10n> = {
   pal: { fr: "Pals", en: "Pals" },
   item: { fr: "Objets", en: "Items" },
   skill: { fr: "Compétences", en: "Skills" },
+  passive: { fr: "Talents passifs", en: "Passive skills" },
   tech: { fr: "Technologies", en: "Technology" },
   building: { fr: "Constructions", en: "Buildings" },
   marker: { fr: "Carte", en: "Map" },
@@ -104,6 +106,7 @@ export function tokenLabel(t: Token, locale: Locale): string {
     case "progress":
       return PROGRESS_LABELS[t.value][locale];
     case "skill":
+    case "passive":
       return t.label;
   }
 }

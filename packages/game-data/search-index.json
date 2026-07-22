@@ -23430,6 +23430,121 @@
   }
  },
  {
+  "en": "Otherworldly Cells",
+  "fr": "Organisme Inconnu",
+  "id": "passive:Alien"
+ },
+ {
+  "en": "Hard Skin",
+  "fr": "Peau dure",
+  "id": "passive:Deffence_up1"
+ },
+ {
+  "en": "Heavyweight",
+  "fr": "Poids Lourd",
+  "id": "passive:Deffence_up2_2"
+ },
+ {
+  "en": "Lord of the Sea",
+  "fr": "Seigneur des Mers",
+  "id": "passive:ElementBoost_Aqua_2_PAL"
+ },
+ {
+  "en": "Lord of the Underworld",
+  "fr": "Seigneur des Enfers",
+  "id": "passive:ElementBoost_Dark_2_PAL"
+ },
+ {
+  "en": "Divine Dragon",
+  "fr": "Dragon Divin",
+  "id": "passive:ElementBoost_Dragon_2_PAL"
+ },
+ {
+  "en": "Earth Emperor",
+  "fr": "Empereur Terrestre",
+  "id": "passive:ElementBoost_Earth_2_PAL"
+ },
+ {
+  "en": "Flame Emperor",
+  "fr": "Empereur Enflammé",
+  "id": "passive:ElementBoost_Fire_2_PAL"
+ },
+ {
+  "en": "Ice Emperor",
+  "fr": "Empereur Glacial",
+  "id": "passive:ElementBoost_Ice_2_PAL"
+ },
+ {
+  "en": "Spirit Emperor",
+  "fr": "Divinité de la Forêt",
+  "id": "passive:ElementBoost_Leaf_2_PAL"
+ },
+ {
+  "en": "Celestial Emperor",
+  "fr": "Empereur Céleste",
+  "id": "passive:ElementBoost_Normal_2_PAL"
+ },
+ {
+  "en": "Lord of Lightning",
+  "fr": "Seigneur des Tempêtes",
+  "id": "passive:ElementBoost_Thunder_2_PAL"
+ },
+ {
+  "en": "Abnormal",
+  "fr": "Anormal",
+  "id": "passive:ElementResist_Normal_1_PAL"
+ },
+ {
+  "en": "Eternal Flame",
+  "fr": "Feu Éternel",
+  "id": "passive:EternalFlame"
+ },
+ {
+  "en": "Invader",
+  "fr": "Envahisseur",
+  "id": "passive:Invader"
+ },
+ {
+  "en": "Legend",
+  "fr": "Légende",
+  "id": "passive:Legend"
+ },
+ {
+  "en": "Lunker",
+  "fr": "Trophée des Flots",
+  "id": "passive:Nushi"
+ },
+ {
+  "en": "Coward",
+  "fr": "Lâche",
+  "id": "passive:PAL_ALLAttack_down1"
+ },
+ {
+  "en": "Glutton",
+  "fr": "Glouton",
+  "id": "passive:PAL_FullStomach_Up_1"
+ },
+ {
+  "en": "Hooligan",
+  "fr": "Trouble-Fête",
+  "id": "passive:PAL_rude"
+ },
+ {
+  "en": "Sadist",
+  "fr": "Sadique",
+  "id": "passive:PAL_sadist"
+ },
+ {
+  "en": "Savior",
+  "fr": "Sauveur",
+  "id": "passive:Salvation"
+ },
+ {
+  "en": "Siren of the Void",
+  "fr": "Sorcière",
+  "id": "passive:Witch"
+ },
+ {
   "ct": 8,
   "el": [
    "Water"

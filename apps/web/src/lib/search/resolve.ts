@@ -25,6 +25,7 @@ export function resolve(e: SearchEntry): Resolved | null {
       return b ? { href: `/buildings/${b.id}` } : null;
     }
     case "skill":
+    case "passive":
       return {};
     case "marker":
       return { href: `/map?focus=${id}`, icon: e.pal ? palIcon(e.pal) : undefined };
