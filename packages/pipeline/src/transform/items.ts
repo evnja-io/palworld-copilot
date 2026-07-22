@@ -1,7 +1,13 @@
 import { enumName, loadDataTableRows, must, pick, writeGameData } from "../lib.js";
 
 const itemRows = loadDataTableRows(/DT_ItemDataTable/);
+// Filtre encyclopédie : un item sans nom localisé est inaffichable (items de
+// test/internes). Même critère que pals.ts.
+const namedIds = new Set(
+  Object.keys(loadDataTableRows(/\/en\/.*DT_ItemNameText/)).map((k) => k.replace(/^ITEM_NAME_/, "")),
+);
 const items = Object.entries(itemRows)
+  .filter(([id]) => namedIds.has(id))
   .map(([id, row]: [string, any]) => ({
     id,
     typeA: enumName(pick(row, "TypeA")),

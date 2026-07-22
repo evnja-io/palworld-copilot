@@ -1,0 +1,11 @@
+{
+ "counts": {
+  "buildings": 498,
+  "items": 1965,
+  "pals": 286,
+  "recipes": 1414,
+  "tech": 588
+ },
+ "extractedAt": "2026-07-22",
+ "pipelineVersion": 1
+}

@@ -1034,50 +1034,6 @@
   "weight": 40
  },
  {
-  "iconName": "AncientArmor",
-  "id": "AncientArmor_2",
-  "maxStack": 1,
-  "price": 1237460,
-  "rarity": 1,
-  "sortId": 1126,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmor",
-  "id": "AncientArmor_3",
-  "maxStack": 1,
-  "price": 1611310,
-  "rarity": 2,
-  "sortId": 1127,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmor",
-  "id": "AncientArmor_4",
-  "maxStack": 1,
-  "price": 1976520,
-  "rarity": 3,
-  "sortId": 1128,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmor",
-  "id": "AncientArmor_5",
-  "maxStack": 1,
-  "price": 2350370,
-  "rarity": 4,
-  "sortId": 1129,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "AncientArmorCold",
   "id": "AncientArmorCold",
   "maxStack": 1,
@@ -1087,50 +1043,6 @@
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 35
- },
- {
-  "iconName": "AncientArmorCold",
-  "id": "AncientArmorCold_2",
-  "maxStack": 1,
-  "price": 2601220,
-  "rarity": 1,
-  "sortId": 1136,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorCold",
-  "id": "AncientArmorCold_3",
-  "maxStack": 1,
-  "price": 3072700,
-  "rarity": 2,
-  "sortId": 1137,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorCold",
-  "id": "AncientArmorCold_4",
-  "maxStack": 1,
-  "price": 3523870,
-  "rarity": 3,
-  "sortId": 1138,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorCold",
-  "id": "AncientArmorCold_5",
-  "maxStack": 1,
-  "price": 4298880,
-  "rarity": 4,
-  "sortId": 1139,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
  },
  {
   "iconName": "AncientArmorHeat",
@@ -1144,50 +1056,6 @@
   "weight": 35
  },
  {
-  "iconName": "AncientArmorHeat",
-  "id": "AncientArmorHeat_2",
-  "maxStack": 1,
-  "price": 2650880,
-  "rarity": 1,
-  "sortId": 1131,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorHeat",
-  "id": "AncientArmorHeat_3",
-  "maxStack": 1,
-  "price": 3140630,
-  "rarity": 2,
-  "sortId": 1132,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorHeat",
-  "id": "AncientArmorHeat_4",
-  "maxStack": 1,
-  "price": 3596180,
-  "rarity": 3,
-  "sortId": 1133,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorHeat",
-  "id": "AncientArmorHeat_5",
-  "maxStack": 1,
-  "price": 4389460,
-  "rarity": 4,
-  "sortId": 1134,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "AncientArmorWeight",
   "id": "AncientArmorWeight",
   "maxStack": 1,
@@ -1199,100 +1067,12 @@
   "weight": 35
  },
  {
-  "iconName": "AncientArmorWeight",
-  "id": "AncientArmorWeight_2",
-  "maxStack": 1,
-  "price": 3208270,
-  "rarity": 1,
-  "sortId": 1141,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorWeight",
-  "id": "AncientArmorWeight_3",
-  "maxStack": 1,
-  "price": 3983280,
-  "rarity": 2,
-  "sortId": 1142,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorWeight",
-  "id": "AncientArmorWeight_4",
-  "maxStack": 1,
-  "price": 4737980,
-  "rarity": 3,
-  "sortId": 1143,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "AncientArmorWeight",
-  "id": "AncientArmorWeight_5",
-  "maxStack": 1,
-  "price": 5512990,
-  "rarity": 4,
-  "sortId": 1144,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "AncientHelmet",
   "id": "AncientHelmet",
   "maxStack": 1,
   "price": 779860,
   "rarity": 0,
   "sortId": 1330,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "AncientHelmet",
-  "id": "AncientHelmet_2",
-  "maxStack": 1,
-  "price": 830260,
-  "rarity": 1,
-  "sortId": 1331,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "AncientHelmet",
-  "id": "AncientHelmet_3",
-  "maxStack": 1,
-  "price": 1178180,
-  "rarity": 2,
-  "sortId": 1332,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "AncientHelmet",
-  "id": "AncientHelmet_4",
-  "maxStack": 1,
-  "price": 1526110,
-  "rarity": 3,
-  "sortId": 1333,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "AncientHelmet",
-  "id": "AncientHelmet_5",
-  "maxStack": 1,
-  "price": 1874040,
-  "rarity": 4,
-  "sortId": 1334,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 15
@@ -1472,39 +1252,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 15
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 99999
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_NPC_GrassBoss",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 99999
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 99999
  },
  {
   "iconName": "AssaultRifleBullet",
@@ -1826,28 +1573,6 @@
   "weight": 5
  },
  {
-  "iconName": "Bat",
-  "id": "Bat_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
- },
- {
-  "iconName": "Bat",
-  "id": "Bat_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
- },
- {
   "iconName": "Bat2",
   "id": "Bat2",
   "maxStack": 1,
@@ -1865,50 +1590,6 @@
   "price": 20880,
   "rarity": 0,
   "sortId": 104,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 3
- },
- {
-  "iconName": "Bat3",
-  "id": "Bat3_2",
-  "maxStack": 1,
-  "price": 26040,
-  "rarity": 1,
-  "sortId": 105,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 3
- },
- {
-  "iconName": "Bat3",
-  "id": "Bat3_3",
-  "maxStack": 1,
-  "price": 31320,
-  "rarity": 2,
-  "sortId": 106,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 3
- },
- {
-  "iconName": "Bat3",
-  "id": "Bat3_4",
-  "maxStack": 1,
-  "price": 36480,
-  "rarity": 3,
-  "sortId": 107,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 3
- },
- {
-  "iconName": "Bat3",
-  "id": "Bat3_5",
-  "maxStack": 1,
-  "price": 41760,
-  "rarity": 4,
-  "sortId": 108,
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 3
@@ -1936,50 +1617,6 @@
   "weight": 30
  },
  {
-  "iconName": "BeamLauncher",
-  "id": "BeamLauncher_2",
-  "maxStack": 1,
-  "price": 6275450,
-  "rarity": 1,
-  "sortId": 855,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "BeamLauncher",
-  "id": "BeamLauncher_3",
-  "maxStack": 1,
-  "price": 7715220,
-  "rarity": 2,
-  "sortId": 856,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "BeamLauncher",
-  "id": "BeamLauncher_4",
-  "maxStack": 1,
-  "price": 8846390,
-  "rarity": 3,
-  "sortId": 857,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "BeamLauncher",
-  "id": "BeamLauncher_5",
-  "maxStack": 1,
-  "price": 10286160,
-  "rarity": 4,
-  "sortId": 858,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
   "iconName": "BeamLauncherBullet",
   "id": "BeamLauncherBullet",
   "maxStack": 9999,
@@ -2002,61 +1639,6 @@
   "weight": 10
  },
  {
-  "iconName": "BeamSword",
-  "id": "BeamSword_2",
-  "maxStack": 1,
-  "price": 182920,
-  "rarity": 1,
-  "sortId": 151,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "BeamSword",
-  "id": "BeamSword_3",
-  "maxStack": 1,
-  "price": 243340,
-  "rarity": 2,
-  "sortId": 152,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "BeamSword",
-  "id": "BeamSword_4",
-  "maxStack": 1,
-  "price": 300730,
-  "rarity": 3,
-  "sortId": 153,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "BeamSword",
-  "id": "BeamSword_5",
-  "maxStack": 1,
-  "price": 361150,
-  "rarity": 4,
-  "sortId": 154,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "BeamSword",
-  "id": "BeamSword_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
- },
- {
   "iconName": "BeastBone_Ancient",
   "id": "BeastBone_Ancient",
   "maxStack": 9999,
@@ -2077,28 +1659,6 @@
   "typeA": "Food",
   "typeB": "FoodProcessed",
   "weight": 1.5
- },
- {
-  "iconName": "Bat",
-  "id": "BelieverFatCane",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
- },
- {
-  "iconName": "Bat",
-  "id": "BelieverFatCane_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
  },
  {
   "iconName": "Berries",
@@ -2195,17 +1755,6 @@
   "price": 10000,
   "rarity": 3,
   "sortId": 9999,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Accessory_Avoid_1_fix",
-  "maxStack": 9999,
-  "price": 2750,
-  "rarity": 3,
-  "sortId": 9240,
   "typeA": "Blueprint",
   "typeB": "Blueprint",
   "weight": 0
@@ -5226,17 +4775,6 @@
  },
  {
   "iconName": "Blueprint",
-  "id": "Blueprint_HeadEquip025_5",
-  "maxStack": 9999,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 7689,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
   "id": "Blueprint_HeadEquip026_1",
   "maxStack": 9999,
   "price": 500,
@@ -5275,17 +4813,6 @@
   "price": 1800,
   "rarity": 3,
   "sortId": 7693,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_HeadEquip026_5",
-  "maxStack": 9999,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 7694,
   "typeA": "Blueprint",
   "typeB": "Blueprint",
   "weight": 0
@@ -5336,17 +4863,6 @@
  },
  {
   "iconName": "Blueprint",
-  "id": "Blueprint_HeadEquip028_5",
-  "maxStack": 9999,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 7699,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
   "id": "Blueprint_HeadEquip031_1",
   "maxStack": 9999,
   "price": 500,
@@ -5391,17 +4907,6 @@
  },
  {
   "iconName": "Blueprint",
-  "id": "Blueprint_HeadEquip031_5",
-  "maxStack": 9999,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 7704,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
   "id": "Blueprint_HeadEquip032_1",
   "maxStack": 9999,
   "price": 500,
@@ -5440,17 +4945,6 @@
   "price": 1800,
   "rarity": 3,
   "sortId": 7708,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_HeadEquip032_5",
-  "maxStack": 9999,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 7709,
   "typeA": "Blueprint",
   "typeB": "Blueprint",
   "weight": 0
@@ -6601,17 +6095,6 @@
  },
  {
   "iconName": "Blueprint",
-  "id": "Blueprint_Otomo_PalConfidence_Increase_1",
-  "maxStack": 1,
-  "price": 10000,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
   "id": "Blueprint_Otomo_PalConfidence_Increase_1_fix",
   "maxStack": 9999,
   "price": 10000,
@@ -6947,72 +6430,6 @@
   "price": 10000,
   "rarity": 4,
   "sortId": 7143,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_FishingBait_1_A",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9078,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_FishingBait_1_B",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9079,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_FishingBait_2_A",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9080,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_FishingBait_2_B",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9081,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_FishingBait_3_B",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9082,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "Blueprint_Salvage_TreasureBoxKey01",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9077,
   "typeA": "Blueprint",
   "typeB": "Blueprint",
   "weight": 0
@@ -8701,17 +8118,6 @@
   "weight": 0
  },
  {
-  "iconName": "Leather",
-  "id": "BlueprintTest",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Blueprint",
-  "typeB": "Blueprint",
-  "weight": 0
- },
- {
   "iconName": "Bone",
   "id": "Bone",
   "maxStack": 9999,
@@ -9966,122 +9372,12 @@
   "weight": 13
  },
  {
-  "iconName": "BowGun_Fire",
-  "id": "BowGun_Fire_2",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 246,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Fire",
-  "id": "BowGun_Fire_3",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 2,
-  "sortId": 247,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Fire",
-  "id": "BowGun_Fire_4",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 248,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Fire",
-  "id": "BowGun_Fire_5",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 4,
-  "sortId": 249,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "Bow",
-  "id": "BowGun_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 99999
- },
- {
-  "iconName": "Bow",
-  "id": "BowGun_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 99999
- },
- {
   "iconName": "BowGun_Poison",
   "id": "BowGun_Poison",
   "maxStack": 1,
   "price": 1,
   "rarity": 0,
   "sortId": 240,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Poison",
-  "id": "BowGun_Poison_2",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 241,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Poison",
-  "id": "BowGun_Poison_3",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 2,
-  "sortId": 242,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Poison",
-  "id": "BowGun_Poison_4",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 243,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun_Poison",
-  "id": "BowGun_Poison_5",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 4,
-  "sortId": 244,
   "typeA": "Weapon",
   "typeB": "WeaponCrossbow",
   "weight": 13
@@ -10274,50 +9570,6 @@
   "weight": 20
  },
  {
-  "iconName": "ChargeLaserRifle",
-  "id": "ChargeLaserRifle_2",
-  "maxStack": 1,
-  "price": 2462150,
-  "rarity": 1,
-  "sortId": 677,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "ChargeLaserRifle",
-  "id": "ChargeLaserRifle_3",
-  "maxStack": 1,
-  "price": 2961860,
-  "rarity": 2,
-  "sortId": 678,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "ChargeLaserRifle",
-  "id": "ChargeLaserRifle_4",
-  "maxStack": 1,
-  "price": 3461580,
-  "rarity": 3,
-  "sortId": 679,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "ChargeLaserRifle",
-  "id": "ChargeLaserRifle_5",
-  "maxStack": 1,
-  "price": 3978720,
-  "rarity": 4,
-  "sortId": 680,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
   "iconName": "ChargeLaserRifleBullet",
   "id": "ChargeLaserRifleBullet",
   "maxStack": 9999,
@@ -10505,100 +9757,12 @@
   "weight": 4
  },
  {
-  "iconName": "ClothArmorCold",
-  "id": "ClothArmorCold_2",
-  "maxStack": 1,
-  "price": 3380,
-  "rarity": 1,
-  "sortId": 1021,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorCold",
-  "id": "ClothArmorCold_3",
-  "maxStack": 1,
-  "price": 4320,
-  "rarity": 2,
-  "sortId": 1022,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorCold",
-  "id": "ClothArmorCold_4",
-  "maxStack": 1,
-  "price": 5260,
-  "rarity": 3,
-  "sortId": 1023,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorCold",
-  "id": "ClothArmorCold_5",
-  "maxStack": 1,
-  "price": 7390,
-  "rarity": 4,
-  "sortId": 1024,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
   "iconName": "ClothArmorHeat",
   "id": "ClothArmorHeat",
   "maxStack": 1,
   "price": 2450,
   "rarity": 0,
   "sortId": 1015,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorHeat",
-  "id": "ClothArmorHeat_2",
-  "maxStack": 1,
-  "price": 3380,
-  "rarity": 1,
-  "sortId": 1016,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorHeat",
-  "id": "ClothArmorHeat_3",
-  "maxStack": 1,
-  "price": 4320,
-  "rarity": 2,
-  "sortId": 1017,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorHeat",
-  "id": "ClothArmorHeat_4",
-  "maxStack": 1,
-  "price": 5260,
-  "rarity": 3,
-  "sortId": 1018,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "ClothArmorHeat",
-  "id": "ClothArmorHeat_5",
-  "maxStack": 1,
-  "price": 7390,
-  "rarity": 4,
-  "sortId": 1019,
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 4
@@ -10632,50 +9796,6 @@
   "price": 44300,
   "rarity": 0,
   "sortId": 250,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 17
- },
- {
-  "iconName": "CompoundBow",
-  "id": "CompoundBow_2",
-  "maxStack": 1,
-  "price": 56110,
-  "rarity": 1,
-  "sortId": 251,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 17
- },
- {
-  "iconName": "CompoundBow",
-  "id": "CompoundBow_3",
-  "maxStack": 1,
-  "price": 68860,
-  "rarity": 2,
-  "sortId": 252,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 17
- },
- {
-  "iconName": "CompoundBow",
-  "id": "CompoundBow_4",
-  "maxStack": 1,
-  "price": 80660,
-  "rarity": 3,
-  "sortId": 253,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 17
- },
- {
-  "iconName": "CompoundBow",
-  "id": "CompoundBow_5",
-  "maxStack": 1,
-  "price": 93410,
-  "rarity": 4,
-  "sortId": 254,
   "typeA": "Weapon",
   "typeB": "WeaponBow",
   "weight": 17
@@ -10758,50 +9878,6 @@
   "weight": 30
  },
  {
-  "iconName": "CopperArmorCold",
-  "id": "CopperArmorCold_2",
-  "maxStack": 1,
-  "price": 27600,
-  "rarity": 1,
-  "sortId": 1051,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorCold",
-  "id": "CopperArmorCold_3",
-  "maxStack": 1,
-  "price": 33070,
-  "rarity": 2,
-  "sortId": 1052,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorCold",
-  "id": "CopperArmorCold_4",
-  "maxStack": 1,
-  "price": 39740,
-  "rarity": 3,
-  "sortId": 1053,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorCold",
-  "id": "CopperArmorCold_5",
-  "maxStack": 1,
-  "price": 46660,
-  "rarity": 4,
-  "sortId": 1054,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
   "iconName": "CopperArmorHeat",
   "id": "CopperArmorHeat",
   "maxStack": 1,
@@ -10813,100 +9889,12 @@
   "weight": 30
  },
  {
-  "iconName": "CopperArmorHeat",
-  "id": "CopperArmorHeat_2",
-  "maxStack": 1,
-  "price": 27600,
-  "rarity": 1,
-  "sortId": 1046,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorHeat",
-  "id": "CopperArmorHeat_3",
-  "maxStack": 1,
-  "price": 33070,
-  "rarity": 2,
-  "sortId": 1047,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorHeat",
-  "id": "CopperArmorHeat_4",
-  "maxStack": 1,
-  "price": 39740,
-  "rarity": 3,
-  "sortId": 1048,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmorHeat",
-  "id": "CopperArmorHeat_5",
-  "maxStack": 1,
-  "price": 46660,
-  "rarity": 4,
-  "sortId": 1049,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
   "iconName": "CopperHelmet",
   "id": "CopperHelmet",
   "maxStack": 1,
   "price": 6600,
   "rarity": 0,
   "sortId": 1305,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 10
- },
- {
-  "iconName": "CopperHelmet",
-  "id": "CopperHelmet_2",
-  "maxStack": 1,
-  "price": 8210,
-  "rarity": 1,
-  "sortId": 1306,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 10
- },
- {
-  "iconName": "CopperHelmet",
-  "id": "CopperHelmet_3",
-  "maxStack": 1,
-  "price": 9900,
-  "rarity": 2,
-  "sortId": 1307,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 10
- },
- {
-  "iconName": "CopperHelmet",
-  "id": "CopperHelmet_4",
-  "maxStack": 1,
-  "price": 12710,
-  "rarity": 3,
-  "sortId": 1308,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 10
- },
- {
-  "iconName": "CopperHelmet",
-  "id": "CopperHelmet_5",
-  "maxStack": 1,
-  "price": 15600,
-  "rarity": 4,
-  "sortId": 1309,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 10
@@ -10998,127 +9986,6 @@
   "typeA": "Food",
   "typeB": "FoodDishMeat",
   "weight": 0.5
- },
- {
-  "iconName": "Debug_Handgun_AttackUp",
-  "id": "Debug_Handgun_AttackUp",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Burn",
-  "id": "Debug_Handgun_Burn",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Darkness",
-  "id": "Debug_Handgun_Darkness",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_DefenseUp",
-  "id": "Debug_Handgun_DefenseUp",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Electrical",
-  "id": "Debug_Handgun_Electrical",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Freeze",
-  "id": "Debug_Handgun_Freeze",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_IvyCling",
-  "id": "Debug_Handgun_IvyCling",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Muddy",
-  "id": "Debug_Handgun_Muddy",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Poison",
-  "id": "Debug_Handgun_Poison",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Stun",
-  "id": "Debug_Handgun_Stun",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
-  "iconName": "Debug_Handgun_Wetness",
-  "id": "Debug_Handgun_Wetness",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
  },
  {
   "iconName": "DecalGun",
@@ -11231,100 +10098,12 @@
   "weight": 24
  },
  {
-  "iconName": "DoubleBarrelShotgun",
-  "id": "DoubleBarrelShotgun_2",
-  "maxStack": 1,
-  "price": 47260,
-  "rarity": 1,
-  "sortId": 411,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "DoubleBarrelShotgun",
-  "id": "DoubleBarrelShotgun_3",
-  "maxStack": 1,
-  "price": 58680,
-  "rarity": 2,
-  "sortId": 412,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "DoubleBarrelShotgun",
-  "id": "DoubleBarrelShotgun_4",
-  "maxStack": 1,
-  "price": 69240,
-  "rarity": 3,
-  "sortId": 413,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "DoubleBarrelShotgun",
-  "id": "DoubleBarrelShotgun_5",
-  "maxStack": 1,
-  "price": 80780,
-  "rarity": 4,
-  "sortId": 414,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
   "iconName": "DroneLauncher",
   "id": "DroneLauncher",
   "maxStack": 1,
   "price": 4041020,
   "rarity": 0,
   "sortId": 859,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "DroneLauncher",
-  "id": "DroneLauncher_2",
-  "maxStack": 1,
-  "price": 5049360,
-  "rarity": 1,
-  "sortId": 860,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "DroneLauncher",
-  "id": "DroneLauncher_3",
-  "maxStack": 1,
-  "price": 6069940,
-  "rarity": 2,
-  "sortId": 861,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "DroneLauncher",
-  "id": "DroneLauncher_4",
-  "maxStack": 1,
-  "price": 7071070,
-  "rarity": 3,
-  "sortId": 862,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "DroneLauncher",
-  "id": "DroneLauncher_5",
-  "maxStack": 1,
-  "price": 8094050,
-  "rarity": 4,
-  "sortId": 863,
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 5
@@ -11380,50 +10159,6 @@
   "price": 4134020,
   "rarity": 0,
   "sortId": 580,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "ElectricArcAssaultRifle",
-  "id": "ElectricArcAssaultRifle_2",
-  "maxStack": 1,
-  "price": 5172790,
-  "rarity": 1,
-  "sortId": 581,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "ElectricArcAssaultRifle",
-  "id": "ElectricArcAssaultRifle_3",
-  "maxStack": 1,
-  "price": 6209440,
-  "rarity": 2,
-  "sortId": 582,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "ElectricArcAssaultRifle",
-  "id": "ElectricArcAssaultRifle_4",
-  "maxStack": 1,
-  "price": 7243400,
-  "rarity": 3,
-  "sortId": 583,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "ElectricArcAssaultRifle",
-  "id": "ElectricArcAssaultRifle_5",
-  "maxStack": 1,
-  "price": 8280050,
-  "rarity": 4,
-  "sortId": 584,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 5
@@ -11616,100 +10351,12 @@
   "weight": 30
  },
  {
-  "iconName": "EnergyRocketLauncher",
-  "id": "EnergyRocketLauncher_2",
-  "maxStack": 1,
-  "price": 1497710,
-  "rarity": 1,
-  "sortId": 751,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 50
- },
- {
-  "iconName": "EnergyRocketLauncher",
-  "id": "EnergyRocketLauncher_3",
-  "maxStack": 1,
-  "price": 1801220,
-  "rarity": 2,
-  "sortId": 752,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 50
- },
- {
-  "iconName": "EnergyRocketLauncher",
-  "id": "EnergyRocketLauncher_4",
-  "maxStack": 1,
-  "price": 2098120,
-  "rarity": 3,
-  "sortId": 753,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 50
- },
- {
-  "iconName": "EnergyRocketLauncher",
-  "id": "EnergyRocketLauncher_5",
-  "maxStack": 1,
-  "price": 2401630,
-  "rarity": 4,
-  "sortId": 754,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 50
- },
- {
   "iconName": "EnergyShotgun",
   "id": "EnergyShotgun",
   "maxStack": 1,
   "price": 2061660,
   "rarity": 0,
   "sortId": 435,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "EnergyShotgun",
-  "id": "EnergyShotgun_2",
-  "maxStack": 1,
-  "price": 2551990,
-  "rarity": 1,
-  "sortId": 436,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "EnergyShotgun",
-  "id": "EnergyShotgun_3",
-  "maxStack": 1,
-  "price": 3075250,
-  "rarity": 2,
-  "sortId": 437,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "EnergyShotgun",
-  "id": "EnergyShotgun_4",
-  "maxStack": 1,
-  "price": 3594910,
-  "rarity": 3,
-  "sortId": 438,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "EnergyShotgun",
-  "id": "EnergyShotgun_5",
-  "maxStack": 1,
-  "price": 4132920,
-  "rarity": 4,
-  "sortId": 439,
   "typeA": "Weapon",
   "typeB": "WeaponShotgun",
   "weight": 20
@@ -12056,17 +10703,6 @@
   "weight": 15
  },
  {
-  "iconName": "FishingRod_Test",
-  "id": "FishingRod_Test",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponFishingRod",
-  "weight": 5
- },
- {
   "iconName": "FishMeat",
   "id": "FishMeat",
   "maxStack": 9999,
@@ -12087,83 +10723,6 @@
   "typeA": "Food",
   "typeB": "FoodFish",
   "weight": 2
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower",
-  "maxStack": 1,
-  "price": 172750,
-  "rarity": 0,
-  "sortId": 690,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 45
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_2",
-  "maxStack": 1,
-  "price": 216430,
-  "rarity": 1,
-  "sortId": 691,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 45
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_3",
-  "maxStack": 1,
-  "price": 262300,
-  "rarity": 2,
-  "sortId": 692,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 45
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_4",
-  "maxStack": 1,
-  "price": 304780,
-  "rarity": 3,
-  "sortId": 693,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 45
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_5",
-  "maxStack": 1,
-  "price": 351500,
-  "rarity": 4,
-  "sortId": 694,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 45
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FlameThrower_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponFlameThrower",
-  "weight": 99999
  },
  {
   "iconName": "FlamethrowerBullet",
@@ -12285,28 +10844,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponThrowObject",
   "weight": 0.1
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FragGrenade_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponThrowObject",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "FragGrenade_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponThrowObject",
-  "weight": 99999
  },
  {
   "iconName": "FragGrenade_Super",
@@ -12474,50 +11011,6 @@
   "weight": 10
  },
  {
-  "iconName": "FurArmorCold",
-  "id": "FurArmorCold_2",
-  "maxStack": 1,
-  "price": 9580,
-  "rarity": 1,
-  "sortId": 1036,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorCold",
-  "id": "FurArmorCold_3",
-  "maxStack": 1,
-  "price": 11760,
-  "rarity": 2,
-  "sortId": 1037,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorCold",
-  "id": "FurArmorCold_4",
-  "maxStack": 1,
-  "price": 13660,
-  "rarity": 3,
-  "sortId": 1038,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorCold",
-  "id": "FurArmorCold_5",
-  "maxStack": 1,
-  "price": 17040,
-  "rarity": 4,
-  "sortId": 1039,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
   "iconName": "FurArmorHeat",
   "id": "FurArmorHeat",
   "maxStack": 1,
@@ -12529,100 +11022,12 @@
   "weight": 10
  },
  {
-  "iconName": "FurArmorHeat",
-  "id": "FurArmorHeat_2",
-  "maxStack": 1,
-  "price": 9580,
-  "rarity": 1,
-  "sortId": 1031,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorHeat",
-  "id": "FurArmorHeat_3",
-  "maxStack": 1,
-  "price": 11760,
-  "rarity": 2,
-  "sortId": 1032,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorHeat",
-  "id": "FurArmorHeat_4",
-  "maxStack": 1,
-  "price": 13660,
-  "rarity": 3,
-  "sortId": 1033,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmorHeat",
-  "id": "FurArmorHeat_5",
-  "maxStack": 1,
-  "price": 17040,
-  "rarity": 4,
-  "sortId": 1034,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
   "iconName": "FurHelmet",
   "id": "FurHelmet",
   "maxStack": 1,
   "price": 340,
   "rarity": 0,
   "sortId": 1300,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "FurHelmet",
-  "id": "FurHelmet_2",
-  "maxStack": 1,
-  "price": 360,
-  "rarity": 1,
-  "sortId": 1301,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "FurHelmet",
-  "id": "FurHelmet_3",
-  "maxStack": 1,
-  "price": 620,
-  "rarity": 2,
-  "sortId": 1302,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "FurHelmet",
-  "id": "FurHelmet_4",
-  "maxStack": 1,
-  "price": 880,
-  "rarity": 3,
-  "sortId": 1303,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "FurHelmet",
-  "id": "FurHelmet_5",
-  "maxStack": 1,
-  "price": 2350,
-  "rarity": 4,
-  "sortId": 1304,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 5
@@ -12670,83 +11075,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponGatlingGun",
   "weight": 50
- },
- {
-  "iconName": "GatlingGun",
-  "id": "GatlingGun_2",
-  "maxStack": 1,
-  "price": 634880,
-  "rarity": 1,
-  "sortId": 696,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "GatlingGun",
-  "id": "GatlingGun_3",
-  "maxStack": 1,
-  "price": 765660,
-  "rarity": 2,
-  "sortId": 697,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "GatlingGun",
-  "id": "GatlingGun_4",
-  "maxStack": 1,
-  "price": 890900,
-  "rarity": 3,
-  "sortId": 698,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "GatlingGun",
-  "id": "GatlingGun_5",
-  "maxStack": 1,
-  "price": 1021680,
-  "rarity": 4,
-  "sortId": 699,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "FlameThrower",
-  "id": "GatlingGun_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "GatlingGun_NPC_GrassBoss",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "GatlingGun_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 99999
  },
  {
   "iconName": "GenghisKhan",
@@ -12804,17 +11132,6 @@
   "weight": 20
  },
  {
-  "iconName": "Glider_Legendary",
-  "id": "Glider_Tera",
-  "maxStack": 1,
-  "price": 332880,
-  "rarity": 3,
-  "sortId": 3003,
-  "typeA": "Glider",
-  "typeB": "Glider",
-  "weight": 25
- },
- {
   "iconName": "Grape",
   "id": "Grape",
   "maxStack": 9999,
@@ -12824,61 +11141,6 @@
   "typeA": "Food",
   "typeB": "FoodVegetable",
   "weight": 0.5
- },
- {
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun",
-  "maxStack": 1,
-  "price": 5210,
-  "rarity": 0,
-  "sortId": 340,
-  "typeA": "Weapon",
-  "typeB": "WeaponGrapplingGun",
-  "weight": 1
- },
- {
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun2",
-  "maxStack": 1,
-  "price": 11520,
-  "rarity": 1,
-  "sortId": 341,
-  "typeA": "Weapon",
-  "typeB": "WeaponGrapplingGun",
-  "weight": 1
- },
- {
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun3",
-  "maxStack": 1,
-  "price": 17930,
-  "rarity": 2,
-  "sortId": 342,
-  "typeA": "Weapon",
-  "typeB": "WeaponGrapplingGun",
-  "weight": 1
- },
- {
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun4",
-  "maxStack": 1,
-  "price": 83760,
-  "rarity": 3,
-  "sortId": 343,
-  "typeA": "Weapon",
-  "typeB": "WeaponGrapplingGun",
-  "weight": 1
- },
- {
-  "iconName": "GrapplingGun",
-  "id": "GrapplingGun5",
-  "maxStack": 1,
-  "price": 351600,
-  "rarity": 4,
-  "sortId": 344,
-  "typeA": "Weapon",
-  "typeB": "WeaponGrapplingGun",
-  "weight": 1
  },
  {
   "iconName": "Gratin",
@@ -12912,72 +11174,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponRocketLauncher",
   "weight": 30
- },
- {
-  "iconName": "GrenadeLauncher",
-  "id": "GrenadeLauncher_2",
-  "maxStack": 1,
-  "price": 386840,
-  "rarity": 1,
-  "sortId": 711,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GrenadeLauncher",
-  "id": "GrenadeLauncher_3",
-  "maxStack": 1,
-  "price": 465940,
-  "rarity": 2,
-  "sortId": 712,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GrenadeLauncher",
-  "id": "GrenadeLauncher_4",
-  "maxStack": 1,
-  "price": 545030,
-  "rarity": 3,
-  "sortId": 713,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GrenadeLauncher",
-  "id": "GrenadeLauncher_5",
-  "maxStack": 1,
-  "price": 624120,
-  "rarity": 4,
-  "sortId": 714,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "FlameThrower",
-  "id": "GrenadeLauncher_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "GrenadeLauncher_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
  },
  {
   "iconName": "GrilledFish",
@@ -13030,50 +11226,6 @@
   "price": 461040,
   "rarity": 0,
   "sortId": 720,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GuidedMissileLauncher",
-  "id": "GuidedMissileLauncher_2",
-  "maxStack": 1,
-  "price": 572600,
-  "rarity": 1,
-  "sortId": 721,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GuidedMissileLauncher",
-  "id": "GuidedMissileLauncher_3",
-  "maxStack": 1,
-  "price": 683590,
-  "rarity": 2,
-  "sortId": 722,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GuidedMissileLauncher",
-  "id": "GuidedMissileLauncher_4",
-  "maxStack": 1,
-  "price": 791560,
-  "rarity": 3,
-  "sortId": 723,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "GuidedMissileLauncher",
-  "id": "GuidedMissileLauncher_5",
-  "maxStack": 1,
-  "price": 930480,
-  "rarity": 4,
-  "sortId": 724,
   "typeA": "Weapon",
   "typeB": "WeaponRocketLauncher",
   "weight": 30
@@ -13266,28 +11418,6 @@
   "weight": 8
  },
  {
-  "iconName": "HandGun_Default",
-  "id": "Handgun_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 99999
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "Handgun_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 99999
- },
- {
   "iconName": "HandgunBullet",
   "id": "HandgunBullet",
   "maxStack": 9999,
@@ -13321,100 +11451,12 @@
   "weight": 7
  },
  {
-  "iconName": "Head001",
-  "id": "Head001_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1401,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 7
- },
- {
-  "iconName": "Head001",
-  "id": "Head001_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1402,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 7
- },
- {
-  "iconName": "Head001",
-  "id": "Head001_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1403,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 7
- },
- {
-  "iconName": "Head001",
-  "id": "Head001_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1404,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 7
- },
- {
   "iconName": "Head002",
   "id": "Head002",
   "maxStack": 1,
   "price": 7200,
   "rarity": 0,
   "sortId": 1405,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 6
- },
- {
-  "iconName": "Head002",
-  "id": "Head002_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1406,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 6
- },
- {
-  "iconName": "Head002",
-  "id": "Head002_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1407,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 6
- },
- {
-  "iconName": "Head002",
-  "id": "Head002_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1408,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 6
- },
- {
-  "iconName": "Head002",
-  "id": "Head002_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1409,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 6
@@ -13431,100 +11473,12 @@
   "weight": 2
  },
  {
-  "iconName": "Head003",
-  "id": "Head003_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1411,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 2
- },
- {
-  "iconName": "Head003",
-  "id": "Head003_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1412,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 2
- },
- {
-  "iconName": "Head003",
-  "id": "Head003_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1413,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 2
- },
- {
-  "iconName": "Head003",
-  "id": "Head003_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1414,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 2
- },
- {
   "iconName": "Head004",
   "id": "Head004",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1415,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head004",
-  "id": "Head004_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1416,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head004",
-  "id": "Head004_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1417,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head004",
-  "id": "Head004_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1418,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head004",
-  "id": "Head004_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1419,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -13541,100 +11495,12 @@
   "weight": 3
  },
  {
-  "iconName": "Head005",
-  "id": "Head005_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1421,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head005",
-  "id": "Head005_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1422,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head005",
-  "id": "Head005_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1423,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head005",
-  "id": "Head005_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1424,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
   "iconName": "Head006",
   "id": "Head006",
   "maxStack": 1,
   "price": 6960,
   "rarity": 0,
   "sortId": 1425,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 8
- },
- {
-  "iconName": "Head006",
-  "id": "Head006_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1426,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 8
- },
- {
-  "iconName": "Head006",
-  "id": "Head006_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1427,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 8
- },
- {
-  "iconName": "Head006",
-  "id": "Head006_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1428,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 8
- },
- {
-  "iconName": "Head006",
-  "id": "Head006_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1429,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 8
@@ -13651,100 +11517,12 @@
   "weight": 4
  },
  {
-  "iconName": "Head007",
-  "id": "Head007_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1431,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head007",
-  "id": "Head007_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1432,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head007",
-  "id": "Head007_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1433,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head007",
-  "id": "Head007_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1434,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "Head008",
   "id": "Head008",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1435,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head008",
-  "id": "Head008_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1436,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head008",
-  "id": "Head008_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1437,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head008",
-  "id": "Head008_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1438,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head008",
-  "id": "Head008_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1439,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 5
@@ -13761,100 +11539,12 @@
   "weight": 3
  },
  {
-  "iconName": "Head009",
-  "id": "Head009_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1441,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head009",
-  "id": "Head009_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1442,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head009",
-  "id": "Head009_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1443,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head009",
-  "id": "Head009_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1444,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
   "iconName": "Head010",
   "id": "Head010",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1445,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head010",
-  "id": "Head010_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1446,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head010",
-  "id": "Head010_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1447,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head010",
-  "id": "Head010_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1448,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 5
- },
- {
-  "iconName": "Head010",
-  "id": "Head010_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1449,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 5
@@ -13871,100 +11561,12 @@
   "weight": 3
  },
  {
-  "iconName": "Head011",
-  "id": "Head011_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1451,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head011",
-  "id": "Head011_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1452,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head011",
-  "id": "Head011_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1453,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
-  "iconName": "Head011",
-  "id": "Head011_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1454,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 3
- },
- {
   "iconName": "Head012",
   "id": "Head012",
   "maxStack": 1,
   "price": 8640,
   "rarity": 0,
   "sortId": 1455,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head012",
-  "id": "Head012_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1456,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head012",
-  "id": "Head012_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1457,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head012",
-  "id": "Head012_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1458,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head012",
-  "id": "Head012_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1459,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -13981,100 +11583,12 @@
   "weight": 4
  },
  {
-  "iconName": "Head013",
-  "id": "Head013_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1461,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head013",
-  "id": "Head013_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1462,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head013",
-  "id": "Head013_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1463,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head013",
-  "id": "Head013_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1464,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "Head014",
   "id": "Head014",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1465,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head014",
-  "id": "Head014_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1466,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head014",
-  "id": "Head014_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1467,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head014",
-  "id": "Head014_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1468,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head014",
-  "id": "Head014_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1469,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -14091,50 +11605,6 @@
   "weight": 4
  },
  {
-  "iconName": "Head015",
-  "id": "Head015_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1471,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head015",
-  "id": "Head015_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1472,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head015",
-  "id": "Head015_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1473,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head015",
-  "id": "Head015_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1474,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "Head016",
   "id": "Head016",
   "maxStack": 1,
@@ -14146,100 +11616,12 @@
   "weight": 4
  },
  {
-  "iconName": "Head016",
-  "id": "Head016_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1476,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head016",
-  "id": "Head016_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1477,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head016",
-  "id": "Head016_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1478,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head016",
-  "id": "Head016_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1479,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "Head017",
   "id": "Head017",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1480,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head017",
-  "id": "Head017_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1481,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head017",
-  "id": "Head017_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1482,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head017",
-  "id": "Head017_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1483,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "Head017",
-  "id": "Head017_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1484,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -14289,100 +11671,12 @@
   "weight": 4
  },
  {
-  "iconName": "HeadEquip025",
-  "id": "HeadEquip025_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1488,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip025",
-  "id": "HeadEquip025_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1489,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip025",
-  "id": "HeadEquip025_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1490,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip025",
-  "id": "HeadEquip025_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1491,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "HeadEquip026",
   "id": "HeadEquip026",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1492,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip026",
-  "id": "HeadEquip026_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1493,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip026",
-  "id": "HeadEquip026_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1494,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip026",
-  "id": "HeadEquip026_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1495,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip026",
-  "id": "HeadEquip026_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1496,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -14405,50 +11699,6 @@
   "price": 3000,
   "rarity": 0,
   "sortId": 1498,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip028",
-  "id": "HeadEquip028_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1499,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip028",
-  "id": "HeadEquip028_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1500,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip028",
-  "id": "HeadEquip028_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1501,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip028",
-  "id": "HeadEquip028_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1502,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -14487,100 +11737,12 @@
   "weight": 4
  },
  {
-  "iconName": "HeadEquip031",
-  "id": "HeadEquip031_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1506,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip031",
-  "id": "HeadEquip031_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1507,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip031",
-  "id": "HeadEquip031_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1508,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip031",
-  "id": "HeadEquip031_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1509,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
   "iconName": "HeadEquip032",
   "id": "HeadEquip032",
   "maxStack": 1,
   "price": 500,
   "rarity": 0,
   "sortId": 1510,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip032",
-  "id": "HeadEquip032_2",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 1,
-  "sortId": 1511,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip032",
-  "id": "HeadEquip032_3",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 2,
-  "sortId": 1512,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip032",
-  "id": "HeadEquip032_4",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 3,
-  "sortId": 1513,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 4
- },
- {
-  "iconName": "HeadEquip032",
-  "id": "HeadEquip032_5",
-  "maxStack": 1,
-  "price": 1000,
-  "rarity": 4,
-  "sortId": 1514,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 4
@@ -15004,50 +12166,6 @@
   "weight": 35
  },
  {
-  "iconName": "IronArmorCold",
-  "id": "IronArmorCold_2",
-  "maxStack": 1,
-  "price": 61060,
-  "rarity": 1,
-  "sortId": 1066,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorCold",
-  "id": "IronArmorCold_3",
-  "maxStack": 1,
-  "price": 76130,
-  "rarity": 2,
-  "sortId": 1067,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorCold",
-  "id": "IronArmorCold_4",
-  "maxStack": 1,
-  "price": 91200,
-  "rarity": 3,
-  "sortId": 1068,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorCold",
-  "id": "IronArmorCold_5",
-  "maxStack": 1,
-  "price": 106270,
-  "rarity": 4,
-  "sortId": 1069,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "IronArmorHeat",
   "id": "IronArmorHeat",
   "maxStack": 1,
@@ -15059,100 +12177,12 @@
   "weight": 35
  },
  {
-  "iconName": "IronArmorHeat",
-  "id": "IronArmorHeat_2",
-  "maxStack": 1,
-  "price": 62140,
-  "rarity": 1,
-  "sortId": 1061,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorHeat",
-  "id": "IronArmorHeat_3",
-  "maxStack": 1,
-  "price": 77420,
-  "rarity": 2,
-  "sortId": 1062,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorHeat",
-  "id": "IronArmorHeat_4",
-  "maxStack": 1,
-  "price": 92710,
-  "rarity": 3,
-  "sortId": 1063,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmorHeat",
-  "id": "IronArmorHeat_5",
-  "maxStack": 1,
-  "price": 108000,
-  "rarity": 4,
-  "sortId": 1064,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "IronHelmet",
   "id": "IronHelmet",
   "maxStack": 1,
   "price": 18540,
   "rarity": 0,
   "sortId": 1310,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "IronHelmet",
-  "id": "IronHelmet_2",
-  "maxStack": 1,
-  "price": 24310,
-  "rarity": 1,
-  "sortId": 1311,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "IronHelmet",
-  "id": "IronHelmet_3",
-  "maxStack": 1,
-  "price": 30170,
-  "rarity": 2,
-  "sortId": 1312,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "IronHelmet",
-  "id": "IronHelmet_4",
-  "maxStack": 1,
-  "price": 36020,
-  "rarity": 3,
-  "sortId": 1313,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "IronHelmet",
-  "id": "IronHelmet_5",
-  "maxStack": 1,
-  "price": 41880,
-  "rarity": 4,
-  "sortId": 1314,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 12
@@ -15222,72 +12252,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 10
- },
- {
-  "iconName": "Katana",
-  "id": "Katana_2",
-  "maxStack": 1,
-  "price": 60920,
-  "rarity": 1,
-  "sortId": 146,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Katana",
-  "id": "Katana_3",
-  "maxStack": 1,
-  "price": 79700,
-  "rarity": 2,
-  "sortId": 147,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Katana",
-  "id": "Katana_4",
-  "maxStack": 1,
-  "price": 98480,
-  "rarity": 3,
-  "sortId": 148,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Katana",
-  "id": "Katana_5",
-  "maxStack": 1,
-  "price": 117260,
-  "rarity": 4,
-  "sortId": 149,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Bat",
-  "id": "Katana_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
- },
- {
-  "iconName": "Bat",
-  "id": "Katana_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 99999
  },
  {
   "iconName": "KeySphere_01",
@@ -15455,50 +12419,6 @@
   "weight": 50
  },
  {
-  "iconName": "LaserGatlingGun",
-  "id": "LaserGatlingGun_2",
-  "maxStack": 1,
-  "price": 1236470,
-  "rarity": 1,
-  "sortId": 701,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "LaserGatlingGun",
-  "id": "LaserGatlingGun_3",
-  "maxStack": 1,
-  "price": 1507870,
-  "rarity": 2,
-  "sortId": 702,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "LaserGatlingGun",
-  "id": "LaserGatlingGun_4",
-  "maxStack": 1,
-  "price": 1749320,
-  "rarity": 3,
-  "sortId": 703,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
-  "iconName": "LaserGatlingGun",
-  "id": "LaserGatlingGun_5",
-  "maxStack": 1,
-  "price": 2020730,
-  "rarity": 4,
-  "sortId": 704,
-  "typeA": "Weapon",
-  "typeB": "WeaponGatlingGun",
-  "weight": 50
- },
- {
   "iconName": "LaserMiningTool",
   "id": "LaserMiningTool",
   "maxStack": 1,
@@ -15519,72 +12439,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 18
- },
- {
-  "iconName": "LaserRifle",
-  "id": "LaserRifle_2",
-  "maxStack": 1,
-  "price": 343440,
-  "rarity": 1,
-  "sortId": 671,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 18
- },
- {
-  "iconName": "LaserRifle",
-  "id": "LaserRifle_3",
-  "maxStack": 1,
-  "price": 423980,
-  "rarity": 2,
-  "sortId": 672,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 18
- },
- {
-  "iconName": "LaserRifle",
-  "id": "LaserRifle_4",
-  "maxStack": 1,
-  "price": 503030,
-  "rarity": 3,
-  "sortId": 673,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 18
- },
- {
-  "iconName": "LaserRifle",
-  "id": "LaserRifle_5",
-  "maxStack": 1,
-  "price": 586250,
-  "rarity": 4,
-  "sortId": 674,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 18
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "LaserRifle_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 99999
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "LaserRifle_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 99999
  },
  {
   "iconName": "Launcher_Default",
@@ -15659,17 +12513,6 @@
   "price": 151920,
   "rarity": 0,
   "sortId": 656,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "Launcher_Meteor",
-  "id": "Launcher_Meteor_5",
-  "maxStack": 1,
-  "price": 303840,
-  "rarity": 4,
-  "sortId": 657,
   "typeA": "Weapon",
   "typeB": "WeaponRocketLauncher",
   "weight": 30
@@ -15939,100 +12782,12 @@
   "weight": 15
  },
  {
-  "iconName": "MakeshiftAssaultRifle",
-  "id": "MakeshiftAssaultRifle_2",
-  "maxStack": 1,
-  "price": 34780,
-  "rarity": 1,
-  "sortId": 561,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftAssaultRifle",
-  "id": "MakeshiftAssaultRifle_3",
-  "maxStack": 1,
-  "price": 41900,
-  "rarity": 2,
-  "sortId": 562,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftAssaultRifle",
-  "id": "MakeshiftAssaultRifle_4",
-  "maxStack": 1,
-  "price": 49940,
-  "rarity": 3,
-  "sortId": 563,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftAssaultRifle",
-  "id": "MakeshiftAssaultRifle_5",
-  "maxStack": 1,
-  "price": 58270,
-  "rarity": 4,
-  "sortId": 564,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
   "iconName": "MakeshiftHandgun",
   "id": "MakeshiftHandgun",
   "maxStack": 1,
   "price": 13970,
   "rarity": 0,
   "sortId": 300,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 10
- },
- {
-  "iconName": "MakeshiftHandgun",
-  "id": "MakeshiftHandgun_2",
-  "maxStack": 1,
-  "price": 17060,
-  "rarity": 1,
-  "sortId": 301,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 10
- },
- {
-  "iconName": "MakeshiftHandgun",
-  "id": "MakeshiftHandgun_3",
-  "maxStack": 1,
-  "price": 20810,
-  "rarity": 2,
-  "sortId": 302,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 10
- },
- {
-  "iconName": "MakeshiftHandgun",
-  "id": "MakeshiftHandgun_4",
-  "maxStack": 1,
-  "price": 25390,
-  "rarity": 3,
-  "sortId": 303,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 10
- },
- {
-  "iconName": "MakeshiftHandgun",
-  "id": "MakeshiftHandgun_5",
-  "maxStack": 1,
-  "price": 30340,
-  "rarity": 4,
-  "sortId": 304,
   "typeA": "Weapon",
   "typeB": "WeaponHandgun",
   "weight": 10
@@ -16049,100 +12804,12 @@
   "weight": 24
  },
  {
-  "iconName": "MakeshiftShotgun",
-  "id": "MakeshiftShotgun_2",
-  "maxStack": 1,
-  "price": 28680,
-  "rarity": 1,
-  "sortId": 401,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "MakeshiftShotgun",
-  "id": "MakeshiftShotgun_3",
-  "maxStack": 1,
-  "price": 34560,
-  "rarity": 2,
-  "sortId": 402,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "MakeshiftShotgun",
-  "id": "MakeshiftShotgun_4",
-  "maxStack": 1,
-  "price": 41640,
-  "rarity": 3,
-  "sortId": 403,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
-  "iconName": "MakeshiftShotgun",
-  "id": "MakeshiftShotgun_5",
-  "maxStack": 1,
-  "price": 48720,
-  "rarity": 4,
-  "sortId": 404,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 24
- },
- {
   "iconName": "MakeshiftSubmachineGun",
   "id": "MakeshiftSubmachineGun",
   "maxStack": 1,
   "price": 15410,
   "rarity": 0,
   "sortId": 625,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftSubmachineGun",
-  "id": "MakeshiftSubmachineGun_2",
-  "maxStack": 1,
-  "price": 19080,
-  "rarity": 1,
-  "sortId": 626,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftSubmachineGun",
-  "id": "MakeshiftSubmachineGun_3",
-  "maxStack": 1,
-  "price": 23110,
-  "rarity": 2,
-  "sortId": 627,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftSubmachineGun",
-  "id": "MakeshiftSubmachineGun_4",
-  "maxStack": 1,
-  "price": 27980,
-  "rarity": 3,
-  "sortId": 628,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "MakeshiftSubmachineGun",
-  "id": "MakeshiftSubmachineGun_5",
-  "maxStack": 1,
-  "price": 33220,
-  "rarity": 4,
-  "sortId": 629,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 15
@@ -16201,17 +12868,6 @@
   "typeA": "Material",
   "typeB": "MaterialMonster",
   "weight": 0
- },
- {
-  "iconName": "Meat",
-  "id": "Meat",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodMeat",
-  "weight": 1
  },
  {
   "iconName": "Meat_BerryGoat",
@@ -16533,28 +13189,6 @@
   "weight": 1
  },
  {
-  "iconName": "FlameThrower",
-  "id": "MissileLauncher_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
- },
- {
-  "iconName": "FlameThrower",
-  "id": "MissileLauncher_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
- },
- {
   "iconName": "Money",
   "id": "Money",
   "maxStack": 99999999,
@@ -16583,50 +13217,6 @@
   "price": 712580,
   "rarity": 0,
   "sortId": 730,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "MultiGuidedMissileLauncher",
-  "id": "MultiGuidedMissileLauncher_2",
-  "maxStack": 1,
-  "price": 894280,
-  "rarity": 1,
-  "sortId": 731,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "MultiGuidedMissileLauncher",
-  "id": "MultiGuidedMissileLauncher_3",
-  "maxStack": 1,
-  "price": 1074880,
-  "rarity": 2,
-  "sortId": 732,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "MultiGuidedMissileLauncher",
-  "id": "MultiGuidedMissileLauncher_4",
-  "maxStack": 1,
-  "price": 1252970,
-  "rarity": 3,
-  "sortId": 733,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "MultiGuidedMissileLauncher",
-  "id": "MultiGuidedMissileLauncher_5",
-  "maxStack": 1,
-  "price": 1433570,
-  "rarity": 4,
-  "sortId": 734,
   "typeA": "Weapon",
   "typeB": "WeaponRocketLauncher",
   "weight": 30
@@ -16687,50 +13277,6 @@
   "weight": 20
  },
  {
-  "iconName": "Musket",
-  "id": "Musket_2",
-  "maxStack": 1,
-  "price": 12020,
-  "rarity": 1,
-  "sortId": 531,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "Musket",
-  "id": "Musket_3",
-  "maxStack": 1,
-  "price": 14420,
-  "rarity": 2,
-  "sortId": 532,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "Musket",
-  "id": "Musket_4",
-  "maxStack": 1,
-  "price": 18020,
-  "rarity": 3,
-  "sortId": 533,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "Musket",
-  "id": "Musket_5",
-  "maxStack": 1,
-  "price": 22270,
-  "rarity": 4,
-  "sortId": 534,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
   "iconName": "Narcotic",
   "id": "Narcotic",
   "maxStack": 9999,
@@ -16775,17 +13321,6 @@
   "weight": 30
  },
  {
-  "iconName": "Octavia001_Armor",
-  "id": "Octavia001_Armor_5",
-  "maxStack": 1,
-  "price": 114360,
-  "rarity": 4,
-  "sortId": 1152,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "Octavia002_Armor",
   "id": "Octavia002_Armor",
   "maxStack": 1,
@@ -16795,17 +13330,6 @@
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 30
- },
- {
-  "iconName": "Octavia002_Armor",
-  "id": "Octavia002_Armor_5",
-  "maxStack": 1,
-  "price": 1384920,
-  "rarity": 4,
-  "sortId": 1154,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
  },
  {
   "iconName": "OctaviaRevolver",
@@ -16819,100 +13343,12 @@
   "weight": 8
  },
  {
-  "iconName": "OctaviaRevolver",
-  "id": "OctaviaRevolver_2",
-  "maxStack": 1,
-  "price": 50400,
-  "rarity": 1,
-  "sortId": 892,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OctaviaRevolver",
-  "id": "OctaviaRevolver_3",
-  "maxStack": 1,
-  "price": 76200,
-  "rarity": 2,
-  "sortId": 893,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OctaviaRevolver",
-  "id": "OctaviaRevolver_4",
-  "maxStack": 1,
-  "price": 113400,
-  "rarity": 3,
-  "sortId": 894,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OctaviaRevolver",
-  "id": "OctaviaRevolver_5",
-  "maxStack": 1,
-  "price": 72960,
-  "rarity": 4,
-  "sortId": 895,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
   "iconName": "OctaviaShotgun",
   "id": "OctaviaShotgun",
   "maxStack": 1,
   "price": 363220,
   "rarity": 0,
   "sortId": 896,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "OctaviaShotgun",
-  "id": "OctaviaShotgun_2",
-  "maxStack": 1,
-  "price": 178800,
-  "rarity": 1,
-  "sortId": 897,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "OctaviaShotgun",
-  "id": "OctaviaShotgun_3",
-  "maxStack": 1,
-  "price": 271200,
-  "rarity": 2,
-  "sortId": 898,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "OctaviaShotgun",
-  "id": "OctaviaShotgun_4",
-  "maxStack": 1,
-  "price": 412800,
-  "rarity": 3,
-  "sortId": 899,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "OctaviaShotgun",
-  "id": "OctaviaShotgun_5",
-  "maxStack": 1,
-  "price": 736030,
-  "rarity": 4,
-  "sortId": 900,
   "typeA": "Weapon",
   "typeB": "WeaponShotgun",
   "weight": 20
@@ -16946,50 +13382,6 @@
   "price": 24480,
   "rarity": 0,
   "sortId": 330,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OldRevolver",
-  "id": "OldRevolver_2",
-  "maxStack": 1,
-  "price": 30600,
-  "rarity": 1,
-  "sortId": 331,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OldRevolver",
-  "id": "OldRevolver_3",
-  "maxStack": 1,
-  "price": 36720,
-  "rarity": 2,
-  "sortId": 332,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OldRevolver",
-  "id": "OldRevolver_4",
-  "maxStack": 1,
-  "price": 44040,
-  "rarity": 3,
-  "sortId": 333,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "OldRevolver",
-  "id": "OldRevolver_5",
-  "maxStack": 1,
-  "price": 51360,
-  "rarity": 4,
-  "sortId": 334,
   "typeA": "Weapon",
   "typeB": "WeaponHandgun",
   "weight": 8
@@ -17600,17 +13992,6 @@
   "weight": 2
  },
  {
-  "iconName": "Accessory_Otomo_MoveSpeed_up",
-  "id": "Otomo_MoveSpeed_up_1",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 2216,
-  "typeA": "Accessory",
-  "typeB": "Accessory",
-  "weight": 2
- },
- {
   "iconName": "Otomo_PalConfidence_Increase_1",
   "id": "Otomo_PalConfidence_Increase_1",
   "maxStack": 1,
@@ -17661,50 +14042,6 @@
   "price": 1754940,
   "rarity": 0,
   "sortId": 681,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "OverheatRifle",
-  "id": "OverheatRifle_2",
-  "maxStack": 1,
-  "price": 2192860,
-  "rarity": 1,
-  "sortId": 682,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "OverheatRifle",
-  "id": "OverheatRifle_3",
-  "maxStack": 1,
-  "price": 2630440,
-  "rarity": 2,
-  "sortId": 683,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "OverheatRifle",
-  "id": "OverheatRifle_4",
-  "maxStack": 1,
-  "price": 3067150,
-  "rarity": 3,
-  "sortId": 684,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "OverheatRifle",
-  "id": "OverheatRifle_5",
-  "maxStack": 1,
-  "price": 3519480,
-  "rarity": 4,
-  "sortId": 685,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 15
@@ -17974,17 +14311,6 @@
   "weight": 1
  },
  {
-  "iconName": "PalRevive",
-  "id": "PalAwakening_Test",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 4179,
-  "typeA": "Consume",
-  "typeB": "ConsumePalAwakening",
-  "weight": 1
- },
- {
   "iconName": "PalAwakening_Water",
   "id": "PalAwakening_Water",
   "maxStack": 9999,
@@ -18035,17 +14361,6 @@
   "price": 2013600,
   "rarity": 0,
   "sortId": 336,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "PalDopingShot_3",
-  "id": "PalDopingShot_3",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 337,
   "typeA": "Weapon",
   "typeB": "WeaponHandgun",
   "weight": 8
@@ -18695,17 +15010,6 @@
   "price": 10,
   "rarity": 3,
   "sortId": 6200,
-  "typeA": "Consume",
-  "typeB": "ConsumeOther",
-  "weight": 0
- },
- {
-  "iconName": "TechnologyBook_G4",
-  "id": "PalGenderReverseTest",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 4,
-  "sortId": 9999,
   "typeA": "Consume",
   "typeB": "ConsumeOther",
   "weight": 0
@@ -19559,17 +15863,6 @@
  },
  {
   "iconName": "PalPassiveSkillChange",
-  "id": "PalPassiveSkillChange_SwimSpeed_ConsumeTest",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "ConsumePassiveSkillChange",
-  "weight": 0
- },
- {
-  "iconName": "PalPassiveSkillChange",
   "id": "PalPassiveSkillChange_SwimSpeed_up_1",
   "maxStack": 9999,
   "price": 1,
@@ -19641,28 +15934,6 @@
   "price": 1,
   "rarity": 3,
   "sortId": 6230,
-  "typeA": "Essential",
-  "typeB": "Essential_PassiveSkillChange",
-  "weight": 0
- },
- {
-  "iconName": "TechnologyBook_G4",
-  "id": "PalPassiveSkillChangeTest",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 4,
-  "sortId": 9999,
-  "typeA": "Essential",
-  "typeB": "Essential_PassiveSkillChange",
-  "weight": 0
- },
- {
-  "iconName": "TechnologyBook_G4",
-  "id": "PalPassiveSkillChangeTest2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 4,
-  "sortId": 9999,
   "typeA": "Essential",
   "typeB": "Essential_PassiveSkillChange",
   "weight": 0
@@ -20207,100 +16478,12 @@
   "weight": 35
  },
  {
-  "iconName": "PlasticArmor",
-  "id": "PlasticArmor_2",
-  "maxStack": 1,
-  "price": 190000,
-  "rarity": 1,
-  "sortId": 1086,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmor",
-  "id": "PlasticArmor_3",
-  "maxStack": 1,
-  "price": 230560,
-  "rarity": 2,
-  "sortId": 1087,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmor",
-  "id": "PlasticArmor_4",
-  "maxStack": 1,
-  "price": 266590,
-  "rarity": 3,
-  "sortId": 1088,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmor",
-  "id": "PlasticArmor_5",
-  "maxStack": 1,
-  "price": 310320,
-  "rarity": 4,
-  "sortId": 1089,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "PlasticArmorCold",
   "id": "PlasticArmorCold",
   "maxStack": 1,
   "price": 160200,
   "rarity": 0,
   "sortId": 1095,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorCold",
-  "id": "PlasticArmorCold_2",
-  "maxStack": 1,
-  "price": 200360,
-  "rarity": 1,
-  "sortId": 1096,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorCold",
-  "id": "PlasticArmorCold_3",
-  "maxStack": 1,
-  "price": 243520,
-  "rarity": 2,
-  "sortId": 1097,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorCold",
-  "id": "PlasticArmorCold_4",
-  "maxStack": 1,
-  "price": 281280,
-  "rarity": 3,
-  "sortId": 1098,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorCold",
-  "id": "PlasticArmorCold_5",
-  "maxStack": 1,
-  "price": 327600,
-  "rarity": 4,
-  "sortId": 1099,
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 35
@@ -20317,50 +16500,6 @@
   "weight": 35
  },
  {
-  "iconName": "PlasticArmorHeat",
-  "id": "PlasticArmorHeat_2",
-  "maxStack": 1,
-  "price": 199000,
-  "rarity": 1,
-  "sortId": 1091,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorHeat",
-  "id": "PlasticArmorHeat_3",
-  "maxStack": 1,
-  "price": 241360,
-  "rarity": 2,
-  "sortId": 1092,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorHeat",
-  "id": "PlasticArmorHeat_4",
-  "maxStack": 1,
-  "price": 279190,
-  "rarity": 3,
-  "sortId": 1093,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorHeat",
-  "id": "PlasticArmorHeat_5",
-  "maxStack": 1,
-  "price": 324720,
-  "rarity": 4,
-  "sortId": 1094,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "PlasticArmorWeight",
   "id": "PlasticArmorWeight",
   "maxStack": 1,
@@ -20372,100 +16511,12 @@
   "weight": 35
  },
  {
-  "iconName": "PlasticArmorWeight",
-  "id": "PlasticArmorWeight_2",
-  "maxStack": 1,
-  "price": 198640,
-  "rarity": 1,
-  "sortId": 1101,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorWeight",
-  "id": "PlasticArmorWeight_3",
-  "maxStack": 1,
-  "price": 240920,
-  "rarity": 2,
-  "sortId": 1102,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorWeight",
-  "id": "PlasticArmorWeight_4",
-  "maxStack": 1,
-  "price": 278690,
-  "rarity": 3,
-  "sortId": 1103,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "PlasticArmorWeight",
-  "id": "PlasticArmorWeight_5",
-  "maxStack": 1,
-  "price": 324140,
-  "rarity": 4,
-  "sortId": 1104,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "PlasticHelmet",
   "id": "PlasticHelmet",
   "maxStack": 1,
   "price": 97980,
   "rarity": 0,
   "sortId": 1320,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "PlasticHelmet",
-  "id": "PlasticHelmet_2",
-  "maxStack": 1,
-  "price": 125700,
-  "rarity": 1,
-  "sortId": 1321,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "PlasticHelmet",
-  "id": "PlasticHelmet_3",
-  "maxStack": 1,
-  "price": 151020,
-  "rarity": 2,
-  "sortId": 1322,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "PlasticHelmet",
-  "id": "PlasticHelmet_4",
-  "maxStack": 1,
-  "price": 176340,
-  "rarity": 3,
-  "sortId": 1323,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 12
- },
- {
-  "iconName": "PlasticHelmet",
-  "id": "PlasticHelmet_5",
-  "maxStack": 1,
-  "price": 203160,
-  "rarity": 4,
-  "sortId": 1324,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 12
@@ -20744,17 +16795,6 @@
   "typeA": "Food",
   "typeB": "FoodVegetable",
   "weight": 1.5
- },
- {
-  "iconName": "Glider_Old",
-  "id": "PV_Glider_Manta",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Glider",
-  "typeB": "Glider",
-  "weight": 15
  },
  {
   "iconName": "Quartz",
@@ -21076,28 +17116,6 @@
   "weight": 0.025
  },
  {
-  "iconName": "Launcher_Default",
-  "id": "RocketLauncher_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
- },
- {
-  "iconName": "Launcher_Default",
-  "id": "RocketLauncher_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 99999
- },
- {
   "iconName": "RoughBullet",
   "id": "RoughBullet",
   "maxStack": 9999,
@@ -21252,100 +17270,12 @@
   "weight": 20
  },
  {
-  "iconName": "SemiAutoRifle",
-  "id": "SemiAutoRifle_2",
-  "maxStack": 1,
-  "price": 53900,
-  "rarity": 1,
-  "sortId": 551,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoRifle",
-  "id": "SemiAutoRifle_3",
-  "maxStack": 1,
-  "price": 66770,
-  "rarity": 2,
-  "sortId": 552,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoRifle",
-  "id": "SemiAutoRifle_4",
-  "maxStack": 1,
-  "price": 78340,
-  "rarity": 3,
-  "sortId": 553,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoRifle",
-  "id": "SemiAutoRifle_5",
-  "maxStack": 1,
-  "price": 91200,
-  "rarity": 4,
-  "sortId": 554,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
   "iconName": "SemiAutoShotgun",
   "id": "SemiAutoShotgun",
   "maxStack": 1,
   "price": 79200,
   "rarity": 0,
   "sortId": 430,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoShotgun",
-  "id": "SemiAutoShotgun_2",
-  "maxStack": 1,
-  "price": 99260,
-  "rarity": 1,
-  "sortId": 431,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoShotgun",
-  "id": "SemiAutoShotgun_3",
-  "maxStack": 1,
-  "price": 121200,
-  "rarity": 2,
-  "sortId": 432,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoShotgun",
-  "id": "SemiAutoShotgun_4",
-  "maxStack": 1,
-  "price": 141260,
-  "rarity": 3,
-  "sortId": 433,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SemiAutoShotgun",
-  "id": "SemiAutoShotgun_5",
-  "maxStack": 1,
-  "price": 163200,
-  "rarity": 4,
-  "sortId": 434,
   "typeA": "Weapon",
   "typeB": "WeaponShotgun",
   "weight": 20
@@ -21362,50 +17292,6 @@
   "weight": 40
  },
  {
-  "iconName": "SFArmor",
-  "id": "SFArmor_2",
-  "maxStack": 1,
-  "price": 341620,
-  "rarity": 1,
-  "sortId": 1106,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmor",
-  "id": "SFArmor_3",
-  "maxStack": 1,
-  "price": 414240,
-  "rarity": 2,
-  "sortId": 1107,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmor",
-  "id": "SFArmor_4",
-  "maxStack": 1,
-  "price": 480100,
-  "rarity": 3,
-  "sortId": 1108,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmor",
-  "id": "SFArmor_5",
-  "maxStack": 1,
-  "price": 552720,
-  "rarity": 4,
-  "sortId": 1109,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "SFArmorCold",
   "id": "SFArmorCold",
   "maxStack": 1,
@@ -21415,50 +17301,6 @@
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 35
- },
- {
-  "iconName": "SFArmorCold",
-  "id": "SFArmorCold_2",
-  "maxStack": 1,
-  "price": 351980,
-  "rarity": 1,
-  "sortId": 1116,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorCold",
-  "id": "SFArmorCold_3",
-  "maxStack": 1,
-  "price": 427200,
-  "rarity": 2,
-  "sortId": 1117,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorCold",
-  "id": "SFArmorCold_4",
-  "maxStack": 1,
-  "price": 494780,
-  "rarity": 3,
-  "sortId": 1118,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorCold",
-  "id": "SFArmorCold_5",
-  "maxStack": 1,
-  "price": 570000,
-  "rarity": 4,
-  "sortId": 1119,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
  },
  {
   "iconName": "SFArmorHeat",
@@ -21472,50 +17314,6 @@
   "weight": 35
  },
  {
-  "iconName": "SFArmorHeat",
-  "id": "SFArmorHeat_2",
-  "maxStack": 1,
-  "price": 371110,
-  "rarity": 1,
-  "sortId": 1111,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorHeat",
-  "id": "SFArmorHeat_3",
-  "maxStack": 1,
-  "price": 458480,
-  "rarity": 2,
-  "sortId": 1112,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorHeat",
-  "id": "SFArmorHeat_4",
-  "maxStack": 1,
-  "price": 539090,
-  "rarity": 3,
-  "sortId": 1113,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorHeat",
-  "id": "SFArmorHeat_5",
-  "maxStack": 1,
-  "price": 626460,
-  "rarity": 4,
-  "sortId": 1114,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "SFArmorWeight",
   "id": "SFArmorWeight",
   "maxStack": 1,
@@ -21525,50 +17323,6 @@
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 35
- },
- {
-  "iconName": "SFArmorWeight",
-  "id": "SFArmorWeight_2",
-  "maxStack": 1,
-  "price": 578780,
-  "rarity": 1,
-  "sortId": 1121,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorWeight",
-  "id": "SFArmorWeight_3",
-  "maxStack": 1,
-  "price": 697200,
-  "rarity": 2,
-  "sortId": 1122,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorWeight",
-  "id": "SFArmorWeight_4",
-  "maxStack": 1,
-  "price": 811580,
-  "rarity": 3,
-  "sortId": 1123,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "SFArmorWeight",
-  "id": "SFArmorWeight_5",
-  "maxStack": 1,
-  "price": 930000,
-  "rarity": 4,
-  "sortId": 1124,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
  },
  {
   "iconName": "SFArrow",
@@ -21593,100 +17347,12 @@
   "weight": 25
  },
  {
-  "iconName": "SFBow",
-  "id": "SFBow_2",
-  "maxStack": 1,
-  "price": 216050,
-  "rarity": 1,
-  "sortId": 256,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 25
- },
- {
-  "iconName": "SFBow",
-  "id": "SFBow_3",
-  "maxStack": 1,
-  "price": 259540,
-  "rarity": 2,
-  "sortId": 257,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 25
- },
- {
-  "iconName": "SFBow",
-  "id": "SFBow_4",
-  "maxStack": 1,
-  "price": 303020,
-  "rarity": 3,
-  "sortId": 258,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 25
- },
- {
-  "iconName": "SFBow",
-  "id": "SFBow_5",
-  "maxStack": 1,
-  "price": 347520,
-  "rarity": 4,
-  "sortId": 259,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 25
- },
- {
   "iconName": "SFHelmet",
   "id": "SFHelmet",
   "maxStack": 1,
   "price": 189360,
   "rarity": 0,
   "sortId": 1325,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "SFHelmet",
-  "id": "SFHelmet_2",
-  "maxStack": 1,
-  "price": 239230,
-  "rarity": 1,
-  "sortId": 1326,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "SFHelmet",
-  "id": "SFHelmet_3",
-  "maxStack": 1,
-  "price": 288530,
-  "rarity": 2,
-  "sortId": 1327,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "SFHelmet",
-  "id": "SFHelmet_4",
-  "maxStack": 1,
-  "price": 337820,
-  "rarity": 3,
-  "sortId": 1328,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "SFHelmet",
-  "id": "SFHelmet_5",
-  "maxStack": 1,
-  "price": 387120,
-  "rarity": 4,
-  "sortId": 1329,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 15
@@ -21780,39 +17446,6 @@
   "weight": 5
  },
  {
-  "iconName": "Shield_05",
-  "id": "Shield_Ultra",
-  "maxStack": 1,
-  "price": 298560,
-  "rarity": 3,
-  "sortId": 1005,
-  "typeA": "Armor",
-  "typeB": "Shield",
-  "weight": 5
- },
- {
-  "iconName": "ShotGun_Default",
-  "id": "Shotgun_NPC",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 99999
- },
- {
-  "iconName": "ShotGun_Default",
-  "id": "Shotgun_NPC_Otomo",
-  "maxStack": 1,
-  "price": 10,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 99999
- },
- {
   "iconName": "ShotgunBullet",
   "id": "ShotgunBullet",
   "maxStack": 9999,
@@ -21841,50 +17474,6 @@
   "price": 26160,
   "rarity": 0,
   "sortId": 540,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SingleShotRifle",
-  "id": "SingleShotRifle_2",
-  "maxStack": 1,
-  "price": 33580,
-  "rarity": 1,
-  "sortId": 541,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SingleShotRifle",
-  "id": "SingleShotRifle_3",
-  "maxStack": 1,
-  "price": 40990,
-  "rarity": 2,
-  "sortId": 542,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SingleShotRifle",
-  "id": "SingleShotRifle_4",
-  "maxStack": 1,
-  "price": 48410,
-  "rarity": 3,
-  "sortId": 543,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 20
- },
- {
-  "iconName": "SingleShotRifle",
-  "id": "SingleShotRifle_5",
-  "maxStack": 1,
-  "price": 57120,
-  "rarity": 4,
-  "sortId": 544,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 20
@@ -24497,50 +20086,6 @@
   "weight": 5
  },
  {
-  "iconName": "SkyAssaultRifle",
-  "id": "SkyAssaultRifle_2",
-  "maxStack": 1,
-  "price": 3069880,
-  "rarity": 1,
-  "sortId": 576,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "SkyAssaultRifle",
-  "id": "SkyAssaultRifle_3",
-  "maxStack": 1,
-  "price": 3625120,
-  "rarity": 2,
-  "sortId": 577,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "SkyAssaultRifle",
-  "id": "SkyAssaultRifle_4",
-  "maxStack": 1,
-  "price": 4176670,
-  "rarity": 3,
-  "sortId": 578,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
-  "iconName": "SkyAssaultRifle",
-  "id": "SkyAssaultRifle_5",
-  "maxStack": 1,
-  "price": 5035440,
-  "rarity": 4,
-  "sortId": 579,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 5
- },
- {
   "iconName": "SkyAssaultRifleBullet",
   "id": "SkyAssaultRifleBullet",
   "maxStack": 9999,
@@ -24563,100 +20108,12 @@
   "weight": 10
  },
  {
-  "iconName": "SkyBeamSword",
-  "id": "SkyBeamSword_2",
-  "maxStack": 1,
-  "price": 1578680,
-  "rarity": 1,
-  "sortId": 156,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "SkyBeamSword",
-  "id": "SkyBeamSword_3",
-  "maxStack": 1,
-  "price": 2022430,
-  "rarity": 2,
-  "sortId": 157,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "SkyBeamSword",
-  "id": "SkyBeamSword_4",
-  "maxStack": 1,
-  "price": 2454780,
-  "rarity": 3,
-  "sortId": 158,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "SkyBeamSword",
-  "id": "SkyBeamSword_5",
-  "maxStack": 1,
-  "price": 2898530,
-  "rarity": 4,
-  "sortId": 159,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
   "iconName": "SkyBow",
   "id": "SkyBow",
   "maxStack": 1,
   "price": 1293140,
   "rarity": 0,
   "sortId": 260,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "SkyBow",
-  "id": "SkyBow_2",
-  "maxStack": 1,
-  "price": 1395980,
-  "rarity": 1,
-  "sortId": 261,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "SkyBow",
-  "id": "SkyBow_3",
-  "maxStack": 1,
-  "price": 1796350,
-  "rarity": 2,
-  "sortId": 262,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "SkyBow",
-  "id": "SkyBow_4",
-  "maxStack": 1,
-  "price": 2196720,
-  "rarity": 3,
-  "sortId": 263,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "SkyBow",
-  "id": "SkyBow_5",
-  "maxStack": 1,
-  "price": 2597090,
-  "rarity": 4,
-  "sortId": 264,
   "typeA": "Weapon",
   "typeB": "WeaponBow",
   "weight": 6
@@ -24679,50 +20136,6 @@
   "price": 2295540,
   "rarity": 0,
   "sortId": 715,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "SkyGrenadeLauncher",
-  "id": "SkyGrenadeLauncher_2",
-  "maxStack": 1,
-  "price": 2796410,
-  "rarity": 1,
-  "sortId": 716,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "SkyGrenadeLauncher",
-  "id": "SkyGrenadeLauncher_3",
-  "maxStack": 1,
-  "price": 3292140,
-  "rarity": 2,
-  "sortId": 717,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "SkyGrenadeLauncher",
-  "id": "SkyGrenadeLauncher_4",
-  "maxStack": 1,
-  "price": 3787870,
-  "rarity": 3,
-  "sortId": 718,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "SkyGrenadeLauncher",
-  "id": "SkyGrenadeLauncher_5",
-  "maxStack": 1,
-  "price": 4601880,
-  "rarity": 4,
-  "sortId": 719,
   "typeA": "Weapon",
   "typeB": "WeaponRocketLauncher",
   "weight": 30
@@ -24794,50 +20207,6 @@
   "weight": 20
  },
  {
-  "iconName": "SkyShotgun",
-  "id": "SkyShotgun_2",
-  "maxStack": 1,
-  "price": 2615260,
-  "rarity": 1,
-  "sortId": 441,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SkyShotgun",
-  "id": "SkyShotgun_3",
-  "maxStack": 1,
-  "price": 3074410,
-  "rarity": 2,
-  "sortId": 442,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SkyShotgun",
-  "id": "SkyShotgun_4",
-  "maxStack": 1,
-  "price": 3533570,
-  "rarity": 3,
-  "sortId": 443,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "SkyShotgun",
-  "id": "SkyShotgun_5",
-  "maxStack": 1,
-  "price": 4311000,
-  "rarity": 4,
-  "sortId": 444,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
   "iconName": "SkyShotgunBullet",
   "id": "SkyShotgunBullet",
   "maxStack": 9999,
@@ -24855,50 +20224,6 @@
   "price": 1693630,
   "rarity": 0,
   "sortId": 635,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SkySubmachineGun",
-  "id": "SkySubmachineGun_2",
-  "maxStack": 1,
-  "price": 2119420,
-  "rarity": 1,
-  "sortId": 636,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SkySubmachineGun",
-  "id": "SkySubmachineGun_3",
-  "maxStack": 1,
-  "price": 2548850,
-  "rarity": 2,
-  "sortId": 637,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SkySubmachineGun",
-  "id": "SkySubmachineGun_4",
-  "maxStack": 1,
-  "price": 2968630,
-  "rarity": 3,
-  "sortId": 638,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SkySubmachineGun",
-  "id": "SkySubmachineGun_5",
-  "maxStack": 1,
-  "price": 3398060,
-  "rarity": 4,
-  "sortId": 639,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 15
@@ -24981,34 +20306,12 @@
   "weight": 10
  },
  {
-  "iconName": "Spear_ForestBoss",
-  "id": "Spear_ForestBoss_5",
-  "maxStack": 1,
-  "price": 205540,
-  "rarity": 4,
-  "sortId": 136,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
   "iconName": "Spear_ForestBoss2",
   "id": "Spear_ForestBoss2",
   "maxStack": 1,
   "price": 508560,
   "rarity": 2,
   "sortId": 137,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Spear_ForestBoss2",
-  "id": "Spear_ForestBoss2_5",
-  "maxStack": 1,
-  "price": 985440,
-  "rarity": 4,
-  "sortId": 138,
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 10
@@ -25223,50 +20526,6 @@
   "weight": 40
  },
  {
-  "iconName": "StealArmorCold",
-  "id": "StealArmorCold_2",
-  "maxStack": 1,
-  "price": 81470,
-  "rarity": 1,
-  "sortId": 1081,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorCold",
-  "id": "StealArmorCold_3",
-  "maxStack": 1,
-  "price": 100620,
-  "rarity": 2,
-  "sortId": 1082,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorCold",
-  "id": "StealArmorCold_4",
-  "maxStack": 1,
-  "price": 118030,
-  "rarity": 3,
-  "sortId": 1083,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorCold",
-  "id": "StealArmorCold_5",
-  "maxStack": 1,
-  "price": 138050,
-  "rarity": 4,
-  "sortId": 1084,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "StealArmorHeat",
   "id": "StealArmorHeat",
   "maxStack": 1,
@@ -25278,100 +20537,12 @@
   "weight": 40
  },
  {
-  "iconName": "StealArmorHeat",
-  "id": "StealArmorHeat_2",
-  "maxStack": 1,
-  "price": 83480,
-  "rarity": 1,
-  "sortId": 1076,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorHeat",
-  "id": "StealArmorHeat_3",
-  "maxStack": 1,
-  "price": 103210,
-  "rarity": 2,
-  "sortId": 1077,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorHeat",
-  "id": "StealArmorHeat_4",
-  "maxStack": 1,
-  "price": 121200,
-  "rarity": 3,
-  "sortId": 1078,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmorHeat",
-  "id": "StealArmorHeat_5",
-  "maxStack": 1,
-  "price": 140930,
-  "rarity": 4,
-  "sortId": 1079,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "StealHelmet",
   "id": "StealHelmet",
   "maxStack": 1,
   "price": 31680,
   "rarity": 0,
   "sortId": 1315,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "StealHelmet",
-  "id": "StealHelmet_2",
-  "maxStack": 1,
-  "price": 42000,
-  "rarity": 1,
-  "sortId": 1316,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "StealHelmet",
-  "id": "StealHelmet_3",
-  "maxStack": 1,
-  "price": 51120,
-  "rarity": 2,
-  "sortId": 1317,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "StealHelmet",
-  "id": "StealHelmet_4",
-  "maxStack": 1,
-  "price": 60240,
-  "rarity": 3,
-  "sortId": 1318,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 15
- },
- {
-  "iconName": "StealHelmet",
-  "id": "StealHelmet_5",
-  "maxStack": 1,
-  "price": 69360,
-  "rarity": 4,
-  "sortId": 1319,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 15
@@ -25443,50 +20614,6 @@
   "weight": 15
  },
  {
-  "iconName": "SubmachineGun",
-  "id": "SubmachineGun_2",
-  "maxStack": 1,
-  "price": 37060,
-  "rarity": 1,
-  "sortId": 631,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SubmachineGun",
-  "id": "SubmachineGun_3",
-  "maxStack": 1,
-  "price": 46030,
-  "rarity": 2,
-  "sortId": 632,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SubmachineGun",
-  "id": "SubmachineGun_4",
-  "maxStack": 1,
-  "price": 53710,
-  "rarity": 3,
-  "sortId": 633,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "SubmachineGun",
-  "id": "SubmachineGun_5",
-  "maxStack": 1,
-  "price": 63550,
-  "rarity": 4,
-  "sortId": 634,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
   "iconName": "Sulfur",
   "id": "Sulfur",
   "maxStack": 9999,
@@ -25542,50 +20669,6 @@
   "weight": 10
  },
  {
-  "iconName": "Sword",
-  "id": "Sword_2",
-  "maxStack": 1,
-  "price": 11640,
-  "rarity": 1,
-  "sortId": 141,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Sword",
-  "id": "Sword_3",
-  "maxStack": 1,
-  "price": 14330,
-  "rarity": 2,
-  "sortId": 142,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Sword",
-  "id": "Sword_4",
-  "maxStack": 1,
-  "price": 17930,
-  "rarity": 3,
-  "sortId": 143,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "Sword",
-  "id": "Sword_5",
-  "maxStack": 1,
-  "price": 21820,
-  "rarity": 4,
-  "sortId": 144,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
   "iconName": "TechnologyBook_G1",
   "id": "TechnologyBook_G1",
   "maxStack": 9999,
@@ -25617,28 +20700,6 @@
   "typeA": "Consume",
   "typeB": "ConsumeTechnologyBook",
   "weight": 0
- },
- {
-  "iconName": "Blueprint",
-  "id": "TEST_BossDefeatReward",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 20000,
-  "typeA": "Essential",
-  "typeB": "Essential_BossReward",
-  "weight": 0
- },
- {
-  "iconName": "TEST_CaptureItemModifier",
-  "id": "TEST_CaptureItemModifier",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "CaptureItemModifier",
-  "typeB": "CaptureItemModifier",
-  "weight": 1
  },
  {
   "iconName": "Thermal_Core",
@@ -25735,50 +20796,6 @@
   "price": 1,
   "rarity": 0,
   "sortId": 99999,
-  "typeA": "Consume",
-  "typeB": "ConsumeTreasureMap",
-  "weight": 0
- },
- {
-  "iconName": "TreasureMap01",
-  "id": "TreasureMap02",
-  "maxStack": 9999,
-  "price": 10,
-  "rarity": 1,
-  "sortId": 100000,
-  "typeA": "Consume",
-  "typeB": "ConsumeTreasureMap",
-  "weight": 0
- },
- {
-  "iconName": "TreasureMap01",
-  "id": "TreasureMap03",
-  "maxStack": 9999,
-  "price": 10,
-  "rarity": 2,
-  "sortId": 100001,
-  "typeA": "Consume",
-  "typeB": "ConsumeTreasureMap",
-  "weight": 0
- },
- {
-  "iconName": "TreasureMap01",
-  "id": "TreasureMap04",
-  "maxStack": 9999,
-  "price": 10,
-  "rarity": 3,
-  "sortId": 100002,
-  "typeA": "Consume",
-  "typeB": "ConsumeTreasureMap",
-  "weight": 0
- },
- {
-  "iconName": "TreasureMap01",
-  "id": "TreasureMap05",
-  "maxStack": 9999,
-  "price": 10,
-  "rarity": 4,
-  "sortId": 100003,
   "typeA": "Consume",
   "typeB": "ConsumeTreasureMap",
   "weight": 0
@@ -26092,50 +21109,6 @@
   "weight": 20
  },
  {
-  "iconName": "WidePenetrateShotgun",
-  "id": "WidePenetrateShotgun_2",
-  "maxStack": 1,
-  "price": 3584930,
-  "rarity": 1,
-  "sortId": 446,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "WidePenetrateShotgun",
-  "id": "WidePenetrateShotgun_3",
-  "maxStack": 1,
-  "price": 4257100,
-  "rarity": 2,
-  "sortId": 447,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "WidePenetrateShotgun",
-  "id": "WidePenetrateShotgun_4",
-  "maxStack": 1,
-  "price": 4901180,
-  "rarity": 3,
-  "sortId": 448,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "WidePenetrateShotgun",
-  "id": "WidePenetrateShotgun_5",
-  "maxStack": 1,
-  "price": 5879280,
-  "rarity": 4,
-  "sortId": 449,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
   "iconName": "WidePenetrateShotgunBullet",
   "id": "WidePenetrateShotgunBullet",
   "maxStack": 9999,
@@ -26178,17 +21151,6 @@
   "typeA": "Consume",
   "typeB": "ConsumeOther",
   "weight": 0.025
- },
- {
-  "iconName": "WingGlider",
-  "id": "WingGlider_Test",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 9999,
-  "typeA": "Glider",
-  "typeB": "Glider",
-  "weight": 25
  },
  {
   "iconName": "Wood",
@@ -26488,50 +21450,6 @@
   "weight": 37
  },
  {
-  "iconName": "YakushimaArmor001",
-  "id": "YakushimaArmor001_2",
-  "maxStack": 1,
-  "price": 10800,
-  "rarity": 1,
-  "sortId": 1147,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 37
- },
- {
-  "iconName": "YakushimaArmor001",
-  "id": "YakushimaArmor001_3",
-  "maxStack": 1,
-  "price": 21600,
-  "rarity": 2,
-  "sortId": 1148,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 37
- },
- {
-  "iconName": "YakushimaArmor001",
-  "id": "YakushimaArmor001_4",
-  "maxStack": 1,
-  "price": 43200,
-  "rarity": 3,
-  "sortId": 1149,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 37
- },
- {
-  "iconName": "YakushimaArmor001",
-  "id": "YakushimaArmor001_5",
-  "maxStack": 1,
-  "price": 86400,
-  "rarity": 4,
-  "sortId": 1150,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 37
- },
- {
   "iconName": "YakushimaBlade",
   "id": "YakushimaBlade",
   "maxStack": 1,
@@ -26554,50 +21472,6 @@
   "weight": 10
  },
  {
-  "iconName": "YakushimaBlade002",
-  "id": "YakushimaBlade002_2",
-  "maxStack": 1,
-  "price": 66600,
-  "rarity": 1,
-  "sortId": 870,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade002",
-  "id": "YakushimaBlade002_3",
-  "maxStack": 1,
-  "price": 133200,
-  "rarity": 2,
-  "sortId": 871,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade002",
-  "id": "YakushimaBlade002_4",
-  "maxStack": 1,
-  "price": 266400,
-  "rarity": 3,
-  "sortId": 872,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade002",
-  "id": "YakushimaBlade002_5",
-  "maxStack": 1,
-  "price": 532800,
-  "rarity": 4,
-  "sortId": 873,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
   "iconName": "YakushimaBlade003",
   "id": "YakushimaBlade003",
   "maxStack": 1,
@@ -26609,100 +21483,12 @@
   "weight": 5
  },
  {
-  "iconName": "YakushimaBlade003",
-  "id": "YakushimaBlade003_2",
-  "maxStack": 1,
-  "price": 72600,
-  "rarity": 1,
-  "sortId": 885,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaBlade003",
-  "id": "YakushimaBlade003_3",
-  "maxStack": 1,
-  "price": 141600,
-  "rarity": 2,
-  "sortId": 886,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaBlade003",
-  "id": "YakushimaBlade003_4",
-  "maxStack": 1,
-  "price": 278400,
-  "rarity": 3,
-  "sortId": 887,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaBlade003",
-  "id": "YakushimaBlade003_5",
-  "maxStack": 1,
-  "price": 550800,
-  "rarity": 4,
-  "sortId": 888,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
   "iconName": "YakushimaBlade004",
   "id": "YakushimaBlade004",
   "maxStack": 1,
   "price": 10800,
   "rarity": 0,
   "sortId": 864,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade004",
-  "id": "YakushimaBlade004_2",
-  "maxStack": 1,
-  "price": 16200,
-  "rarity": 1,
-  "sortId": 865,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade004",
-  "id": "YakushimaBlade004_3",
-  "maxStack": 1,
-  "price": 32400,
-  "rarity": 2,
-  "sortId": 866,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade004",
-  "id": "YakushimaBlade004_4",
-  "maxStack": 1,
-  "price": 64800,
-  "rarity": 3,
-  "sortId": 867,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 10
- },
- {
-  "iconName": "YakushimaBlade004",
-  "id": "YakushimaBlade004_5",
-  "maxStack": 1,
-  "price": 129600,
-  "rarity": 4,
-  "sortId": 868,
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 10
@@ -26730,100 +21516,12 @@
   "weight": 15
  },
  {
-  "iconName": "YakushimaGun001",
-  "id": "YakushimaGun001_2",
-  "maxStack": 1,
-  "price": 70200,
-  "rarity": 1,
-  "sortId": 875,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "YakushimaGun001",
-  "id": "YakushimaGun001_3",
-  "maxStack": 1,
-  "price": 138600,
-  "rarity": 2,
-  "sortId": 876,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "YakushimaGun001",
-  "id": "YakushimaGun001_4",
-  "maxStack": 1,
-  "price": 273600,
-  "rarity": 3,
-  "sortId": 877,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "YakushimaGun001",
-  "id": "YakushimaGun001_5",
-  "maxStack": 1,
-  "price": 541800,
-  "rarity": 4,
-  "sortId": 878,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
   "iconName": "YakushimaHeadEquip001",
   "id": "YakushimaHeadEquip001",
   "maxStack": 1,
   "price": 7200,
   "rarity": 0,
   "sortId": 1335,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip001",
-  "id": "YakushimaHeadEquip001_2",
-  "maxStack": 1,
-  "price": 10800,
-  "rarity": 1,
-  "sortId": 1336,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip001",
-  "id": "YakushimaHeadEquip001_3",
-  "maxStack": 1,
-  "price": 21600,
-  "rarity": 2,
-  "sortId": 1337,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip001",
-  "id": "YakushimaHeadEquip001_4",
-  "maxStack": 1,
-  "price": 43200,
-  "rarity": 3,
-  "sortId": 1338,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip001",
-  "id": "YakushimaHeadEquip001_5",
-  "maxStack": 1,
-  "price": 86400,
-  "rarity": 4,
-  "sortId": 1339,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 13
@@ -26840,50 +21538,6 @@
   "weight": 13
  },
  {
-  "iconName": "YakushimaHeadEquip002",
-  "id": "YakushimaHeadEquip002_2",
-  "maxStack": 1,
-  "price": 10800,
-  "rarity": 1,
-  "sortId": 1346,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip002",
-  "id": "YakushimaHeadEquip002_3",
-  "maxStack": 1,
-  "price": 21600,
-  "rarity": 2,
-  "sortId": 1347,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip002",
-  "id": "YakushimaHeadEquip002_4",
-  "maxStack": 1,
-  "price": 43200,
-  "rarity": 3,
-  "sortId": 1348,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip002",
-  "id": "YakushimaHeadEquip002_5",
-  "maxStack": 1,
-  "price": 86400,
-  "rarity": 4,
-  "sortId": 1349,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
   "iconName": "YakushimaHeadEquip003",
   "id": "YakushimaHeadEquip003",
   "maxStack": 1,
@@ -26895,100 +21549,12 @@
   "weight": 13
  },
  {
-  "iconName": "YakushimaHeadEquip003",
-  "id": "YakushimaHeadEquip003_2",
-  "maxStack": 1,
-  "price": 10800,
-  "rarity": 1,
-  "sortId": 1341,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip003",
-  "id": "YakushimaHeadEquip003_3",
-  "maxStack": 1,
-  "price": 21600,
-  "rarity": 2,
-  "sortId": 1342,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip003",
-  "id": "YakushimaHeadEquip003_4",
-  "maxStack": 1,
-  "price": 43200,
-  "rarity": 3,
-  "sortId": 1343,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip003",
-  "id": "YakushimaHeadEquip003_5",
-  "maxStack": 1,
-  "price": 86400,
-  "rarity": 4,
-  "sortId": 1344,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
   "iconName": "YakushimaHeadEquip004",
   "id": "YakushimaHeadEquip004",
   "maxStack": 1,
   "price": 7200,
   "rarity": 0,
   "sortId": 1350,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip004",
-  "id": "YakushimaHeadEquip004_2",
-  "maxStack": 1,
-  "price": 10800,
-  "rarity": 1,
-  "sortId": 1351,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip004",
-  "id": "YakushimaHeadEquip004_3",
-  "maxStack": 1,
-  "price": 21600,
-  "rarity": 2,
-  "sortId": 1352,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip004",
-  "id": "YakushimaHeadEquip004_4",
-  "maxStack": 1,
-  "price": 43200,
-  "rarity": 3,
-  "sortId": 1353,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 13
- },
- {
-  "iconName": "YakushimaHeadEquip004",
-  "id": "YakushimaHeadEquip004_5",
-  "maxStack": 1,
-  "price": 86400,
-  "rarity": 4,
-  "sortId": 1354,
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 13
@@ -27046,83 +21612,6 @@
   "sortId": 879,
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaLantern001",
-  "id": "YakushimaLantern001_2",
-  "maxStack": 1,
-  "price": 72600,
-  "rarity": 1,
-  "sortId": 880,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaLantern001",
-  "id": "YakushimaLantern001_3",
-  "maxStack": 1,
-  "price": 141600,
-  "rarity": 2,
-  "sortId": 881,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaLantern001",
-  "id": "YakushimaLantern001_4",
-  "maxStack": 1,
-  "price": 278400,
-  "rarity": 3,
-  "sortId": 882,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaLantern001",
-  "id": "YakushimaLantern001_5",
-  "maxStack": 1,
-  "price": 550800,
-  "rarity": 4,
-  "sortId": 883,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 5
- },
- {
-  "iconName": "YakushimaParts001",
-  "id": "YakushimaParts001",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 5904,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 0.2
- },
- {
-  "iconName": "YakushimaParts002",
-  "id": "YakushimaParts002",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 5905,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 0.2
- },
- {
-  "iconName": "YakushimaParts003",
-  "id": "YakushimaParts003",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 5506,
-  "typeA": "Material",
-  "typeB": "MaterialIngot",
   "weight": 5
  }
 ]
