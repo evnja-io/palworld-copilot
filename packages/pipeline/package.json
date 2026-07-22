@@ -8,6 +8,7 @@
     "spike:pals": "tsx spike/pals.ts",
     "spike:coords": "tsx spike/coords.ts",
     "spike:save": "tsx spike/record-data.ts",
+    "spike:import": "tsx spike/import-mapping.ts",
     "all": "tsx src/all.ts",
     "verify": "tsx src/verify.ts",
     "icons": "tsx src/icons.ts"
