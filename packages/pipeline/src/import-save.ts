@@ -14,6 +14,10 @@ const sql = neon(process.env.DATABASE_URL);
 const venvPython = new URL("../.venv/bin/python", import.meta.url).pathname;
 if (!existsSync(venvPython)) throw new Error("venv palsav absent — cf. runbook, section saves");
 
+// SERVER_ID guard
+const serverId = process.env.SERVER_ID;
+if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
+
 // 2. Datasets de validation — comparaison case-insensitive (cf. Task 1 :
 // la save contient des variantes de casse comme "Sheepball"/"PALBOX"), mais
 // l'entityId écrit en base est toujours l'ID canonique du dataset.
@@ -113,12 +117,15 @@ for (const sav of savs) {
     const kinds = rows.map((r) => r.kind);
     const ids = rows.map((r) => r.id);
     await sql.transaction([
-      sql.query("delete from save_snapshots where player_guid = $1", [guid]),
+      sql.query("delete from save_snapshots where server_id = $2::uuid and player_guid = $1", [
+        guid,
+        serverId,
+      ]),
       sql.query(
-        `insert into save_snapshots (player_guid, kind, entity_id)
-         select $1, k, e from unnest($2::text[], $3::text[]) as t(k, e)
+        `insert into save_snapshots (server_id, player_guid, kind, entity_id)
+         select $4::uuid, $1, k, e from unnest($2::text[], $3::text[]) as t(k, e)
          on conflict do nothing`,
-        [guid, kinds, ids],
+        [guid, kinds, ids, serverId],
       ),
     ]);
     console.log(`${guid} : ${pals.length} pals, ${techs.length} techs, ${relics.length} effigies (snapshot)`);
@@ -138,16 +145,17 @@ const markersJson = JSON.parse(
 ) as Array<{ id: string; type: string }>;
 const relicIds = markersJson.filter((mk) => mk.type === "relic").map((mk) => mk.id);
 const merged = await sql`
-  insert into progress (user_id, kind, entity_id)
-  select u.id, s.kind, s.entity_id
+  insert into progress (server_id, user_id, kind, entity_id)
+  select s.server_id, m.user_id, s.kind, s.entity_id
   from save_snapshots s
-  join users u on u.pal_player_guid = s.player_guid
-  where s.kind in ('pal_caught', 'tech_unlocked')
+  join server_members m on m.server_id = s.server_id and m.pal_player_guid = s.player_guid
+  where s.server_id = ${serverId}::uuid and s.kind in ('pal_caught', 'tech_unlocked')
   union
-  select u.id, 'marker', 'relic_' || s.entity_id
+  select s.server_id, m.user_id, 'marker', 'relic_' || s.entity_id
   from save_snapshots s
-  join users u on u.pal_player_guid = s.player_guid
-  where s.kind = 'raw:relic' and ('relic_' || s.entity_id) = any(${relicIds}::text[])
+  join server_members m on m.server_id = s.server_id and m.pal_player_guid = s.player_guid
+  where s.server_id = ${serverId}::uuid and s.kind = 'raw:relic'
+    and ('relic_' || s.entity_id) = any(${relicIds}::text[])
   on conflict do nothing
   returning user_id`;
 console.log(`fusion : ${merged.length} nouvelles coches appliquées`);
@@ -155,8 +163,10 @@ console.log(`fusion : ${merged.length} nouvelles coches appliquées`);
 // 6. Récapitulatif des GUIDs non revendiqués
 const unclaimed = await sql`
   select s.player_guid, count(*) as n from save_snapshots s
-  left join users u on u.pal_player_guid = s.player_guid
-  where u.id is null group by s.player_guid`;
+  left join server_members m
+    on m.server_id = s.server_id and m.pal_player_guid = s.player_guid
+  where s.server_id = ${serverId}::uuid and m.user_id is null
+  group by s.player_guid`;
 for (const r of unclaimed) console.log(`non revendiqué : ${r.player_guid} (${r.n} entrées) — page /import`);
 
 // 7. Récapitulatif des échecs — sortie non-zéro si des fichiers ont échoué

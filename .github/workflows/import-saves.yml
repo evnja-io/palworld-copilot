@@ -46,10 +46,12 @@ jobs:
       - name: Import des saves joueurs
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
         run: cd packages/pipeline && node --experimental-strip-types src/import-save.ts /tmp/saves
 
       - name: Pseudos in-game (Level.sav — non bloquant)
         continue-on-error: true
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
         run: cd packages/pipeline && node --experimental-strip-types src/extract-players.ts /tmp/saves
