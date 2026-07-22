@@ -14,7 +14,7 @@ const sql = neon(process.env.DATABASE_URL);
 const venvPython = new URL("../.venv/bin/python", import.meta.url).pathname;
 if (!existsSync(venvPython)) throw new Error("venv palsav absent — cf. runbook, section saves");
 
-// SERVER_ID guard
+// Serveur cible obligatoire (phase 1 : uuid du serveur legacy)
 const serverId = process.env.SERVER_ID;
 if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
 
