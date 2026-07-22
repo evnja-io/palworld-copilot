@@ -10,6 +10,7 @@ const NAME_SOURCES: Array<[RegExp, string, string]> = [
   [/DT_SkillNameText/, "PARTNERSKILL_", "partnerskill:"],
   [/DT_TechnologyNameText/, "NAME_", "tech:"],
   [/DT_MapObjectNameText/, "MAPOBJECT_NAME_", "building:"],
+  [/DT_MapRespawnPointInfoText/, "", "ft:"],
 ];
 const DESC_SOURCES: Array<[RegExp, string, string]> = [
   [/DT_ItemDescriptionText/, "ITEM_DESC_", "item:"],

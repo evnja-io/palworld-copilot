@@ -6,6 +6,7 @@ await import("./transform/skills.js");
 await import("./transform/items.js");
 await import("./transform/tech.js");
 await import("./transform/buildings.js");
+await import("./transform/markers.js");
 await import("./search-index.js");
 await import("./verify.js");
 await import("./data-version.js");

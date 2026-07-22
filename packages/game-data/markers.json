@@ -1,0 +1,3449 @@
+[
+ {
+  "id": "alpha_1_10_plain_F_Boss_FairyDragon",
+  "meta": {
+   "level": 11,
+   "palId": "WeaselDragon"
+  },
+  "px": 5435.7,
+  "py": 3758.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_5_2_island_iceblock_FBOSS_1",
+  "meta": {
+   "level": 60,
+   "palId": "PoseidonOrca"
+  },
+  "px": 5348,
+  "py": 986.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_1",
+  "meta": {
+   "level": 27,
+   "palId": "VioletFairy"
+  },
+  "px": 4938.6,
+  "py": 3362.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_2",
+  "meta": {
+   "level": 28,
+   "palId": "FoxMage"
+  },
+  "px": 5406.8,
+  "py": 3254.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_3",
+  "meta": {
+   "level": 35,
+   "palId": "GrassRabbitMan"
+  },
+  "px": 5728.6,
+  "py": 2650.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_4",
+  "meta": {
+   "level": 35,
+   "palId": "Mutant"
+  },
+  "px": 5324.2,
+  "py": 2806.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_5",
+  "meta": {
+   "level": 40,
+   "palId": "WhiteMoth"
+  },
+  "px": 5642.6,
+  "py": 2496.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_6",
+  "meta": {
+   "level": 39,
+   "palId": "QueenBee"
+  },
+  "px": 5413.1,
+  "py": 2893.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_forest_FBOSS_7",
+  "meta": {
+   "level": 30,
+   "palId": "FairyDragon"
+  },
+  "px": 5102,
+  "py": 3411.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_1",
+  "meta": {
+   "level": 38,
+   "palId": "GrassMammoth"
+  },
+  "px": 5477.9,
+  "py": 3914.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_10",
+  "meta": {
+   "level": 30,
+   "palId": "Manticore"
+  },
+  "px": 4325.7,
+  "py": 3014.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_13",
+  "meta": {
+   "level": 55,
+   "palId": "Umihebi"
+  },
+  "px": 5896.8,
+  "py": 2896.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_14",
+  "meta": {
+   "level": 55,
+   "palId": "Anubis"
+  },
+  "px": 4640.9,
+  "py": 2920.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_15",
+  "meta": {
+   "level": 15,
+   "palId": "Kitsunebi_Ice"
+  },
+  "px": 3923.5,
+  "py": 2818.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_16",
+  "meta": {
+   "level": 25,
+   "palId": "FengyunDeeper"
+  },
+  "px": 4319.9,
+  "py": 3862.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_18",
+  "meta": {
+   "level": 17,
+   "palId": "NaughtyCat"
+  },
+  "px": 5911.4,
+  "py": 3313.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_2",
+  "meta": {
+   "level": 23,
+   "palId": "KingAlpaca"
+  },
+  "px": 5117.2,
+  "py": 3869.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_20",
+  "meta": {
+   "level": 15,
+   "palId": "IceFox"
+  },
+  "px": 5615.8,
+  "py": 3536.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_21",
+  "meta": {
+   "level": 11,
+   "palId": "MopKing"
+  },
+  "px": 4399.9,
+  "py": 4213.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_22",
+  "meta": {
+   "level": 18,
+   "palId": "HawkBird"
+  },
+  "px": 4272.7,
+  "py": 2857,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_23",
+  "meta": {
+   "level": 31,
+   "palId": "Kirin"
+  },
+  "px": 4685.9,
+  "py": 4083,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_24",
+  "meta": {
+   "level": 23,
+   "palId": "SakuraSaurus"
+  },
+  "px": 4413.3,
+  "py": 4411.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_25",
+  "meta": {
+   "level": 11,
+   "palId": "PlantSlime"
+  },
+  "px": 4696.3,
+  "py": 4305.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_26",
+  "meta": {
+   "level": 31,
+   "palId": "GrassPanda_Electric"
+  },
+  "px": 6151.5,
+  "py": 3145.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_27",
+  "meta": {
+   "level": 14,
+   "palId": "LazyCatfish"
+  },
+  "px": 4185.4,
+  "py": 2665.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_28",
+  "meta": {
+   "level": 23,
+   "palId": "BerryGoat_Dark"
+  },
+  "px": 4608.4,
+  "py": 4386.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_29",
+  "meta": {
+   "level": 38,
+   "palId": "Yeti_Grass"
+  },
+  "px": 6152.6,
+  "py": 2808.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_30",
+  "meta": {
+   "level": 35,
+   "palId": "PurpleSpider"
+  },
+  "px": 4098.1,
+  "py": 3328.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_31",
+  "meta": {
+   "level": 40,
+   "palId": "BlueDragon"
+  },
+  "px": 4532.3,
+  "py": 3366.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_4",
+  "meta": {
+   "level": 37,
+   "palId": "ThunderBird"
+  },
+  "px": 5234.5,
+  "py": 2615.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_6",
+  "meta": {
+   "level": 25,
+   "palId": "Ronin"
+  },
+  "px": 4463.1,
+  "py": 3574,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_9",
+  "meta": {
+   "level": 15,
+   "palId": "CaptainPenguin"
+  },
+  "px": 5283.4,
+  "py": 3588,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_1_grass_FBOSS_FlameBuffalo",
+  "meta": {
+   "level": 15,
+   "palId": "FlameBuffalo"
+  },
+  "px": 4686.7,
+  "py": 3948.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_2_dessert_FBOSS_1",
+  "meta": {
+   "level": 45,
+   "palId": "Suzaku"
+  },
+  "px": 5833.4,
+  "py": 1423.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_2_dessert_FBOSS_2",
+  "meta": {
+   "level": 60,
+   "palId": "SaintCentaur"
+  },
+  "px": 6129.4,
+  "py": 915.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_2_dessert_FBOSS_3",
+  "meta": {
+   "level": 44,
+   "palId": "DarkScorpion"
+  },
+  "px": 5896.7,
+  "py": 1282.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_2_dessert_FBOSS_5",
+  "meta": {
+   "level": 55,
+   "palId": "CubeTurtle"
+  },
+  "px": 6117.3,
+  "py": 1690.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_2_dessert_FBOSS_FlowerDinosaur_Electric",
+  "meta": {
+   "level": 47,
+   "palId": "FlowerDinosaur_Electric"
+  },
+  "px": 5805.4,
+  "py": 2236.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_3_snow_FBOSS_1",
+  "meta": {
+   "level": 60,
+   "palId": "IceHorse"
+  },
+  "px": 4062.9,
+  "py": 1355.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_3_volcano_FBOSS_2",
+  "meta": {
+   "level": 50,
+   "palId": "VolcanicMonster"
+  },
+  "px": 3568.3,
+  "py": 3799.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_3_volcano_FBOSS_3",
+  "meta": {
+   "level": 52,
+   "palId": "KingBahamut"
+  },
+  "px": 3078.6,
+  "py": 3535.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_4_Sakurajima_FBOSS_2",
+  "meta": {
+   "level": 55,
+   "palId": "WingGolem"
+  },
+  "px": 3471.9,
+  "py": 3325.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_5_Yamijima_FBOSS_11",
+  "meta": {
+   "level": 63,
+   "palId": "BlueberryFairy"
+  },
+  "px": 1473.9,
+  "py": 5185.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_5_Yamijima_FBOSS_16",
+  "meta": {
+   "level": 60,
+   "palId": "CubeTurtle_Neutral"
+  },
+  "px": 2183.5,
+  "py": 6099.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_5_Yamijima_FBOSS_8",
+  "meta": {
+   "level": 60,
+   "palId": "BlackPuppy"
+  },
+  "px": 2709.8,
+  "py": 6480.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_5_Yamijima_FBOSS_9",
+  "meta": {
+   "level": 60,
+   "palId": "GhostRabbit"
+  },
+  "px": 2594,
+  "py": 5305.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_81_6_Ocean_FBOSS_1",
+  "meta": {
+   "level": 55,
+   "palId": "IceNarwhal"
+  },
+  "px": 4524,
+  "py": 491.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Believer_CrossBow",
+  "meta": {
+   "level": 23,
+   "palId": "None"
+  },
+  "px": 4958,
+  "py": 2903.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Believer_CrossBow",
+  "meta": {
+   "level": 23,
+   "palId": "None"
+  },
+  "px": 4958,
+  "py": 2903.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Believer_Fat_GiantClub",
+  "meta": {
+   "level": 30,
+   "palId": "None"
+  },
+  "px": 5184.6,
+  "py": 2425.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Believer_Fat_GiantClub",
+  "meta": {
+   "level": 30,
+   "palId": "None"
+  },
+  "px": 5184.6,
+  "py": 2425.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_DarkTrader",
+  "meta": {
+   "level": 59,
+   "palId": "None"
+  },
+  "px": 1780,
+  "py": 5742.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_DarkTrader",
+  "meta": {
+   "level": 59,
+   "palId": "None"
+  },
+  "px": 1780,
+  "py": 5742.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_DesertPeople",
+  "meta": {
+   "level": 37,
+   "palId": "None"
+  },
+  "px": 6059.2,
+  "py": 1144.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_DesertPeople",
+  "meta": {
+   "level": 37,
+   "palId": "None"
+  },
+  "px": 6059.2,
+  "py": 1144.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People",
+  "meta": {
+   "level": 38,
+   "palId": "None"
+  },
+  "px": 3640.1,
+  "py": 4635,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People",
+  "meta": {
+   "level": 38,
+   "palId": "None"
+  },
+  "px": 3640.1,
+  "py": 4635,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People02",
+  "meta": {
+   "level": 16,
+   "palId": "None"
+  },
+  "px": 4298,
+  "py": 3696.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People02",
+  "meta": {
+   "level": 16,
+   "palId": "None"
+  },
+  "px": 4298,
+  "py": 3696.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People03",
+  "meta": {
+   "level": 15,
+   "palId": "None"
+  },
+  "px": 4984.3,
+  "py": 3676.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_People03",
+  "meta": {
+   "level": 15,
+   "palId": "None"
+  },
+  "px": 4984.3,
+  "py": 3676.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier",
+  "meta": {
+   "level": 19,
+   "palId": "None"
+  },
+  "px": 4151.8,
+  "py": 2978.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier",
+  "meta": {
+   "level": 19,
+   "palId": "None"
+  },
+  "px": 4151.8,
+  "py": 2978.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier02",
+  "meta": {
+   "level": 56,
+   "palId": "None"
+  },
+  "px": 2796.9,
+  "py": 5998.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier02",
+  "meta": {
+   "level": 56,
+   "palId": "None"
+  },
+  "px": 2796.9,
+  "py": 5998.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier03",
+  "meta": {
+   "level": 39,
+   "palId": "None"
+  },
+  "px": 3453.1,
+  "py": 3284.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier03",
+  "meta": {
+   "level": 39,
+   "palId": "None"
+  },
+  "px": 3453.1,
+  "py": 3284.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier04",
+  "meta": {
+   "level": 52,
+   "palId": "None"
+  },
+  "px": 3631.1,
+  "py": 2404.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Female_Soldier04",
+  "meta": {
+   "level": 52,
+   "palId": "None"
+  },
+  "px": 3631.1,
+  "py": 2404.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_FireCult_FlameThrower",
+  "meta": {
+   "level": 41,
+   "palId": "None"
+  },
+  "px": 3867.8,
+  "py": 3849.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_FireCult_FlameThrower",
+  "meta": {
+   "level": 41,
+   "palId": "None"
+  },
+  "px": 3867.8,
+  "py": 3849.9,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Hunter_Fat_GatlingGun",
+  "meta": {
+   "level": 20,
+   "palId": "None"
+  },
+  "px": 4300.7,
+  "py": 3345.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Hunter_Fat_GatlingGun",
+  "meta": {
+   "level": 20,
+   "palId": "None"
+  },
+  "px": 4300.7,
+  "py": 3345.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Hunter_Rifle",
+  "meta": {
+   "level": 12,
+   "palId": "None"
+  },
+  "px": 5122.8,
+  "py": 4005.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Hunter_Rifle",
+  "meta": {
+   "level": 12,
+   "palId": "None"
+  },
+  "px": 5122.8,
+  "py": 4005.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_DesertPeople",
+  "meta": {
+   "level": 36,
+   "palId": "None"
+  },
+  "px": 6369.7,
+  "py": 2329.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_DesertPeople",
+  "meta": {
+   "level": 36,
+   "palId": "None"
+  },
+  "px": 6369.7,
+  "py": 2329.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_NinjaElite",
+  "meta": {
+   "level": 53,
+   "palId": "None"
+  },
+  "px": 3240.7,
+  "py": 2078.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_NinjaElite",
+  "meta": {
+   "level": 53,
+   "palId": "None"
+  },
+  "px": 3240.7,
+  "py": 2078.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People",
+  "meta": {
+   "level": 26,
+   "palId": "None"
+  },
+  "px": 5894,
+  "py": 2691.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People",
+  "meta": {
+   "level": 26,
+   "palId": "None"
+  },
+  "px": 5894,
+  "py": 2691.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People02",
+  "meta": {
+   "level": 43,
+   "palId": "None"
+  },
+  "px": 4482.7,
+  "py": 1427.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People02",
+  "meta": {
+   "level": 43,
+   "palId": "None"
+  },
+  "px": 4482.7,
+  "py": 1427.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People03",
+  "meta": {
+   "level": 10,
+   "palId": "None"
+  },
+  "px": 4936.1,
+  "py": 3872.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People03",
+  "meta": {
+   "level": 10,
+   "palId": "None"
+  },
+  "px": 4936.1,
+  "py": 3872.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People2",
+  "meta": {
+   "level": 26,
+   "palId": "None"
+  },
+  "px": 5893,
+  "py": 2680.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_People2",
+  "meta": {
+   "level": 26,
+   "palId": "None"
+  },
+  "px": 5893,
+  "py": 2680.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier",
+  "meta": {
+   "level": 15,
+   "palId": "None"
+  },
+  "px": 4236.3,
+  "py": 4289.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier",
+  "meta": {
+   "level": 15,
+   "palId": "None"
+  },
+  "px": 4236.3,
+  "py": 4289.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier02",
+  "meta": {
+   "level": 23,
+   "palId": "None"
+  },
+  "px": 5664.9,
+  "py": 3242.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier02",
+  "meta": {
+   "level": 23,
+   "palId": "None"
+  },
+  "px": 5664.9,
+  "py": 3242.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier03",
+  "meta": {
+   "level": 49,
+   "palId": "None"
+  },
+  "px": 4048.9,
+  "py": 1852.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier03",
+  "meta": {
+   "level": 49,
+   "palId": "None"
+  },
+  "px": 4048.9,
+  "py": 1852.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier04",
+  "meta": {
+   "level": 21,
+   "palId": "None"
+  },
+  "px": 4814.1,
+  "py": 3202.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Soldier04",
+  "meta": {
+   "level": 21,
+   "palId": "None"
+  },
+  "px": 4814.1,
+  "py": 3202.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader01",
+  "meta": {
+   "level": 42,
+   "palId": "None"
+  },
+  "px": 4753.8,
+  "py": 2301.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader01",
+  "meta": {
+   "level": 42,
+   "palId": "None"
+  },
+  "px": 4753.8,
+  "py": 2301.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader02",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 1894.3,
+  "py": 7102.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader02",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 1894.3,
+  "py": 7102.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader03",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 2188.4,
+  "py": 5020.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Male_Trader03",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 2188.4,
+  "py": 5020.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Ninja",
+  "meta": {
+   "level": 28,
+   "palId": "None"
+  },
+  "px": 5409.7,
+  "py": 2680.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Ninja",
+  "meta": {
+   "level": 28,
+   "palId": "None"
+  },
+  "px": 5409.7,
+  "py": 2680.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Police_Old",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 1947.8,
+  "py": 5854.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Police_Old",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 1947.8,
+  "py": 5854.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Police_Rifle",
+  "meta": {
+   "level": 40,
+   "palId": "None"
+  },
+  "px": 5819.1,
+  "py": 1716.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Police_Rifle",
+  "meta": {
+   "level": 40,
+   "palId": "None"
+  },
+  "px": 5819.1,
+  "py": 1716.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Scientist_LaserRifle",
+  "meta": {
+   "level": 45,
+   "palId": "None"
+  },
+  "px": 4964.9,
+  "py": 1918.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Scientist_LaserRifle",
+  "meta": {
+   "level": 45,
+   "palId": "None"
+  },
+  "px": 4964.9,
+  "py": 1918.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Viking",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 3069.8,
+  "py": 5276.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_Viking",
+  "meta": {
+   "level": 57,
+   "palId": "None"
+  },
+  "px": 3069.8,
+  "py": 5276.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_VikingElite",
+  "meta": {
+   "level": 58,
+   "palId": "None"
+  },
+  "px": 1392.9,
+  "py": 6525.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_BOSS_VikingElite",
+  "meta": {
+   "level": 58,
+   "palId": "None"
+  },
+  "px": 1392.9,
+  "py": 6525.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_desertisland_1_FBOSS",
+  "meta": {
+   "level": 70,
+   "palId": "ScorpionMan_Electric"
+  },
+  "px": 1582.5,
+  "py": 4262.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_desertisland_2_FBOSS",
+  "meta": {
+   "level": 40,
+   "palId": "CactusDoll"
+  },
+  "px": 6112.4,
+  "py": 4520.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_REGION_Oilrig_1",
+  "meta": {
+   "level": 55,
+   "palId": "None"
+  },
+  "px": 6496.9,
+  "py": 3791.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_REGION_Oilrig_2",
+  "meta": {
+   "level": 30,
+   "palId": "None"
+  },
+  "px": 5408.5,
+  "py": 3392.2,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_REGION_Oilrig_3",
+  "meta": {
+   "level": 60,
+   "palId": "None"
+  },
+  "px": 501.6,
+  "py": 6438.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_remainsIsland_1_GrassGolem_FBOSS",
+  "meta": {
+   "level": 55,
+   "palId": "GrassGolem"
+  },
+  "px": 7348.5,
+  "py": 2931.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_remainsIsland_2_GrassGolem_Dark_FBOSS",
+  "meta": {
+   "level": 70,
+   "palId": "GrassGolem_Dark"
+  },
+  "px": 596.2,
+  "py": 5133.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sakura_purple_D_LilyQueen",
+  "meta": {
+   "level": 58,
+   "palId": "LilyQueen"
+  },
+  "px": 3350,
+  "py": 1893,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sakura_purple_D_LilyQueen_Dark",
+  "meta": {
+   "level": 58,
+   "palId": "LilyQueen_Dark"
+  },
+  "px": 3359.5,
+  "py": 1886.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sakura_red_B_BOSS",
+  "meta": {
+   "level": 55,
+   "palId": "DarkScorpion_Ground"
+  },
+  "px": 3480.3,
+  "py": 1853.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sanctuary_1_forest_FBOSS",
+  "meta": {
+   "level": 30,
+   "palId": "ElecPanda"
+  },
+  "px": 5133.9,
+  "py": 4483.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sanctuary_2_volcano_FBOSS",
+  "meta": {
+   "level": 55,
+   "palId": "BlackMetalDragon"
+  },
+  "px": 3202.2,
+  "py": 2962.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_sanctuary_3_dessert_FBOSS",
+  "meta": {
+   "level": 65,
+   "palId": "IceHorse_Dark"
+  },
+  "px": 6775.7,
+  "py": 995.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_04_B_highland_FBOSS_1",
+  "meta": {
+   "level": 70,
+   "palId": "JetDragon"
+  },
+  "px": 3554.1,
+  "py": 6131,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_06_C_lotsulake_FBOSS_1",
+  "meta": {
+   "level": 69,
+   "palId": "LotusDragon"
+  },
+  "px": 3459.9,
+  "py": 6509.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_07_G_mountain_FBOSS_1",
+  "meta": {
+   "level": 68,
+   "palId": "FoxExorcist"
+  },
+  "px": 4356.7,
+  "py": 6617.5,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_07_G_mountain_FBOSS_2",
+  "meta": {
+   "level": 67,
+   "palId": "ThunderFluffyBird"
+  },
+  "px": 4190.7,
+  "py": 6624.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_09_D_forest_FBOSS_2",
+  "meta": {
+   "level": 66,
+   "palId": "MoonChild"
+  },
+  "px": 4387,
+  "py": 6346.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_10_D_swamp_FBOSS_1",
+  "meta": {
+   "level": 66,
+   "palId": "ElecLizard"
+  },
+  "px": 4035.8,
+  "py": 6195.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_11_E_meadow_FBOSS_1",
+  "meta": {
+   "level": 65,
+   "palId": "ElecSnail"
+  },
+  "px": 4033,
+  "py": 6342.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_skyisland_8_15_1_lake_FBOSS_1",
+  "meta": {
+   "level": 69,
+   "palId": "GhostDragon"
+  },
+  "px": 3721,
+  "py": 6620,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_snow_orange_I_BOSS",
+  "meta": {
+   "level": 46,
+   "palId": "KingAlpaca_Ice"
+  },
+  "px": 3990,
+  "py": 1753.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_volcanoiskand_1_FBOSS",
+  "meta": {
+   "level": 70,
+   "palId": "VolcanoDragon"
+  },
+  "px": 2069.3,
+  "py": 7814,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_volcanoiskand_2_FBOSS",
+  "meta": {
+   "level": 50,
+   "palId": "RockBeast"
+  },
+  "px": 7113.1,
+  "py": 1465.6,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_beach_purple_BOSS",
+  "meta": {
+   "level": 60,
+   "palId": "RaijinDaughter_Water"
+  },
+  "px": 1874.9,
+  "py": 4892.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_forest_pink_D_WhiteDeer",
+  "meta": {
+   "level": 65,
+   "palId": "WhiteDeer"
+  },
+  "px": 2486,
+  "py": 5715.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_forest_purple_A_BOSS",
+  "meta": {
+   "level": 63,
+   "palId": "GoldenHorse"
+  },
+  "px": 2550.6,
+  "py": 6338.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_forest_purple_A_BOSS_2",
+  "meta": {
+   "level": 63,
+   "palId": "NightBlueHorse"
+  },
+  "px": 2673.6,
+  "py": 6030,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_forest_purple_C_BOSS",
+  "meta": {
+   "level": 64,
+   "palId": "HerculesBeetle_Ground"
+  },
+  "px": 2346.5,
+  "py": 5881.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_IceLand_pink_A_BOSS",
+  "meta": {
+   "level": 66,
+   "palId": "Werewolf_Ice"
+  },
+  "px": 2015.5,
+  "py": 6343.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_IceLand_pink_D_BOSS",
+  "meta": {
+   "level": 66,
+   "palId": "Horus_Water"
+  },
+  "px": 1602.7,
+  "py": 6877.4,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_IceLand_pink_F_BOSS",
+  "meta": {
+   "level": 66,
+   "palId": "BlueThunderHorse"
+  },
+  "px": 2054.9,
+  "py": 7001,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_plateau_pink_F_BOSS",
+  "meta": {
+   "level": 65,
+   "palId": "AmaterasuWolf_Dark"
+  },
+  "px": 2791.1,
+  "py": 6065.1,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_plateau_pink_G_BOSS_2",
+  "meta": {
+   "level": 65,
+   "palId": "GrimGirl"
+  },
+  "px": 2191.2,
+  "py": 6449.8,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_plateau_purple_BOSS",
+  "meta": {
+   "level": 60,
+   "palId": "BadCatgirl"
+  },
+  "px": 2604,
+  "py": 5054.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_plateau_purple_BOSS_2",
+  "meta": {
+   "level": 62,
+   "palId": "WhiteShieldDragon"
+  },
+  "px": 2434.9,
+  "py": 5327.7,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_plateau_purple_C_BOSS",
+  "meta": {
+   "level": 60,
+   "palId": "FengyunDeeper_Electric"
+  },
+  "px": 2764.9,
+  "py": 5647.3,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_rock_pink_E_BOSS",
+  "meta": {
+   "level": 62,
+   "palId": "WhiteTiger_Ground"
+  },
+  "px": 1655.4,
+  "py": 6053,
+  "type": "alpha"
+ },
+ {
+  "id": "alpha_yamijima_rock_purple_BOSS",
+  "meta": {
+   "level": 60,
+   "palId": "MysteryMask"
+  },
+  "px": 3153.3,
+  "py": 5086.4,
+  "type": "alpha"
+ },
+ {
+  "id": "ft_01acca6e4bdaa68220821fb05ab54e4d",
+  "nameId": "FTPoint7",
+  "px": 2905.2,
+  "py": 4140.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_04cb216b487ad789c47e2dba08b0b49f",
+  "nameId": "FTPoint113",
+  "px": 5209,
+  "py": 1582.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_0994c20a46b5522fe17090973c3c5452",
+  "nameId": "FootOfWorldTree",
+  "px": 2813.6,
+  "py": 888.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_0c0af9f34c0491bcad80b1bf355b9a98",
+  "nameId": "WatchTower_11",
+  "px": 4177.3,
+  "py": 3075.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_0ebf6f3d441aca707517b9b7baa6590d",
+  "nameId": "SkyIsland_E",
+  "px": 4145,
+  "py": 6333.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_10f777fb4b9bfa0cad790887d87ddbc2",
+  "nameId": "FTPoint71",
+  "px": 2884.9,
+  "py": 4823.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_11e3e3c44f040b34e3809cb69cd87435",
+  "nameId": "WatchTower_1",
+  "px": 4952.9,
+  "py": 3942.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_15314be94e2fb8d018d5749be9a318f0",
+  "nameId": "FTPoint41",
+  "px": 4809.1,
+  "py": 3381.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_15bd61d9481ee7f63cb32bb4e10a05ca",
+  "nameId": "FTPoint91",
+  "px": 4403.9,
+  "py": 2718.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_16c7164c43e2b96bedcc6696e2e592f7",
+  "nameId": "FTPoint31",
+  "px": 4950.6,
+  "py": 3433.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_1749fbb34126ab7711670481717c9fec",
+  "nameId": "FTPoint68",
+  "px": 3650.2,
+  "py": 2122.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_1bdeaba240b1699541c17f83e59e61df",
+  "nameId": "FTPoint37",
+  "px": 5422.4,
+  "py": 2560.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_20b16780488a8f23a80502bc608a0192",
+  "nameId": "FTPoint111",
+  "px": 3178.5,
+  "py": 4322.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_211bcb174b47c566c6f92e9ceb999f98",
+  "nameId": "FTPoint114",
+  "px": 3937.7,
+  "py": 1366.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_22095bfa48a46172f8d154b2ebeb7493",
+  "nameId": "FTPoint18",
+  "px": 4370.3,
+  "py": 1398.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_23b9e99c4a454b99220af7b4a58fd8de",
+  "nameId": "FTPoint25",
+  "px": 4407.6,
+  "py": 3820.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_23f4d1cb454d1e23f252c29447f5a384",
+  "nameId": "FTPoint81",
+  "px": 2473.4,
+  "py": 5210.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_26f321b44481bc01c5174d9d38409597",
+  "nameId": "SkyIsland_D",
+  "px": 3746.9,
+  "py": 6259,
+  "type": "ft"
+ },
+ {
+  "id": "ft_27508f284b175c5c2b9bfc85ad773e4f",
+  "nameId": "FTPoint88",
+  "px": 2688.1,
+  "py": 3158.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_28d514e74b51fd9eb078a891db0787c2",
+  "nameId": "FTPoint32",
+  "px": 5042.5,
+  "py": 2923.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2913e38e4924f762af9b129303898a31",
+  "nameId": "FTPoint106",
+  "px": 5823.6,
+  "py": 966.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2a2b744b41ac79964dae6b89cac51fc3",
+  "nameId": "FTPoint17",
+  "px": 4727.6,
+  "py": 1930.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2bc5e46049e69d3549cfb58948be3288",
+  "nameId": "FTPoint11",
+  "px": 5719.8,
+  "py": 2260.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2de1702048a1d4a82126168c49be51a9",
+  "nameId": "FTPoint39",
+  "px": 5593.3,
+  "py": 2980.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2ec07acc4505cb726de38a84246ca999",
+  "nameId": "FTPoint4",
+  "px": 3957.1,
+  "py": 4317.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2ee8acf447c0cfc2c3c11e948e691448",
+  "nameId": "FTPoint86",
+  "px": 5349.2,
+  "py": 1024.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_2f3a56da4022eb1e43d3439ecee2aa2c",
+  "nameId": "FTPoint108",
+  "px": 5504,
+  "py": 1907.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_31078a16494a996f94dc13828638ead4",
+  "nameId": "New_SmallIsland01",
+  "px": 7426.1,
+  "py": 2841.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_328bcac94e01988d944c4f85d49e457c",
+  "nameId": "WatchTower_17",
+  "px": 2495.1,
+  "py": 6164,
+  "type": "ft"
+ },
+ {
+  "id": "ft_33a82fd24431633f5738f8ae02ffac42",
+  "nameId": "New_SmallIsland05",
+  "px": 686.8,
+  "py": 5188.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_341551f747d44fa84db87f8c8d2dcb48",
+  "nameId": "FTPoint116",
+  "px": 3115.3,
+  "py": 2224.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_3697999c458bf8a3c7973382969fbdf9",
+  "nameId": "FTPoint12",
+  "px": 5911.5,
+  "py": 1774.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_37878f614b4eb008307dbbbdc7b79505",
+  "nameId": "FTPoint95",
+  "px": 4530.2,
+  "py": 3735.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_3a0f123947be045bc415c6b061a5285a",
+  "nameId": "FTPoint44",
+  "px": 4303.5,
+  "py": 3079,
+  "type": "ft"
+ },
+ {
+  "id": "ft_3a84a3dd43c34b936ce6f18842a6fe1d",
+  "nameId": "FTPoint80",
+  "px": 3122.1,
+  "py": 5772,
+  "type": "ft"
+ },
+ {
+  "id": "ft_3bf1495e406ad5f437da5aa2134954a2",
+  "nameId": "WatchTower_15",
+  "px": 3195.4,
+  "py": 4465.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_3e8e504b4a3975fd3862e1bc85a5d4f6",
+  "nameId": "FTPoint53",
+  "px": 4800.2,
+  "py": 4104.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_41727100495d21dc905d309c53989914",
+  "nameId": "FTPoint28",
+  "px": 5458,
+  "py": 3686.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_41e36d9a4b2ba79a3ad1b7b83b16f77d",
+  "nameId": "FTPoint49",
+  "px": 3580.1,
+  "py": 2751.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4618840b4fe6381fc6982aa5282f9614",
+  "nameId": "FTPoint126",
+  "px": 1870.3,
+  "py": 6555.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4667d69047622bf7a9ffd788d24b6131",
+  "nameId": "FTPoint97",
+  "px": 6079.7,
+  "py": 2653.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4669582d4081bf550afb66a05d043a3d",
+  "nameId": "FTPoint13",
+  "px": 6356.7,
+  "py": 1311.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_479a228c4032aaf144b3808e753e1690",
+  "nameId": "WatchTower_21",
+  "px": 2342.6,
+  "py": 5561.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_49c3516d459f15c70abee88cd7f4d331",
+  "nameId": "FTPoint67",
+  "px": 3427.4,
+  "py": 2120.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4c1930b54689c3825400f6b3954fc07b",
+  "nameId": "FTPoint121",
+  "px": 1986.7,
+  "py": 5658,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4c204c3842eab210a7a9da9d2cf9cbbe",
+  "nameId": "WatchTower_10",
+  "px": 4554.3,
+  "py": 4396.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4ccf456a440c6cd5f2347aaa3e163f21",
+  "nameId": "FTPoint63",
+  "px": 6619.7,
+  "py": 2638.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4ce584574e74956a7f94d68d846f931d",
+  "nameId": "New_SmallIsland03",
+  "px": 6148.8,
+  "py": 4525.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4d2f204549ab656ca1ea4b8e39c484f3",
+  "nameId": "FTPoint36",
+  "px": 5235.8,
+  "py": 2684.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4da12cd449aa1a3db7c6cabf9d6ea90d",
+  "nameId": "FTPoint104",
+  "px": 6360.5,
+  "py": 2572.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_4db2ff944b1e545f41fbc6af86bebeb5",
+  "nameId": "FTPoint109",
+  "px": 3760.8,
+  "py": 3440.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_513e166044565a0bd3360f94142577e8",
+  "nameId": "FTPoint56",
+  "px": 6104.9,
+  "py": 3569.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_52e1e065410f78af13b18cb1136ec8d6",
+  "nameId": "FTPoint89",
+  "px": 6570.7,
+  "py": 3094.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_5669e36645c97ee9f38d308738ed30a7",
+  "nameId": "FTPoint87",
+  "px": 4780.3,
+  "py": 5130.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_58a29b814e069d61ec75b1a6e9658fc1",
+  "nameId": "WatchTower_2",
+  "px": 6317.5,
+  "py": 3063.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_596996b948716d3fd2283c8b5c6e829c",
+  "nameId": "FTPoint52",
+  "px": 4732.4,
+  "py": 4520.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_5970e8e648d2a83afdff7c9151d9bef5",
+  "nameId": "FTPoint3",
+  "px": 3446.7,
+  "py": 4053.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_59aabd184966fe16e9ba8ea0bd0efded",
+  "nameId": "FTPoint118",
+  "px": 2405.3,
+  "py": 4856.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_5f426b49469368b0c131d3a6db8f7831",
+  "nameId": "FTPoint5",
+  "px": 3745,
+  "py": 4608.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_5fa6eb494384e4134baa589f02a580dc",
+  "nameId": "WatchTower_20",
+  "px": 2092,
+  "py": 6409.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_603ed0cd4cfb9afdc9e11f805594cce5",
+  "nameId": "FTPoint45",
+  "px": 5294.4,
+  "py": 3771.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_618f02c546f191912d42398685a2bba2",
+  "nameId": "FTPoint112",
+  "px": 4066.8,
+  "py": 3680.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6231802d40c81c00445379ae238d9f90",
+  "nameId": "FTPoint57",
+  "px": 6411.1,
+  "py": 2940.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6282fe1e4029edcdb14135aa4c171e4c",
+  "nameId": "FTPoint22",
+  "px": 5151.7,
+  "py": 3754.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_65b10bb14abda9c2109167b21901d195",
+  "nameId": "FTPoint9",
+  "px": 6395,
+  "py": 1807.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6948b7914c8d1701db7f4081e4d970e5",
+  "nameId": "WatchTower_18",
+  "px": 2916.8,
+  "py": 5521.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_69a3b9e64018ba4c158bdda7cd713463",
+  "nameId": "FTPoint124",
+  "px": 1506.6,
+  "py": 6012.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6b05b93c445473b5a9597a90cebff27b",
+  "nameId": "FTPoint79",
+  "px": 1360.2,
+  "py": 5315.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6d227cd3475783fb16d797b206dd8c13",
+  "nameId": "FTPoint75",
+  "px": 2090.7,
+  "py": 6271.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6db6b7b2431ca2efffc88eb45805ba6a",
+  "nameId": "FTPoint61",
+  "px": 4956.2,
+  "py": 3641.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_6e03f8464bad9e458b843aa30be1cc8f",
+  "nameId": "FTPoint23",
+  "px": 5609.9,
+  "py": 4003,
+  "type": "ft"
+ },
+ {
+  "id": "ft_714b5ddc402a89d7fc703c9b0b2bf274",
+  "nameId": "SkyIsland_B",
+  "px": 3987.3,
+  "py": 6660.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_7170881d44249e90902f728e240493af",
+  "nameId": "FTPoint55",
+  "px": 5614.1,
+  "py": 3478.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_71c4b2b2407f2bbbd77572a20c7ff0f5",
+  "nameId": "FTPoint15",
+  "px": 4895.3,
+  "py": 2430.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_72626bd0492ad65e59bdb499c9bed99a",
+  "nameId": "FTPoint78",
+  "px": 1898.2,
+  "py": 5928,
+  "type": "ft"
+ },
+ {
+  "id": "ft_74270c2f45b8dca66b6a1faaa911d024",
+  "nameId": "FTPoint62",
+  "px": 4814.6,
+  "py": 3778.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_75bd9923489e2a4ebced5a81175d5928",
+  "nameId": "FTPoint48",
+  "px": 4096.1,
+  "py": 1975.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_76b000914943baddc56bcfbae2bf051e",
+  "nameId": "FTPoint59",
+  "px": 3794.4,
+  "py": 2710.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_77699b11460416b57adedfb989b78e68",
+  "nameId": "Boss_KingWhale",
+  "px": 4543.1,
+  "py": 2589.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_79c561b747335a7a0a8fbf9fae280e62",
+  "nameId": "FTPoint29",
+  "px": 4431.4,
+  "py": 3579.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_7a803abd4c208c8d5c7ee197c9d2ad65",
+  "nameId": "New_SmallIsland06",
+  "px": 1628,
+  "py": 4387.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_80729706432e53b2a3d07c82d14c8749",
+  "nameId": "FTPoint125",
+  "px": 1600.1,
+  "py": 6333.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_825ed1ad422e5e0c94332c835b74d3b4",
+  "nameId": "FTPoint103",
+  "px": 6390.7,
+  "py": 2191.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_82c086db44672c9d828f19b3a383be70",
+  "nameId": "FTPoint123",
+  "px": 2749,
+  "py": 6073.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_837c6214424040fcef9d48ba20e248ba",
+  "nameId": "FTPoint110",
+  "px": 2866.9,
+  "py": 3598.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_84d48ea34666191781868e809acbcbce",
+  "nameId": "WatchTower_8",
+  "px": 4216.3,
+  "py": 1523.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_866881db443444aa7f4e7c8e5dcdaa29",
+  "nameId": "FTPoint60",
+  "px": 6023.3,
+  "py": 3391.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_8a9ae3b44ad758edd7fe44ba9b75000b",
+  "nameId": "WatchTower_5",
+  "px": 5828.3,
+  "py": 1493,
+  "type": "ft"
+ },
+ {
+  "id": "ft_8c1ee640439f980ea6ba3d9b256d4fad",
+  "nameId": "FTPoint122",
+  "px": 2533.8,
+  "py": 5617.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_8ca5e9774ff1bbc1156abca09e616480",
+  "nameId": "FTPoint54",
+  "px": 4457.5,
+  "py": 4090,
+  "type": "ft"
+ },
+ {
+  "id": "ft_902c96f44bc84002e39b52acbfc61452",
+  "nameId": "FTPoint83",
+  "px": 1386.7,
+  "py": 6488.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_916cc96142d38225bd3c9290d6321073",
+  "nameId": "FTPoint72",
+  "px": 2662.3,
+  "py": 5298.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_91dac6f34d2a9fd7f01471b5166c6c02",
+  "nameId": "FTPoint51",
+  "px": 3930.9,
+  "py": 2938.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_923b781345d2ab7eced6babd6e97ece8",
+  "nameId": "FTPoint34",
+  "px": 5173,
+  "py": 3318.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_9521febf4a6d0d02ae9f80ae9513b99c",
+  "nameId": "FTPoint76",
+  "px": 1649.3,
+  "py": 6993.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_979bf2044c8e8fe559b598a95a83ede3",
+  "nameId": "FTPoint24",
+  "px": 5179.2,
+  "py": 3934.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_9fbb93d84811be424a37c391dbfbb476",
+  "nameId": "FTPoint27",
+  "px": 5297.7,
+  "py": 3549.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_a136990f4e2c1c96c0384ba260cd0bc3",
+  "nameId": "FTPoint64",
+  "px": 3785.3,
+  "py": 2334.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_a166ca6f4c1d191aa59951ad1ca49a92",
+  "nameId": "FTPoint120",
+  "px": 2181.1,
+  "py": 5385.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_a1bc65aa445619ef338e0388bc010648",
+  "nameId": "FTPoint26",
+  "px": 4073.3,
+  "py": 3950.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_a277ae6341ef40d84d711ea52303353f",
+  "nameId": "FTPoint38",
+  "px": 5729.4,
+  "py": 2628.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_a51fc0c147435750046c48b254793a8b",
+  "nameId": "Boss_Forest",
+  "px": 5076.5,
+  "py": 3474.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_acae5fb04d48de4197443e9c0993086b",
+  "nameId": "FTPoint35",
+  "px": 5300.1,
+  "py": 2833.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_aebcc3ff41acf9252b3499a89e0bad55",
+  "nameId": "SkyIsland_BOSS",
+  "px": 3866.8,
+  "py": 6368.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_aecfed0d41afee11f30b4f9687bc3243",
+  "nameId": "FTPoint1",
+  "px": 3698.3,
+  "py": 3826.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b001852c491ff5e70c4747bff9972924",
+  "nameId": "FTPoint30",
+  "px": 4426.8,
+  "py": 3211.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b03880f34c398aee56a024b8e510649d",
+  "nameId": "FTPoint93",
+  "px": 4622.8,
+  "py": 3484.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b0609e19416f6731e997f89cf9b66a14",
+  "nameId": "FTPoint96",
+  "px": 4261.7,
+  "py": 4356.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b34e33ad445d619d70ad6bbdbf7cde4d",
+  "nameId": "SkyIsland_C",
+  "px": 3610.9,
+  "py": 6560.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b44aa24445864494e7569597accaefc6",
+  "nameId": "FTPoint43",
+  "px": 4146.1,
+  "py": 3192.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b5a9156c4c3911fd3a4ffa8f807dd5a4",
+  "nameId": "New_SmallIsland07",
+  "px": 2706,
+  "py": 2325.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_b795e2b14189a7d1eead6e97e89c91b7",
+  "nameId": "FTPoint129",
+  "px": 1363.1,
+  "py": 6982.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_bd9306974c7c85c4b76b318d2a397f4c",
+  "nameId": "FTPoint101",
+  "px": 6788.4,
+  "py": 1894.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_bf8b123244adb794a06ea8a10503fbdd",
+  "nameId": "FTPoint40",
+  "px": 5375.2,
+  "py": 3214.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c1d34c6c424dd841005934936f590865",
+  "nameId": "New_SmallIsland02",
+  "px": 6962.7,
+  "py": 1617.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c2a21fb148ca559f4814029637cef75f",
+  "nameId": "FTPoint107",
+  "px": 5647.5,
+  "py": 1264.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c2ec8afd4c5d84f814ed2e9e54e498fc",
+  "nameId": "SkyIsland_A",
+  "px": 4434.1,
+  "py": 6597.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c4d494924dab97d9e30afb92b6029307",
+  "nameId": "FTPoint69",
+  "px": 3636.1,
+  "py": 1790.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c5c2695d4ea3c55c419d7a8c8d184631",
+  "nameId": "FTPoint92",
+  "px": 4652.8,
+  "py": 2881.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c5e2aba14a8f6d35ef4a81ad47ec19c9",
+  "nameId": "WatchTower_19",
+  "px": 1691.5,
+  "py": 5530.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c6a854194e8af1b5cef381a1a276cb92",
+  "nameId": "FTPoint98",
+  "px": 5889.4,
+  "py": 2860.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c808c5844eb34e9eda773aa209ceba01",
+  "nameId": "FTPoint70",
+  "px": 3256.9,
+  "py": 1988.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_c94ec2744732c721ba6144802fd11ec2",
+  "nameId": "FTPoint105",
+  "px": 6216.6,
+  "py": 895.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_cac914f54ee678e09cf8eca4d81e60a0",
+  "nameId": "FTPoint119",
+  "px": 1858.5,
+  "py": 4838.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_cccd29e444ceb548d5b5e589daf086f2",
+  "nameId": "WatchTower_4",
+  "px": 6155.7,
+  "py": 2147.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_cd9fe0d4490874187ed9919d0e4d2a09",
+  "nameId": "FTPoint8",
+  "px": 3528.4,
+  "py": 3315.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_ce7cdcfa48f15174b4fcf49c03f240ed",
+  "nameId": "New_SmallIsland04",
+  "px": 1999,
+  "py": 7535.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_cf5fae4a487231ddd8487c9b19453128",
+  "nameId": "FTPoint85",
+  "px": 7284.2,
+  "py": 2167.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_d8c1a86541daca78b1250ab9b85b7e67",
+  "nameId": "WatchTower_3",
+  "px": 4889.9,
+  "py": 3090.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_dc0ecf9241b4410c59ee619f56d1106a",
+  "nameId": "FTPoint14",
+  "px": 4877.7,
+  "py": 2648.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_dc7376744aedb97bbeb044aa3aacab26",
+  "nameId": "FTPoint127",
+  "px": 2105.4,
+  "py": 6865.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_dd7137634d024a8fcfe6cb9f08887f86",
+  "nameId": "FTPoint115",
+  "px": 4397.9,
+  "py": 2191.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_ddbbffaf43d9219ae68df98744df0831",
+  "nameId": "FTPoint21",
+  "px": 5434.4,
+  "py": 3908.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_deaa0d38438d8cf02bc7cc82621b33b0",
+  "nameId": "FTPoint73",
+  "px": 2677.4,
+  "py": 6452.5,
+  "type": "ft"
+ },
+ {
+  "id": "ft_dee0f8bb4609c83285ce6ca80b84b679",
+  "nameId": "WatchTower_6",
+  "px": 5515.5,
+  "py": 2931.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_df9fb9cb41b43052a9c74fa79a826a50",
+  "nameId": "FTPoint42",
+  "px": 4704.3,
+  "py": 3888.7,
+  "type": "ft"
+ },
+ {
+  "id": "ft_e0819efb41581aeac3a029b0ee2fe195",
+  "nameId": "FTPoint20",
+  "px": 4629.2,
+  "py": 1469.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_e74d687d4caaf5ea085e0b8a76f8b652",
+  "nameId": "FTPoint84",
+  "px": 5990.8,
+  "py": 3873.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_e8351df348b268672f0a219840c6be47",
+  "nameId": "WatchTower_13",
+  "px": 3781.9,
+  "py": 4034.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_e8a85ff544c205e1b04f7e93109b8197",
+  "nameId": "FTPoint102",
+  "px": 6763.7,
+  "py": 2382.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_e9fc08444bfe7e3ee6e06f84ac8688ec",
+  "nameId": "WatchTower_7",
+  "px": 4887.6,
+  "py": 2125.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_ec4896f44c4c9bd993dae2b2c1f31bba",
+  "nameId": "FTPoint100",
+  "px": 5298.3,
+  "py": 2399.3,
+  "type": "ft"
+ },
+ {
+  "id": "ft_ec94023a4ca571ff0fd19e90944f4231",
+  "nameId": "FTPoint16",
+  "px": 4997.9,
+  "py": 2198.6,
+  "type": "ft"
+ },
+ {
+  "id": "ft_ede1ab2c44b1846879bb789c3951b2f7",
+  "nameId": "WatchTower_9",
+  "px": 4379.7,
+  "py": 3621.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f1a1ab834e138b2a938d0aa90e9a65e3",
+  "nameId": "FTPoint65",
+  "px": 3302.7,
+  "py": 2465.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f31b78014ad3954185416da155e50ccd",
+  "nameId": "FTPoint74",
+  "px": 2271.9,
+  "py": 5922.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f34810714796cfceb04d7c8f7b41493d",
+  "nameId": "FTPoint99",
+  "px": 5711.4,
+  "py": 3246.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f382adae4259150bf994ff873ecf242b",
+  "nameId": "FTPoint50",
+  "px": 4073.9,
+  "py": 2476.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f3c0ffde41c2bf4efd8a068986c6b02e",
+  "nameId": "FTPoint94",
+  "px": 4292.6,
+  "py": 3314.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f46296ff4274fedbf32dc5957835a18a",
+  "nameId": "WatchTower_12",
+  "px": 3503.4,
+  "py": 2257.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f6afbcda4d7af6c373407dbc8556fbae",
+  "nameId": "FTPoint90",
+  "px": 3894.3,
+  "py": 4737.1,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f6c005a14b38fe0b57f1c7869fd899cb",
+  "nameId": "FTPoint58",
+  "px": 5964.4,
+  "py": 3226.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f88417694df90381b2b21d9e039b2ccd",
+  "nameId": "FTPoint128",
+  "px": 1920.4,
+  "py": 7192.2,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f8df603b4c750b37d943c9af6a911946",
+  "nameId": "FTPoint33",
+  "px": 5029,
+  "py": 3225.9,
+  "type": "ft"
+ },
+ {
+  "id": "ft_f8e5cb8143f4fa2f6213e6b454569f87",
+  "nameId": "FTPoint6",
+  "px": 3587.6,
+  "py": 4329.4,
+  "type": "ft"
+ },
+ {
+  "id": "ft_fc8f024d40741a133eb9da88201ae7f0",
+  "nameId": "FTPoint117",
+  "px": 3202.2,
+  "py": 5241.8,
+  "type": "ft"
+ },
+ {
+  "id": "ft_fd235a5b4f02cd76312a459d77398ca6",
+  "nameId": "WatchTower_22",
+  "px": 4231.4,
+  "py": 6548.9,
+  "type": "ft"
+ },
+ {
+  "id": "relic_013ff2fc4ddccc22c290a09264f499bc",
+  "px": 4271,
+  "py": 3735,
+  "type": "relic"
+ },
+ {
+  "id": "relic_04fe47374849876d3339baa610391880",
+  "px": 5459.7,
+  "py": 2670.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_0547db424a9c200ed2eed1b9dabaccf6",
+  "px": 2930.6,
+  "py": 4197.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_05c3b4084382710bc11949a2eb6edd31",
+  "px": 6245.9,
+  "py": 1061.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_07919a9f41e7f3f85ea79bbf511c295b",
+  "px": 3585.8,
+  "py": 1840.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_0d0bf38a4e8ef27a57f81cb5154c4633",
+  "px": 5135.7,
+  "py": 3892.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_0d135f004915d8ccb54f04be5d5f8124",
+  "px": 4386.8,
+  "py": 3395.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_0f1f4a08413591cd03e008a861a09525",
+  "px": 4125.2,
+  "py": 3486,
+  "type": "relic"
+ },
+ {
+  "id": "relic_144d469d4f900991969d7291af6e8378",
+  "px": 4973.5,
+  "py": 3869.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_1549a6cc45ad5ade996fb39f74b6810f",
+  "px": 3514.7,
+  "py": 6528.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_19a530564f83f895127d029ddd163dc3",
+  "px": 2079,
+  "py": 6096.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_1baa36434bbeb31e642a37924374f50c",
+  "px": 3738.2,
+  "py": 2150.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_1d22696e4a22f0971cd872b4e1f17c1b",
+  "px": 3897.3,
+  "py": 4469.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_1e15689d486e45f63dd3888a01096a6b",
+  "px": 4469.5,
+  "py": 3503.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_1f4b6f624b807b9dbbfa45aa4c06cd4e",
+  "px": 3593.4,
+  "py": 4229.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_236e7dd447c9bd09c08d319e5cf6edcf",
+  "px": 3381.9,
+  "py": 5413.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_24ac69dd45c2989a803c02890ce5e336",
+  "px": 3137.5,
+  "py": 5325.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_28cb901f4d4603075d1939a8caae14a7",
+  "px": 4904,
+  "py": 3930,
+  "type": "relic"
+ },
+ {
+  "id": "relic_29f4b89e4a773320fd1dcfb562cf47ef",
+  "px": 7206.6,
+  "py": 2178.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_2d875799472a12ab13d53f9db5f7870f",
+  "px": 4119.7,
+  "py": 6458,
+  "type": "relic"
+ },
+ {
+  "id": "relic_33829598432660a7393869b3e73a9c65",
+  "px": 3110.1,
+  "py": 2299.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3756ea4e49fc727b61583aad0a6fbe82",
+  "px": 3513,
+  "py": 3249.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3847d9c84d56600afa1185bf2017c30c",
+  "px": 5535.7,
+  "py": 2673,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3a860f064749c5ee0190e18e90189ac8",
+  "px": 5030.9,
+  "py": 2974.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3b7064e0488fee9bc1bac887fa92fdd5",
+  "px": 4789.7,
+  "py": 2540,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3bead93c444a52f725e72fa673f8ce42",
+  "px": 5770.3,
+  "py": 1858.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3c9ccbeb48860de5aef3afbd8c1395cb",
+  "px": 3937.1,
+  "py": 2153.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_3f32194747ae9b883b1a9985be584392",
+  "px": 4743.8,
+  "py": 3358.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_416e04734d82db11908448bff42d61ac",
+  "px": 6722.6,
+  "py": 1550.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_41f03e9d4cf93547ca5806a21ccb3b6d",
+  "px": 4599.1,
+  "py": 3680.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_42dc77fb45bb23c83daae6b1f3f517e7",
+  "px": 3637.4,
+  "py": 4642.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_496e36ef449abee121f3ffb57e1b2204",
+  "px": 3604.2,
+  "py": 6222,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4985d9564f9d5c17954a1b8a44e08269",
+  "px": 3593.6,
+  "py": 2124.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4a67b45943d38c899e9dbfa6ee436e22",
+  "px": 4381.3,
+  "py": 2940.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4b599d174ec243045d391985dd202f31",
+  "px": 4019,
+  "py": 6611.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4d1d2d0643ab1058f118c18b06a804f4",
+  "px": 6227.9,
+  "py": 2622.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4dba14414ee6fbe734a02babc5c4f32b",
+  "px": 3691.3,
+  "py": 4528.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_4f9239674e242374696b838601e94c19",
+  "px": 3046,
+  "py": 3225.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_515f64f047ae5f0a1acda1a20cb050fc",
+  "px": 6146.2,
+  "py": 1942.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_5bfe9fac4ec6570c2c6102922cdd691c",
+  "px": 5478,
+  "py": 2924.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_5d3fab0c4221315faaa28f92cba07874",
+  "px": 2418.6,
+  "py": 5743,
+  "type": "relic"
+ },
+ {
+  "id": "relic_5ef659654f666f8c28c20ca85691d089",
+  "px": 4300,
+  "py": 1900.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_5fa638d64d45419369de1c97e3d2abe4",
+  "px": 3396.5,
+  "py": 2064.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_5fbf958b47bbc707484fbd8c054ade2e",
+  "px": 4008.3,
+  "py": 6177.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_61a7ff7343df8368e1e6098925ff4960",
+  "px": 4619.3,
+  "py": 3802.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_631a5bcf415a81abf98598b6ef83eb0a",
+  "px": 4448.5,
+  "py": 1482.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_63dfcae9461f068493612b861bede094",
+  "px": 3523.5,
+  "py": 1991.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6638945f4b26a1d2ea04d9bd011b359e",
+  "px": 2807.2,
+  "py": 5498.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_66d7ad804f44d66d9d877abec77da500",
+  "px": 2140.3,
+  "py": 5583.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6a4e8926421b3acb05423d80a4b45d1e",
+  "px": 5518.8,
+  "py": 2925.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6b126a9b42b3bd19e90c58a594a0c657",
+  "px": 3400.2,
+  "py": 3372.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6c8680f3416fefdaa9d0dfa5dac408b1",
+  "px": 2459.3,
+  "py": 5204.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6c95343c41621b8aa11e8ba3308667d8",
+  "px": 5940.4,
+  "py": 3514.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6ca64b00492057d6b5d82d96c534472f",
+  "px": 5298.7,
+  "py": 3641.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6d668c844129793e30b5f395eedebf96",
+  "px": 4401.2,
+  "py": 3481.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6df591234cacf474a68749bf080ac5ba",
+  "px": 5619.1,
+  "py": 4121.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_6e97a40944415b2e8451858c50613591",
+  "px": 5689.9,
+  "py": 3275.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_7083643d4ccfe3ff924b7e8464126cc0",
+  "px": 4953.7,
+  "py": 3717.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_7196345e496a2264fd10dfbbffe8ca5b",
+  "px": 2941.9,
+  "py": 3432.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_75f2d9ce44a49b342673eda14c56531e",
+  "px": 4288.5,
+  "py": 1617.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_778ac97f48fc15de10efbc83aa93528b",
+  "px": 1628.2,
+  "py": 6703.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_79479c394743c7953d28ff887e333d30",
+  "px": 5565.5,
+  "py": 999,
+  "type": "relic"
+ },
+ {
+  "id": "relic_7b3aa6bd4a60381e9e683f9f9fd21cf9",
+  "px": 4746,
+  "py": 3176.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_7c2629ab46a4b48b0b155386a51d0085",
+  "px": 6598.4,
+  "py": 2187.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_81118c5049718d266612669df7304116",
+  "px": 6303.8,
+  "py": 2276.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_81e32e2443e153c6566d7997db1641c8",
+  "px": 4033.5,
+  "py": 3170.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_826b740443ba5fbc6243158cd8ef0e37",
+  "px": 5029.2,
+  "py": 3556,
+  "type": "relic"
+ },
+ {
+  "id": "relic_82c7859d438f9ec3781d8a9d09752138",
+  "px": 5528.9,
+  "py": 2776.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_86c32ca14b78e33b7885ae9fec13d917",
+  "px": 4637.2,
+  "py": 2339.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_8ab69dbe4e703513f9424d8162b75864",
+  "px": 3487.9,
+  "py": 4518.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_8bcde3654504c5823162be83eb674216",
+  "px": 5161.2,
+  "py": 3736.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_8e26d917486bf1d961eb17b9e76fe985",
+  "px": 3223.2,
+  "py": 2183,
+  "type": "relic"
+ },
+ {
+  "id": "relic_8f51cb8f4f95387c33a04e8b2b782958",
+  "px": 5038.3,
+  "py": 1982.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_9187fe9c481291fc66c5a19fd0b2d88e",
+  "px": 3727.8,
+  "py": 6355.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_94f35ac94a2094a39d129e870028072b",
+  "px": 5562.4,
+  "py": 1497.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_9a2253484ef695d98d7487986c2164fb",
+  "px": 4500.9,
+  "py": 1500.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_9c354f5c4182ba6d3eb689b7693a0a0d",
+  "px": 5784.5,
+  "py": 2735.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_9e6e13ad452c095a4c8f94851a58d937",
+  "px": 4740.2,
+  "py": 1792.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a0565ad5451e8ea26ccc04b6c43ce0b3",
+  "px": 4390.8,
+  "py": 6662,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a0e2ab764338ce9b9a549d8e09467a7a",
+  "px": 4452.3,
+  "py": 3742.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a360858e448af927af914d8e9d74e416",
+  "px": 5394.1,
+  "py": 3882.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a3901924413bdac32b37eda4cdc24df9",
+  "px": 3804.9,
+  "py": 3238.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a39aea08429d0d78062320a84ee37242",
+  "px": 1523.8,
+  "py": 6625.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a48edf9248901537af02aea417b6c7e2",
+  "px": 3873.1,
+  "py": 1390.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a52abf464c3063fe669825bd3e8c6867",
+  "px": 3351.8,
+  "py": 2102.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a6623d2c4055a63affce39b7c90207cc",
+  "px": 3638.8,
+  "py": 6677.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a9589829471fdb190d97dc89537ce11f",
+  "px": 5638.6,
+  "py": 4031.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_a968f46848b45292962b4198b36cef78",
+  "px": 4682.8,
+  "py": 3398.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ad5b95fd4ddd1f208ecf08b2afcbaf0f",
+  "px": 5274.5,
+  "py": 2096.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ae48d0d44e4f73cdf9e26a83e70a1120",
+  "px": 3937.8,
+  "py": 1525.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_aec6234a4075a195914e5080a42e97d4",
+  "px": 3653.7,
+  "py": 3841.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_aef1bb4c4bb9e48aa2a9fea81710642d",
+  "px": 3256.7,
+  "py": 1934.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_af1e84884297bf6b3a04dda834081ded",
+  "px": 3937.6,
+  "py": 6334.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_af9415ff405293da3eb134aee3adee0a",
+  "px": 4814.3,
+  "py": 3408.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b077afd44059109c629881be83c2f39b",
+  "px": 4871.1,
+  "py": 3459.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b0bc175a43531898929f879e7a4ca27d",
+  "px": 4812.7,
+  "py": 2174.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b4283fc847577f08af9815ba9edcf8d5",
+  "px": 4839.6,
+  "py": 3214.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b4dd779543c216e122613684c512f1ee",
+  "px": 3695.8,
+  "py": 6531.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b73a17b94d501b7627f7dfbdc438830c",
+  "px": 3903.4,
+  "py": 6728.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b8372ad54629ceea1f395fbd7147f289",
+  "px": 4419.5,
+  "py": 6366.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_b8c66ebc4c132ea10ae6b3a215458b80",
+  "px": 4895.8,
+  "py": 3605.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_bb1320054376e3e5a2f5318e7df6c9d5",
+  "px": 4140.2,
+  "py": 1447,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c171a0fb4b7a7dbb248b36b0fba693b5",
+  "px": 5064.4,
+  "py": 2961.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c1afe622464c5bf0d698d38f9d69fe3f",
+  "px": 5680.1,
+  "py": 3931,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c28b5dee4ee2942f6e93d6ae8d14fddf",
+  "px": 1327.2,
+  "py": 6472.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c57c4cb2433b59c108a8dfa0b2677435",
+  "px": 4055.1,
+  "py": 3951.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c8c21b0146cf197b384a0da265e8d688",
+  "px": 5420,
+  "py": 2642.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_c984c2af4b08141209f292a94070c2f0",
+  "px": 3363,
+  "py": 4056.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_cab5abec4e8762ab68ce3c936c353e03",
+  "px": 3369.8,
+  "py": 1990.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_cc66a8aa4246ecccd0cf148fe329e94e",
+  "px": 4251.7,
+  "py": 6487.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_cd0005dc4b97063b002f13a1c70c3070",
+  "px": 1817.9,
+  "py": 7213.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ce18f94a4eb82ee49c8cc89776d5d42a",
+  "px": 5596.3,
+  "py": 2686.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d1c4e3694d9fbdc8ec006d8d34f761d3",
+  "px": 3265.9,
+  "py": 2198.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d2506521436592cedfebb59e32086f86",
+  "px": 3784.7,
+  "py": 4601.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d48fb2064a3f7b182645868b33fe103d",
+  "px": 3439.4,
+  "py": 6292.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d5a743e343c9d04a80dce68f2b6f6243",
+  "px": 5793,
+  "py": 838.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d8e69f7c4d62570a8e02a6a1874a29e3",
+  "px": 1910.3,
+  "py": 5957.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_d8f3653e47c06372cdaf7395dd2bb9ed",
+  "px": 3107.6,
+  "py": 2154.5,
+  "type": "relic"
+ },
+ {
+  "id": "relic_da1938814973e31858c870a27ae08bd0",
+  "px": 5052.1,
+  "py": 3761.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_dd7e16d246da13f780a9c8946232702b",
+  "px": 4546,
+  "py": 1129.2,
+  "type": "relic"
+ },
+ {
+  "id": "relic_de0c2d9f4ea4ea8fbbee0c9e3c07239c",
+  "px": 6217.9,
+  "py": 2479.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_e1ba35114e5ca60f7b653b8424cf041c",
+  "px": 4294.9,
+  "py": 6289.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_e4286d164a8925dfc09d0fbfda2b3698",
+  "px": 5314.8,
+  "py": 3745.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_e4bfe4784d0f646845604bb190defdfe",
+  "px": 4533.2,
+  "py": 1421.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_e4cca3164c726e1322acf4a59f349723",
+  "px": 5429.8,
+  "py": 2633.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_e6fa06e2406ea5a19ddc13b6cdc75583",
+  "px": 5355.4,
+  "py": 2220.6,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ec20140543804f88e0943f9a5c1765eb",
+  "px": 5122.8,
+  "py": 4019.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ec86b1a74a62a2ec3d22baa46500fd88",
+  "px": 4540.7,
+  "py": 1814.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ed393e6945f92dcbbbf80c8856f7a2cf",
+  "px": 2846.7,
+  "py": 5586.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ee5650754259be7072e7789bf533c53d",
+  "px": 4514.4,
+  "py": 3272.1,
+  "type": "relic"
+ },
+ {
+  "id": "relic_efcf4a3e4e552497fa666bbb82e82100",
+  "px": 3400.8,
+  "py": 2720.9,
+  "type": "relic"
+ },
+ {
+  "id": "relic_f1f8a8b74c1c0b9a53c96fbfbfb8690d",
+  "px": 6178.5,
+  "py": 828,
+  "type": "relic"
+ },
+ {
+  "id": "relic_f3b4f2724a77fc980d06cbbbf24c86b9",
+  "px": 5762.7,
+  "py": 1429.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_f5f7532a41e4fa4a5aea8da23fd8c927",
+  "px": 5426.8,
+  "py": 4220.7,
+  "type": "relic"
+ },
+ {
+  "id": "relic_f664e5d3430197466b429db8087a40ba",
+  "px": 3276.4,
+  "py": 2236.8,
+  "type": "relic"
+ },
+ {
+  "id": "relic_f8c928554a80debf93c25fac6e5ad604",
+  "px": 5426.3,
+  "py": 3582.3,
+  "type": "relic"
+ },
+ {
+  "id": "relic_fc884ffa41f8bdefd0d705ada621f09e",
+  "px": 1477.4,
+  "py": 5681.4,
+  "type": "relic"
+ },
+ {
+  "id": "relic_ff20d9af402a1212b07bd9855c3abe1a",
+  "px": 2175.7,
+  "py": 6282,
+  "type": "relic"
+ }
+]

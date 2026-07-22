@@ -23,6 +23,8 @@ if (items.length < 400) fail(`items: ${items.length}`);
 if (recipes.length < 200) fail(`recipes: ${recipes.length}`);
 if (tech.length < 100) fail(`tech: ${tech.length}`);
 if (buildings.length < 100) fail(`buildings: ${buildings.length}`);
+const markers = load("markers.json");
+if (markers.length < 400) fail(`markers: ${markers.length}`);
 
 // 2. Couverture L10N (5% de noms manquants tolérés)
 for (const [label, list, key] of [
@@ -51,7 +53,7 @@ if (orphans > recipes.length * 0.02) fail(`${orphans} matériaux orphelins`);
 // 4. Stabilité des IDs vs la version committée (HEAD)
 const keyField: Record<string, string> = {
   "pals.json": "id", "items.json": "id", "recipes.json": "id",
-  "tech.json": "id", "buildings.json": "id",
+  "tech.json": "id", "buildings.json": "id", "markers.json": "id",
 };
 for (const file of Object.keys(keyField)) {
   let committed: any[] = [];

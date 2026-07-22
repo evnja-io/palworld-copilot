@@ -144,3 +144,17 @@ conversion palsav), contenant les pseudos de TOUS les joueurs
 **Décision** : les pseudos sont extraits de Level.sav (téléchargé en SFTP avec
 les saves), pas de l'API REST. Normalisation GUID : UUID → 32 hex majuscules
 sans tirets (format des noms de fichiers Players/).
+
+## 2026-07-22 — Transform de coordonnées v1.0 et périmètre carte
+
+**Constat** : les constantes /459 (Phase 0) sont le transform PRÉ-1.0. Le
+transform actuel (source : PalworldSaveTools/palworld_coord, variante « new ») :
+`gameX = (worldY + 18) / 725`, `gameY = (worldX + 375247) / 725` ; la texture
+T_WorldMap couvre la plage in-game [-1000, 1000]². Les POI hors plage (39 :
+Arbre-Monde/remains) relèvent de T_TreeMap — carte séparée, hors v1.
+**Sources marqueurs** : effigies = save-pal effigies.json (138 sur carte
+principale) ; boss = DT_BossSpawnerLoactionData (152) ; voyage rapide =
+PalworldSaveTools fast_travel_points.json (157, noms via
+DT_MapRespawnPointInfoText → ft:). TeleportCoordinates.json (MapCollectablesMod)
+écarté : grille artificielle, pas des statues réelles. Donjons : pas de
+positions fixes en DataTable — hors v1.
