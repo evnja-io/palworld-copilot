@@ -29,6 +29,7 @@
 		"vitest": "^4.1.10"
 	},
 	"dependencies": {
+		"@fontsource-variable/space-grotesk": "^5.3.0",
 		"@neondatabase/serverless": "^1.1.0",
 		"@palworld-companion/game-data": "workspace:*",
 		"arctic": "^3.7.0",

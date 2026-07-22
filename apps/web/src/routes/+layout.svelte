@@ -1,17 +1,14 @@
 <script lang="ts">
+	import '@fontsource-variable/space-grotesk';
+	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { m } from '$lib/paraglide/messages';
-	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Palworld Companion</title>
 </svelte:head>
 
-<header>
-	<strong>{m.app_title()}</strong>
-	<LangSwitch />
-</header>
-<main>{@render children()}</main>
+{@render children()}
