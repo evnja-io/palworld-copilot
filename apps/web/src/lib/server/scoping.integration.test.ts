@@ -48,6 +48,8 @@ describe.skipIf(!url)("scoping multi-tenant", () => {
     await db.insert(tables.serverMembers).values([
       { serverId: srvA, userId: u1, role: "owner" },
       { serverId: srvB, userId: u2, role: "owner" },
+      // u1 est aussi membre de B : le cas le plus sensible pour le scoping.
+      { serverId: srvB, userId: u1, role: "member" },
     ]);
     await db.insert(tables.saveSnapshots).values([
       { serverId: srvA, playerGuid: GUID, kind: "pal_caught", entityId: "Anubis" },
@@ -98,10 +100,22 @@ describe.skipIf(!url)("scoping multi-tenant", () => {
     const { requireMembership } = await import("$lib/server/servers");
     const { tables } = await import("$lib/server/db");
     const { eq } = await import("drizzle-orm");
-    const [srv] = await db.select().from(tables.servers).where(eq(tables.servers.id, srvB));
-    await expect(requireMembership({ id: u1 }, srv.slug)).rejects.toMatchObject({ status: 404 });
-    await expect(requireMembership({ id: u2 }, srv.slug)).resolves.toMatchObject({
+    const [srv] = await db.select().from(tables.servers).where(eq(tables.servers.id, srvA));
+    await expect(requireMembership({ id: u2 }, srv.slug)).rejects.toMatchObject({ status: 404 });
+    await expect(requireMembership({ id: u1 }, srv.slug)).resolves.toMatchObject({
       membership: { role: "owner" },
     });
+  });
+
+  it("un même utilisateur membre de deux serveurs : coches indépendantes", async () => {
+    const { setProgress, getProgress } = await import("$lib/server/progress");
+    await setProgress(srvA, u1, "pal_caught", "Lamball", true);
+    await setProgress(srvB, u1, "pal_caught", "Lamball", true);
+    expect((await getProgress(srvA, "pal_caught", u1)).mine).toContain("Lamball");
+    expect((await getProgress(srvB, "pal_caught", u1)).mine).toContain("Lamball");
+    // Décocher sur A ne doit pas toucher B.
+    await setProgress(srvA, u1, "pal_caught", "Lamball", false);
+    expect((await getProgress(srvA, "pal_caught", u1)).mine).not.toContain("Lamball");
+    expect((await getProgress(srvB, "pal_caught", u1)).mine).toContain("Lamball");
   });
 });
