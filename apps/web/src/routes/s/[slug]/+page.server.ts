@@ -1,4 +1,4 @@
-import { eq, sql } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import pals from "@palworld-companion/game-data/pals.json";
 import tech from "@palworld-companion/game-data/tech.json";
 import markers from "@palworld-companion/game-data/markers.json";
@@ -19,7 +19,8 @@ export type MemberStats = {
   counts: Record<keyof typeof TOTALS, number>;
 };
 
-export async function load({ locals }: PageServerLoadEvent) {
+export async function load({ parent }: PageServerLoadEvent) {
+  const { server } = await parent();
   const db = getDb();
   const [perUser, groupRows, [lastRow]] = await Promise.all([
     db
@@ -31,9 +32,23 @@ export async function load({ locals }: PageServerLoadEvent) {
         kind: tables.progress.kind,
         n: sql<number>`count(${tables.progress.entityId})::int`,
       })
-      .from(tables.users)
-      .leftJoin(tables.progress, eq(tables.progress.userId, tables.users.id))
-      .leftJoin(tables.savePlayers, eq(tables.savePlayers.playerGuid, tables.users.palPlayerGuid))
+      .from(tables.serverMembers)
+      .innerJoin(tables.users, eq(tables.users.id, tables.serverMembers.userId))
+      .leftJoin(
+        tables.progress,
+        and(
+          eq(tables.progress.serverId, tables.serverMembers.serverId),
+          eq(tables.progress.userId, tables.serverMembers.userId),
+        ),
+      )
+      .leftJoin(
+        tables.savePlayers,
+        and(
+          eq(tables.savePlayers.serverId, tables.serverMembers.serverId),
+          eq(tables.savePlayers.playerGuid, tables.serverMembers.palPlayerGuid),
+        ),
+      )
+      .where(eq(tables.serverMembers.serverId, server.id))
       .groupBy(
         tables.users.id,
         tables.users.username,
@@ -47,10 +62,12 @@ export async function load({ locals }: PageServerLoadEvent) {
         n: sql<number>`count(distinct ${tables.progress.entityId})::int`,
       })
       .from(tables.progress)
+      .where(eq(tables.progress.serverId, server.id))
       .groupBy(tables.progress.kind),
     db
       .select({ last: sql<string | null>`max(${tables.saveSnapshots.importedAt})` })
-      .from(tables.saveSnapshots),
+      .from(tables.saveSnapshots)
+      .where(eq(tables.saveSnapshots.serverId, server.id)),
   ]);
 
   const byUser = new Map<string, MemberStats>();
