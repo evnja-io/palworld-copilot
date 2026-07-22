@@ -3,6 +3,7 @@ import { getDb, tables } from "$lib/server/db";
 
 export type SnapshotSummary = {
   guid: string;
+  nickname: string | null;
   kinds: Record<string, number>;
   claimedBy: string | null;
   lastImport: string;
@@ -30,16 +31,29 @@ export async function listSnapshots(): Promise<SnapshotSummary[]> {
       count: sql<number>`count(*)::int`,
       lastImport: sql<string>`max(${tables.saveSnapshots.importedAt})`,
       claimedBy: tables.users.username,
+      nickname: tables.savePlayers.nickname,
     })
     .from(tables.saveSnapshots)
     .leftJoin(tables.users, eq(tables.users.palPlayerGuid, tables.saveSnapshots.playerGuid))
-    .groupBy(tables.saveSnapshots.playerGuid, tables.saveSnapshots.kind, tables.users.username);
+    .leftJoin(tables.savePlayers, eq(tables.savePlayers.playerGuid, tables.saveSnapshots.playerGuid))
+    .groupBy(
+      tables.saveSnapshots.playerGuid,
+      tables.saveSnapshots.kind,
+      tables.users.username,
+      tables.savePlayers.nickname,
+    );
 
   const byGuid = new Map<string, SnapshotSummary>();
   for (const r of rows) {
     let entry = byGuid.get(r.playerGuid);
     if (!entry) {
-      entry = { guid: r.playerGuid, kinds: {}, claimedBy: r.claimedBy, lastImport: r.lastImport };
+      entry = {
+        guid: r.playerGuid,
+        nickname: r.nickname,
+        kinds: {},
+        claimedBy: r.claimedBy,
+        lastImport: r.lastImport,
+      };
       byGuid.set(r.playerGuid, entry);
     }
     entry.kinds[r.kind] = r.count;

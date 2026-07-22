@@ -53,7 +53,14 @@
 		{#each data.snapshots as s (s.guid)}
 			<div class="card" class:mine={s.guid === data.mine}>
 				<div class="row">
-					<code class="guid" title={s.guid}>{shortGuid(s.guid)}…</code>
+					{#if s.nickname}
+						<span class="nickname">
+							{s.nickname}
+							<code class="guid sub" title={s.guid}>{shortGuid(s.guid)}…</code>
+						</span>
+					{:else}
+						<code class="guid" title={s.guid}>{shortGuid(s.guid)}…</code>
+					{/if}
 					{#if s.claimedBy}
 						<span class="claimed">{m.import_claimed_by({ name: s.claimedBy })}</span>
 					{:else if !data.mine}
@@ -122,6 +129,20 @@
 		font-size: 13px;
 		font-weight: 600;
 		color: var(--text-1);
+	}
+	.nickname {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		font-family: var(--font-display);
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--text-1);
+	}
+	.guid.sub {
+		font-weight: 400;
+		font-size: 11px;
+		color: var(--text-4);
 	}
 	.claimed {
 		font-size: 12px;
