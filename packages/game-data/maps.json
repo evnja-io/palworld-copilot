@@ -1,0 +1,7 @@
+{
+ "maxZoom": 5,
+ "sizePx": 8192,
+ "tileBaseUrl": "https://37rvb0yflue16o0e.public.blob.vercel-storage.com",
+ "tileSetId": "f0256092",
+ "tileSize": 256
+}

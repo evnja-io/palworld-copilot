@@ -13,7 +13,9 @@
     "verify": "tsx src/verify.ts",
     "icons": "tsx src/icons.ts",
     "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
-    "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts"
+    "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts",
+    "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
+    "fetch-community": "tsx src/fetch-community.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
+    "@vercel/blob": "^2.6.1",
     "sharp": "^0.35.3"
   }
 }
