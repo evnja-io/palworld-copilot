@@ -1012,17 +1012,6 @@
   "weight": 10
  },
  {
-  "iconName": "HandGun_Default",
-  "id": "AirGrapplingGun",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 1
- },
- {
   "iconName": "AncientArmor",
   "id": "AncientArmor",
   "maxStack": 1,
@@ -1122,17 +1111,6 @@
   "weight": 1
  },
  {
-  "iconName": "AnimalSkin2",
-  "id": "AnimalSkin2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 3
- },
- {
   "iconName": "Antibiotic",
   "id": "Antibiotic_Good",
   "maxStack": 9999,
@@ -1205,50 +1183,6 @@
   "price": 57600,
   "rarity": 0,
   "sortId": 570,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_Default2",
-  "maxStack": 1,
-  "price": 72050,
-  "rarity": 1,
-  "sortId": 571,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_Default3",
-  "maxStack": 1,
-  "price": 88800,
-  "rarity": 2,
-  "sortId": 572,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_Default4",
-  "maxStack": 1,
-  "price": 103250,
-  "rarity": 3,
-  "sortId": 573,
-  "typeA": "Weapon",
-  "typeB": "WeaponAssaultRifle",
-  "weight": 15
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "AssaultRifle_Default5",
-  "maxStack": 1,
-  "price": 120000,
-  "rarity": 4,
-  "sortId": 574,
   "typeA": "Weapon",
   "typeB": "WeaponAssaultRifle",
   "weight": 15
@@ -1395,17 +1329,6 @@
   "typeA": "Food",
   "typeB": "FoodDishVegetable",
   "weight": 0.15
- },
- {
-  "iconName": "Potato",
-  "id": "Baked_Potato",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodDishVegetable",
-  "weight": 1.5
  },
  {
   "iconName": "BakedMeat_BerryGoat",
@@ -1670,17 +1593,6 @@
   "typeA": "Food",
   "typeB": "FoodVegetable",
   "weight": 0.2
- },
- {
-  "iconName": "Berries",
-  "id": "Berries2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodVegetable",
-  "weight": 0.5
  },
  {
   "iconName": "BerrySeeds",
@@ -9317,50 +9229,6 @@
   "weight": 13
  },
  {
-  "iconName": "BowGun",
-  "id": "BowGun_2",
-  "maxStack": 1,
-  "price": 5210,
-  "rarity": 1,
-  "sortId": 231,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun",
-  "id": "BowGun_3",
-  "maxStack": 1,
-  "price": 6480,
-  "rarity": 2,
-  "sortId": 232,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun",
-  "id": "BowGun_4",
-  "maxStack": 1,
-  "price": 7440,
-  "rarity": 3,
-  "sortId": 233,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
-  "iconName": "BowGun",
-  "id": "BowGun_5",
-  "maxStack": 1,
-  "price": 9910,
-  "rarity": 4,
-  "sortId": 234,
-  "typeA": "Weapon",
-  "typeB": "WeaponCrossbow",
-  "weight": 13
- },
- {
   "iconName": "BowGun_Fire",
   "id": "BowGun_Fire",
   "maxStack": 1,
@@ -9449,17 +9317,6 @@
   "weight": 1
  },
  {
-  "iconName": "Rope",
-  "id": "CaptureRope",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "SPWeaponCaptureRope",
-  "weight": 5
- },
- {
   "iconName": "Carbonara",
   "id": "Carbonara",
   "maxStack": 9999,
@@ -9502,28 +9359,6 @@
   "typeA": "Material",
   "typeB": "MaterialMonster",
   "weight": 0.05
- },
- {
-  "iconName": "Fang",
-  "id": "CashFang",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 5
- },
- {
-  "iconName": "Scales",
-  "id": "CashScales",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 5
  },
  {
   "iconName": "HealingMushroom",
@@ -9647,28 +9482,6 @@
   "weight": 1
  },
  {
-  "iconName": "Claws2",
-  "id": "Claws2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 1
- },
- {
-  "iconName": "ClawsPendant",
-  "id": "ClawsPendant",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Accessory",
-  "typeB": "Accessory",
-  "weight": 2
- },
- {
   "iconName": "Cloth",
   "id": "Cloth",
   "maxStack": 9999,
@@ -9702,50 +9515,6 @@
   "weight": 4
  },
  {
-  "iconName": "LeatherClothing",
-  "id": "ClothArmor_2",
-  "maxStack": 1,
-  "price": 1800,
-  "rarity": 1,
-  "sortId": 1011,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "LeatherClothing",
-  "id": "ClothArmor_3",
-  "maxStack": 1,
-  "price": 2400,
-  "rarity": 2,
-  "sortId": 1012,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "LeatherClothing",
-  "id": "ClothArmor_4",
-  "maxStack": 1,
-  "price": 3000,
-  "rarity": 3,
-  "sortId": 1013,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
-  "iconName": "LeatherClothing",
-  "id": "ClothArmor_5",
-  "maxStack": 1,
-  "price": 4790,
-  "rarity": 4,
-  "sortId": 1014,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 4
- },
- {
   "iconName": "ClothArmorCold",
   "id": "ClothArmorCold",
   "maxStack": 1,
@@ -9766,17 +9535,6 @@
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 4
- },
- {
-  "iconName": "LeatherHat",
-  "id": "ClothHat",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Armor",
-  "typeB": "ArmorHead",
-  "weight": 2
  },
  {
   "iconName": "Coal",
@@ -9818,50 +9576,6 @@
   "price": 13920,
   "rarity": 0,
   "sortId": 1040,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmor",
-  "id": "CopperArmor_2",
-  "maxStack": 1,
-  "price": 16990,
-  "rarity": 1,
-  "sortId": 1041,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmor",
-  "id": "CopperArmor_3",
-  "maxStack": 1,
-  "price": 20590,
-  "rarity": 2,
-  "sortId": 1042,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmor",
-  "id": "CopperArmor_4",
-  "maxStack": 1,
-  "price": 24860,
-  "rarity": 3,
-  "sortId": 1043,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 30
- },
- {
-  "iconName": "CopperArmor",
-  "id": "CopperArmor_5",
-  "maxStack": 1,
-  "price": 30240,
-  "rarity": 4,
-  "sortId": 1044,
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 30
@@ -9920,17 +9634,6 @@
   "typeA": "Material",
   "typeB": "MaterialOre",
   "weight": 8
- },
- {
-  "iconName": "Corn",
-  "id": "Corn",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodVegetable",
-  "weight": 1.5
  },
  {
   "iconName": "CornSoup",
@@ -10186,17 +9889,6 @@
   "weight": 0.5
  },
  {
-  "iconName": "ElectronicCircuit",
-  "id": "ElectronicCircuit",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialProccessing",
-  "weight": 0.5
- },
- {
   "iconName": "Elixir_attack_01",
   "id": "Elixir_attack_01",
   "maxStack": 9999,
@@ -10318,17 +10010,6 @@
   "weight": 1
  },
  {
-  "iconName": "Bandage",
-  "id": "EnergyDrink",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "ConsumeBandage",
-  "weight": 1
- },
- {
   "iconName": "EnergyLauncherBullet",
   "id": "EnergyLauncherBullet",
   "maxStack": 9999,
@@ -10437,39 +10118,6 @@
   "typeA": "Material",
   "typeB": "MaterialMonster",
   "weight": 1
- },
- {
-  "iconName": "Fang2",
-  "id": "Fang2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 1
- },
- {
-  "iconName": "FangNecklace",
-  "id": "FangNecklace",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Accessory",
-  "typeB": "Accessory",
-  "weight": 2
- },
- {
-  "iconName": "FarmCrop",
-  "id": "FarmCrop_Tmp",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "FoodVegetable",
-  "weight": 0.1
  },
  {
   "iconName": "Fiber",
@@ -10703,28 +10351,6 @@
   "weight": 15
  },
  {
-  "iconName": "FishMeat",
-  "id": "FishMeat",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodFish",
-  "weight": 1
- },
- {
-  "iconName": "FishMeat",
-  "id": "FishMeat2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodFish",
-  "weight": 2
- },
- {
   "iconName": "FlamethrowerBullet",
   "id": "FlamethrowerBullet",
   "maxStack": 9999,
@@ -10734,17 +10360,6 @@
   "typeA": "Ammo",
   "typeB": "ConsumeBullet",
   "weight": 0.01
- },
- {
-  "iconName": "Flint",
-  "id": "Flint",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialStone",
-  "weight": 2
  },
  {
   "iconName": "Flour",
@@ -10951,50 +10566,6 @@
   "price": 5470,
   "rarity": 0,
   "sortId": 1025,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmor",
-  "id": "FurArmor_2",
-  "maxStack": 1,
-  "price": 6580,
-  "rarity": 1,
-  "sortId": 1026,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmor",
-  "id": "FurArmor_3",
-  "maxStack": 1,
-  "price": 8210,
-  "rarity": 2,
-  "sortId": 1027,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmor",
-  "id": "FurArmor_4",
-  "maxStack": 1,
-  "price": 9310,
-  "rarity": 3,
-  "sortId": 1028,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 10
- },
- {
-  "iconName": "FurArmor",
-  "id": "FurArmor_5",
-  "maxStack": 1,
-  "price": 12140,
-  "rarity": 4,
-  "sortId": 1029,
   "typeA": "Armor",
   "typeB": "ArmorBody",
   "weight": 10
@@ -11369,50 +10940,6 @@
   "price": 19800,
   "rarity": 0,
   "sortId": 310,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "HandGun_Default_2",
-  "maxStack": 1,
-  "price": 24340,
-  "rarity": 1,
-  "sortId": 311,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "HandGun_Default_3",
-  "maxStack": 1,
-  "price": 29520,
-  "rarity": 2,
-  "sortId": 312,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "HandGun_Default_4",
-  "maxStack": 1,
-  "price": 35620,
-  "rarity": 3,
-  "sortId": 313,
-  "typeA": "Weapon",
-  "typeB": "WeaponHandgun",
-  "weight": 8
- },
- {
-  "iconName": "HandGun_Default",
-  "id": "HandGun_Default_5",
-  "maxStack": 1,
-  "price": 42000,
-  "rarity": 4,
-  "sortId": 314,
   "typeA": "Weapon",
   "typeB": "WeaponHandgun",
   "weight": 8
@@ -12111,50 +11638,6 @@
   "weight": 35
  },
  {
-  "iconName": "IronArmor",
-  "id": "IronArmor_2",
-  "maxStack": 1,
-  "price": 43060,
-  "rarity": 1,
-  "sortId": 1056,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmor",
-  "id": "IronArmor_3",
-  "maxStack": 1,
-  "price": 55300,
-  "rarity": 2,
-  "sortId": 1057,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmor",
-  "id": "IronArmor_4",
-  "maxStack": 1,
-  "price": 66670,
-  "rarity": 3,
-  "sortId": 1058,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
-  "iconName": "IronArmor",
-  "id": "IronArmor_5",
-  "maxStack": 1,
-  "price": 78910,
-  "rarity": 4,
-  "sortId": 1059,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 35
- },
- {
   "iconName": "IronArmorCold",
   "id": "IronArmorCold",
   "maxStack": 1,
@@ -12197,17 +11680,6 @@
   "typeA": "Material",
   "typeB": "MaterialIngot",
   "weight": 5
- },
- {
-  "iconName": "IronOre",
-  "id": "IronOre",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialOre",
-  "weight": 10
  },
  {
   "iconName": "JamBun",
@@ -12342,17 +11814,6 @@
   "weight": 0
  },
  {
-  "iconName": "Pilot_light",
-  "id": "Kitsunebi_Fire",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 1
- },
- {
   "iconName": "Lantern",
   "id": "Lantern",
   "maxStack": 9999,
@@ -12372,17 +11833,6 @@
   "sortId": 10016,
   "typeA": "Essential",
   "typeB": "Essential_Lamp",
-  "weight": 0
- },
- {
-  "iconName": "LargeBullet",
-  "id": "LargeBullet",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Ammo",
-  "typeB": "ConsumeBullet",
   "weight": 0
  },
  {
@@ -12452,61 +11902,6 @@
   "weight": 30
  },
  {
-  "iconName": "Launcher_Default",
-  "id": "Launcher_Default_2",
-  "maxStack": 1,
-  "price": 1077940,
-  "rarity": 1,
-  "sortId": 652,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "Launcher_Default",
-  "id": "Launcher_Default_3",
-  "maxStack": 1,
-  "price": 1313140,
-  "rarity": 2,
-  "sortId": 653,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "Launcher_Default",
-  "id": "Launcher_Default_4",
-  "maxStack": 1,
-  "price": 1520110,
-  "rarity": 3,
-  "sortId": 654,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "Launcher_Default",
-  "id": "Launcher_Default_5",
-  "maxStack": 1,
-  "price": 1756320,
-  "rarity": 4,
-  "sortId": 655,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
-  "iconName": "Launcher_Default",
-  "id": "Launcher_Meat",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 651,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
   "iconName": "Launcher_Meteor",
   "id": "Launcher_Meteor",
   "maxStack": 1,
@@ -12535,17 +11930,6 @@
   "price": 200,
   "rarity": 0,
   "sortId": 5051,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 2
- },
- {
-  "iconName": "Leather2",
-  "id": "Leather2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
   "typeA": "Material",
   "typeB": "MaterialMonster",
   "weight": 2
@@ -12848,17 +12232,6 @@
   "weight": 0.5
  },
  {
-  "iconName": "MateItem01",
-  "id": "MateItem01",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "ConsumeOther",
-  "weight": 1
- },
- {
   "iconName": "ButcheringImportPal",
   "id": "MeaninglessItem_ButcheringImportPal",
   "maxStack": 99999999,
@@ -13057,17 +12430,6 @@
   "weight": 5
  },
  {
-  "iconName": "Meat2",
-  "id": "Meat2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodMeat",
-  "weight": 2
- },
- {
   "iconName": "MeatAndPotatoes",
   "id": "MeatAndPotatoes",
   "maxStack": 9999,
@@ -13198,17 +12560,6 @@
   "typeA": "Material",
   "typeB": "Money",
   "weight": 0
- },
- {
-  "iconName": "MonsterEquipWeapon_Dummy",
-  "id": "MonsterEquipWeapon_Dummy",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "MonsterEquipWeapon",
-  "typeB": "MonsterEquipWeapon",
-  "weight": 1
  },
  {
   "iconName": "MultiGuidedMissileLauncher",
@@ -14078,50 +13429,6 @@
   "typeA": "Material",
   "typeB": "MaterialOre",
   "weight": 1
- },
- {
-  "iconName": "Pal_Growth_Stone",
-  "id": "PAL_Growth_Stone_L",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialStone",
-  "weight": 0.1
- },
- {
-  "iconName": "Pal_Growth_Stone",
-  "id": "PAL_Growth_Stone_M",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialStone",
-  "weight": 0.1
- },
- {
-  "iconName": "Pal_Growth_Stone",
-  "id": "PAL_Growth_Stone_S",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialStone",
-  "weight": 0.1
- },
- {
-  "iconName": "Pal_Growth_Stone",
-  "id": "PAL_Growth_Stone_XL",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialStone",
-  "weight": 0.1
  },
  {
   "iconName": "PalAwakening_Dark",
@@ -16379,17 +15686,6 @@
   "weight": 0.5
  },
  {
-  "iconName": "Launcher_Default",
-  "id": "PenguinLauncher",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponRocketLauncher",
-  "weight": 30
- },
- {
   "iconName": "Pickaxe_Steal",
   "id": "Pickaxe_Steal",
   "maxStack": 1,
@@ -16432,17 +15728,6 @@
   "typeA": "Weapon",
   "typeB": "WeaponMelee",
   "weight": 20
- },
- {
-  "iconName": "PickAxe_Default",
-  "id": "Pickaxe_Tier_03",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 3,
-  "sortId": 123,
-  "typeA": "Weapon",
-  "typeB": "WeaponMelee",
-  "weight": 25
  },
  {
   "iconName": "Pizza",
@@ -16599,17 +15884,6 @@
   "weight": 1
  },
  {
-  "iconName": "Potato",
-  "id": "Potato_old",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodVegetable",
-  "weight": 1
- },
- {
   "iconName": "PotatoChips",
   "id": "PotatoChips",
   "maxStack": 9999,
@@ -16742,61 +16016,6 @@
   "weight": 20
  },
  {
-  "iconName": "ShotGun_Default",
-  "id": "PumpActionShotgun_2",
-  "maxStack": 1,
-  "price": 77660,
-  "rarity": 1,
-  "sortId": 421,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "ShotGun_Default",
-  "id": "PumpActionShotgun_3",
-  "maxStack": 1,
-  "price": 95280,
-  "rarity": 2,
-  "sortId": 422,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "ShotGun_Default",
-  "id": "PumpActionShotgun_4",
-  "maxStack": 1,
-  "price": 111020,
-  "rarity": 3,
-  "sortId": 423,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "ShotGun_Default",
-  "id": "PumpActionShotgun_5",
-  "maxStack": 1,
-  "price": 128640,
-  "rarity": 4,
-  "sortId": 424,
-  "typeA": "Weapon",
-  "typeB": "WeaponShotgun",
-  "weight": 20
- },
- {
-  "iconName": "Pumpkin",
-  "id": "Pumpkin",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodVegetable",
-  "weight": 1.5
- },
- {
   "iconName": "Quartz",
   "id": "Quartz",
   "maxStack": 9999,
@@ -16927,17 +16146,6 @@
   "typeA": "Consume",
   "typeB": "ConsumePalRankUp",
   "weight": 1
- },
- {
-  "iconName": "Bow",
-  "id": "RecurveBow",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 15
  },
  {
   "iconName": "ReinforcedArrow",
@@ -17171,17 +16379,6 @@
   "weight": 0.1
  },
  {
-  "iconName": "Sand",
-  "id": "Sand",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialOre",
-  "weight": 3
- },
- {
   "iconName": "Sandwich",
   "id": "Sandwich",
   "maxStack": 9999,
@@ -17204,28 +16401,6 @@
   "weight": 5
  },
  {
-  "iconName": "Scales",
-  "id": "Scales",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 0.5
- },
- {
-  "iconName": "Scales2",
-  "id": "Scales2",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 1,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 0.5
- },
- {
   "iconName": "Seafood_Salada",
   "id": "Seafood_Salada",
   "maxStack": 9999,
@@ -17246,17 +16421,6 @@
   "typeA": "Food",
   "typeB": "FoodDishFish",
   "weight": 1
- },
- {
-  "iconName": "Seed",
-  "id": "Seed_Tmp",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "ConsumeSeed",
-  "weight": 0.1
  },
  {
   "iconName": "SemiAutoRifle",
@@ -17356,17 +16520,6 @@
   "typeA": "Armor",
   "typeB": "ArmorHead",
   "weight": 15
- },
- {
-  "iconName": "Sharkkid_Scale",
-  "id": "Sharkkid_Scale",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 2,
-  "sortId": 9999,
-  "typeA": "Material",
-  "typeB": "MaterialMonster",
-  "weight": 1
  },
  {
   "iconName": "Shield_01",
@@ -20240,28 +19393,6 @@
   "weight": 0.025
  },
  {
-  "iconName": "SmallBullet",
-  "id": "SmallBullet",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Ammo",
-  "typeB": "ConsumeBullet",
-  "weight": 0
- },
- {
-  "iconName": "AssaultRifle_Default",
-  "id": "SniperRifle_Default",
-  "maxStack": 1,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponSniperRifle",
-  "weight": 25
- },
- {
   "iconName": "Spear",
   "id": "Spear",
   "maxStack": 1,
@@ -20471,50 +19602,6 @@
   "weight": 40
  },
  {
-  "iconName": "StealArmor",
-  "id": "StealArmor_2",
-  "maxStack": 1,
-  "price": 52240,
-  "rarity": 1,
-  "sortId": 1071,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmor",
-  "id": "StealArmor_3",
-  "maxStack": 1,
-  "price": 65300,
-  "rarity": 2,
-  "sortId": 1072,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmor",
-  "id": "StealArmor_4",
-  "maxStack": 1,
-  "price": 78370,
-  "rarity": 3,
-  "sortId": 1073,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
-  "iconName": "StealArmor",
-  "id": "StealArmor_5",
-  "maxStack": 1,
-  "price": 91440,
-  "rarity": 4,
-  "sortId": 1074,
-  "typeA": "Armor",
-  "typeB": "ArmorBody",
-  "weight": 40
- },
- {
   "iconName": "StealArmorCold",
   "id": "StealArmorCold",
   "maxStack": 1,
@@ -20711,17 +19798,6 @@
   "typeA": "Material",
   "typeB": "MaterialProccessing",
   "weight": 8
- },
- {
-  "iconName": "Stone",
-  "id": "ThrowStone",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Weapon",
-  "typeB": "WeaponThrowObject",
-  "weight": 0.1
  },
  {
   "iconName": "Tomato",
@@ -20922,17 +19998,6 @@
   "weight": 0
  },
  {
-  "iconName": "Dish",
-  "id": "VenisonBoiledInTomato",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Food",
-  "typeB": "FoodDishMeat",
-  "weight": 1
- },
- {
   "iconName": "Venom",
   "id": "Venom",
   "maxStack": 9999,
@@ -20942,17 +20007,6 @@
   "typeA": "Material",
   "typeB": "MaterialMonster",
   "weight": 0.5
- },
- {
-  "iconName": "WaterBucket",
-  "id": "WaterBucket",
-  "maxStack": 9999,
-  "price": 1,
-  "rarity": 0,
-  "sortId": 9999,
-  "typeA": "Consume",
-  "typeB": "ConsumeOther",
-  "weight": 5
  },
  {
   "iconName": "WaterBuildKit",
@@ -20972,50 +20026,6 @@
   "price": 650,
   "rarity": 0,
   "sortId": 200,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "Bow",
-  "id": "WeakerBow_2",
-  "maxStack": 1,
-  "price": 790,
-  "rarity": 1,
-  "sortId": 201,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "Bow",
-  "id": "WeakerBow_3",
-  "maxStack": 1,
-  "price": 960,
-  "rarity": 2,
-  "sortId": 202,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "Bow",
-  "id": "WeakerBow_4",
-  "maxStack": 1,
-  "price": 1110,
-  "rarity": 3,
-  "sortId": 203,
-  "typeA": "Weapon",
-  "typeB": "WeaponBow",
-  "weight": 6
- },
- {
-  "iconName": "Bow",
-  "id": "WeakerBow_5",
-  "maxStack": 1,
-  "price": 2500,
-  "rarity": 4,
-  "sortId": 204,
   "typeA": "Weapon",
   "typeB": "WeaponBow",
   "weight": 6

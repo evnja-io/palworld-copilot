@@ -2,8 +2,12 @@ import { enumName, loadDataTableRows, must, pick, writeGameData } from "../lib.j
 
 const params = loadDataTableRows(/DT_PalMonsterParameter/);
 const dropRows = loadDataTableRows(/DT_PalDropItem/);
+// Comparaison insensible à la casse : la table de noms diverge parfois du
+// paramètre (PAL_NAME_Windchimes vs id WindChimes).
 const nameKeys = new Set(
-  Object.keys(loadDataTableRows(/\/en\/.*DT_PalNameText/)).map((k) => k.replace(/^PAL_NAME_/, "")),
+  Object.keys(loadDataTableRows(/\/en\/.*DT_PalNameText/)).map((k) =>
+    k.replace(/^PAL_NAME_/, "").toLowerCase(),
+  ),
 );
 
 // Drops indexés par CharacterID (lignes multiples par pal, champs ItemId1..10 / Rate / min / Max).
@@ -23,7 +27,7 @@ const WORK_TYPES = [
 const pals = Object.entries(params)
   .filter(([id, row]: [string, any]) => {
     const zukan = pick<number>(row, "ZukanIndex") ?? -1;
-    return zukan > 0 && nameKeys.has(id) && pick(row, "IsPal") !== false;
+    return zukan > 0 && nameKeys.has(id.toLowerCase()) && pick(row, "IsPal") !== false;
   })
   .map(([id, row]: [string, any]) => ({
     id,

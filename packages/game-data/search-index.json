@@ -456,7 +456,7 @@
  },
  {
   "en": "Tuppanyan sticker",
-  "fr": "fr_Text",
+  "fr": "Tuppanyan sticker",
   "id": "building:Decal_PalSticker_PinkCat"
  },
  {
@@ -1190,11 +1190,6 @@
   "id": "building:JapaneseStyle_TriangleStairsCorner_01"
  },
  {
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "building:JapaneseStyle_TriangleStairsCorner_02"
- },
- {
   "en": "Japanese-Style Triangular Wall",
   "fr": "Mur d'angle japonais",
   "id": "building:JapaneseStyle_TriangleWall"
@@ -1586,7 +1581,7 @@
  },
  {
   "en": "Fur rug",
-  "fr": "fr_Text",
+  "fr": "Fur rug",
   "id": "building:Rug_Wood"
  },
  {
@@ -2281,7 +2276,7 @@
  },
  {
   "en": "Moving Panels",
-  "fr": "fr_Text",
+  "fr": "Moving Panels",
   "id": "building:Trap_MovingPanel"
  },
  {
@@ -2358,11 +2353,6 @@
   "en": "Wooden Wall and Window",
   "fr": "Mur avec fenêtres en bois",
   "id": "building:Wood_WindowWall"
- },
- {
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "building:WoodCreator"
  },
  {
   "en": "Wooden Diagonal Wall",
@@ -2495,7 +2485,7 @@
  {
   "cat": "Accessory",
   "en": "Quadruple Air Dash Boots",
-  "fr": "fr_Text",
+  "fr": "Quadruple Air Dash Boots",
   "id": "item:Accessory_AirDash4"
  },
  {
@@ -3027,12 +3017,6 @@
   "id": "item:AIcore"
  },
  {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AirGrapplingGun"
- },
- {
   "cat": "Armor",
   "en": "Ancient Armor",
   "fr": "Armure antique",
@@ -3083,31 +3067,25 @@
  {
   "cat": "Material",
   "en": "Animal Skin",
-  "fr": "fr_Text",
+  "fr": "Animal Skin",
   "id": "item:AnimalSkin"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AnimalSkin2"
  },
  {
   "cat": "Consume",
   "en": "Antibiotic_Good",
-  "fr": "fr_Text",
+  "fr": "Antibiotic_Good",
   "id": "item:Antibiotic_Good"
  },
  {
   "cat": "Consume",
   "en": "Antibiotic_Normal",
-  "fr": "fr_Text",
+  "fr": "Antibiotic_Normal",
   "id": "item:Antibiotic_Normal"
  },
  {
   "cat": "Consume",
   "en": "Antibiotic_Super",
-  "fr": "fr_Text",
+  "fr": "Antibiotic_Super",
   "id": "item:Antibiotic_Super"
  },
  {
@@ -3133,30 +3111,6 @@
   "en": "Assault Rifle",
   "fr": "Fusil d'assaut",
   "id": "item:AssaultRifle_Default1"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AssaultRifle_Default2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AssaultRifle_Default3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AssaultRifle_Default4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:AssaultRifle_Default5"
  },
  {
   "cat": "Ammo",
@@ -3221,7 +3175,7 @@
  {
   "cat": "Weapon",
   "en": "Axe4",
-  "fr": "fr_Text",
+  "fr": "Axe4",
   "id": "item:Axe_Tier_03"
  },
  {
@@ -3235,12 +3189,6 @@
   "en": "Baked Berries",
   "fr": "Baie grillée",
   "id": "item:Baked_Berries"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Baked_Potato"
  },
  {
   "cat": "Food",
@@ -3377,7 +3325,7 @@
  {
   "cat": "Food",
   "en": "Beer",
-  "fr": "fr_Text",
+  "fr": "Beer",
   "id": "item:Beer"
  },
  {
@@ -3385,12 +3333,6 @@
   "en": "Red Berries",
   "fr": "Baie rouge",
   "id": "item:Berries"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Berries2"
  },
  {
   "cat": "Material",
@@ -7558,30 +7500,6 @@
  },
  {
   "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:BowGun_2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:BowGun_3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:BowGun_4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:BowGun_5"
- },
- {
-  "cat": "Weapon",
   "en": "Fire Arrow Crossbow",
   "fr": "Arbalète de feu",
   "id": "item:BowGun_Fire"
@@ -7629,12 +7547,6 @@
   "id": "item:Cake05"
  },
  {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CaptureRope"
- },
- {
   "cat": "Food",
   "en": "Carbonara",
   "fr": "Carbonara",
@@ -7657,18 +7569,6 @@
   "en": "Carrot Seeds",
   "fr": "Graine de carotte",
   "id": "item:CarrotSeeds"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CashFang"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CashScales"
  },
  {
   "cat": "Food",
@@ -7733,20 +7633,8 @@
  {
   "cat": "Material",
   "en": "Claw",
-  "fr": "fr_Text",
+  "fr": "Claw",
   "id": "item:Claws"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Claws2"
- },
- {
-  "cat": "Accessory",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClawsPendant"
  },
  {
   "cat": "Material",
@@ -7768,30 +7656,6 @@
  },
  {
   "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClothArmor_2"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClothArmor_3"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClothArmor_4"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClothArmor_5"
- },
- {
-  "cat": "Armor",
   "en": "Tundra Outfit",
   "fr": "Tenue toundra",
   "id": "item:ClothArmorCold"
@@ -7801,12 +7665,6 @@
   "en": "Tropical Outfit",
   "fr": "Tenue tropicale",
   "id": "item:ClothArmorHeat"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ClothHat"
  },
  {
   "cat": "Material",
@@ -7831,30 +7689,6 @@
   "en": "Metal Armor",
   "fr": "Armure en métal",
   "id": "item:CopperArmor"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CopperArmor_2"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CopperArmor_3"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CopperArmor_4"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:CopperArmor_5"
  },
  {
   "cat": "Armor",
@@ -7888,14 +7722,8 @@
  },
  {
   "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Corn"
- },
- {
-  "cat": "Food",
   "en": "Corn Soup",
-  "fr": "fr_Text",
+  "fr": "Corn Soup",
   "id": "item:CornSoup"
  },
  {
@@ -7919,7 +7747,7 @@
  {
   "cat": "Food",
   "en": "Curry",
-  "fr": "fr_Text",
+  "fr": "Curry",
   "id": "item:Curry_old"
  },
  {
@@ -8031,12 +7859,6 @@
   "id": "item:ElectricOrgan"
  },
  {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ElectronicCircuit"
- },
- {
   "cat": "Consume",
   "en": "Might Remedy",
   "fr": "Remède de fureur",
@@ -8103,12 +7925,6 @@
   "id": "item:Elixir_workspeed_02"
  },
  {
-  "cat": "Consume",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:EnergyDrink"
- },
- {
   "cat": "Ammo",
   "en": "Plasma Cartridge",
   "fr": "Cartouche de plasma",
@@ -8165,26 +7981,8 @@
  {
   "cat": "Material",
   "en": "Fang",
-  "fr": "fr_Text",
+  "fr": "Fang",
   "id": "item:Fang"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Fang2"
- },
- {
-  "cat": "Accessory",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FangNecklace"
- },
- {
-  "cat": "Consume",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FarmCrop_Tmp"
  },
  {
   "cat": "Material",
@@ -8291,50 +8089,32 @@
  {
   "cat": "Weapon",
   "en": "Fishing Rod_Good",
-  "fr": "fr_Text",
+  "fr": "Fishing Rod_Good",
   "id": "item:FishingRod_Good"
  },
  {
   "cat": "Weapon",
   "en": "Fishing Rod_Legendary",
-  "fr": "fr_Text",
+  "fr": "Fishing Rod_Legendary",
   "id": "item:FishingRod_Legendary"
  },
  {
   "cat": "Weapon",
   "en": "Fishing Rod_Old",
-  "fr": "fr_Text",
+  "fr": "Fishing Rod_Old",
   "id": "item:FishingRod_Old"
  },
  {
   "cat": "Weapon",
   "en": "Fishing Rod_Super",
-  "fr": "fr_Text",
+  "fr": "Fishing Rod_Super",
   "id": "item:FishingRod_Super"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FishMeat"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FishMeat2"
  },
  {
   "cat": "Ammo",
   "en": "Flamethrower Fuel",
   "fr": "Combustible pour lance-flammes",
   "id": "item:FlamethrowerBullet"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Flint"
  },
  {
   "cat": "Food",
@@ -8452,30 +8232,6 @@
  },
  {
   "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FurArmor_2"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FurArmor_3"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FurArmor_4"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:FurArmor_5"
- },
- {
-  "cat": "Armor",
   "en": "Cold Resistant Pelt Armor",
   "fr": "Armure en cuir anti-froid",
   "id": "item:FurArmorCold"
@@ -8549,7 +8305,7 @@
  {
   "cat": "Food",
   "en": "Grape",
-  "fr": "fr_Text",
+  "fr": "Grape",
   "id": "item:Grape"
  },
  {
@@ -8573,7 +8329,7 @@
  {
   "cat": "Food",
   "en": "Grilled Fish",
-  "fr": "fr_Text",
+  "fr": "Grilled Fish",
   "id": "item:GrilledFish"
  },
  {
@@ -8603,7 +8359,7 @@
  {
   "cat": "Material",
   "en": "Gunpowder",
-  "fr": "fr_Text",
+  "fr": "Gunpowder",
   "id": "item:Gunpowder"
  },
  {
@@ -8677,30 +8433,6 @@
   "en": "Handgun",
   "fr": "Pistolet",
   "id": "item:HandGun_Default"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:HandGun_Default_2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:HandGun_Default_3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:HandGun_Default_4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:HandGun_Default_5"
  },
  {
   "cat": "Ammo",
@@ -9035,7 +8767,7 @@
  {
   "cat": "Food",
   "en": "Hop",
-  "fr": "fr_Text",
+  "fr": "Hop",
   "id": "item:Hop"
  },
  {
@@ -9082,30 +8814,6 @@
  },
  {
   "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:IronArmor_2"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:IronArmor_3"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:IronArmor_4"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:IronArmor_5"
- },
- {
-  "cat": "Armor",
   "en": "Cold Resistant Refined Metal Armor",
   "fr": "Armure en métal raffiné anti-froid",
   "id": "item:IronArmorCold"
@@ -9127,12 +8835,6 @@
   "en": "Refined Ingot",
   "fr": "Lingot de métal raffiné",
   "id": "item:IronIngot"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:IronOre"
  },
  {
   "cat": "Food",
@@ -9207,12 +8909,6 @@
   "id": "item:KeySphere_08"
  },
  {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Kitsunebi_Fire"
- },
- {
   "cat": "Essential",
   "en": "Hip Lantern",
   "fr": "Lanterne de taille",
@@ -9223,12 +8919,6 @@
   "en": "Enhanced Hip Lantern",
   "fr": "Lanterne de taille améliorée",
   "id": "item:Lantern_High"
- },
- {
-  "cat": "Ammo",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:LargeBullet"
  },
  {
   "cat": "Ammo",
@@ -9268,36 +8958,6 @@
  },
  {
   "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Launcher_Default_2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Launcher_Default_3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Launcher_Default_4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Launcher_Default_5"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Launcher_Meat"
- },
- {
-  "cat": "Weapon",
   "en": "Meteor Launcher",
   "fr": "Lance-météorites",
   "id": "item:Launcher_Meteor"
@@ -9315,12 +8975,6 @@
   "id": "item:Leather"
  },
  {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Leather2"
- },
- {
   "cat": "Food",
   "en": "Lettuce",
   "fr": "Laitue",
@@ -9335,7 +8989,7 @@
  {
   "cat": "Armor",
   "en": "Lightz Helmet",
-  "fr": "fr_Text",
+  "fr": "Lightz Helmet",
   "id": "item:LightzHelmet"
  },
  {
@@ -9407,7 +9061,7 @@
  {
   "cat": "Food",
   "en": "LuxuryOmelette",
-  "fr": "fr_Text",
+  "fr": "LuxuryOmelette",
   "id": "item:LuxuryOmelette"
  },
  {
@@ -9481,12 +9135,6 @@
   "en": "Marinated Mushrooms",
   "fr": "Champignons marinés",
   "id": "item:MarinatedMushrooms"
- },
- {
-  "cat": "Consume",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:MateItem01"
  },
  {
   "cat": "Material",
@@ -9595,12 +9243,6 @@
   "en": "Skutlass Sashimi",
   "fr": "Filet de Skutlass",
   "id": "item:Meat_SwordCutlassFish"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Meat2"
  },
  {
   "cat": "Food",
@@ -9725,7 +9367,7 @@
  {
   "cat": "Accessory",
   "en": "Night Vision Goggles",
-  "fr": "fr_Text",
+  "fr": "Night Vision Goggles",
   "id": "item:NightVisionGoggles"
  },
  {
@@ -10149,30 +9791,6 @@
   "id": "item:Pal_crystal_S"
  },
  {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PAL_Growth_Stone_L"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PAL_Growth_Stone_M"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PAL_Growth_Stone_S"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PAL_Growth_Stone_XL"
- },
- {
   "cat": "Consume",
   "en": "Dark Awakening Crystal",
   "fr": "Cristal d'éveil tenebra",
@@ -10523,7 +10141,7 @@
  {
   "cat": "Material",
   "en": "Huge Mutated Egg",
-  "fr": "en_text",
+  "fr": "Huge Mutated Egg",
   "id": "item:PalEgg_MutationPal"
  },
  {
@@ -11189,7 +10807,7 @@
  {
   "cat": "SpecialWeapon",
   "en": "Pal Sphere",
-  "fr": "fr_Text",
+  "fr": "Pal Sphere",
   "id": "item:PalSphere_Debug"
  },
  {
@@ -11404,12 +11022,6 @@
  },
  {
   "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PenguinLauncher"
- },
- {
-  "cat": "Weapon",
   "en": "Pal Metal Pickaxe",
   "fr": "Pioche en paluminium",
   "id": "item:Pickaxe_Steal"
@@ -11431,12 +11043,6 @@
   "en": "Refined Metal Pickaxe",
   "fr": "Pioche en métal raffiné",
   "id": "item:Pickaxe_Tier_02"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Pickaxe_Tier_03"
  },
  {
   "cat": "Food",
@@ -11513,7 +11119,7 @@
  {
   "cat": "Food",
   "en": "Potage",
-  "fr": "fr_Text",
+  "fr": "Potage",
   "id": "item:Potage"
  },
  {
@@ -11524,12 +11130,6 @@
  },
  {
   "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Potato_old"
- },
- {
-  "cat": "Food",
   "en": "French Fries",
   "fr": "Frites",
   "id": "item:PotatoChips"
@@ -11537,7 +11137,7 @@
  {
   "cat": "Material",
   "en": "PotatoSeedPotatoes",
-  "fr": "fr_Text",
+  "fr": "PotatoSeedPotatoes",
   "id": "item:PotatoSeedPotatoes"
  },
  {
@@ -11599,36 +11199,6 @@
   "en": "Pump-Action Shotgun",
   "fr": "Fusil à pompe",
   "id": "item:PumpActionShotgun"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PumpActionShotgun_2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PumpActionShotgun_3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PumpActionShotgun_4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:PumpActionShotgun_5"
- },
- {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Pumpkin"
  },
  {
   "cat": "Material",
@@ -11701,12 +11271,6 @@
   "en": "Ripe Starfruit",
   "fr": "Fruit de l’éveil mûr",
   "id": "item:Rankup_Arbitrary"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:RecurveBow"
  },
  {
   "cat": "Ammo",
@@ -11835,15 +11399,9 @@
   "id": "item:Salvage_TreasureBoxKey02"
  },
  {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Sand"
- },
- {
   "cat": "Food",
   "en": "Sandwich",
-  "fr": "fr_Text",
+  "fr": "Sandwich",
   "id": "item:Sandwich"
  },
  {
@@ -11851,18 +11409,6 @@
   "en": "Sapphire",
   "fr": "Saphir",
   "id": "item:Sapphire"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Scales"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Scales2"
  },
  {
   "cat": "Food",
@@ -11873,14 +11419,8 @@
  {
   "cat": "Food",
   "en": "Seafood Soup",
-  "fr": "fr_Text",
+  "fr": "Seafood Soup",
   "id": "item:SeafoodSoup"
- },
- {
-  "cat": "Consume",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Seed_Tmp"
  },
  {
   "cat": "Weapon",
@@ -11935,12 +11475,6 @@
   "en": "Hexolite Helmet",
   "fr": "Casque en hexolite",
   "id": "item:SFHelmet"
- },
- {
-  "cat": "Material",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:Sharkkid_Scale"
  },
  {
   "cat": "Armor",
@@ -12605,7 +12139,7 @@
  {
   "cat": "Essential",
   "en": "Dragostrophe's Shotgun",
-  "fr": "fr_Text",
+  "fr": "Dragostrophe's Shotgun",
   "id": "item:SkillUnlock_BlackFurDragon"
  },
  {
@@ -12695,7 +12229,7 @@
  {
   "cat": "Essential",
   "en": "en_text's Power Converter",
-  "fr": "fr_Text",
+  "fr": "en_text's Power Converter",
   "id": "item:SkillUnlock_DarkMutant"
  },
  {
@@ -12737,7 +12271,7 @@
  {
   "cat": "Essential",
   "en": "Boltmane Saddle",
-  "fr": "fr_Text",
+  "fr": "Boltmane Saddle",
   "id": "item:SkillUnlock_ElecLion"
  },
  {
@@ -13463,7 +12997,7 @@
  {
   "cat": "Ammo",
   "en": "Sunreach Single-Shot Ammo",
-  "fr": "en_text",
+  "fr": "Sunreach Single-Shot Ammo",
   "id": "item:SkyHeavyBullet"
  },
  {
@@ -13481,7 +13015,7 @@
  {
   "cat": "Ammo",
   "en": "Sunreach Rapid-Fire Ammo",
-  "fr": "en_text",
+  "fr": "Sunreach Rapid-Fire Ammo",
   "id": "item:SkyLightBullet"
  },
  {
@@ -13507,18 +13041,6 @@
   "en": "Combat SMG Ammo",
   "fr": "Balles de pistolet-mitrailleur astral",
   "id": "item:SkySubmachineGunBullet"
- },
- {
-  "cat": "Ammo",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:SmallBullet"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:SniperRifle_Default"
  },
  {
   "cat": "Weapon",
@@ -13636,30 +13158,6 @@
  },
  {
   "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:StealArmor_2"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:StealArmor_3"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:StealArmor_4"
- },
- {
-  "cat": "Armor",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:StealArmor_5"
- },
- {
-  "cat": "Armor",
   "en": "Cold Resistant Pal Metal Armor",
   "fr": "Armure en paluminium anti-froid",
   "id": "item:StealArmorCold"
@@ -13685,7 +13183,7 @@
  {
   "cat": "Food",
   "en": "Stew",
-  "fr": "fr_Text",
+  "fr": "Stew",
   "id": "item:Stew"
  },
  {
@@ -13765,12 +13263,6 @@
   "en": "Thermal Core",
   "fr": "Cœur brûlant",
   "id": "item:Thermal_Core"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:ThrowStone"
  },
  {
   "cat": "Food",
@@ -13881,22 +13373,10 @@
   "id": "item:UnlockEquipmentSlot_Weapon_02"
  },
  {
-  "cat": "Food",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:VenisonBoiledInTomato"
- },
- {
   "cat": "Material",
   "en": "Venom Gland",
   "fr": "Glande à venin",
   "id": "item:Venom"
- },
- {
-  "cat": "Consume",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:WaterBucket"
  },
  {
   "cat": "Essential",
@@ -13909,30 +13389,6 @@
   "en": "Old Bow",
   "fr": "Vieil arc",
   "id": "item:WeakerBow"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:WeakerBow_2"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:WeakerBow_3"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:WeakerBow_4"
- },
- {
-  "cat": "Weapon",
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "item:WeakerBow_5"
  },
  {
   "cat": "Essential",
@@ -13991,7 +13447,7 @@
  {
   "cat": "Food",
   "en": "Wine",
-  "fr": "fr_Text",
+  "fr": "Wine",
   "id": "item:Wine"
  },
  {
@@ -21052,6 +20508,33 @@
   "el": [
    "Earth"
   ],
+  "en": "Hangyu",
+  "fr": "Hangyu",
+  "id": "pal:WindChimes",
+  "wk": {
+   "Collection": 1,
+   "Handcraft": 1,
+   "Transport": 2
+  }
+ },
+ {
+  "el": [
+   "Ice"
+  ],
+  "en": "Hangyu Cryst",
+  "fr": "Hangyu Cryst",
+  "id": "pal:WindChimes_Ice",
+  "wk": {
+   "Collection": 2,
+   "Cool": 2,
+   "Handcraft": 3,
+   "Transport": 3
+  }
+ },
+ {
+  "el": [
+   "Earth"
+  ],
   "en": "Knocklem",
   "fr": "Knocklem",
   "id": "pal:WingGolem",
@@ -21973,16 +21456,6 @@
   "pw": 500
  },
  {
-  "ct": 2,
-  "el": [
-   "Normal"
-  ],
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "skill:Scratch",
-  "pw": 100
- },
- {
   "ct": 30,
   "el": [
    "Water"
@@ -22133,16 +21606,6 @@
   "pw": 200
  },
  {
-  "ct": 1,
-  "el": [
-   "Normal"
-  ],
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "skill:Throw",
-  "pw": 60
- },
- {
   "ct": 8,
   "el": [
    "Earth"
@@ -22211,16 +21674,6 @@
   "fr": "Tempête Éclair",
   "id": "skill:ThunderStorm",
   "pw": 600
- },
- {
-  "ct": 15,
-  "el": [
-   "Water"
-  ],
-  "en": "en Text",
-  "fr": "fr_Text",
-  "id": "skill:TidalWave",
-  "pw": 1
  },
  {
   "ct": 16,

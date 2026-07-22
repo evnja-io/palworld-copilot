@@ -1,13 +1,15 @@
 import icons from "@palworld-companion/game-data/icons.json";
 
-const present = icons as Record<string, boolean>;
+// Valeur string = alias : le .webp porte un autre nom que la clé (variantes
+// d'items partageant l'icône de leur IconName, casse divergente…).
+const present = icons as Record<string, boolean | string>;
 
 export function palIcon(id: string): string | undefined {
-  return present[`pal:${id}`] ? `/icons/pals/${id}.webp` : undefined;
+  return iconPath(`pal:${id}`);
 }
 
 export function itemIcon(id: string): string | undefined {
-  return present[`item:${id}`] ? `/icons/items/${id}.webp` : undefined;
+  return iconPath(`item:${id}`);
 }
 
 /** Renvois manuels IconName -> clé d'icône réelle : quirks des données du jeu
@@ -30,9 +32,10 @@ const TECH_ICON_ALIASES: Record<string, string> = {
 };
 
 function iconPath(key: string): string | undefined {
-  if (!present[key]) return undefined;
+  const v = present[key];
+  if (!v) return undefined;
   const [ns, id] = key.split(":");
-  return `/icons/${ns === "item" ? "items" : ns}/${id}.webp`;
+  return `/icons/${ns === "item" ? "items" : ns === "pal" ? "pals" : ns}/${typeof v === "string" ? v : id}.webp`;
 }
 
 /** Icône d'un nœud de techno : le jeu réutilise l'icône de l'item produit,

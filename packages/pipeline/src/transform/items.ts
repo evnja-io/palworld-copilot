@@ -1,10 +1,13 @@
-import { enumName, loadDataTableRows, must, pick, writeGameData } from "../lib.js";
+import { enumName, isL10nPlaceholder, l10nMap, loadDataTableRows, must, pick, writeGameData } from "../lib.js";
 
 const itemRows = loadDataTableRows(/DT_ItemDataTable/);
 // Filtre encyclopédie : un item sans nom localisé est inaffichable (items de
-// test/internes). Même critère que pals.ts.
+// test/internes). Même critère que pals.ts. Les entrées au nom placeholder
+// ("en Text") sont des items debug/inutilisés : exclues aussi.
 const namedIds = new Set(
-  Object.keys(loadDataTableRows(/\/en\/.*DT_ItemNameText/)).map((k) => k.replace(/^ITEM_NAME_/, "")),
+  Object.entries(l10nMap(/\/en\/.*DT_ItemNameText/, "ITEM_NAME_"))
+    .filter(([, text]) => !isL10nPlaceholder(text))
+    .map(([id]) => id),
 );
 const items = Object.entries(itemRows)
   .filter(([id]) => namedIds.has(id))

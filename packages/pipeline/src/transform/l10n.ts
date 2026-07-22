@@ -1,4 +1,4 @@
-import { l10nMap, writeGameData } from "../lib.js";
+import { isL10nPlaceholder, l10nMap, loadDataTableRows, writeGameData } from "../lib.js";
 
 // Préfixes constatés sur les exports réels (2026-07-22, cf. docs/decisions.md).
 // (table, préfixe L10N, namespace de sortie)
@@ -23,7 +23,10 @@ for (const locale of ["en", "fr"] as const) {
   const descs: Record<string, string> = {};
   for (const [table, l10nPrefix, ns] of NAME_SOURCES) {
     const hint = new RegExp(`/${locale}/.*${table.source}`);
-    for (const [id, text] of Object.entries(l10nMap(hint, l10nPrefix))) names[ns + id] = text;
+    for (const [id, text] of Object.entries(l10nMap(hint, l10nPrefix))) {
+      if (isL10nPlaceholder(text)) continue;
+      names[ns + id] = text;
+    }
   }
   // Certaines entrées (technos surtout) sont des templates du jeu référençant
   // un item ou un objet de map : <itemName id=|X|/>, <mapObjectName id=|X|/>
@@ -38,7 +41,10 @@ for (const locale of ["en", "fr"] as const) {
   for (const [table, l10nPrefix, ns] of DESC_SOURCES) {
     const hint = new RegExp(`/${locale}/.*${table.source}`);
     try {
-      for (const [id, text] of Object.entries(l10nMap(hint, l10nPrefix))) descs[ns + id] = text;
+      for (const [id, text] of Object.entries(l10nMap(hint, l10nPrefix))) {
+        if (isL10nPlaceholder(text)) continue;
+        descs[ns + id] = text;
+      }
     } catch {
       console.warn(`  (description absente pour ${table} en ${locale} — toléré)`);
     }
@@ -49,6 +55,17 @@ for (const locale of ["en", "fr"] as const) {
       descs[key] = text
         .replace(/<itemName id=\|([^|]+)\|\/>/gi, (_, id) => names[`item:${id}`] ?? id)
         .replace(/<mapObjectName id=\|([^|]+)\|\/>/gi, (_, id) => names[`building:${id}`] ?? id);
+    }
+  }
+  // La casse des clés de noms diverge parfois de l'id paramètre (PAL_NAME_Windchimes
+  // vs WindChimes) : on recopie le nom sous la casse de DT_PalMonsterParameter.
+  for (const dict of [names, descs]) {
+    const byLower = new Map(Object.keys(dict).map((k) => [k.toLowerCase(), k]));
+    for (const paramId of Object.keys(loadDataTableRows(/DT_PalMonsterParameter/))) {
+      const key = `pal:${paramId}`;
+      if (dict[key]) continue;
+      const match = byLower.get(key.toLowerCase());
+      if (match) dict[key] = dict[match];
     }
   }
   if (Object.keys(names).length < 800) throw new Error(`Trop peu de noms ${locale}`);

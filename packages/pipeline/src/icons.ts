@@ -12,7 +12,7 @@ console.log(`  textures PNG trouvées : ${pngByName.size}`);
 async function convert(kind: "pals" | "items", ns: string, tableHint: RegExp) {
   const rows = loadDataTableRows(tableHint);
   mkdirSync(join(ICONS_OUT, kind), { recursive: true });
-  const present: Record<string, boolean> = {};
+  const present: Record<string, boolean | string> = {};
   let converted = 0;
   for (const [id, row] of Object.entries(rows)) {
     // Icon est un SoftObjectPath ; on résout par nom de texture, insensible à la casse.
@@ -38,7 +38,7 @@ async function convert(kind: "pals" | "items", ns: string, tableHint: RegExp) {
  *  exporté (runbook, section icônes). */
 async function convertBuildObjects() {
   mkdirSync(join(ICONS_OUT, "build"), { recursive: true });
-  const present: Record<string, boolean> = {};
+  const present: Record<string, boolean | string> = {};
   let converted = 0;
   for (const [name, png] of pngByName) {
     const m = name.match(/^t_icon_buildobject_(.+)$/);
@@ -62,6 +62,35 @@ async function convertBuildObjects() {
 const pals = await convert("pals", "pal:", /DT_PalCharacterIconDataTable(_Common)?\.json$/);
 const items = await convert("items", "item:", /DT_ItemIconDataTable(_Common)?\.json$/);
 const builds = await convertBuildObjects();
+
+/** Les variantes d'items (Accessory_AquaResist_1/_2/_3…) partagent l'icône de
+ *  leur IconName : on aliase item:<id> -> nom du .webp existant (valeur string
+ *  dans icons.json). Lookup insensible à la casse (typo PickAxe_Default) +
+ *  renvois manuels (clé = id d'item) pour les IconName sans ligne dans
+ *  DT_ItemIconDataTable — les cannes partagent toutes IconName=FishingRod. */
+const ITEM_ICON_ALIASES: Record<string, string> = {
+  FishingRod_Old: "FishingRod_1",
+  FishingRod_Good: "FishingRod_2",
+  FishingRod_Super: "FishingRod_4",
+  FishingRod_Legendary: "FishingRod_6",
+  Premium_Processed_Wood: "HighGrade_Processed_Wood",
+};
+{
+  const iconByLower = new Map(Object.keys(items).map((k) => [k.toLowerCase(), k.slice("item:".length)]));
+  let aliased = 0;
+  for (const [id, row] of Object.entries(loadDataTableRows(/DT_ItemDataTable/))) {
+    if (items[`item:${id}`]) continue;
+    const iconName = pick<string>(row as any, "IconName");
+    const manual = ITEM_ICON_ALIASES[id];
+    const target =
+      (manual && items[`item:${manual}`] ? manual : undefined) ??
+      (iconName ? iconByLower.get(`item:${iconName.toLowerCase()}`) : undefined);
+    if (!target || target === id) continue;
+    items[`item:${id}`] = target;
+    aliased++;
+  }
+  console.log(`  alias d'icônes items : ${aliased}`);
+}
 if (Object.keys(pals).length < 100 || Object.keys(items).length < 300) {
   throw new Error("Trop peu d'icônes converties — vérifier l'export des textures (runbook, section icônes)");
 }

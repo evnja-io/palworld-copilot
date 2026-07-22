@@ -2156,6 +2156,90 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 278000,
+  "combiRank": 2780,
+  "drops": [
+   {
+    "itemId": "Fiber",
+    "max": 10,
+    "min": 5,
+    "rate": 100
+   },
+   {
+    "itemId": "WheatSeeds",
+    "max": 1,
+    "min": 1,
+    "rate": 100
+   }
+  ],
+  "elements": [
+   "Earth"
+  ],
+  "id": "WindChimes",
+  "maleProbability": 50,
+  "passives": [],
+  "price": 541,
+  "rarity": 1,
+  "size": "XS",
+  "stats": {
+   "craftSpeed": 100,
+   "defense": 70,
+   "hp": 80,
+   "melee": 70,
+   "shot": 70,
+   "support": 100
+  },
+  "work": {
+   "Collection": 1,
+   "Handcraft": 1,
+   "Transport": 2
+  },
+  "zukanIndex": 38
+ },
+ {
+  "combiPriority": 251000,
+  "combiRank": 2510,
+  "drops": [
+   {
+    "itemId": "Fiber",
+    "max": 10,
+    "min": 5,
+    "rate": 100
+   },
+   {
+    "itemId": "IceOrgan",
+    "max": 1,
+    "min": 1,
+    "rate": 100
+   }
+  ],
+  "elements": [
+   "Ice"
+  ],
+  "id": "WindChimes_Ice",
+  "maleProbability": 50,
+  "passives": [],
+  "price": 728,
+  "rarity": 2,
+  "size": "XS",
+  "stats": {
+   "craftSpeed": 100,
+   "defense": 70,
+   "hp": 80,
+   "melee": 70,
+   "shot": 80,
+   "support": 100
+  },
+  "work": {
+   "Collection": 2,
+   "Cool": 2,
+   "Handcraft": 3,
+   "Transport": 3
+  },
+  "zukanIndex": 38,
+  "zukanSuffix": "B"
+ },
+ {
   "combiPriority": 282000,
   "combiRank": 2820,
   "drops": [

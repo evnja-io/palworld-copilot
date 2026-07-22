@@ -126,14 +126,19 @@ blueprints des stations, non extractible proprement.
 **Décision** : la section Craft groupe par niveau de technologie. Station
 ajoutable plus tard si une source fiable émerge.
 
-## 2026-07-22 — Trou de données : WindChimes (Hangyu)
+## 2026-07-22 — Trou de données : WindChimes (Hangyu) — RÉSOLU
 
 **Constat** (spike d'import Phase 5) : le pal `WindChimes` (Hangyu) est présent
 dans les saves et dans icons.json/l10n mais absent de pals.json — le filtre du
 transform (ZukanIndex>0 + nom + IsPal) l'exclut à tort. Sa capture ne peut donc
 pas être fusionnée par l'import.
-**À faire** (phase données ultérieure) : examiner sa ligne DT_PalMonsterParameter
-et ajuster le filtre de transform/pals.ts.
+**Cause** : divergence de casse entre l'id paramètre (`WindChimes`) et la clé de
+nom (`PAL_NAME_Windchimes`). **Corrigé** : comparaison insensible à la casse
+dans transform/pals.ts + recopie des clés l10n `pal:` sous la casse du paramètre
+(transform/l10n.ts). pals.json passe de 286 à 288 entrées (WindChimes,
+WindChimes_Ice). Les captures seront fusionnées au prochain passage du cron
+import-saves. Note : le Paldex du jeu compte 204 numéros / ~303 formes — un
+total « 400+ » compte les doublons boss/raid/tour/plateforme, pas des pals.
 
 ## 2026-07-22 — Pseudos in-game : Level.sav plutôt que l'API REST
 
@@ -158,3 +163,23 @@ PalworldSaveTools fast_travel_points.json (157, noms via
 DT_MapRespawnPointInfoText → ft:). TeleportCoordinates.json (MapCollectablesMod)
 écarté : grille artificielle, pas des statues réelles. Donjons : pas de
 positions fixes en DataTable — hors v1.
+
+## 2026-07-22 — Icônes d'items par IconName + purge des placeholders L10N
+
+**Constat** : seuls 806/1965 items résolvaient une icône — le web cherchait
+`item:<id>` alors que icons.json est indexé par ligne de DT_ItemIconDataTable
+(= IconName) : les variantes (Accessory_AquaResist_1/_2/_3…) partagent l'icône
+de leur base. Par ailleurs les entrées L10N non traduites portent le
+placeholder littéral `fr_Text`/`en Text`, qui court-circuitait le fallback
+FR→EN→id (des items affichaient « fr_Text »).
+**Décisions** :
+- icons.ts (pipeline) ajoute une passe d'alias `item:<id> -> <basename .webp>`
+  (valeur **string** dans icons.json, `true` sinon) : lookup IconName insensible
+  à la casse + renvois manuels par id (cannes à pêche → FishingRod_1/2/4/6).
+  Le web (lib/game/icons.ts) suit les alias. 1866/1875 items résolus ; les 9
+  restants (Antibiotic_*, LightzHelmet, NightVisionGoggles, Potage, Propellant,
+  SkyHeavyBullet/SkyLightBullet) n'ont AUCUNE texture dans l'export — tolérés.
+- l10n.ts ignore les placeholders `xx_Text`/`xx Text` (helper isL10nPlaceholder
+  dans lib.ts) ; items.ts exclut les items dont le nom EN est un placeholder
+  (90 ids debug/inutilisés retirés d'items.json, régénéré avec
+  ALLOW_ID_REMOVALS=1 — aucun n'est matériau de recette ni drop de pal).

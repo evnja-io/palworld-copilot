@@ -86,6 +86,12 @@ export function writeGameData(relPath: string, data: unknown): void {
   console.log(`  écrit : game-data/${relPath}`);
 }
 
+/** Placeholder Pocketpair d'entrée non traduite : "fr_Text", "en Text", etc.
+ *  On les traite comme absents pour que le fallback FR -> EN -> id joue. */
+export function isL10nPlaceholder(v: string): boolean {
+  return /^[a-z]{2}[ _]Text$/i.test(v);
+}
+
 /** Texte L10N : clés <PREFIXE>_<id> -> TextData.LocalizedString (décision Phase 0). */
 export function l10nMap(hint: RegExp, prefix: string): Record<string, string> {
   const rows = loadDataTableRows(hint);
