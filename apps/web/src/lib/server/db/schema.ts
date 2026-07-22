@@ -1,4 +1,5 @@
-import { index, pgTable, primaryKey, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { index, pgTable, primaryKey, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import { sql } from "drizzle-orm";
 
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -23,9 +24,43 @@ export const allowlist = pgTable("allowlist", {
   note: text("note"),
 });
 
+export const servers = pgTable("servers", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  slug: text("slug").notNull().unique(),
+  ownerId: uuid("owner_id")
+    .notNull()
+    .references(() => users.id),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const serverMembers = pgTable(
+  "server_members",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    role: text("role", { enum: ["owner", "member"] }).notNull(),
+    // GUID de joueur PAR monde : un même utilisateur a un GUID différent
+    // sur chaque serveur (remplace users.palPlayerGuid, supprimé en migration B).
+    palPlayerGuid: text("pal_player_guid"),
+    joinedAt: timestamp("joined_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.userId] }),
+    uniqueIndex("server_members_guid_unique")
+      .on(t.serverId, t.palPlayerGuid)
+      .where(sql`${t.palPlayerGuid} is not null`),
+  ],
+);
+
 export const progress = pgTable(
   "progress",
   {
+    serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
     userId: uuid("user_id")
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
@@ -40,6 +75,7 @@ export const progress = pgTable(
 );
 
 export const savePlayers = pgTable("save_players", {
+  serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
   playerGuid: text("player_guid").primaryKey(),
   nickname: text("nickname").notNull(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
@@ -48,6 +84,7 @@ export const savePlayers = pgTable("save_players", {
 export const saveSnapshots = pgTable(
   "save_snapshots",
   {
+    serverId: uuid("server_id").references(() => servers.id, { onDelete: "cascade" }),
     playerGuid: text("player_guid").notNull(),
     kind: text("kind").notNull(),
     entityId: text("entity_id").notNull(),
