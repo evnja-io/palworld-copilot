@@ -7,11 +7,14 @@
     "spike:inventory": "tsx spike/inventory.ts",
     "spike:pals": "tsx spike/pals.ts",
     "spike:coords": "tsx spike/coords.ts",
-    "spike:save": "tsx spike/record-data.ts"
+    "spike:save": "tsx spike/record-data.ts",
+    "all": "tsx src/all.ts",
+    "verify": "tsx src/verify.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.10"
   }
 }

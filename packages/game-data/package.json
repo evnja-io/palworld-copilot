@@ -1,0 +1,9 @@
+{
+  "name": "@palworld-companion/game-data",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*.json": "./*.json",
+    "./l10n/*.json": "./l10n/*.json"
+  }
+}
