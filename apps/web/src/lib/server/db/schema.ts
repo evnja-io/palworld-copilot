@@ -38,3 +38,14 @@ export const progress = pgTable(
     index("progress_kind_entity_idx").on(t.kind, t.entityId),
   ],
 );
+
+export const saveSnapshots = pgTable(
+  "save_snapshots",
+  {
+    playerGuid: text("player_guid").notNull(),
+    kind: text("kind").notNull(),
+    entityId: text("entity_id").notNull(),
+    importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.playerGuid, t.kind, t.entityId] })],
+);
