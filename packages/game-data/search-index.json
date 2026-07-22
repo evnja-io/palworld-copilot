@@ -3024,9 +3024,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Ancient Armor",
+  "fr": "Armure antique",
+  "id": "item:AncientArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Armor",
+  "fr": "Armure antique",
+  "id": "item:AncientArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Armor",
+  "fr": "Armure antique",
+  "id": "item:AncientArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Armor",
+  "fr": "Armure antique",
+  "id": "item:AncientArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold-Resistant Ancient Armor",
   "fr": "Armure antique anti-froid",
   "id": "item:AncientArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold-Resistant Ancient Armor",
+  "fr": "Armure antique anti-froid",
+  "id": "item:AncientArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold-Resistant Ancient Armor",
+  "fr": "Armure antique anti-froid",
+  "id": "item:AncientArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold-Resistant Ancient Armor",
+  "fr": "Armure antique anti-froid",
+  "id": "item:AncientArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold-Resistant Ancient Armor",
+  "fr": "Armure antique anti-froid",
+  "id": "item:AncientArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -3036,15 +3084,87 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat-Resistant Ancient Armor",
+  "fr": "Armure antique anti-chaleur",
+  "id": "item:AncientArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat-Resistant Ancient Armor",
+  "fr": "Armure antique anti-chaleur",
+  "id": "item:AncientArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat-Resistant Ancient Armor",
+  "fr": "Armure antique anti-chaleur",
+  "id": "item:AncientArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat-Resistant Ancient Armor",
+  "fr": "Armure antique anti-chaleur",
+  "id": "item:AncientArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Lightweight Ancient Armor",
   "fr": "Armure antique légère",
   "id": "item:AncientArmorWeight"
  },
  {
   "cat": "Armor",
+  "en": "Lightweight Ancient Armor",
+  "fr": "Armure antique légère",
+  "id": "item:AncientArmorWeight_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Ancient Armor",
+  "fr": "Armure antique légère",
+  "id": "item:AncientArmorWeight_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Ancient Armor",
+  "fr": "Armure antique légère",
+  "id": "item:AncientArmorWeight_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Ancient Armor",
+  "fr": "Armure antique légère",
+  "id": "item:AncientArmorWeight_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Ancient Helm",
   "fr": "Casque antique",
   "id": "item:AncientHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Helm",
+  "fr": "Casque antique",
+  "id": "item:AncientHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Helm",
+  "fr": "Casque antique",
+  "id": "item:AncientHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Helm",
+  "fr": "Casque antique",
+  "id": "item:AncientHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ancient Helm",
+  "fr": "Casque antique",
+  "id": "item:AncientHelmet_5"
  },
  {
   "cat": "Material",
@@ -3111,6 +3231,30 @@
   "en": "Assault Rifle",
   "fr": "Fusil d'assaut",
   "id": "item:AssaultRifle_Default1"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
+  "id": "item:AssaultRifle_Default2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
+  "id": "item:AssaultRifle_Default3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
+  "id": "item:AssaultRifle_Default4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Assault Rifle",
+  "fr": "Fusil d'assaut",
+  "id": "item:AssaultRifle_Default5"
  },
  {
   "cat": "Ammo",
@@ -3293,6 +3437,30 @@
   "id": "item:Bat3"
  },
  {
+  "cat": "Weapon",
+  "en": "Metal Bat",
+  "fr": "Batte en métal",
+  "id": "item:Bat3_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Metal Bat",
+  "fr": "Batte en métal",
+  "id": "item:Bat3_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Metal Bat",
+  "fr": "Batte en métal",
+  "id": "item:Bat3_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Metal Bat",
+  "fr": "Batte en métal",
+  "id": "item:Bat3_5"
+ },
+ {
   "cat": "Material",
   "en": "Battle Ticket",
   "fr": "Ticket de combat",
@@ -3305,6 +3473,30 @@
   "id": "item:BeamLauncher"
  },
  {
+  "cat": "Weapon",
+  "en": "Beam Launcher",
+  "fr": "Canon à impulsion",
+  "id": "item:BeamLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Launcher",
+  "fr": "Canon à impulsion",
+  "id": "item:BeamLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Launcher",
+  "fr": "Canon à impulsion",
+  "id": "item:BeamLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Launcher",
+  "fr": "Canon à impulsion",
+  "id": "item:BeamLauncher_5"
+ },
+ {
   "cat": "Ammo",
   "en": "Beam Launcher Ammo",
   "fr": "Munitions de canon à impulsion",
@@ -3315,6 +3507,30 @@
   "en": "Beam Sword",
   "fr": "Épée rayonnante",
   "id": "item:BeamSword"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Sword",
+  "fr": "Épée rayonnante",
+  "id": "item:BeamSword_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Sword",
+  "fr": "Épée rayonnante",
+  "id": "item:BeamSword_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Sword",
+  "fr": "Épée rayonnante",
+  "id": "item:BeamSword_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Sword",
+  "fr": "Épée rayonnante",
+  "id": "item:BeamSword_5"
  },
  {
   "cat": "Material",
@@ -3375,6 +3591,12 @@
   "en": "Phantom Ring Schematic",
   "fr": "Plan de bague d'illusion",
   "id": "item:Blueprint_Accessory_Avoid_1"
+ },
+ {
+  "cat": "Blueprint",
+  "en": "Phantom Ring Schematic",
+  "fr": "Plan de bague d'illusion",
+  "id": "item:Blueprint_Accessory_Avoid_1_fix"
  },
  {
   "cat": "Blueprint",
@@ -7500,15 +7722,87 @@
  },
  {
   "cat": "Weapon",
+  "en": "Crossbow",
+  "fr": "Arbalète",
+  "id": "item:BowGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Crossbow",
+  "fr": "Arbalète",
+  "id": "item:BowGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Crossbow",
+  "fr": "Arbalète",
+  "id": "item:BowGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Crossbow",
+  "fr": "Arbalète",
+  "id": "item:BowGun_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Fire Arrow Crossbow",
   "fr": "Arbalète de feu",
   "id": "item:BowGun_Fire"
  },
  {
   "cat": "Weapon",
+  "en": "Fire Arrow Crossbow",
+  "fr": "Arbalète de feu",
+  "id": "item:BowGun_Fire_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Fire Arrow Crossbow",
+  "fr": "Arbalète de feu",
+  "id": "item:BowGun_Fire_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Fire Arrow Crossbow",
+  "fr": "Arbalète de feu",
+  "id": "item:BowGun_Fire_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Fire Arrow Crossbow",
+  "fr": "Arbalète de feu",
+  "id": "item:BowGun_Fire_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Poison Arrow Crossbow",
   "fr": "Arbalète empoisonnée",
   "id": "item:BowGun_Poison"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Poison Arrow Crossbow",
+  "fr": "Arbalète empoisonnée",
+  "id": "item:BowGun_Poison_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Poison Arrow Crossbow",
+  "fr": "Arbalète empoisonnée",
+  "id": "item:BowGun_Poison_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Poison Arrow Crossbow",
+  "fr": "Arbalète empoisonnée",
+  "id": "item:BowGun_Poison_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Poison Arrow Crossbow",
+  "fr": "Arbalète empoisonnée",
+  "id": "item:BowGun_Poison_5"
  },
  {
   "cat": "Weapon",
@@ -7595,6 +7889,30 @@
   "id": "item:ChargeLaserRifle"
  },
  {
+  "cat": "Weapon",
+  "en": "Charge Rifle",
+  "fr": "Fusil chargé",
+  "id": "item:ChargeLaserRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Charge Rifle",
+  "fr": "Fusil chargé",
+  "id": "item:ChargeLaserRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Charge Rifle",
+  "fr": "Fusil chargé",
+  "id": "item:ChargeLaserRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Charge Rifle",
+  "fr": "Fusil chargé",
+  "id": "item:ChargeLaserRifle_5"
+ },
+ {
   "cat": "Ammo",
   "en": "Charge Rifle Ammo",
   "fr": "Balles de fusil chargé",
@@ -7656,15 +7974,87 @@
  },
  {
   "cat": "Armor",
+  "en": "Cloth Outfit",
+  "fr": "Vêtement en tissu",
+  "id": "item:ClothArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cloth Outfit",
+  "fr": "Vêtement en tissu",
+  "id": "item:ClothArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cloth Outfit",
+  "fr": "Vêtement en tissu",
+  "id": "item:ClothArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cloth Outfit",
+  "fr": "Vêtement en tissu",
+  "id": "item:ClothArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Tundra Outfit",
   "fr": "Tenue toundra",
   "id": "item:ClothArmorCold"
  },
  {
   "cat": "Armor",
+  "en": "Tundra Outfit",
+  "fr": "Tenue toundra",
+  "id": "item:ClothArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tundra Outfit",
+  "fr": "Tenue toundra",
+  "id": "item:ClothArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tundra Outfit",
+  "fr": "Tenue toundra",
+  "id": "item:ClothArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tundra Outfit",
+  "fr": "Tenue toundra",
+  "id": "item:ClothArmorCold_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Tropical Outfit",
   "fr": "Tenue tropicale",
   "id": "item:ClothArmorHeat"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tropical Outfit",
+  "fr": "Tenue tropicale",
+  "id": "item:ClothArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tropical Outfit",
+  "fr": "Tenue tropicale",
+  "id": "item:ClothArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tropical Outfit",
+  "fr": "Tenue tropicale",
+  "id": "item:ClothArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tropical Outfit",
+  "fr": "Tenue tropicale",
+  "id": "item:ClothArmorHeat_5"
  },
  {
   "cat": "Material",
@@ -7677,6 +8067,30 @@
   "en": "Compound Bow",
   "fr": "Arc composite",
   "id": "item:CompoundBow"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Compound Bow",
+  "fr": "Arc composite",
+  "id": "item:CompoundBow_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Compound Bow",
+  "fr": "Arc composite",
+  "id": "item:CompoundBow_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Compound Bow",
+  "fr": "Arc composite",
+  "id": "item:CompoundBow_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Compound Bow",
+  "fr": "Arc composite",
+  "id": "item:CompoundBow_5"
  },
  {
   "cat": "Material",
@@ -7692,9 +8106,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Metal Armor",
+  "fr": "Armure en métal",
+  "id": "item:CopperArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Armor",
+  "fr": "Armure en métal",
+  "id": "item:CopperArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Armor",
+  "fr": "Armure en métal",
+  "id": "item:CopperArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Armor",
+  "fr": "Armure en métal",
+  "id": "item:CopperArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Metal Armor",
   "fr": "Armure en métal anti-froid",
   "id": "item:CopperArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Metal Armor",
+  "fr": "Armure en métal anti-froid",
+  "id": "item:CopperArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Metal Armor",
+  "fr": "Armure en métal anti-froid",
+  "id": "item:CopperArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Metal Armor",
+  "fr": "Armure en métal anti-froid",
+  "id": "item:CopperArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Metal Armor",
+  "fr": "Armure en métal anti-froid",
+  "id": "item:CopperArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -7704,9 +8166,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Metal Armor",
+  "fr": "Armure en métal anti-chaleur",
+  "id": "item:CopperArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Metal Armor",
+  "fr": "Armure en métal anti-chaleur",
+  "id": "item:CopperArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Metal Armor",
+  "fr": "Armure en métal anti-chaleur",
+  "id": "item:CopperArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Metal Armor",
+  "fr": "Armure en métal anti-chaleur",
+  "id": "item:CopperArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Metal Helm",
   "fr": "Heaume en métal",
   "id": "item:CopperHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Helm",
+  "fr": "Heaume en métal",
+  "id": "item:CopperHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Helm",
+  "fr": "Heaume en métal",
+  "id": "item:CopperHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Helm",
+  "fr": "Heaume en métal",
+  "id": "item:CopperHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Metal Helm",
+  "fr": "Heaume en métal",
+  "id": "item:CopperHelmet_5"
  },
  {
   "cat": "Material",
@@ -7812,9 +8322,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Double-Barreled Shotgun",
+  "fr": "Fusil à double canon",
+  "id": "item:DoubleBarrelShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Double-Barreled Shotgun",
+  "fr": "Fusil à double canon",
+  "id": "item:DoubleBarrelShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Double-Barreled Shotgun",
+  "fr": "Fusil à double canon",
+  "id": "item:DoubleBarrelShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Double-Barreled Shotgun",
+  "fr": "Fusil à double canon",
+  "id": "item:DoubleBarrelShotgun_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Drone Launcher",
   "fr": "Lance-drones",
   "id": "item:DroneLauncher"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Drone Launcher",
+  "fr": "Lance-drones",
+  "id": "item:DroneLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Drone Launcher",
+  "fr": "Lance-drones",
+  "id": "item:DroneLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Drone Launcher",
+  "fr": "Lance-drones",
+  "id": "item:DroneLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Drone Launcher",
+  "fr": "Lance-drones",
+  "id": "item:DroneLauncher_5"
  },
  {
   "cat": "Food",
@@ -7845,6 +8403,30 @@
   "en": "Plasma Rifle",
   "fr": "Fusil à plasma",
   "id": "item:ElectricArcAssaultRifle"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Rifle",
+  "fr": "Fusil à plasma",
+  "id": "item:ElectricArcAssaultRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Rifle",
+  "fr": "Fusil à plasma",
+  "id": "item:ElectricArcAssaultRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Rifle",
+  "fr": "Fusil à plasma",
+  "id": "item:ElectricArcAssaultRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Rifle",
+  "fr": "Fusil à plasma",
+  "id": "item:ElectricArcAssaultRifle_5"
  },
  {
   "cat": "Ammo",
@@ -7938,9 +8520,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Plasma Cannon",
+  "fr": "Canon à plasma",
+  "id": "item:EnergyRocketLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Cannon",
+  "fr": "Canon à plasma",
+  "id": "item:EnergyRocketLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Cannon",
+  "fr": "Canon à plasma",
+  "id": "item:EnergyRocketLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Plasma Cannon",
+  "fr": "Canon à plasma",
+  "id": "item:EnergyRocketLauncher_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Energy Shotgun",
   "fr": "Fusil à pompe énergétique",
   "id": "item:EnergyShotgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Energy Shotgun",
+  "fr": "Fusil à pompe énergétique",
+  "id": "item:EnergyShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Energy Shotgun",
+  "fr": "Fusil à pompe énergétique",
+  "id": "item:EnergyShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Energy Shotgun",
+  "fr": "Fusil à pompe énergétique",
+  "id": "item:EnergyShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Energy Shotgun",
+  "fr": "Fusil à pompe énergétique",
+  "id": "item:EnergyShotgun_5"
  },
  {
   "cat": "Ammo",
@@ -8232,9 +8862,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Pelt Armor",
+  "fr": "Armure en cuir",
+  "id": "item:FurArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pelt Armor",
+  "fr": "Armure en cuir",
+  "id": "item:FurArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pelt Armor",
+  "fr": "Armure en cuir",
+  "id": "item:FurArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pelt Armor",
+  "fr": "Armure en cuir",
+  "id": "item:FurArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Pelt Armor",
   "fr": "Armure en cuir anti-froid",
   "id": "item:FurArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-froid",
+  "id": "item:FurArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-froid",
+  "id": "item:FurArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-froid",
+  "id": "item:FurArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-froid",
+  "id": "item:FurArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -8244,9 +8922,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-chaleur",
+  "id": "item:FurArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-chaleur",
+  "id": "item:FurArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-chaleur",
+  "id": "item:FurArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pelt Armor",
+  "fr": "Armure en cuir anti-chaleur",
+  "id": "item:FurArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Feathered Hair Band",
   "fr": "Barrette à plumes",
   "id": "item:FurHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Feathered Hair Band",
+  "fr": "Barrette à plumes",
+  "id": "item:FurHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Feathered Hair Band",
+  "fr": "Barrette à plumes",
+  "id": "item:FurHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Feathered Hair Band",
+  "fr": "Barrette à plumes",
+  "id": "item:FurHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Feathered Hair Band",
+  "fr": "Barrette à plumes",
+  "id": "item:FurHelmet_5"
  },
  {
   "cat": "Accessory",
@@ -8271,6 +8997,30 @@
   "en": "Gatling Gun",
   "fr": "Gatling",
   "id": "item:GatlingGun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Gatling Gun",
+  "fr": "Gatling",
+  "id": "item:GatlingGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Gatling Gun",
+  "fr": "Gatling",
+  "id": "item:GatlingGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Gatling Gun",
+  "fr": "Gatling",
+  "id": "item:GatlingGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Gatling Gun",
+  "fr": "Gatling",
+  "id": "item:GatlingGun_5"
  },
  {
   "cat": "Food",
@@ -8303,10 +9053,46 @@
   "id": "item:Glider_Super"
  },
  {
+  "cat": "Glider",
+  "en": "Hyper Glider",
+  "fr": "Hyper planeur",
+  "id": "item:Glider_Tera"
+ },
+ {
   "cat": "Food",
   "en": "Grape",
   "fr": "Grape",
   "id": "item:Grape"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Grappling Gun",
+  "fr": "Pistolet-grappin",
+  "id": "item:GrapplingGun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Mega Grappling Gun",
+  "fr": "Méga pistolet-grappin",
+  "id": "item:GrapplingGun2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Giga Grappling Gun",
+  "fr": "Giga pistolet-grappin",
+  "id": "item:GrapplingGun3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Hyper Grappling Gun",
+  "fr": "Hyper pistolet-grappin",
+  "id": "item:GrapplingGun4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Ultra Grappling Gun",
+  "fr": "Ultra pistolet-grappin",
+  "id": "item:GrapplingGun5"
  },
  {
   "cat": "Food",
@@ -8325,6 +9111,30 @@
   "en": "Grenade Launcher",
   "fr": "Lance-grenades",
   "id": "item:GrenadeLauncher"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Grenade Launcher",
+  "fr": "Lance-grenades",
+  "id": "item:GrenadeLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Grenade Launcher",
+  "fr": "Lance-grenades",
+  "id": "item:GrenadeLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Grenade Launcher",
+  "fr": "Lance-grenades",
+  "id": "item:GrenadeLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Grenade Launcher",
+  "fr": "Lance-grenades",
+  "id": "item:GrenadeLauncher_5"
  },
  {
   "cat": "Food",
@@ -8355,6 +9165,30 @@
   "en": "Guided Missile Launcher",
   "fr": "Lance-missiles",
   "id": "item:GuidedMissileLauncher"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Guided Missile Launcher",
+  "fr": "Lance-missiles",
+  "id": "item:GuidedMissileLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Guided Missile Launcher",
+  "fr": "Lance-missiles",
+  "id": "item:GuidedMissileLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Guided Missile Launcher",
+  "fr": "Lance-missiles",
+  "id": "item:GuidedMissileLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Guided Missile Launcher",
+  "fr": "Lance-missiles",
+  "id": "item:GuidedMissileLauncher_5"
  },
  {
   "cat": "Material",
@@ -8435,6 +9269,30 @@
   "id": "item:HandGun_Default"
  },
  {
+  "cat": "Weapon",
+  "en": "Handgun",
+  "fr": "Pistolet",
+  "id": "item:HandGun_Default_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Handgun",
+  "fr": "Pistolet",
+  "id": "item:HandGun_Default_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Handgun",
+  "fr": "Pistolet",
+  "id": "item:HandGun_Default_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Handgun",
+  "fr": "Pistolet",
+  "id": "item:HandGun_Default_5"
+ },
+ {
   "cat": "Ammo",
   "en": "Handgun Ammo",
   "fr": "Balles de pistolet",
@@ -8454,9 +9312,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Monarch's Crown",
+  "fr": "Couronne royale",
+  "id": "item:Head001_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Monarch's Crown",
+  "fr": "Couronne royale",
+  "id": "item:Head001_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Monarch's Crown",
+  "fr": "Couronne royale",
+  "id": "item:Head001_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Monarch's Crown",
+  "fr": "Couronne royale",
+  "id": "item:Head001_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Golden Crown",
   "fr": "Couronne dorée",
   "id": "item:Head002"
+ },
+ {
+  "cat": "Armor",
+  "en": "Golden Crown",
+  "fr": "Couronne dorée",
+  "id": "item:Head002_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Golden Crown",
+  "fr": "Couronne dorée",
+  "id": "item:Head002_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Golden Crown",
+  "fr": "Couronne dorée",
+  "id": "item:Head002_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Golden Crown",
+  "fr": "Couronne dorée",
+  "id": "item:Head002_5"
  },
  {
   "cat": "Armor",
@@ -8466,9 +9372,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Long-Eared Headband",
+  "fr": "Bandeau à longues oreilles",
+  "id": "item:Head003_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Long-Eared Headband",
+  "fr": "Bandeau à longues oreilles",
+  "id": "item:Head003_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Long-Eared Headband",
+  "fr": "Bandeau à longues oreilles",
+  "id": "item:Head003_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Long-Eared Headband",
+  "fr": "Bandeau à longues oreilles",
+  "id": "item:Head003_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Witch Hat",
   "fr": "Chapeau de sorcière",
   "id": "item:Head004"
+ },
+ {
+  "cat": "Armor",
+  "en": "Witch Hat",
+  "fr": "Chapeau de sorcière",
+  "id": "item:Head004_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Witch Hat",
+  "fr": "Chapeau de sorcière",
+  "id": "item:Head004_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Witch Hat",
+  "fr": "Chapeau de sorcière",
+  "id": "item:Head004_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Witch Hat",
+  "fr": "Chapeau de sorcière",
+  "id": "item:Head004_5"
  },
  {
   "cat": "Armor",
@@ -8478,9 +9432,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Soft Hat",
+  "fr": "Chapeau souple",
+  "id": "item:Head005_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Soft Hat",
+  "fr": "Chapeau souple",
+  "id": "item:Head005_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Soft Hat",
+  "fr": "Chapeau souple",
+  "id": "item:Head005_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Soft Hat",
+  "fr": "Chapeau souple",
+  "id": "item:Head005_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Helmet",
   "fr": "Casque",
   "id": "item:Head006"
+ },
+ {
+  "cat": "Armor",
+  "en": "Helmet",
+  "fr": "Casque",
+  "id": "item:Head006_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Helmet",
+  "fr": "Casque",
+  "id": "item:Head006_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Helmet",
+  "fr": "Casque",
+  "id": "item:Head006_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Helmet",
+  "fr": "Casque",
+  "id": "item:Head006_5"
  },
  {
   "cat": "Armor",
@@ -8490,9 +9492,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Silk Hat",
+  "fr": "Haut-de-forme",
+  "id": "item:Head007_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Silk Hat",
+  "fr": "Haut-de-forme",
+  "id": "item:Head007_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Silk Hat",
+  "fr": "Haut-de-forme",
+  "id": "item:Head007_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Silk Hat",
+  "fr": "Haut-de-forme",
+  "id": "item:Head007_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Tricorne",
   "fr": "Tricorne",
   "id": "item:Head008"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tricorne",
+  "fr": "Tricorne",
+  "id": "item:Head008_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tricorne",
+  "fr": "Tricorne",
+  "id": "item:Head008_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tricorne",
+  "fr": "Tricorne",
+  "id": "item:Head008_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tricorne",
+  "fr": "Tricorne",
+  "id": "item:Head008_5"
  },
  {
   "cat": "Armor",
@@ -8502,9 +9552,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Explorer Cap",
+  "fr": "Chapeau d’explorateur",
+  "id": "item:Head009_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Explorer Cap",
+  "fr": "Chapeau d’explorateur",
+  "id": "item:Head009_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Explorer Cap",
+  "fr": "Chapeau d’explorateur",
+  "id": "item:Head009_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Explorer Cap",
+  "fr": "Chapeau d’explorateur",
+  "id": "item:Head009_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Graduation Cap",
   "fr": "Chapeau de diplômé",
   "id": "item:Head010"
+ },
+ {
+  "cat": "Armor",
+  "en": "Graduation Cap",
+  "fr": "Chapeau de diplômé",
+  "id": "item:Head010_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Graduation Cap",
+  "fr": "Chapeau de diplômé",
+  "id": "item:Head010_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Graduation Cap",
+  "fr": "Chapeau de diplômé",
+  "id": "item:Head010_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Graduation Cap",
+  "fr": "Chapeau de diplômé",
+  "id": "item:Head010_5"
  },
  {
   "cat": "Armor",
@@ -8514,9 +9612,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Farming Hat",
+  "fr": "Chapeau de paille",
+  "id": "item:Head011_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Farming Hat",
+  "fr": "Chapeau de paille",
+  "id": "item:Head011_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Farming Hat",
+  "fr": "Chapeau de paille",
+  "id": "item:Head011_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Farming Hat",
+  "fr": "Chapeau de paille",
+  "id": "item:Head011_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Bowler Hat",
   "fr": "Melon",
   "id": "item:Head012"
+ },
+ {
+  "cat": "Armor",
+  "en": "Bowler Hat",
+  "fr": "Melon",
+  "id": "item:Head012_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Bowler Hat",
+  "fr": "Melon",
+  "id": "item:Head012_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Bowler Hat",
+  "fr": "Melon",
+  "id": "item:Head012_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Bowler Hat",
+  "fr": "Melon",
+  "id": "item:Head012_5"
  },
  {
   "cat": "Armor",
@@ -8526,9 +9672,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Tocotoco Cap",
+  "fr": "Chapeau Tocotoco",
+  "id": "item:Head013_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tocotoco Cap",
+  "fr": "Chapeau Tocotoco",
+  "id": "item:Head013_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tocotoco Cap",
+  "fr": "Chapeau Tocotoco",
+  "id": "item:Head013_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Tocotoco Cap",
+  "fr": "Chapeau Tocotoco",
+  "id": "item:Head013_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Grinning Tocotoco Cap",
   "fr": "Chapeau Tocotoco souriant",
   "id": "item:Head014"
+ },
+ {
+  "cat": "Armor",
+  "en": "Grinning Tocotoco Cap",
+  "fr": "Chapeau Tocotoco souriant",
+  "id": "item:Head014_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Grinning Tocotoco Cap",
+  "fr": "Chapeau Tocotoco souriant",
+  "id": "item:Head014_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Grinning Tocotoco Cap",
+  "fr": "Chapeau Tocotoco souriant",
+  "id": "item:Head014_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Grinning Tocotoco Cap",
+  "fr": "Chapeau Tocotoco souriant",
+  "id": "item:Head014_5"
  },
  {
   "cat": "Armor",
@@ -8538,15 +9732,87 @@
  },
  {
   "cat": "Armor",
+  "en": "Gumoss Cap",
+  "fr": "Chapeau Gumoss",
+  "id": "item:Head015_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Gumoss Cap",
+  "fr": "Chapeau Gumoss",
+  "id": "item:Head015_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Gumoss Cap",
+  "fr": "Chapeau Gumoss",
+  "id": "item:Head015_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Gumoss Cap",
+  "fr": "Chapeau Gumoss",
+  "id": "item:Head015_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Penking Cap",
   "fr": "Chapeau Penking",
   "id": "item:Head016"
  },
  {
   "cat": "Armor",
+  "en": "Penking Cap",
+  "fr": "Chapeau Penking",
+  "id": "item:Head016_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Penking Cap",
+  "fr": "Chapeau Penking",
+  "id": "item:Head016_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Penking Cap",
+  "fr": "Chapeau Penking",
+  "id": "item:Head016_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Penking Cap",
+  "fr": "Chapeau Penking",
+  "id": "item:Head016_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Katress Cap",
   "fr": "Chapeau Katress",
   "id": "item:Head017"
+ },
+ {
+  "cat": "Armor",
+  "en": "Katress Cap",
+  "fr": "Chapeau Katress",
+  "id": "item:Head017_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Katress Cap",
+  "fr": "Chapeau Katress",
+  "id": "item:Head017_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Katress Cap",
+  "fr": "Chapeau Katress",
+  "id": "item:Head017_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Katress Cap",
+  "fr": "Chapeau Katress",
+  "id": "item:Head017_5"
  },
  {
   "cat": "Armor",
@@ -8574,9 +9840,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Leezpunk Hood",
+  "fr": "Capuche de Leezpunk",
+  "id": "item:HeadEquip025_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Leezpunk Hood",
+  "fr": "Capuche de Leezpunk",
+  "id": "item:HeadEquip025_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Leezpunk Hood",
+  "fr": "Capuche de Leezpunk",
+  "id": "item:HeadEquip025_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Leezpunk Hood",
+  "fr": "Capuche de Leezpunk",
+  "id": "item:HeadEquip025_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Killamari Cap",
   "fr": "Chapeau de Killamari",
   "id": "item:HeadEquip026"
+ },
+ {
+  "cat": "Armor",
+  "en": "Killamari Cap",
+  "fr": "Chapeau de Killamari",
+  "id": "item:HeadEquip026_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Killamari Cap",
+  "fr": "Chapeau de Killamari",
+  "id": "item:HeadEquip026_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Killamari Cap",
+  "fr": "Chapeau de Killamari",
+  "id": "item:HeadEquip026_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Killamari Cap",
+  "fr": "Chapeau de Killamari",
+  "id": "item:HeadEquip026_5"
  },
  {
   "cat": "Armor",
@@ -8589,6 +9903,30 @@
   "en": "Ribbuny Headband",
   "fr": "Bandeau de Ribbuny",
   "id": "item:HeadEquip028"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ribbuny Headband",
+  "fr": "Bandeau de Ribbuny",
+  "id": "item:HeadEquip028_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ribbuny Headband",
+  "fr": "Bandeau de Ribbuny",
+  "id": "item:HeadEquip028_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ribbuny Headband",
+  "fr": "Bandeau de Ribbuny",
+  "id": "item:HeadEquip028_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Ribbuny Headband",
+  "fr": "Bandeau de Ribbuny",
+  "id": "item:HeadEquip028_5"
  },
  {
   "cat": "Armor",
@@ -8610,9 +9948,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Swee Cap",
+  "fr": "Chapeau de Swee",
+  "id": "item:HeadEquip031_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Swee Cap",
+  "fr": "Chapeau de Swee",
+  "id": "item:HeadEquip031_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Swee Cap",
+  "fr": "Chapeau de Swee",
+  "id": "item:HeadEquip031_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Swee Cap",
+  "fr": "Chapeau de Swee",
+  "id": "item:HeadEquip031_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Dazzi Hat",
   "fr": "Chapeau de Dazzi",
   "id": "item:HeadEquip032"
+ },
+ {
+  "cat": "Armor",
+  "en": "Dazzi Hat",
+  "fr": "Chapeau de Dazzi",
+  "id": "item:HeadEquip032_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Dazzi Hat",
+  "fr": "Chapeau de Dazzi",
+  "id": "item:HeadEquip032_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Dazzi Hat",
+  "fr": "Chapeau de Dazzi",
+  "id": "item:HeadEquip032_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Dazzi Hat",
+  "fr": "Chapeau de Dazzi",
+  "id": "item:HeadEquip032_5"
  },
  {
   "cat": "Armor",
@@ -8814,9 +10200,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Refined Metal Armor",
+  "fr": "Armure en métal raffiné",
+  "id": "item:IronArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Armor",
+  "fr": "Armure en métal raffiné",
+  "id": "item:IronArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Armor",
+  "fr": "Armure en métal raffiné",
+  "id": "item:IronArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Armor",
+  "fr": "Armure en métal raffiné",
+  "id": "item:IronArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Refined Metal Armor",
   "fr": "Armure en métal raffiné anti-froid",
   "id": "item:IronArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-froid",
+  "id": "item:IronArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-froid",
+  "id": "item:IronArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-froid",
+  "id": "item:IronArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-froid",
+  "id": "item:IronArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -8826,9 +10260,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-chaleur",
+  "id": "item:IronArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-chaleur",
+  "id": "item:IronArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-chaleur",
+  "id": "item:IronArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Refined Metal Armor",
+  "fr": "Armure en métal raffiné anti-chaleur",
+  "id": "item:IronArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Refined Metal Helm",
   "fr": "Heaume en métal raffiné",
   "id": "item:IronHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Helm",
+  "fr": "Heaume en métal raffiné",
+  "id": "item:IronHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Helm",
+  "fr": "Heaume en métal raffiné",
+  "id": "item:IronHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Helm",
+  "fr": "Heaume en métal raffiné",
+  "id": "item:IronHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Refined Metal Helm",
+  "fr": "Heaume en métal raffiné",
+  "id": "item:IronHelmet_5"
  },
  {
   "cat": "Material",
@@ -8859,6 +10341,30 @@
   "en": "Katana",
   "fr": "Katana",
   "id": "item:Katana"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Katana",
+  "fr": "Katana",
+  "id": "item:Katana_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Katana",
+  "fr": "Katana",
+  "id": "item:Katana_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Katana",
+  "fr": "Katana",
+  "id": "item:Katana_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Katana",
+  "fr": "Katana",
+  "id": "item:Katana_5"
  },
  {
   "cat": "Essential",
@@ -8940,6 +10446,30 @@
  },
  {
   "cat": "Weapon",
+  "en": "Laser Gatling Gun",
+  "fr": "Gatling laser",
+  "id": "item:LaserGatlingGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Gatling Gun",
+  "fr": "Gatling laser",
+  "id": "item:LaserGatlingGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Gatling Gun",
+  "fr": "Gatling laser",
+  "id": "item:LaserGatlingGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Gatling Gun",
+  "fr": "Gatling laser",
+  "id": "item:LaserGatlingGun_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Plasma Multicutter",
   "fr": "Découpeur multi-plasma",
   "id": "item:LaserMiningTool"
@@ -8952,15 +10482,69 @@
  },
  {
   "cat": "Weapon",
+  "en": "Laser Rifle",
+  "fr": "Fusil laser",
+  "id": "item:LaserRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Rifle",
+  "fr": "Fusil laser",
+  "id": "item:LaserRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Rifle",
+  "fr": "Fusil laser",
+  "id": "item:LaserRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Rifle",
+  "fr": "Fusil laser",
+  "id": "item:LaserRifle_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Rocket Launcher",
   "fr": "Lance-fusées",
   "id": "item:Launcher_Default"
  },
  {
   "cat": "Weapon",
+  "en": "Rocket Launcher",
+  "fr": "Lance-fusées",
+  "id": "item:Launcher_Default_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Rocket Launcher",
+  "fr": "Lance-fusées",
+  "id": "item:Launcher_Default_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Rocket Launcher",
+  "fr": "Lance-fusées",
+  "id": "item:Launcher_Default_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Rocket Launcher",
+  "fr": "Lance-fusées",
+  "id": "item:Launcher_Default_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Meteor Launcher",
   "fr": "Lance-météorites",
   "id": "item:Launcher_Meteor"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Meteor Launcher",
+  "fr": "Lance-météorites",
+  "id": "item:Launcher_Meteor_5"
  },
  {
   "cat": "Material",
@@ -9102,9 +10686,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Makeshift Assault Rifle",
+  "fr": "Fusil d'assaut usé",
+  "id": "item:MakeshiftAssaultRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Assault Rifle",
+  "fr": "Fusil d'assaut usé",
+  "id": "item:MakeshiftAssaultRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Assault Rifle",
+  "fr": "Fusil d'assaut usé",
+  "id": "item:MakeshiftAssaultRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Assault Rifle",
+  "fr": "Fusil d'assaut usé",
+  "id": "item:MakeshiftAssaultRifle_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Makeshift Handgun",
   "fr": "Pistolet rouillé",
   "id": "item:MakeshiftHandgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Handgun",
+  "fr": "Pistolet rouillé",
+  "id": "item:MakeshiftHandgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Handgun",
+  "fr": "Pistolet rouillé",
+  "id": "item:MakeshiftHandgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Handgun",
+  "fr": "Pistolet rouillé",
+  "id": "item:MakeshiftHandgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Handgun",
+  "fr": "Pistolet rouillé",
+  "id": "item:MakeshiftHandgun_5"
  },
  {
   "cat": "Weapon",
@@ -9114,9 +10746,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Makeshift Shotgun",
+  "fr": "Fusil à pompe usé",
+  "id": "item:MakeshiftShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Shotgun",
+  "fr": "Fusil à pompe usé",
+  "id": "item:MakeshiftShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Shotgun",
+  "fr": "Fusil à pompe usé",
+  "id": "item:MakeshiftShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift Shotgun",
+  "fr": "Fusil à pompe usé",
+  "id": "item:MakeshiftShotgun_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Makeshift SMG",
   "fr": "Pistolet-mitrailleur usé",
   "id": "item:MakeshiftSubmachineGun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift SMG",
+  "fr": "Pistolet-mitrailleur usé",
+  "id": "item:MakeshiftSubmachineGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift SMG",
+  "fr": "Pistolet-mitrailleur usé",
+  "id": "item:MakeshiftSubmachineGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift SMG",
+  "fr": "Pistolet-mitrailleur usé",
+  "id": "item:MakeshiftSubmachineGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Makeshift SMG",
+  "fr": "Pistolet-mitrailleur usé",
+  "id": "item:MakeshiftSubmachineGun_5"
  },
  {
   "cat": "Material",
@@ -9323,6 +11003,30 @@
   "id": "item:MultiGuidedMissileLauncher"
  },
  {
+  "cat": "Weapon",
+  "en": "Multi Guided Missile Launcher",
+  "fr": "Lance-missiles multiple",
+  "id": "item:MultiGuidedMissileLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Multi Guided Missile Launcher",
+  "fr": "Lance-missiles multiple",
+  "id": "item:MultiGuidedMissileLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Multi Guided Missile Launcher",
+  "fr": "Lance-missiles multiple",
+  "id": "item:MultiGuidedMissileLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Multi Guided Missile Launcher",
+  "fr": "Lance-missiles multiple",
+  "id": "item:MultiGuidedMissileLauncher_5"
+ },
+ {
   "cat": "Food",
   "en": "Mushroom",
   "fr": "Champignon",
@@ -9353,6 +11057,30 @@
   "id": "item:Musket"
  },
  {
+  "cat": "Weapon",
+  "en": "Musket",
+  "fr": "Fusil à mousquet",
+  "id": "item:Musket_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Musket",
+  "fr": "Fusil à mousquet",
+  "id": "item:Musket_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Musket",
+  "fr": "Fusil à mousquet",
+  "id": "item:Musket_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Musket",
+  "fr": "Fusil à mousquet",
+  "id": "item:Musket_5"
+ },
+ {
   "cat": "Consume",
   "en": "Strange Juice",
   "fr": "Boisson étrange",
@@ -9378,9 +11106,21 @@
  },
  {
   "cat": "Armor",
+  "en": "V1 Armor",
+  "fr": "Armure V1",
+  "id": "item:Octavia001_Armor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "V2 Armor",
   "fr": "Armure V2",
   "id": "item:Octavia002_Armor"
+ },
+ {
+  "cat": "Armor",
+  "en": "V2 Armor",
+  "fr": "Armure V2",
+  "id": "item:Octavia002_Armor_5"
  },
  {
   "cat": "Weapon",
@@ -9390,9 +11130,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Marksman Revolver",
+  "fr": "Revolver Marksman",
+  "id": "item:OctaviaRevolver_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Marksman Revolver",
+  "fr": "Revolver Marksman",
+  "id": "item:OctaviaRevolver_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Marksman Revolver",
+  "fr": "Revolver Marksman",
+  "id": "item:OctaviaRevolver_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Marksman Revolver",
+  "fr": "Revolver Marksman",
+  "id": "item:OctaviaRevolver_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Core Eject Shotgun",
   "fr": "Fusil à pompe Core Eject",
   "id": "item:OctaviaShotgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Core Eject Shotgun",
+  "fr": "Fusil à pompe Core Eject",
+  "id": "item:OctaviaShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Core Eject Shotgun",
+  "fr": "Fusil à pompe Core Eject",
+  "id": "item:OctaviaShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Core Eject Shotgun",
+  "fr": "Fusil à pompe Core Eject",
+  "id": "item:OctaviaShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Core Eject Shotgun",
+  "fr": "Fusil à pompe Core Eject",
+  "id": "item:OctaviaShotgun_5"
  },
  {
   "cat": "Food",
@@ -9411,6 +11199,30 @@
   "en": "Old Revolver",
   "fr": "Vieux revolver",
   "id": "item:OldRevolver"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Revolver",
+  "fr": "Vieux revolver",
+  "id": "item:OldRevolver_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Revolver",
+  "fr": "Vieux revolver",
+  "id": "item:OldRevolver_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Revolver",
+  "fr": "Vieux revolver",
+  "id": "item:OldRevolver_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Revolver",
+  "fr": "Vieux revolver",
+  "id": "item:OldRevolver_5"
  },
  {
   "cat": "Food",
@@ -9771,6 +11583,30 @@
   "en": "Overheat Rifle",
   "fr": "Fusil à surchauffe",
   "id": "item:OverheatRifle"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Overheat Rifle",
+  "fr": "Fusil à surchauffe",
+  "id": "item:OverheatRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Overheat Rifle",
+  "fr": "Fusil à surchauffe",
+  "id": "item:OverheatRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Overheat Rifle",
+  "fr": "Fusil à surchauffe",
+  "id": "item:OverheatRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Overheat Rifle",
+  "fr": "Fusil à surchauffe",
+  "id": "item:OverheatRifle_5"
  },
  {
   "cat": "Ammo",
@@ -11064,9 +12900,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Plasteel Armor",
+  "fr": "Armure en plastacier",
+  "id": "item:PlasticArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Armor",
+  "fr": "Armure en plastacier",
+  "id": "item:PlasticArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Armor",
+  "fr": "Armure en plastacier",
+  "id": "item:PlasticArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Armor",
+  "fr": "Armure en plastacier",
+  "id": "item:PlasticArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Plasteel Armor",
   "fr": "Armure en plastacier anti-froid",
   "id": "item:PlasticArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-froid",
+  "id": "item:PlasticArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-froid",
+  "id": "item:PlasticArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-froid",
+  "id": "item:PlasticArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-froid",
+  "id": "item:PlasticArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -11076,15 +12960,87 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-chaleur",
+  "id": "item:PlasticArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-chaleur",
+  "id": "item:PlasticArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-chaleur",
+  "id": "item:PlasticArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Plasteel Armor",
+  "fr": "Armure en plastacier anti-chaleur",
+  "id": "item:PlasticArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Lightweight Plasteel Armor",
   "fr": "Armure en plastacier légère",
   "id": "item:PlasticArmorWeight"
  },
  {
   "cat": "Armor",
+  "en": "Lightweight Plasteel Armor",
+  "fr": "Armure en plastacier légère",
+  "id": "item:PlasticArmorWeight_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Plasteel Armor",
+  "fr": "Armure en plastacier légère",
+  "id": "item:PlasticArmorWeight_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Plasteel Armor",
+  "fr": "Armure en plastacier légère",
+  "id": "item:PlasticArmorWeight_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Plasteel Armor",
+  "fr": "Armure en plastacier légère",
+  "id": "item:PlasticArmorWeight_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Plasteel Helmet",
   "fr": "Casque en plastacier",
   "id": "item:PlasticHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Helmet",
+  "fr": "Casque en plastacier",
+  "id": "item:PlasticHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Helmet",
+  "fr": "Casque en plastacier",
+  "id": "item:PlasticHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Helmet",
+  "fr": "Casque en plastacier",
+  "id": "item:PlasticHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Plasteel Helmet",
+  "fr": "Casque en plastacier",
+  "id": "item:PlasticHelmet_5"
  },
  {
   "cat": "Armor",
@@ -11199,6 +13155,30 @@
   "en": "Pump-Action Shotgun",
   "fr": "Fusil à pompe",
   "id": "item:PumpActionShotgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Pump-Action Shotgun",
+  "fr": "Fusil à pompe",
+  "id": "item:PumpActionShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Pump-Action Shotgun",
+  "fr": "Fusil à pompe",
+  "id": "item:PumpActionShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Pump-Action Shotgun",
+  "fr": "Fusil à pompe",
+  "id": "item:PumpActionShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Pump-Action Shotgun",
+  "fr": "Fusil à pompe",
+  "id": "item:PumpActionShotgun_5"
  },
  {
   "cat": "Material",
@@ -11430,9 +13410,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Semi-Auto Rifle",
+  "fr": "Fusil semi-automatique",
+  "id": "item:SemiAutoRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Rifle",
+  "fr": "Fusil semi-automatique",
+  "id": "item:SemiAutoRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Rifle",
+  "fr": "Fusil semi-automatique",
+  "id": "item:SemiAutoRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Rifle",
+  "fr": "Fusil semi-automatique",
+  "id": "item:SemiAutoRifle_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Semi-Auto Shotgun",
   "fr": "Fusil à pompe semi-automatique",
   "id": "item:SemiAutoShotgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Shotgun",
+  "fr": "Fusil à pompe semi-automatique",
+  "id": "item:SemiAutoShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Shotgun",
+  "fr": "Fusil à pompe semi-automatique",
+  "id": "item:SemiAutoShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Shotgun",
+  "fr": "Fusil à pompe semi-automatique",
+  "id": "item:SemiAutoShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Semi-Auto Shotgun",
+  "fr": "Fusil à pompe semi-automatique",
+  "id": "item:SemiAutoShotgun_5"
  },
  {
   "cat": "Armor",
@@ -11442,9 +13470,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Hexolite Armor",
+  "fr": "Armure en hexolite",
+  "id": "item:SFArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Armor",
+  "fr": "Armure en hexolite",
+  "id": "item:SFArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Armor",
+  "fr": "Armure en hexolite",
+  "id": "item:SFArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Armor",
+  "fr": "Armure en hexolite",
+  "id": "item:SFArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Hexolite Armor",
   "fr": "Armure en hexolite anti-froid",
   "id": "item:SFArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-froid",
+  "id": "item:SFArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-froid",
+  "id": "item:SFArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-froid",
+  "id": "item:SFArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-froid",
+  "id": "item:SFArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -11454,9 +13530,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-chaleur",
+  "id": "item:SFArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-chaleur",
+  "id": "item:SFArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-chaleur",
+  "id": "item:SFArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Hexolite Armor",
+  "fr": "Armure en hexolite anti-chaleur",
+  "id": "item:SFArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Lightweight Hexolite Armor",
   "fr": "Armure en hexolite légère",
   "id": "item:SFArmorWeight"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Hexolite Armor",
+  "fr": "Armure en hexolite légère",
+  "id": "item:SFArmorWeight_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Hexolite Armor",
+  "fr": "Armure en hexolite légère",
+  "id": "item:SFArmorWeight_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Hexolite Armor",
+  "fr": "Armure en hexolite légère",
+  "id": "item:SFArmorWeight_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Lightweight Hexolite Armor",
+  "fr": "Armure en hexolite légère",
+  "id": "item:SFArmorWeight_5"
  },
  {
   "cat": "Ammo",
@@ -11471,10 +13595,58 @@
   "id": "item:SFBow"
  },
  {
+  "cat": "Weapon",
+  "en": "Advanced Bow",
+  "fr": "Arc avancé",
+  "id": "item:SFBow_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Advanced Bow",
+  "fr": "Arc avancé",
+  "id": "item:SFBow_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Advanced Bow",
+  "fr": "Arc avancé",
+  "id": "item:SFBow_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Advanced Bow",
+  "fr": "Arc avancé",
+  "id": "item:SFBow_5"
+ },
+ {
   "cat": "Armor",
   "en": "Hexolite Helmet",
   "fr": "Casque en hexolite",
   "id": "item:SFHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Helmet",
+  "fr": "Casque en hexolite",
+  "id": "item:SFHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Helmet",
+  "fr": "Casque en hexolite",
+  "id": "item:SFHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Helmet",
+  "fr": "Casque en hexolite",
+  "id": "item:SFHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hexolite Helmet",
+  "fr": "Casque en hexolite",
+  "id": "item:SFHelmet_5"
  },
  {
   "cat": "Armor",
@@ -11519,6 +13691,12 @@
   "id": "item:Shield_SF"
  },
  {
+  "cat": "Armor",
+  "en": "Ultra Shield",
+  "fr": "Ultra bouclier",
+  "id": "item:Shield_Ultra"
+ },
+ {
   "cat": "Ammo",
   "en": "Shotgun Shell",
   "fr": "Cartouches de fusil à pompe",
@@ -11535,6 +13713,30 @@
   "en": "Single-Shot Rifle",
   "fr": "Fusil à un coup",
   "id": "item:SingleShotRifle"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Single-Shot Rifle",
+  "fr": "Fusil à un coup",
+  "id": "item:SingleShotRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Single-Shot Rifle",
+  "fr": "Fusil à un coup",
+  "id": "item:SingleShotRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Single-Shot Rifle",
+  "fr": "Fusil à un coup",
+  "id": "item:SingleShotRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Single-Shot Rifle",
+  "fr": "Fusil à un coup",
+  "id": "item:SingleShotRifle_5"
  },
  {
   "cat": "Consume",
@@ -12959,6 +15161,30 @@
   "id": "item:SkyAssaultRifle"
  },
  {
+  "cat": "Weapon",
+  "en": "Heavy Assault Rifle",
+  "fr": "Fusil d’assaut astral",
+  "id": "item:SkyAssaultRifle_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Heavy Assault Rifle",
+  "fr": "Fusil d’assaut astral",
+  "id": "item:SkyAssaultRifle_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Heavy Assault Rifle",
+  "fr": "Fusil d’assaut astral",
+  "id": "item:SkyAssaultRifle_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Heavy Assault Rifle",
+  "fr": "Fusil d’assaut astral",
+  "id": "item:SkyAssaultRifle_5"
+ },
+ {
   "cat": "Ammo",
   "en": "Heavy Assault Rifle Ammo",
   "fr": "Cartouches de fusil d’assaut astral",
@@ -12972,9 +15198,57 @@
  },
  {
   "cat": "Weapon",
+  "en": "Laser Sword",
+  "fr": "Épée laser",
+  "id": "item:SkyBeamSword_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Sword",
+  "fr": "Épée laser",
+  "id": "item:SkyBeamSword_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Sword",
+  "fr": "Épée laser",
+  "id": "item:SkyBeamSword_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Laser Sword",
+  "fr": "Épée laser",
+  "id": "item:SkyBeamSword_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Mechanical Bow",
   "fr": "Arc astral",
   "id": "item:SkyBow"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Mechanical Bow",
+  "fr": "Arc astral",
+  "id": "item:SkyBow_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Mechanical Bow",
+  "fr": "Arc astral",
+  "id": "item:SkyBow_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Mechanical Bow",
+  "fr": "Arc astral",
+  "id": "item:SkyBow_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Mechanical Bow",
+  "fr": "Arc astral",
+  "id": "item:SkyBow_5"
  },
  {
   "cat": "Ammo",
@@ -12987,6 +15261,30 @@
   "en": "Tactical Grenade Launcher",
   "fr": "Lance-grenades astral",
   "id": "item:SkyGrenadeLauncher"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Tactical Grenade Launcher",
+  "fr": "Lance-grenades astral",
+  "id": "item:SkyGrenadeLauncher_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Tactical Grenade Launcher",
+  "fr": "Lance-grenades astral",
+  "id": "item:SkyGrenadeLauncher_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Tactical Grenade Launcher",
+  "fr": "Lance-grenades astral",
+  "id": "item:SkyGrenadeLauncher_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Tactical Grenade Launcher",
+  "fr": "Lance-grenades astral",
+  "id": "item:SkyGrenadeLauncher_5"
  },
  {
   "cat": "Ammo",
@@ -13025,6 +15323,30 @@
   "id": "item:SkyShotgun"
  },
  {
+  "cat": "Weapon",
+  "en": "Prototype Shotgun",
+  "fr": "Fusil à pompe astral",
+  "id": "item:SkyShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Prototype Shotgun",
+  "fr": "Fusil à pompe astral",
+  "id": "item:SkyShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Prototype Shotgun",
+  "fr": "Fusil à pompe astral",
+  "id": "item:SkyShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Prototype Shotgun",
+  "fr": "Fusil à pompe astral",
+  "id": "item:SkyShotgun_5"
+ },
+ {
   "cat": "Ammo",
   "en": "Prototype Shotgun Ammo",
   "fr": "Cartouches de fusil à pompe astral",
@@ -13035,6 +15357,30 @@
   "en": "Combat SMG",
   "fr": "Pistolet-mitrailleur astral",
   "id": "item:SkySubmachineGun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Combat SMG",
+  "fr": "Pistolet-mitrailleur astral",
+  "id": "item:SkySubmachineGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Combat SMG",
+  "fr": "Pistolet-mitrailleur astral",
+  "id": "item:SkySubmachineGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Combat SMG",
+  "fr": "Pistolet-mitrailleur astral",
+  "id": "item:SkySubmachineGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Combat SMG",
+  "fr": "Pistolet-mitrailleur astral",
+  "id": "item:SkySubmachineGun_5"
  },
  {
   "cat": "Ammo",
@@ -13068,9 +15414,21 @@
  },
  {
   "cat": "Weapon",
+  "en": "Lily's Spear",
+  "fr": "Lance de Lily",
+  "id": "item:Spear_ForestBoss_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Enhanced Lily's Spear",
   "fr": "Lance de Lily améliorée",
   "id": "item:Spear_ForestBoss2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Enhanced Lily's Spear",
+  "fr": "Lance de Lily améliorée",
+  "id": "item:Spear_ForestBoss2_5"
  },
  {
   "cat": "Weapon",
@@ -13158,9 +15516,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Pal Metal Armor",
+  "fr": "Armure en paluminium",
+  "id": "item:StealArmor_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Armor",
+  "fr": "Armure en paluminium",
+  "id": "item:StealArmor_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Armor",
+  "fr": "Armure en paluminium",
+  "id": "item:StealArmor_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Armor",
+  "fr": "Armure en paluminium",
+  "id": "item:StealArmor_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Cold Resistant Pal Metal Armor",
   "fr": "Armure en paluminium anti-froid",
   "id": "item:StealArmorCold"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-froid",
+  "id": "item:StealArmorCold_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-froid",
+  "id": "item:StealArmorCold_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-froid",
+  "id": "item:StealArmorCold_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Cold Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-froid",
+  "id": "item:StealArmorCold_5"
  },
  {
   "cat": "Armor",
@@ -13170,9 +15576,57 @@
  },
  {
   "cat": "Armor",
+  "en": "Heat Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-chaleur",
+  "id": "item:StealArmorHeat_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-chaleur",
+  "id": "item:StealArmorHeat_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-chaleur",
+  "id": "item:StealArmorHeat_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Heat Resistant Pal Metal Armor",
+  "fr": "Armure en paluminium anti-chaleur",
+  "id": "item:StealArmorHeat_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Pal Metal Helm",
   "fr": "Heaume en paluminium",
   "id": "item:StealHelmet"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Helm",
+  "fr": "Heaume en paluminium",
+  "id": "item:StealHelmet_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Helm",
+  "fr": "Heaume en paluminium",
+  "id": "item:StealHelmet_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Helm",
+  "fr": "Heaume en paluminium",
+  "id": "item:StealHelmet_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Pal Metal Helm",
+  "fr": "Heaume en paluminium",
+  "id": "item:StealHelmet_5"
  },
  {
   "cat": "Material",
@@ -13211,6 +15665,30 @@
   "id": "item:SubmachineGun"
  },
  {
+  "cat": "Weapon",
+  "en": "SMG",
+  "fr": "Pistolet-mitrailleur",
+  "id": "item:SubmachineGun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "SMG",
+  "fr": "Pistolet-mitrailleur",
+  "id": "item:SubmachineGun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "SMG",
+  "fr": "Pistolet-mitrailleur",
+  "id": "item:SubmachineGun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "SMG",
+  "fr": "Pistolet-mitrailleur",
+  "id": "item:SubmachineGun_5"
+ },
+ {
   "cat": "Material",
   "en": "Sulfur",
   "fr": "Soufre",
@@ -13239,6 +15717,30 @@
   "en": "Sword",
   "fr": "Épée",
   "id": "item:Sword"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Sword",
+  "fr": "Épée",
+  "id": "item:Sword_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Sword",
+  "fr": "Épée",
+  "id": "item:Sword_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Sword",
+  "fr": "Épée",
+  "id": "item:Sword_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Sword",
+  "fr": "Épée",
+  "id": "item:Sword_5"
  },
  {
   "cat": "Consume",
@@ -13305,6 +15807,30 @@
   "en": "Treasure Map",
   "fr": "Carte au trésor",
   "id": "item:TreasureMap01"
+ },
+ {
+  "cat": "Consume",
+  "en": "Treasure Map",
+  "fr": "Carte au trésor",
+  "id": "item:TreasureMap02"
+ },
+ {
+  "cat": "Consume",
+  "en": "Treasure Map",
+  "fr": "Carte au trésor",
+  "id": "item:TreasureMap03"
+ },
+ {
+  "cat": "Consume",
+  "en": "Treasure Map",
+  "fr": "Carte au trésor",
+  "id": "item:TreasureMap04"
+ },
+ {
+  "cat": "Consume",
+  "en": "Treasure Map",
+  "fr": "Carte au trésor",
+  "id": "item:TreasureMap05"
  },
  {
   "cat": "Material",
@@ -13391,6 +15917,30 @@
   "id": "item:WeakerBow"
  },
  {
+  "cat": "Weapon",
+  "en": "Old Bow",
+  "fr": "Vieil arc",
+  "id": "item:WeakerBow_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Bow",
+  "fr": "Vieil arc",
+  "id": "item:WeakerBow_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Bow",
+  "fr": "Vieil arc",
+  "id": "item:WeakerBow_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Old Bow",
+  "fr": "Vieil arc",
+  "id": "item:WeakerBow_5"
+ },
+ {
   "cat": "Essential",
   "en": "Echoing Flute",
   "fr": "Flûte de l'écho",
@@ -13437,6 +15987,30 @@
   "en": "Beam Scatter",
   "fr": "Disperseur à faisceau",
   "id": "item:WidePenetrateShotgun"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Scatter",
+  "fr": "Disperseur à faisceau",
+  "id": "item:WidePenetrateShotgun_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Scatter",
+  "fr": "Disperseur à faisceau",
+  "id": "item:WidePenetrateShotgun_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Scatter",
+  "fr": "Disperseur à faisceau",
+  "id": "item:WidePenetrateShotgun_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Beam Scatter",
+  "fr": "Disperseur à faisceau",
+  "id": "item:WidePenetrateShotgun_5"
  },
  {
   "cat": "Ammo",
@@ -13625,6 +16199,30 @@
   "id": "item:YakushimaArmor001"
  },
  {
+  "cat": "Armor",
+  "en": "Hallowed Plate Mail",
+  "fr": "Buste d’armure sacrée",
+  "id": "item:YakushimaArmor001_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Plate Mail",
+  "fr": "Buste d’armure sacrée",
+  "id": "item:YakushimaArmor001_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Plate Mail",
+  "fr": "Buste d’armure sacrée",
+  "id": "item:YakushimaArmor001_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Plate Mail",
+  "fr": "Buste d’armure sacrée",
+  "id": "item:YakushimaArmor001_5"
+ },
+ {
   "cat": "Weapon",
   "en": "Meowmere",
   "fr": "Épée Arc-en-ciel",
@@ -13638,15 +16236,87 @@
  },
  {
   "cat": "Weapon",
+  "en": "Terra Blade",
+  "fr": "Lame Terra",
+  "id": "item:YakushimaBlade002_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terra Blade",
+  "fr": "Lame Terra",
+  "id": "item:YakushimaBlade002_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terra Blade",
+  "fr": "Lame Terra",
+  "id": "item:YakushimaBlade002_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terra Blade",
+  "fr": "Lame Terra",
+  "id": "item:YakushimaBlade002_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Terraprisma",
   "fr": "Terraprisma",
   "id": "item:YakushimaBlade003"
  },
  {
   "cat": "Weapon",
+  "en": "Terraprisma",
+  "fr": "Terraprisma",
+  "id": "item:YakushimaBlade003_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terraprisma",
+  "fr": "Terraprisma",
+  "id": "item:YakushimaBlade003_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terraprisma",
+  "fr": "Terraprisma",
+  "id": "item:YakushimaBlade003_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Terraprisma",
+  "fr": "Terraprisma",
+  "id": "item:YakushimaBlade003_5"
+ },
+ {
+  "cat": "Weapon",
   "en": "Excalibur",
   "fr": "Excalibur",
   "id": "item:YakushimaBlade004"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Excalibur",
+  "fr": "Excalibur",
+  "id": "item:YakushimaBlade004_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Excalibur",
+  "fr": "Excalibur",
+  "id": "item:YakushimaBlade004_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Excalibur",
+  "fr": "Excalibur",
+  "id": "item:YakushimaBlade004_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Excalibur",
+  "fr": "Excalibur",
+  "id": "item:YakushimaBlade004_5"
  },
  {
   "cat": "Weapon",
@@ -13661,10 +16331,58 @@
   "id": "item:YakushimaGun001"
  },
  {
+  "cat": "Weapon",
+  "en": "Vortex Beater",
+  "fr": "Batteur du Vortex",
+  "id": "item:YakushimaGun001_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Vortex Beater",
+  "fr": "Batteur du Vortex",
+  "id": "item:YakushimaGun001_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Vortex Beater",
+  "fr": "Batteur du Vortex",
+  "id": "item:YakushimaGun001_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Vortex Beater",
+  "fr": "Batteur du Vortex",
+  "id": "item:YakushimaGun001_5"
+ },
+ {
   "cat": "Armor",
   "en": "Hallowed Mask",
   "fr": "Masque sacré",
   "id": "item:YakushimaHeadEquip001"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Mask",
+  "fr": "Masque sacré",
+  "id": "item:YakushimaHeadEquip001_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Mask",
+  "fr": "Masque sacré",
+  "id": "item:YakushimaHeadEquip001_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Mask",
+  "fr": "Masque sacré",
+  "id": "item:YakushimaHeadEquip001_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Mask",
+  "fr": "Masque sacré",
+  "id": "item:YakushimaHeadEquip001_5"
  },
  {
   "cat": "Armor",
@@ -13674,15 +16392,87 @@
  },
  {
   "cat": "Armor",
+  "en": "Hallowed Headgear",
+  "fr": "Couvre-chef sacré",
+  "id": "item:YakushimaHeadEquip002_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Headgear",
+  "fr": "Couvre-chef sacré",
+  "id": "item:YakushimaHeadEquip002_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Headgear",
+  "fr": "Couvre-chef sacré",
+  "id": "item:YakushimaHeadEquip002_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Headgear",
+  "fr": "Couvre-chef sacré",
+  "id": "item:YakushimaHeadEquip002_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Hallowed Helmet",
   "fr": "Casque sacré",
   "id": "item:YakushimaHeadEquip003"
  },
  {
   "cat": "Armor",
+  "en": "Hallowed Helmet",
+  "fr": "Casque sacré",
+  "id": "item:YakushimaHeadEquip003_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Helmet",
+  "fr": "Casque sacré",
+  "id": "item:YakushimaHeadEquip003_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Helmet",
+  "fr": "Casque sacré",
+  "id": "item:YakushimaHeadEquip003_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Helmet",
+  "fr": "Casque sacré",
+  "id": "item:YakushimaHeadEquip003_5"
+ },
+ {
+  "cat": "Armor",
   "en": "Hallowed Hood",
   "fr": "Capuche sacrée",
   "id": "item:YakushimaHeadEquip004"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Hood",
+  "fr": "Capuche sacrée",
+  "id": "item:YakushimaHeadEquip004_2"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Hood",
+  "fr": "Capuche sacrée",
+  "id": "item:YakushimaHeadEquip004_3"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Hood",
+  "fr": "Capuche sacrée",
+  "id": "item:YakushimaHeadEquip004_4"
+ },
+ {
+  "cat": "Armor",
+  "en": "Hallowed Hood",
+  "fr": "Capuche sacrée",
+  "id": "item:YakushimaHeadEquip004_5"
  },
  {
   "cat": "Armor",
@@ -13713,6 +16503,30 @@
   "en": "Nightglow",
   "fr": "Illuminuit",
   "id": "item:YakushimaLantern001"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Nightglow",
+  "fr": "Illuminuit",
+  "id": "item:YakushimaLantern001_2"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Nightglow",
+  "fr": "Illuminuit",
+  "id": "item:YakushimaLantern001_3"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Nightglow",
+  "fr": "Illuminuit",
+  "id": "item:YakushimaLantern001_4"
+ },
+ {
+  "cat": "Weapon",
+  "en": "Nightglow",
+  "fr": "Illuminuit",
+  "id": "item:YakushimaLantern001_5"
  },
  {
   "en": "Chillet",

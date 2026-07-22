@@ -49,11 +49,14 @@
 	{#if droppers.length}
 		<h3>{m.item_dropped_by()}</h3>
 		<ul class="droppers">
-			{#each droppers as palId (palId)}
+			{#each droppers as d (d.palId)}
 				<li>
-					<a href="/paldex/{palId}">
-						{#if palIcon(palId)}<img src={palIcon(palId)} alt="" width="26" height="26" />{/if}
-						{gameName(`pal:${palId}`)}
+					<a href="/paldex/{d.palId}">
+						{#if palIcon(d.palId)}<img src={palIcon(d.palId)} alt="" width="26" height="26" />{/if}
+						{gameName(`pal:${d.palId}`)}
+						<span class="qty tnum"
+							>×{d.min}{d.max !== d.min ? `–${d.max}` : ''}{d.rate < 100 ? ` (${d.rate}%)` : ''}</span
+						>
 					</a>
 				</li>
 			{/each}
@@ -147,6 +150,10 @@
 	.used a:hover {
 		color: var(--text-1);
 		border-color: var(--border-strong);
+	}
+	.qty {
+		color: var(--text-3);
+		font-size: 12px;
 	}
 	.more {
 		color: var(--text-4);

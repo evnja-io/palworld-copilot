@@ -183,3 +183,17 @@ FR→EN→id (des items affichaient « fr_Text »).
   dans lib.ts) ; items.ts exclut les items dont le nom EN est un placeholder
   (90 ids debug/inutilisés retirés d'items.json, régénéré avec
   ALLOW_ID_REMOVALS=1 — aucun n'est matériau de recette ni drop de pal).
+
+## 2026-07-22 — Variantes d'équipement par rareté : résolution OverrideName
+
+**Constat** : les variantes `_2.._5` des armes/armures (Rarity 1..4) n'ont pas
+d'entrée L10N propre — le jeu résout leur nom/description via
+`OverrideName`/`OverrideDescription` (clé de l'item de base). Le pipeline les
+ignorait : absentes d'items.json mais leurs recettes restaient dans
+recipes.json → la page Craft affichait les ids bruts (Head005_2,
+YakushimaHeadEquip002_4…).
+**Décision** : l10n.ts matérialise la résolution OverrideName/Description ;
+items.ts encyclopédise les variantes dont l'override résout (items.json
+1875 → 2344, rareté distinctive déjà émise) ; les recettes d'un produit
+toujours non nommable sont écartées (6 : FlameThrower jamais nommé + Hotmilk
+sans ligne d'item). Icônes déjà couvertes par la passe d'alias IconName.

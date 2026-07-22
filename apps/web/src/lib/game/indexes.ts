@@ -49,9 +49,15 @@ for (const r of recipes) {
   for (const mat of r.materials) push(recipesUsingItem, mat.id, r);
 }
 
-export const palsDropping = new Map<string, string[]>();
-for (const p of palsJson as Array<{ id: string; drops: Array<{ itemId: string }> }>) {
-  for (const d of p.drops) push(palsDropping, d.itemId, p.id);
+export type PalDrop = { palId: string; min: number; max: number; rate: number };
+
+export const palsDropping = new Map<string, PalDrop[]>();
+for (const p of palsJson as Array<{
+  id: string;
+  drops: Array<{ itemId: string; min: number; max: number; rate: number }>;
+}>) {
+  for (const d of p.drops)
+    push(palsDropping, d.itemId, { palId: p.id, min: d.min, max: d.max, rate: d.rate });
 }
 
 /** Techno débloquant une recette ou une construction (clé = id débloqué). */

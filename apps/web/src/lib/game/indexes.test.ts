@@ -15,10 +15,17 @@ describe("index inversés", () => {
   it("retrouve les recettes consommant le bois", () => {
     expect(recipesUsingItem.get("Wood")?.length).toBeGreaterThan(5);
   });
-  it("retrouve les Pals droppant du cuir", () => {
+  it("retrouve les Pals droppant du cuir, avec quantités et taux", () => {
     // Le bois brut n'est droppé par aucun Pal (il vient des arbres) ;
     // le cuir est le drop le plus répandu.
-    expect(palsDropping.get("Leather")?.length).toBeGreaterThan(10);
+    const drops = palsDropping.get("Leather");
+    expect(drops?.length).toBeGreaterThan(10);
+    for (const d of drops!) {
+      expect(d.palId).toBeTruthy();
+      expect(d.min).toBeGreaterThan(0);
+      expect(d.max).toBeGreaterThanOrEqual(d.min);
+      expect(d.rate).toBeGreaterThan(0);
+    }
   });
   it("retrouve la techno débloquant une recette", () => {
     const anyTech = techUnlocking.size;

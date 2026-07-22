@@ -57,6 +57,21 @@ for (const locale of ["en", "fr"] as const) {
         .replace(/<mapObjectName id=\|([^|]+)\|\/>/gi, (_, id) => names[`building:${id}`] ?? id);
     }
   }
+  // Les variantes d'équipement par rareté (_2.._5) n'ont pas d'entrée L10N
+  // propre : le jeu résout leur nom via OverrideName/OverrideDescription
+  // (clé L10N de l'item de base). On matérialise cette résolution.
+  for (const [id, row] of Object.entries(loadDataTableRows(/DT_ItemDataTable/)) as [string, any][]) {
+    const ovName = row.OverrideName;
+    if (ovName && ovName !== "None" && !names[`item:${id}`]) {
+      const src = names[`item:${ovName.replace(/^ITEM_NAME_/, "")}`];
+      if (src) names[`item:${id}`] = src;
+    }
+    const ovDesc = row.OverrideDescription;
+    if (ovDesc && ovDesc !== "None" && !descs[`item:${id}`]) {
+      const src = descs[`item:${ovDesc.replace(/^ITEM_DESC_/, "")}`];
+      if (src) descs[`item:${id}`] = src;
+    }
+  }
   // La casse des clés de noms diverge parfois de l'id paramètre (PAL_NAME_Windchimes
   // vs WindChimes) : on recopie le nom sous la casse de DT_PalMonsterParameter.
   for (const dict of [names, descs]) {

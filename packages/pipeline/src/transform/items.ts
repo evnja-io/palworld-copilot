@@ -9,8 +9,15 @@ const namedIds = new Set(
     .filter(([, text]) => !isL10nPlaceholder(text))
     .map(([id]) => id),
 );
+// Les variantes par rareté (_2.._5, champ Rarity) empruntent le nom de leur
+// base via OverrideName — nommables en jeu, donc encyclopédiables.
+const hasName = (id: string, row: any): boolean => {
+  if (namedIds.has(id)) return true;
+  const ov = pick<string>(row, "OverrideName");
+  return !!ov && ov !== "None" && namedIds.has(ov.replace(/^ITEM_NAME_/, ""));
+};
 const items = Object.entries(itemRows)
-  .filter(([id]) => namedIds.has(id))
+  .filter(([id, row]) => hasName(id, row))
   .map(([id, row]: [string, any]) => ({
     id,
     typeA: enumName(pick(row, "TypeA")),
@@ -29,7 +36,15 @@ writeGameData("items.json", items);
 const itemIds = new Set(items.map((i) => i.id));
 const recipeRows = loadDataTableRows(/DT_ItemRecipeDataTable/);
 let orphans = 0;
+let droppedRecipes = 0;
 const recipes = Object.entries(recipeRows)
+  // Recette d'un produit non encyclopédiable (FlameThrower jamais nommé,
+  // Hotmilk sans ligne d'item) : résidu de données, inaffichable — écartée.
+  .filter(([, row]: [string, any]) => {
+    const keep = itemIds.has(pick<string>(row, "Product_Id") ?? "");
+    if (!keep) droppedRecipes++;
+    return keep;
+  })
   .map(([id, row]: [string, any]) => {
     const materials = [];
     for (let i = 1; i <= 5; i++) {
@@ -52,4 +67,6 @@ const recipes = Object.entries(recipeRows)
 if (recipes.length < 200) throw new Error(`Comptage recettes suspect : ${recipes.length}`);
 if (orphans > recipes.length * 0.02) throw new Error(`${orphans} matériaux orphelins (réfs vers items inconnus)`);
 writeGameData("recipes.json", recipes);
-console.log(`items OK (${items.length} items, ${recipes.length} recettes, ${orphans} orphelins tolérés)`);
+console.log(
+  `items OK (${items.length} items, ${recipes.length} recettes, ${orphans} orphelins tolérés, ${droppedRecipes} recettes sans produit écartées)`,
+);
