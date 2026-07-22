@@ -28,6 +28,7 @@
 		</nav>
 		<GlobalSearch />
 		<div class="user">
+			<a href="/import" class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
 			<LangSwitch />
 			{#if data.user.avatarUrl}
 				<img src={data.user.avatarUrl} alt="" width="26" height="26" class="avatar" />
@@ -94,6 +95,10 @@
 	}
 	.avatar {
 		border-radius: 50%;
+	}
+	.import-link {
+		font-size: 16px;
+		line-height: 1;
 	}
 	.username {
 		color: var(--text-2);

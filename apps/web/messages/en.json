@@ -55,5 +55,14 @@
   "building_materials": "Materials",
   "building_energy": "Energy",
   "building_work": "Work required",
-  "search_placeholder": "Search ( / )"
+  "search_placeholder": "Search ( / )",
+  "import_title": "Save import",
+  "import_claim": "That's me",
+  "import_claimed_by": "Claimed by {name}",
+  "import_last": "Last import",
+  "import_help": "Import is run from the repo: see docs/extraction-runbook.md.",
+  "import_empty": "No import yet.",
+  "import_kind_pal_caught": "{count} pals",
+  "import_kind_tech_unlocked": "{count} techs",
+  "import_kind_relic": "{count} raw relics"
 }

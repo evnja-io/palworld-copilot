@@ -55,5 +55,14 @@
   "building_materials": "Matériaux",
   "building_energy": "Énergie",
   "building_work": "Travail requis",
-  "search_placeholder": "Rechercher ( / )"
+  "search_placeholder": "Rechercher ( / )",
+  "import_title": "Import de sauvegarde",
+  "import_claim": "C'est moi",
+  "import_claimed_by": "Revendiqué par {name}",
+  "import_last": "Dernier import",
+  "import_help": "L'import se lance depuis le dépôt : voir docs/extraction-runbook.md.",
+  "import_empty": "Aucun import pour l'instant.",
+  "import_kind_pal_caught": "{count} pals",
+  "import_kind_tech_unlocked": "{count} techs",
+  "import_kind_relic": "{count} effigies brutes"
 }
