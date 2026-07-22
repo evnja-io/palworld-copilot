@@ -1,0 +1,1922 @@
+{
+ "AcidRain": {
+  "ct": 8,
+  "element": "Water",
+  "power": 120
+ },
+ "AirBlade": {
+  "ct": 8,
+  "element": "Normal",
+  "power": 160
+ },
+ "AirCanon": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 40
+ },
+ "Apocalypse": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 400
+ },
+ "AquaJet": {
+  "ct": 2,
+  "element": "Water",
+  "power": 40
+ },
+ "BeamSlicer": {
+  "ct": 16,
+  "element": "Dragon",
+  "power": 350
+ },
+ "BlastCanon": {
+  "ct": 12,
+  "element": "Dragon",
+  "power": 200
+ },
+ "BlizzardLance": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 120
+ },
+ "BlueThunderHorse_PartnerSkill": {
+  "ct": 55,
+  "element": "Electricity",
+  "power": 30
+ },
+ "BubbleShot": {
+  "ct": 4,
+  "element": "Water",
+  "power": 80
+ },
+ "BubbleShower": {
+  "ct": 8,
+  "element": "Dark",
+  "power": 160
+ },
+ "ChargeCanon": {
+  "ct": 20,
+  "element": "Dragon",
+  "power": 400
+ },
+ "Commet": {
+  "ct": 8,
+  "element": "Dragon",
+  "power": 180
+ },
+ "CommetRain": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 700
+ },
+ "CreepingBubble": {
+  "ct": 12,
+  "element": "Water",
+  "power": 200
+ },
+ "CrossThunder": {
+  "ct": 7,
+  "element": "Electricity",
+  "power": 1
+ },
+ "CrossWind": {
+  "ct": 24,
+  "element": "Leaf",
+  "power": 500
+ },
+ "DarkArrow": {
+  "ct": 8,
+  "element": "Dark",
+  "power": 120
+ },
+ "DarkBall": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 50
+ },
+ "DarkCanon": {
+  "ct": 4,
+  "element": "Dark",
+  "power": 70
+ },
+ "DarkLaser": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 450
+ },
+ "DarkLegion": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 600
+ },
+ "DarkPulse": {
+  "ct": 4,
+  "element": "Dark",
+  "power": 60
+ },
+ "DarkWave": {
+  "ct": 4,
+  "element": "Dark",
+  "power": 80
+ },
+ "DiamondFall": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "DiversionLaser": {
+  "ct": 12,
+  "element": "Water",
+  "power": 250
+ },
+ "DoubleIcicleThrow": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 700
+ },
+ "DragonBreath": {
+  "ct": 8,
+  "element": "Dragon",
+  "power": 160
+ },
+ "DragonCanon": {
+  "ct": 2,
+  "element": "Dragon",
+  "power": 40
+ },
+ "DragonMeteor": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 600
+ },
+ "DragonWave": {
+  "ct": 4,
+  "element": "Dragon",
+  "power": 80
+ },
+ "ElecWave": {
+  "ct": 4,
+  "element": "Electricity",
+  "power": 80
+ },
+ "EnergyShot": {
+  "ct": 5,
+  "element": "Ice",
+  "power": 1
+ },
+ "Eruption": {
+  "ct": 20,
+  "element": "Fire",
+  "power": 450
+ },
+ "FireBall": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 600
+ },
+ "FireBlast": {
+  "ct": 2,
+  "element": "Fire",
+  "power": 40
+ },
+ "FireSeed": {
+  "ct": 4,
+  "element": "Fire",
+  "power": 80
+ },
+ "FlameFunnel": {
+  "ct": 16,
+  "element": "Fire",
+  "power": 300
+ },
+ "FlameWall": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 250
+ },
+ "Flamethrower": {
+  "ct": 8,
+  "element": "Fire",
+  "power": 160
+ },
+ "FlareArrow": {
+  "ct": 8,
+  "element": "Fire",
+  "power": 120
+ },
+ "FlareTornado": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 200
+ },
+ "FlareTwister": {
+  "ct": 8,
+  "element": "Fire",
+  "power": 130
+ },
+ "FrostBreath": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 160
+ },
+ "Funnel_DreamDemon": {
+  "ct": 5,
+  "element": "Dark",
+  "power": 20
+ },
+ "Funnel_RaijinDaughter": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 30
+ },
+ "Funnel_RaijinDaughter_Water": {
+  "ct": 8,
+  "element": "Dark",
+  "power": 30
+ },
+ "GhostFlame": {
+  "ct": 12,
+  "element": "Dark",
+  "power": 200
+ },
+ "GrassGolem_Dark_PartnerSkill": {
+  "ct": 0,
+  "element": "Dark",
+  "power": 600
+ },
+ "GrassGolem_PartnerSkill": {
+  "ct": 0,
+  "element": "Leaf",
+  "power": 600
+ },
+ "GrassTornado": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 200
+ },
+ "GravityShot": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 40
+ },
+ "HealingTree": {
+  "ct": 2,
+  "element": "Leaf",
+  "power": 1
+ },
+ "HolyBlast": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Human_Punch": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 12
+ },
+ "Human_Rolling": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 0
+ },
+ "HydroPump": {
+  "ct": 20,
+  "element": "Water",
+  "power": 450
+ },
+ "HydroSlicer": {
+  "ct": 16,
+  "element": "Water",
+  "power": 350
+ },
+ "HyperBeam": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 450
+ },
+ "IceAge": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 700
+ },
+ "IceBlade": {
+  "ct": 4,
+  "element": "Ice",
+  "power": 80
+ },
+ "IceMissile": {
+  "ct": 2,
+  "element": "Ice",
+  "power": 40
+ },
+ "IceWall": {
+  "ct": 12,
+  "element": "Ice",
+  "power": 200
+ },
+ "IcicleLine": {
+  "ct": 16,
+  "element": "Ice",
+  "power": 300
+ },
+ "IciclePierce": {
+  "ct": 12,
+  "element": "Ice",
+  "power": 250
+ },
+ "IcicleThrow": {
+  "ct": 20,
+  "element": "Ice",
+  "power": 450
+ },
+ "Inferno": {
+  "ct": 24,
+  "element": "Fire",
+  "power": 500
+ },
+ "Intimidate": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 1
+ },
+ "LightningStrike": {
+  "ct": 16,
+  "element": "Electricity",
+  "power": 300
+ },
+ "LineGeyser": {
+  "ct": 8,
+  "element": "Water",
+  "power": 160
+ },
+ "LineThunder": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 160
+ },
+ "LockonLaser": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 140
+ },
+ "MudShot": {
+  "ct": 2,
+  "element": "Earth",
+  "power": 40
+ },
+ "PoisonFog": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 0
+ },
+ "PoisonShot": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 30
+ },
+ "PoseidonOrca_PartnerSkill": {
+  "ct": 55,
+  "element": "Water",
+  "power": 60
+ },
+ "PoseidonOrca_PartnerSkill_SpearBullet": {
+  "ct": 55,
+  "element": "Water",
+  "power": 50
+ },
+ "PowerBall": {
+  "ct": 8,
+  "element": "Normal",
+  "power": 120
+ },
+ "PowerShot": {
+  "ct": 4,
+  "element": "Normal",
+  "power": 80
+ },
+ "PredatorBeam": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 600
+ },
+ "PredatorLockon": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 400
+ },
+ "PredatorWave": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 200
+ },
+ "Psychokinesis": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "RadiantBarrage": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "RaidCutter": {
+  "ct": 20,
+  "element": "Leaf",
+  "power": 400
+ },
+ "Railbolt": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "RangeThunder": {
+  "ct": 24,
+  "element": "Electricity",
+  "power": 500
+ },
+ "ReflectiveShuriken": {
+  "ct": 20,
+  "element": "Leaf",
+  "power": 400
+ },
+ "RipTide": {
+  "ct": 24,
+  "element": "Water",
+  "power": 500
+ },
+ "RockBeat": {
+  "ct": 30,
+  "element": "Earth",
+  "power": 600
+ },
+ "RockLance": {
+  "ct": 20,
+  "element": "Earth",
+  "power": 400
+ },
+ "RootAttack": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 250
+ },
+ "RootLance": {
+  "ct": 16,
+  "element": "Leaf",
+  "power": 300
+ },
+ "SandTornado": {
+  "ct": 12,
+  "element": "Earth",
+  "power": 200
+ },
+ "SandTwister": {
+  "ct": 24,
+  "element": "Earth",
+  "power": 500
+ },
+ "Scratch": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 100
+ },
+ "SeaGush": {
+  "ct": 30,
+  "element": "Water",
+  "power": 600
+ },
+ "SeedMachinegun": {
+  "ct": 4,
+  "element": "Leaf",
+  "power": 80
+ },
+ "SeedMine": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 120
+ },
+ "SelfDestruct": {
+  "ct": 16,
+  "element": "Normal",
+  "power": 300
+ },
+ "SelfDestruct_Bee": {
+  "ct": 16,
+  "element": "Leaf",
+  "power": 300
+ },
+ "SelfExplosion": {
+  "ct": 60,
+  "element": "Normal",
+  "power": 1200
+ },
+ "ShadowBall": {
+  "ct": 16,
+  "element": "Dark",
+  "power": 300
+ },
+ "ShokeiLaser": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "SnowStorm": {
+  "ct": 5,
+  "element": "Ice",
+  "power": 1
+ },
+ "SolarBeam": {
+  "ct": 20,
+  "element": "Leaf",
+  "power": 450
+ },
+ "SpecialCutter": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 160
+ },
+ "SpreadPulse": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 50
+ },
+ "StarMine": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 400
+ },
+ "StoneShotgun": {
+  "ct": 4,
+  "element": "Earth",
+  "power": 80
+ },
+ "ThreeCommet": {
+  "ct": 20,
+  "element": "Dragon",
+  "power": 450
+ },
+ "ThreeThunder": {
+  "ct": 12,
+  "element": "Electricity",
+  "power": 200
+ },
+ "Throw": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 60
+ },
+ "ThrowRock": {
+  "ct": 8,
+  "element": "Earth",
+  "power": 120
+ },
+ "ThunderBall": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 100
+ },
+ "ThunderFunnel": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 120
+ },
+ "ThunderRain": {
+  "ct": 20,
+  "element": "Electricity",
+  "power": 400
+ },
+ "ThunderSpear": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 40
+ },
+ "ThunderStorm": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "Thunderbolt": {
+  "ct": 20,
+  "element": "Electricity",
+  "power": 450
+ },
+ "TidalWave": {
+  "ct": 15,
+  "element": "Water",
+  "power": 1
+ },
+ "Tremor": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "TriSpark": {
+  "ct": 12,
+  "element": "Electricity",
+  "power": 250
+ },
+ "Unique_Alpaca_Tackle": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 50
+ },
+ "Unique_AmaterasuWolf_Bite": {
+  "ct": 2,
+  "element": "Fire",
+  "power": 50
+ },
+ "Unique_AmaterasuWolf_BiteV2": {
+  "ct": 2,
+  "element": "Fire",
+  "power": 40
+ },
+ "Unique_AmaterasuWolf_Dark_Bite": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 50
+ },
+ "Unique_AmaterasuWolf_Dark_BiteV2": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 40
+ },
+ "Unique_AmaterasuWolf_Dark_DarkCharge": {
+  "ct": 12,
+  "element": "Dark",
+  "power": 250
+ },
+ "Unique_AmaterasuWolf_FireCharge": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 200
+ },
+ "Unique_Anubis_GroundPunch": {
+  "ct": 24,
+  "element": "Earth",
+  "power": 500
+ },
+ "Unique_Anubis_LowRoundKick": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "Unique_Anubis_Tackle": {
+  "ct": 20,
+  "element": "Earth",
+  "power": 400
+ },
+ "Unique_Baphomet_Dark_DarkKite": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 400
+ },
+ "Unique_Baphomet_SwallowKite": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 200
+ },
+ "Unique_BirdDragon_FireBreath": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 200
+ },
+ "Unique_BirdDragon_Ice_IceBreath": {
+  "ct": 12,
+  "element": "Ice",
+  "power": 200
+ },
+ "Unique_BlackCentaur_TwoSpearRushes": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "Unique_BlackGriffon_TackleLaser": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 400
+ },
+ "Unique_BlackGriffon_TackleLaser2": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 600
+ },
+ "Unique_BlackMetalDragon_FirePunch": {
+  "ct": 20,
+  "element": "Dragon",
+  "power": 450
+ },
+ "Unique_BlackPuppy_Bite": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 50
+ },
+ "Unique_BlackPuppy_BiteV2": {
+  "ct": 2,
+  "element": "Dark",
+  "power": 40
+ },
+ "Unique_BluePlatypus_Toboggan": {
+  "ct": 120,
+  "element": "Water",
+  "power": 100
+ },
+ "Unique_BluePlatypus_Toboggan_Fire": {
+  "ct": 120,
+  "element": "Fire",
+  "power": 115
+ },
+ "Unique_BlueSkyDragon_DrainStorm": {
+  "ct": 30,
+  "element": "Water",
+  "power": 700
+ },
+ "Unique_BlueSkyDragon_GYM_Act": {
+  "ct": 0,
+  "element": "Water",
+  "power": 700
+ },
+ "Unique_BlueSkyDragon_SweepBreath": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 600
+ },
+ "Unique_BlueSkyDragon_Tossin": {
+  "ct": 24,
+  "element": "Water",
+  "power": 500
+ },
+ "Unique_BlueThunderHorse_FlashDash": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "Unique_BlueThunderHorse_Tossin": {
+  "ct": 24,
+  "element": "Electricity",
+  "power": 500
+ },
+ "Unique_Boar_Tackle": {
+  "ct": 4,
+  "element": "Earth",
+  "power": 60
+ },
+ "Unique_CaptainPenguin_Black_BodySlide_Electric": {
+  "ct": 20,
+  "element": "Electricity",
+  "power": 400
+ },
+ "Unique_CaptainPenguin_BodySlide": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 140
+ },
+ "Unique_ChickenPal_ChickenPeck": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 30
+ },
+ "Unique_ClownRabbit_TrickShow": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 700
+ },
+ "Unique_CubeTurtle_CubePress": {
+  "ct": 30,
+  "element": "Earth",
+  "power": 600
+ },
+ "Unique_CubeTurtle_Neutral_HolyPress": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_CuteMole_DiggingAttack": {
+  "ct": 4,
+  "element": "Earth",
+  "power": 60
+ },
+ "Unique_DarkAlien_JumpScractch": {
+  "ct": 16,
+  "element": "Dark",
+  "power": 350
+ },
+ "Unique_DarkCrow_TelePoke": {
+  "ct": 4,
+  "element": "Dark",
+  "power": 70
+ },
+ "Unique_DarkMechaDragon_BeamSlash": {
+  "ct": 20,
+  "element": "Dragon",
+  "power": 450
+ },
+ "Unique_DarkMechaDragon_ConvergentBeam": {
+  "ct": 24,
+  "element": "Dark",
+  "power": 500
+ },
+ "Unique_DarkMechaDragon_FunnelLaser": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 700
+ },
+ "Unique_DarkMechaDragon_SetFunnel": {
+  "ct": 20,
+  "element": "Dragon",
+  "power": 400
+ },
+ "Unique_DarkMechaDragon_WarpComet": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 600
+ },
+ "Unique_DarkScorpion_Pierce": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 350
+ },
+ "Unique_Deer_Ground_DirtyHorn": {
+  "ct": 8,
+  "element": "Earth",
+  "power": 120
+ },
+ "Unique_Deer_PushupHorn": {
+  "ct": 4,
+  "element": "Normal",
+  "power": 90
+ },
+ "Unique_DomeArmorDragon_ExplosiveMissile": {
+  "ct": 30,
+  "element": "Earth",
+  "power": 700
+ },
+ "Unique_DrillGame_ShellAttack": {
+  "ct": 8,
+  "element": "Earth",
+  "power": 120
+ },
+ "Unique_Eagle_GlidingNail": {
+  "ct": 4,
+  "element": "Normal",
+  "power": 80
+ },
+ "Unique_ElecPanda_ElecScratch": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 150
+ },
+ "Unique_ElecPanda_GatlingAttack": {
+  "ct": 24,
+  "element": "Electricity",
+  "power": 550
+ },
+ "Unique_ElecPomeranian_Bite": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 50
+ },
+ "Unique_ElecPomeranian_BiteV2": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 40
+ },
+ "Unique_ElecSnail_ShellCharge": {
+  "ct": 24,
+  "element": "Electricity",
+  "power": 500
+ },
+ "Unique_FairyDragon_FairyTornado": {
+  "ct": 8,
+  "element": "Dragon",
+  "power": 150
+ },
+ "Unique_FeatherOstrich_Tossin": {
+  "ct": 12,
+  "element": "Earth",
+  "power": 250
+ },
+ "Unique_FengyunDeeper_CloudTempest": {
+  "ct": 8,
+  "element": "Normal",
+  "power": 120
+ },
+ "Unique_FengyunDeeper_Electric_ThunderTempest": {
+  "ct": 16,
+  "element": "Electricity",
+  "power": 300
+ },
+ "Unique_FireKirin_Dark_DarkTossin": {
+  "ct": 16,
+  "element": "Dark",
+  "power": 300
+ },
+ "Unique_FireKirin_Tackle": {
+  "ct": 16,
+  "element": "Fire",
+  "power": 300
+ },
+ "Unique_FlameBuffalo_FlameHorn": {
+  "ct": 4,
+  "element": "Fire",
+  "power": 80
+ },
+ "Unique_FlowerDinosaur_Electric_ThunderWhip": {
+  "ct": 16,
+  "element": "Electricity",
+  "power": 300
+ },
+ "Unique_FlowerDinosaur_Whip": {
+  "ct": 4,
+  "element": "Leaf",
+  "power": 80
+ },
+ "Unique_FlowerPrince_PoisonGasDance": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 800
+ },
+ "Unique_FlowerPrince_PoisonGasTackle": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "Unique_Garm_Bite": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 50
+ },
+ "Unique_Garm_BiteV2": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 40
+ },
+ "Unique_GhostAnglerfish_Fire_SweepBait_Fire": {
+  "ct": 20,
+  "element": "Fire",
+  "power": 450
+ },
+ "Unique_GhostAnglerfish_SweepBait": {
+  "ct": 20,
+  "element": "Water",
+  "power": 450
+ },
+ "Unique_GhostBeast_Tossin": {
+  "ct": 16,
+  "element": "Dark",
+  "power": 300
+ },
+ "Unique_GhostDragon_PhosphorousBeam": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 700
+ },
+ "Unique_GhostDragon_TailSlash": {
+  "ct": 24,
+  "element": "Dragon",
+  "power": 550
+ },
+ "Unique_GoldenHorse_Bite": {
+  "ct": 2,
+  "element": "Earth",
+  "power": 50
+ },
+ "Unique_GoldenHorse_BiteV2": {
+  "ct": 2,
+  "element": "Earth",
+  "power": 40
+ },
+ "Unique_GoldenHorse_StoneDash": {
+  "ct": 24,
+  "element": "Earth",
+  "power": 500
+ },
+ "Unique_Gorilla_GroundPunch": {
+  "ct": 8,
+  "element": "Normal",
+  "power": 120
+ },
+ "Unique_Gorilla_Ground_EarthPunch": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "Unique_GrassGolem_ArmCannon": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 700
+ },
+ "Unique_GrassGolem_Dark_DarkArmCannon": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "Unique_GrassGolem_RocketPunch": {
+  "ct": 30,
+  "element": "Earth",
+  "power": 600
+ },
+ "Unique_GrassMinotaur_BullRush": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 650
+ },
+ "Unique_GrassMinotaur_BullRush_Lower": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 250
+ },
+ "Unique_GrassMinotaur_Ice_BullRush": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 650
+ },
+ "Unique_GrassMinotaur_Ice_BullRush_Lower": {
+  "ct": 12,
+  "element": "Ice",
+  "power": 250
+ },
+ "Unique_GrassPanda_Electric_ElectricPunch": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 180
+ },
+ "Unique_GrassPanda_MusclePunch": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 120
+ },
+ "Unique_GrassRabbitMan_GrassRoundKick": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 250
+ },
+ "Unique_Grassmammoth_Earthquake": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "Unique_GrimGirl_BrutalMachete": {
+  "ct": 24,
+  "element": "Dark",
+  "power": 500
+ },
+ "Unique_GuardianDog_Bite": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 50
+ },
+ "Unique_GuardianDog_BiteV2": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 40
+ },
+ "Unique_HawkBird_Storm": {
+  "ct": 4,
+  "element": "Normal",
+  "power": 80
+ },
+ "Unique_HerculesBeetle_BeetleTackle": {
+  "ct": 12,
+  "element": "Earth",
+  "power": 250
+ },
+ "Unique_Horus_FlareBird": {
+  "ct": 16,
+  "element": "Fire",
+  "power": 320
+ },
+ "Unique_Horus_PerfectStorm": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 650
+ },
+ "Unique_Horus_Water_AquaStorm": {
+  "ct": 16,
+  "element": "Water",
+  "power": 320
+ },
+ "Unique_IceCrocodile_SpitAttack": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 180
+ },
+ "Unique_IceDeer_IceHorn": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 120
+ },
+ "Unique_IceHorse_Dark_DarkBladeAttack": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "Unique_IceHorse_IceBladeAttack": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 700
+ },
+ "Unique_IceNarwhal_JumpingHorn": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "Unique_JetDragon_JumpBeam": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 700
+ },
+ "Unique_KingAlpaca_BodyPress": {
+  "ct": 12,
+  "element": "Normal",
+  "power": 200
+ },
+ "Unique_KingAlpaca_Ice_IcePress": {
+  "ct": 20,
+  "element": "Ice",
+  "power": 400
+ },
+ "Unique_KingBahamut_AirCrash": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 700
+ },
+ "Unique_KingBahamut_ArmSmash": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 600
+ },
+ "Unique_KingWhale_AquaBlade": {
+  "ct": 16,
+  "element": "Water",
+  "power": 300
+ },
+ "Unique_KingWhale_AquaTornado": {
+  "ct": 40,
+  "element": "Water",
+  "power": 800
+ },
+ "Unique_KingWhale_Breaching": {
+  "ct": 30,
+  "element": "Water",
+  "power": 700
+ },
+ "Unique_KingWhale_HomingBubble": {
+  "ct": 12,
+  "element": "Water",
+  "power": 200
+ },
+ "Unique_KingWhale_Maelstrom": {
+  "ct": 24,
+  "element": "Water",
+  "power": 500
+ },
+ "Unique_KingWhale_SuperTidalBore": {
+  "ct": 30,
+  "element": "Water",
+  "power": 1000
+ },
+ "Unique_KingWhale_TidalBore": {
+  "ct": 30,
+  "element": "Water",
+  "power": 1000
+ },
+ "Unique_KingWhale_WaveTackle": {
+  "ct": 20,
+  "element": "Water",
+  "power": 400
+ },
+ "Unique_Kirin_Ice_IceTackle": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "Unique_Kirin_LightningTackle": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 120
+ },
+ "Unique_LanternButler_LanternFlame": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 650
+ },
+ "Unique_LeafMomonga_SomerSault": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 250
+ },
+ "Unique_LegendDeer_BarrierRelease_Grass": {
+  "ct": 1,
+  "element": "Leaf",
+  "power": 220
+ },
+ "Unique_LegendDeer_BarrierRelease_Normal": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 300
+ },
+ "Unique_LegendDeer_BarrierRelease_Water": {
+  "ct": 1,
+  "element": "Water",
+  "power": 220
+ },
+ "Unique_LegendDeer_RadiantPurge": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 1250
+ },
+ "Unique_LegendDeer_RadiantPurge_Otomo": {
+  "ct": 100,
+  "element": "Normal",
+  "power": 250
+ },
+ "Unique_LegendDeer_RadiantWingRush": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_LegendDeer_WarpPillarBurst": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 800
+ },
+ "Unique_LilyQueen_GYM_Act": {
+  "ct": 60,
+  "element": "Leaf",
+  "power": 1
+ },
+ "Unique_LilyQueen_LilyHealing": {
+  "ct": 240,
+  "element": "Leaf",
+  "power": 0
+ },
+ "Unique_LilyQueen_LilyHealing_Boss": {
+  "ct": 300,
+  "element": "Leaf",
+  "power": 0
+ },
+ "Unique_LilyQueen_WindBarrier": {
+  "ct": 4,
+  "element": "Leaf",
+  "power": 60
+ },
+ "Unique_LotusDragon_LotusBloom": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 700
+ },
+ "Unique_Manticore_InfernoStrike": {
+  "ct": 20,
+  "element": "Fire",
+  "power": 400
+ },
+ "Unique_MonochromeQueen_BalletJump": {
+  "ct": 24,
+  "element": "Dark",
+  "power": 500
+ },
+ "Unique_MoonQueen_GYM_Act": {
+  "ct": 300,
+  "element": "Normal",
+  "power": 1
+ },
+ "Unique_MoonQueen_GYM_Hard_Act": {
+  "ct": 300,
+  "element": "Normal",
+  "power": 1
+ },
+ "Unique_MoonQueen_IceMoonBlade": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_MoonQueen_MoonBeam": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 600
+ },
+ "Unique_MoonQueen_MoonBlade": {
+  "ct": 16,
+  "element": "Normal",
+  "power": 350
+ },
+ "Unique_Mothman_GiantSpore": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 700
+ },
+ "Unique_Mothman_SporeScatter": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 800
+ },
+ "Unique_MummyPal_MummyAttack": {
+  "ct": 24,
+  "element": "Dark",
+  "power": 500
+ },
+ "Unique_MysteryMask_LifeSteal": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 400
+ },
+ "Unique_NaughtyCat_CatPress": {
+  "ct": 8,
+  "element": "Normal",
+  "power": 120
+ },
+ "Unique_NightBlueHorse_DeathStep": {
+  "ct": 24,
+  "element": "Dark",
+  "power": 550
+ },
+ "Unique_NightBlueHorse_Neutral_AirStep": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 800
+ },
+ "Unique_NightBlueHorse_Neutral_Tossin": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_NightBlueHorse_Tossin": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 450
+ },
+ "Unique_NightLady_FlameNightmare": {
+  "ct": 20,
+  "element": "Dark",
+  "power": 450
+ },
+ "Unique_NightLady_WarpBeam": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 600
+ },
+ "Unique_NightLady_WarpBeam_Straight": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 600
+ },
+ "Unique_OctopursGirl_InkJet": {
+  "ct": 8,
+  "element": "Water",
+  "power": 120
+ },
+ "Unique_PandaGirl_RapidKick": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 250
+ },
+ "Unique_PinkCat_CatPunch": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 40
+ },
+ "Unique_Plesiosaur_LongBreath": {
+  "ct": 20,
+  "element": "Leaf",
+  "power": 400
+ },
+ "Unique_PoseidonOrca_TorrentLaser": {
+  "ct": 30,
+  "element": "Water",
+  "power": 700
+ },
+ "Unique_PurpleSpider_SpiderRaid": {
+  "ct": 12,
+  "element": "Dark",
+  "power": 250
+ },
+ "Unique_QueenBee_SpinLance": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 160
+ },
+ "Unique_RedArmorBird_TriplePeck": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 200
+ },
+ "Unique_RedFlowerBird_JumpKick": {
+  "ct": 24,
+  "element": "Leaf",
+  "power": 550
+ },
+ "Unique_RobinHood_BowSnipe": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 120
+ },
+ "Unique_RockBeast_Ice_IceHorn": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "Unique_RockBeast_RockHorn": {
+  "ct": 30,
+  "element": "Earth",
+  "power": 600
+ },
+ "Unique_Ronin_Iai": {
+  "ct": 8,
+  "element": "Fire",
+  "power": 160
+ },
+ "Unique_Ronin_Iai_PartnerSkill": {
+  "ct": 12,
+  "element": "Fire",
+  "power": 160
+ },
+ "Unique_SaintCentaur_OneSpearRushes": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_SakuraSaurus_SideTackle": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 120
+ },
+ "Unique_SakuraSaurus_Water_SplashTackle": {
+  "ct": 12,
+  "element": "Water",
+  "power": 250
+ },
+ "Unique_SamuraiDog_Bite": {
+  "ct": 2,
+  "element": "Earth",
+  "power": 50
+ },
+ "Unique_SamuraiDog_BiteV2": {
+  "ct": 2,
+  "element": "Earth",
+  "power": 40
+ },
+ "Unique_SamuraiDog_DashSlash": {
+  "ct": 4,
+  "element": "Earth",
+  "power": 90
+ },
+ "Unique_ScorpionMan_Erectric_UpperThunder": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "Unique_ScorpionMan_Uppercut": {
+  "ct": 16,
+  "element": "Dark",
+  "power": 350
+ },
+ "Unique_Sekhmet_RollingScratch": {
+  "ct": 20,
+  "element": "Earth",
+  "power": 400
+ },
+ "Unique_Sekhmet_SomersaultScratch": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "Unique_SheepBall_Roll": {
+  "ct": 2,
+  "element": "Normal",
+  "power": 40
+ },
+ "Unique_SifuDog_Counter": {
+  "ct": 20,
+  "element": "Normal",
+  "power": 450
+ },
+ "Unique_SnakeGirl_SnakeShot": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 600
+ },
+ "Unique_SnowTigerBeastman_SnowImpact": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 650
+ },
+ "Unique_SnowTigerBeastman_TrampleSlash": {
+  "ct": 16,
+  "element": "Ice",
+  "power": 300
+ },
+ "Unique_SoldierBee_NeedleLance": {
+  "ct": 8,
+  "element": "Leaf",
+  "power": 120
+ },
+ "Unique_StuffedShark_HiddenWeapon": {
+  "ct": 16,
+  "element": "Water",
+  "power": 300
+ },
+ "Unique_SumoDog_SumoStomp": {
+  "ct": 24,
+  "element": "Earth",
+  "power": 550
+ },
+ "Unique_TentacleTurtle_HydroSpin": {
+  "ct": 8,
+  "element": "Water",
+  "power": 160
+ },
+ "Unique_ThunderBird_Ice_SnowStrom": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "Unique_ThunderBird_ThunderStorm": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 180
+ },
+ "Unique_ThunderDog_Bite": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 50
+ },
+ "Unique_ThunderDog_BiteV2": {
+  "ct": 2,
+  "element": "Electricity",
+  "power": 40
+ },
+ "Unique_ThunderDog_Ice_Bite": {
+  "ct": 2,
+  "element": "Ice",
+  "power": 50
+ },
+ "Unique_ThunderDog_Ice_BiteV2": {
+  "ct": 2,
+  "element": "Ice",
+  "power": 40
+ },
+ "Unique_ThunderDog_Ice_KoriShorai": {
+  "ct": 16,
+  "element": "Ice",
+  "power": 300
+ },
+ "Unique_ThunderDog_InazumaShorai": {
+  "ct": 8,
+  "element": "Electricity",
+  "power": 100
+ },
+ "Unique_ThunderDragonMan_GYM_Act": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 1
+ },
+ "Unique_ThunderDragonMan_NumerousSwordAttack": {
+  "ct": 30,
+  "element": "Electricity",
+  "power": 600
+ },
+ "Unique_ThunderDragonMan_ThunderSwordAttack": {
+  "ct": 12,
+  "element": "Electricity",
+  "power": 250
+ },
+ "Unique_TropicalOstrich_DashKick": {
+  "ct": 16,
+  "element": "Leaf",
+  "power": 300
+ },
+ "Unique_Umihebi_Fire_FireWindingTackle": {
+  "ct": 20,
+  "element": "Fire",
+  "power": 400
+ },
+ "Unique_Umihebi_WindingTackle": {
+  "ct": 20,
+  "element": "Water",
+  "power": 400
+ },
+ "Unique_VolcanicMonster_Ice_IceAttack": {
+  "ct": 20,
+  "element": "Ice",
+  "power": 400
+ },
+ "Unique_VolcanicMonster_MagmaAttack": {
+  "ct": 16,
+  "element": "Fire",
+  "power": 300
+ },
+ "Unique_VolcanoDragon_Ice_IceLaser": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 700
+ },
+ "Unique_VolcanoDragon_Ice_IcicleSpit": {
+  "ct": 30,
+  "element": "Ice",
+  "power": 600
+ },
+ "Unique_VolcanoDragon_MagmaSpit": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 600
+ },
+ "Unique_VolcanoDragon_VolcanicLaser": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 700
+ },
+ "Unique_WeaselDragon_FlyingTackle": {
+  "ct": 4,
+  "element": "Dragon",
+  "power": 80
+ },
+ "Unique_Werewolf_Ice_SnowScratch": {
+  "ct": 8,
+  "element": "Ice",
+  "power": 160
+ },
+ "Unique_Werewolf_Scratch": {
+  "ct": 4,
+  "element": "Dark",
+  "power": 80
+ },
+ "Unique_WhiteDeer_Dark_DarkPillar": {
+  "ct": 30,
+  "element": "Dark",
+  "power": 700
+ },
+ "Unique_WhiteDeer_HolyPillar": {
+  "ct": 30,
+  "element": "Normal",
+  "power": 700
+ },
+ "Unique_WhiteShieldDragon_ShieldTackle": {
+  "ct": 30,
+  "element": "Dragon",
+  "power": 600
+ },
+ "Unique_WhiteTiger_Ground_IronScratch": {
+  "ct": 16,
+  "element": "Earth",
+  "power": 300
+ },
+ "Unique_WhiteTiger_IceScratch": {
+  "ct": 16,
+  "element": "Ice",
+  "power": 300
+ },
+ "Unique_WingGolem_Fire_FlameCutter": {
+  "ct": 30,
+  "element": "Fire",
+  "power": 700
+ },
+ "Unique_WingGolem_RoundCutter": {
+  "ct": 20,
+  "element": "Earth",
+  "power": 450
+ },
+ "Unique_WorldTreeDragon_BigBang": {
+  "ct": 60,
+  "element": "None",
+  "power": 900
+ },
+ "Unique_WorldTreeDragon_HaloBeam": {
+  "ct": 20,
+  "element": "None",
+  "power": 750
+ },
+ "Unique_WorldTreeDragon_HaloCutter": {
+  "ct": 10,
+  "element": "None",
+  "power": 600
+ },
+ "Unique_WorldTreeDragon_LaserGliding": {
+  "ct": 5,
+  "element": "None",
+  "power": 550
+ },
+ "Unique_WorldTreeDragon_PaldiumCannon": {
+  "ct": 20,
+  "element": "None",
+  "power": 700
+ },
+ "Unique_WorldTreeDragon_PaldiumExplosion": {
+  "ct": 60,
+  "element": "None",
+  "power": 800
+ },
+ "Unique_WorldTreeDragon_PaldiumRain": {
+  "ct": 5,
+  "element": "None",
+  "power": 500
+ },
+ "Unique_WorldTreeDragon_PaldiumShot": {
+  "ct": 5,
+  "element": "None",
+  "power": 400
+ },
+ "Unique_WorldTreeDragon_Supernova": {
+  "ct": 99,
+  "element": "None",
+  "power": 1000
+ },
+ "Unique_YakushimaBoss001_Green_2_PhantasmalBolt": {
+  "ct": 45,
+  "element": "None",
+  "power": 40
+ },
+ "Unique_YakushimaBoss001_Green_2_PhantasmalDeathray": {
+  "ct": 45,
+  "element": "None",
+  "power": 200
+ },
+ "Unique_YakushimaBoss001_Green_2_PhantasmalEye": {
+  "ct": 45,
+  "element": "None",
+  "power": 10
+ },
+ "Unique_YakushimaBoss001_Green_2_PhantasmalSphere": {
+  "ct": 45,
+  "element": "None",
+  "power": 90
+ },
+ "Unique_YakushimaBoss001_Green_PhantasmalBolt": {
+  "ct": 45,
+  "element": "None",
+  "power": 40
+ },
+ "Unique_YakushimaBoss001_Green_PhantasmalDeathray": {
+  "ct": 45,
+  "element": "None",
+  "power": 200
+ },
+ "Unique_YakushimaBoss001_Green_PhantasmalEye": {
+  "ct": 45,
+  "element": "None",
+  "power": 10
+ },
+ "Unique_YakushimaBoss001_Green_PhantasmalSphere": {
+  "ct": 45,
+  "element": "None",
+  "power": 90
+ },
+ "Unique_YakushimaBoss001_Small_DemonEyeCharge": {
+  "ct": 1,
+  "element": "Dark",
+  "power": 60
+ },
+ "Unique_YakushimaBoss002_2_PhantasmalBolt": {
+  "ct": 45,
+  "element": "None",
+  "power": 80
+ },
+ "Unique_YakushimaBoss002_2_PhantasmalDeathray": {
+  "ct": 45,
+  "element": "None",
+  "power": 450
+ },
+ "Unique_YakushimaBoss002_2_PhantasmalEye": {
+  "ct": 45,
+  "element": "None",
+  "power": 25
+ },
+ "Unique_YakushimaBoss002_2_PhantasmalSphere": {
+  "ct": 45,
+  "element": "None",
+  "power": 180
+ },
+ "Unique_YakushimaBoss002_PhantasmalBolt": {
+  "ct": 45,
+  "element": "None",
+  "power": 80
+ },
+ "Unique_YakushimaBoss002_PhantasmalDeathray": {
+  "ct": 45,
+  "element": "None",
+  "power": 450
+ },
+ "Unique_YakushimaBoss002_PhantasmalEye": {
+  "ct": 45,
+  "element": "None",
+  "power": 25
+ },
+ "Unique_YakushimaBoss002_PhantasmalSphere": {
+  "ct": 45,
+  "element": "None",
+  "power": 180
+ },
+ "Unique_YakushimaMonster001_SlimePress_Dark": {
+  "ct": 1,
+  "element": "Dark",
+  "power": 50
+ },
+ "Unique_YakushimaMonster001_SlimePress_Fire": {
+  "ct": 1,
+  "element": "Fire",
+  "power": 50
+ },
+ "Unique_YakushimaMonster001_SlimePress_Leaf": {
+  "ct": 1,
+  "element": "Leaf",
+  "power": 50
+ },
+ "Unique_YakushimaMonster001_SlimePress_Normal": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 50
+ },
+ "Unique_YakushimaMonster001_SlimePress_Rainbow": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 100
+ },
+ "Unique_YakushimaMonster001_SlimePress_Water": {
+  "ct": 1,
+  "element": "Water",
+  "power": 50
+ },
+ "Unique_YakushimaMonster002_SwordCharge": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 80
+ },
+ "Unique_YakushimaMonster003_BatCharge": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 70
+ },
+ "Unique_Yakushima_EyeTossin": {
+  "ct": 15,
+  "element": "Dark",
+  "power": 300
+ },
+ "Unique_Yakushima_MouthTossin": {
+  "ct": 15,
+  "element": "Dark",
+  "power": 300
+ },
+ "Unique_Yakushima_SummonServant": {
+  "ct": 10,
+  "element": "Dark",
+  "power": 300
+ },
+ "Unique_Yeti_Grass_GrassBall": {
+  "ct": 20,
+  "element": "Leaf",
+  "power": 400
+ },
+ "Unique_Yeti_SnowBall": {
+  "ct": 20,
+  "element": "Ice",
+  "power": 400
+ },
+ "WallSplash": {
+  "ct": 16,
+  "element": "Water",
+  "power": 300
+ },
+ "WaterBall": {
+  "ct": 12,
+  "element": "Water",
+  "power": 200
+ },
+ "WaterBalloon": {
+  "ct": 4,
+  "element": "Water",
+  "power": 90
+ },
+ "WaterGun": {
+  "ct": 2,
+  "element": "Water",
+  "power": 50
+ },
+ "WaterWave": {
+  "ct": 5,
+  "element": "Water",
+  "power": 1
+ },
+ "Weapon_Use": {
+  "ct": 5,
+  "element": "Normal",
+  "power": 50
+ },
+ "WindBurst": {
+  "ct": 30,
+  "element": "Leaf",
+  "power": 600
+ },
+ "WindCutter": {
+  "ct": 2,
+  "element": "Leaf",
+  "power": 40
+ },
+ "WindEdge": {
+  "ct": 12,
+  "element": "Leaf",
+  "power": 200
+ },
+ "WorkAttack": {
+  "ct": 1,
+  "element": "Normal",
+  "power": 100
+ }
+}

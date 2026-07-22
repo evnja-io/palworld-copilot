@@ -1,5 +1,6 @@
 [
  {
+  "combiPriority": 305000,
   "combiRank": 3050,
   "drops": [
    {
@@ -40,6 +41,7 @@
   "zukanIndex": 1
  },
  {
+  "combiPriority": 276000,
   "combiRank": 2760,
   "drops": [
    {
@@ -77,6 +79,7 @@
   "zukanIndex": 2
  },
  {
+  "combiPriority": 308000,
   "combiRank": 3080,
   "drops": [
    {
@@ -116,6 +119,7 @@
   "zukanIndex": 3
  },
  {
+  "combiPriority": 302000,
   "combiRank": 3020,
   "drops": [
    {
@@ -158,6 +162,7 @@
   "zukanIndex": 4
  },
  {
+  "combiPriority": 298000,
   "combiRank": 2980,
   "drops": [
    {
@@ -198,6 +203,7 @@
   "zukanIndex": 5
  },
  {
+  "combiPriority": 575,
   "combiRank": 2300,
   "drops": [
    {
@@ -247,6 +253,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 306000,
   "combiRank": 3060,
   "drops": [
    {
@@ -286,6 +293,7 @@
   "zukanIndex": 6
  },
  {
+  "combiPriority": 274000,
   "combiRank": 2740,
   "drops": [
    {
@@ -319,6 +327,7 @@
   "zukanIndex": 7
  },
  {
+  "combiPriority": 574,
   "combiRank": 2380,
   "drops": [
    {
@@ -355,6 +364,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 289000,
   "combiRank": 2890,
   "drops": [
    {
@@ -388,6 +398,7 @@
   "zukanIndex": 8
  },
  {
+  "combiPriority": 260000,
   "combiRank": 2600,
   "drops": [
    {
@@ -429,6 +440,7 @@
   "zukanIndex": 9
  },
  {
+  "combiPriority": 186000,
   "combiRank": 1860,
   "drops": [
    {
@@ -479,6 +491,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 263000,
   "combiRank": 2630,
   "drops": [
    {
@@ -520,6 +533,7 @@
   "zukanIndex": 10
  },
  {
+  "combiPriority": 307000,
   "combiRank": 3070,
   "drops": [
    {
@@ -552,6 +566,7 @@
   "zukanIndex": 11
  },
  {
+  "combiPriority": 295000,
   "combiRank": 2950,
   "drops": [
    {
@@ -591,6 +606,7 @@
   "zukanIndex": 12
  },
  {
+  "combiPriority": 293000,
   "combiRank": 2930,
   "drops": [
    {
@@ -625,6 +641,7 @@
   "zukanIndex": 13
  },
  {
+  "combiPriority": 297000,
   "combiRank": 2970,
   "drops": [
    {
@@ -659,6 +676,7 @@
   "zukanIndex": 14
  },
  {
+  "combiPriority": 303000,
   "combiRank": 3030,
   "drops": [
    {
@@ -691,6 +709,7 @@
   "zukanIndex": 15
  },
  {
+  "combiPriority": 285000,
   "combiRank": 2850,
   "drops": [
    {
@@ -724,6 +743,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 300000,
   "combiRank": 3000,
   "drops": [
    {
@@ -760,6 +780,7 @@
   "zukanIndex": 16
  },
  {
+  "combiPriority": 296000,
   "combiRank": 2960,
   "drops": [
    {
@@ -802,6 +823,7 @@
   "zukanIndex": 17
  },
  {
+  "combiPriority": 572,
   "combiRank": 2490,
   "drops": [
    {
@@ -845,6 +867,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 207000,
   "combiRank": 2070,
   "drops": [
    {
@@ -888,6 +911,7 @@
   "zukanIndex": 18
  },
  {
+  "combiPriority": 573,
   "combiRank": 1850,
   "drops": [
    {
@@ -932,6 +956,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 294000,
   "combiRank": 2940,
   "drops": [
    {
@@ -971,6 +996,7 @@
   "zukanIndex": 19
  },
  {
+  "combiPriority": 272000,
   "combiRank": 2720,
   "drops": [
    {
@@ -1009,6 +1035,7 @@
   "zukanIndex": 20
  },
  {
+  "combiPriority": 222000,
   "combiRank": 2220,
   "drops": [
    {
@@ -1079,6 +1106,7 @@
   "zukanIndex": 21
  },
  {
+  "combiPriority": 153000,
   "combiRank": 1530,
   "drops": [
    {
@@ -1121,6 +1149,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 291000,
   "combiRank": 2910,
   "drops": [
    {
@@ -1162,6 +1191,7 @@
   "zukanIndex": 22
  },
  {
+  "combiPriority": 290000,
   "combiRank": 2900,
   "drops": [
    {
@@ -1198,6 +1228,7 @@
   "zukanIndex": 23
  },
  {
+  "combiPriority": 283000,
   "combiRank": 2830,
   "drops": [
    {
@@ -1240,6 +1271,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 292000,
   "combiRank": 2920,
   "drops": [
    {
@@ -1279,6 +1311,7 @@
   "zukanIndex": 24
  },
  {
+  "combiPriority": 270000,
   "combiRank": 2700,
   "drops": [
    {
@@ -1320,6 +1353,7 @@
   "zukanIndex": 25
  },
  {
+  "combiPriority": 287000,
   "combiRank": 2870,
   "drops": [
    {
@@ -1359,6 +1393,7 @@
   "zukanIndex": 26
  },
  {
+  "combiPriority": 304000,
   "combiRank": 3040,
   "drops": [
    {
@@ -1399,6 +1434,7 @@
   "zukanIndex": 27
  },
  {
+  "combiPriority": 275000,
   "combiRank": 2750,
   "drops": [
    {
@@ -1439,6 +1475,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 288000,
   "combiRank": 2880,
   "drops": [
    {
@@ -1483,6 +1520,7 @@
   "zukanIndex": 28
  },
  {
+  "combiPriority": 299000,
   "combiRank": 2990,
   "drops": [
    {
@@ -1521,6 +1559,7 @@
   "zukanIndex": 29
  },
  {
+  "combiPriority": 250000,
   "combiRank": 2500,
   "drops": [
    {
@@ -1560,6 +1599,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 277000,
   "combiRank": 2770,
   "drops": [
    {
@@ -1608,6 +1648,7 @@
   "zukanIndex": 30
  },
  {
+  "combiPriority": 571,
   "combiRank": 2540,
   "drops": [
    {
@@ -1650,6 +1691,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 279000,
   "combiRank": 2790,
   "drops": [
    {
@@ -1684,6 +1726,7 @@
   "zukanIndex": 31
  },
  {
+  "combiPriority": 271000,
   "combiRank": 2710,
   "drops": [
    {
@@ -1764,6 +1807,7 @@
   "zukanIndex": 32
  },
  {
+  "combiPriority": 258000,
   "combiRank": 2580,
   "drops": [
    {
@@ -1809,6 +1853,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 268000,
   "combiRank": 2680,
   "drops": [
    {
@@ -1853,6 +1898,7 @@
   "zukanIndex": 33
  },
  {
+  "combiPriority": 261000,
   "combiRank": 2610,
   "drops": [
    {
@@ -1898,6 +1944,7 @@
   "zukanIndex": 34
  },
  {
+  "combiPriority": 194000,
   "combiRank": 1940,
   "drops": [
    {
@@ -1951,6 +1998,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 284000,
   "combiRank": 2840,
   "drops": [
    {
@@ -1990,6 +2038,7 @@
   "zukanIndex": 35
  },
  {
+  "combiPriority": 215000,
   "combiRank": 2150,
   "drops": [
    {
@@ -2023,6 +2072,7 @@
   "zukanIndex": 36
  },
  {
+  "combiPriority": 241000,
   "combiRank": 2410,
   "drops": [
    {
@@ -2063,6 +2113,7 @@
   "zukanIndex": 37
  },
  {
+  "combiPriority": 577,
   "combiRank": 1330,
   "drops": [
    {
@@ -2105,6 +2156,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 282000,
   "combiRank": 2820,
   "drops": [
    {
@@ -2143,6 +2195,7 @@
   "zukanIndex": 39
  },
  {
+  "combiPriority": 203000,
   "combiRank": 2030,
   "drops": [
    {
@@ -2182,6 +2235,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 280000,
   "combiRank": 2800,
   "drops": [
    {
@@ -2220,6 +2274,7 @@
   "zukanIndex": 40
  },
  {
+  "combiPriority": 183000,
   "combiRank": 1830,
   "drops": [
    {
@@ -2295,6 +2350,7 @@
   "zukanIndex": 41
  },
  {
+  "combiPriority": 578,
   "combiRank": 1220,
   "drops": [
    {
@@ -2341,6 +2397,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 301000,
   "combiRank": 3010,
   "drops": [
    {
@@ -2376,6 +2433,7 @@
   "zukanIndex": 42
  },
  {
+  "combiPriority": 281000,
   "combiRank": 2810,
   "drops": [
    {
@@ -2415,6 +2473,7 @@
   "zukanIndex": 43
  },
  {
+  "combiPriority": 247000,
   "combiRank": 2470,
   "drops": [
    {
@@ -2455,6 +2514,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 286000,
   "combiRank": 2860,
   "drops": [
    {
@@ -2507,6 +2567,7 @@
   "zukanIndex": 44
  },
  {
+  "combiPriority": 246000,
   "combiRank": 2460,
   "drops": [
    {
@@ -2561,6 +2622,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 265000,
   "combiRank": 2650,
   "drops": [
    {
@@ -2601,6 +2663,7 @@
   "zukanIndex": 45
  },
  {
+  "combiPriority": 259000,
   "combiRank": 2590,
   "drops": [
    {
@@ -2644,6 +2707,7 @@
   "zukanIndex": 46
  },
  {
+  "combiPriority": 252000,
   "combiRank": 2520,
   "drops": [
    {
@@ -2678,6 +2742,7 @@
   "zukanIndex": 47
  },
  {
+  "combiPriority": 253000,
   "combiRank": 2530,
   "drops": [
    {
@@ -2720,6 +2785,7 @@
   "zukanIndex": 48
  },
  {
+  "combiPriority": 163000,
   "combiRank": 1630,
   "drops": [
    {
@@ -2762,6 +2828,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 257000,
   "combiRank": 2570,
   "drops": [
    {
@@ -2800,6 +2867,7 @@
   "zukanIndex": 49
  },
  {
+  "combiPriority": 225000,
   "combiRank": 2250,
   "drops": [
    {
@@ -2884,6 +2952,7 @@
   "zukanIndex": 50
  },
  {
+  "combiPriority": 256000,
   "combiRank": 2560,
   "drops": [
    {
@@ -2916,6 +2985,7 @@
   "zukanIndex": 51
  },
  {
+  "combiPriority": 234000,
   "combiRank": 2340,
   "drops": [
    {
@@ -2957,6 +3027,7 @@
   "zukanIndex": 52
  },
  {
+  "combiPriority": 273000,
   "combiRank": 2730,
   "drops": [
    {
@@ -2995,6 +3066,7 @@
   "zukanIndex": 53
  },
  {
+  "combiPriority": 227000,
   "combiRank": 2270,
   "drops": [
    {
@@ -3076,6 +3148,7 @@
   "zukanIndex": 54
  },
  {
+  "combiPriority": 54000,
   "combiRank": 540,
   "drops": [
    {
@@ -3164,6 +3237,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 255000,
   "combiRank": 2550,
   "drops": [
    {
@@ -3198,6 +3272,7 @@
   "zukanIndex": 55
  },
  {
+  "combiPriority": 243000,
   "combiRank": 2430,
   "drops": [
    {
@@ -3233,6 +3308,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 211000,
   "combiRank": 2110,
   "drops": [
    {
@@ -3266,6 +3342,7 @@
   "zukanIndex": 56
  },
  {
+  "combiPriority": 129000,
   "combiRank": 1290,
   "drops": [
    {
@@ -3300,6 +3377,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 237000,
   "combiRank": 2370,
   "drops": [
    {
@@ -3346,6 +3424,7 @@
   "zukanIndex": 57
  },
  {
+  "combiPriority": 232000,
   "combiRank": 2320,
   "drops": [
    {
@@ -3385,6 +3464,7 @@
   "zukanIndex": 58
  },
  {
+  "combiPriority": 248000,
   "combiRank": 2480,
   "drops": [
    {
@@ -3418,6 +3498,7 @@
   "zukanIndex": 59
  },
  {
+  "combiPriority": 269000,
   "combiRank": 2690,
   "drops": [
    {
@@ -3460,6 +3541,7 @@
   "zukanIndex": 60
  },
  {
+  "combiPriority": 262000,
   "combiRank": 2620,
   "drops": [
    {
@@ -3506,6 +3588,7 @@
   "zukanIndex": 61
  },
  {
+  "combiPriority": 236000,
   "combiRank": 2360,
   "drops": [
    {
@@ -3539,6 +3622,7 @@
   "zukanIndex": 62
  },
  {
+  "combiPriority": 228000,
   "combiRank": 2280,
   "drops": [
    {
@@ -3607,6 +3691,7 @@
   "zukanIndex": 63
  },
  {
+  "combiPriority": 164000,
   "combiRank": 1640,
   "drops": [
    {
@@ -3642,6 +3727,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 165000,
   "combiRank": 1650,
   "drops": [
    {
@@ -3689,6 +3775,7 @@
   "zukanIndex": 64
  },
  {
+  "combiPriority": 143000,
   "combiRank": 1430,
   "drops": [
    {
@@ -3737,6 +3824,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 157000,
   "combiRank": 1570,
   "drops": [
    {
@@ -3776,6 +3864,7 @@
   "zukanIndex": 65
  },
  {
+  "combiPriority": 148000,
   "combiRank": 1480,
   "drops": [
    {
@@ -3825,6 +3914,7 @@
   "zukanIndex": 66
  },
  {
+  "combiPriority": 235000,
   "combiRank": 2350,
   "drops": [
    {
@@ -3863,6 +3953,7 @@
   "zukanIndex": 67
  },
  {
+  "combiPriority": 179000,
   "combiRank": 1790,
   "drops": [
    {
@@ -3905,6 +3996,7 @@
   "zukanIndex": 68
  },
  {
+  "combiPriority": 209000,
   "combiRank": 2090,
   "drops": [
    {
@@ -3967,6 +4059,7 @@
   "zukanIndex": 69
  },
  {
+  "combiPriority": 212000,
   "combiRank": 2120,
   "drops": [
    {
@@ -3999,6 +4092,7 @@
   "zukanIndex": 70
  },
  {
+  "combiPriority": 173000,
   "combiRank": 1730,
   "drops": [
    {
@@ -4041,6 +4135,7 @@
   "zukanIndex": 71
  },
  {
+  "combiPriority": 166000,
   "combiRank": 1660,
   "drops": [
    {
@@ -4075,6 +4170,7 @@
   "zukanIndex": 72
  },
  {
+  "combiPriority": 110000,
   "combiRank": 1100,
   "drops": [
    {
@@ -4158,6 +4254,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 267000,
   "combiRank": 2670,
   "drops": [
    {
@@ -4205,6 +4302,7 @@
   "zukanIndex": 73
  },
  {
+  "combiPriority": 264000,
   "combiRank": 2640,
   "drops": [
    {
@@ -4253,6 +4351,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 214000,
   "combiRank": 2140,
   "drops": [
    {
@@ -4331,6 +4430,7 @@
   "zukanIndex": 74
  },
  {
+  "combiPriority": 188000,
   "combiRank": 1880,
   "drops": [
    {
@@ -4374,6 +4474,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 244000,
   "combiRank": 2440,
   "drops": [
    {
@@ -4407,6 +4508,7 @@
   "zukanIndex": 75
  },
  {
+  "combiPriority": 184000,
   "combiRank": 1840,
   "drops": [
    {
@@ -4446,6 +4548,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 226000,
   "combiRank": 2260,
   "drops": [
    {
@@ -4489,6 +4592,7 @@
   "zukanIndex": 76
  },
  {
+  "combiPriority": 205000,
   "combiRank": 2050,
   "drops": [
    {
@@ -4533,6 +4637,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 266000,
   "combiRank": 2660,
   "drops": [
    {
@@ -4575,6 +4680,7 @@
   "zukanIndex": 77
  },
  {
+  "combiPriority": 208000,
   "combiRank": 2080,
   "drops": [
    {
@@ -4615,6 +4721,7 @@
   "zukanIndex": 78
  },
  {
+  "combiPriority": 149000,
   "combiRank": 1490,
   "drops": [
    {
@@ -4658,6 +4765,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 204000,
   "combiRank": 2040,
   "drops": [
    {
@@ -4705,6 +4813,7 @@
   "zukanIndex": 79
  },
  {
+  "combiPriority": 180000,
   "combiRank": 1800,
   "drops": [
    {
@@ -4755,6 +4864,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 113000,
   "combiRank": 1130,
   "drops": [
    {
@@ -4830,6 +4940,7 @@
   "zukanIndex": 80
  },
  {
+  "combiPriority": 96000,
   "combiRank": 960,
   "drops": [
    {
@@ -4872,6 +4983,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 202000,
   "combiRank": 2020,
   "drops": [
    {
@@ -4956,6 +5068,7 @@
   "zukanIndex": 81
  },
  {
+  "combiPriority": 44000,
   "combiRank": 440,
   "drops": [
    {
@@ -5046,6 +5159,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 201000,
   "combiRank": 2010,
   "drops": [
    {
@@ -5080,6 +5194,7 @@
   "zukanIndex": 82
  },
  {
+  "combiPriority": 196000,
   "combiRank": 1960,
   "drops": [
    {
@@ -5154,6 +5269,7 @@
   "zukanIndex": 83
  },
  {
+  "combiPriority": 90000,
   "combiRank": 900,
   "drops": [
    {
@@ -5200,6 +5316,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 210000,
   "combiRank": 2100,
   "drops": [
    {
@@ -5240,6 +5357,7 @@
   "zukanIndex": 84
  },
  {
+  "combiPriority": 189000,
   "combiRank": 1890,
   "drops": [
    {
@@ -5281,6 +5399,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 156000,
   "combiRank": 1560,
   "drops": [
    {
@@ -5323,6 +5442,7 @@
   "zukanIndex": 85
  },
  {
+  "combiPriority": 84000,
   "combiRank": 840,
   "drops": [
    {
@@ -5374,6 +5494,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 213000,
   "combiRank": 2130,
   "drops": [
    {
@@ -5421,6 +5542,7 @@
   "zukanIndex": 86
  },
  {
+  "combiPriority": 134000,
   "combiRank": 1340,
   "drops": [
    {
@@ -5506,6 +5628,7 @@
   "zukanIndex": 87
  },
  {
+  "combiPriority": 107000,
   "combiRank": 1070,
   "drops": [
    {
@@ -5556,6 +5679,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 245000,
   "combiRank": 2450,
   "drops": [
    {
@@ -5601,6 +5725,7 @@
   "zukanIndex": 88
  },
  {
+  "combiPriority": 581,
   "combiRank": 2240,
   "drops": [
    {
@@ -5649,6 +5774,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 172000,
   "combiRank": 1720,
   "drops": [
    {
@@ -5691,6 +5817,7 @@
   "zukanIndex": 89
  },
  {
+  "combiPriority": 82000,
   "combiRank": 820,
   "drops": [
    {
@@ -5777,6 +5904,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 141000,
   "combiRank": 1410,
   "drops": [
    {
@@ -5812,6 +5940,7 @@
   "zukanIndex": 90
  },
  {
+  "combiPriority": 147000,
   "combiRank": 1470,
   "drops": [
    {
@@ -5855,6 +5984,7 @@
   "zukanIndex": 91
  },
  {
+  "combiPriority": 131000,
   "combiRank": 1310,
   "drops": [
    {
@@ -5897,6 +6027,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 240000,
   "combiRank": 2400,
   "drops": [
    {
@@ -5937,6 +6068,7 @@
   "zukanIndex": 92
  },
  {
+  "combiPriority": 191000,
   "combiRank": 1910,
   "drops": [
    {
@@ -5987,6 +6119,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 198000,
   "combiRank": 1980,
   "drops": [
    {
@@ -6062,6 +6195,7 @@
   "zukanIndex": 93
  },
  {
+  "combiPriority": 187000,
   "combiRank": 1870,
   "drops": [
    {
@@ -6104,6 +6238,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 109000,
   "combiRank": 1090,
   "drops": [
    {
@@ -6182,6 +6317,7 @@
   "zukanIndex": 94
  },
  {
+  "combiPriority": 77000,
   "combiRank": 770,
   "drops": [
    {
@@ -6229,6 +6365,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 197000,
   "combiRank": 1970,
   "drops": [
    {
@@ -6268,6 +6405,7 @@
   "zukanIndex": 95
  },
  {
+  "combiPriority": 169000,
   "combiRank": 1690,
   "drops": [
    {
@@ -6338,6 +6476,7 @@
   "zukanIndex": 96
  },
  {
+  "combiPriority": 58000,
   "combiRank": 580,
   "drops": [
    {
@@ -6415,6 +6554,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 88000,
   "combiRank": 880,
   "drops": [
    {
@@ -6456,6 +6596,7 @@
   "zukanIndex": 97
  },
  {
+  "combiPriority": 72000,
   "combiRank": 720,
   "drops": [
    {
@@ -6498,6 +6639,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 192000,
   "combiRank": 1920,
   "drops": [
    {
@@ -6530,6 +6672,7 @@
   "zukanIndex": 98
  },
  {
+  "combiPriority": 160000,
   "combiRank": 1600,
   "drops": [
    {
@@ -6605,6 +6748,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 112000,
   "combiRank": 1120,
   "drops": [
    {
@@ -6646,6 +6790,7 @@
   "zukanIndex": 99
  },
  {
+  "combiPriority": 64000,
   "combiRank": 640,
   "drops": [
    {
@@ -6686,6 +6831,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 242000,
   "combiRank": 2420,
   "drops": [
    {
@@ -6720,6 +6866,7 @@
   "zukanIndex": 100
  },
  {
+  "combiPriority": 158000,
   "combiRank": 1580,
   "drops": [
    {
@@ -6763,6 +6910,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 193000,
   "combiRank": 1930,
   "drops": [
    {
@@ -6850,6 +6998,7 @@
   "zukanIndex": 101
  },
  {
+  "combiPriority": 206000,
   "combiRank": 2060,
   "drops": [
    {
@@ -6933,6 +7082,7 @@
   "zukanIndex": 102
  },
  {
+  "combiPriority": 144000,
   "combiRank": 1440,
   "drops": [
    {
@@ -7023,6 +7173,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 233000,
   "combiRank": 2330,
   "drops": [
    {
@@ -7099,6 +7250,7 @@
   "zukanIndex": 103
  },
  {
+  "combiPriority": 195000,
   "combiRank": 1950,
   "drops": [
    {
@@ -7140,6 +7292,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 105000,
   "combiRank": 1050,
   "drops": [
    {
@@ -7209,6 +7362,7 @@
   "zukanIndex": 104
  },
  {
+  "combiPriority": 75000,
   "combiRank": 750,
   "drops": [
    {
@@ -7285,6 +7439,7 @@
   "zukanIndex": 105
  },
  {
+  "combiPriority": 38000,
   "combiRank": 380,
   "drops": [
    {
@@ -7326,6 +7481,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 124000,
   "combiRank": 1240,
   "drops": [
    {
@@ -7372,6 +7528,7 @@
   "zukanIndex": 106
  },
  {
+  "combiPriority": 155000,
   "combiRank": 1550,
   "drops": [],
   "elements": [
@@ -7399,6 +7556,7 @@
   "zukanIndex": 107
  },
  {
+  "combiPriority": 138000,
   "combiRank": 1380,
   "drops": [
    {
@@ -7475,6 +7633,7 @@
   "zukanIndex": 108
  },
  {
+  "combiPriority": 108000,
   "combiRank": 1080,
   "drops": [
    {
@@ -7517,6 +7676,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 229000,
   "combiRank": 2290,
   "drops": [
    {
@@ -7559,6 +7719,7 @@
   "zukanIndex": 109
  },
  {
+  "combiPriority": 576,
   "combiRank": 1620,
   "drops": [
    {
@@ -7608,6 +7769,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 103000,
   "combiRank": 1030,
   "drops": [
    {
@@ -7699,6 +7861,7 @@
   "zukanIndex": 110
  },
  {
+  "combiPriority": 167000,
   "combiRank": 1670,
   "drops": [
    {
@@ -7737,6 +7900,7 @@
   "zukanIndex": 111
  },
  {
+  "combiPriority": 80000,
   "combiRank": 800,
   "drops": [
    {
@@ -7783,6 +7947,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 136000,
   "combiRank": 1360,
   "drops": [
    {
@@ -7852,6 +8017,7 @@
   "zukanIndex": 112
  },
  {
+  "combiPriority": 127000,
   "combiRank": 1270,
   "drops": [
    {
@@ -7888,6 +8054,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 128000,
   "combiRank": 1280,
   "drops": [
    {
@@ -7962,6 +8129,7 @@
   "zukanIndex": 113
  },
  {
+  "combiPriority": 63000,
   "combiRank": 630,
   "drops": [
    {
@@ -7999,6 +8167,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 86000,
   "combiRank": 860,
   "drops": [
    {
@@ -8032,6 +8201,7 @@
   "zukanIndex": 114
  },
  {
+  "combiPriority": 101000,
   "combiRank": 1010,
   "drops": [
    {
@@ -8117,6 +8287,7 @@
   "zukanIndex": 115
  },
  {
+  "combiPriority": 181000,
   "combiRank": 1810,
   "drops": [
    {
@@ -8157,6 +8328,7 @@
   "zukanIndex": 116
  },
  {
+  "combiPriority": 65000,
   "combiRank": 650,
   "drops": [
    {
@@ -8239,6 +8411,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 171000,
   "combiRank": 1710,
   "drops": [
    {
@@ -8285,6 +8458,7 @@
   "zukanIndex": 117
  },
  {
+  "combiPriority": 152000,
   "combiRank": 1520,
   "drops": [
    {
@@ -8369,6 +8543,7 @@
   "zukanIndex": 118
  },
  {
+  "combiPriority": 145000,
   "combiRank": 1450,
   "drops": [
    {
@@ -8413,6 +8588,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 126000,
   "combiRank": 1260,
   "drops": [
    {
@@ -8448,6 +8624,7 @@
   "zukanIndex": 119
  },
  {
+  "combiPriority": 117000,
   "combiRank": 1170,
   "drops": [
    {
@@ -8490,6 +8667,7 @@
   "zukanIndex": 120
  },
  {
+  "combiPriority": 59000,
   "combiRank": 590,
   "drops": [
    {
@@ -8561,6 +8739,7 @@
   "zukanIndex": 121
  },
  {
+  "combiPriority": 17000,
   "combiRank": 170,
   "drops": [
    {
@@ -8601,6 +8780,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 120000,
   "combiRank": 1200,
   "drops": [
    {
@@ -8669,6 +8849,7 @@
   "zukanIndex": 122
  },
  {
+  "combiPriority": 74000,
   "combiRank": 740,
   "drops": [
    {
@@ -8702,6 +8883,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 221000,
   "combiRank": 2210,
   "drops": [
    {
@@ -8734,6 +8916,7 @@
   "zukanIndex": 123
  },
  {
+  "combiPriority": 121000,
   "combiRank": 1210,
   "drops": [
    {
@@ -8805,6 +8988,7 @@
   "zukanIndex": 124
  },
  {
+  "combiPriority": 130000,
   "combiRank": 1300,
   "drops": [
    {
@@ -8855,6 +9039,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 199000,
   "combiRank": 1990,
   "drops": [
    {
@@ -8896,6 +9081,7 @@
   "zukanIndex": 125
  },
  {
+  "combiPriority": 231000,
   "combiRank": 2310,
   "drops": [
    {
@@ -8940,6 +9126,7 @@
   "zukanIndex": 126
  },
  {
+  "combiPriority": 223000,
   "combiRank": 2230,
   "drops": [
    {
@@ -8972,6 +9159,7 @@
   "zukanIndex": 127
  },
  {
+  "combiPriority": 142000,
   "combiRank": 1420,
   "drops": [
    {
@@ -9012,6 +9200,7 @@
   "zukanIndex": 128
  },
  {
+  "combiPriority": 159000,
   "combiRank": 1590,
   "drops": [
    {
@@ -9097,6 +9286,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 106000,
   "combiRank": 1060,
   "drops": [
    {
@@ -9133,6 +9323,7 @@
   "zukanIndex": 129
  },
  {
+  "combiPriority": 60000,
   "combiRank": 600,
   "drops": [
    {
@@ -9170,6 +9361,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 115000,
   "combiRank": 1150,
   "drops": [
    {
@@ -9245,6 +9437,7 @@
   "zukanIndex": 130
  },
  {
+  "combiPriority": 43000,
   "combiRank": 430,
   "drops": [
    {
@@ -9326,6 +9519,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 111000,
   "combiRank": 1110,
   "drops": [
    {
@@ -9372,6 +9566,7 @@
   "zukanIndex": 131
  },
  {
+  "combiPriority": 46000,
   "combiRank": 460,
   "drops": [
    {
@@ -9462,6 +9657,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 104000,
   "combiRank": 1040,
   "drops": [
    {
@@ -9497,6 +9693,7 @@
   "zukanIndex": 132
  },
  {
+  "combiPriority": 47000,
   "combiRank": 470,
   "drops": [
    {
@@ -9533,6 +9730,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 239000,
   "combiRank": 2390,
   "drops": [
    {
@@ -9616,6 +9814,7 @@
   "zukanIndex": 133
  },
  {
+  "combiPriority": 83000,
   "combiRank": 830,
   "drops": [
    {
@@ -9695,6 +9894,7 @@
   "zukanIndex": 134
  },
  {
+  "combiPriority": 61000,
   "combiRank": 610,
   "drops": [
    {
@@ -9745,6 +9945,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 98000,
   "combiRank": 980,
   "drops": [
    {
@@ -9795,6 +9996,7 @@
   "zukanIndex": 135
  },
  {
+  "combiPriority": 170000,
   "combiRank": 1700,
   "drops": [
    {
@@ -9878,6 +10080,7 @@
   "zukanIndex": 136
  },
  {
+  "combiPriority": 41000,
   "combiRank": 410,
   "drops": [
    {
@@ -9955,6 +10158,7 @@
   "zukanIndex": 137
  },
  {
+  "combiPriority": 10000,
   "combiRank": 100,
   "drops": [
    {
@@ -9975,6 +10179,7 @@
    "Fire"
   ],
   "id": "KingBahamut_Dragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "EternalFlame"
@@ -9998,6 +10203,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 51000,
   "combiRank": 510,
   "drops": [
    {
@@ -10085,6 +10291,7 @@
   "zukanIndex": 138
  },
  {
+  "combiPriority": 25000,
   "combiRank": 250,
   "drops": [
    {
@@ -10174,6 +10381,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 48000,
   "combiRank": 480,
   "drops": [
    {
@@ -10258,6 +10466,7 @@
   "zukanIndex": 139
  },
  {
+  "combiPriority": 87000,
   "combiRank": 870,
   "drops": [
    {
@@ -10334,6 +10543,7 @@
   "zukanIndex": 140
  },
  {
+  "combiPriority": 151000,
   "combiRank": 1510,
   "drops": [
    {
@@ -10370,6 +10580,7 @@
   "zukanIndex": 141
  },
  {
+  "combiPriority": 85000,
   "combiRank": 850,
   "drops": [
    {
@@ -10407,6 +10618,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 79000,
   "combiRank": 790,
   "drops": [
    {
@@ -10481,6 +10693,7 @@
   "zukanIndex": 142
  },
  {
+  "combiPriority": 20000,
   "combiRank": 200,
   "drops": [
    {
@@ -10562,6 +10775,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 125000,
   "combiRank": 1250,
   "drops": [
    {
@@ -10598,6 +10812,7 @@
   "zukanIndex": 143
  },
  {
+  "combiPriority": 174000,
   "combiRank": 1740,
   "drops": [
    {
@@ -10623,6 +10838,7 @@
    "Normal"
   ],
   "id": "MimicDog",
+  "ignoreCombi": true,
   "maleProbability": 80,
   "passives": [],
   "price": 3500,
@@ -10643,6 +10859,7 @@
   "zukanIndex": 144
  },
  {
+  "combiPriority": 182000,
   "combiRank": 1820,
   "drops": [
    {
@@ -10656,6 +10873,7 @@
    "Dark"
   ],
   "id": "DarkAlien",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "nocturnal": true,
   "passives": [
@@ -10679,6 +10897,7 @@
   "zukanIndex": 145
  },
  {
+  "combiPriority": 99000,
   "combiRank": 990,
   "drops": [
    {
@@ -10698,6 +10917,7 @@
    "Dragon"
   ],
   "id": "WhiteAlienDragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Alien"
@@ -10719,6 +10939,7 @@
   "zukanIndex": 146
  },
  {
+  "combiPriority": 139000,
   "combiRank": 1390,
   "drops": [
    {
@@ -10769,6 +10990,7 @@
   "zukanIndex": 147
  },
  {
+  "combiPriority": 123000,
   "combiRank": 1230,
   "drops": [
    {
@@ -10803,6 +11025,7 @@
   "zukanIndex": 148
  },
  {
+  "combiPriority": 132000,
   "combiRank": 1320,
   "drops": [
    {
@@ -10880,6 +11103,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 176000,
   "combiRank": 1760,
   "drops": [
    {
@@ -10913,6 +11137,7 @@
   "zukanIndex": 149
  },
  {
+  "combiPriority": 161000,
   "combiRank": 1610,
   "drops": [
    {
@@ -10997,6 +11222,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 114000,
   "combiRank": 1140,
   "drops": [
    {
@@ -11030,6 +11256,7 @@
   "zukanIndex": 150
  },
  {
+  "combiPriority": 71000,
   "combiRank": 710,
   "drops": [
    {
@@ -11118,6 +11345,7 @@
   "zukanIndex": 151
  },
  {
+  "combiPriority": 37000,
   "combiRank": 370,
   "drops": [
    {
@@ -11213,6 +11441,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 116000,
   "combiRank": 1160,
   "drops": [
    {
@@ -11255,6 +11484,7 @@
   "zukanIndex": 152
  },
  {
+  "combiPriority": 78000,
   "combiRank": 780,
   "drops": [
    {
@@ -11329,6 +11559,7 @@
   "zukanIndex": 153
  },
  {
+  "combiPriority": 73000,
   "combiRank": 730,
   "drops": [
    {
@@ -11361,6 +11592,7 @@
   "zukanIndex": 154
  },
  {
+  "combiPriority": 146000,
   "combiRank": 1460,
   "drops": [
    {
@@ -11397,6 +11629,7 @@
   "zukanIndex": 155
  },
  {
+  "combiPriority": 119000,
   "combiRank": 1190,
   "drops": [
    {
@@ -11436,6 +11669,7 @@
   "zukanIndex": 156
  },
  {
+  "combiPriority": 57000,
   "combiRank": 570,
   "drops": [
    {
@@ -11517,6 +11751,7 @@
   "zukanIndex": 157
  },
  {
+  "combiPriority": 27000,
   "combiRank": 270,
   "drops": [
    {
@@ -11606,6 +11841,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 49000,
   "combiRank": 490,
   "drops": [
    {
@@ -11685,6 +11921,7 @@
   "zukanIndex": 158
  },
  {
+  "combiPriority": 26000,
   "combiRank": 260,
   "drops": [
    {
@@ -11769,6 +12006,7 @@
   "zukanIndex": 159
  },
  {
+  "combiPriority": 21000,
   "combiRank": 210,
   "drops": [
    {
@@ -11854,6 +12092,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 56000,
   "combiRank": 560,
   "drops": [
    {
@@ -11924,6 +12163,7 @@
   "zukanIndex": 160
  },
  {
+  "combiPriority": 42000,
   "combiRank": 420,
   "drops": [
    {
@@ -11992,6 +12232,7 @@
   "zukanIndex": 161
  },
  {
+  "combiPriority": 190000,
   "combiRank": 1900,
   "drops": [
    {
@@ -12024,6 +12265,7 @@
   "zukanIndex": 162
  },
  {
+  "combiPriority": 178000,
   "combiRank": 1780,
   "drops": [
    {
@@ -12062,6 +12304,7 @@
   "zukanIndex": 163
  },
  {
+  "combiPriority": 150000,
   "combiRank": 1500,
   "drops": [
    {
@@ -12144,6 +12387,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 200000,
   "combiRank": 2000,
   "drops": [
    {
@@ -12177,6 +12421,7 @@
   "zukanIndex": 164
  },
  {
+  "combiPriority": 168000,
   "combiRank": 1680,
   "drops": [
    {
@@ -12212,6 +12457,7 @@
   "zukanIndex": 165
  },
  {
+  "combiPriority": 177000,
   "combiRank": 1770,
   "drops": [
    {
@@ -12252,6 +12498,7 @@
   "zukanIndex": 166
  },
  {
+  "combiPriority": 175000,
   "combiRank": 1750,
   "drops": [
    {
@@ -12290,6 +12537,7 @@
   "zukanIndex": 167
  },
  {
+  "combiPriority": 154000,
   "combiRank": 1540,
   "drops": [
    {
@@ -12337,6 +12585,7 @@
   "zukanIndex": 168
  },
  {
+  "combiPriority": 137000,
   "combiRank": 1370,
   "drops": [
    {
@@ -12375,6 +12624,7 @@
   "zukanIndex": 169
  },
  {
+  "combiPriority": 100000,
   "combiRank": 1000,
   "drops": [
    {
@@ -12458,6 +12708,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 81000,
   "combiRank": 810,
   "drops": [
    {
@@ -12491,6 +12742,7 @@
   "zukanIndex": 170
  },
  {
+  "combiPriority": 30000,
   "combiRank": 300,
   "drops": [
    {
@@ -12567,6 +12819,7 @@
   "zukanIndex": 171
  },
  {
+  "combiPriority": 14000,
   "combiRank": 140,
   "drops": [
    {
@@ -12656,6 +12909,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 140000,
   "combiRank": 1400,
   "drops": [
    {
@@ -12690,6 +12944,7 @@
   "zukanIndex": 172
  },
  {
+  "combiPriority": 135000,
   "combiRank": 1350,
   "drops": [
    {
@@ -12729,6 +12984,7 @@
   "zukanIndex": 173
  },
  {
+  "combiPriority": 39000,
   "combiRank": 390,
   "drops": [
    {
@@ -12811,6 +13067,7 @@
   "zukanIndex": 174
  },
  {
+  "combiPriority": 23000,
   "combiRank": 230,
   "drops": [
    {
@@ -12887,6 +13144,7 @@
   "zukanIndex": 175
  },
  {
+  "combiPriority": 52000,
   "combiRank": 520,
   "drops": [
    {
@@ -12970,6 +13228,7 @@
   "zukanIndex": 176
  },
  {
+  "combiPriority": 53000,
   "combiRank": 530,
   "drops": [
    {
@@ -13052,6 +13311,7 @@
   "zukanIndex": 177
  },
  {
+  "combiPriority": 97000,
   "combiRank": 970,
   "drops": [
    {
@@ -13136,6 +13396,7 @@
   "zukanIndex": 178
  },
  {
+  "combiPriority": 76000,
   "combiRank": 760,
   "drops": [
    {
@@ -13219,6 +13480,7 @@
   "zukanIndex": 179
  },
  {
+  "combiPriority": 89000,
   "combiRank": 890,
   "drops": [
    {
@@ -13309,6 +13571,7 @@
   "zukanIndex": 180
  },
  {
+  "combiPriority": 118000,
   "combiRank": 1180,
   "drops": [
    {
@@ -13392,6 +13655,7 @@
   "zukanIndex": 181
  },
  {
+  "combiPriority": 28000,
   "combiRank": 280,
   "drops": [
    {
@@ -13476,6 +13740,7 @@
   "zukanIndex": 182
  },
  {
+  "combiPriority": 29000,
   "combiRank": 290,
   "drops": [
    {
@@ -13559,6 +13824,7 @@
   "zukanIndex": 183
  },
  {
+  "combiPriority": 3000,
   "combiRank": 30,
   "drops": [
    {
@@ -13642,6 +13908,7 @@
   "zukanIndex": 184
  },
  {
+  "combiPriority": 102000,
   "combiRank": 1020,
   "drops": [
    {
@@ -13703,6 +13970,7 @@
    "Electricity"
   ],
   "id": "ElecPanda",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 3524,
@@ -13725,6 +13993,7 @@
   "zukanIndex": 185
  },
  {
+  "combiPriority": 24000,
   "combiRank": 240,
   "drops": [
    {
@@ -13798,6 +14067,7 @@
    "Leaf"
   ],
   "id": "LilyQueen",
+  "ignoreCombi": true,
   "maleProbability": 30,
   "passives": [
    "ElementBoost_Leaf_2_PAL"
@@ -13822,6 +14092,7 @@
   "zukanIndex": 186
  },
  {
+  "combiPriority": 22000,
   "combiRank": 220,
   "drops": [
    {
@@ -13889,6 +14160,7 @@
    "Dark"
   ],
   "id": "LilyQueen_Dark",
+  "ignoreCombi": true,
   "maleProbability": 30,
   "nocturnal": true,
   "passives": [],
@@ -13912,6 +14184,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 12000,
   "combiRank": 120,
   "drops": [
    {
@@ -13974,6 +14247,7 @@
    "Electricity"
   ],
   "id": "ThunderDragonMan",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "ElementBoost_Thunder_2_PAL"
@@ -13997,6 +14271,7 @@
   "zukanIndex": 187
  },
  {
+  "combiPriority": 50000,
   "combiRank": 500,
   "drops": [
    {
@@ -14058,6 +14333,7 @@
    "Fire"
   ],
   "id": "Horus",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 2685,
@@ -14078,6 +14354,7 @@
   "zukanIndex": 188
  },
  {
+  "combiPriority": 45000,
   "combiRank": 450,
   "drops": [
    {
@@ -14133,6 +14410,7 @@
    "Water"
   ],
   "id": "Horus_Water",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 2797,
@@ -14154,6 +14432,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 55000,
   "combiRank": 550,
   "drops": [
    {
@@ -14221,6 +14500,7 @@
    "Dark"
   ],
   "id": "BlackGriffon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "nocturnal": true,
   "passives": [],
@@ -14241,6 +14521,7 @@
   "zukanIndex": 189
  },
  {
+  "combiPriority": 36000,
   "combiRank": 360,
   "drops": [
    {
@@ -14309,6 +14590,7 @@
    "Normal"
   ],
   "id": "MoonQueen",
+  "ignoreCombi": true,
   "maleProbability": 20,
   "nocturnal": true,
   "passives": [],
@@ -14331,6 +14613,7 @@
   "zukanIndex": 190
  },
  {
+  "combiPriority": 5000,
   "combiRank": 50,
   "drops": [
    {
@@ -14392,6 +14675,7 @@
    "Ice"
   ],
   "id": "SnowTigerBeastman",
+  "ignoreCombi": true,
   "maleProbability": 60,
   "passives": [],
   "price": 4425,
@@ -14413,6 +14697,7 @@
   "zukanIndex": 191
  },
  {
+  "combiPriority": 4000,
   "combiRank": 40,
   "drops": [
    {
@@ -14481,6 +14766,7 @@
    "Water"
   ],
   "id": "BlueSkyDragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 4531,
@@ -14501,6 +14787,7 @@
   "zukanIndex": 192
  },
  {
+  "combiPriority": 8000,
   "combiRank": 80,
   "drops": [
    {
@@ -14562,6 +14849,7 @@
    "Leaf"
   ],
   "id": "Mothman",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 4436,
@@ -14585,6 +14873,7 @@
   "zukanIndex": 193
  },
  {
+  "combiPriority": 6000,
   "combiRank": 60,
   "drops": [
    {
@@ -14653,6 +14942,7 @@
    "Dark"
   ],
   "id": "FlowerPrince",
+  "ignoreCombi": true,
   "maleProbability": 60,
   "nocturnal": true,
   "passives": [],
@@ -14677,6 +14967,7 @@
   "zukanIndex": 194
  },
  {
+  "combiPriority": 62000,
   "combiRank": 620,
   "drops": [
    {
@@ -14690,6 +14981,7 @@
    "Dark"
   ],
   "id": "NightLady",
+  "ignoreCombi": true,
   "maleProbability": 10,
   "nocturnal": true,
   "passives": [],
@@ -14712,6 +15004,7 @@
   "zukanIndex": 195
  },
  {
+  "combiPriority": 13000,
   "combiRank": 130,
   "drops": [
    {
@@ -14731,6 +15024,7 @@
    "Dark"
   ],
   "id": "NightLady_Dark",
+  "ignoreCombi": true,
   "maleProbability": 10,
   "nocturnal": true,
   "passives": [
@@ -14756,6 +15050,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 40000,
   "combiRank": 400,
   "drops": [
    {
@@ -14770,6 +15065,7 @@
    "Dragon"
   ],
   "id": "DarkMechaDragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "nocturnal": true,
   "passives": [
@@ -14793,6 +15089,7 @@
   "zukanIndex": 196
  },
  {
+  "combiPriority": 9000,
   "combiRank": 90,
   "drops": [
    {
@@ -14818,6 +15115,7 @@
    "Normal"
   ],
   "id": "LegendDeer",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Salvation"
@@ -14840,6 +15138,7 @@
   "zukanIndex": 197
  },
  {
+  "combiPriority": 18000,
   "combiRank": 180,
   "drops": [
    {
@@ -14865,6 +15164,7 @@
    "Normal"
   ],
   "id": "SaintCentaur",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Legend",
@@ -14888,6 +15188,7 @@
   "zukanIndex": 198
  },
  {
+  "combiPriority": 19000,
   "combiRank": 190,
   "drops": [
    {
@@ -14913,6 +15214,7 @@
    "Dark"
   ],
   "id": "BlackCentaur",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "nocturnal": true,
   "passives": [
@@ -14937,6 +15239,7 @@
   "zukanIndex": 199
  },
  {
+  "combiPriority": 15000,
   "combiRank": 150,
   "drops": [
    {
@@ -14956,6 +15259,7 @@
    "Ice"
   ],
   "id": "IceHorse",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Legend",
@@ -14978,6 +15282,7 @@
   "zukanIndex": 200
  },
  {
+  "combiPriority": 11000,
   "combiRank": 110,
   "drops": [
    {
@@ -14997,6 +15302,7 @@
    "Dark"
   ],
   "id": "IceHorse_Dark",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "nocturnal": true,
   "passives": [
@@ -15021,6 +15327,7 @@
   "zukanSuffix": "B"
  },
  {
+  "combiPriority": 16000,
   "combiRank": 160,
   "drops": [
    {
@@ -15052,6 +15359,7 @@
    "Water"
   ],
   "id": "PoseidonOrca",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Legend",
@@ -15074,6 +15382,7 @@
   "zukanIndex": 201
  },
  {
+  "combiPriority": 7000,
   "combiRank": 70,
   "drops": [
    {
@@ -15105,6 +15414,7 @@
    "Dragon"
   ],
   "id": "JetDragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [
    "Legend",
@@ -15127,6 +15437,7 @@
   "zukanIndex": 202
  },
  {
+  "combiPriority": 2000,
   "combiRank": 20,
   "drops": [
    {
@@ -15146,6 +15457,7 @@
    "Water"
   ],
   "id": "KingWhale",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 4913,
@@ -15163,6 +15475,7 @@
   "zukanIndex": 203
  },
  {
+  "combiPriority": 1000,
   "combiRank": 10,
   "drops": [
    {
@@ -15180,6 +15493,7 @@
   ],
   "elements": [],
   "id": "WorldTreeDragon",
+  "ignoreCombi": true,
   "maleProbability": 50,
   "passives": [],
   "price": 10000,

@@ -50,6 +50,12 @@ const pals = Object.entries(params)
     size: enumName(pick(row, "Size")),
     price: pick<number>(row, "Price") ?? 0,
     combiRank: must(pick<number>(row, "CombiRank"), `${id}.CombiRank`),
+    combiPriority: pick<number>(row, "CombiDuplicatePriority") ?? 0,
+    ignoreCombi: pick<boolean>(row, "IgnoreCombi") || undefined,
+    partnerSkillNameId: (() => {
+      const v = pick<string>(row, "OverridePartnerSkillNameTextID");
+      return v && v !== "None" ? v : undefined;
+    })(),
     maleProbability: pick<number>(row, "MaleProbability") ?? 50,
     nocturnal: pick<boolean>(row, "Nocturnal") || undefined,
     passives: [1, 2, 3, 4]

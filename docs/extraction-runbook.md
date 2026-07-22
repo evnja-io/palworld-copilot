@@ -49,6 +49,7 @@ Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
 | Objets de map (master) | `MapObject/DT_MapObjectMasterDataTable` |
 | Boss Alpha (positions !) | `UI/DT_BossSpawnerLoactionData` — la faute « Loaction » est dans le vrai nom |
 | Donjons | `Dungeon/DT_DungeonLevelDataTable`, `Dungeon/DT_DungeonSpawnAreaDataTable` |
+| Skills actifs | `Waza/DT_WazaDataTable`, `Waza/DT_WazaMasterLevel` |
 | Bornes de la carte | `WorldMapUIData/DT_WorldMapUIData` (landScapeRealPositionMin/Max) |
 
 ### L10N (`Pal/Content/L10N/{en,fr}/Pal/DataTable/Text/…`) — Save Properties (.json)
