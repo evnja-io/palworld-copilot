@@ -12,7 +12,8 @@
     "all": "tsx src/all.ts",
     "verify": "tsx src/verify.ts",
     "icons": "tsx src/icons.ts",
-    "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts"
+    "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
+    "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

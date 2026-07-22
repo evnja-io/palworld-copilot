@@ -39,6 +39,12 @@ export const progress = pgTable(
   ],
 );
 
+export const savePlayers = pgTable("save_players", {
+  playerGuid: text("player_guid").primaryKey(),
+  nickname: text("nickname").notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 export const saveSnapshots = pgTable(
   "save_snapshots",
   {

@@ -15,6 +15,13 @@
       "when": 1784705353066,
       "tag": "0001_rare_marvel_boy",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1784711831878,
+      "tag": "0002_lumpy_infant_terrible",
+      "breakpoints": true
     }
   ]
 }
