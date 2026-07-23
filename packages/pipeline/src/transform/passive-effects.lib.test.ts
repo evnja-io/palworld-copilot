@@ -1,4 +1,7 @@
+import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { loadDataTableRows } from "../lib.js";
+import { RAW_DIR } from "../paths.js";
 import { parsePassiveRow, passiveValuesById } from "./passive-effects.lib.js";
 
 const rowLegend = {
@@ -25,5 +28,15 @@ describe("parsePassiveRow", () => {
 describe("passiveValuesById", () => {
   it("indexe les valeurs positionnelles par id", () => {
     expect(passiveValuesById({ Legend: rowLegend })).toEqual({ Legend: [20, 20, 20, 0] });
+  });
+});
+
+describe.skipIf(!existsSync(RAW_DIR))("passifs (exports réels)", () => {
+  it("couvre les IDs innés avec les bonnes valeurs", { timeout: 120_000 }, () => {
+    const rows = loadDataTableRows(/DT_PassiveSkill_Main/);
+    expect(Object.keys(rows).length).toBeGreaterThan(1000);
+    const def = parsePassiveRow(rows["Deffence_up2_2"]);
+    expect(def.effects[0]).toEqual({ type: "Defense", value: 20, target: "ToSelf" });
+    expect(def.values[0]).toBe(20);
   });
 });

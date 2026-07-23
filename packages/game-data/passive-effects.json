@@ -1,0 +1,5262 @@
+{
+ "AccuracyDecrease": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BulletAccuracy",
+    "value": -300
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "AccuracyIncrease": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BulletAccuracy",
+    "value": 90
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "AccuracySuperDecrease": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BulletAccuracy",
+    "value": -1000
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 200
+   }
+  ],
+  "rank": 1
+ },
+ "AirDash_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "AirDash",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "AirDash_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "AirDash",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "AirDash_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "AirDash",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "AirDash_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "AirDash",
+    "value": 4
+   }
+  ],
+  "rank": 1
+ },
+ "Alien": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 15
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Electricity",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "Attack_ACC_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "Attack_ACC_up1_Armor": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "Attack_ACC_up1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ShotAttack",
+    "value": 4
+   }
+  ],
+  "rank": 1
+ },
+ "Attack_ACC_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 2
+ },
+ "Attack_ACC_up2_Armor": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 6
+   }
+  ],
+  "rank": 2
+ },
+ "Attack_ACC_up2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ShotAttack",
+    "value": 8
+   }
+  ],
+  "rank": 2
+ },
+ "Attack_ACC_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   }
+  ],
+  "rank": 3
+ },
+ "Attack_ACC_up3_Armor": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 9
+   }
+  ],
+  "rank": 3
+ },
+ "Attack_ACC_up3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ShotAttack",
+    "value": 12
+   }
+  ],
+  "rank": 3
+ },
+ "Attack_ACC_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "Attack_ACC_up4_Armor": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 12
+   }
+  ],
+  "rank": 4
+ },
+ "Attack_ACC_up4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ShotAttack",
+    "value": 16
+   }
+  ],
+  "rank": 4
+ },
+ "AutoHPRegeneRate_Passive": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "AutoHPRegeneRate",
+    "value": 5
+   }
+  ],
+  "rank": 3
+ },
+ "AvoidDurationUp_EquipSkill_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "AvoidDurationUp_EquipSkill",
+    "value": 20
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_AmaterasuWolf_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Anubis": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BadCatgirl": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BerryGoat_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BlackMetalDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BlackPuppy": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BlueDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BlueThunderHorse": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_BlueberryFairy": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CactusDoll": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CaptainPenguin": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CatMage": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CatVampire": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CubeTurtle": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_CubeTurtle_Neutral": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_DarkScorpion": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_DarkScorpion_Ground": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_DomeArmorDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ElecLizard": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ElecPanda": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ElecSnail": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FairyDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FengyunDeeper": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FengyunDeeper_Electric": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FireKirin": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FlameBuffalo": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FlowerDinosaur_Electric": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FlowerDoll": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FoxExorcist": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_FoxMage": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GhostDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GhostRabbit": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GoldenHorse": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrassGolem": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrassGolem_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrassMammoth": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrassPanda_Electric": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrassRabbitMan": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_GrimGirl": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_HawkBird": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_HerculesBeetle": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_HerculesBeetle_Ground": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Horus_Water": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_IceFox": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_IceHorse": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_IceHorse_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_IceNarwhal": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_IceNarwhal_Fire": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_JetDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_KabukiMan": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_KingAlpaca": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_KingAlpaca_Ice": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_KingBahamut": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Kirin": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Kitsunebi_Ice": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_LazyCatfish": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_LazyDragon_Electric": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_LilyQueen": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_LilyQueen_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_LotusDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Manticore": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_MoonChild": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_MopKing": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_MushroomLady": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Mutant": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_MysteryMask": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_NaughtyCat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_NightBlueHorse": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_PinkRabbit_Grass": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_PlantSlime": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_PoseidonOrca": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_PurpleSpider": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_QueenBee": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_RaijinDaughter_Water": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_RockBeast": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_RockBeast_Ice": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Ronin": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_SaintCentaur_1": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_SaintCentaur_2": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_SakuraSaurus": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_SakuraSaurus_Water": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ScorpionMan_Electric": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_SkyDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Suzaku": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ThunderBird": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_ThunderFluffyBird": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Umihebi": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_VioletFairy": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_VolcanicMonster": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_VolcanoDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_VolcanoDragon_Ice": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WeaselDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Werewolf_Ice": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WhiteDeer": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WhiteDeer_Dark": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WhiteMoth": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WhiteShieldDragon": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WhiteTiger_Ground": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_WingGolem": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BossDefeatReward_Yeti_Grass": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "BulletSpeed_H": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BulletSpeed",
+    "value": 2000
+   }
+  ],
+  "rank": 1
+ },
+ "BulletSpeed_L": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BulletSpeed",
+    "value": 200
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 4
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "CaptureLevel_Up_6": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CaptureLevel",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Berries": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_CuteFox": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Egg": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Milk": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Money": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Sweets": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Wool_Alpaca": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Wool_SheepBall": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CollectItem_Wool_WhiteMoth": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItem",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "CoolTimeReduction_Down_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ActiveSkillCoolTime_Decrease",
+    "value": -15
+   }
+  ],
+  "rank": -1
+ },
+ "CoolTimeReduction_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ActiveSkillCoolTime_Decrease",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "CoolTimeReduction_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ActiveSkillCoolTime_Decrease",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "CoolTimeReduction_Up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ActiveSkillCoolTime_Decrease",
+    "value": 0
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 0
+   }
+  ],
+  "rank": 4
+ },
+ "CraftSpeed*3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 200
+   }
+  ],
+  "rank": 9
+ },
+ "CraftSpeed*5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 400
+   }
+  ],
+  "rank": 9
+ },
+ "CraftSpeed_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "CraftSpeed_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -30
+   }
+  ],
+  "rank": -3
+ },
+ "CraftSpeed_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 20
+   }
+  ],
+  "rank": 1
+ },
+ "CraftSpeed_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 50
+   }
+  ],
+  "rank": 3
+ },
+ "CraftSpeed_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 75
+   }
+  ],
+  "rank": 4
+ },
+ "Defense_ACC_up1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "Defense",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "Defense_ACC_up2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "Defense",
+    "value": 10
+   }
+  ],
+  "rank": 2
+ },
+ "Defense_ACC_up3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "Defense",
+    "value": 15
+   }
+  ],
+  "rank": 3
+ },
+ "Defense_ACC_up4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "Defense",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "Deffence_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "Deffence_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -20
+   }
+  ],
+  "rank": -3
+ },
+ "Deffence_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "Deffence_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "LeanBackInvalid_ForPassiveSkill",
+    "value": 0
+   }
+  ],
+  "rank": 3
+ },
+ "Deffence_up2_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "KnockbackInvalid_ForPassiveSkill",
+    "value": 0
+   }
+  ],
+  "rank": 2
+ },
+ "Deffence_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "LeanBackInvalid_ForPassiveSkill",
+    "value": 0
+   },
+   {
+    "target": "ToSelf",
+    "type": "KnockbackInvalid_ForPassiveSkill",
+    "value": 0
+   }
+  ],
+  "rank": 4
+ },
+ "Defuser_ExplosiveSpore_EquipSkill": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defuser_ExplosiveSpore",
+    "value": 1
+   },
+   {
+    "target": "ToOtomo",
+    "type": "Defuser_ExplosiveSpore",
+    "value": 1
+   },
+   {
+    "target": "ToSelf",
+    "type": "ExplosionResist",
+    "value": 100
+   },
+   {
+    "target": "ToOtomo",
+    "type": "ExplosionResist",
+    "value": 100
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Aqua_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Water",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Aqua_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Water",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Dark_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dark_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dark_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dark",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dark_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dark_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Dark_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dark",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Dark_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dark_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Dark_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dark",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Dragon_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dragon_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dragon_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dragon",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dragon_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dragon_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Dragon_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dragon",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Dragon_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Dragon_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Dragon_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Dragon",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Earth_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Earth_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Earth_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Earth",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Earth_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Earth_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Earth_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Earth",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Earth_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Earth_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Earth_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Earth",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Electricity_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Electricity_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Electricity_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Electricity_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Electricity_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Electricity_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Electricity_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Electricity",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Fire_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Fire_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Fire_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Fire",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Fire_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Fire_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Fire_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Fire",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Fire_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Fire_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Fire_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Fire",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Ice_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Ice_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Ice_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Ice",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Ice_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Ice_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Ice_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Ice",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Ice_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Ice_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Ice_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Ice",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Leaf_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Leaf_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Leaf_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Leaf",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Leaf_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Leaf_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Leaf_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Leaf",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Leaf_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Leaf_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Leaf_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Leaf",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Normal_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Normal_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Normal_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Normal",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Normal_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Normal_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Normal_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Normal",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Normal_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Normal_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Normal_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Normal",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementBoost_Thunder_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Electricity",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Thunder_2_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Electricity",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Water_1_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Water_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 6
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Water_2_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Water_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 12
+   }
+  ],
+  "rank": 2
+ },
+ "ElementBoost_Water_3_BossDefeat": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "ElementBoost_Water_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 18
+   }
+  ],
+  "rank": 3
+ },
+ "ElementBoost_Water_4_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "ElementBoost_Water",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Aqua_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Water",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Aqua_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Water",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Aqua_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Water",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Aqua_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Water",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Aqua_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Water",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Dark_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dark",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Dark_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dark",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Dark_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dark",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Dark_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dark",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Dark_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dark",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Dragon_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dragon",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Dragon_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dragon",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Dragon_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dragon",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Dragon_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dragon",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Dragon_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Dragon",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Earth_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Earth",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Earth_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Earth",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Earth_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Earth",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Earth_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Earth",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Earth_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Earth",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Fire_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Fire_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Fire_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Fire_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Fire_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Fire",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Ice_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Ice",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Ice_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Ice",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Ice_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Ice",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Ice_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Ice",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Ice_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Ice",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Leaf_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Leaf",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Leaf_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Leaf",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Leaf_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Leaf",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Leaf_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Leaf",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Leaf_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Leaf",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Normal_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Normal",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Normal_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Normal",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Normal_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Normal",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Normal_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Normal",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Normal_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Normal",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "ElementResist_Thunder_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Electricity",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Thunder_1_PAL": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Electricity",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "ElementResist_Thunder_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Electricity",
+    "value": 25
+   }
+  ],
+  "rank": 2
+ },
+ "ElementResist_Thunder_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Electricity",
+    "value": 30
+   }
+  ],
+  "rank": 3
+ },
+ "ElementResist_Thunder_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementResist_Electricity",
+    "value": 35
+   }
+  ],
+  "rank": 4
+ },
+ "EternalFlame": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Fire",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Electricity",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "FriendshipPoint_Increase_EquipSkill": {
+  "effects": [
+   {
+    "target": "ToOtomo",
+    "type": "FriendshipPoint_Increase",
+    "value": 50
+   }
+  ],
+  "rank": -1
+ },
+ "GYM_NAME_Desert": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Forest": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Meadow": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Sakurajima": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Snow": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Viking": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GYM_NAME_Volcano": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "GiveADark": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementDark",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveADragon": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementDragon",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveAEarth": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementEarth",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveAElectricity": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementElectricity",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveAFire": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementFire",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveAIce": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementIce",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveALeaf": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementLeaf",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "GiveAWater": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ElementWater",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "HP_ACC_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "HP_ACC_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": 15
+   }
+  ],
+  "rank": 2
+ },
+ "HP_ACC_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "HP_ACC_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": 25
+   }
+  ],
+  "rank": 4
+ },
+ "Invader": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dark",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dragon",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "Invalid_ToxicGas_EquipSkill": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "InvalidToxicGas",
+    "value": 0
+   },
+   {
+    "target": "ToOtomo",
+    "type": "InvalidToxicGas",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "JumpCount_Increase1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "JumpCount_Increase",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "JumpCount_Increase2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "JumpCount_Increase",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "JumpCount_Increase3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "JumpCount_Increase",
+    "value": 3
+   }
+  ],
+  "rank": 1
+ },
+ "JumpPower_Increase": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "JumpPower_Increase",
+    "value": 25
+   }
+  ],
+  "rank": 1
+ },
+ "Legend": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "Logging_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 100
+   }
+  ],
+  "rank": 1
+ },
+ "Logging_up1_Otomo_only": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 200
+   }
+  ],
+  "rank": 1
+ },
+ "Logging_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 130
+   }
+  ],
+  "rank": 2
+ },
+ "Logging_up2_Otomo_only": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 220
+   }
+  ],
+  "rank": 2
+ },
+ "Logging_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 160
+   }
+  ],
+  "rank": 3
+ },
+ "Logging_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 200
+   }
+  ],
+  "rank": 4
+ },
+ "Logging_up5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Logging",
+    "value": 250
+   }
+  ],
+  "rank": 5
+ },
+ "MaxInventoryWeight_up": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "MaxInventoryWeight",
+    "value": 50
+   }
+  ],
+  "rank": 1
+ },
+ "MaxInventoryWeight_up2": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "MaxInventoryWeight",
+    "value": 150
+   }
+  ],
+  "rank": 1
+ },
+ "MaxInventoryWeight_up3": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "MaxInventoryWeight",
+    "value": 200
+   }
+  ],
+  "rank": 3
+ },
+ "MaxInventoryWeight_up_Equip_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxInventoryWeight",
+    "value": 50
+   }
+  ],
+  "rank": -1
+ },
+ "MaxInventoryWeight_up_Equip_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxInventoryWeight",
+    "value": 100
+   }
+  ],
+  "rank": -1
+ },
+ "MaxInventoryWeight_up_Equip_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxInventoryWeight",
+    "value": 200
+   }
+  ],
+  "rank": -1
+ },
+ "MaxInventoryWeight_up_Equip_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxInventoryWeight",
+    "value": 300
+   }
+  ],
+  "rank": -1
+ },
+ "MeleeAttack_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "MeleeAttack_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": -30
+   }
+  ],
+  "rank": 1
+ },
+ "MeleeAttack_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "MeleeAttack_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": 50
+   }
+  ],
+  "rank": 4
+ },
+ "MiniNushi": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Water",
+    "value": 5
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Ice",
+    "value": 5
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 5
+   }
+  ],
+  "rank": 3
+ },
+ "Mining_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 100
+   }
+  ],
+  "rank": 1
+ },
+ "Mining_up1_Otomo_only": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 300
+   }
+  ],
+  "rank": 1
+ },
+ "Mining_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 130
+   }
+  ],
+  "rank": 2
+ },
+ "Mining_up2_Otomo_only": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 500
+   }
+  ],
+  "rank": 2
+ },
+ "Mining_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 160
+   }
+  ],
+  "rank": 3
+ },
+ "Mining_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 200
+   }
+  ],
+  "rank": 4
+ },
+ "Mining_up5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Mining",
+    "value": 250
+   }
+  ],
+  "rank": 5
+ },
+ "MoveSpeed_up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "MoveSpeed_up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "MoveSpeed_up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "MutationPal_Babysitter": {
+  "effects": [
+   {
+    "target": "ToBuildObject",
+    "type": "PalEggHatchingSpeed",
+    "value": 30
+   },
+   {
+    "target": "ToBuildObject",
+    "type": "BreedSpeed_InBaseCamp",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "MutationPal_ExplosionResist": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ExplosionResist",
+    "value": 100
+   }
+  ],
+  "rank": 4
+ },
+ "MutationPal_Immortal": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "LifeSteal",
+    "value": 5
+   },
+   {
+    "target": "ToSelf",
+    "type": "AutoHPRegeneRate",
+    "value": 100
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   }
+  ],
+  "rank": 4
+ },
+ "MutationPal_Mutant": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "AutoHPRegeneRate",
+    "value": 50
+   },
+   {
+    "target": "ToSelf",
+    "type": "ResistAdditionalEffect_Burn",
+    "value": 100
+   },
+   {
+    "target": "ToSelf",
+    "type": "ResistAdditionalEffect_Poison",
+    "value": 100
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 25
+   }
+  ],
+  "rank": 4
+ },
+ "Mute_1": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "Mute",
+    "value": -50
+   }
+  ],
+  "rank": 1
+ },
+ "Mute_2": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "Mute",
+    "value": -60
+   }
+  ],
+  "rank": 2
+ },
+ "Mute_3": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "Mute",
+    "value": -70
+   }
+  ],
+  "rank": 3
+ },
+ "Mute_4": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "Mute",
+    "value": -80
+   }
+  ],
+  "rank": 4
+ },
+ "Mute_5": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "Mute",
+    "value": -90
+   }
+  ],
+  "rank": 5
+ },
+ "NightOwl": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "NightOwl",
+    "value": 0
+   }
+  ],
+  "rank": -1
+ },
+ "Nocturnal": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Nocturnal",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "NonKilling": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "NonKilling",
+    "value": 0
+   }
+  ],
+  "rank": -1
+ },
+ "Noukin": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -50
+   }
+  ],
+  "rank": 2
+ },
+ "Nushi": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Water",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Ice",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "OctaviaArmorVampire": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "LifeSteal",
+    "value": 1
+   }
+  ],
+  "rank": 4
+ },
+ "PAL_ALLAttack_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "PAL_ALLAttack_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -20
+   }
+  ],
+  "rank": -3
+ },
+ "PAL_ALLAttack_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_ALLAttack_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "PAL_ALLAttack_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 5
+   }
+  ],
+  "rank": 4
+ },
+ "PAL_CorporateSlave": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -30
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_ElementPassive_Test": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_FullStomach_Down_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_FullStomach_Down_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": -15
+   }
+  ],
+  "rank": 3
+ },
+ "PAL_FullStomach_Down_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": -20
+   }
+  ],
+  "rank": 4
+ },
+ "PAL_FullStomach_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": 10
+   }
+  ],
+  "rank": -1
+ },
+ "PAL_FullStomach_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": 15
+   }
+  ],
+  "rank": -2
+ },
+ "PAL_Sanity_Down_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_Sanity_Down_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": -15
+   }
+  ],
+  "rank": 3
+ },
+ "PAL_Sanity_Down_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": -20
+   }
+  ],
+  "rank": 4
+ },
+ "PAL_Sanity_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": 10
+   }
+  ],
+  "rank": -1
+ },
+ "PAL_Sanity_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": 15
+   }
+  ],
+  "rank": -2
+ },
+ "PAL_SpiritualInst": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -10
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "PAL_TribePassive_Test": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 12
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 12
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_conceited": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 10
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_masochist": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 15
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -15
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_oraora": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_rude": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   },
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "PAL_sadist": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -15
+   }
+  ],
+  "rank": 1
+ },
+ "PalExp_Increase_1_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalExp_Increase",
+    "value": 30
+   }
+  ],
+  "rank": 1
+ },
+ "PalExp_Increase_2_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalExp_Increase",
+    "value": 40
+   }
+  ],
+  "rank": 2
+ },
+ "PalExp_Increase_3_Otomo_Only_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalExp_Increase",
+    "value": 50
+   }
+  ],
+  "rank": 3
+ },
+ "PlayerSP_DecreaseRate_Passive": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "PlayerSP_DecreaseRate",
+    "value": -5
+   }
+  ],
+  "rank": 3
+ },
+ "Rare": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 15
+   },
+   {
+    "target": "None",
+    "type": "Defense",
+    "value": 15
+   },
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 20
+   }
+  ],
+  "rank": 4
+ },
+ "RecoilDecrease": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Recoil",
+    "value": -90
+   }
+  ],
+  "rank": 1
+ },
+ "RecoilIncrease": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Recoil",
+    "value": 50
+   }
+  ],
+  "rank": 1
+ },
+ "ReloadSpeedUp_Passive": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ReloadSpeedUp",
+    "value": 4
+   }
+  ],
+  "rank": 3
+ },
+ "RideJumpCount_Increase1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "RideJumpCount_Increase",
+    "value": 1
+   }
+  ],
+  "rank": 4
+ },
+ "RideJumpCount_Increase2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "RideJumpCount_Increase",
+    "value": 2
+   }
+  ],
+  "rank": 4
+ },
+ "SalePrice_Down_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShopSellPrice_Money_Increase",
+    "value": -10
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShopBuyPrice_Money_Increase",
+    "value": 10
+   }
+  ],
+  "rank": -1
+ },
+ "SalePrice_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShopSellPrice_Money_Increase",
+    "value": 5
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShopBuyPrice_Money_Increase",
+    "value": -5
+   }
+  ],
+  "rank": 3
+ },
+ "SalePrice_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShopSellPrice_Money_Increase",
+    "value": 3
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShopBuyPrice_Money_Increase",
+    "value": -3
+   }
+  ],
+  "rank": 1
+ },
+ "Salvation": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Normal",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Leaf",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "SelfDeathAddItemDrop_up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SelfDeathAddItemDrop",
+    "value": 15
+   }
+  ],
+  "rank": 1
+ },
+ "SelfDeathAddItemDrop_up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SelfDeathAddItemDrop",
+    "value": 50
+   }
+  ],
+  "rank": 3
+ },
+ "SelfDeathAddItemDrop_up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SelfDeathAddItemDrop",
+    "value": 100
+   }
+  ],
+  "rank": 4
+ },
+ "ShotAttack_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "ShotAttack_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -20
+   }
+  ],
+  "rank": -3
+ },
+ "ShotAttack_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 2
+ },
+ "ShotAttack_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "SphereModule_Curve": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 7
+   }
+  ],
+  "rank": 1
+ },
+ "SphereModule_Curve2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 8
+   }
+  ],
+  "rank": 1
+ },
+ "SphereModule_Heavy": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 16
+   }
+  ],
+  "rank": 1
+ },
+ "SphereModule_Homing": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 19
+   }
+  ],
+  "rank": 1
+ },
+ "SphereModule_Sniper": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "SphereModule_Sniper2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CurveType",
+    "value": 2
+   }
+  ],
+  "rank": 1
+ },
+ "Stamina_Down_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalSP_Increase",
+    "value": -25
+   }
+  ],
+  "rank": -1
+ },
+ "Stamina_Up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalSP_Increase",
+    "value": 50
+   }
+  ],
+  "rank": 3
+ },
+ "Stamina_Up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalSP_Increase",
+    "value": 25
+   }
+  ],
+  "rank": 1
+ },
+ "Stamina_Up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "PalSP_Increase",
+    "value": 75
+   }
+  ],
+  "rank": 4
+ },
+ "StealExpert_1": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "GainItemDrop",
+    "value": 100
+   }
+  ],
+  "rank": 1
+ },
+ "StealExpert_2": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "GainItemDrop",
+    "value": 150
+   }
+  ],
+  "rank": 2
+ },
+ "StealExpert_3": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "GainItemDrop",
+    "value": 200
+   }
+  ],
+  "rank": 3
+ },
+ "StealExpert_4": {
+  "effects": [
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "GainItemDrop",
+    "value": 250
+   }
+  ],
+  "rank": 4
+ },
+ "StonDrop_Boost_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 50
+   }
+  ],
+  "rank": 1
+ },
+ "StonDrop_Boost_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 80
+   }
+  ],
+  "rank": 1
+ },
+ "StonDrop_Boost_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 120
+   }
+  ],
+  "rank": 3
+ },
+ "StonDrop_Boost_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 160
+   }
+  ],
+  "rank": 3
+ },
+ "StonDrop_Boost_5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 200
+   }
+  ],
+  "rank": 4
+ },
+ "StonWoodDrop_Boost": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 160
+   }
+  ],
+  "rank": 3
+ },
+ "Support_down1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Support",
+    "value": -10
+   }
+  ],
+  "rank": -1
+ },
+ "Support_down2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Support",
+    "value": -30
+   }
+  ],
+  "rank": -3
+ },
+ "Support_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Support",
+    "value": 20
+   }
+  ],
+  "rank": 2
+ },
+ "Support_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 5
+   }
+  ],
+  "rank": 0
+ },
+ "SwimSpeed_up_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SwimSpeed",
+    "value": 30
+   }
+  ],
+  "rank": 1
+ },
+ "SwimSpeed_up_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SwimSpeed",
+    "value": 40
+   }
+  ],
+  "rank": 3
+ },
+ "SwimSpeed_up_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "SwimSpeed",
+    "value": 50
+   }
+  ],
+  "rank": 4
+ },
+ "TemperatureResist_Cold1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "TemperatureResist_Cold2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 2
+   }
+  ],
+  "rank": 2
+ },
+ "TemperatureResist_Cold3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 3
+   }
+  ],
+  "rank": 3
+ },
+ "TemperatureResist_Heat1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "TemperatureResist_Heat1Cold1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 1
+   },
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 1
+   }
+  ],
+  "rank": 1
+ },
+ "TemperatureResist_Heat2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 2
+   }
+  ],
+  "rank": 2
+ },
+ "TemperatureResist_Heat2Cold2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 2
+   },
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 2
+   }
+  ],
+  "rank": 2
+ },
+ "TemperatureResist_Heat3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 3
+   }
+  ],
+  "rank": 3
+ },
+ "TemperatureResist_Heat3Cold3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Cold",
+    "value": 3
+   },
+   {
+    "target": "ToSelf",
+    "type": "TemperatureResist_Heat",
+    "value": 3
+   }
+  ],
+  "rank": 3
+ },
+ "TestExplosive_H": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Explosive",
+    "value": 100
+   }
+  ],
+  "rank": 1
+ },
+ "TestExplosive_L": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Explosive",
+    "value": 50
+   }
+  ],
+  "rank": 1
+ },
+ "TestHoming_H": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Homing",
+    "value": 500
+   }
+  ],
+  "rank": 1
+ },
+ "TestHoming_L": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Homing",
+    "value": 0
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Support",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill6": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 5
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill7": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": -10
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -10
+   }
+  ],
+  "rank": 1
+ },
+ "TestSkill8": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MeleeAttack",
+    "value": 10
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "Test_PalEgg_HatchingSpeed_Up": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "BreedSpeed",
+    "value": 100
+   }
+  ],
+  "rank": 3
+ },
+ "TrainerATK_UP_1": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "ShotAttack",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "TrainerDEF_UP_1": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "Defense",
+    "value": 10
+   }
+  ],
+  "rank": 3
+ },
+ "TrainerLogging_up1": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "Logging",
+    "value": 25
+   }
+  ],
+  "rank": 3
+ },
+ "TrainerMining_up1": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "Mining",
+    "value": 25
+   }
+  ],
+  "rank": 3
+ },
+ "TrainerWorkSpeed_UP_1": {
+  "effects": [
+   {
+    "target": "ToTrainer",
+    "type": "CraftSpeed",
+    "value": 25
+   }
+  ],
+  "rank": 3
+ },
+ "Vampire": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Nocturnal",
+    "value": 0
+   },
+   {
+    "target": "ToSelf",
+    "type": "LifeSteal",
+    "value": 5
+   }
+  ],
+  "rank": 4
+ },
+ "Witch": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Dark",
+    "value": 30
+   },
+   {
+    "target": "ToSelf",
+    "type": "ElementBoost_Ice",
+    "value": 30
+   }
+  ],
+  "rank": 4
+ },
+ "WoodDrop_Boost_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 50
+   }
+  ],
+  "rank": 1
+ },
+ "WoodDrop_Boost_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 80
+   }
+  ],
+  "rank": 1
+ },
+ "WoodDrop_Boost_3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 120
+   }
+  ],
+  "rank": 3
+ },
+ "WoodDrop_Boost_4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 160
+   }
+  ],
+  "rank": 3
+ },
+ "WoodDrop_Boost_5": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CollectItemDrop_NaturalObject",
+    "value": 200
+   }
+  ],
+  "rank": 4
+ },
+ "WorkSpeed_ACC_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "WorkSpeed_ACC_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 15
+   }
+  ],
+  "rank": 2
+ },
+ "WorkSpeed_ACC_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "WorkSpeed_ACC_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 25
+   }
+  ],
+  "rank": 4
+ },
+ "WorkSuitabilityAddRank_MonsterFarm_1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "WorkSuitabilityAddRank_MonsterFarm",
+    "value": 1
+   }
+  ],
+  "rank": 3
+ },
+ "WorkSuitabilityAddRank_MonsterFarm_2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "WorkSuitabilityAddRank_MonsterFarm",
+    "value": 2
+   }
+  ],
+  "rank": 4
+ },
+ "WorldTree_ATK": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 50
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": -30
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_ATK_DEF": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": 40
+   },
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   },
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": -50
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_CraftSpeed": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": 90
+   },
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": 15
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_DEF": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 50
+   },
+   {
+    "target": "ToSelf",
+    "type": "ShotAttack",
+    "value": -30
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_FullStomach": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": -50
+   },
+   {
+    "target": "ToSelf",
+    "type": "MaxHP",
+    "value": -20
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_MoveSpeed": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "MoveSpeed",
+    "value": 50
+   },
+   {
+    "target": "ToSelf",
+    "type": "FullStomatch_Decrease",
+    "value": 15
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "WorldTree_Sanity": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Sanity_Decrease",
+    "value": -50
+   },
+   {
+    "target": "ToSelf",
+    "type": "CraftSpeed",
+    "value": -20
+   },
+   {
+    "target": "ToSelfAndTrainer",
+    "type": "WorldTreeDecayImmunity",
+    "value": 0
+   }
+  ],
+  "rank": 5
+ },
+ "YakushimaDagameBoost_Magic_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "DamageUpIfEquipped_YakushimaMagicWeapon",
+    "value": 20
+   }
+  ],
+  "rank": -1
+ },
+ "YakushimaDagameBoost_Melee_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "DamageUpIfEquipped_YakushimaMeleeWeapon",
+    "value": 20
+   }
+  ],
+  "rank": -1
+ },
+ "YakushimaDagameBoost_Ranged_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "DamageUpIfEquipped_YakushimaRangedWeapon",
+    "value": 20
+   }
+  ],
+  "rank": -1
+ },
+ "YakushimaDagameBoost_Summon_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "DamageUpIfEquipped_YakushimaSummonWeapon",
+    "value": 20
+   }
+  ],
+  "rank": -1
+ },
+ "YakushimaProtection_Equip": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "ForYakushimaDefenceRate",
+    "value": 30
+   }
+  ],
+  "rank": -1
+ },
+ "defense_ACC_up1": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 10
+   }
+  ],
+  "rank": 1
+ },
+ "defense_ACC_up2": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 15
+   }
+  ],
+  "rank": 2
+ },
+ "defense_ACC_up3": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 20
+   }
+  ],
+  "rank": 3
+ },
+ "defense_ACC_up4": {
+  "effects": [
+   {
+    "target": "ToSelf",
+    "type": "Defense",
+    "value": 25
+   }
+  ],
+  "rank": 4
+ }
+}
