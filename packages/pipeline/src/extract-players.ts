@@ -15,4 +15,10 @@ const serverId = process.env.SERVER_ID;
 if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
 
 const sql = neon(process.env.DATABASE_URL);
-await syncPlayerNames(sql, serverId, dir);
+try {
+  await syncPlayerNames(sql, serverId, dir);
+} catch (err) {
+  const message = err instanceof Error ? err.message : String(err);
+  console.error(message);
+  process.exit(1);
+}

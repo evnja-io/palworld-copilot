@@ -47,4 +47,8 @@ describe("computeSnapshotRows", () => {
     const save = { properties: { SaveData: { value: { RecordData: { value: {} } } } } };
     expect(computeSnapshotRows(save, palIds, techIds)).toEqual([]);
   });
+
+  it("jette sur une structure de haut niveau malformée (fail loud, pas de wipe silencieux)", () => {
+    expect(() => computeSnapshotRows({}, palIds, techIds)).toThrow();
+  });
 });

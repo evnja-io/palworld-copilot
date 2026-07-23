@@ -15,7 +15,6 @@ if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
 
 const sql = neon(process.env.DATABASE_URL);
 const stats = await importPlayerSaves(sql, serverId, dir);
-if (stats.failures > 0) {
-  console.error(`\n${stats.failures} fichier(s) en échec`);
-  process.exit(1);
-}
+// Le récap détaillé (\n${n} fichier(s) en échec : / - fichier : message) est
+// déjà imprimé par importPlayerSaves — on ne fait ici que fixer le code de sortie.
+if (stats.failures > 0) process.exit(1);

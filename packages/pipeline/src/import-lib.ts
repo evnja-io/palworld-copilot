@@ -35,8 +35,8 @@ export function computeSnapshotRows(
   palIdsLower: Map<string, string>,
   techIdsLower: Map<string, string>,
 ): Array<{ kind: string; id: string }> {
-  const sd = save?.properties?.SaveData?.value ?? {};
-  const rd = sd?.RecordData?.value ?? {};
+  const sd = save.properties.SaveData.value;
+  const rd = sd.RecordData.value;
 
   const paldeckEntries = ((rd.PaldeckUnlockFlag?.value ?? []) as Array<{ key: string; value: boolean }>)
     .filter((entry) => entry.value === true)
@@ -174,6 +174,12 @@ export async function importPlayerSaves(sql: Sql, serverId: string, dir: string)
     group by s.player_guid`;
   for (const r of unclaimed) {
     console.log(`non revendiqué : ${r.player_guid} (${r.n} entrées) — page /import`);
+  }
+
+  // Récapitulatif des échecs — repris de l'original (perdu par erreur dans le refactor initial).
+  if (failures.length > 0) {
+    console.error(`\n${failures.length} fichier(s) en échec :`);
+    for (const f of failures) console.error(`  - ${f.file} : ${f.message}`);
   }
 
   return {
