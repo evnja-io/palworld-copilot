@@ -80,6 +80,8 @@
   "paldex_search": "Rechercher un Pal…",
   "paldex_filter_element": "Élément",
   "paldex_filter_work": "Aptitude",
+  "paldex_sort_desc": "Tri : meilleur niveau d'abord",
+  "paldex_sort_asc": "Tri : niveau le plus bas d'abord",
   "paldex_hide_caught": "Masquer les capturés",
   "paldex_caught_me": "{count}/{total} capturés",
   "paldex_caught_group": "{count}/{total} par le groupe",

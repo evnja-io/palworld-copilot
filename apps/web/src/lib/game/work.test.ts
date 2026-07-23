@@ -19,6 +19,16 @@ describe("sortByWorkLevel", () => {
     expect(sortByWorkLevel(pals, "Mining").map((p) => p.id)).toEqual(["c", "a", "b"]);
   });
 
+  it("ordre croissant sur demande (niveau le plus bas d'abord)", () => {
+    const pals = [mk("a", { Watering: 1 }), mk("b", { Watering: 4 }), mk("c", { Watering: 2 })];
+    expect(sortByWorkLevel(pals, "Watering", "asc").map((p) => p.id)).toEqual(["a", "c", "b"]);
+  });
+
+  it("ordre croissant stable à niveau égal", () => {
+    const pals = [mk("a", { Mining: 2 }), mk("b", { Mining: 2 }), mk("c", { Mining: 1 })];
+    expect(sortByWorkLevel(pals, "Mining", "asc").map((p) => p.id)).toEqual(["c", "a", "b"]);
+  });
+
   it("sans aptitude sélectionnée, renvoie la liste telle quelle", () => {
     const pals = [mk("a", { Mining: 1 }), mk("b", { Mining: 3 })];
     expect(sortByWorkLevel(pals, "").map((p) => p.id)).toEqual(["a", "b"]);

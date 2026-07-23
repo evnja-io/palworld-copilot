@@ -4,7 +4,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
 	import { gameName } from '$lib/game/names';
-	import { sortByWorkLevel, workLabel } from '$lib/game/work';
+	import { sortByWorkLevel, workLabel, type WorkOrder } from '$lib/game/work';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import PalCard from '$lib/components/PalCard.svelte';
 	import type { Locale } from '$lib/search/tokens';
@@ -27,9 +27,10 @@
 	let search = $state('');
 	let element = $state('');
 	let work = $state('');
+	let order = $state<WorkOrder>('desc');
 	let hideCaught = $state(false);
 
-	// Une aptitude sélectionnée filtre ET trie (meilleur niveau d'abord).
+	// Une aptitude sélectionnée filtre ET trie (meilleur niveau d'abord par défaut).
 	const visible = $derived(
 		sortByWorkLevel(
 			pals.filter((p) => {
@@ -47,7 +48,8 @@
 				}
 				return true;
 			}),
-			work
+			work,
+			order
 		)
 	);
 	const groupCaught = $derived(Object.keys(store.group).length);
@@ -72,6 +74,17 @@
 		<option value="">{m.paldex_filter_work()}</option>
 		{#each WORKS as w (w)}<option value={w}>{workLabel(w, locale)}</option>{/each}
 	</select>
+	{#if work}
+		<button
+			class="order"
+			onclick={() => (order = order === 'desc' ? 'asc' : 'desc')}
+			title={order === 'desc' ? m.paldex_sort_desc() : m.paldex_sort_asc()}
+			aria-label={order === 'desc' ? m.paldex_sort_desc() : m.paldex_sort_asc()}
+		>
+			{order === 'desc' ? '↓' : '↑'}
+			<span class="tnum">{order === 'desc' ? '4→1' : '1→4'}</span>
+		</button>
+	{/if}
 	<label class="hide">
 		<input type="checkbox" bind:checked={hideCaught} />
 		{m.paldex_hide_caught()}
@@ -128,6 +141,24 @@
 		color: var(--text-2);
 		font-size: 13px;
 		white-space: nowrap;
+	}
+	/* Aligné sur le style global des <select> (app.css) */
+	.order {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		font: inherit;
+		font-size: 13px;
+		color: var(--text-2);
+		background: var(--input-bg);
+		border: 1px solid var(--border);
+		border-radius: var(--r-sm);
+		padding: 6px 10px;
+		white-space: nowrap;
+	}
+	.order:hover {
+		border-color: var(--border-strong);
+		color: var(--text-1);
 	}
 	.grid {
 		display: grid;
