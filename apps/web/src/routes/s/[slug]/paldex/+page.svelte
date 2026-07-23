@@ -2,14 +2,20 @@
 	import pals from '@palworld-companion/game-data/pals.json';
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import { gameName } from '$lib/game/names';
+	import { sortByWorkLevel, workLabel } from '$lib/game/work';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import PalCard from '$lib/components/PalCard.svelte';
+	import type { Locale } from '$lib/search/tokens';
 
 	let { data } = $props();
 
+	const locale = getLocale() as Locale;
 	const ELEMENTS = [...new Set(pals.flatMap((p) => p.elements))].sort();
-	const WORKS = [...new Set(pals.flatMap((p) => Object.keys(p.work)))].sort();
+	const WORKS = [...new Set(pals.flatMap((p) => Object.keys(p.work)))].sort((a, b) =>
+		workLabel(a, locale).localeCompare(workLabel(b, locale), locale)
+	);
 
 	const store = new ProgressStore();
 	$effect(() => {
@@ -23,22 +29,26 @@
 	let work = $state('');
 	let hideCaught = $state(false);
 
+	// Une aptitude sélectionnée filtre ET trie (meilleur niveau d'abord).
 	const visible = $derived(
-		pals.filter((p) => {
-			if (element && !p.elements.includes(element)) return false;
-			if (work && !(work in p.work)) return false;
-			if (hideCaught && store.mine.has(p.id)) return false;
-			if (search) {
-				const q = search.toLowerCase();
-				if (
-					!gameName(`pal:${p.id}`).toLowerCase().includes(q) &&
-					!p.id.toLowerCase().includes(q) &&
-					!p.passives.some((pv) => gameName(`passive:${pv}`).toLowerCase().includes(q))
-				)
-					return false;
-			}
-			return true;
-		})
+		sortByWorkLevel(
+			pals.filter((p) => {
+				if (element && !p.elements.includes(element)) return false;
+				if (work && !(work in p.work)) return false;
+				if (hideCaught && store.mine.has(p.id)) return false;
+				if (search) {
+					const q = search.toLowerCase();
+					if (
+						!gameName(`pal:${p.id}`).toLowerCase().includes(q) &&
+						!p.id.toLowerCase().includes(q) &&
+						!p.passives.some((pv) => gameName(`passive:${pv}`).toLowerCase().includes(q))
+					)
+						return false;
+				}
+				return true;
+			}),
+			work
+		)
 	);
 	const groupCaught = $derived(Object.keys(store.group).length);
 </script>
@@ -60,7 +70,7 @@
 	</select>
 	<select bind:value={work}>
 		<option value="">{m.paldex_filter_work()}</option>
-		{#each WORKS as w (w)}<option value={w}>{w}</option>{/each}
+		{#each WORKS as w (w)}<option value={w}>{workLabel(w, locale)}</option>{/each}
 	</select>
 	<label class="hide">
 		<input type="checkbox" bind:checked={hideCaught} />
@@ -74,6 +84,7 @@
 			{pal}
 			caught={store.mine.has(pal.id)}
 			groupCount={store.group[pal.id]?.length ?? 0}
+			highlightWork={work}
 			ontoggle={() => store.toggle(pal.id)}
 		/>
 	{/each}

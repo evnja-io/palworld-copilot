@@ -1,13 +1,17 @@
 <script lang="ts">
 	import { gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
+	import { workIcon, workLabel } from '$lib/game/work';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import { appHref } from '$lib/nav';
 	import ElementBadge from './ElementBadge.svelte';
+	import type { Locale } from '$lib/search/tokens';
 
 	let {
 		pal,
 		caught,
 		groupCount,
+		highlightWork = '',
 		ontoggle
 	}: {
 		pal: {
@@ -16,11 +20,19 @@
 			zukanSuffix?: string;
 			elements: string[];
 			passives: string[];
+			// `| undefined` : les entrées de pals.json portent des clés optionnelles
+			work: Record<string, number | undefined>;
 		};
 		caught: boolean;
 		groupCount: number;
+		highlightWork?: string;
 		ontoggle: () => void;
 	} = $props();
+
+	const locale = getLocale() as Locale;
+	const works = $derived(
+		Object.entries(pal.work).filter((e): e is [string, number] => typeof e[1] === 'number')
+	);
 </script>
 
 <div class="card" class:caught>
@@ -36,6 +48,18 @@
 			<span class="elements">
 				{#each pal.elements as e (e)}<ElementBadge element={e} />{/each}
 			</span>
+			{#if works.length}
+				<span class="works">
+					{#each works as [w, lvl] (w)}
+						<span class="work" class:hl={w === highlightWork} title={workLabel(w, locale)}>
+							{#if workIcon(w)}
+								<img src={workIcon(w)} alt={workLabel(w, locale)} width="14" height="14" loading="lazy" />
+							{/if}
+							<span class="tnum">{lvl}</span>
+						</span>
+					{/each}
+				</span>
+			{/if}
 			{#if pal.passives.length}
 				<span class="passives">
 					{pal.passives.map((p) => gameName(`passive:${p}`)).join(' · ')}
@@ -122,6 +146,30 @@
 		display: flex;
 		gap: 4px;
 		margin-top: 2px;
+	}
+	.works {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		margin-top: 2px;
+	}
+	.work {
+		display: inline-flex;
+		align-items: center;
+		gap: 2px;
+		font-size: 10px;
+		color: var(--text-3);
+	}
+	.work img {
+		filter: none;
+	}
+	.work.hl {
+		color: var(--text-1);
+		font-weight: 600;
+		background: var(--surface-3);
+		border-radius: var(--r-sm);
+		padding: 1px 4px;
+		margin: -1px -2px;
 	}
 	.passives {
 		font-size: 11px;
