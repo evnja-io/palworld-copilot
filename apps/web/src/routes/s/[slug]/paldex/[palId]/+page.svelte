@@ -5,7 +5,10 @@
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameName, gameDesc } from '$lib/game/names';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import { palIcon, itemIcon } from '$lib/game/icons';
+	import { workIcon, workLabel } from '$lib/game/work';
+	import type { Locale } from '$lib/search/tokens';
 	import { childOf, parentsOf } from '$lib/game/breeding';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import { appHref } from '$lib/nav';
@@ -13,6 +16,8 @@
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
 	let { data } = $props();
+
+	const locale = getLocale() as Locale;
 
 	const pal = $derived(pals.find((p) => p.id === data.palId)!);
 	const palMoves = $derived(
@@ -86,7 +91,11 @@
 			<h2>{m.pal_work()}</h2>
 			<ul class="work">
 				{#each Object.entries(pal.work) as [w, lvl] (w)}
-					<li>{w} <span class="lvl tnum">×{lvl}</span></li>
+					<li>
+						{#if workIcon(w)}<img src={workIcon(w)} alt="" width="18" height="18" />{/if}
+						{workLabel(w, locale)}
+						<span class="lvl tnum">×{lvl}</span>
+					</li>
 				{/each}
 			</ul>
 		{/if}
@@ -291,6 +300,11 @@
 	.plain li {
 		color: var(--text-2);
 		font-size: 13px;
+	}
+	.work li {
+		display: flex;
+		align-items: center;
+		gap: 6px;
 	}
 	.lvl {
 		color: var(--accent);
