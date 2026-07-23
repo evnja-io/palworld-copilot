@@ -95,11 +95,21 @@ export async function main(): Promise<void> {
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       console.error(`tenant ${cfg.server_id} : ÉCHEC ${message}`);
-      await sql`update server_import_configs
-                set last_import_status = 'error', last_import_error = ${message},
-                    last_import_at = now()
-                where server_id = ${cfg.server_id}::uuid`;
+      // Comptabiliser l'échec AVANT l'écriture du statut : si cette écriture
+      // échoue à son tour (ex. panne DB partagée avec la cause originelle),
+      // le tenant reste correctement compté comme en échec.
       results.push({ ok: false });
+      try {
+        await sql`update server_import_configs
+                  set last_import_status = 'error', last_import_error = ${message},
+                      last_import_at = now()
+                  where server_id = ${cfg.server_id}::uuid`;
+      } catch (writeErr) {
+        // Une panne d'écriture du statut ne doit jamais se propager hors de
+        // la boucle : elle bloquerait tous les tenants suivants.
+        const writeMessage = writeErr instanceof Error ? writeErr.message : String(writeErr);
+        console.error(`tenant ${cfg.server_id} : échec d'écriture du statut error: ${writeMessage}`);
+      }
     } finally {
       // Level.sav converti ≈ 170 Mo — ne pas laisser traîner entre tenants.
       if (existsSync(dest)) rmSync(dest, { recursive: true, force: true });
