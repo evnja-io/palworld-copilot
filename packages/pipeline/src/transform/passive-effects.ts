@@ -8,6 +8,7 @@ const named = new Set(Object.keys(l10nMap(/\/en\/.*DT_SkillNameText/, "PASSIVE_"
 const out: Record<string, { rank: number; effects: PassiveEffect[] }> = {};
 for (const [id, row] of Object.entries(rows)) {
   if (!named.has(id)) continue;
+  if (/^Test/i.test(id)) continue; // écarte TestSkill*/TestExplosive*/Test_* internes
   const { rank, effects } = parsePassiveRow(row as Record<string, any>);
   if (effects.length === 0) continue;
   out[id] = { rank, effects };

@@ -1,7 +1,8 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { loadDataTableRows } from "../lib.js";
-import { RAW_DIR } from "../paths.js";
+import { RAW_DIR, OUT_DIR } from "../paths.js";
 import { parsePassiveRow, passiveValuesById } from "./passive-effects.lib.js";
 
 const rowLegend = {
@@ -38,5 +39,11 @@ describe.skipIf(!existsSync(RAW_DIR))("passifs (exports réels)", () => {
     const def = parsePassiveRow(rows["Deffence_up2_2"]);
     expect(def.effects[0]).toEqual({ type: "Defense", value: 20, target: "ToSelf" });
     expect(def.values[0]).toBe(20);
+  });
+
+  it("passive-effects.json n'expose aucun passif de test", { timeout: 120_000 }, () => {
+    const data = JSON.parse(readFileSync(join(OUT_DIR, "passive-effects.json"), "utf8"));
+    expect(Object.keys(data).some((k) => /^test/i.test(k))).toBe(false);
+    expect(data["Legend"]).toBeTruthy();
   });
 });
