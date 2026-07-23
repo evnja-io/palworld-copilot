@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { enumName, l10nMap, loadDataTableRows, pick } from "./lib.js";
+import { enumName, l10nMap, loadDataTableRows, pick, resolveEffectPlaceholders, stripRichTags } from "./lib.js";
 import { RAW_DIR } from "./paths.js";
 
 // Premier accès : walk de /mnt/c (lent sous WSL) — timeout large.
@@ -24,5 +24,16 @@ describe("helpers purs", () => {
   it("enumName déballe les enums UE", () => {
     expect(enumName("EPalElementType::Fire")).toBe("Fire");
     expect(enumName("Fire")).toBe("Fire");
+  });
+  it("stripRichTags retire les balises en gardant le texte", () => {
+    expect(stripRichTags("Hunger <NumRed_13>+10.0%</> faster")).toBe("Hunger +10.0% faster");
+    expect(stripRichTags("plain")).toBe("plain");
+  });
+  it("resolveEffectPlaceholders substitue les valeurs positionnelles", () => {
+    expect(resolveEffectPlaceholders("Defense +{EffectValue1}%", [20])).toBe("Defense +20%");
+    expect(resolveEffectPlaceholders("{EffectValue1}/{EffectValue2}", [5, 30])).toBe("5/30");
+  });
+  it("resolveEffectPlaceholders laisse le token si la valeur manque", () => {
+    expect(resolveEffectPlaceholders("x{EffectValue2}", [5])).toBe("x{EffectValue2}");
   });
 });

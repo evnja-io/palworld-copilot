@@ -102,3 +102,16 @@ export function l10nMap(hint: RegExp, prefix: string): Record<string, string> {
   }
   return out;
 }
+
+/** Retire les balises rich-text du jeu (<NumRed_13>…</>, <Status_Up>…) en gardant le texte. */
+export function stripRichTags(s: string): string {
+  return s.replace(/<[^>]+>/g, "");
+}
+
+/** Remplace {EffectValueN} par values[N-1] ; laisse le token si la valeur est absente. */
+export function resolveEffectPlaceholders(text: string, values: number[]): string {
+  return text.replace(/\{EffectValue([1-4])\}/g, (token, n) => {
+    const v = values[Number(n) - 1];
+    return v === undefined ? token : String(v);
+  });
+}
