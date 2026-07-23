@@ -66,4 +66,112 @@ describe.skipIf(!url)("servers & invitations", () => {
     await consumeInvite(inv.code, member);
     await expect(requireOwner({ id: member }, srv.slug)).rejects.toMatchObject({ status: 404 });
   });
+
+  it("consumeInvite ajoute un membre et incrémente useCount", async () => {
+    const { createServer, createInvite, consumeInvite, listInvites, listMembers } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const friend = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, {});
+    const res = await consumeInvite(inv.code, friend);
+    expect(res).toEqual({ slug: srv.slug, alreadyMember: false });
+    expect((await listInvites(srv.id))[0].useCount).toBe(1);
+    expect((await listMembers(srv.id)).map((m) => m.userId)).toContain(friend);
+  });
+
+  it("consumeInvite est idempotent pour un membre existant (pas de double usage)", async () => {
+    const { createServer, createInvite, consumeInvite, listInvites } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const friend = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, {});
+    await consumeInvite(inv.code, friend);
+    const again = await consumeInvite(inv.code, friend);
+    expect(again.alreadyMember).toBe(true);
+    expect((await listInvites(srv.id))[0].useCount).toBe(1);
+  });
+
+  it("consumeInvite refuse une invitation révoquée", async () => {
+    const { createServer, createInvite, revokeInvite, consumeInvite, InviteError } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const friend = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, {});
+    await revokeInvite(inv.code, owner);
+    await expect(consumeInvite(inv.code, friend)).rejects.toSatisfy(
+      (e: unknown) => e instanceof InviteError && e.code === "invite_revoked",
+    );
+  });
+
+  it("consumeInvite refuse au-delà de maxUses", async () => {
+    const { createServer, createInvite, consumeInvite, InviteError } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const a = await mkUser();
+    const b = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, { maxUses: 1 });
+    await consumeInvite(inv.code, a);
+    await expect(consumeInvite(inv.code, b)).rejects.toSatisfy(
+      (e: unknown) => e instanceof InviteError && e.code === "invite_maxed",
+    );
+  });
+
+  it("consumeInvite refuse une invitation expirée", async () => {
+    const { createServer, createInvite, consumeInvite, InviteError } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const friend = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, { expiresAt: new Date(Date.now() - 1000) });
+    await expect(consumeInvite(inv.code, friend)).rejects.toSatisfy(
+      (e: unknown) => e instanceof InviteError && e.code === "invite_expired",
+    );
+  });
+
+  it("consumeInvite jette invite_not_found pour un code inconnu", async () => {
+    const { consumeInvite, InviteError } = await import("$lib/server/servers");
+    const uid = await mkUser();
+    await expect(consumeInvite("code-bidon", uid)).rejects.toSatisfy(
+      (e: unknown) => e instanceof InviteError && e.code === "invite_not_found",
+    );
+  });
+
+  it("peekInvite retourne le nom du serveur et la validité", async () => {
+    const { createServer, createInvite, peekInvite } = await import("$lib/server/servers");
+    const owner = await mkUser();
+    const srv = await createServer(owner, "Belle Île");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, {});
+    const peek = await peekInvite(inv.code);
+    expect(peek).toMatchObject({ serverName: "Belle Île", slug: srv.slug, valid: true });
+    expect(await peekInvite("nope")).toBeNull();
+  });
+
+  it("revokeInvite est refusé à un non-owner", async () => {
+    const { createServer, createInvite, consumeInvite, revokeInvite, listInvites } = await import(
+      "$lib/server/servers"
+    );
+    const owner = await mkUser();
+    const member = await mkUser();
+    const srv = await createServer(owner, "Team");
+    createdServerIds.push(srv.id);
+    const inv = await createInvite(srv.id, owner, {});
+    await consumeInvite(inv.code, member);
+    await revokeInvite(inv.code, member); // no-op : member n'est pas owner
+    expect((await listInvites(srv.id))[0].revokedAt).toBeNull();
+  });
 });
