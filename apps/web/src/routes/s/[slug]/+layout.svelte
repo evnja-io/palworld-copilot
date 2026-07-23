@@ -22,7 +22,22 @@
 
 <div class="shell">
 	<header class="topbar">
-		<a href="/" class="brand">{m.app_title()}</a>
+		<details class="switcher">
+			<summary>
+				<span class="brand">{data.server.name}</span>
+				<span class="chevron" aria-hidden="true">▾</span>
+			</summary>
+			<div class="menu">
+				{#each data.myServers as s (s.id)}
+					<a href="/s/{s.slug}" class:current={s.slug === data.server.slug}>{s.name}</a>
+				{/each}
+				<hr />
+				{#if data.membership.role === 'owner'}
+					<a href={appHref('/settings')}>{m.settings_nav()}</a>
+				{/if}
+				<a href="/servers">{m.switcher_all()}</a>
+			</div>
+		</details>
 		<nav>
 			{#each nav as item (item.href)}
 				<a href={appHref(item.href)} class:active={page.url.pathname.startsWith(appHref(item.href))}>
@@ -69,12 +84,62 @@
 		top: 0;
 		z-index: 10;
 	}
+	.switcher {
+		position: relative;
+		white-space: nowrap;
+	}
+	.switcher summary {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		cursor: pointer;
+		list-style: none;
+	}
+	.switcher summary::-webkit-details-marker {
+		display: none;
+	}
 	.brand {
 		font-family: var(--font-display);
 		font-weight: 600;
 		font-size: 15px;
 		letter-spacing: -0.01em;
 		white-space: nowrap;
+	}
+	.chevron {
+		font-size: 11px;
+		color: var(--text-3);
+	}
+	.switcher .menu {
+		position: absolute;
+		top: calc(100% + 6px);
+		left: 0;
+		min-width: 200px;
+		display: grid;
+		gap: 2px;
+		padding: 6px;
+		border: 1px solid var(--border-strong);
+		border-radius: var(--r-md);
+		background: var(--surface-1);
+		box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+		z-index: 20;
+	}
+	.switcher .menu a {
+		padding: 7px 10px;
+		border-radius: var(--r-sm);
+		color: var(--text-2);
+		font-size: 13px;
+	}
+	.switcher .menu a:hover {
+		background: var(--surface-2);
+		color: var(--text-1);
+	}
+	.switcher .menu a.current {
+		color: var(--accent);
+	}
+	.switcher .menu hr {
+		border: none;
+		border-top: 1px solid var(--border);
+		margin: 4px 0;
 	}
 	nav {
 		display: flex;
