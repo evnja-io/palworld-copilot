@@ -50,8 +50,6 @@
   "settings_member_owner": "Owner",
   "settings_member_since": "Joined {date}",
   "switcher_all": "All my servers",
-  "auth_denied_title": "Private access",
-  "auth_denied_body": "This tool is group-only. Ask Sephi to add you to the allowlist.",
   "landing_title": "Our whole world, in one Paldex.",
   "landing_sub": "Shared Paldex, interactive map, tech tree and crafting — synced with the server save every 6 hours.",
   "landing_private": "Open access — sign in with Discord, create your server and invite your friends.",

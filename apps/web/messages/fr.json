@@ -50,8 +50,6 @@
   "settings_member_owner": "Owner",
   "settings_member_since": "Rejoint le {date}",
   "switcher_all": "Tous mes serveurs",
-  "auth_denied_title": "Accès privé",
-  "auth_denied_body": "Cet outil est réservé au groupe. Demande à Sephi de t'ajouter à la liste.",
   "landing_title": "Tout notre monde, dans un seul Paldex.",
   "landing_sub": "Paldex partagé, carte interactive, arbre de technologies et craft — synchronisés avec la sauvegarde du serveur toutes les 6 heures.",
   "landing_private": "Accès libre — connecte-toi avec Discord, crée ton serveur et invite tes amis.",

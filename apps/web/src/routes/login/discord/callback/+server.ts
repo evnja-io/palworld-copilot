@@ -1,5 +1,4 @@
 import { error, redirect } from "@sveltejs/kit";
-import { eq, sql } from "drizzle-orm";
 import { discordClient } from "$lib/server/auth/discord";
 import { createSession } from "$lib/server/auth/session";
 import { generateSessionToken, sessionExpiresAt } from "$lib/server/auth/session-utils";
@@ -21,13 +20,10 @@ export async function GET(event: RequestEvent) {
   const du: { id: string; username: string; global_name: string | null; avatar: string | null } =
     await res.json();
 
+  // Phase 2 : inscription ouverte — plus d'allowlist, plus de shim d'adhésion
+  // legacy. Tout compte Discord se connecte ; l'adhésion se fait via
+  // création (/servers/new) ou invitation (/join/[code]).
   const db = getDb();
-  const allowed = await db
-    .select()
-    .from(tables.allowlist)
-    .where(eq(tables.allowlist.discordId, du.id));
-  if (allowed.length === 0) redirect(302, "/login/denied");
-
   const username = du.global_name ?? du.username;
   const avatarUrl = du.avatar
     ? `https://cdn.discordapp.com/avatars/${du.id}/${du.avatar}.png`
@@ -37,15 +33,6 @@ export async function GET(event: RequestEvent) {
     .values({ discordId: du.id, username, avatarUrl })
     .onConflictDoUpdate({ target: tables.users.discordId, set: { username, avatarUrl } })
     .returning();
-
-  // Shim phase 1 : les allowlistés qui se connectent pour la première fois
-  // rejoignent automatiquement le serveur legacy. Retiré en phase 2
-  // (remplacé par les invitations).
-  await db.execute(
-    sql`insert into server_members (server_id, user_id, role)
-        select id, ${user.id}::uuid, 'member' from servers where slug = 'legacy'
-        on conflict (server_id, user_id) do nothing`,
-  );
 
   const token = generateSessionToken();
   await createSession(token, user.id);
