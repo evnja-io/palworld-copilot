@@ -1,4 +1,15 @@
-import { index, integer, pgTable, primaryKey, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  index,
+  integer,
+  jsonb,
+  pgTable,
+  primaryKey,
+  text,
+  timestamp,
+  uniqueIndex,
+  uuid,
+} from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 
 export const users = pgTable("users", {
@@ -111,4 +122,24 @@ export const invites = pgTable("invites", {
   revokedAt: timestamp("revoked_at", { withTimezone: true }),
   maxUses: integer("max_uses"),
   useCount: integer("use_count").notNull().default(0),
+});
+
+// Credentials SFTP par serveur : table séparée pour qu'AUCUN load de page ne
+// sélectionne sftp_password_enc par accident (cf. getImportConfig, Tâche 7).
+export const serverImportConfigs = pgTable("server_import_configs", {
+  serverId: uuid("server_id")
+    .primaryKey()
+    .references(() => servers.id, { onDelete: "cascade" }),
+  sftpHost: text("sftp_host").notNull(),
+  sftpPort: integer("sftp_port").notNull().default(22),
+  sftpUser: text("sftp_user").notNull(),
+  // Ciphertext "v1:" + base64(iv ‖ ct ‖ tag), AAD = serverId (crypto.ts / creds.ts).
+  sftpPasswordEnc: text("sftp_password_enc").notNull(),
+  // NULL ⇒ auto-découverte du monde (Pal/Saved/SaveGames/0/<world>) au 1er import.
+  remoteDir: text("remote_dir"),
+  enabled: boolean("enabled").notNull().default(false),
+  lastImportAt: timestamp("last_import_at", { withTimezone: true }),
+  lastImportStatus: text("last_import_status", { enum: ["running", "ok", "error"] }),
+  lastImportError: text("last_import_error"),
+  lastImportStats: jsonb("last_import_stats"),
 });
