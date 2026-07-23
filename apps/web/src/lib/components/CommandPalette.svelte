@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { appHref } from '$lib/nav';
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
 	import ElementBadge from '$lib/components/ElementBadge.svelte';
@@ -61,7 +63,7 @@
 		if (!open) return;
 		inputEl?.focus();
 		if (!data) import('$lib/search/data').then((mod) => (data = mod));
-		fetch('/api/progress?kind=marker')
+		fetch(`/api/servers/${page.params.slug}/progress?kind=marker`)
 			.then((r) => (r.ok ? r.json() : null))
 			.then((p) => {
 				if (p) checked = new Set(p.mine as string[]);
@@ -164,7 +166,7 @@
 		if (row.href) {
 			const href = row.href;
 			close();
-			goto(href);
+			goto(appHref(href));
 		}
 	}
 

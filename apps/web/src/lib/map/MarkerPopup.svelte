@@ -2,6 +2,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
+	import { appHref } from '$lib/nav';
 	import type { ProgressStore } from '$lib/game/progress.svelte';
 	import type { MapMarker } from './markerController';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
@@ -35,7 +36,7 @@
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
 		{#if marker.meta?.palId}
-			<a href="/paldex/{marker.meta.palId}" class="link">{m.map_view_pal()}</a>
+			<a href={appHref(`/paldex/${marker.meta.palId}`)} class="link">{m.map_view_pal()}</a>
 		{/if}
 	{:else}
 		<strong>{marker.nameId ? gameName(`ft:${marker.nameId}`) : m.map_filter_ft()}</strong>

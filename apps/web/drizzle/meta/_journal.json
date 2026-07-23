@@ -22,6 +22,34 @@
       "when": 1784711831878,
       "tag": "0002_lumpy_infant_terrible",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784739458206,
+      "tag": "0003_familiar_morgan_stark",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1784742156554,
+      "tag": "0004_late_baron_strucker",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1784782289037,
+      "tag": "0005_glamorous_princess_powerful",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1784785893627,
+      "tag": "0006_familiar_rafael_vega",
+      "breakpoints": true
     }
   ]
 }

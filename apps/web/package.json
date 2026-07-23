@@ -12,7 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "node --env-file=.env node_modules/drizzle-kit/bin.cjs migrate",
-		"allowlist:add": "node --env-file=.env --experimental-strip-types scripts/allowlist-add.ts",
+		"backfill:legacy": "node --env-file=.env --experimental-strip-types scripts/backfill-legacy-server.ts",
 		"test": "vitest run"
 	},
 	"devDependencies": {

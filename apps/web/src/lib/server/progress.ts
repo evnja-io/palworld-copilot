@@ -26,15 +26,25 @@ export function isValidKind(kind: string): boolean {
   return Object.prototype.hasOwnProperty.call(REGISTRY, kind);
 }
 
-export async function setProgress(userId: string, kind: string, entityId: string, checked: boolean) {
+export async function setProgress(
+  serverId: string,
+  userId: string,
+  kind: string,
+  entityId: string,
+  checked: boolean,
+) {
   const db = getDb();
   if (checked) {
-    await db.insert(tables.progress).values({ userId, kind, entityId }).onConflictDoNothing();
+    await db
+      .insert(tables.progress)
+      .values({ serverId, userId, kind, entityId })
+      .onConflictDoNothing();
   } else {
     await db
       .delete(tables.progress)
       .where(
         and(
+          eq(tables.progress.serverId, serverId),
           eq(tables.progress.userId, userId),
           eq(tables.progress.kind, kind),
           eq(tables.progress.entityId, entityId),
@@ -43,7 +53,7 @@ export async function setProgress(userId: string, kind: string, entityId: string
   }
 }
 
-export async function getProgress(kind: string, myUserId: string) {
+export async function getProgress(serverId: string, kind: string, myUserId: string) {
   const db = getDb();
   const rows = await db
     .select({
@@ -54,7 +64,7 @@ export async function getProgress(kind: string, myUserId: string) {
     })
     .from(tables.progress)
     .innerJoin(tables.users, eq(tables.progress.userId, tables.users.id))
-    .where(eq(tables.progress.kind, kind));
+    .where(and(eq(tables.progress.serverId, serverId), eq(tables.progress.kind, kind)));
   const mine: string[] = [];
   const group: Record<string, GroupUser[]> = {};
   for (const r of rows) {

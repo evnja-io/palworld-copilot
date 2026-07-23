@@ -13,6 +13,8 @@ if (!dir || !existsSync(join(dir, "Level.sav"))) {
 }
 if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL manquante");
 const sql = neon(process.env.DATABASE_URL);
+const serverId = process.env.SERVER_ID;
+if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
 const venvPython = new URL("../.venv/bin/python", import.meta.url).pathname;
 if (!existsSync(venvPython)) throw new Error("venv palsav absent — cf. runbook, section saves");
 
@@ -50,11 +52,12 @@ if (players.length === 0) {
   process.exit(1);
 }
 await sql`
-  insert into save_players (player_guid, nickname, updated_at)
-  select unnest(${players.map((p) => p.guid)}::text[]),
+  insert into save_players (server_id, player_guid, nickname, updated_at)
+  select ${serverId}::uuid,
+         unnest(${players.map((p) => p.guid)}::text[]),
          unnest(${players.map((p) => p.nickname)}::text[]),
          now()
-  on conflict (player_guid)
+  on conflict (server_id, player_guid)
   do update set nickname = excluded.nickname, updated_at = now()`;
 for (const p of players) console.log(`${p.nickname} (${p.guid.slice(0, 8)}…)`);
 console.log(`${players.length} joueurs synchronisés dans save_players`);
