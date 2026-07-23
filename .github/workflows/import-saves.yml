@@ -4,13 +4,17 @@ on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+  # Jamais `pull_request` : repo public, les secrets ne doivent pas fuiter.
 
 concurrency: import-saves
 
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # 45 min : marge pour le fan-out séquentiel de tous les tenants activés.
+    # Évolution future (seuil : durée totale ~ timeout) : passer en `strategy.matrix`
+    # sur les serverId (un job par tenant) — cf. spec, section « Pipeline d'import ».
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -35,23 +39,8 @@ jobs:
           git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/pst
           .venv/bin/pip -q install /tmp/pst/src/palsav/palooz /tmp/pst/src/palsav paramiko
 
-      - name: Télécharger les saves (SFTP)
-        env:
-          SFTP_HOST: ${{ secrets.SFTP_HOST }}
-          SFTP_USER: ${{ secrets.SFTP_USER }}
-          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-          SAVE_REMOTE_DIR: ${{ secrets.SAVE_REMOTE_DIR }}
-        run: packages/pipeline/.venv/bin/python packages/pipeline/scripts/fetch-saves.py /tmp/saves
-
-      - name: Import des saves joueurs
+      - name: Import de tous les tenants activés
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
-        run: cd packages/pipeline && node --experimental-strip-types src/import-save.ts /tmp/saves
-
-      - name: Pseudos in-game (Level.sav — non bloquant)
-        continue-on-error: true
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
-        run: cd packages/pipeline && node --experimental-strip-types src/extract-players.ts /tmp/saves
+          SAVE_CREDS_KEY: ${{ secrets.SAVE_CREDS_KEY }}
+        run: cd packages/pipeline && node --experimental-strip-types src/import-all.ts
