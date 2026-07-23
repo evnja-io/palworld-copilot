@@ -4,6 +4,11 @@ import { Client } from "ssh2";
 
 const SAVEGAMES_ROOT = "Pal/Saved/SaveGames/0";
 const CONNECT_TIMEOUT_MS = 10_000;
+// Budget global couvrant handshake + sftp() + readdir() : readyTimeout ne
+// borne que le handshake/auth SSH, pas les opérations SFTP qui suivent (un
+// hôte qui répond à l'auth puis ne répond jamais au subsystem SFTP resterait
+// bloqué jusqu'au max-duration de la fonction Vercel — 504 — sans ce budget).
+const OP_TIMEOUT_MS = 15_000;
 
 export class SftpTestError extends Error {
   constructor(public code: string) {
@@ -50,10 +55,15 @@ export function testSftpConnection(
 ): Promise<{ ok: true; remoteDir: string } | { ok: false; error: string }> {
   return new Promise((resolve) => {
     const conn = new Client();
+    let settled = false;
     const done = (r: { ok: true; remoteDir: string } | { ok: false; error: string }) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
       conn.end();
       resolve(r);
     };
+    const timer = setTimeout(() => done({ ok: false, error: "timeout" }), OP_TIMEOUT_MS);
     conn.on("ready", () => {
       conn.sftp((err, sftp) => {
         if (err) return done({ ok: false, error: err.message });
