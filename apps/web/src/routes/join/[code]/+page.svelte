@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 
 	let { data, form } = $props();
@@ -38,7 +39,9 @@
 				<button type="submit">{m.join_accept({ name: data.invite.serverName })}</button>
 			</form>
 		{:else}
-			<a class="login" href="/login/discord">{m.join_login()}</a>
+			<a class="login" href="/login/discord?redirectTo={encodeURIComponent(page.url.pathname)}"
+				>{m.join_login()}</a
+			>
 		{/if}
 	{/if}
 </div>
