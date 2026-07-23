@@ -67,6 +67,14 @@ for (const [skillId, s] of Object.entries<{ element: string; power: number; ct: 
   index.push({ id: `skill:${skillId}`, ...n, el, pw: s.power, ct: s.ct });
 }
 
+// Talents passifs : seuls ceux portés en inné par au moins un pal sont indexés
+// (leur sélection filtre les pals porteurs, comme le token "skill").
+const heldPassives = new Set<string>(load("pals.json").flatMap((p: { passives?: string[] }) => p.passives ?? []));
+for (const passiveId of heldPassives) {
+  const n = names(`passive:${passiveId}`);
+  if (n) index.push({ id: `passive:${passiveId}`, ...n });
+}
+
 /** Coordonnées in-game (mêmes formules que la carte web). */
 const coords = (px: number, py: number): string =>
   `(${Math.round((px / 8192) * 2000 - 1000)}, ${Math.round(1000 - (py / 8192) * 2000)})`;

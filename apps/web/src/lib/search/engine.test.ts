@@ -25,6 +25,7 @@ const INDEX: SearchEntry[] = [
   },
   { id: "item:PalSphere", fr: "Sphère", en: "Pal Sphere", cat: "Consume" },
   { id: "skill:Ignis", fr: "Missile Igné", en: "Ignis Blast", el: ["Fire"], pw: 30, ct: 2 },
+  { id: "passive:Legend", fr: "Légende", en: "Legend" },
   { id: "marker:relic_a", fr: "Effigie Lifmunk (1, 2)", en: "Lifmunk Effigy (1, 2)", mk: "relic", px: 1, py: 2 },
   { id: "marker:relic_b", fr: "Effigie Lifmunk (3, 4)", en: "Lifmunk Effigy (3, 4)", mk: "relic", px: 3, py: 4 },
   { id: "marker:alpha_x", fr: "Anubis", en: "Anubis", mk: "alpha", lvl: 38, pal: "Anubis", px: 5, py: 6 },
@@ -119,6 +120,26 @@ describe("runSearch — tokens", () => {
       "pal:Blazamut",
       "pal:Foxparks",
     ]);
+  });
+
+  it("le fuzzy trouve les talents passifs dans leur propre groupe", () => {
+    const groups = runSearch(INDEX, [], "legende", ctx);
+    const passives = groups.find((g) => g.ns === "passive");
+    expect(passives?.items.map((i) => i.entry.id)).toContain("passive:Legend");
+  });
+
+  it("le token passif liste les pals qui possèdent le talent", () => {
+    const withHolders: SearchContext = {
+      ...ctx,
+      passiveHolders: new Map([["Legend", new Set(["Anubis"])]]),
+    };
+    const groups = runSearch(
+      INDEX,
+      [{ kind: "passive", value: "Legend", label: "Légende" }],
+      "",
+      withHolders,
+    );
+    expect(groups.flatMap((g) => g.items.map((i) => i.entry.id))).toEqual(["pal:Anubis"]);
   });
 
   it("combine token + fuzzy", () => {

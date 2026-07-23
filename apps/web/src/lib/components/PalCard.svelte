@@ -10,7 +10,13 @@
 		groupCount,
 		ontoggle
 	}: {
-		pal: { id: string; zukanIndex: number; zukanSuffix?: string; elements: string[] };
+		pal: {
+			id: string;
+			zukanIndex: number;
+			zukanSuffix?: string;
+			elements: string[];
+			passives: string[];
+		};
 		caught: boolean;
 		groupCount: number;
 		ontoggle: () => void;
@@ -30,6 +36,11 @@
 			<span class="elements">
 				{#each pal.elements as e (e)}<ElementBadge element={e} />{/each}
 			</span>
+			{#if pal.passives.length}
+				<span class="passives">
+					{pal.passives.map((p) => gameName(`passive:${p}`)).join(' · ')}
+				</span>
+			{/if}
 		</span>
 	</a>
 	<button
@@ -111,6 +122,13 @@
 		display: flex;
 		gap: 4px;
 		margin-top: 2px;
+	}
+	.passives {
+		font-size: 11px;
+		color: var(--text-3);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	/* Pal Sphere de capture */
 	.sphere {

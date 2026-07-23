@@ -30,7 +30,11 @@
 			if (hideCaught && store.mine.has(p.id)) return false;
 			if (search) {
 				const q = search.toLowerCase();
-				if (!gameName(`pal:${p.id}`).toLowerCase().includes(q) && !p.id.toLowerCase().includes(q))
+				if (
+					!gameName(`pal:${p.id}`).toLowerCase().includes(q) &&
+					!p.id.toLowerCase().includes(q) &&
+					!p.passives.some((pv) => gameName(`passive:${pv}`).toLowerCase().includes(q))
+				)
 					return false;
 			}
 			return true;

@@ -38,4 +38,10 @@ describe("tokenLabel", () => {
     expect(tokenLabel({ kind: "work", value: "Mining", min: 3 }, "fr")).toBe("Minage 3+");
     expect(tokenLabel({ kind: "work", value: "Mining", min: 1 }, "fr")).toBe("Minage");
   });
+
+  it("affiche le libellé embarqué des tokens passifs", () => {
+    expect(tokenLabel({ kind: "passive", value: "Legend", label: "Légende" }, "fr")).toBe(
+      "Légende",
+    );
+  });
 });

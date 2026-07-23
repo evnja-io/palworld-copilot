@@ -34,6 +34,8 @@ export type SearchContext = {
   locale: Locale;
   /** skillId -> palIds qui apprennent la compétence. */
   learners?: Map<string, ReadonlySet<string>>;
+  /** passiveId -> palIds qui possèdent le talent passif inné. */
+  passiveHolders?: Map<string, ReadonlySet<string>>;
   /** Ids bruts des marqueurs cochés (progression "marker"). */
   checked?: ReadonlySet<string>;
 };
@@ -47,7 +49,7 @@ export function rawId(e: SearchEntry): string {
   return e.id.slice(e.id.indexOf(":") + 1);
 }
 
-const GROUP_ORDER: Ns[] = ["pal", "item", "skill", "marker", "tech", "building"];
+const GROUP_ORDER: Ns[] = ["pal", "item", "skill", "passive", "marker", "tech", "building"];
 
 /** Recherche insensible aux diacritiques : « defense » doit matcher « défense ».
  *  La normalisation NFD + retrait des accents préserve la longueur (précomposés
@@ -83,6 +85,8 @@ function matchesToken(e: SearchEntry, t: Token, ctx: SearchContext): boolean {
     }
     case "skill":
       return entryNs(e) === "pal" && (ctx.learners?.get(t.value)?.has(rawId(e)) ?? false);
+    case "passive":
+      return entryNs(e) === "pal" && (ctx.passiveHolders?.get(t.value)?.has(rawId(e)) ?? false);
   }
 }
 
