@@ -80,6 +80,8 @@
   "paldex_search": "Search for a Pal…",
   "paldex_filter_element": "Element",
   "paldex_filter_work": "Work suitability",
+  "paldex_sort_desc": "Sort: highest level first",
+  "paldex_sort_asc": "Sort: lowest level first",
   "paldex_hide_caught": "Hide caught",
   "paldex_caught_me": "{count}/{total} caught",
   "paldex_caught_group": "{count}/{total} by the group",
