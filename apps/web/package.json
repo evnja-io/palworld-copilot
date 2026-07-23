@@ -22,6 +22,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@types/leaflet": "^1.9.21",
 		"@types/pg": "^8.20.0",
+		"@types/ssh2": "^1.15.5",
 		"drizzle-kit": "^0.31.10",
 		"pg": "^8.22.0",
 		"svelte": "^5.56.1",
@@ -37,6 +38,7 @@
 		"arctic": "^3.7.0",
 		"drizzle-orm": "^0.45.2",
 		"fuzzysort": "^3.1.0",
-		"leaflet": "^1.9.4"
+		"leaflet": "^1.9.4",
+		"ssh2": "^1.17.0"
 	}
 }
