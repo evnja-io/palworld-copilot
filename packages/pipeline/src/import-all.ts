@@ -83,15 +83,45 @@ export async function main(): Promise<void> {
       }
 
       const importStats = await importPlayerSaves(sql, cfg.server_id, dest);
-      const { players } = await syncPlayerNames(sql, cfg.server_id, dest);
+
+      // Sync des pseudos non bloquante : un Level.sav absent/inattendu ne doit
+      // pas invalider un import de saves par ailleurs réussi (cf. ancien
+      // workflow extract-players en continue-on-error).
+      let players = 0;
+      try {
+        const syncResult = await syncPlayerNames(sql, cfg.server_id, dest);
+        players = syncResult.players;
+      } catch (syncErr) {
+        const syncMessage = syncErr instanceof Error ? syncErr.message : String(syncErr);
+        console.error(`tenant ${cfg.server_id}: sync des pseudos échouée (non bloquant): ${syncMessage}`);
+      }
       const stats = { ...importStats, players };
 
-      await sql`update server_import_configs
-                set last_import_status = 'ok', last_import_error = null,
-                    last_import_at = now(), last_import_stats = ${JSON.stringify(stats)}::jsonb
-                where server_id = ${cfg.server_id}::uuid`;
-      console.log(`tenant ${cfg.server_id} : OK ${JSON.stringify(stats)}`);
-      results.push({ ok: true });
+      // Un import où TOUS les fichiers ont échoué à la conversion doit être
+      // signalé en erreur (importPlayerSaves ne throw que si 0 .sav ou venv
+      // absent, jamais sur des échecs de conversion individuels).
+      const totalFailure = importStats.files > 0 && importStats.failures === importStats.files;
+      if (totalFailure) {
+        const message = `tous les fichiers de save ont échoué à la conversion (${importStats.failures}/${importStats.files})`;
+        console.error(`tenant ${cfg.server_id} : ÉCHEC ${message}`);
+        results.push({ ok: false });
+        try {
+          await sql`update server_import_configs
+                    set last_import_status = 'error', last_import_error = ${message},
+                        last_import_at = now(), last_import_stats = ${JSON.stringify(stats)}::jsonb
+                    where server_id = ${cfg.server_id}::uuid`;
+        } catch (writeErr) {
+          const writeMessage = writeErr instanceof Error ? writeErr.message : String(writeErr);
+          console.error(`tenant ${cfg.server_id} : échec d'écriture du statut error: ${writeMessage}`);
+        }
+      } else {
+        await sql`update server_import_configs
+                  set last_import_status = 'ok', last_import_error = null,
+                      last_import_at = now(), last_import_stats = ${JSON.stringify(stats)}::jsonb
+                  where server_id = ${cfg.server_id}::uuid`;
+        console.log(`tenant ${cfg.server_id} : OK ${JSON.stringify(stats)}`);
+        results.push({ ok: true });
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       console.error(`tenant ${cfg.server_id} : ÉCHEC ${message}`);
