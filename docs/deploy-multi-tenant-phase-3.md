@@ -5,8 +5,12 @@ chiffrée en base, sans interruption de l'historique de tracking.
 
 ## Prérequis
 
-- Migration `0005_*` (table `server_import_configs`) appliquée en prod :
-  `DATABASE_URL=<prod> pnpm --filter web db:migrate`.
+- Migration `0007_lazy_redwing` (table `server_import_configs`) appliquée en
+  prod : `DATABASE_URL=<prod> pnpm --filter web db:migrate` (0005 = invites et
+  0006 = drop allowlist ont été appliquées en phase 2 ; celle-ci est la seule en
+  attente). **Cette migration est purement additive** (une table isolée, sans
+  contrainte NOT NULL sur des données existantes) : un `db:migrate` direct
+  suffit, pas de bascule de dossier ni de backfill comme en phase 1.
 - **Générer la clé maîtresse** (une seule fois, à conserver hors repo) :
   `node -e "console.log(require('node:crypto').randomBytes(32).toString('base64'))"`
 - Poser cette valeur :
