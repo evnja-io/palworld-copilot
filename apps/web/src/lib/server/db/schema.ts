@@ -17,12 +17,6 @@ export const sessions = pgTable("sessions", {
   expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
 });
 
-export const allowlist = pgTable("allowlist", {
-  discordId: text("discord_id").primaryKey(),
-  addedBy: uuid("added_by").references(() => users.id),
-  note: text("note"),
-});
-
 export const servers = pgTable("servers", {
   id: uuid("id").primaryKey().defaultRandom(),
   name: text("name").notNull(),

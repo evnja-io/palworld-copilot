@@ -20,9 +20,9 @@ export async function GET(event: RequestEvent) {
   const du: { id: string; username: string; global_name: string | null; avatar: string | null } =
     await res.json();
 
-  // Phase 2 : inscription ouverte — plus d'allowlist, plus de shim d'adhésion
-  // legacy. Tout compte Discord se connecte ; l'adhésion se fait via
-  // création (/servers/new) ou invitation (/join/[code]).
+  // Phase 2 : inscription ouverte, plus de liste de contrôle d'accès ni de
+  // shim d'adhésion legacy. Tout compte Discord se connecte ; l'adhésion se
+  // fait via création (/servers/new) ou invitation (/join/[code]).
   const db = getDb();
   const username = du.global_name ?? du.username;
   const avatarUrl = du.avatar
