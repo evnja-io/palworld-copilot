@@ -29,7 +29,7 @@ console.log(`  PNG  : ${png.length}`);
 for (const f of png) console.log(`    ${f.replace(RAW_DIR + "/", "")}`);
 
 // Domaines attendus pour le spike (recherche par nom de fichier, insensible à la casse).
-// Effigies/coffres/voyage rapide : PAS des exports FModel (acteurs de level) —
+// Effigies/coffres/voyage rapide : PAS des exports FModel (acteurs de level) -
 // vérifiés séparément ci-dessous via le dataset communautaire (cf. runbook).
 const expect: Record<string, RegExp> = {
   "pals (paramètres monstres)": /monsterparameter/i,
@@ -56,11 +56,11 @@ try {
   statSync(communityEffigies);
   console.log("✔ effigies (dataset communautaire save-pal)");
 } catch {
-  console.log("✘ MANQUANT : effigies (raw/community/effigies.json — cf. runbook)");
+  console.log("✘ MANQUANT : effigies (raw/community/effigies.json - cf. runbook)");
   missing++;
 }
 if (missing > 0) {
-  console.error(`\n${missing} domaine(s) manquant(s) — compléter les exports FModel.`);
+  console.error(`\n${missing} domaine(s) manquant(s) - compléter les exports FModel.`);
   process.exit(1);
 }
-console.log("\nSPIKE OK — inventaire complet");
+console.log("\nSPIKE OK - inventaire complet");

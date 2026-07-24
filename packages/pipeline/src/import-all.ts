@@ -141,7 +141,7 @@ export async function main(): Promise<void> {
         console.error(`tenant ${cfg.server_id} : échec d'écriture du statut error: ${writeMessage}`);
       }
     } finally {
-      // Level.sav converti ≈ 170 Mo — ne pas laisser traîner entre tenants.
+      // Level.sav converti ≈ 170 Mo - ne pas laisser traîner entre tenants.
       if (existsSync(dest)) rmSync(dest, { recursive: true, force: true });
     }
   }

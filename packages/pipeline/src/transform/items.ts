@@ -10,7 +10,7 @@ const namedIds = new Set(
     .map(([id]) => id),
 );
 // Les variantes par rareté (_2.._5, champ Rarity) empruntent le nom de leur
-// base via OverrideName — nommables en jeu, donc encyclopédiables.
+// base via OverrideName - nommables en jeu, donc encyclopédiables.
 const hasName = (id: string, row: any): boolean => {
   if (namedIds.has(id)) return true;
   const ov = pick<string>(row, "OverrideName");
@@ -39,7 +39,7 @@ let orphans = 0;
 let droppedRecipes = 0;
 const recipes = Object.entries(recipeRows)
   // Recette d'un produit non encyclopédiable (FlameThrower jamais nommé,
-  // Hotmilk sans ligne d'item) : résidu de données, inaffichable — écartée.
+  // Hotmilk sans ligne d'item) : résidu de données, inaffichable - écartée.
   .filter(([, row]: [string, any]) => {
     const keep = itemIds.has(pick<string>(row, "Product_Id") ?? "");
     if (!keep) droppedRecipes++;

@@ -5,4 +5,4 @@ if (!existsSync(pakDir)) {
   console.error(`ECHEC : dossier Paks introuvable : ${pakDir}`);
   process.exit(1);
 }
-console.log("SPIKE OK — workspace opérationnel, jeu localisé");
+console.log("SPIKE OK - workspace opérationnel, jeu localisé");

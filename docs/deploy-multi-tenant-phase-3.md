@@ -1,4 +1,4 @@
-# Rollout multi-tenant phase 3 — ingestion self-service (ordre impératif)
+# Rollout multi-tenant phase 3 - ingestion self-service (ordre impératif)
 
 Objectif : basculer l'import legacy des secrets GH globaux vers la config SFTP
 chiffrée en base, sans interruption de l'historique de tracking.
@@ -34,7 +34,7 @@ chiffrée en base, sans interruption de l'historique de tracking.
    GH `SFTP_HOST`/`SFTP_USER`/`SFTP_PASSWORD`), laisser « Dossier de save » vide
    (auto-découverte) **ou** recopier l'ancien `SAVE_REMOTE_DIR`, cocher « Import
    activé », Enregistrer. Le mot de passe est chiffré avec `SAVE_CREDS_KEY`.
-4. **Tester la connexion** (si le bouton est présent — spike ssh2 GO) : doit
+4. **Tester la connexion** (si le bouton est présent - spike ssh2 GO) : doit
    renvoyer OK + le dossier de monde. Si le spike était NO-GO, passer à l'étape 5
    (la validation vient du premier run).
 5. **Dégeler l'import** (« Enable workflow ») puis lancer un run manuel

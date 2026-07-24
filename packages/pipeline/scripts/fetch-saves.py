@@ -24,7 +24,7 @@ def pick_world_dir(names):
         raise ValueError("aucun dossier de monde sous " + SAVEGAMES_ROOT)
     if len(worlds) > 1:
         raise ValueError(
-            "plusieurs mondes sous %s (%s) — préciser SAVE_REMOTE_DIR"
+            "plusieurs mondes sous %s (%s) - préciser SAVE_REMOTE_DIR"
             % (SAVEGAMES_ROOT, ", ".join(worlds))
         )
     return worlds[0]

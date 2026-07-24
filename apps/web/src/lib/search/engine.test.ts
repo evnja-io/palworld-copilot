@@ -33,7 +33,7 @@ const INDEX: SearchEntry[] = [
 
 const ctx: SearchContext = { locale: "fr" };
 
-describe("runSearch — fuzzy", () => {
+describe("runSearch - fuzzy", () => {
   it("tolère les fautes de frappe (« anubs » trouve Anubis)", () => {
     const groups = runSearch(INDEX, [], "anubs", ctx);
     const pals = groups.find((g) => g.ns === "pal");
@@ -72,7 +72,7 @@ describe("runSearch — fuzzy", () => {
   });
 });
 
-describe("runSearch — tokens", () => {
+describe("runSearch - tokens", () => {
   it("combine élément + aptitude avec niveau minimum (ET)", () => {
     const groups = runSearch(
       INDEX,

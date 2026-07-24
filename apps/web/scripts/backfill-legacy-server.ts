@@ -1,7 +1,7 @@
 // Backfill multi-tenant : crée le serveur "legacy" et y rattache l'existant.
 // Usage : pnpm --filter web backfill:legacy <discordId de l'owner> [nom du serveur]
 // Idempotent : rejouable autant de fois que nécessaire (rattrape les lignes
-// créées entre deux exécutions — pas de transactions avec neon-http).
+// créées entre deux exécutions - pas de transactions avec neon-http).
 import { neon } from "@neondatabase/serverless";
 
 const [ownerDiscordId, ...nameParts] = process.argv.slice(2);
@@ -14,7 +14,7 @@ const sql = neon(process.env.DATABASE_URL!);
 
 const owners = await sql`select id from users where discord_id = ${ownerDiscordId}`;
 if (owners.length === 0) {
-  console.error("Owner introuvable dans users — il doit s'être connecté au moins une fois.");
+  console.error("Owner introuvable dans users - il doit s'être connecté au moins une fois.");
   process.exit(1);
 }
 const ownerId: string = owners[0].id;

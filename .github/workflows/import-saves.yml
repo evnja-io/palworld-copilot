@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     # 45 min : marge pour le fan-out séquentiel de tous les tenants activés.
     # Évolution future (seuil : durée totale ~ timeout) : passer en `strategy.matrix`
-    # sur les serverId (un job par tenant) — cf. spec, section « Pipeline d'import ».
+    # sur les serverId (un job par tenant) - cf. spec, section « Pipeline d'import ».
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4

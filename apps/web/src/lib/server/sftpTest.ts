@@ -1,4 +1,4 @@
-// Test de connexion SFTP depuis une fonction Vercel (ssh2, TCP sortant — cf.
+// Test de connexion SFTP depuis une fonction Vercel (ssh2, TCP sortant - cf.
 // spike phase 0). SSRF (rejet des plages privées, DNS-pin) : différé phase 4.
 import { Client } from "ssh2";
 
@@ -7,7 +7,7 @@ const CONNECT_TIMEOUT_MS = 10_000;
 // Budget global couvrant handshake + sftp() + readdir() : readyTimeout ne
 // borne que le handshake/auth SSH, pas les opérations SFTP qui suivent (un
 // hôte qui répond à l'auth puis ne répond jamais au subsystem SFTP resterait
-// bloqué jusqu'au max-duration de la fonction Vercel — 504 — sans ce budget).
+// bloqué jusqu'au max-duration de la fonction Vercel - 504 - sans ce budget).
 const OP_TIMEOUT_MS = 15_000;
 
 export class SftpTestError extends Error {
@@ -77,7 +77,7 @@ export function testSftpConnection(
           if (e) return done({ ok: false, error: e.message });
           const worlds = list.map((x) => x.filename).filter((n) => n !== "." && n !== "..");
           if (worlds.length !== 1) {
-            return done({ ok: false, error: worlds.length === 0 ? "aucun monde trouvé" : "plusieurs mondes — préciser le dossier" });
+            return done({ ok: false, error: worlds.length === 0 ? "aucun monde trouvé" : "plusieurs mondes - préciser le dossier" });
           }
           done({ ok: true, remoteDir: `${SAVEGAMES_ROOT}/${worlds[0]}` });
         });

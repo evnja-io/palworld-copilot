@@ -21,13 +21,13 @@
 	const byCategory = $derived.by(() => {
 		const groups = new Map<string, Building[]>();
 		for (const b of filtered) {
-			const cat = b.category ?? '—';
+			const cat = b.category ?? '-';
 			const list = groups.get(cat);
 			if (list) list.push(b);
 			else groups.set(cat, [b]);
 		}
 		return [...groups.entries()].sort((a, b) =>
-			a[0] === '—' ? 1 : b[0] === '—' ? -1 : a[0].localeCompare(b[0])
+			a[0] === '-' ? 1 : b[0] === '-' ? -1 : a[0].localeCompare(b[0])
 		);
 	});
 </script>
