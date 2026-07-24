@@ -24,10 +24,13 @@
 	const features = [
 		{ icon: '/icons/build/believer_flag.webp', title: m.landing_feat_servers_title, body: m.landing_feat_servers_body },
 		{ icon: '/icons/items/PalSphere_Mega.webp', title: m.landing_feat_paldex_title, body: m.landing_feat_paldex_body },
+		{ icon: '/icons/build/breedfarm.webp', title: m.landing_feat_breeding_title, body: m.landing_feat_breeding_body },
+		{ icon: '/icons/build/buildablegoddessstatue.webp', title: m.landing_feat_teams_title, body: m.landing_feat_teams_body },
 		{ icon: '/icons/items/Relic.webp', title: m.landing_feat_map_title, body: m.landing_feat_map_body },
 		{ icon: '/icons/items/Blueprint.webp', title: m.landing_feat_tech_title, body: m.landing_feat_tech_body },
 		{ icon: '/icons/build/workbench.webp', title: m.landing_feat_craft_title, body: m.landing_feat_craft_body },
-		{ icon: '/icons/build/palboxterminal.webp', title: m.landing_feat_import_title, body: m.landing_feat_import_body }
+		{ icon: '/icons/build/palboxterminal.webp', title: m.landing_feat_import_title, body: m.landing_feat_import_body },
+		{ icon: '/icons/build/dimensionpalstorage.webp', title: m.landing_feat_local_title, body: m.landing_feat_local_body }
 	];
 
 	const steps = [
@@ -43,7 +46,8 @@
 		{ q: m.landing_faq_q4, a: m.landing_faq_a4 },
 		{ q: m.landing_faq_q5, a: m.landing_faq_a5 },
 		{ q: m.landing_faq_q6, a: m.landing_faq_a6 },
-		{ q: m.landing_faq_q7, a: m.landing_faq_a7 }
+		{ q: m.landing_faq_q7, a: m.landing_faq_a7 },
+		{ q: m.landing_faq_q8, a: m.landing_faq_a8 }
 	];
 </script>
 

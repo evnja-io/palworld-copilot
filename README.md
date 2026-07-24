@@ -1,6 +1,6 @@
 # Palworld Companion
 
-A shared companion app for groups playing **Palworld** on a dedicated server: a collective Paldex, an interactive world map, the full technology tree, crafting recipes and buildings, with everyone's progression in one place, imported automatically from the server save.
+A shared companion app for groups playing **Palworld** together: a collective Paldex, a breeding calculator and a team builder, an interactive world map, the full technology tree, crafting recipes and buildings, with everyone's progression in one place — imported automatically from a dedicated server's save over SFTP, or uploaded by hand for local & co-op worlds.
 
 **Hosted instance:** <https://palwork.evnja.gg> (free, sign in with Discord and create your server).
 Prefer full control? [Self-host it](#self-hosting).
@@ -12,7 +12,10 @@ Bilingual UI (French / English). Not affiliated with Pocketpair, Inc. Palworld a
 - **Multi-tenant servers**: anyone can sign in with Discord and create up to 3 servers (one server = one Palworld world shared with your group). Each server is fully isolated with its own private URL.
 - **Invites**: revocable invite links with optional expiry and max-use count. Members claim their in-game character with one click.
 - **Shared progression**: Paldex (who caught what), interactive map (effigies, alpha bosses, fast travel), tech tree, items, crafting chains and buildings, showing each member's and the group's real progression.
+- **Breeding calculator**: which child two parents produce, which parents reach a target Pal, and the shortest breeding path, plus a full combos index.
+- **Team builder**: compose and share Pal teams — passives, active skills and loadouts (pre-filled from each species' innate passives and best learnset) — to theorycraft with your group.
 - **Self-service automatic import**: the server owner adds their dedicated server's SFTP access in the settings (connection test included, world folder auto-discovered). The save is then imported every 6 hours; catches, unlocked tech and effigies tick themselves off. Credentials are encrypted at rest (AES-256-GCM), never displayed back, and deletable at any time.
+- **Local & co-op worlds**: no dedicated server or SFTP? Upload your local (co-op) save folder straight from the browser to import it manually.
 - **Game encyclopedia**: 288 Pals, 1148 items, 152 alpha bosses, 138 effigies, generated from the game files.
 
 ## Architecture
