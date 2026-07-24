@@ -9,7 +9,13 @@
 	// Squelette non stylé (Task 8) : mise en forme dans Task 9.
 	async function deleteTeam(id: string, name: string) {
 		if (!confirm(m.teams_delete_confirm({ name }))) return;
-		await fetch(`/api/servers/${page.params.slug}/teams/${id}`, { method: 'DELETE' });
+		const res = await fetch(`/api/servers/${page.params.slug}/teams/${id}`, {
+			method: 'DELETE'
+		}).catch(() => null);
+		if (!res?.ok) {
+			alert(m.teams_save_error());
+			return;
+		}
 		await invalidateAll();
 	}
 </script>

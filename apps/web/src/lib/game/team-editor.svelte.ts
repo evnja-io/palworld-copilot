@@ -57,7 +57,13 @@ export class TeamEditorStore {
       this.status = "error";
       return null;
     }
-    const team = await res.json();
+    // Le parsing peut échouer même avec un 2xx (corps invalide) : ne jamais
+    // rester bloqué sur "saving" dans ce cas (voir garde de ré-entrée ci-dessus).
+    const team = await res.json().catch(() => null);
+    if (!team) {
+      this.status = "error";
+      return null;
+    }
     this.id = team.id;
     this.#saved = clone({ name: this.name, notes: this.notes, slots: this.slots });
     this.status = "saved";
