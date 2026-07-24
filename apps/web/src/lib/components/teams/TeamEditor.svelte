@@ -5,6 +5,7 @@
 	import ElementBadge from '$lib/components/ElementBadge.svelte';
 	import TeamSlotCard from './TeamSlotCard.svelte';
 	import TeamPicker from './TeamPicker.svelte';
+	import { defaultSlotFor } from '$lib/game/team-data';
 	import pals from '@palworld-companion/game-data/pals.json';
 	import type { TeamEditorStore } from '$lib/game/team-editor.svelte';
 	import type { GroupUser } from '$lib/types';
@@ -54,9 +55,10 @@
 		const { mode, index } = picker;
 		const slot = store.slots[index];
 		if (mode === 'pal') {
-			// Remplacement : passifs ET actifs conservés (les fruits de compétence
-			// autorisent n'importe quel skill sur n'importe quel pal).
-			store.setSlot(index, slot ? { ...slot, palId: id } : { palId: id, passives: [], actives: [] });
+			// Slot vide : pré-remplissage des passifs innés + actifs par défaut du Pal
+			// (données connues par espèce). Remplacement : passifs ET actifs conservés
+			// (les fruits de compétence autorisent n'importe quel skill sur tout pal).
+			store.setSlot(index, slot ? { ...slot, palId: id } : defaultSlotFor(id));
 		} else if (slot && mode === 'active' && slot.actives.length < 3 && !slot.actives.includes(id)) {
 			store.setSlot(index, { ...slot, actives: [...slot.actives, id] });
 		} else if (slot && mode === 'passive' && slot.passives.length < 4 && !slot.passives.includes(id)) {
