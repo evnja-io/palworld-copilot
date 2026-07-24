@@ -1,7 +1,9 @@
 // Endpoint appelé par upload() (@vercel/blob/client) depuis la page d'upload :
-// handleUpload gère à la fois la génération de token (avant l'upload direct-to-
-// Blob) et la notification de complétion (onUploadCompleted, cf. plus bas).
-import { json } from "@sveltejs/kit";
+// handleUpload génère le token client pour l'upload direct-to-Blob. La
+// complétion est gérée explicitement par l'action finalize (cf.
+// lib/server/uploads.ts), jamais par un callback Blob — cf. onUploadCompleted
+// plus bas (délibérément omis).
+import { error, json } from "@sveltejs/kit";
 import { handleUpload } from "@vercel/blob/client";
 import { eq } from "drizzle-orm";
 import { env } from "$env/dynamic/private";
@@ -15,6 +17,12 @@ import type { RequestEvent } from "./$types";
 function maxBytesFor(pathname: string): number {
   return pathname.endsWith("/Level.sav") ? MAX_LEVEL_BYTES : MAX_PLAYER_BYTES;
 }
+
+/** Format UUID générique (non restreint à v4) — les id de save_uploads sont
+ *  générés par `uuid().defaultRandom()` (Postgres gen_random_uuid()). Rejeter
+ *  tôt un uploadId mal formé évite une erreur de cast Postgres (`invalid
+ *  input syntax for type uuid`) et permet de retourner un 400 propre. */
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export async function POST(event: RequestEvent) {
   // Guard EN PREMIER : même sémantique que sftp-test (401 non authentifié,
@@ -31,17 +39,22 @@ export async function POST(event: RequestEvent) {
     // (dist/client.d.ts) : on la passe pour rester explicite en local aussi.
     token: env.BLOB_READ_WRITE_TOKEN,
     onBeforeGenerateToken: async (pathname, clientPayload) => {
+      // 400 invalid_payload : clientPayload absent/mal formé, ou uploadId
+      // manquant/non-UUID — toujours une erreur côté appelant, jamais un bug
+      // serveur. 409 bad_state : ligne introuvable / mauvais serveur / statut
+      // déjà avancé — état incohérent mais pas nécessairement invalide (course
+      // avec finalize/cancel). 400 invalid_pathname : pathname hors motif.
       if (typeof clientPayload !== "string") {
-        throw new Error("clientPayload manquant");
+        throw error(400, "invalid_payload");
       }
       let uploadId: unknown;
       try {
         uploadId = (JSON.parse(clientPayload) as { uploadId?: unknown }).uploadId;
       } catch {
-        throw new Error("clientPayload invalide (JSON)");
+        throw error(400, "invalid_payload");
       }
-      if (typeof uploadId !== "string") {
-        throw new Error("uploadId manquant dans clientPayload");
+      if (typeof uploadId !== "string" || !UUID_PATTERN.test(uploadId)) {
+        throw error(400, "invalid_payload");
       }
 
       const db = getDb();
@@ -50,11 +63,11 @@ export async function POST(event: RequestEvent) {
         .from(tables.saveUploads)
         .where(eq(tables.saveUploads.id, uploadId));
       if (!row || row.serverId !== server.id || row.status !== "uploading") {
-        throw new Error("upload introuvable ou déjà finalisé");
+        throw error(409, "bad_state");
       }
 
       if (!isValidUploadPathname(pathname, server.id, uploadId)) {
-        throw new Error("pathname hors motif attendu");
+        throw error(400, "invalid_pathname");
       }
 
       return {
@@ -74,13 +87,14 @@ export async function POST(event: RequestEvent) {
         maximumSizeInBytes: maxBytesFor(pathname),
       };
     },
-    onUploadCompleted: async ({ blob }) => {
-      // No-op volontaire : sur Vercel ce callback nécessite une URL de rappel
-      // joignable publiquement, jamais le cas en localhost ou derrière la
-      // protection de déploiement. Le client appelle finalizeUpload
-      // explicitement à la place (cf. lib/server/uploads.ts, tâche 2).
-      console.log("upload Blob terminé (callback informatif) :", blob.pathname);
-    },
+    // onUploadCompleted délibérément omis (champ optionnel du type
+    // HandleUploadOptions — cf. node_modules/.pnpm/@vercel+blob@2.6.1/.../
+    // dist/client.d.ts). Ce callback est de toute façon inatteignable ici :
+    // requireOwner ci-dessus exige une session cookie sur CHAQUE POST, alors
+    // que l'appel serveur-à-serveur de Vercel Blob (`blob.upload-completed`)
+    // n'en porte jamais. La finalisation passe par l'action `finalize`
+    // (cf. lib/server/uploads.ts:finalizeUpload), appelée explicitement par
+    // le client une fois l'upload direct-to-Blob terminé.
   });
 
   return json(result);
