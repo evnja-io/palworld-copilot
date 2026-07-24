@@ -1,0 +1,72 @@
+import type { TeamSlot } from "$lib/types";
+
+type Snapshot = { name: string; notes: string; slots: TeamSlot[] };
+
+const clone = (s: Snapshot): Snapshot => JSON.parse(JSON.stringify(s));
+
+/** État de l'éditeur d'équipe. Sauvegarde EXPLICITE (pas d'autosave) :
+ *  invariants inter-champs + pas d'amplification d'écritures sur les notes. */
+export class TeamEditorStore {
+  id = $state<string | null>(null);
+  name = $state("");
+  notes = $state("");
+  slots = $state<TeamSlot[]>([null, null, null, null, null]);
+  status = $state<"idle" | "saving" | "saved" | "error">("idle");
+  #slug: string;
+  #saved = $state<Snapshot>({ name: "", notes: "", slots: [] });
+
+  dirty = $derived(
+    JSON.stringify({ name: this.name, notes: this.notes, slots: this.slots }) !==
+      JSON.stringify(this.#saved),
+  );
+
+  constructor(
+    slug: string,
+    initial: { id: string | null; name: string; notes: string; slots: TeamSlot[] },
+  ) {
+    this.#slug = slug;
+    this.id = initial.id;
+    this.name = initial.name;
+    this.notes = initial.notes;
+    this.slots = padSlots(initial.slots);
+    this.#saved = clone({ name: this.name, notes: this.notes, slots: this.slots });
+  }
+
+  setSlot(i: number, slot: TeamSlot) {
+    this.slots[i] = slot;
+  }
+
+  clearSlot(i: number) {
+    this.slots[i] = null;
+  }
+
+  async save(): Promise<string | null> {
+    if (this.status === "saving") return this.id;
+    this.status = "saving";
+    const body = JSON.stringify({ name: this.name, notes: this.notes, slots: this.slots });
+    const url =
+      this.id === null
+        ? `/api/servers/${this.#slug}/teams`
+        : `/api/servers/${this.#slug}/teams/${this.id}`;
+    const res = await fetch(url, {
+      method: this.id === null ? "POST" : "PUT",
+      headers: { "content-type": "application/json" },
+      body,
+    }).catch(() => null);
+    if (!res?.ok) {
+      this.status = "error";
+      return null;
+    }
+    const team = await res.json();
+    this.id = team.id;
+    this.#saved = clone({ name: this.name, notes: this.notes, slots: this.slots });
+    this.status = "saved";
+    return this.id;
+  }
+}
+
+export function padSlots(slots: TeamSlot[]): TeamSlot[] {
+  const out = slots.slice(0, 5);
+  while (out.length < 5) out.push(null);
+  return out;
+}
