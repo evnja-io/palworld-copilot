@@ -170,5 +170,10 @@ export const saveUploads = pgTable(
   },
   (t) => [
     index("save_uploads_server_created_idx").on(t.serverId, t.createdAt),
+    // Backstop DB pour l'invariant "un seul upload actif par serveur" :
+    // TOCTOU côté applicatif (SELECT puis INSERT) ne suffit pas, cf. createUpload.
+    uniqueIndex("save_uploads_active_unique")
+      .on(t.serverId)
+      .where(sql`${t.status} in ('uploading', 'pending', 'running')`),
   ],
 );

@@ -2,13 +2,11 @@
 // uploading -> pending -> running -> ok|error, stocké dans save_uploads.
 // Les fichiers transitent par Vercel Blob sous le préfixe blobPrefix(serverId, uploadId).
 import { del, list } from "@vercel/blob";
-import { and, desc, eq, inArray } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { env } from "$env/dynamic/private";
 import { getDb, tables } from "$lib/server/db";
 import { MAX_FILES, MAX_LEVEL_BYTES, MAX_PLAYER_BYTES, PLAYER_SAV_PATTERN } from "$lib/upload-limits";
 import { dispatchImportUpload } from "./github";
-
-const ACTIVE_STATUSES = ["uploading", "pending", "running"] as const;
 
 /** Préfixe Blob dédié à un upload : uploads/<serverId>/<uploadId>/. */
 export function blobPrefix(serverId: string, uploadId: string): string {
@@ -75,27 +73,23 @@ export function validateBlobListing(
 }
 
 /** Crée un upload (statut initial 'uploading'). Single-flight par serveur :
- *  refuse si un upload est déjà actif (uploading/pending/running). */
+ *  INSERT ... ON CONFLICT DO NOTHING contre l'index unique partiel
+ *  save_uploads_active_unique (schema.ts) — un seul statement, donc pas de
+ *  fenêtre TOCTOU entre deux appels concurrents pour le même serveur. */
 export async function createUpload(
   serverId: string,
   userId: string,
 ): Promise<{ id: string } | { error: "already_active" }> {
   const db = getDb();
-  const active = await db
-    .select({ id: tables.saveUploads.id })
-    .from(tables.saveUploads)
-    .where(
-      and(
-        eq(tables.saveUploads.serverId, serverId),
-        inArray(tables.saveUploads.status, ACTIVE_STATUSES),
-      ),
-    );
-  if (active.length > 0) return { error: "already_active" };
-
   const [row] = await db
     .insert(tables.saveUploads)
     .values({ serverId, uploadedBy: userId })
+    .onConflictDoNothing({
+      target: tables.saveUploads.serverId,
+      where: sql`${tables.saveUploads.status} in ('uploading', 'pending', 'running')`,
+    })
     .returning({ id: tables.saveUploads.id });
+  if (!row) return { error: "already_active" };
   return { id: row.id };
 }
 

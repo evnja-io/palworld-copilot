@@ -64,6 +64,13 @@
       "when": 1784878357686,
       "tag": "0008_chunky_virginia_dare",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1784888640304,
+      "tag": "0009_narrow_wrecker",
+      "breakpoints": true
     }
   ]
 }
