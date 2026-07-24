@@ -143,10 +143,13 @@ export async function processUpload(sql: Sql, uploadId: string, serverId: string
       console.error(`upload ${uploadId} : ÉCHEC ${message}`);
       ok = false;
       try {
+        // Garde `status = 'running'` : cet upload appartient à ce worker depuis
+        // le claim atomique ; on n'écrase jamais une ligne qu'un autre passage
+        // (ex. cleanupStale) aurait déjà fait basculer.
         await sql`update save_uploads
                   set status = 'error', error = ${message}, stats = ${JSON.stringify(stats)}::jsonb,
                       finished_at = now()
-                  where id = ${uploadId}::uuid`;
+                  where id = ${uploadId}::uuid and status = 'running'`;
       } catch (writeErr) {
         const writeMessage = writeErr instanceof Error ? writeErr.message : String(writeErr);
         console.error(`upload ${uploadId} : échec d'écriture du statut error: ${writeMessage}`);
@@ -155,7 +158,7 @@ export async function processUpload(sql: Sql, uploadId: string, serverId: string
       await sql`update save_uploads
                 set status = 'ok', error = null, stats = ${JSON.stringify(stats)}::jsonb,
                     finished_at = now()
-                where id = ${uploadId}::uuid`;
+                where id = ${uploadId}::uuid and status = 'running'`;
       console.log(`upload ${uploadId} : OK ${JSON.stringify(stats)}`);
       ok = true;
     }
@@ -171,7 +174,7 @@ export async function processUpload(sql: Sql, uploadId: string, serverId: string
     try {
       await sql`update save_uploads
                 set status = 'error', error = ${message}, finished_at = now()
-                where id = ${uploadId}::uuid`;
+                where id = ${uploadId}::uuid and status = 'running'`;
     } catch (writeErr) {
       // Une panne d'écriture du statut ne doit jamais se propager : elle
       // bloquerait le sweep pour les uploads suivants.

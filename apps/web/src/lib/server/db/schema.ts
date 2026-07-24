@@ -145,8 +145,8 @@ export const serverImportConfigs = pgTable("server_import_configs", {
   lastImportStats: jsonb("last_import_stats"),
 });
 
-// One row per browser save-upload attempt for a local (co-op) world;
-// lifecycle: uploading → pending → running → ok|error.
+// Une ligne par tentative d'upload navigateur d'une save de monde local (co-op) ;
+// cycle de vie : uploading → pending → running → ok|error.
 export const saveUploads = pgTable(
   "save_uploads",
   {
