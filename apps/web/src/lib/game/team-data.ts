@@ -6,9 +6,18 @@ import skills from "@palworld-companion/game-data/skills.json";
 import palMoves from "@palworld-companion/game-data/pal-moves.json";
 import passiveEffects from "@palworld-companion/game-data/passive-effects.json";
 import namesEn from "@palworld-companion/game-data/l10n/names.en.json";
+import type { TeamSlot } from "$lib/types";
 
 const NAMES_EN = namesEn as Record<string, string>;
 const PASSIVES = passiveEffects as Record<string, { rank: number }>;
+
+/** Passifs innés d'espèce (pals.json), filtrés aux ids valides, plafonnés à 4. */
+const DEFAULT_PASSIVES = new Map<string, string[]>(
+  (pals as Array<{ id: string; passives?: string[] }>).map((p) => [
+    p.id,
+    (p.passives ?? []).filter((id) => Object.prototype.hasOwnProperty.call(PASSIVES, id)).slice(0, 4),
+  ]),
+);
 
 export const PAL_IDS: Set<string> = new Set((pals as Array<{ id: string }>).map((p) => p.id));
 
@@ -46,4 +55,28 @@ export function learnsetFor(palId: string): Array<{ level: number; skillId: stri
 
 export function partnerSkillNsId(palId: string): string {
   return `partnerskill:${palId}`;
+}
+
+/** Passifs par défaut d'un Pal : ses passifs innés d'espèce (0 à 4). */
+export function defaultPassivesFor(palId: string): string[] {
+  return DEFAULT_PASSIVES.get(palId) ?? [];
+}
+
+/** Actifs par défaut d'un Pal : ses 3 skills de plus haut niveau (loadout de fin
+ *  de jeu), du plus fort au plus faible. [] si le Pal n'a pas de learnset. */
+export function defaultActivesFor(palId: string): string[] {
+  return learnsetFor(palId)
+    .slice(-3)
+    .reverse()
+    .map((e) => e.skillId);
+}
+
+/** Slot pré-rempli au placement d'un Pal : passifs innés + actifs par défaut,
+ *  pour ne pas repartir d'un slot vide (données déjà connues par espèce). */
+export function defaultSlotFor(palId: string): TeamSlot {
+  return {
+    palId,
+    passives: defaultPassivesFor(palId),
+    actives: defaultActivesFor(palId),
+  };
 }
