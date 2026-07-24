@@ -29,6 +29,16 @@
 	let folderInput = $state<HTMLInputElement | null>(null);
 	let filesInput = $state<HTMLInputElement | null>(null);
 
+	// Mécanisme d'annulation de la chaîne startUpload() : un compteur de
+	// génération (pas besoin d'être réactif, jamais lu dans le template) que
+	// chaque étape re-vérifie après une attente async — si l'annulation l'a
+	// incrémenté entre-temps, on abandonne sans toucher à `phase`/`errorMessage`.
+	// L'AbortController est passé en plus à upload() (@vercel/blob/client
+	// 2.6.1 expose `abortSignal`, cf. client.d.ts) pour interrompre les
+	// requêtes réseau en cours, pas seulement arrêter d'attendre leur résultat.
+	let uploadGeneration = 0;
+	let abortController: AbortController | null = null;
+
 	const validation = $derived(validateSelection(kept));
 	const keptBytes = $derived(kept.reduce((sum, f) => sum + f.size, 0));
 	const hasActiveServerUpload = $derived(
@@ -129,7 +139,12 @@
 
 	// Limite de concurrence simple (2-3 uploads en parallèle) : une file
 	// partagée que chaque worker consomme jusqu'à épuisement ou erreur.
-	async function uploadAll(files: KeptFile[], byPath: Map<string, File>, id: string) {
+	async function uploadAll(
+		files: KeptFile[],
+		byPath: Map<string, File>,
+		id: string,
+		signal: AbortSignal
+	) {
 		const totalBytes = files.reduce((sum, f) => sum + f.size, 0);
 		const loadedByPath = new Map<string, number>();
 		const recompute = () => {
@@ -143,6 +158,10 @@
 
 		async function worker() {
 			for (;;) {
+				// Ne pas piocher un fichier de plus si l'annulation a déjà eu lieu
+				// (évite un appel upload() superflu ; celui déjà en vol sera de
+				// toute façon interrompu par abortSignal).
+				if (signal.aborted) return;
 				const kf = queue.shift();
 				if (!kf) return;
 				const file = byPath.get(kf.relativePath);
@@ -156,6 +175,7 @@
 					handleUploadUrl: `/api/servers/${page.params.slug}/upload`,
 					clientPayload: JSON.stringify({ uploadId: id }),
 					multipart: true,
+					abortSignal: signal,
 					onUploadProgress: ({ loaded }) => {
 						loadedByPath.set(kf.relativePath, loaded);
 						recompute();
@@ -171,6 +191,14 @@
 	}
 
 	async function startUpload() {
+		// generation capturée au début : si cancelCurrent() incrémente
+		// uploadGeneration pendant une des attentes ci-dessous, toute reprise
+		// après coup (succès ou rejet, y compris le 409 déclenché par notre
+		// propre annulation) est ignorée — l'état laissé par le cancel prime.
+		const generation = ++uploadGeneration;
+		const controller = new AbortController();
+		abortController = controller;
+
 		errorMessage = null;
 		dispatched = null;
 		phase = 'uploading';
@@ -178,6 +206,7 @@
 
 		try {
 			const startResult = await postAction('?/start', new FormData());
+			if (generation !== uploadGeneration) return;
 			if (startResult.type === 'failure') {
 				errorMessage = errorLabel(String((startResult.data as { error?: string })?.error ?? ''));
 				phase = 'error';
@@ -192,11 +221,13 @@
 			uploadId = id;
 
 			const byPath = new Map(selectedFiles.map((f) => [f.webkitRelativePath || f.name, f]));
-			await uploadAll(kept, byPath, id);
+			await uploadAll(kept, byPath, id, controller.signal);
+			if (generation !== uploadGeneration) return;
 
 			const finalizeBody = new FormData();
 			finalizeBody.set('uploadId', id);
 			const finalizeResult = await postAction('?/finalize', finalizeBody);
+			if (generation !== uploadGeneration) return;
 			if (finalizeResult.type === 'failure') {
 				errorMessage = errorLabel(String((finalizeResult.data as { error?: string })?.error ?? ''));
 				phase = 'error';
@@ -213,8 +244,14 @@
 			resetSelection();
 			await invalidateAll();
 		} catch (err) {
+			// Un rejet provoqué par notre propre annulation (abortSignal, ou le
+			// 409 bad_state du prochain appel serveur après un cancel) ne doit
+			// jamais écraser l'état laissé par cancelCurrent().
+			if (generation !== uploadGeneration) return;
 			errorMessage = err instanceof Error ? err.message : String(err);
 			phase = 'error';
+		} finally {
+			if (abortController === controller) abortController = null;
 		}
 	}
 
@@ -228,15 +265,41 @@
 	}
 
 	async function cancelCurrent() {
-		if (!uploadId) return;
+		// Invalide la chaîne startUpload() en cours avant même de contacter le
+		// serveur : toute reprise ultérieure de cette chaîne (succès ou rejet)
+		// se retrouvera avec un uploadGeneration différent et sera ignorée.
+		uploadGeneration++;
+		abortController?.abort();
+		abortController = null;
+
+		if (!uploadId) {
+			phase = 'idle';
+			errorMessage = null;
+			progressPercent = 0;
+			return;
+		}
+
 		const fd = new FormData();
 		fd.set('uploadId', uploadId);
-		await postAction('?/cancel', fd);
-		phase = 'idle';
-		errorMessage = null;
-		progressPercent = 0;
-		resetSelection();
+		const result = await postAction('?/cancel', fd);
+		const cancelled = result.type === 'success' && (result.data as { cancelled?: boolean }).cancelled === true;
+
 		await invalidateAll();
+
+		if (cancelled) {
+			phase = 'idle';
+			errorMessage = null;
+			progressPercent = 0;
+			resetSelection();
+		} else {
+			// La ligne n'était déjà plus annulable côté serveur (passée en
+			// 'running' par le worker, ou déjà terminale) : on ne prétend pas
+			// avoir réussi l'annulation. Le invalidateAll ci-dessus a rafraîchi
+			// l'historique et hasActiveServerUpload avec le vrai statut ; on se
+			// contente de sortir de l'écran d'upload local.
+			phase = 'idle';
+			uploadId = null;
+		}
 	}
 </script>
 
@@ -260,6 +323,7 @@
 				type="file"
 				webkitdirectory
 				multiple
+				disabled={phase === 'uploading'}
 				onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
 			/>
 		</label>
@@ -270,6 +334,7 @@
 				type="file"
 				accept=".sav"
 				multiple
+				disabled={phase === 'uploading'}
 				onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
 			/>
 		</label>
@@ -327,7 +392,26 @@
 							<span class="badge {statusClass(row.status)}">{statusLabel(row.status)}</span>
 							<span class="date">{fmtDate(row.createdAt)}</span>
 							{#if row.status === 'uploading' || row.status === 'pending'}
-								<form method="POST" action="?/cancel" use:enhance class="cancel-row">
+								<form
+									method="POST"
+									action="?/cancel"
+									use:enhance={() => {
+										// Cette ligne d'historique peut être la même que celle
+										// pilotée par startUpload() (data.uploads[0] pendant
+										// phase === 'uploading') : si on annule via ce formulaire,
+										// il faut aussi couper la chaîne JS en cours, sinon elle
+										// continue et finit par échouer sur un 409 bad_state.
+										if (row.id === uploadId) {
+											uploadGeneration++;
+											abortController?.abort();
+											abortController = null;
+											phase = 'idle';
+											uploadId = null;
+										}
+										return async ({ update }) => update();
+									}}
+									class="cancel-row"
+								>
 									<input type="hidden" name="uploadId" value={row.id} />
 									<button type="submit" class="ghost danger">{m.upload_cancel()}</button>
 								</form>
