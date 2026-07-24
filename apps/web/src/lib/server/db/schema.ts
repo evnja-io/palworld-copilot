@@ -11,6 +11,7 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
+import type { TeamSlot } from "$lib/types";
 
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -78,6 +79,28 @@ export const progress = pgTable(
     primaryKey({ columns: [t.serverId, t.userId, t.kind, t.entityId] }),
     index("progress_server_kind_idx").on(t.serverId, t.kind),
   ],
+);
+
+// Équipes de Pals : slots en jsonb pour une écriture atomique (neon-http n'a
+// pas de transactions). PK surrogate (URLs) — écart assumé à la convention
+// PK composite ; server_id reste dans chaque WHERE (cf. lib/server/teams.ts).
+export const teams = pgTable(
+  "teams",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    authorId: uuid("author_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    name: text("name").notNull(),
+    notes: text("notes").notNull().default(""),
+    slots: jsonb("slots").$type<TeamSlot[]>().notNull().default([]),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("teams_server_idx").on(t.serverId)],
 );
 
 export const savePlayers = pgTable(
