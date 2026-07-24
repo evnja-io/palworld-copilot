@@ -3,7 +3,8 @@ import { listMyServers } from "$lib/server/servers";
 import type { PageServerLoadEvent } from "./$types";
 
 export async function load({ locals, cookies }: PageServerLoadEvent) {
-  if (!locals.user) redirect(302, "/login");
+  // Visiteur non connecté → landing rendue ici même.
+  if (!locals.user) return {};
   const mine = await listMyServers(locals.user.id);
   // Aucun serveur → page de choix/création. Sinon dernier serveur visité
   // (cookie posé par le layout /s/[slug]), à défaut le premier.
