@@ -232,10 +232,8 @@
 				// cancelCurrent() a été appelé pendant que ce ?/start était en
 				// vol, à un moment où uploadId n'existait pas encore côté
 				// client : c'est ici qu'on règle le sort de la ligne serveur,
-				// quel que soit le résultat de ?/start. Le finally garantit le
-				// retour à 'idle' même si ?/cancel échoue (ex. réseau) — sans
-				// lui l'utilisateur resterait bloqué sur "annulation en cours".
-				pendingCancelGeneration = null;
+				// quel que soit le résultat de ?/start (y compris si ?/cancel
+				// lui-même rejette, cf. settleDeferredCancel).
 				try {
 					if (startResult.type === 'success') {
 						const id = (startResult.data as { uploadId: string }).uploadId;
@@ -244,11 +242,7 @@
 						await postAction('?/cancel', fd);
 					}
 				} finally {
-					await invalidateAll();
-					phase = 'idle';
-					uploadId = null;
-					cancelling = false;
-					resetSelection();
+					await settleDeferredCancel();
 				}
 				return;
 			}
@@ -291,15 +285,39 @@
 			resetSelection();
 			await invalidateAll();
 		} catch (err) {
+			// Une annulation demandée pendant que ?/start était encore en vol
+			// peut aussi faire rejeter ?/start lui-même (réseau, parse) avant
+			// même d'avoir pu lire son résultat : sans ce cas, le mismatch de
+			// génération ci-dessous ferait sortir silencieusement sans jamais
+			// rétablir phase/cancelling, laissant l'UI bloquée sur "annulation
+			// en cours" indéfiniment.
+			if (pendingCancelGeneration === generation) {
+				await settleDeferredCancel();
+				return;
+			}
 			// Un rejet provoqué par notre propre annulation (abortSignal, ou le
-			// 409 bad_state du prochain appel serveur après un cancel) ne doit
-			// jamais écraser l'état laissé par cancelCurrent().
+			// 409 bad_state du prochain appel serveur après un cancel déjà
+			// réglé) ne doit jamais écraser l'état laissé par cancelCurrent().
 			if (generation !== uploadGeneration) return;
 			errorMessage = err instanceof Error ? err.message : String(err);
 			phase = 'error';
 		} finally {
 			if (abortController === controller) abortController = null;
 		}
+	}
+
+	// Règle l'état local après qu'une annulation a été décidée pendant que
+	// ?/start était encore en vol (cf. pendingCancelGeneration) — appelé que
+	// ?/start ait réussi, échoué fonctionnellement, ou rejeté (réseau/parse).
+	// invalidateAll() est best-effort : un échec de rafraîchissement de
+	// l'historique ne doit jamais empêcher l'UI de redevenir utilisable.
+	async function settleDeferredCancel() {
+		pendingCancelGeneration = null;
+		await invalidateAll().catch(() => {});
+		phase = 'idle';
+		uploadId = null;
+		cancelling = false;
+		resetSelection();
 	}
 
 	function resetSelection() {
@@ -332,34 +350,43 @@
 			// serveur n'a pas encore d'id connu ici, impossible de poster
 			// ?/cancel maintenant. On mémorise la demande — startUpload()
 			// l'annulera dès que ?/start aura renvoyé le uploadId (ou, s'il a
-			// échoué, constatera qu'il n'y a rien à annuler) puis réglera
-			// phase/cancelling. La phase reste 'uploading' (état "annulation
-			// en cours" dans l'UI) pour empêcher un redémarrage tant que la
-			// ligne n'est pas réellement annulée.
+			// échoué/rejeté, constatera qu'il n'y a rien à annuler) puis réglera
+			// phase/cancelling via settleDeferredCancel(). La phase reste
+			// 'uploading' (état "annulation en cours" dans l'UI) pour empêcher
+			// un redémarrage tant que la ligne n'est pas réellement annulée.
 			pendingCancelGeneration = generation;
 			return;
 		}
 
 		const fd = new FormData();
 		fd.set('uploadId', uploadId);
-		const result = await postAction('?/cancel', fd);
-		const cancelled = result.type === 'success' && (result.data as { cancelled?: boolean }).cancelled === true;
 
-		await invalidateAll();
-
-		if (cancelled) {
-			phase = 'idle';
-			resetSelection();
-		} else {
-			// La ligne n'était déjà plus annulable côté serveur (passée en
-			// 'running' par le worker, ou déjà terminale) : on ne prétend pas
-			// avoir réussi l'annulation. Le invalidateAll ci-dessus a rafraîchi
-			// l'historique et hasActiveServerUpload avec le vrai statut ; on se
-			// contente de sortir de l'écran d'upload local.
-			phase = 'idle';
+		try {
+			const result = await postAction('?/cancel', fd);
+			const cancelled =
+				result.type === 'success' && (result.data as { cancelled?: boolean }).cancelled === true;
+			if (cancelled) {
+				resetSelection();
+			} else {
+				// La ligne n'était déjà plus annulable côté serveur (passée en
+				// 'running' par le worker, ou déjà terminale) : on ne prétend pas
+				// avoir réussi l'annulation, on se contente de sortir de l'écran
+				// d'upload local.
+				uploadId = null;
+			}
+		} catch {
+			// ?/cancel a rejeté (réseau/parse) : impossible de savoir si la
+			// ligne serveur a été annulée, mais l'utilisateur ne doit pas rester
+			// bloqué sur le bouton Annuler. Un redémarrage ultérieur essuiera au
+			// pire un already_active renvoyé par le serveur.
 			uploadId = null;
+		} finally {
+			// Best-effort : un échec de rafraîchissement de l'historique ne
+			// doit jamais empêcher l'UI de redevenir utilisable.
+			await invalidateAll().catch(() => {});
+			phase = 'idle';
+			cancelling = false;
 		}
-		cancelling = false;
 	}
 </script>
 
