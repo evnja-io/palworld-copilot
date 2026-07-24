@@ -107,9 +107,21 @@ export function extractPalInstances(
     // Scalaires typés défensivement : une valeur inattendue (enveloppe
     // divergente) retombe sur le défaut plutôt que de casser le cast SQL
     // (int[]/text[]) de toute la transaction d'insertion.
-    const num = (v: unknown): number | null => (typeof v === "number" ? v : null);
-    const str = (v: unknown): string | null =>
-      typeof v === "string" && v !== "" ? v : null;
+    // Deux formes observées sur saves réelles : IntProperty/StrProperty à plat
+    // (value = scalaire) et ByteProperty/EnumProperty imbriquée
+    // (value = { type, value }) - Level et Talent_* sont des ByteProperty.
+    const unwrap = (v: unknown): unknown =>
+      v !== null && typeof v === "object" && "value" in (v as Record<string, unknown>)
+        ? (v as Record<string, unknown>).value
+        : v;
+    const num = (v: unknown): number | null => {
+      const s = unwrap(v);
+      return typeof s === "number" ? s : null;
+    };
+    const str = (v: unknown): string | null => {
+      const s = unwrap(v);
+      return typeof s === "string" && s !== "" ? s : null;
+    };
 
     rows.push({
       instanceId,

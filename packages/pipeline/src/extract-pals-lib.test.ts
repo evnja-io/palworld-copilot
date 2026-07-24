@@ -159,16 +159,33 @@ describe("extractPalInstances", () => {
     });
   });
 
+  it("déballe l'enveloppe ByteProperty imbriquée (Level/Talent_* des saves réelles)", () => {
+    // Sur saves réelles, Level et Talent_* sont des ByteProperty :
+    // sp.Level.value = { type: "None", value: 19 } (validé sur un import réel :
+    // 1580 instances avec level=1 et talents null avant ce déballage).
+    const { rows } = extractPalInstances(
+      [
+        entry({
+          level: { type: "None", value: 42 } as unknown as number,
+          talentHp: { type: "None", value: 90 } as unknown as number,
+          talentShot: { value: 80 } as unknown as number,
+        }),
+      ],
+      palIdsLower,
+    );
+    expect(rows[0]).toMatchObject({ level: 42, talentHp: 90, talentShot: 80 });
+  });
+
   it("retombe sur les défauts quand level/talents/nickname ont un type inattendu", () => {
-    // Enveloppe divergente (Int64 sérialisé en string, objet imbriqué…) : les
-    // scalaires non conformes ne doivent jamais atteindre le cast SQL int[].
+    // Enveloppe divergente (scalaire sérialisé en string, imbrication non
+    // numérique…) : ne doit jamais atteindre le cast SQL int[].
     const { rows } = extractPalInstances(
       [
         entry({
           level: "42" as unknown as number,
-          nickname: { value: "Doudou" } as unknown as string,
+          nickname: { value: 7 } as unknown as string,
           talentHp: "90" as unknown as number,
-          talentShot: { value: 80 } as unknown as number,
+          talentShot: { value: "80" } as unknown as number,
         }),
       ],
       palIdsLower,

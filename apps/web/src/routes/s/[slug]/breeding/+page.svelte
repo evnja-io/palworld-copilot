@@ -27,8 +27,18 @@
 		gameName(`pal:${a.id}`).localeCompare(gameName(`pal:${b.id}`))
 	);
 
-	// Espèces possédées sur tout le serveur (toutes instances confondues).
-	const ownedSpecies = $derived(new Set(owners.flatMap((o) => o.instances.map((i) => i.palId))));
+	// Portée de « possédé » pour les vues path/parents/index : mes Pals ou tout
+	// le serveur (le mode calc a déjà ses sélecteurs de membre explicites).
+	// myGuid vient du layout (membership) ; null tant que le GUID n'est pas revendiqué.
+	const myGuid = $derived(data.membership?.palPlayerGuid ?? null);
+	let scope = $state<'mine' | 'server'>('mine');
+	const scopedSpecies = $derived(
+		new Set(
+			owners
+				.filter((o) => scope === 'server' || o.guid === myGuid)
+				.flatMap((o) => o.instances.map((i) => i.palId))
+		)
+	);
 
 	// ---- Mode calc : deux instances parentes -> enfant + probabilités de passifs.
 	let guidA = $state('');
@@ -86,7 +96,7 @@
 
 	// ---- Mode path : chemin d'élevage depuis les espèces possédées.
 	let pathTarget = $state('');
-	const path = $derived(pathTarget ? breedingPath(ownedSpecies, pathTarget) : undefined);
+	const path = $derived(pathTarget ? breedingPath(scopedSpecies, pathTarget) : undefined);
 
 	// ---- Mode index : combos uniques, filtrés sur les 3 noms localisés + 3 ids.
 	let query = $state('');
@@ -111,7 +121,7 @@
 {#snippet palRef(id: string)}
 	<span class="pal-ref">
 		{@render palLink(id)}
-		{#if ownedSpecies.has(id)}<span class="owned">{m.breeding_owned_badge()}</span>{/if}
+		{#if scopedSpecies.has(id)}<span class="owned">{m.breeding_owned_badge()}</span>{/if}
 	</span>
 {/snippet}
 
@@ -162,7 +172,34 @@
 			{t.label()}
 		</button>
 	{/each}
+	{#if mode !== 'calc'}
+		<div class="scope" role="group" aria-label={m.breeding_scope_mine()}>
+			<button
+				class="seg"
+				class:on={scope === 'mine'}
+				aria-pressed={scope === 'mine'}
+				onclick={() => (scope = 'mine')}
+			>
+				{m.breeding_scope_mine()}
+			</button>
+			<button
+				class="seg"
+				class:on={scope === 'server'}
+				aria-pressed={scope === 'server'}
+				onclick={() => (scope = 'server')}
+			>
+				{m.breeding_scope_server()}
+			</button>
+		</div>
+	{/if}
 </div>
+
+{#if mode !== 'calc' && scope === 'mine' && !myGuid}
+	<p class="muted">
+		{m.breeding_scope_unclaimed()}
+		<a href={appHref('/import')} class="claim">{m.import_title()}</a>
+	</p>
+{/if}
 
 {#if mode === 'calc'}
 	{#if owners.length === 0}
@@ -273,7 +310,11 @@
 	{#if owners.length === 0}
 		{@render emptyBox()}
 	{:else}
-		<p class="muted tnum">{m.breeding_path_from({ count: ownedSpecies.size })}</p>
+		<p class="muted tnum">
+			{scope === 'mine'
+				? m.breeding_path_from_mine({ count: scopedSpecies.size })
+				: m.breeding_path_from({ count: scopedSpecies.size })}
+		</p>
 		<div class="filters">
 			<select bind:value={pathTarget}>
 				<option value="">{m.breeding_target()}</option>
@@ -312,11 +353,11 @@
 	<ul class="combos">
 		{#each combos as c ([c.parentA, c.parentB, c.child].join('|'))}
 			<li>
-				{@render palLink(c.parentA)}
+				{@render palRef(c.parentA)}
 				<span class="x">×</span>
-				{@render palLink(c.parentB)}
+				{@render palRef(c.parentB)}
 				<span class="arrow">→</span>
-				{@render palLink(c.child)}
+				{@render palRef(c.child)}
 			</li>
 		{/each}
 	</ul>
@@ -354,6 +395,16 @@
 		color: var(--accent);
 		background: var(--accent-soft);
 		border-color: var(--focus-ring);
+	}
+	/* Sélecteur de portée (Mes Pals / Tout le serveur), à droite de la rangée de modes */
+	.scope {
+		display: flex;
+		gap: 6px;
+		margin-left: auto;
+	}
+	.claim {
+		color: var(--accent);
+		font-weight: 500;
 	}
 	.filters {
 		display: flex;
