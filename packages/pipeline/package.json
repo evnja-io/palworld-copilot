@@ -14,12 +14,11 @@
     "verify": "tsx src/verify.ts",
     "icons": "tsx src/icons.ts",
     "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
+    "import-upload": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-upload.ts",
     "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts",
     "extract-pals": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-pals.ts",
-    "test": "vitest run",
     "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
-    "fetch-community": "tsx src/fetch-community.ts",
-    "test": "vitest run"
+    "fetch-community": "tsx src/fetch-community.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

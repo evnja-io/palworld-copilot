@@ -1,0 +1,53 @@
+name: import-upload
+
+on:
+  # Déclenché par le web tier (endpoint finalize) après un upload navigateur :
+  # client_payload.uploadId cible la ligne save_uploads à traiter.
+  repository_dispatch:
+    types: [import-upload]
+  # Sweep manuel (sans UPLOAD_ID) : traite tous les `pending` en attente.
+  workflow_dispatch:
+  # Jamais `pull_request` : repo public, les secrets ne doivent pas fuiter.
+
+# File d'attente sans annulation : chaque event est un job distinct, on ne veut
+# pas qu'un nouvel upload annule le traitement d'un précédent.
+concurrency: import-upload
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dépendances node (pipeline seul)
+        run: pnpm install --filter @palworld-companion/pipeline
+
+      # Identique à import-saves.yml (paramiko inutile ici mais inoffensif ; on
+      # garde le même setup pour la parité de maintenance).
+      - name: venv palsav + palooz + paramiko
+        run: |
+          cd packages/pipeline
+          python3 -m venv .venv
+          git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/pst
+          .venv/bin/pip -q install /tmp/pst/src/palsav/palooz /tmp/pst/src/palsav paramiko
+
+      # UPLOAD_ID est vide lors d'un workflow_dispatch → mode sweep ; renseigné
+      # par le client_payload d'un repository_dispatch → mode ciblé.
+      - name: Import de l'upload navigateur
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+          UPLOAD_ID: ${{ github.event.client_payload.uploadId }}
+        run: cd packages/pipeline && node --experimental-strip-types src/import-upload.ts

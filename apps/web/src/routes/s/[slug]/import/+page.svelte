@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { appHref } from '$lib/nav';
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
 
@@ -83,6 +84,12 @@
 
 <aside class="help">
 	<p>{m.import_help()}</p>
+	{#if data.membership?.role === 'owner'}
+		<p>
+			{m.upload_local_world_hint()}
+			<a href={appHref('/upload')}>{m.upload_title()}</a>
+		</p>
+	{/if}
 </aside>
 
 <style>

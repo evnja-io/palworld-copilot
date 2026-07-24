@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { page } from '$app/state';
+	import { appHref } from '$lib/nav';
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
 
@@ -193,6 +194,10 @@
 		<button type="button" class="ghost" onclick={testSftpConnection}>{m.settings_sftp_test()}</button>
 		{#if testResult}<p class="test-result">{testResult}</p>{/if}
 		<p class="hint">{m.settings_sftp_test_hint()}</p>
+		<p class="hint">
+			{m.upload_local_world_hint()}
+			<a href={appHref('/upload')}>{m.upload_title()}</a>
+		</p>
 	</section>
 </div>
 
