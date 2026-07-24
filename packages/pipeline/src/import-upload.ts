@@ -190,38 +190,45 @@ export async function processUpload(sql: Sql, uploadId: string, serverId: string
  *  best-effort, chaque échec est journalisé sans interrompre la boucle. */
 async function cleanupStale(sql: Sql): Promise<void> {
   const token = process.env.BLOB_READ_WRITE_TOKEN!;
-  const rows = (await sql`
-    select id, server_id, status, started_at, created_at
-    from save_uploads where status in ('running', 'uploading')`) as Array<{
-    id: string;
-    server_id: string;
-    status: string;
-    started_at: Date | string | null;
-    created_at: Date | string;
-  }>;
-  const now = new Date();
+  try {
+    const rows = (await sql`
+      select id, server_id, status, started_at, created_at
+      from save_uploads where status in ('running', 'uploading')`) as Array<{
+      id: string;
+      server_id: string;
+      status: string;
+      started_at: Date | string | null;
+      created_at: Date | string;
+    }>;
+    const now = new Date();
 
-  for (const row of rows) {
-    const classification = classifyStale(
-      { status: row.status, startedAt: row.started_at, createdAt: row.created_at },
-      now,
-    );
-    if (classification === "ok") continue;
+    for (const row of rows) {
+      const classification = classifyStale(
+        { status: row.status, startedAt: row.started_at, createdAt: row.created_at },
+        now,
+      );
+      if (classification === "ok") continue;
 
-    const message = classification === "running_lost" ? "job perdu (timeout worker)" : "upload abandonné";
-    try {
-      await sql`update save_uploads
-                set status = 'error', error = ${message}, finished_at = now()
-                where id = ${row.id}::uuid`;
-      console.log(`upload ${row.id} : marqué en échec (${message})`);
-    } catch (err) {
-      const errMessage = err instanceof Error ? err.message : String(err);
-      console.error(`upload ${row.id} : échec d'écriture du nettoyage stale: ${errMessage}`);
-      continue;
+      const message = classification === "running_lost" ? "job perdu (timeout worker)" : "upload abandonné";
+      try {
+        await sql`update save_uploads
+                  set status = 'error', error = ${message}, finished_at = now()
+                  where id = ${row.id}::uuid`;
+        console.log(`upload ${row.id} : marqué en échec (${message})`);
+      } catch (err) {
+        const errMessage = err instanceof Error ? err.message : String(err);
+        console.error(`upload ${row.id} : échec d'écriture du nettoyage stale: ${errMessage}`);
+        continue;
+      }
+      if (classification === "uploading_abandoned") {
+        await deleteUploadBlobs(row.server_id, row.id, token);
+      }
     }
-    if (classification === "uploading_abandoned") {
-      await deleteUploadBlobs(row.server_id, row.id, token);
-    }
+  } catch (err) {
+    // Best-effort, comme cleanupOrphanBlobs : une panne ici (ex. SELECT en
+    // erreur transitoire) ne doit jamais faire échouer le sweep.
+    const message = err instanceof Error ? err.message : String(err);
+    console.error(`nettoyage des uploads bloqués échoué (non bloquant): ${message}`);
   }
 }
 
@@ -281,7 +288,17 @@ async function runSweep(sql: Sql): Promise<never> {
 
   const results: Array<{ ok: boolean }> = [];
   for (const row of pending) {
-    const serverId = await claimUpload(sql, row.id);
+    let serverId: string | null;
+    try {
+      serverId = await claimUpload(sql, row.id);
+    } catch (err) {
+      // Isolation par ligne (cf. import-all.ts par-tenant) : l'échec du claim
+      // d'un upload ne doit pas interrompre le traitement des suivants.
+      const message = err instanceof Error ? err.message : String(err);
+      console.error(`upload ${row.id} : échec du claim: ${message}`);
+      results.push({ ok: false });
+      continue;
+    }
     if (!serverId) {
       console.log(`upload ${row.id} : déjà réclamé entre-temps, ignoré`);
       continue;

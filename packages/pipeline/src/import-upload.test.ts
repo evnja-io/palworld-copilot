@@ -13,7 +13,7 @@ describe("localPathFor", () => {
     expect(localPathFor(`uploads/srv-1/${uploadId}/Players/${guid}.sav`, uploadId)).toBe(`${guid}.sav`);
   });
 
-  it("accepte un GUID hôte (préfixe 0000…0001, hex mixte)", () => {
+  it("accepte un GUID hex mixte sous Players/", () => {
     const guid = "0000000000000000000000000000AB01";
     expect(localPathFor(`uploads/srv-1/${uploadId}/Players/${guid}.sav`, uploadId)).toBe(`${guid}.sav`);
   });
