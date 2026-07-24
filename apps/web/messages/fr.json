@@ -248,6 +248,7 @@
   "upload_start": "Lancer l'envoi",
   "upload_uploading": "Envoi en cours… {percent}%",
   "upload_cancel": "Annuler",
+  "upload_cancelling": "Annulation en cours…",
   "upload_finalize_queued": "Import mis en file d'attente.",
   "upload_finalize_queued_cron": "Import mis en file d'attente — traitement au prochain passage planifié.",
   "upload_status_uploading": "envoi en cours",

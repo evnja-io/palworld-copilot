@@ -25,6 +25,10 @@
 	let progressPercent = $state(0);
 	let errorMessage = $state<string | null>(null);
 	let dispatched = $state<boolean | null>(null);
+	// Vrai pendant toute demande d'annulation en vol (avec ou sans uploadId
+	// connu) : désactive le bouton Annuler pour éviter un double-clic et
+	// affiche un libellé dédié tant que le règlement final n'est pas acquis.
+	let cancelling = $state(false);
 
 	let folderInput = $state<HTMLInputElement | null>(null);
 	let filesInput = $state<HTMLInputElement | null>(null);
@@ -38,6 +42,13 @@
 	// requêtes réseau en cours, pas seulement arrêter d'attendre leur résultat.
 	let uploadGeneration = 0;
 	let abortController: AbortController | null = null;
+
+	// Génération pour laquelle une annulation a été demandée alors que le
+	// `?/start` correspondant était encore en vol (uploadId pas encore connu
+	// côté client, donc pas encore de ligne à annuler côté serveur). Lu et
+	// remis à null par startUpload() dès que `?/start` résout — jamais lu
+	// dans le template.
+	let pendingCancelGeneration: number | null = null;
 
 	const validation = $derived(validateSelection(kept));
 	const keptBytes = $derived(kept.reduce((sum, f) => sum + f.size, 0));
@@ -187,7 +198,17 @@
 		}
 
 		const workers = Array.from({ length: Math.min(CONCURRENCY, files.length) }, () => worker());
-		await Promise.all(workers);
+		// Promise.allSettled plutôt que Promise.all : un abort() coupe jusqu'à
+		// CONCURRENCY requêtes en vol simultanément, donc plusieurs workers
+		// peuvent rejeter en même temps — Promise.all ne remonterait que le
+		// premier rejet et laisserait les autres bruiter la console. On
+		// n'attend ici que pour détecter un véritable échec (signal non
+		// aborted) ; une annulation volontaire ne doit jamais remonter d'erreur.
+		const results = await Promise.allSettled(workers);
+		if (!signal.aborted) {
+			const failure = results.find((r): r is PromiseRejectedResult => r.status === 'rejected');
+			if (failure) throw failure.reason;
+		}
 	}
 
 	async function startUpload() {
@@ -206,6 +227,32 @@
 
 		try {
 			const startResult = await postAction('?/start', new FormData());
+
+			if (pendingCancelGeneration === generation) {
+				// cancelCurrent() a été appelé pendant que ce ?/start était en
+				// vol, à un moment où uploadId n'existait pas encore côté
+				// client : c'est ici qu'on règle le sort de la ligne serveur,
+				// quel que soit le résultat de ?/start. Le finally garantit le
+				// retour à 'idle' même si ?/cancel échoue (ex. réseau) — sans
+				// lui l'utilisateur resterait bloqué sur "annulation en cours".
+				pendingCancelGeneration = null;
+				try {
+					if (startResult.type === 'success') {
+						const id = (startResult.data as { uploadId: string }).uploadId;
+						const fd = new FormData();
+						fd.set('uploadId', id);
+						await postAction('?/cancel', fd);
+					}
+				} finally {
+					await invalidateAll();
+					phase = 'idle';
+					uploadId = null;
+					cancelling = false;
+					resetSelection();
+				}
+				return;
+			}
+
 			if (generation !== uploadGeneration) return;
 			if (startResult.type === 'failure') {
 				errorMessage = errorLabel(String((startResult.data as { error?: string })?.error ?? ''));
@@ -265,17 +312,31 @@
 	}
 
 	async function cancelCurrent() {
+		if (cancelling) return;
+		cancelling = true;
+
 		// Invalide la chaîne startUpload() en cours avant même de contacter le
 		// serveur : toute reprise ultérieure de cette chaîne (succès ou rejet)
-		// se retrouvera avec un uploadGeneration différent et sera ignorée.
+		// se retrouvera avec un uploadGeneration différent et sera ignorée —
+		// sauf le cas ci-dessous, explicitement pris en charge par
+		// startUpload() via pendingCancelGeneration.
+		const generation = uploadGeneration;
 		uploadGeneration++;
 		abortController?.abort();
 		abortController = null;
+		errorMessage = null;
+		progressPercent = 0;
 
 		if (!uploadId) {
-			phase = 'idle';
-			errorMessage = null;
-			progressPercent = 0;
+			// ?/start est encore en vol pour cette génération : la ligne
+			// serveur n'a pas encore d'id connu ici, impossible de poster
+			// ?/cancel maintenant. On mémorise la demande — startUpload()
+			// l'annulera dès que ?/start aura renvoyé le uploadId (ou, s'il a
+			// échoué, constatera qu'il n'y a rien à annuler) puis réglera
+			// phase/cancelling. La phase reste 'uploading' (état "annulation
+			// en cours" dans l'UI) pour empêcher un redémarrage tant que la
+			// ligne n'est pas réellement annulée.
+			pendingCancelGeneration = generation;
 			return;
 		}
 
@@ -288,8 +349,6 @@
 
 		if (cancelled) {
 			phase = 'idle';
-			errorMessage = null;
-			progressPercent = 0;
 			resetSelection();
 		} else {
 			// La ligne n'était déjà plus annulable côté serveur (passée en
@@ -300,6 +359,7 @@
 			phase = 'idle';
 			uploadId = null;
 		}
+		cancelling = false;
 	}
 </script>
 
@@ -363,13 +423,17 @@
 
 		{#if phase === 'uploading'}
 			<p class="progress">{m.upload_uploading({ percent: progressPercent })}</p>
-			<button type="button" class="danger" onclick={cancelCurrent}>{m.upload_cancel()}</button>
+			<button type="button" class="danger" disabled={cancelling} onclick={cancelCurrent}>
+				{cancelling ? m.upload_cancelling() : m.upload_cancel()}
+			</button>
 		{/if}
 
 		{#if phase === 'error' && errorMessage}
 			<p class="error">{errorMessage}</p>
 			{#if uploadId}
-				<button type="button" class="danger" onclick={cancelCurrent}>{m.upload_cancel()}</button>
+				<button type="button" class="danger" disabled={cancelling} onclick={cancelCurrent}>
+					{cancelling ? m.upload_cancelling() : m.upload_cancel()}
+				</button>
 			{/if}
 		{/if}
 

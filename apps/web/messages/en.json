@@ -248,6 +248,7 @@
   "upload_start": "Start upload",
   "upload_uploading": "Uploading… {percent}%",
   "upload_cancel": "Cancel",
+  "upload_cancelling": "Cancelling…",
   "upload_finalize_queued": "Import queued.",
   "upload_finalize_queued_cron": "Import queued — will be processed at the next scheduled run.",
   "upload_status_uploading": "uploading",
