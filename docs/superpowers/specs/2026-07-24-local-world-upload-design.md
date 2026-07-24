@@ -47,7 +47,7 @@ Décisions actées lors du brainstorming :
 
 ## Architecture livrée
 
-1. **Table `save_uploads`** (migrations 0008 + 0009) — une ligne par tentative
+1. **Table `save_uploads`** (migrations 0009 + 0010) — une ligne par tentative
    d'upload ; cycle `uploading → pending → running → ok|error` ; `stats` jsonb au
    même format que `last_import_stats`.
 2. **Librairies serveur** `apps/web/src/lib/server/uploads.ts` (validation de

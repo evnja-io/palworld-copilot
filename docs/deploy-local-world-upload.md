@@ -6,10 +6,10 @@ aucune bascule de données ni migration destructive.
 
 ## Prérequis (action humaine de Sephi — le harness bloque le DDL prod)
 
-1. **Migrations 0008 + 0009** appliquées en prod :
+1. **Migrations 0009 + 0010** appliquées en prod :
    `DATABASE_URL=<prod> pnpm --filter web db:migrate`.
-   - `0008_chunky_virginia_dare` : table `save_uploads` (isolée, additive).
-   - `0009_narrow_wrecker` : index unique partiel `save_uploads_active_unique`
+   - `0009_chunky_virginia_dare` : table `save_uploads` (isolée, additive).
+   - `0010_narrow_wrecker` : index unique partiel `save_uploads_active_unique`
      (un seul upload actif par serveur). Table neuve, sans données → `CREATE
      UNIQUE INDEX` non concurrent sans risque.
 

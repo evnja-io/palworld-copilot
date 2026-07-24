@@ -1,6 +1,6 @@
 {
-  "id": "5af7ae8b-ccfd-4610-9b79-dae833289fb5",
-  "prevId": "09a45d46-d701-4462-ad2b-b5c5eb7e70a5",
+  "id": "0c5bb1a5-17e6-4519-ac1b-a1cf745c344f",
+  "prevId": "5af7ae8b-ccfd-4610-9b79-dae833289fb5",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -419,6 +419,22 @@
             }
           ],
           "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "save_uploads_active_unique": {
+          "name": "save_uploads_active_unique",
+          "columns": [
+            {
+              "expression": "server_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "where": "\"save_uploads\".\"status\" in ('uploading', 'pending', 'running')",
           "concurrently": false,
           "method": "btree",
           "with": {}
