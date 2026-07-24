@@ -82,7 +82,7 @@ for (const file of Object.keys(keyField)) {
     .map((e: any) => e[keyField[file]])
     .filter((id: string) => !now.has(id) && !(id in remap));
   if (lost.length > 0 && process.env.ALLOW_ID_REMOVALS === "1") {
-    console.warn(`  ${file}: ${lost.length} IDs retirés (ALLOW_ID_REMOVALS=1 — assumé)`);
+    console.warn(`  ${file}: ${lost.length} IDs retirés (ALLOW_ID_REMOVALS=1 - assumé)`);
   } else if (lost.length > 0) {
     fail(`${file}: IDs disparus sans id-remap.json : ${lost.slice(0, 5).join(", ")}…`);
   }

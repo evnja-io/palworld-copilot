@@ -1,6 +1,6 @@
-# Palworld Companion — système d'interface
+# Palworld Companion - système d'interface
 
-Direction : « expédition nocturne » — sombre uniquement, une seule teinte de base
+Direction : « expédition nocturne » - sombre uniquement, une seule teinte de base
 (ardoise 222°), accent unique bleu Sphère (`--accent`). Plat, profondeur par
 bordures + paliers de surface (`--surface-1/2/3`), **jamais d'ombres**.
 Typo : Space Grotesk Variable (`--font-display`) pour titres/valeurs, system-ui
@@ -12,17 +12,17 @@ Transitions 140ms `cubic-bezier(.23,1,.32,1)`, press `scale(0.97)`.
 - `--accent` = points/technologie **normale** (bleu Sphère).
 - `--el-dark` (#a06bd6) = **Technologie ancienne** (colonne de droite du jeu).
 - `--el-fire` = exigence boss / verrou.
-- États toujours en `color-mix(in srgb, <couleur> N%, transparent|surface)` —
+- États toujours en `color-mix(in srgb, <couleur> N%, transparent|surface)` -
   jamais de hex en dur dans les composants.
 
-## Page Technologies (`(app)/tech/+page.svelte`) — réplique de l'écran du jeu
+## Page Technologies (`(app)/tech/+page.svelte`) - réplique de l'écran du jeu
 
-- **Rangée = niveau** : grille `40px minmax(0,1fr) 104px` — rail « Lv N »
+- **Rangée = niveau** : grille `40px minmax(0,1fr) 104px` - rail « Lv N »
   (display 19px/600 text-2, libellé 10px caps text-4), grille de tuiles,
   colonne ancienne (1 tuile de large max, liseré gauche violet 35%).
   Séparation entre niveaux : `border-top: 1px solid var(--border)`.
 - **Ordre des nœuds = ordre du jeu** : tech.json préserve l'ordre des lignes de
-  la DataTable (tri stable par niveau seulement — ne pas re-trier côté client).
+  la DataTable (tri stable par niveau seulement - ne pas re-trier côté client).
 - **Tuile** = `<button>` bascule (toute la tuile clique, comme en jeu) :
   minmax(92px,1fr), min-height 104, padding 20px 6px 8px, `--r-sm`.
   Icône 40px centrée, nom 10.5px/500 clamp 2 lignes, coût « ◆N » 10px/600 en

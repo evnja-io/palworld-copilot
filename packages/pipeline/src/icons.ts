@@ -31,7 +31,7 @@ async function convert(kind: "pals" | "items", ns: string, tableHint: RegExp) {
   return present;
 }
 
-/** Icônes de constructions : pas de DataTable — on résout par nom de texture
+/** Icônes de constructions : pas de DataTable - on résout par nom de texture
  *  `T_icon_buildObject_<Nom>`. Clés/fichiers en minuscules car la casse du
  *  IconName des technos ne suit pas toujours celle de la texture.
  *  0 converti = toléré : le dossier BuildObject/PNG n'est peut-être pas encore
@@ -53,7 +53,7 @@ async function convertBuildObjects() {
   console.log(`  icônes build : ${converted}`);
   if (converted === 0) {
     console.warn(
-      "  (aucune texture T_icon_buildObject_* — exporter Pal/Content/Pal/Texture/BuildObject/PNG depuis FModel)",
+      "  (aucune texture T_icon_buildObject_* - exporter Pal/Content/Pal/Texture/BuildObject/PNG depuis FModel)",
     );
   }
   return present;
@@ -67,7 +67,7 @@ const builds = await convertBuildObjects();
  *  leur IconName : on aliase item:<id> -> nom du .webp existant (valeur string
  *  dans icons.json). Lookup insensible à la casse (typo PickAxe_Default) +
  *  renvois manuels (clé = id d'item) pour les IconName sans ligne dans
- *  DT_ItemIconDataTable — les cannes partagent toutes IconName=FishingRod. */
+ *  DT_ItemIconDataTable - les cannes partagent toutes IconName=FishingRod. */
 const ITEM_ICON_ALIASES: Record<string, string> = {
   FishingRod_Old: "FishingRod_1",
   FishingRod_Good: "FishingRod_2",
@@ -92,7 +92,7 @@ const ITEM_ICON_ALIASES: Record<string, string> = {
   console.log(`  alias d'icônes items : ${aliased}`);
 }
 if (Object.keys(pals).length < 100 || Object.keys(items).length < 300) {
-  throw new Error("Trop peu d'icônes converties — vérifier l'export des textures (runbook, section icônes)");
+  throw new Error("Trop peu d'icônes converties - vérifier l'export des textures (runbook, section icônes)");
 }
 writeGameData("icons.json", { ...pals, ...items, ...builds });
 console.log("icons OK");

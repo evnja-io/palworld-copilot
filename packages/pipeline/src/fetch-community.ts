@@ -7,10 +7,10 @@ const dir = new URL("../raw/community/", import.meta.url).pathname;
 mkdirSync(dir, { recursive: true });
 
 const SOURCES: Record<string, string> = {
-  // oMaN-Rod/palworld-save-pal — effigies (GUID -> coordonnées monde)
+  // oMaN-Rod/palworld-save-pal - effigies (GUID -> coordonnées monde)
   "effigies.json":
     "https://raw.githubusercontent.com/oMaN-Rod/palworld-save-pal/main/data/json/effigies.json",
-  // deafdudecomputers/PalworldSaveTools — points de voyage rapide (GUID, monde, noms)
+  // deafdudecomputers/PalworldSaveTools - points de voyage rapide (GUID, monde, noms)
   "fast_travel_points.json":
     "https://raw.githubusercontent.com/deafdudecomputers/PalworldSaveTools/main/resources/game_data/fast_travel_points.json",
 };

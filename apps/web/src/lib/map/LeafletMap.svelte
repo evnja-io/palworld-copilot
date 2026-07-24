@@ -61,7 +61,7 @@
 		inset: 0;
 		background: hsl(200 60% 25%); /* océan de la texture, évite le noir au chargement */
 	}
-	/* Marqueurs (html de divIcon — hors scope Svelte, d'où :global) */
+	/* Marqueurs (html de divIcon - hors scope Svelte, d'où :global) */
 	:global(.mk) {
 		display: grid;
 		place-items: center;

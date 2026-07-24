@@ -5,7 +5,7 @@ import { loadDataTableRows, must, pick, writeGameData } from "../lib.js";
 // PalworldSaveTools/palworld_coord, variante « new » : scale 725) ; la
 // texture T_WorldMap couvre exactement la plage in-game [-1000, 1000]².
 // Les POI hors plage appartiennent à la carte de l'Arbre-Monde (T_TreeMap,
-// hors v1 — exclus avec comptage). CALIBRÉ VISUELLEMENT en Task 4.
+// hors v1 - exclus avec comptage). CALIBRÉ VISUELLEMENT en Task 4.
 const SIZE = 8192;
 const SCALE = 725;
 const TRANSL_X = 375247;
@@ -36,7 +36,7 @@ type Marker = {
 const markers: Marker[] = [];
 const communityDir = new URL("../../raw/community/", import.meta.url).pathname;
 
-// Effigies (dataset save-pal : GUID -> monde) — les seules cochables.
+// Effigies (dataset save-pal : GUID -> monde) - les seules cochables.
 const effigies: Record<string, { x: number; y: number }> = JSON.parse(
   readFileSync(communityDir + "effigies.json", "utf8"),
 );
@@ -47,7 +47,7 @@ for (const [guid, pos] of Object.entries(effigies)) {
   markers.push({ id: `relic_${guid.replaceAll("-", "").toLowerCase()}`, type: "relic", px: pt[0], py: pt[1] });
 }
 
-// Boss Alpha (DT_BossSpawnerLoactionData — la faute est dans le nom réel).
+// Boss Alpha (DT_BossSpawnerLoactionData - la faute est dans le nom réel).
 const bosses = loadDataTableRows(/DT_BossSpawnerLoactionData/);
 for (const row of Object.values(bosses) as any[]) {
   const spawnerId = must(pick<string>(row, "SpawnerID"), "boss.SpawnerID");
@@ -91,7 +91,7 @@ const counts = markers.reduce<Record<string, number>>((acc, mk) => {
 if (!(counts.relic >= 120 && counts.relic <= 200)) throw new Error(`relics suspects : ${counts.relic}`);
 if (!(counts.alpha >= 150 && counts.alpha <= 200)) throw new Error(`alphas suspects : ${counts.alpha}`);
 if (!(counts.ft > 50)) throw new Error(`ft suspects : ${counts.ft}`);
-console.log(`  (${treeSkipped} POI de l'Arbre-Monde exclus — carte séparée, hors v1)`);
+console.log(`  (${treeSkipped} POI de l'Arbre-Monde exclus - carte séparée, hors v1)`);
 
 writeGameData("markers.json", markers);
 console.log(

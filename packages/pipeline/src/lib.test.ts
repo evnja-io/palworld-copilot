@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { enumName, l10nMap, loadDataTableRows, pick, resolveEffectPlaceholders, stripRichTags } from "./lib.js";
 import { RAW_DIR } from "./paths.js";
 
-// Premier accès : walk de /mnt/c (lent sous WSL) — timeout large.
+// Premier accès : walk de /mnt/c (lent sous WSL) - timeout large.
 describe.skipIf(!existsSync(RAW_DIR))("lib (exports réels)", () => {
   it("fusionne les variantes _Common", { timeout: 120_000 }, () => {
     const rows = loadDataTableRows(/DT_PalMonsterParameter/);

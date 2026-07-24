@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-	<title>{m.app_title()} — {m.landing_title()}</title>
+	<title>{m.app_title()} - {m.landing_title()}</title>
 	<meta name="description" content={m.landing_meta_description()} />
 	<link rel="canonical" href="https://palwork.evnja.gg/" />
 </svelte:head>
@@ -188,7 +188,7 @@
 		isolation: isolate;
 	}
 
-	/* ————— Ciel ————— */
+	/* --- Ciel --- */
 	.sky {
 		position: fixed;
 		inset: 0;
@@ -243,7 +243,7 @@
 		}
 	}
 
-	/* ————— Pals en dérive ————— */
+	/* --- Pals en dérive --- */
 	.drift {
 		position: fixed;
 		inset: 0;
@@ -281,7 +281,7 @@
 		}
 	}
 
-	/* ————— Entête ————— */
+	/* --- Entête --- */
 	.top {
 		position: absolute;
 		top: 14px;
@@ -289,7 +289,7 @@
 		z-index: 2;
 	}
 
-	/* ————— Héros ————— */
+	/* --- Héros --- */
 	.hero {
 		min-height: 88dvh;
 		display: grid;
@@ -437,7 +437,7 @@
 		text-decoration: underline;
 	}
 
-	/* ————— Fonctionnalités ————— */
+	/* --- Fonctionnalités --- */
 	.features {
 		display: grid;
 		/* 6 cartes → 3×2 en large, 2×3 en moyen, 1 colonne en mobile */
@@ -486,7 +486,7 @@
 		color: var(--text-2);
 	}
 
-	/* ————— Titres de section ————— */
+	/* --- Titres de section --- */
 	.how h2,
 	.faq h2,
 	.final h2 {
@@ -497,7 +497,7 @@
 		margin-bottom: 22px;
 	}
 
-	/* ————— Comment ça marche ————— */
+	/* --- Comment ça marche --- */
 	.how {
 		width: min(1080px, calc(100% - 32px));
 		margin: 0 auto;
@@ -545,7 +545,7 @@
 		color: var(--text-2);
 	}
 
-	/* ————— FAQ ————— */
+	/* --- FAQ --- */
 	.faq {
 		width: min(720px, calc(100% - 32px));
 		margin: 0 auto;
@@ -595,7 +595,7 @@
 		color: var(--text-2);
 	}
 
-	/* ————— Auto-hébergement ————— */
+	/* --- Auto-hébergement --- */
 	.selfhost {
 		width: min(720px, calc(100% - 32px));
 		margin: 0 auto;
@@ -640,7 +640,7 @@
 		transform: translateY(-1px);
 	}
 
-	/* ————— CTA final ————— */
+	/* --- CTA final --- */
 	.final {
 		text-align: center;
 		padding: 0 16px 64px;
@@ -649,7 +649,7 @@
 		margin-bottom: 18px;
 	}
 
-	/* ————— Pied de page ————— */
+	/* --- Pied de page --- */
 	footer {
 		padding: 0 16px 26px;
 		text-align: center;

@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<title>{m.docs_title()} — {m.app_title()}</title>
+	<title>{m.docs_title()} - {m.app_title()}</title>
 	<meta name="description" content={m.docs_intro()} />
 </svelte:head>
 

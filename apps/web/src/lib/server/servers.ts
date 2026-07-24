@@ -52,7 +52,7 @@ export type InvitePeek = {
 const BASE62 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 /** Slug de serveur : 10 caractères base62 (URLs). Léger biais modulo accepté
- *  — l'unicité est garantie par la contrainte UNIQUE + retry (createServer). */
+ *  - l'unicité est garantie par la contrainte UNIQUE + retry (createServer). */
 export function generateSlug(): string {
   const bytes = randomBytes(10);
   let out = "";
@@ -85,7 +85,7 @@ export async function listMyServers(userId: string): Promise<ServerSummary[]> {
 }
 
 /** Garde d'autorisation : à appeler dans CHAQUE load/action/endpoint sous
- *  /s/[slug] et /api/servers/[slug] — les layouts ne protègent pas les actions.
+ *  /s/[slug] et /api/servers/[slug] - les layouts ne protègent pas les actions.
  *  404 (et pas 403) pour ne pas révéler l'existence d'un serveur. */
 export async function requireMembership(
   user: { id: string } | null,
@@ -119,7 +119,7 @@ export async function requireMembership(
 }
 
 /** Garde owner : comme requireMembership mais 404 (et pas 403) si le membre
- *  n'est pas owner — ne révèle ni l'existence du serveur ni le rôle. */
+ *  n'est pas owner - ne révèle ni l'existence du serveur ni le rôle. */
 export async function requireOwner(
   user: { id: string } | null,
   slug: string,
@@ -301,7 +301,7 @@ export async function consumeInvite(code: string, userId: string): Promise<Consu
     );
   if (existing.length > 0) return { slug: inv.slug, alreadyMember: true };
 
-  // 3. Consommation atomique — équivaut à :
+  // 3. Consommation atomique - équivaut à :
   //    UPDATE invites SET use_count = use_count + 1
   //    WHERE code = $1 AND revoked_at IS NULL
   //      AND (expires_at IS NULL OR expires_at > now())

@@ -1,4 +1,4 @@
-# web — Palworld Companion
+# web (Palworld Companion)
 
 The Palworld Companion web app: SvelteKit 2 / Svelte 5 (runes), Drizzle ORM + Postgres (Neon), Discord OAuth (arctic), Paraglide i18n (FR/EN), Leaflet map. Deployed on Vercel (`@sveltejs/adapter-vercel`).
 
@@ -26,4 +26,4 @@ pnpm --filter web dev
 
 ## i18n
 
-Messages live in [messages/fr.json](messages/fr.json) and [messages/en.json](messages/en.json) (base locale: `fr`). **Always edit both files together** — the key sets must stay identical. Paraglide compiles them into `src/lib/paraglide/` at build time.
+Messages live in [messages/fr.json](messages/fr.json) and [messages/en.json](messages/en.json) (base locale: `fr`). **Always edit both files together**: the key sets must stay identical. Paraglide compiles them into `src/lib/paraglide/` at build time.

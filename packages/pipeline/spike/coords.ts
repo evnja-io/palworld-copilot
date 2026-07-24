@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { loadDataTableRows } from "./lib.js";
 
 /** Transformation documentée (github.com/palworldlol/palworld-coord, MIT ;
- *  recoupée par palworld.wiki.gg/wiki/Maps) — île principale uniquement. */
+ *  recoupée par palworld.wiki.gg/wiki/Maps) - île principale uniquement. */
 export function worldToMap(worldX: number, worldY: number): [number, number] {
   const mapX = (worldY - 158000) / 459;
   const mapY = (worldX + 123888) / 459;
@@ -41,15 +41,15 @@ for (const [rowName, row] of bossEntries) {
   const wy = Number(loc.Y ?? loc.y);
   if (!Number.isFinite(wx) || !Number.isFinite(wy)) {
     console.log(`  ${rowName}: structure inattendue → ${JSON.stringify(row).slice(0, 200)}`);
-    throw new Error("Champ de coordonnées à identifier — inspecter le JSON exporté");
+    throw new Error("Champ de coordonnées à identifier - inspecter le JSON exporté");
   }
   const [mx, my] = worldToMap(wx, wy);
   console.log(`  ${rowName}: monde(${wx}, ${wy}) → carte(${mx}, ${my})`);
 }
 
 if (inBounds / guids.length < 0.5) {
-  throw new Error("Moins de 50% des effigies dans les bornes — transformation ou données à revoir");
+  throw new Error("Moins de 50% des effigies dans les bornes - transformation ou données à revoir");
 }
 console.log("\nComparer manuellement 5 positions avec palworld.wiki.gg (effigies) et");
 console.log("les niveaux/positions de boss connus. Tolérance ±5. Verdict humain requis.");
-console.log("SPIKE OK — transformation appliquée (validation visuelle à consigner)");
+console.log("SPIKE OK - transformation appliquée (validation visuelle à consigner)");

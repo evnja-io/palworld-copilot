@@ -26,7 +26,7 @@ const outDir = new URL(`../out/tiles/${tileSetId}/`, import.meta.url).pathname;
 const probePath = `tiles/${tileSetId}/0/0/0.webp`;
 const already = await head(probePath).catch(() => null);
 if (already) {
-  console.log("tuiles déjà en ligne — upload sauté");
+  console.log("tuiles déjà en ligne - upload sauté");
 } else {
   const base = sharp(png).ensureAlpha();
   const meta = await base.metadata();
@@ -81,7 +81,7 @@ if (already) {
   console.log(`upload terminé : ${files.length} tuiles`);
 }
 
-// 3. maps.json — l'URL de base publique du store
+// 3. maps.json - l'URL de base publique du store
 const probe = await head(probePath);
 const baseUrl = probe.url.replace(`/${probePath}`, ""); // origine nue du store
 writeGameData("maps.json", {

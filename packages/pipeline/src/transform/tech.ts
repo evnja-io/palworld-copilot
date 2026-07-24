@@ -33,7 +33,7 @@ const tech = Object.entries(rows)
     };
   })
   // Tri stable par niveau uniquement : à niveau égal, l'ordre des lignes de la
-  // DataTable est préservé — c'est l'ordre d'affichage des nœuds dans l'écran
+  // DataTable est préservé - c'est l'ordre d'affichage des nœuds dans l'écran
   // Technologie du jeu.
   .sort((a, b) => a.level - b.level);
 if (tech.length < 100) throw new Error(`Comptage tech suspect : ${tech.length}`);

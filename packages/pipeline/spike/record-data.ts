@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 const saveDir = new URL("../raw/save/", import.meta.url).pathname;
 const jsonFile = readdirSync(saveDir).find((f) => f.endsWith(".sav.json"));
-if (!jsonFile) throw new Error("Aucun .sav.json dans raw/save/ — refaire la conversion");
+if (!jsonFile) throw new Error("Aucun .sav.json dans raw/save/ - refaire la conversion");
 const save = JSON.parse(readFileSync(join(saveDir, jsonFile), "utf8"));
 
 // RecordData vit sous properties.SaveData.value.RecordData.value (structure
@@ -35,11 +35,11 @@ for (const [key, val] of Object.entries(rd as Record<string, any>)) {
 // dans le dataset communautaire effigies.json (GUID -> coordonnées) ?
 const effigyKey = Object.keys(rd).find((k) => /relic|lifmunk|effig/i.test(k));
 if (!effigyKey) {
-  console.log("\n✘ Aucune clé effigie/relic dans RecordData — corrélation impossible ici");
+  console.log("\n✘ Aucune clé effigie/relic dans RecordData - corrélation impossible ici");
 } else {
   const raw = (rd as any)[effigyKey]?.value ?? (rd as any)[effigyKey];
   // Formats possibles : tableau de GUIDs, map GUID->bool, ou structure typée
-  // { key: guid, value: bool } — on collecte tout ce qui ressemble à un GUID.
+  // { key: guid, value: bool } - on collecte tout ce qui ressemble à un GUID.
   const collected: string[] = [];
   const collect = (node: any): void => {
     if (typeof node === "string" && /^[0-9A-F-]{32,36}$/i.test(node)) collected.push(node);
@@ -63,8 +63,8 @@ if (!effigyKey) {
   console.log(`  Recouvrement direct : ${overlap}`);
   console.log(
     overlap > 0
-      ? "✔ CORRELATION DIRECTE — import carte possible"
-      : "✘ Pas de recouvrement direct — corrélation à creuser ou repli manuel",
+      ? "✔ CORRELATION DIRECTE - import carte possible"
+      : "✘ Pas de recouvrement direct - corrélation à creuser ou repli manuel",
   );
 }
-console.log("SPIKE OK — RecordData analysé");
+console.log("SPIKE OK - RecordData analysé");

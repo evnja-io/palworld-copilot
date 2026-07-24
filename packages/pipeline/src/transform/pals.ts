@@ -66,7 +66,7 @@ const pals = Object.entries(params)
       .map((i) => pick<string>(row, `PassiveSkill${i}`))
       .filter((p) => p && p !== "None"),
     // Une table de loot par palier (ex. Anubis000/Anubis080) : tri par Level
-    // croissant puis dédoublonnage par item — le palier de base gagne.
+    // croissant puis dédoublonnage par item - le palier de base gagne.
     drops: (() => {
       const seen = new Set<string>();
       const out = [];

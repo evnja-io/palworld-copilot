@@ -21,7 +21,7 @@ export type ImportStats = {
 const venvPython = new URL("../.venv/bin/python", import.meta.url).pathname;
 
 function requireVenv(): void {
-  if (!existsSync(venvPython)) throw new Error("venv palsav absent — cf. runbook, section saves");
+  if (!existsSync(venvPython)) throw new Error("venv palsav absent - cf. runbook, section saves");
 }
 
 /** UUID "00afd495-0000-…" -> "00AFD495000000000000000000000000". */
@@ -173,10 +173,10 @@ export async function importPlayerSaves(sql: Sql, serverId: string, dir: string)
     where s.server_id = ${serverId}::uuid and m.user_id is null
     group by s.player_guid`;
   for (const r of unclaimed) {
-    console.log(`non revendiqué : ${r.player_guid} (${r.n} entrées) — page /import`);
+    console.log(`non revendiqué : ${r.player_guid} (${r.n} entrées) - page /import`);
   }
 
-  // Récapitulatif des échecs — repris de l'original (perdu par erreur dans le refactor initial).
+  // Récapitulatif des échecs - repris de l'original (perdu par erreur dans le refactor initial).
   if (failures.length > 0) {
     console.error(`\n${failures.length} fichier(s) en échec :`);
     for (const f of failures) console.error(`  - ${f.file} : ${f.message}`);
@@ -209,7 +209,7 @@ export async function syncPlayerNames(sql: Sql, serverId: string, dir: string): 
     "--force",
   ]);
   const level = JSON.parse(readFileSync(jsonPath, "utf8"));
-  rmSync(jsonPath); // 170 Mo — ne pas laisser traîner
+  rmSync(jsonPath); // 170 Mo - ne pas laisser traîner
   const cmap: any[] = level?.properties?.worldSaveData?.value?.CharacterSaveParameterMap?.value ?? [];
 
   const players: Array<{ guid: string; nickname: string }> = [];
@@ -222,7 +222,7 @@ export async function syncPlayerNames(sql: Sql, serverId: string, dir: string): 
       players.push({ guid: normalizeGuid(uid), nickname });
     }
   }
-  if (players.length === 0) throw new Error("Aucun joueur trouvé dans Level.sav — structure inattendue ?");
+  if (players.length === 0) throw new Error("Aucun joueur trouvé dans Level.sav - structure inattendue ?");
 
   await sql`
     insert into save_players (server_id, player_guid, nickname, updated_at)
