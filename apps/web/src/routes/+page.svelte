@@ -4,6 +4,7 @@
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
+	const DISCORD_URL = 'https://discord.gg/SJehy5fFJ';
 
 	/* Colonnes décoratives de Pals (icônes désaturées, façon « non capturé ») */
 	const palColumns = [
@@ -175,6 +176,7 @@
 	<footer>
 		<nav class="footer-links">
 			<a href="/docs">{m.docs_title()}</a>
+			<a href={DISCORD_URL} target="_blank" rel="noopener">Discord</a>
 			<a href={GITHUB_URL} target="_blank" rel="noopener">GitHub</a>
 		</nav>
 		<p>{m.landing_footer_license()}</p>

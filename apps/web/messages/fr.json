@@ -77,6 +77,7 @@
   "settings_sftp_test_error": "Échec : {error}",
   "settings_sftp_test_hint": "Si le mot de passe est vide et qu'une config existe déjà, le test échouera : un mot de passe est requis pour le test en direct.",
   "switcher_all": "Tous mes serveurs",
+  "discord_community": "Communauté Discord",
   "landing_title": "Le Paldex partagé de ta tribu Palworld.",
   "landing_sub": "Crée ton serveur, invite tes amis : captures, technologies et effigies se synchronisent depuis la sauvegarde de votre serveur, toutes les 6 heures.",
   "landing_private": "Gratuit et open source. Connexion Discord, jusqu'à 3 serveurs par compte.",

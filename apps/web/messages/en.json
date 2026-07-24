@@ -77,6 +77,7 @@
   "settings_sftp_test_error": "Failed: {error}",
   "settings_sftp_test_hint": "If the password field is empty and a config already exists, the test will fail: a password is required for the live test.",
   "switcher_all": "All my servers",
+  "discord_community": "Discord community",
   "landing_title": "Your tribe's shared Palworld Paldex.",
   "landing_sub": "Create your server, invite your friends: catches, tech and effigies sync from your server's save, every 6 hours.",
   "landing_private": "Free and open source. Discord sign-in, up to 3 servers per account.",

@@ -5,6 +5,8 @@ A shared companion app for groups playing **Palworld** together: a collective Pa
 **Hosted instance:** <https://palwork.evnja.gg> (free, sign in with Discord and create your server).
 Prefer full control? [Self-host it](#self-hosting).
 
+**Community:** join us on [Discord](https://discord.gg/SJehy5fFJ).
+
 Bilingual UI (French / English). Not affiliated with Pocketpair, Inc. Palworld assets belong to their rightful owners.
 
 ## Features
