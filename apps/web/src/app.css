@@ -1,4 +1,4 @@
-/* Palworld Companion — direction « expédition nocturne ».
+/* Palworld Companion - direction « expédition nocturne ».
    Une teinte de base (bleu-ardoise 222°), accent unique bleu Pal Sphere,
    profondeur par bordures + paliers de surface (pas d'ombres). */
 
@@ -10,7 +10,7 @@
 	--surface-3: hsl(222 22% 16%);
 	--input-bg: hsl(222 30% 6%);
 
-	/* Texte — 4 niveaux */
+	/* Texte - 4 niveaux */
 	--text-1: hsl(220 25% 93%);
 	--text-2: hsl(220 15% 72%);
 	--text-3: hsl(220 10% 52%);

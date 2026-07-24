@@ -26,6 +26,18 @@ if (buildings.length < 100) fail(`buildings: ${buildings.length}`);
 const markers = load("markers.json");
 if (markers.length < 400) fail(`markers: ${markers.length}`);
 
+// 1b. Descriptions & effets de passifs
+const passiveEffects = load("passive-effects.json");
+const descsEn = load("l10n/descriptions.en.json");
+const nEffects = Object.keys(passiveEffects).length;
+if (nEffects < 100) fail(`passive-effects: ${nEffects}`);
+const nSkillDesc = Object.keys(descsEn).filter((k: string) => k.startsWith("skill:")).length;
+const nPassiveDesc = Object.keys(descsEn).filter((k: string) => k.startsWith("passive:")).length;
+if (nSkillDesc < 200) fail(`descriptions skill: ${nSkillDesc}`);
+if (nPassiveDesc < 30) fail(`descriptions passive: ${nPassiveDesc}`);
+for (const [k, v] of Object.entries(descsEn) as [string, string][])
+  if (k.startsWith("passive:") && /\{EffectValue\d\}/.test(v)) fail(`placeholder non résolu: ${k}`);
+
 // 2. Couverture L10N (5% de noms manquants tolérés)
 for (const [label, list, key] of [
   ["pals", pals, (e: any) => `pal:${e.id}`],
@@ -70,7 +82,7 @@ for (const file of Object.keys(keyField)) {
     .map((e: any) => e[keyField[file]])
     .filter((id: string) => !now.has(id) && !(id in remap));
   if (lost.length > 0 && process.env.ALLOW_ID_REMOVALS === "1") {
-    console.warn(`  ${file}: ${lost.length} IDs retirés (ALLOW_ID_REMOVALS=1 — assumé)`);
+    console.warn(`  ${file}: ${lost.length} IDs retirés (ALLOW_ID_REMOVALS=1 - assumé)`);
   } else if (lost.length > 0) {
     fail(`${file}: IDs disparus sans id-remap.json : ${lost.slice(0, 5).join(", ")}…`);
   }

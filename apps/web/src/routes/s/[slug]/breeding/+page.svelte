@@ -1,7 +1,7 @@
 <script lang="ts">
 	import pals from '@palworld-companion/game-data/pals.json';
 	import { m } from '$lib/paraglide/messages';
-	import { gameName } from '$lib/game/names';
+	import { gameDesc, gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
 	import { appHref } from '$lib/nav';
 	import { childOf, parentsOf, breedingPath, uniqueComboList } from '$lib/game/breeding';
@@ -134,11 +134,13 @@
 			{#if p.nickname}<p class="nick">« {p.nickname} »</p>{/if}
 			<p class="talents">
 				{m.breeding_talents()}
-				<span class="tnum">{p.talentHp ?? '—'} / {p.talentShot ?? '—'} / {p.talentDefense ?? '—'}</span>
+				<span class="tnum">{p.talentHp ?? '-'} / {p.talentShot ?? '-'} / {p.talentDefense ?? '-'}</span>
 			</p>
 			{#if p.passives.length}
 				<ul class="inst-passives">
-					{#each p.passives as pv (pv)}<li>{gameName(`passive:${pv}`)}</li>{/each}
+					{#each p.passives as pv (pv)}
+						<li title={gameDesc(`passive:${pv}`)}>{gameName(`passive:${pv}`)}</li>
+					{/each}
 				</ul>
 			{/if}
 		</div>
@@ -228,7 +230,10 @@
 							<li>
 								<label>
 									<input type="checkbox" bind:group={wanted} value={pv} />
-									{gameName(`passive:${pv}`)}
+									<span class="pv-text">
+										<span>{gameName(`passive:${pv}`)}</span>
+										{#if gameDesc(`passive:${pv}`)}<span class="pdesc">{gameDesc(`passive:${pv}`)}</span>{/if}
+									</span>
 									<span class="p tnum">{pct(singleP)}</span>
 								</label>
 							</li>
@@ -325,7 +330,7 @@
 		gap: 16px;
 		flex-wrap: wrap;
 	}
-	/* Boutons segmentés (pas de composant tab) — style aligné sur .order de paldex */
+	/* Boutons segmentés (pas de composant tab), style aligné sur .order de paldex */
 	.modes {
 		display: flex;
 		gap: 6px;
@@ -484,10 +489,19 @@
 	}
 	.union label {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		gap: 8px;
 		font-size: 13px;
 		color: var(--text-2);
+	}
+	.pv-text {
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+	}
+	.pdesc {
+		color: var(--text-3);
+		font-size: 12px;
 	}
 	.union .p {
 		margin-left: auto;

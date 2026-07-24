@@ -1,5 +1,5 @@
 {
-  "id": "47d17d82-09df-4184-a094-aa26e5b4b3b5",
+  "id": "09a45d46-d701-4462-ad2b-b5c5eb7e70a5",
   "prevId": "6652ce01-0d6f-4f4a-bff5-757c63c5b558",
   "version": "7",
   "dialect": "postgresql",
@@ -197,138 +197,6 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.save_pals": {
-      "name": "save_pals",
-      "schema": "",
-      "columns": {
-        "server_id": {
-          "name": "server_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "instance_id": {
-          "name": "instance_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "owner_guid": {
-          "name": "owner_guid",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "pal_id": {
-          "name": "pal_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "gender": {
-          "name": "gender",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "level": {
-          "name": "level",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "default": 1
-        },
-        "nickname": {
-          "name": "nickname",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "passives": {
-          "name": "passives",
-          "type": "text[]",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'{}'::text[]"
-        },
-        "talent_hp": {
-          "name": "talent_hp",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "talent_shot": {
-          "name": "talent_shot",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "talent_defense": {
-          "name": "talent_defense",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "imported_at": {
-          "name": "imported_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {
-        "save_pals_owner_idx": {
-          "name": "save_pals_owner_idx",
-          "columns": [
-            {
-              "expression": "server_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "owner_guid",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "save_pals_server_id_servers_id_fk": {
-          "name": "save_pals_server_id_servers_id_fk",
-          "tableFrom": "save_pals",
-          "tableTo": "servers",
-          "columnsFrom": [
-            "server_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {
-        "save_pals_server_id_instance_id_pk": {
-          "name": "save_pals_server_id_instance_id_pk",
-          "columns": [
-            "server_id",
-            "instance_id"
-          ]
-        }
-      },
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
     "public.save_players": {
       "name": "save_players",
       "schema": "",
@@ -452,6 +320,101 @@
           ]
         }
       },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.server_import_configs": {
+      "name": "server_import_configs",
+      "schema": "",
+      "columns": {
+        "server_id": {
+          "name": "server_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "sftp_host": {
+          "name": "sftp_host",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sftp_port": {
+          "name": "sftp_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 22
+        },
+        "sftp_user": {
+          "name": "sftp_user",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sftp_password_enc": {
+          "name": "sftp_password_enc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "remote_dir": {
+          "name": "remote_dir",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "enabled": {
+          "name": "enabled",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "last_import_at": {
+          "name": "last_import_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_import_status": {
+          "name": "last_import_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_import_error": {
+          "name": "last_import_error",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_import_stats": {
+          "name": "last_import_stats",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "server_import_configs_server_id_servers_id_fk": {
+          "name": "server_import_configs_server_id_servers_id_fk",
+          "tableFrom": "server_import_configs",
+          "tableTo": "servers",
+          "columnsFrom": [
+            "server_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},

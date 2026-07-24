@@ -36,7 +36,7 @@ describe("passiveUnion", () => {
   });
 });
 
-describe("pInheritSubset — valeurs connues", () => {
+describe("pInheritSubset - valeurs connues", () => {
   const cases: Array<[number, number, number]> = [
     [1, 1, 1.0],
     [2, 1, 0.8],
@@ -64,7 +64,7 @@ describe("pInheritSubset — valeurs connues", () => {
   });
 });
 
-describe("pInheritSubset — cohérence avec la table de poids", () => {
+describe("pInheritSubset - cohérence avec la table de poids", () => {
   it("u = d -> somme exacte des poids w_k pour k >= d", () => {
     for (let d = 1; d <= 4; d++) {
       let expected = 0;

@@ -3,6 +3,7 @@
 await import("./transform/l10n.js");
 await import("./transform/pals.js");
 await import("./transform/skills.js");
+await import("./transform/passive-effects.js");
 await import("./transform/items.js");
 await import("./transform/tech.js");
 await import("./transform/buildings.js");

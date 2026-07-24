@@ -137,7 +137,7 @@ describe("extractPalInstances", () => {
   it("gère les deux formes d'enveloppe du genre (female avant male)", () => {
     const { rows } = extractPalInstances(
       [
-        entry({ gender: "EPalGenderType::Female" }), // string directe — "Female" contient "male"
+        entry({ gender: "EPalGenderType::Female" }), // string directe - "Female" contient "male"
         entry({ gender: { value: "EPalGenderType::Male" }, instanceId: "22222222-2222-2222-2222-222222222222" }), // objet imbriqué
         entry({ gender: { value: "EPalGenderType::Female" }, instanceId: "33333333-3333-3333-3333-333333333333" }),
         entry({ instanceId: "44444444-4444-4444-4444-444444444444" }), // Gender absent

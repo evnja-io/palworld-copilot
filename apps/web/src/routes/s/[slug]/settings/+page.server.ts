@@ -1,6 +1,7 @@
 import { fail } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
 import { getDb, tables } from "$lib/server/db";
+import { getImportConfig, saveImportConfig } from "$lib/server/importConfig";
 import {
   createInvite,
   listInvites,
@@ -15,6 +16,7 @@ export async function load({ locals, params }: PageServerLoadEvent) {
   return {
     invites: await listInvites(server.id),
     members: await listMembers(server.id),
+    sftp: await getImportConfig(server.id),
   };
 }
 
@@ -66,5 +68,36 @@ export const actions: Actions = {
       return fail(400, { action: "revoke", error: "bad_code" });
     await revokeInvite(code, locals.user!.id);
     return { revoked: true };
+  },
+
+  saveSftp: async ({ request, locals, params }) => {
+    const { server } = await requireOwner(locals.user, params.slug);
+    const data = await request.formData();
+    const host = String(data.get("sftpHost") ?? "").trim();
+    const portRaw = String(data.get("sftpPort") ?? "").trim();
+    const user = String(data.get("sftpUser") ?? "").trim();
+    const password = String(data.get("sftpPassword") ?? "");
+    const remoteDirRaw = String(data.get("remoteDir") ?? "").trim();
+    const enabled = data.get("enabled") === "on";
+    const port = Number.parseInt(portRaw || "22", 10);
+    if (host.length === 0 || user.length === 0 || !Number.isInteger(port)) {
+      return fail(400, { action: "sftp", error: "champs_invalides" });
+    }
+    try {
+      await saveImportConfig(server.id, {
+        sftpHost: host,
+        sftpPort: port,
+        sftpUser: user,
+        password,
+        remoteDir: remoteDirRaw.length > 0 ? remoteDirRaw : null,
+        enabled,
+      });
+    } catch (err) {
+      if (err instanceof Error && err.message === "password_required") {
+        return fail(400, { action: "sftp", error: "password_required" });
+      }
+      throw err;
+    }
+    return { savedSftp: true };
   },
 };

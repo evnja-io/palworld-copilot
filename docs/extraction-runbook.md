@@ -1,4 +1,4 @@
-# Runbook d'extraction — FModel (Windows)
+# Runbook d'extraction - FModel (Windows)
 
 Statut : v0 (Phase 0). Les chemins d'assets exacts seront confirmés pendant le
 spike et corrigés ici.
@@ -30,12 +30,12 @@ Naviguer dans l'arborescence (onglet Folders) → clic droit sur l'asset →
 
 Clic droit sur l'asset texture → **Save Texture (.png)**.
 
-## Liste des assets à exporter (vérifiée — recherche communautaire juillet 2026)
+## Liste des assets à exporter (vérifiée - recherche communautaire juillet 2026)
 
 Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
 `DT_Xxx_Common` (CompositeDataTable). **Exporter les deux quand les deux existent.**
 
-### DataTables (`Pal/Content/Pal/DataTable/…`) — Save Properties (.json)
+### DataTables (`Pal/Content/Pal/DataTable/…`) - Save Properties (.json)
 
 | Domaine | Asset |
 |---|---|
@@ -47,14 +47,14 @@ Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
 | Icônes de technos | `Technology/DT_TechnologyIconData` |
 | Constructions | `MapObject/Building/DT_BuildObjectDataTable` |
 | Objets de map (master) | `MapObject/DT_MapObjectMasterDataTable` |
-| Boss Alpha (positions !) | `UI/DT_BossSpawnerLoactionData` — la faute « Loaction » est dans le vrai nom |
+| Boss Alpha (positions !) | `UI/DT_BossSpawnerLoactionData` - la faute « Loaction » est dans le vrai nom |
 | Donjons | `Dungeon/DT_DungeonLevelDataTable`, `Dungeon/DT_DungeonSpawnAreaDataTable` |
 | Skills actifs | `Waza/DT_WazaDataTable`, `Waza/DT_WazaMasterLevel` |
 | Bornes de la carte | `WorldMapUIData/DT_WorldMapUIData` (landScapeRealPositionMin/Max) |
 
-### L10N (`Pal/Content/L10N/{en,fr}/Pal/DataTable/Text/…`) — Save Properties (.json)
+### L10N (`Pal/Content/L10N/{en,fr}/Pal/DataTable/Text/…`) - Save Properties (.json)
 
-⚠️ Utiliser les copies sous `L10N/` — les tables du même nom sous
+⚠️ Utiliser les copies sous `L10N/` - les tables du même nom sous
 `Pal/Content/Pal/DataTable/Text/` sont le texte source japonais.
 
 `DT_PalNameText_Common`, `DT_ItemNameText_Common`, `DT_ItemDescriptionText_Common`,
@@ -63,29 +63,29 @@ Note v1.0+ : beaucoup de tables existent en deux exemplaires, `DT_Xxx` et
 (+ descriptions longues si présentes : `DT_PalLongDescriptionText_Common`,
 `DT_TechnologyDescText_Common`, `DT_BuildObjectDescText_Common`).
 
-### Textures — Save Texture (.png)
+### Textures - Save Texture (.png)
 
 - Icônes (textures, clic droit dossier → Save Folder.s Packages Textures) :
   `Pal/Content/Pal/Texture/PalIcon/Normal`,
   `Pal/Content/Others/InventoryItemIcon/Texture` et
   `Pal/Content/Pal/Texture/BuildObject/PNG` (icônes `T_icon_buildObject_*`,
   utilisées par les nœuds de l'écran Technologie qui débloquent des
-  constructions — sans elles, ~217 technos n'ont pas d'icône).
-- `Pal/Content/Pal/Texture/UI/Map/T_WorldMap` — carte unique 8192×8192 :
+  constructions - sans elles, ~217 technos n'ont pas d'icône).
+- `Pal/Content/Pal/Texture/UI/Map/T_WorldMap` - carte unique 8192×8192 :
   **Sakurajima et Feybreak sont peints dedans**, il n'existe pas de textures
   DLC séparées.
-- `Pal/Content/Pal/Texture/UI/Map/T_TreeMap` — carte de l'Arbre-Monde (v1.0).
+- `Pal/Content/Pal/Texture/UI/Map/T_TreeMap` - carte de l'Arbre-Monde (v1.0).
 
 ### Ce qui ne s'exporte PAS depuis FModel (et d'où ça vient à la place)
 
 - **Effigies Lifmunk, coffres, voyage rapide** : acteurs placés dans ~10 000
   cellules World Partition (`Maps/MainWorld_5/PL_MainWorld5/_Generated_/*.umap`)
-  — inexploitable à la main. Source utilisée : datasets dérivés open source de
+  - inexploitable à la main. Source utilisée : datasets dérivés open source de
   https://github.com/oMaN-Rod/palworld-save-pal (`data/json/effigies.json`,
-  GUID → coordonnées — les mêmes GUID que ceux des saves) et outillage
+  GUID → coordonnées - les mêmes GUID que ceux des saves) et outillage
   https://github.com/arkive-games/arkive pour regénérer au besoin.
 - **Positions des tours de boss** : absentes des assets (prouvé par
-  catrenelle/PalDex) — coordonnées HUD relevées à la main (elles sont peu
+  catrenelle/PalDex) - coordonnées HUD relevées à la main (elles sont peu
   nombreuses et fixes).
 - Référence de datamining la plus complète :
   https://github.com/catrenelle/PalDex/blob/master/NOTES.md
@@ -112,7 +112,7 @@ git clone --depth 1 https://github.com/deafdudecomputers/PalworldSaveTools /tmp/
 ```
 
 Copier depuis le serveur dédié uniquement les `Players/<GUID>.sav`
-(quelques centaines de Ko) — jamais `Level.sav`.
+(quelques centaines de Ko) - jamais `Level.sav`.
 
 ## Importer les saves du serveur (CLI `import-save`)
 
@@ -131,19 +131,19 @@ précédente a déjà été suivie).
    pnpm --filter @palworld-companion/pipeline import-save raw/save
    ```
    (`DATABASE_URL` est chargé automatiquement depuis `apps/web/.env` via
-   `--env-file` ; le dossier `.venv` doit exister — cf. section précédente.)
+   `--env-file` ; le dossier `.venv` doit exister - cf. section précédente.)
 3. Le CLI imprime, pour chaque `.sav` traité :
    - `<GUID> : n pals, n techs, n effigies (snapshot)` ;
    - à la fin, `fusion : n nouvelles coches appliquées` (nombre total de
      nouvelles lignes ajoutées à `progress`, tous GUIDs confondus) ;
-   - une ligne `non revendiqué : <GUID> (n entrées) — page /import` pour
+   - une ligne `non revendiqué : <GUID> (n entrées) - page /import` pour
      chaque GUID qui ne correspond à aucun compte (le joueur doit renseigner
      son GUID sur la page `/import` du site pour déclencher la fusion).
 
 ### Sémantique (additive, idempotente)
 
 - Le CLI **remplace** intégralement le snapshot `save_snapshots` du GUID
-  traité (delete + insert de ce GUID uniquement) — relancer le CLI sur la même
+  traité (delete + insert de ce GUID uniquement) - relancer le CLI sur la même
   save produit exactement le même résultat (idempotent).
 - La fusion vers `progress` est **strictement additive** :
   `INSERT ... ON CONFLICT DO NOTHING`, jamais de suppression. Une case déjà
@@ -151,7 +151,7 @@ précédente a déjà été suivie).
   relancer l'import ne duplique rien (`fusion : 0` au deuxième passage).
 - Seuls les kinds `pal_caught` et `tech_unlocked` sont fusionnés vers
   `progress`. Les effigies (`raw:relic`) restent dans `save_snapshots` sans
-  fusion — elles alimenteront la Phase 7 (carte).
+  fusion - elles alimenteront la Phase 7 (carte).
 - La fusion ne s'applique qu'aux GUIDs déjà revendiqués (table `users`,
   colonne `pal_player_guid`) : un joueur non revendiqué voit son snapshot
   stocké mais pas fusionné tant qu'il n'a pas renseigné son GUID via

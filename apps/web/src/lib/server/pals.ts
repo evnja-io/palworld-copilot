@@ -24,7 +24,7 @@ export type PalOwner = {
   instances: PalInstance[];
 };
 
-/** Tous les Pals importés du serveur, groupés par propriétaire — visibilité :
+/** Tous les Pals importés du serveur, groupés par propriétaire - visibilité :
  *  tous les membres (décision produit, garde requireMembership via le layout).
  *  name : username revendiqué > pseudo in-game (save_players) > GUID tronqué
  *  (8 chars + …).

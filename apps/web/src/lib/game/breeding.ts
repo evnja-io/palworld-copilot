@@ -36,7 +36,7 @@ for (const c of (breedingJson as { uniqueCombos: Array<{ parentA: string; parent
 const uniqueChildren = new Set(uniques.values());
 
 /** Combos uniques canonicalisés (ids pals.json), dédupliqués par clé de parents
- *  triée + enfant, dans l'ordre stable du fichier source — pour l'index UI. */
+ *  triée + enfant, dans l'ordre stable du fichier source - pour l'index UI. */
 export const uniqueComboList: ReadonlyArray<{ parentA: string; parentB: string; child: string }> =
   comboList;
 
@@ -121,7 +121,7 @@ export type BreedStep = { child: string; parentA: string; parentB: string; depth
 /** Chemin d'élevage le plus court (en tours) des espèces possédées vers targetId.
  *  BFS en couches sur l'espace des espèces : chaque tour n'évalue que les paires
  *  touchant la frontière du tour précédent (ancien×nouveau + nouveau×nouveau une
- *  seule fois par clé triée) — la première découverte fixe donc la profondeur
+ *  seule fois par clé triée) - la première découverte fixe donc la profondeur
  *  minimale. Genre ignoré (hypothèse : les deux sexes d'une espèce obtenables).
  *  Retourne [] si la cible est déjà possédée, null si inatteignable en maxDepth. */
 export function breedingPath(

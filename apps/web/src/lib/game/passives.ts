@@ -1,10 +1,10 @@
 // Probabilités d'héritage des compétences passives à la reproduction.
-// Module pur, zéro dépendance — utilisable côté client comme côté serveur.
+// Module pur, zéro dépendance - utilisable côté client comme côté serveur.
 //
 // Source des constantes : reverse-engineering communautaire par /u/mgxts
 // (datamine des champs Combi_PassiveInheritNum / Combi_PassiveRandomAddNum de
 // BP_PalGameSetting), repris tel quel par PalCalc (GameConstants.cs) et
-// corroboré par Game8 / PalHatch — vérifié le 2026-07-23. Le jeu ayant évolué
+// corroboré par Game8 / PalHatch - vérifié le 2026-07-23. Le jeu ayant évolué
 // depuis (1.0+), ces valeurs restent une estimation communautaire.
 
 /** Table dataminée (mgxts / PalCalc) : P(hériter exactement k passifs du pool
@@ -12,7 +12,7 @@
  *  Si k > |U|, l'enfant hérite tout U. Sous-ensemble choisi uniformément. */
 export const INHERIT_COUNT_WEIGHTS = [0, 0.4, 0.3, 0.2, 0.1] as const;
 
-/** P(ajouter exactement k passifs aléatoires après héritage), k = 0..3 —
+/** P(ajouter exactement k passifs aléatoires après héritage), k = 0..3,
  *  tronqué au cap global de 4. Documenté pour référence : les mutations ne
  *  délogent jamais un passif hérité, donc elles sont neutres pour
  *  P(enfant ⊇ D) quand D ⊆ U (seul cas calculé ici). */
@@ -52,7 +52,7 @@ export function passiveUnion(a: string[], b: string[]): string[] {
  *  min(k, u) : si le tirage k dépasse la taille du pool, tout U est hérité.
  *  Cas limites : d = 0 -> 1 ; d > 4 (cap) ou d > u (D ⊄ U) -> 0.
  *  Non-objectif explicite : probabilité « ensemble exact » (interactions
- *  cap/mutations) — hors scope. */
+ *  cap/mutations) - hors scope. */
 export function pInheritSubset(unionSize: number, desiredSize: number): number {
   const u = unionSize;
   const d = desiredSize;

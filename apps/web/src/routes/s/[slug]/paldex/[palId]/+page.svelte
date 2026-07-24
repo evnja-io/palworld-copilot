@@ -103,7 +103,10 @@
 			<h2>{m.pal_passives()}</h2>
 			<ul class="plain">
 				{#each pal.passives as p (p)}
-					<li>{gameName(`passive:${p}`)}</li>
+					<li>
+						<span class="pname">{gameName(`passive:${p}`)}</span>
+						{#if gameDesc(`passive:${p}`)}<span class="pdesc">{gameDesc(`passive:${p}`)}</span>{/if}
+					</li>
 				{/each}
 			</ul>
 		{/if}
@@ -128,10 +131,13 @@
 				{#each palMoves as mv (mv.skillId)}
 					{@const sk = (skills as Record<string, { element?: string; power?: number }>)[mv.skillId]}
 					<li>
-						<span class="mv-level tnum">Niv. {mv.level}</span>
-						<span class="mv-name">{gameName(`skill:${mv.skillId}`)}</span>
-						{#if sk?.element}<ElementBadge element={sk.element} />{/if}
-						{#if sk?.power}<span class="mv-power tnum">{sk.power}</span>{/if}
+						<div class="mv-row">
+							<span class="mv-level tnum">Niv. {mv.level}</span>
+							<span class="mv-name">{gameName(`skill:${mv.skillId}`)}</span>
+							{#if sk?.element}<ElementBadge element={sk.element} />{/if}
+							{#if sk?.power}<span class="mv-power tnum">{sk.power}</span>{/if}
+						</div>
+						{#if gameDesc(`skill:${mv.skillId}`)}<span class="pdesc">{gameDesc(`skill:${mv.skillId}`)}</span>{/if}
 					</li>
 				{/each}
 			</ul>
@@ -331,12 +337,27 @@
 		color: var(--text-3);
 		font-size: 12px;
 	}
+	.plain li {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
 	.moves li {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		font-size: 13px;
+		padding: 4px 0;
+	}
+	.mv-row {
 		display: flex;
 		align-items: center;
 		gap: 8px;
-		font-size: 13px;
-		padding: 4px 0;
+	}
+	.pdesc {
+		color: var(--text-3);
+		font-size: 12px;
+		text-wrap: pretty;
 	}
 	.mv-level {
 		color: var(--text-4);

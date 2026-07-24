@@ -6,7 +6,7 @@ import { itemIcon } from "./icons";
 
 export type WorkOrder = "desc" | "asc";
 
-/** Trie par niveau de l'aptitude — décroissant par défaut (meilleur d'abord),
+/** Trie par niveau de l'aptitude - décroissant par défaut (meilleur d'abord),
  *  croissant sur demande. Tri stable : l'ordre d'entrée (n° Paldex) départage
  *  les niveaux égaux. `work` est typé `object` car les entrées de pals.json
  *  ont des clés figées. */

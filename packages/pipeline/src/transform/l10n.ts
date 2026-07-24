@@ -1,4 +1,7 @@
-import { isL10nPlaceholder, l10nMap, loadDataTableRows, writeGameData } from "../lib.js";
+import {
+  isL10nPlaceholder, l10nMap, loadDataTableRows, resolveEffectPlaceholders, stripRichTags, writeGameData,
+} from "../lib.js";
+import { passiveValuesById } from "./passive-effects.lib.js";
 
 // Préfixes constatés sur les exports réels (2026-07-22, cf. docs/decisions.md).
 // (table, préfixe L10N, namespace de sortie)
@@ -16,7 +19,10 @@ const DESC_SOURCES: Array<[RegExp, string, string]> = [
   [/DT_ItemDescriptionText/, "ITEM_DESC_", "item:"],
   [/DT_PalLongDescriptionText/, "PAL_LONG_DESC_", "pal:"],
   [/DT_TechnologyDescText/, "DESC_", "tech:"],
+  [/DT_SkillDescText/, "ACTION_SKILL_", "skill:"],
+  [/DT_SkillDescText/, "PASSIVE_", "passive:"],
 ];
+const passiveValues = passiveValuesById(loadDataTableRows(/DT_PassiveSkill_Main/));
 
 for (const locale of ["en", "fr"] as const) {
   const names: Record<string, string> = {};
@@ -46,7 +52,7 @@ for (const locale of ["en", "fr"] as const) {
         descs[ns + id] = text;
       }
     } catch {
-      console.warn(`  (description absente pour ${table} en ${locale} — toléré)`);
+      console.warn(`  (description absente pour ${table} en ${locale} - toléré)`);
     }
   }
   // Les descriptions embarquent les mêmes templates que les noms.
@@ -81,6 +87,21 @@ for (const locale of ["en", "fr"] as const) {
       if (dict[key]) continue;
       const match = byLower.get(key.toLowerCase());
       if (match) dict[key] = dict[match];
+    }
+  }
+  // Descriptions actives/passives : résolution des {EffectValueN} + nettoyage rich-text.
+  // Scopé à skill:/passive: pour ne pas régresser item:/pal:/tech:.
+  for (const key of Object.keys(descs)) {
+    if (key.startsWith("passive:")) {
+      const id = key.slice("passive:".length);
+      const resolved = stripRichTags(resolveEffectPlaceholders(descs[key], passiveValues[id] ?? []));
+      if (/\{EffectValue\d\}/.test(resolved)) {
+        delete descs[key]; // valeur d'effet absente -> l'UI retombe sur le nom seul
+      } else {
+        descs[key] = resolved;
+      }
+    } else if (key.startsWith("skill:")) {
+      descs[key] = stripRichTags(descs[key]);
     }
   }
   if (Object.keys(names).length < 800) throw new Error(`Trop peu de noms ${locale}`);

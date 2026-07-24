@@ -1,11 +1,11 @@
 // Extraction pure des instances de Pals depuis CharacterSaveParameterMap
-// (Level.sav converti en JSON par palsav). Aucune I/O ni accès base — testable
+// (Level.sav converti en JSON par palsav). Aucune I/O ni accès base - testable
 // sur fixtures synthétiques (miroir de la direction import-lib du plan phase 3,
 // docs/superpowers/plans/2026-07-23-multi-tenant-phase-3.md).
 
 export type PalInstanceRow = {
   instanceId: string; // GUID UPPER sans tirets (PK avec server_id)
-  ownerGuid: string; // GUID UPPER sans tirets — joint server_members.pal_player_guid
+  ownerGuid: string; // GUID UPPER sans tirets - joint server_members.pal_player_guid
   palId: string; // id canonique pals.json
   gender: "male" | "female" | null;
   level: number;
@@ -17,10 +17,10 @@ export type PalInstanceRow = {
 };
 
 export type ExtractStats = {
-  players: number; // entrées joueur (IsPlayer) — extraites par extract-players.ts
+  players: number; // entrées joueur (IsPlayer) - extraites par extract-players.ts
   noOwner: number; // pals sauvages : OwnerPlayerUId absent ou GUID nul
   unknownSpecies: number; // CharacterID hors pals.json (GYM_/RAID_/PREDATOR_…)
-  duplicates: number; // InstanceId déjà vu — première occurrence conservée
+  duplicates: number; // InstanceId déjà vu - première occurrence conservée
 };
 
 /** UUID "00afd495-0000-…" -> "00AFD495000000000000000000000000" (format des
@@ -34,7 +34,7 @@ const ZERO_GUID = "0".repeat(32);
 
 /** cmap = CharacterSaveParameterMap.value ; palIdsLower = lowercase -> id
  *  canonique pals.json. Lectures défensives : l'enveloppe des entrées pal
- *  n'est pas garantie (cf. plan, risque n°1) — tout champ inattendu est
+ *  n'est pas garantie (cf. plan, risque n°1) - tout champ inattendu est
  *  ignoré ou compté dans les stats plutôt que de faire échouer l'extraction. */
 export function extractPalInstances(
   cmap: unknown[],
@@ -47,7 +47,7 @@ export function extractPalInstances(
   for (const entry of cmap as any[]) {
     const sp = entry?.value?.RawData?.value?.object?.SaveParameter?.value;
 
-    // Les joueurs partagent la même map — extraits ailleurs, on les saute.
+    // Les joueurs partagent la même map - extraits ailleurs, on les saute.
     if (sp?.IsPlayer?.value) {
       stats.players++;
       continue;
@@ -74,7 +74,7 @@ export function extractPalInstances(
       continue;
     }
 
-    // Identifiant d'instance : clé de la map — requis (PK), dédupliqué.
+    // Identifiant d'instance : clé de la map - requis (PK), dédupliqué.
     const rawInstanceId = entry?.key?.InstanceId?.value;
     if (typeof rawInstanceId !== "string" || rawInstanceId === "") continue;
     const instanceId = normalizeGuid(rawInstanceId);
@@ -85,7 +85,7 @@ export function extractPalInstances(
     seen.add(instanceId);
 
     // Genre : deux formes d'enveloppe EnumProperty observées selon les
-    // convertisseurs — valeur string directe ou objet { value } imbriqué.
+    // convertisseurs - valeur string directe ou objet { value } imbriqué.
     // /female/i d'abord : "Female" contient "male".
     const g = sp?.Gender?.value;
     const genderStr = typeof g === "string" ? g : g?.value;
@@ -98,7 +98,7 @@ export function extractPalInstances(
             : null
         : null;
 
-    // Passifs : ArrayProperty { values: string[] } — absente si aucun passif.
+    // Passifs : ArrayProperty { values: string[] } - absente si aucun passif.
     const rawPassives = sp?.PassiveSkillList?.value?.values ?? [];
     const passives = (Array.isArray(rawPassives) ? rawPassives : []).filter(
       (p): p is string => typeof p === "string",

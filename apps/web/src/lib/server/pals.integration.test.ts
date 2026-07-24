@@ -1,6 +1,6 @@
 // Test d'intégration listPalInstances : nécessite une base migrée (0007).
 // Gated : ne tourne que si TEST_DATABASE_URL est posée (branche Neon).
-// Invocation — les DEUX variables sont nécessaires, sur la MÊME branche :
+// Invocation - les DEUX variables sont nécessaires, sur la MÊME branche :
 //   TEST_DATABASE_URL=<url> DATABASE_URL=<url> pnpm --filter web test
 // (cf. scoping.integration.test.ts pour la raison : getDb() lit
 // $env/dynamic/private, figé depuis process.env à l'init de Vite.)

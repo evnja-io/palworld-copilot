@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "vitest run",
     "spike:smoke": "tsx spike/smoke.ts",
     "spike:inventory": "tsx spike/inventory.ts",
     "spike:pals": "tsx spike/pals.ts",
@@ -17,7 +18,8 @@
     "extract-pals": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-pals.ts",
     "test": "vitest run",
     "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
-    "fetch-community": "tsx src/fetch-community.ts"
+    "fetch-community": "tsx src/fetch-community.ts",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

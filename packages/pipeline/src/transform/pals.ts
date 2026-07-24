@@ -66,7 +66,7 @@ const pals = Object.entries(params)
       .map((i) => pick<string>(row, `PassiveSkill${i}`))
       .filter((p) => p && p !== "None"),
     // Une table de loot par palier (ex. Anubis000/Anubis080) : tri par Level
-    // croissant puis dédoublonnage par item — le palier de base gagne.
+    // croissant puis dédoublonnage par item - le palier de base gagne.
     drops: (() => {
       const seen = new Set<string>();
       const out = [];
@@ -101,7 +101,7 @@ writeGameData("pals.json", pals);
 // La casse des DataTables diverge parfois de l'id du pal (« Blueplatypus » dans
 // DT_PalCombiUnique vs « BluePlatypus » dans DT_PalMonsterParameter) : on
 // canonicalise chaque id contre la liste construite ci-dessus. Les combos dont
-// un id ne résout pas (pals filtrés/événementiels) sont conservés tels quels —
+// un id ne résout pas (pals filtrés/événementiels) sont conservés tels quels :
 // le moteur web les ignore à la lecture.
 const canon = new Map(pals.map((p) => [p.id.toLowerCase(), p.id]));
 const canonId = (x: string) => canon.get(x.toLowerCase()) ?? x;
