@@ -57,6 +57,13 @@
       "when": 1784796593729,
       "tag": "0007_lazy_redwing",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1784878357686,
+      "tag": "0008_chunky_virginia_dare",
+      "breakpoints": true
     }
   ]
 }

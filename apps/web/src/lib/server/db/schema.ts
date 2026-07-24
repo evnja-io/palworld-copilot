@@ -1,4 +1,5 @@
 import {
+  bigint,
   boolean,
   index,
   integer,
@@ -143,3 +144,31 @@ export const serverImportConfigs = pgTable("server_import_configs", {
   lastImportError: text("last_import_error"),
   lastImportStats: jsonb("last_import_stats"),
 });
+
+// One row per browser save-upload attempt for a local (co-op) world;
+// lifecycle: uploading → pending → running → ok|error.
+export const saveUploads = pgTable(
+  "save_uploads",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    uploadedBy: uuid("uploaded_by")
+      .notNull()
+      .references(() => users.id),
+    status: text("status", { enum: ["uploading", "pending", "running", "ok", "error"] })
+      .notNull()
+      .default("uploading"),
+    fileCount: integer("file_count").notNull().default(0),
+    totalBytes: bigint("total_bytes", { mode: "number" }).notNull().default(0),
+    error: text("error"),
+    stats: jsonb("stats"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    startedAt: timestamp("started_at", { withTimezone: true }),
+    finishedAt: timestamp("finished_at", { withTimezone: true }),
+  },
+  (t) => [
+    index("save_uploads_server_created_idx").on(t.serverId, t.createdAt),
+  ],
+);
