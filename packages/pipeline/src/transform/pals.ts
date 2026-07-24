@@ -98,10 +98,17 @@ if (pals.length < 150 || pals.length > 500) throw new Error(`Comptage pals suspe
 writeGameData("pals.json", pals);
 
 // Combos de breeding uniques (exceptions à la règle du CombiRank).
+// La casse des DataTables diverge parfois de l'id du pal (« Blueplatypus » dans
+// DT_PalCombiUnique vs « BluePlatypus » dans DT_PalMonsterParameter) : on
+// canonicalise chaque id contre la liste construite ci-dessus. Les combos dont
+// un id ne résout pas (pals filtrés/événementiels) sont conservés tels quels —
+// le moteur web les ignore à la lecture.
+const canon = new Map(pals.map((p) => [p.id.toLowerCase(), p.id]));
+const canonId = (x: string) => canon.get(x.toLowerCase()) ?? x;
 const uniques = Object.values(loadDataTableRows(/DT_PalCombiUnique/)).map((row: any) => ({
-  parentA: enumName(must(pick(row, "ParentTribeA", "ParentA"), "combi.ParentA")),
-  parentB: enumName(must(pick(row, "ParentTribeB", "ParentB"), "combi.ParentB")),
-  child: enumName(must(pick(row, "ChildCharacterID", "Child"), "combi.Child")),
+  parentA: canonId(must(enumName(pick(row, "ParentTribeA", "ParentA")), "combi.ParentA")),
+  parentB: canonId(must(enumName(pick(row, "ParentTribeB", "ParentB")), "combi.ParentB")),
+  child: canonId(must(enumName(pick(row, "ChildCharacterID", "Child")), "combi.Child")),
 }));
 writeGameData("breeding.json", { uniqueCombos: uniques });
 console.log(`pals OK (${pals.length} pals, ${uniques.length} combos uniques)`);

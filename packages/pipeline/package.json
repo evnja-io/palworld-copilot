@@ -14,6 +14,8 @@
     "icons": "tsx src/icons.ts",
     "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
     "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts",
+    "extract-pals": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-pals.ts",
+    "test": "vitest run",
     "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
     "fetch-community": "tsx src/fetch-community.ts"
   },

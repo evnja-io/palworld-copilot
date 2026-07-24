@@ -55,3 +55,10 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
         run: cd packages/pipeline && node --experimental-strip-types src/extract-players.ts /tmp/saves
+
+      - name: Instances de Pals (Level.sav — non bloquant)
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SERVER_ID: ${{ secrets.LEGACY_SERVER_ID }}
+        run: cd packages/pipeline && node --experimental-strip-types src/extract-pals.ts /tmp/saves

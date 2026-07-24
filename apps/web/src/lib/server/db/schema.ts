@@ -112,3 +112,31 @@ export const invites = pgTable("invites", {
   maxUses: integer("max_uses"),
   useCount: integer("use_count").notNull().default(0),
 });
+
+// Instances individuelles de Pals extraites de Level.sav (CharacterSaveParameterMap).
+// Portée : pals possédés par un joueur (OwnerPlayerUId) — équipe + palbox ; les
+// pals postés en base peuvent apparaître (même owner), limitation documentée.
+// owner_guid : UPPER sans tirets, joint server_members.pal_player_guid.
+export const savePals = pgTable(
+  "save_pals",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    instanceId: text("instance_id").notNull(), // GUID UPPER sans tirets
+    ownerGuid: text("owner_guid").notNull(),
+    palId: text("pal_id").notNull(), // id canonique pals.json
+    gender: text("gender", { enum: ["male", "female"] }),
+    level: integer("level").notNull().default(1),
+    nickname: text("nickname"),
+    passives: text("passives").array().notNull().default(sql`'{}'::text[]`),
+    talentHp: integer("talent_hp"),
+    talentShot: integer("talent_shot"),
+    talentDefense: integer("talent_defense"),
+    importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.instanceId] }),
+    index("save_pals_owner_idx").on(t.serverId, t.ownerGuid),
+  ],
+);

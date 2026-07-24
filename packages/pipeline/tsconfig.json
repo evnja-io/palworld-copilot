@@ -5,6 +5,9 @@
     "moduleResolution": "NodeNext",
     "strict": true,
     "noEmit": true,
+    // node --experimental-strip-types ne réécrit pas les extensions : les
+    // imports intra-package des CLIs strip-types utilisent ".ts" (cf. extract-pals.ts).
+    "allowImportingTsExtensions": true,
     "types": ["node"]
   },
   "include": ["spike", "src"]
