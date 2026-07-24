@@ -6,6 +6,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, rmSync } from "node:fs";
 import { basename, join } from "node:path";
 import type { NeonQueryFunction } from "@neondatabase/serverless";
+import { extractPalInstances } from "./extract-pals-lib.ts";
 
 type Sql = NeonQueryFunction<false, false>;
 export type ImportStats = {
@@ -193,8 +194,10 @@ export async function importPlayerSaves(sql: Sql, serverId: string, dir: string)
   };
 }
 
-/** Extrait les pseudos in-game de Level.sav et les upsert dans save_players. */
-export async function syncPlayerNames(sql: Sql, serverId: string, dir: string): Promise<{ players: number }> {
+/** Convertit Level.sav en JSON temporaire (supprimé après parse) et retourne
+ *  CharacterSaveParameterMap.value. Une seule conversion pour les deux syncs
+ *  qui en dépendent (pseudos + instances de Pals) : le JSON fait ~170 Mo. */
+export function loadLevelCmap(dir: string): any[] {
   requireVenv();
   if (!existsSync(join(dir, "Level.sav"))) throw new Error(`Level.sav absent de ${dir}`);
 
@@ -210,8 +213,16 @@ export async function syncPlayerNames(sql: Sql, serverId: string, dir: string): 
   ]);
   const level = JSON.parse(readFileSync(jsonPath, "utf8"));
   rmSync(jsonPath); // 170 Mo - ne pas laisser traîner
-  const cmap: any[] = level?.properties?.worldSaveData?.value?.CharacterSaveParameterMap?.value ?? [];
+  return level?.properties?.worldSaveData?.value?.CharacterSaveParameterMap?.value ?? [];
+}
 
+/** Extrait les pseudos in-game d'une cmap (cf. loadLevelCmap) et les upsert
+ *  dans save_players. */
+export async function syncPlayerNames(
+  sql: Sql,
+  serverId: string,
+  cmap: any[],
+): Promise<{ players: number }> {
   const players: Array<{ guid: string; nickname: string }> = [];
   for (const entry of cmap) {
     const sp = entry?.value?.RawData?.value?.object?.SaveParameter?.value;
@@ -235,4 +246,70 @@ export async function syncPlayerNames(sql: Sql, serverId: string, dir: string): 
   for (const p of players) console.log(`${p.nickname} (${p.guid.slice(0, 8)}…)`);
   console.log(`${players.length} joueurs synchronisés dans save_players`);
   return { players: players.length };
+}
+
+/** Extrait les instances de Pals possédées d'une cmap (cf. loadLevelCmap) et
+ *  remplace le contenu de save_pals pour ce serveur (idempotent). Jette si
+ *  aucune instance n'est extraite : on n'écrase PAS un snapshot existant avec
+ *  un delete à vide (fail loud, pas de wipe silencieux). */
+export async function syncPalInstances(
+  sql: Sql,
+  serverId: string,
+  cmap: any[],
+): Promise<{ pals: number; owners: number }> {
+  const palIdsLower = new Map<string, string>(
+    (JSON.parse(
+      readFileSync(new URL("../../game-data/pals.json", import.meta.url).pathname, "utf8"),
+    ) as Array<{ id: string }>).map((p) => [p.id.toLowerCase(), p.id]),
+  );
+
+  const { rows, stats } = extractPalInstances(cmap, palIdsLower);
+  console.log(
+    `ignorés : ${stats.players} joueurs, ${stats.noOwner} sans propriétaire, ` +
+      `${stats.unknownSpecies} espèces inconnues, ${stats.duplicates} doublons`,
+  );
+  if (rows.length === 0) {
+    throw new Error("Aucune instance de Pal extraite de Level.sav : save_pals laissé intact");
+  }
+
+  // Remplacement idempotent pour CE serveur : 1 delete + inserts par tranches
+  // de 1000 lignes (unnest de 10 tableaux parallèles) dans une seule
+  // transaction non-interactive (batch neon). passives est encodée CSV côté
+  // client (les row-names UE n'ont pas de virgule) et décodée côté serveur par
+  // string_to_array ; gender/nickname vides -> NULL via nullif.
+  const CHUNK = 1000;
+  const queries = [sql.query("delete from save_pals where server_id = $1::uuid", [serverId])];
+  for (let i = 0; i < rows.length; i += CHUNK) {
+    const chunk = rows.slice(i, i + CHUNK);
+    queries.push(
+      sql.query(
+        `insert into save_pals
+           (server_id, instance_id, owner_guid, pal_id, gender, level, nickname,
+            passives, talent_hp, talent_shot, talent_defense)
+         select $1::uuid, t.iid, t.og, t.pid, nullif(t.g, ''), t.lv, nullif(t.nick, ''),
+                coalesce(string_to_array(nullif(t.pv, ''), ','), '{}'), t.thp, t.tsh, t.tdf
+         from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::int[],
+                     $7::text[], $8::text[], $9::int[], $10::int[], $11::int[])
+              as t(iid, og, pid, g, lv, nick, pv, thp, tsh, tdf)`,
+        [
+          serverId,
+          chunk.map((r) => r.instanceId),
+          chunk.map((r) => r.ownerGuid),
+          chunk.map((r) => r.palId),
+          chunk.map((r) => r.gender ?? ""),
+          chunk.map((r) => r.level),
+          chunk.map((r) => r.nickname ?? ""),
+          chunk.map((r) => r.passives.join(",")),
+          chunk.map((r) => r.talentHp),
+          chunk.map((r) => r.talentShot),
+          chunk.map((r) => r.talentDefense),
+        ],
+      ),
+    );
+  }
+  await sql.transaction(queries);
+
+  const owners = new Set(rows.map((r) => r.ownerGuid)).size;
+  console.log(`${rows.length} instances de Pals (${owners} propriétaires) synchronisées dans save_pals`);
+  return { pals: rows.length, owners };
 }

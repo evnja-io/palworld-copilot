@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { beforeAll, describe, expect, it } from "vitest";
-import * as creds from "./creds";
-import * as webCrypto from "../../../apps/web/src/lib/server/crypto";
+import * as creds from "./creds.ts";
+import * as webCrypto from "../../../apps/web/src/lib/server/crypto.ts";
 
 const TEST_KEY = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
 const SRV = "11111111-1111-1111-1111-111111111111";
@@ -12,9 +13,10 @@ beforeAll(() => {
 
 describe("miroir crypto.ts ↔ creds.ts", () => {
   it("les deux fichiers sources sont byte-identiques", () => {
-    const a = readFileSync(new URL("./creds.ts", import.meta.url).pathname, "utf8");
+    // fileURLToPath (pas .pathname) : .pathname donne "/C:/..." sous Windows.
+    const a = readFileSync(fileURLToPath(new URL("./creds.ts", import.meta.url)), "utf8");
     const b = readFileSync(
-      new URL("../../../apps/web/src/lib/server/crypto.ts", import.meta.url).pathname,
+      fileURLToPath(new URL("../../../apps/web/src/lib/server/crypto.ts", import.meta.url)),
       "utf8",
     );
     expect(a).toBe(b);

@@ -12,6 +12,7 @@
 
 	const nav = [
 		{ href: '/paldex', label: m.nav_paldex },
+		{ href: '/breeding', label: m.nav_breeding },
 		{ href: '/items', label: m.nav_items },
 		{ href: '/craft', label: m.nav_craft },
 		{ href: '/tech', label: m.nav_tech },

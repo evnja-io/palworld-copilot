@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeExitCode, parseDiscoveredDir } from "./import-all";
+import { computeExitCode, parseDiscoveredDir } from "./import-all.ts";
 
 describe("parseDiscoveredDir", () => {
   it("extrait le chemin de la dernière ligne marquée", () => {
