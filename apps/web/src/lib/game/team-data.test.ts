@@ -5,6 +5,9 @@ import {
   ACTIVE_SKILL_IDS,
   PAL_IDS,
   PASSIVE_IDS,
+  defaultActivesFor,
+  defaultPassivesFor,
+  defaultSlotFor,
   learnsetFor,
   partnerSkillNsId,
   passiveRank,
@@ -44,6 +47,42 @@ describe("team-data", () => {
     expect(ls.length).toBeGreaterThan(0);
     for (let i = 1; i < ls.length; i++) expect(ls[i].level).toBeGreaterThanOrEqual(ls[i - 1].level);
     for (const e of ls) expect(ACTIVE_SKILL_IDS.has(e.skillId)).toBe(true);
+  });
+
+  it("defaultActivesFor renvoie les 3 skills de plus haut niveau, du plus fort au plus faible", () => {
+    // Alpaca : learnset jusqu'à HolyBlast(70)/HyperBeam(50)/PowerBall(40).
+    const a = defaultActivesFor("Alpaca");
+    expect(a.length).toBe(3);
+    const ls = learnsetFor("Alpaca");
+    const top3 = ls
+      .slice(-3)
+      .reverse()
+      .map((e) => e.skillId);
+    expect(a).toEqual(top3);
+    for (const id of a) expect(ACTIVE_SKILL_IDS.has(id)).toBe(true);
+  });
+
+  it("defaultActivesFor renvoie [] pour un Pal sans learnset", () => {
+    expect(defaultActivesFor("WorldTreeDragon")).toEqual([]);
+  });
+
+  it("defaultPassivesFor renvoie les passifs innés valides (<= 4)", () => {
+    const p = defaultPassivesFor("Gorilla"); // pals.json : ["PAL_rude"]
+    expect(p).toContain("PAL_rude");
+    expect(p.length).toBeLessThanOrEqual(4);
+    for (const id of p) expect(PASSIVE_IDS.has(id)).toBe(true);
+    expect(defaultPassivesFor("SheepBall")).toEqual([]); // aucun passif inné
+  });
+
+  it("defaultSlotFor pré-remplit un slot valide (passifs + actifs bornés)", () => {
+    const slot = defaultSlotFor("Alpaca");
+    expect(slot).not.toBeNull();
+    if (slot === null) return;
+    expect(slot.palId).toBe("Alpaca");
+    expect(slot.actives.length).toBeLessThanOrEqual(3);
+    expect(slot.passives.length).toBeLessThanOrEqual(4);
+    expect(slot.actives).toEqual(defaultActivesFor("Alpaca"));
+    expect(slot.passives).toEqual(defaultPassivesFor("Alpaca"));
   });
 
   it("chaque Pal a un nom de partner skill FR et EN", async () => {
