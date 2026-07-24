@@ -16,7 +16,8 @@
     "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
     "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts",
     "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
-    "fetch-community": "tsx src/fetch-community.ts"
+    "fetch-community": "tsx src/fetch-community.ts",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

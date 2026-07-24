@@ -7,6 +7,8 @@
 	let { data } = $props();
 
 	let copiedCode = $state<string | null>(null);
+	let testResult = $state('');
+	let sftpForm = $state<HTMLFormElement | null>(null);
 
 	function inviteLink(code: string): string {
 		return `${page.url.origin}/join/${code}`;
@@ -32,6 +34,34 @@
 		return inv.maxUses === null
 			? m.settings_invite_uses({ count: inv.useCount })
 			: m.settings_invite_uses_max({ count: inv.useCount, max: inv.maxUses });
+	}
+
+	function sftpStatusLabel(status: 'running' | 'ok' | 'error' | null): string {
+		if (status === 'running') return m.settings_sftp_status_running();
+		if (status === 'ok') return m.settings_sftp_status_ok();
+		if (status === 'error') return m.settings_sftp_status_error();
+		return m.settings_sftp_status_never();
+	}
+
+	async function testSftpConnection() {
+		if (!sftpForm) return;
+		testResult = m.settings_sftp_test_running();
+		const fd = new FormData(sftpForm);
+		const res = await fetch(`/api/servers/${page.params.slug}/sftp-test`, {
+			method: 'POST',
+			headers: { 'content-type': 'application/json' },
+			body: JSON.stringify({
+				host: String(fd.get('sftpHost') ?? ''),
+				port: Number.parseInt(String(fd.get('sftpPort') ?? '22'), 10),
+				user: String(fd.get('sftpUser') ?? ''),
+				password: String(fd.get('sftpPassword') ?? ''),
+				remoteDir: String(fd.get('remoteDir') ?? '') || null
+			})
+		});
+		const body = await res.json();
+		testResult = body.ok
+			? m.settings_sftp_test_ok({ remoteDir: body.remoteDir })
+			: m.settings_sftp_test_error({ error: body.error });
 	}
 </script>
 
@@ -104,6 +134,66 @@
 			{/each}
 		</ul>
 	</section>
+
+	<section class="sftp">
+		<h2>{m.settings_sftp_title()}</h2>
+		{#if data.sftp}
+			<p class="status">
+				{#if data.sftp.lastImportAt}
+					{m.settings_sftp_last_import_at({
+						status: sftpStatusLabel(data.sftp.lastImportStatus),
+						date: new Date(data.sftp.lastImportAt).toLocaleString(getLocale())
+					})}
+				{:else}
+					{m.settings_sftp_last_import({ status: sftpStatusLabel(data.sftp.lastImportStatus) })}
+				{/if}
+				{#if data.sftp.lastImportError}
+					<span class="err">({data.sftp.lastImportError})</span>
+				{/if}
+			</p>
+		{/if}
+		<form class="sftp-form" method="POST" action="?/saveSftp" use:enhance bind:this={sftpForm}>
+			<label>
+				{m.settings_sftp_host()}
+				<input name="sftpHost" type="text" value={data.sftp?.sftpHost ?? ''} required />
+			</label>
+			<label>
+				{m.settings_sftp_port()}
+				<input name="sftpPort" type="number" min="1" max="65535" value={data.sftp?.sftpPort ?? 22} />
+			</label>
+			<label>
+				{m.settings_sftp_user()}
+				<input name="sftpUser" type="text" value={data.sftp?.sftpUser ?? ''} required />
+			</label>
+			<label>
+				{m.settings_sftp_password()}
+				<input
+					name="sftpPassword"
+					type="password"
+					placeholder={data.sftp?.passwordSet
+						? m.settings_sftp_password_set_placeholder()
+						: m.settings_sftp_password_unset_placeholder()}
+				/>
+			</label>
+			<label>
+				{m.settings_sftp_remote_dir()}
+				<input
+					name="remoteDir"
+					type="text"
+					value={data.sftp?.remoteDir ?? ''}
+					placeholder={m.settings_sftp_remote_dir_placeholder()}
+				/>
+			</label>
+			<label class="checkbox">
+				<input name="enabled" type="checkbox" checked={data.sftp?.enabled ?? false} />
+				{m.settings_sftp_enabled()}
+			</label>
+			<button type="submit">{m.settings_sftp_save()}</button>
+		</form>
+		<button type="button" class="ghost" onclick={testSftpConnection}>{m.settings_sftp_test()}</button>
+		{#if testResult}<p class="test-result">{testResult}</p>{/if}
+		<p class="hint">{m.settings_sftp_test_hint()}</p>
+	</section>
 </div>
 
 <style>
@@ -129,11 +219,19 @@
 		flex-wrap: wrap;
 		align-items: end;
 	}
-	.invite-form label {
+	.invite-form label,
+	.sftp-form label {
 		display: grid;
 		gap: 4px;
 		font-size: 12px;
 		color: var(--text-2);
+	}
+	.sftp-form label.checkbox {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 6px;
 	}
 	input {
 		padding: 8px 10px;
@@ -215,6 +313,21 @@
 	.members .since {
 		margin-left: auto;
 		font-size: 12px;
+		color: var(--text-3);
+	}
+	.sftp .status {
+		font-size: 12px;
+		color: var(--text-2);
+	}
+	.sftp .err {
+		color: var(--el-fire);
+	}
+	.sftp .test-result {
+		font-size: 12px;
+		color: var(--text-1);
+	}
+	.sftp .hint {
+		font-size: 11px;
 		color: var(--text-3);
 	}
 </style>

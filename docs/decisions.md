@@ -202,3 +202,6 @@ sans ligne d'item). Icônes déjà couvertes par la passe d'alias IconName.
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;
   spec `docs/superpowers/specs/2026-07-22-multi-tenant-design.md`.
+- Multi-tenant phase 3 : ingestion SFTP self-service, rollout selon
+  `docs/deploy-multi-tenant-phase-3.md` (clé `SAVE_CREDS_KEY`, migration du
+  SFTP legacy en base, purge des secrets `SFTP_*`).
