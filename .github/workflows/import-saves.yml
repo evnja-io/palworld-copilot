@@ -44,3 +44,15 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           SAVE_CREDS_KEY: ${{ secrets.SAVE_CREDS_KEY }}
         run: cd packages/pipeline && node --experimental-strip-types src/import-all.ts
+
+      # Filet de rattrapage des uploads navigateur (mode sweep, sans UPLOAD_ID) :
+      # traite les lignes `pending` dont le repository_dispatch a été perdu, marque
+      # les jobs zombies et purge les blobs orphelins. `continue-on-error` : un échec
+      # de sweep ne doit jamais masquer le statut de l'import SFTP ci-dessus. Réutilise
+      # le venv déjà construit.
+      - name: Sweep des uploads navigateur en attente
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: cd packages/pipeline && node --experimental-strip-types src/import-upload.ts
