@@ -107,6 +107,7 @@
 			<input
 				class="name"
 				type="text"
+				maxlength={80}
 				placeholder={m.teams_name_placeholder()}
 				aria-label={m.teams_name_label()}
 				bind:value={store.name}
@@ -140,6 +141,7 @@
 		<textarea
 			class="notes"
 			rows="3"
+			maxlength={2000}
 			aria-label={m.teams_notes_label()}
 			placeholder={m.teams_notes_placeholder()}
 			bind:value={store.notes}

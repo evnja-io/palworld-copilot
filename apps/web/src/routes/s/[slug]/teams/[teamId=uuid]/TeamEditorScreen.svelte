@@ -3,11 +3,13 @@
 	import { page } from '$app/state';
 	import { TeamEditorStore } from '$lib/game/team-editor.svelte';
 	import TeamEditor from '$lib/components/teams/TeamEditor.svelte';
+	import type { PageData } from './$types';
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	// Snapshot volontaire (untrack) : l'éditeur ne doit pas se re-synchroniser
 	// sur `data` après l'instanciation (édition en cours vs. rechargement du load).
+	// Correct car ce composant est recréé via {#key teamId} dans +page.svelte.
 	const team = untrack(() => data.team);
 	const myUserId = untrack(() => data.myUserId);
 

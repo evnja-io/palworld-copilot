@@ -64,7 +64,12 @@ export class TeamEditorStore {
       this.status = "error";
       return null;
     }
+    // On réaligne l'état local sur la réponse serveur (nom trimé, slots
+    // normalisés) : ce qui est affiché correspond à ce qui a été persisté.
     this.id = team.id;
+    this.name = team.name;
+    this.notes = team.notes;
+    this.slots = padSlots(team.slots);
     this.#saved = clone({ name: this.name, notes: this.notes, slots: this.slots });
     this.status = "saved";
     return this.id;
