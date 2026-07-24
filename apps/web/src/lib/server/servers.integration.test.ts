@@ -1,7 +1,7 @@
 // Test d'intégration multi-tenant (invitations, création de serveur).
 // Gated : ne tourne que si TEST_DATABASE_URL est posée (branche Neon migrée
 // avec 0005). Exécution différée en Tâche 11. Les DEUX variables sont requises
-// sur la même branche — getDb() lit $env/dynamic/private, figée par le plugin
+// sur la même branche - getDb() lit $env/dynamic/private, figée par le plugin
 // SvelteKit à l'init de Vite (pas de beforeAll : ce serait trop tard) :
 //   TEST_DATABASE_URL=<url> DATABASE_URL=<url> pnpm --filter web test
 import { afterEach, describe, expect, it } from "vitest";

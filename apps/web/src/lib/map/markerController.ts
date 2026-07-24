@@ -1,5 +1,5 @@
 // Pont Svelte -> Leaflet : Leaflet possède le DOM de la carte, Svelte l'état.
-// sync() reçoit l'état dérivé et diffe impérativement — jamais un composant
+// sync() reçoit l'état dérivé et diffe impérativement - jamais un composant
 // Svelte par marqueur (~450).
 import type * as L from "leaflet";
 

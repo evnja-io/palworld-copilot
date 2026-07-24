@@ -1,5 +1,5 @@
 // Moteur de la palette : filtrage par tokens (ET) + fuzzy sur le texte libre.
-// Module pur — l'index et le contexte (progression, apprentissages) sont injectés.
+// Module pur - l'index et le contexte (progression, apprentissages) sont injectés.
 import fuzzysort from "fuzzysort";
 import type { Locale, MarkerType, Ns, Token } from "./tokens.js";
 

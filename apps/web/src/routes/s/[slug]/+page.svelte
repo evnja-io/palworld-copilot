@@ -123,7 +123,7 @@
 		color: var(--text-3);
 	}
 
-	/* ————— Cartes de progression ————— */
+	/* --- Cartes de progression --- */
 	.cards {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -214,7 +214,7 @@
 		margin-left: 8px;
 	}
 
-	/* ————— Membres ————— */
+	/* --- Membres --- */
 	.members h2 {
 		font-size: 13px;
 		text-transform: uppercase;

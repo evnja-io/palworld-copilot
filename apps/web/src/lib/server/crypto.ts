@@ -1,4 +1,4 @@
-// Chiffrement des credentials SFTP au repos — AES-256-GCM, node:crypto, zéro dép.
+// Chiffrement des credentials SFTP au repos - AES-256-GCM, node:crypto, zéro dép.
 // MIROIR STRICT de packages/pipeline/src/creds.ts : les deux fichiers doivent
 // rester byte-identiques (test creds-mirror.test.ts). Format de fil :
 //   "v1:" + base64(iv(12) ‖ ciphertext ‖ tag(16)), AAD = serverId.

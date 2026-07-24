@@ -14,4 +14,5 @@ CREATE TABLE "save_uploads" (
 --> statement-breakpoint
 ALTER TABLE "save_uploads" ADD CONSTRAINT "save_uploads_server_id_servers_id_fk" FOREIGN KEY ("server_id") REFERENCES "public"."servers"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "save_uploads" ADD CONSTRAINT "save_uploads_uploaded_by_users_id_fk" FOREIGN KEY ("uploaded_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
-CREATE INDEX "save_uploads_server_created_idx" ON "save_uploads" USING btree ("server_id","created_at");
+CREATE INDEX "save_uploads_server_created_idx" ON "save_uploads" USING btree ("server_id","created_at");--> statement-breakpoint
+CREATE UNIQUE INDEX "save_uploads_active_unique" ON "save_uploads" USING btree ("server_id") WHERE "save_uploads"."status" in ('uploading', 'pending', 'running');

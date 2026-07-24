@@ -3,7 +3,7 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { neon } from "@neondatabase/serverless";
-import { syncPlayerNames } from "./import-lib.ts";
+import { loadLevelCmap, syncPlayerNames } from "./import-lib.ts";
 
 const dir = process.argv[2];
 if (!dir || !existsSync(join(dir, "Level.sav"))) {
@@ -16,7 +16,7 @@ if (!serverId) throw new Error("SERVER_ID manquante (uuid du serveur cible)");
 
 const sql = neon(process.env.DATABASE_URL);
 try {
-  await syncPlayerNames(sql, serverId, dir);
+  await syncPlayerNames(sql, serverId, loadLevelCmap(dir));
 } catch (err) {
   const message = err instanceof Error ? err.message : String(err);
   console.error(message);

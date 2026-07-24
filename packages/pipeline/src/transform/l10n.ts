@@ -52,7 +52,7 @@ for (const locale of ["en", "fr"] as const) {
         descs[ns + id] = text;
       }
     } catch {
-      console.warn(`  (description absente pour ${table} en ${locale} — toléré)`);
+      console.warn(`  (description absente pour ${table} en ${locale} - toléré)`);
     }
   }
   // Les descriptions embarquent les mêmes templates que les noms.

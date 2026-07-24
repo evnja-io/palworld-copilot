@@ -1,1 +1,0 @@
-CREATE UNIQUE INDEX "save_uploads_active_unique" ON "save_uploads" USING btree ("server_id") WHERE "save_uploads"."status" in ('uploading', 'pending', 'running');

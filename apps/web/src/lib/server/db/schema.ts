@@ -12,6 +12,7 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
+import type { TeamSlot } from "$lib/types";
 
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -79,6 +80,28 @@ export const progress = pgTable(
     primaryKey({ columns: [t.serverId, t.userId, t.kind, t.entityId] }),
     index("progress_server_kind_idx").on(t.serverId, t.kind),
   ],
+);
+
+// Équipes de Pals : slots en jsonb pour une écriture atomique (neon-http n'a
+// pas de transactions). PK surrogate (URLs) — écart assumé à la convention
+// PK composite ; server_id reste dans chaque WHERE (cf. lib/server/teams.ts).
+export const teams = pgTable(
+  "teams",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    authorId: uuid("author_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    name: text("name").notNull(),
+    notes: text("notes").notNull().default(""),
+    slots: jsonb("slots").$type<TeamSlot[]>().notNull().default([]),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("teams_server_idx").on(t.serverId)],
 );
 
 export const savePlayers = pgTable(
@@ -175,5 +198,33 @@ export const saveUploads = pgTable(
     uniqueIndex("save_uploads_active_unique")
       .on(t.serverId)
       .where(sql`${t.status} in ('uploading', 'pending', 'running')`),
+  ],
+);
+
+// Instances individuelles de Pals extraites de Level.sav (CharacterSaveParameterMap).
+// Portée : pals possédés par un joueur (OwnerPlayerUId), équipe + palbox ; les
+// pals postés en base peuvent apparaître (même owner), limitation documentée.
+// owner_guid : UPPER sans tirets, joint server_members.pal_player_guid.
+export const savePals = pgTable(
+  "save_pals",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    instanceId: text("instance_id").notNull(), // GUID UPPER sans tirets
+    ownerGuid: text("owner_guid").notNull(),
+    palId: text("pal_id").notNull(), // id canonique pals.json
+    gender: text("gender", { enum: ["male", "female"] }),
+    level: integer("level").notNull().default(1),
+    nickname: text("nickname"),
+    passives: text("passives").array().notNull().default(sql`'{}'::text[]`),
+    talentHp: integer("talent_hp"),
+    talentShot: integer("talent_shot"),
+    talentDefense: integer("talent_defense"),
+    importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.instanceId] }),
+    index("save_pals_owner_idx").on(t.serverId, t.ownerGuid),
   ],
 );

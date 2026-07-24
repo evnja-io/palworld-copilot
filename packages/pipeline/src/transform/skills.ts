@@ -6,7 +6,7 @@ try {
   skills = loadDataTableRows(/DT_WazaDataTable(_Common)?\.json$/);
   moveRows = loadDataTableRows(/DT_WazaMasterLevel(_Common)?\.json$/);
 } catch {
-  console.warn("  Waza indisponible (repli assumé, cf. decisions.md) — skills.json vide");
+  console.warn("  Waza indisponible (repli assumé, cf. decisions.md) - skills.json vide");
 }
 
 // Lignes indexées NewRow_x : l'ID réel du skill est WazaType (EPalWazaID::<id>).
@@ -22,7 +22,7 @@ for (const row of Object.values(skills) as any[]) {
 }
 writeGameData("skills.json", out);
 
-// Moves par pal — fichier séparé pour éviter une dépendance d'ordre avec pals.ts.
+// Moves par pal - fichier séparé pour éviter une dépendance d'ordre avec pals.ts.
 const movesByPal: Record<string, Array<{ skillId: string; level: number }>> = {};
 for (const row of Object.values(moveRows) as any[]) {
   const pal = pick<string>(row, "PalId", "PalID", "CharacterID");

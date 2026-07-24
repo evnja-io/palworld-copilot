@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeSnapshotRows, normalizeGuid } from "./import-lib";
+import { computeSnapshotRows, normalizeGuid } from "./import-lib.ts";
 
 const palIds = new Map<string, string>([["anubis", "Anubis"], ["sheepball", "Sheepball"]]);
 const techIds = new Map<string, string>([["workbench", "Workbench"]]);
