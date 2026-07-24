@@ -19,6 +19,9 @@ importers:
       '@palworld-companion/game-data':
         specifier: workspace:*
         version: link:../../packages/game-data
+      '@vercel/blob':
+        specifier: ^2.6.1
+        version: 2.6.1
       arctic:
         specifier: ^3.7.0
         version: 3.7.0
