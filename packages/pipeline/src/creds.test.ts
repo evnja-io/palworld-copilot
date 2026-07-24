@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from "vitest";
-import { decrypt, encrypt } from "./creds";
+import { decrypt, encrypt } from "./creds.ts";
 
 const TEST_KEY = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
 const SRV_A = "11111111-1111-1111-1111-111111111111";
