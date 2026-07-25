@@ -1418,11 +1418,15 @@ Dans `apps/web/src/routes/s/[slug]/map/+page.svelte` :
 **3a.** Ajouter aux imports :
 
 ```ts
-	import { spawnCounts, defaultPhase, hasSpawns } from '$lib/game/spawns';
+	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
 	import palsJson from '@palworld-companion/game-data/pals.json';
 	import SpawnPanel from '$lib/map/SpawnPanel.svelte';
 	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
 ```
+
+> Cet import est remplacé par le module partagé `$lib/game/spawns` à l'étape 1b
+> de la tâche 9, une fois que le besoin d'une règle commune à la carte et à la
+> fiche est établi. Le garder tel quel ici : le module n'existe pas encore.
 
 **3b.** Après `let markerController: MarkerController | undefined = $state();` :
 
