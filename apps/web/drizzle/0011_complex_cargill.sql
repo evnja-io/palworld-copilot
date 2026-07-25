@@ -1,0 +1,1 @@
+ALTER TABLE "servers" ADD COLUMN "kind" text DEFAULT 'local' NOT NULL;

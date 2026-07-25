@@ -37,6 +37,12 @@ export const servers = pgTable("servers", {
   ownerId: uuid("owner_id")
     .notNull()
     .references(() => users.id),
+  // Type de monde choisi à l'onboarding : "local" (save téléversée à la main)
+  // ou "dedicated" (import SFTP auto). Route l'assistant post-création et
+  // adapte l'UI (badge, réglages). Défaut "local" pour les serveurs existants.
+  kind: text("kind", { enum: ["local", "dedicated"] })
+    .notNull()
+    .default("local"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
