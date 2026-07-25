@@ -2,6 +2,7 @@ import { execSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { OUT_DIR, SPAWNS_OUT } from "./paths.js";
+import { SIZE } from "./transform/coord.js";
 
 const load = (p: string) => JSON.parse(readFileSync(join(OUT_DIR, p), "utf8"));
 const fail = (msg: string) => {
@@ -38,14 +39,19 @@ for (const id of spawnPalIds) {
   const c = spawnsIndex[id];
   if (c.day + c.night === 0) fail(`spawns: entrée vide (${id})`);
 }
-{
-  const sample = spawnPalIds[0];
-  const data = JSON.parse(
-    readFileSync(join(SPAWNS_OUT, `${sample}.json`), "utf8"),
-  ) as { r: number; day: number[][]; night: number[][] };
-  if (!(data.r > 0)) fail(`spawns: rayon invalide (${sample})`);
+// Contrôle exhaustif : un échantillon d'un seul Pal laisserait passer toute
+// régression de projection qui n'affecte pas le premier du tri.
+for (const id of spawnPalIds) {
+  const data = JSON.parse(readFileSync(join(SPAWNS_OUT, `${id}.json`), "utf8")) as {
+    r: number;
+    day: number[][];
+    night: number[][];
+  };
+  if (!(data.r > 0)) fail(`spawns: rayon invalide (${id})`);
+  if (data.day.length !== spawnsIndex[id].day || data.night.length !== spawnsIndex[id].night)
+    fail(`spawns: index et fichier divergent (${id})`);
   for (const [px, py] of [...data.day, ...data.night]) {
-    if (px < 0 || px > 8192 || py < 0 || py > 8192) fail(`spawns: point hors texture (${sample})`);
+    if (px < 0 || px > SIZE || py < 0 || py > SIZE) fail(`spawns: point hors texture (${id})`);
   }
 }
 
