@@ -111,4 +111,10 @@
 		border-radius: 999px;
 		padding: 0 4px;
 	}
+	/* Zones de spawn (vecteurs Leaflet - hors scope Svelte, d'où :global).
+	   L'opacité s'accumule aux recouvrements : la densité se lit d'elle-même. */
+	:global(.spawn-zone) {
+		fill: var(--accent);
+		fill-opacity: 0.13;
+	}
 </style>
