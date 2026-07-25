@@ -1178,6 +1178,9 @@ export class SpawnLayer {
    *  avec A → B → A pendant que le premier fetch de A est en vol, les deux
    *  continuations de A voient la même clé et dessinent chacune leurs cercles. */
   #seq = 0;
+  /** Opération de dessin en cours, rendue par `setPal` pour qu'un appelant
+   *  puisse attendre que les cercles existent. */
+  #op: Promise<void> = Promise.resolve();
 
   constructor(leaflet: typeof L, map: L.Map, toLatLng: (px: number, py: number) => L.LatLng) {
     this.#L = leaflet;
@@ -1202,12 +1205,19 @@ export class SpawnLayer {
     return pending;
   }
 
-  /** Affiche les zones d'un Pal pour une phase, ou vide la couche si null. */
-  async setPal(palId: string | null, phase: SpawnPhase): Promise<void> {
+  /** Affiche les zones d'un Pal pour une phase, ou vide la couche si null.
+   *  La promesse rendue se règle quand les cercles sont dessinés — y compris
+   *  quand l'appel rejoint une demande identique déjà en cours. Sans cela, un
+   *  appelant qui attend pour cadrer la vue obtiendrait une emprise vide. */
+  setPal(palId: string | null, phase: SpawnPhase): Promise<void> {
     const key = palId ? `${palId}:${phase}` : null;
-    if (key === this.#current) return;
+    if (key === this.#current) return this.#op;
     this.#current = key;
-    const token = ++this.#seq;
+    this.#op = this.#draw(palId, phase, ++this.#seq);
+    return this.#op;
+  }
+
+  async #draw(palId: string | null, phase: SpawnPhase, token: number): Promise<void> {
     this.#layer.clearLayers();
     if (!palId) return;
     const data = await this.#load(palId);
@@ -1464,13 +1474,16 @@ Dans `apps/web/src/routes/s/[slug]/map/+page.svelte` :
 		mapState.filters.spawnPal = palId;
 		// La phase persistée est écrasée : un Pal nocturne n'a souvent rien à
 		// montrer de jour, et hériter du Pal précédent donnerait une carte vide.
-		mapState.filters.spawnPhase = nocturnal.has(palId) ? 'night' : 'day';
+		const phase = nocturnal.has(palId) ? 'night' : 'day';
+		mapState.filters.spawnPhase = phase;
 		mapState.persist();
-		// Après le flush des effets, la couche a chargé et dessiné les cercles.
-		setTimeout(() => {
+		// Attendre la fin du dessin, pas un minuteur : setPal fait un fetch, et
+		// un setTimeout(0) s'exécuterait avant lui — l'emprise serait vide et le
+		// cadrage n'aurait jamais lieu.
+		void layer.setPal(palId, phase).then(() => {
 			const b = layer.bounds();
 			if (b && mapRef) mapRef.fitBounds(b.pad(0.15));
-		}, 0);
+		});
 	});
 
 	// Ne pas toucher à `zonedPal` ici : le laisser sur le Pal effacé est ce qui
