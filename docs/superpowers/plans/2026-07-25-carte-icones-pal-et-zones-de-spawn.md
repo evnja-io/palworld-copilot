@@ -694,7 +694,8 @@ describe("buildSpawns", () => {
   it("projette les points et expose le rayon en pixels", () => {
     const { spawns } = buildSpawns({ Anubis: row([CENTER]) }, ["Anubis"]);
     expect(spawns.Anubis.day).toEqual([[4096, 4096]]);
-    expect(spawns.Anubis.r).toBeCloseTo(84.74, 2);
+    // Arrondi explicite à 1 décimale, comme les points : égalité stricte.
+    expect(spawns.Anubis.r).toBe(84.7);
   });
 
   it("sépare le jour et la nuit", () => {
@@ -850,7 +851,7 @@ export function buildSpawns(
 - [ ] **Step 4: Lancer le test et vérifier qu'il passe**
 
 Run: `pnpm --filter @palworld-companion/pipeline test spawns.lib`
-Expected: PASS — 16 tests
+Expected: PASS — 15 tests
 
 - [ ] **Step 5: Commit**
 
