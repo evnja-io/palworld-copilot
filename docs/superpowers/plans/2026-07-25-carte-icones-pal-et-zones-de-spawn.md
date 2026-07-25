@@ -1169,9 +1169,15 @@ export class SpawnLayer {
   #toLatLng: (px: number, py: number) => L.LatLng;
   /** Unité projetée correspondant à 1 px de texture (CRS.Simple). */
   #unit: number;
-  #cache = new Map<string, PalSpawns | null>();
-  /** Clé `palId:phase` en cours, pour ignorer les chargements obsolètes. */
+  /** Le cache retient la promesse, pas sa valeur : deux demandes du même Pal
+   *  pendant un fetch en vol partagent alors une seule requête. */
+  #cache = new Map<string, Promise<PalSpawns | null>>();
+  /** Clé `palId:phase` en cours, pour court-circuiter une demande identique. */
   #current: string | null = null;
+  /** Jeton de la demande la plus récente. `#current` ne suffit pas comme garde :
+   *  avec A → B → A pendant que le premier fetch de A est en vol, les deux
+   *  continuations de A voient la même clé et dessinent chacune leurs cercles. */
+  #seq = 0;
 
   constructor(leaflet: typeof L, map: L.Map, toLatLng: (px: number, py: number) => L.LatLng) {
     this.#L = leaflet;
@@ -1180,18 +1186,20 @@ export class SpawnLayer {
     this.#layer = leaflet.featureGroup().addTo(map);
   }
 
-  async #load(palId: string): Promise<PalSpawns | null> {
+  #load(palId: string): Promise<PalSpawns | null> {
     const hit = this.#cache.get(palId);
-    if (hit !== undefined) return hit;
-    let data: PalSpawns | null = null;
-    try {
-      const res = await fetch(`/spawns/${palId}.json`);
-      if (res.ok) data = (await res.json()) as PalSpawns;
-    } catch {
-      /* hors ligne ou 404 : pas de zone à afficher */
-    }
-    this.#cache.set(palId, data);
-    return data;
+    if (hit) return hit;
+    const pending = (async () => {
+      try {
+        const res = await fetch(`/spawns/${palId}.json`);
+        if (res.ok) return (await res.json()) as PalSpawns;
+      } catch {
+        /* hors ligne ou fichier absent : pas de zone à afficher */
+      }
+      return null;
+    })();
+    this.#cache.set(palId, pending);
+    return pending;
   }
 
   /** Affiche les zones d'un Pal pour une phase, ou vide la couche si null. */
@@ -1199,11 +1207,12 @@ export class SpawnLayer {
     const key = palId ? `${palId}:${phase}` : null;
     if (key === this.#current) return;
     this.#current = key;
+    const token = ++this.#seq;
     this.#layer.clearLayers();
     if (!palId) return;
     const data = await this.#load(palId);
-    // Un autre Pal a pu être demandé pendant le fetch.
-    if (this.#current !== key || !data) return;
+    // Une demande plus récente a pris la main pendant le fetch.
+    if (token !== this.#seq || !data) return;
     const radius = data.r * this.#unit;
     for (const [px, py] of data[phase]) {
       this.#layer.addLayer(
@@ -1224,11 +1233,17 @@ export class SpawnLayer {
   }
 
   destroy(): void {
+    // Invalide toute demande encore en vol : sa continuation ne dessinera pas
+    // dans une couche déjà détachée.
+    this.#seq++;
+    this.#current = null;
     this.#layer.remove();
     this.#cache.clear();
   }
 }
 ```
+
+**Limite connue, assumée** : le rendu SVG de Leaflet crée un élément par cercle, en une passe synchrone. Mesuré sur les données réelles — médiane 68 cercles, p90 380, 7 Pals au-dessus de 1000, un seul (`MimicDog`, 3512) au-dessus de 2000. Un renderer Canvas supprimerait l'à-coup mais ignore `className`, ce qui obligerait à lire `--accent` en JavaScript et figerait la couleur au chargement. Le style piloté par CSS, cohérent avec celui des marqueurs, a été jugé plus important que la fluidité sur 1 Pal sur 249.
 
 - [ ] **Step 3: Ajouter le CSS**
 
