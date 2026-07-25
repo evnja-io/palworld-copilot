@@ -84,7 +84,7 @@ export function buildSpawns(
     const day = clusterPoints(entry.day, cell);
     const night = clusterPoints(entry.night, cell);
     if (day.length === 0 && night.length === 0) continue;
-    spawns[palId] = { r: Math.round(radiusPx * 100) / 100, day, night };
+    spawns[palId] = { r: Math.round(radiusPx * 10) / 10, day, night };
   }
   return { spawns, unresolved, treeSkipped };
 }

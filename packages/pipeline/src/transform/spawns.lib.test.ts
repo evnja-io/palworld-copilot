@@ -53,7 +53,7 @@ describe("buildSpawns", () => {
   it("projette les points et expose le rayon en pixels", () => {
     const { spawns } = buildSpawns({ Anubis: row([CENTER]) }, ["Anubis"]);
     expect(spawns.Anubis.day).toEqual([[4096, 4096]]);
-    expect(spawns.Anubis.r).toBeCloseTo(84.74, 2);
+    expect(spawns.Anubis.r).toBe(84.7);
   });
 
   it("sépare le jour et la nuit", () => {
