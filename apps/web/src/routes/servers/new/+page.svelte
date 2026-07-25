@@ -31,6 +31,8 @@
 <svelte:head><title>{m.servers_new_title()}</title></svelte:head>
 
 <div class="page">
+	<a class="escape" href="/servers">← {m.servers_title()}</a>
+
 	<div class="frame">
 		<div class="glow"></div>
 
@@ -112,7 +114,17 @@
 </div>
 
 <style>
-	.page { max-width: 620px; margin: 0 auto; padding: 40px 16px; }
+	.page { max-width: 620px; margin: 0 auto; padding: 32px 16px; }
+	.escape {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 12px;
+		font-size: 13px;
+		color: var(--text-3);
+		transition: color 140ms;
+	}
+	.escape:hover { color: var(--accent); }
 	.frame {
 		position: relative; overflow: hidden; padding: 24px; min-height: 420px;
 		display: flex; flex-direction: column;
@@ -166,6 +178,7 @@
 		font-weight: 600; font-size: 14px; font-family: var(--font-display);
 		box-shadow: 0 6px 20px hsl(199 90% 45% / 0.35);
 	}
+	.glossy:hover { background: linear-gradient(180deg, hsl(199 94% 66%), hsl(199 90% 50%)); color: var(--accent-ink); border-color: transparent; }
 	.glossy:disabled { opacity: 0.45; box-shadow: none; }
 	.shine { position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(105deg, transparent, hsl(0 0% 100% / 0.35), transparent); transform: skewX(-18deg); animation: sweep 3.2s ease-in-out infinite; }
 	.glossy:disabled .shine { display: none; }

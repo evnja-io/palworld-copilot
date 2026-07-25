@@ -184,6 +184,9 @@ input::placeholder {
 .exp-glossy:hover {
 	background: linear-gradient(180deg, hsl(199 94% 66%), hsl(199 90% 50%));
 	border-color: transparent;
+	/* Ces boutons servent aussi de liens <a> : neutralise la règle globale
+	   a:hover (couleur accent) qui rendait le libellé illisible au survol. */
+	color: var(--accent-ink);
 }
 .exp-btn:disabled,
 .exp-glossy:disabled {
