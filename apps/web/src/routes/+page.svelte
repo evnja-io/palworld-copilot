@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
-	import { getLocale } from '$lib/paraglide/runtime';
-	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
+	import AppHeader from '$lib/components/AppHeader.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
 	const DISCORD_URL = 'https://discord.gg/SJehy5fFJ';
@@ -22,14 +23,19 @@
 		{ label: m.landing_stat_relics, count: 138 }
 	];
 
-	const features = [
+	// `href` : renseigné pour les fonctionnalités accessibles sans compte, donc
+	// membres de GUEST_FEATURES (garde vérifiée par landing-features.test.ts).
+	// Les trois cartes de synchronisation (serveurs, import, parties locales)
+	// n'ont volontairement pas de cible : elles décrivent ce que débloque la
+	// connexion, dont le CTA Discord du héros est la porte d'entrée.
+	const features: Array<{ icon: string; title: () => string; body: () => string; href?: string }> = [
 		{ icon: '/icons/build/believer_flag.webp', title: m.landing_feat_servers_title, body: m.landing_feat_servers_body },
-		{ icon: '/icons/items/PalSphere_Mega.webp', title: m.landing_feat_paldex_title, body: m.landing_feat_paldex_body },
-		{ icon: '/icons/build/breedfarm.webp', title: m.landing_feat_breeding_title, body: m.landing_feat_breeding_body },
-		{ icon: '/icons/build/buildablegoddessstatue.webp', title: m.landing_feat_teams_title, body: m.landing_feat_teams_body },
-		{ icon: '/icons/items/Relic.webp', title: m.landing_feat_map_title, body: m.landing_feat_map_body },
-		{ icon: '/icons/items/Blueprint.webp', title: m.landing_feat_tech_title, body: m.landing_feat_tech_body },
-		{ icon: '/icons/build/workbench.webp', title: m.landing_feat_craft_title, body: m.landing_feat_craft_body },
+		{ icon: '/icons/items/PalSphere_Mega.webp', title: m.landing_feat_paldex_title, body: m.landing_feat_paldex_body, href: '/paldex' },
+		{ icon: '/icons/build/breedfarm.webp', title: m.landing_feat_breeding_title, body: m.landing_feat_breeding_body, href: '/breeding' },
+		{ icon: '/icons/build/buildablegoddessstatue.webp', title: m.landing_feat_teams_title, body: m.landing_feat_teams_body, href: '/teams' },
+		{ icon: '/icons/items/Relic.webp', title: m.landing_feat_map_title, body: m.landing_feat_map_body, href: '/map' },
+		{ icon: '/icons/items/Blueprint.webp', title: m.landing_feat_tech_title, body: m.landing_feat_tech_body, href: '/tech' },
+		{ icon: '/icons/build/workbench.webp', title: m.landing_feat_craft_title, body: m.landing_feat_craft_body, href: '/craft' },
 		{ icon: '/icons/build/palboxterminal.webp', title: m.landing_feat_import_title, body: m.landing_feat_import_body },
 		{ icon: '/icons/build/dimensionpalstorage.webp', title: m.landing_feat_local_title, body: m.landing_feat_local_body }
 	];
@@ -52,11 +58,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{m.app_title()} - {m.landing_title()}</title>
-	<meta name="description" content={m.landing_meta_description()} />
-	<link rel="canonical" href="https://palwork.evnja.gg/" />
-</svelte:head>
+<Seo title={m.landing_title()} description={m.landing_meta_description()} path="/" />
 
 <div class="landing">
 	<!-- Ciel : aurores + étoiles -->
@@ -79,9 +81,8 @@
 		{/each}
 	</div>
 
-	<header class="top">
-		<LangSwitch />
-	</header>
+	<!-- Variante transparente : l'illustration animée reste visible derrière. -->
+	<AppHeader variant="transparent" />
 
 	<main>
 		<section class="hero">
@@ -99,23 +100,37 @@
 					{m.auth_login_discord()}
 					<span class="shine"></span>
 				</a>
+				<!-- Essai sans friction : tout le produit est utilisable sans compte,
+				     seule la synchro de sauvegarde demande une connexion. -->
+				<a class="cta-guest" href={localizeHref('/paldex')}>{m.landing_try_guest()}</a>
 				<p class="private">{m.landing_private()}</p>
 				<ul class="stats">
 					{#each stats as s, i (i)}
 						<li class="tnum">{s.label({ count: nf.format(s.count) })}</li>
 					{/each}
 				</ul>
-				<a class="docs-link" href="/docs">{m.landing_docs_link()}</a>
+				<a class="docs-link" href={localizeHref('/docs')}>{m.landing_docs_link()}</a>
 			</div>
 		</section>
 
 		<section class="features">
 			{#each features as f, i (i)}
-				<article class="feature" style="--delay: {0.35 + i * 0.08}s">
+				{#snippet body()}
 					<img src={f.icon} alt="" width="42" height="42" loading="lazy" decoding="async" />
 					<h3>{f.title()}</h3>
 					<p>{f.body()}</p>
-				</article>
+				{/snippet}
+				<!-- Une carte dont la fonctionnalité est publique s'ouvre ; les autres
+				     restent descriptives. Apparence identique au repos. -->
+				{#if f.href}
+					<a class="feature" href={localizeHref(f.href)} style="--delay: {0.35 + i * 0.08}s">
+						{@render body()}
+					</a>
+				{:else}
+					<article class="feature" style="--delay: {0.35 + i * 0.08}s">
+						{@render body()}
+					</article>
+				{/if}
 			{/each}
 		</section>
 
@@ -287,14 +302,6 @@
 		}
 	}
 
-	/* --- Entête --- */
-	.top {
-		position: absolute;
-		top: 14px;
-		right: 16px;
-		z-index: 2;
-	}
-
 	/* --- Héros --- */
 	.hero {
 		min-height: 88dvh;
@@ -433,6 +440,20 @@
 		margin: 0 12px;
 	}
 
+	/* CTA secondaire : entrer sans compte. Volontairement plus discret que le
+	   bouton Discord, mais juste en dessous pour rester visible. */
+	.cta-guest {
+		display: block;
+		margin-top: 10px;
+		font-size: 13.5px;
+		font-weight: 500;
+		color: var(--text-2);
+	}
+	.cta-guest:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+
 	.docs-link {
 		display: inline-block;
 		margin-top: 14px;
@@ -454,6 +475,12 @@
 		padding-bottom: 48px;
 	}
 	.feature {
+		/* `display: block` + `color: inherit` : une carte rendue en <a> doit rester
+		   indiscernable d'une carte rendue en <article> au repos (la règle globale
+		   a:hover colorerait sinon la carte en accent). h3 et p portent déjà leur
+		   propre couleur ; c'est la carte elle-même qu'on neutralise. */
+		display: block;
+		color: inherit;
 		padding: 18px 16px;
 		border-radius: var(--r-md);
 		border: 1px solid var(--border);

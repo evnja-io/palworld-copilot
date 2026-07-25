@@ -5,8 +5,9 @@
 	import { itemIcon, techIcon } from '$lib/game/icons';
 	import { buildings, recipes, tech, type Tech } from '$lib/game/indexes';
 	import { ProgressStore } from '$lib/game/progress.svelte';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -86,6 +87,12 @@
 		};
 	}
 </script>
+<Seo
+	title={m.tech_title()}
+	description={m.seo_tech_desc()}
+	path="/tech"
+	indexable={isGuestContext()}
+/>
 
 {#snippet node(t: Tech)}
 	{@const unlocked = store.mine.has(t.id)}

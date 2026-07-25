@@ -5,9 +5,14 @@
 	import { getLocale } from '$lib/paraglide/runtime';
 	import { gameName } from '$lib/game/names';
 	import { sortByWorkLevel, workLabel, type WorkOrder } from '$lib/game/work';
+	// PAL_IDS : garde-fou contre un id périmé en localStorage (game-data régénéré),
+	// qui gonflerait sinon le compteur « capturés ».
+	import { PAL_IDS } from '$lib/game/team-data';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import PalCard from '$lib/components/PalCard.svelte';
 	import type { Locale } from '$lib/search/tokens';
+	import { isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -17,9 +22,11 @@
 		workLabel(a, locale).localeCompare(workLabel(b, locale), locale)
 	);
 
+	const guest = $derived(data.mode === 'guest');
+
 	const store = new ProgressStore();
 	$effect(() => {
-		store.init('pal_caught', page.params.slug!, data.progress.mine, data.progress.group);
+		store.init('pal_caught', page.params.slug!, data.progress.mine, data.progress.group, PAL_IDS);
 		store.startSync();
 		return () => store.stopSync();
 	});
@@ -54,13 +61,22 @@
 	);
 	const groupCaught = $derived(Object.keys(store.group).length);
 </script>
+<Seo
+	title={m.paldex_title()}
+	description={m.seo_paldex_desc()}
+	path="/paldex"
+	indexable={isGuestContext()}
+/>
 
 <div class="head">
 	<h1>{m.paldex_title()}</h1>
 	<p class="counts tnum">
 		<span class="me">{m.paldex_caught_me({ count: store.mine.size, total: pals.length })}</span>
-		<span class="sep">·</span>
-		<span>{m.paldex_caught_group({ count: groupCaught, total: pals.length })}</span>
+		<!-- Un invité est seul : « 0/288 pour le groupe » ne serait que du bruit. -->
+		{#if !guest}
+			<span class="sep">·</span>
+			<span>{m.paldex_caught_group({ count: groupCaught, total: pals.length })}</span>
+		{/if}
 	</p>
 </div>
 

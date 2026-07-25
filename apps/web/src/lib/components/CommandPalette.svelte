@@ -2,6 +2,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { appHref } from '$lib/nav';
+	import { GUEST_SLUG } from '$lib/guest';
+	import { readLocalProgress } from '$lib/game/localProgress';
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
 	import ElementBadge from '$lib/components/ElementBadge.svelte';
@@ -63,12 +65,18 @@
 		if (!open) return;
 		inputEl?.focus();
 		if (!data) import('$lib/search/data').then((mod) => (data = mod));
-		fetch(`/api/servers/${page.params.slug}/progress?kind=marker`)
-			.then((r) => (r.ok ? r.json() : null))
-			.then((p) => {
-				if (p) checked = new Set(p.mine as string[]);
-			})
-			.catch(() => {});
+		if (page.params.slug === GUEST_SLUG) {
+			// Invité : pas d'API serveur à interroger (elle répondrait 401 à chaque
+			// ouverture de la palette). Les effigies cochées viennent du local.
+			checked = new Set(readLocalProgress('marker'));
+		} else {
+			fetch(`/api/servers/${page.params.slug}/progress?kind=marker`)
+				.then((r) => (r.ok ? r.json() : null))
+				.then((p) => {
+					if (p) checked = new Set(p.mine as string[]);
+				})
+				.catch(() => {});
+		}
 		document.body.style.overflow = 'hidden';
 		return () => {
 			document.body.style.overflow = '';

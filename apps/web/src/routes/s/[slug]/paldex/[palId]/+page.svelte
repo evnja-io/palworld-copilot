@@ -11,9 +11,11 @@
 	import type { Locale } from '$lib/search/tokens';
 	import { childOf, parentsOf } from '$lib/game/breeding';
 	import { ProgressStore } from '$lib/game/progress.svelte';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
+	import { palSeoDescription } from '$lib/game/seoText';
 	import ElementBadge from '$lib/components/ElementBadge.svelte';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -48,6 +50,14 @@
 		craftSpeed: 'Craft'
 	};
 </script>
+
+<Seo
+	title={gameName(`pal:${pal.id}`)}
+	description={palSeoDescription(pal.id)}
+	path={`/paldex/${pal.id}`}
+	image={palIcon(pal.id) ?? '/logo.svg'}
+	indexable={isGuestContext()}
+/>
 
 <a href={appHref('/paldex')} class="back">← {m.paldex_title()}</a>
 

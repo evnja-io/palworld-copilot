@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { mount, unmount } from 'svelte';
 	import { page } from '$app/state';
+	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
 	import { ProgressStore } from '$lib/game/progress.svelte';
@@ -9,19 +10,25 @@
 	import FilterPanel from '$lib/map/FilterPanel.svelte';
 	import { MapState } from '$lib/map/mapState.svelte';
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
+	import { isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
 	const markers = markersJson as MapMarker[];
-	const relicTotal = markers.filter((mk) => mk.type === 'relic').length;
+	const relics = markers.filter((mk) => mk.type === 'relic');
+	const relicTotal = relics.length;
+	// Seules les effigies sont cochables : sert de garde-fou aux ids en localStorage.
+	const RELIC_IDS = new Set(relics.map((mk) => mk.id));
 
+	const guest = $derived(data.mode === 'guest');
 	const store = new ProgressStore();
 	const mapState = new MapState();
 	let markerController: MarkerController | undefined = $state();
 
 	$effect(() => {
 		mapState.restore();
-		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group);
+		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group, RELIC_IDS);
 		store.startSync();
 		return () => {
 			store.stopSync();
@@ -38,7 +45,8 @@
 	);
 	const counts = $derived({
 		mine: store.mine.size,
-		group: Object.keys(store.group).length,
+		// null pour un invité : le panneau masque alors la ligne « groupe ».
+		group: guest ? null : Object.keys(store.group).length,
 		total: relicTotal
 	});
 
@@ -99,6 +107,12 @@
 		}, 0);
 	});
 </script>
+<Seo
+	title={m.map_title()}
+	description={m.seo_map_desc()}
+	path="/map"
+	indexable={isGuestContext()}
+/>
 
 <div class="map-wrap">
 	<LeafletMap onready={onMapReady} />

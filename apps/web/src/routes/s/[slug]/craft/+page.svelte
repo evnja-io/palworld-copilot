@@ -3,6 +3,8 @@
 	import { gameName } from '$lib/game/names';
 	import { recipes, techUnlocking, type Recipe } from '$lib/game/indexes';
 	import RecipeCard from '$lib/components/RecipeCard.svelte';
+	import { isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let search = $state('');
 
@@ -30,6 +32,12 @@
 	});
 	const shownLevels = $derived(search ? byLevel : byLevel.slice(0, 4));
 </script>
+<Seo
+	title={m.craft_title()}
+	description={m.seo_craft_desc()}
+	path="/craft"
+	indexable={isGuestContext()}
+/>
 
 <h1>{m.craft_title()}</h1>
 

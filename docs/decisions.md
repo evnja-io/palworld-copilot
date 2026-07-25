@@ -198,6 +198,238 @@ items.ts encyclopédise les variantes dont l'override résout (items.json
 toujours non nommable sont écartées (6 : FlameThrower jamais nommé + Hotmilk
 sans ligne d'item). Icônes déjà couvertes par la passe d'alias IconName.
 
+## 2026-07-25 - Mode invité : tout le produit sans compte, en URL propre
+
+**Constat** : tout vivait sous `routes/s/[slug]/`, dont le layout redirigeait
+tout anonyme vers `/login`. Or 5 pages sur 13 ne touchent jamais la base et 4
+autres seulement pour une case à cocher. Conséquence : aucune page de contenu
+(288 pals, 2344 objets, 498 constructions) n'était accessible ni indexable.
+**Décision** : ouvrir toutes les fonctionnalités aux visiteurs, ne garder
+derrière le login que la **synchro de sauvegarde** (SFTP, upload, revendication
+de GUID, réglages, invitations, tableau de bord, progression *de groupe*).
+
+**Mécanique retenue** :
+- **Sentinelle `__guest` + hook `reroute`** (`src/hooks.ts`, `src/lib/guest.ts`) :
+  `/paldex` est résolu en interne vers `/s/__guest/paldex`. **Un seul arbre de
+  routes**, zéro fichier dupliqué, donc les deux modes ne peuvent pas diverger.
+  `generateSlug()` tire dans BASE62 (sans `_`) : la sentinelle ne peut jamais
+  collisionner avec un slug réel. Kit n'utilise la valeur de retour que pour
+  résoudre la route (`respond.js`) : `page.url` reste l'URL affichée, donc
+  `page.route.id === '/s/[slug]/map'` continue de fonctionner.
+- **Liste blanche `GUEST_FEATURES`**, pas de liste noire : `/`, `/docs`,
+  `/servers`, `/join`, `/api`, `/s/*` et les assets ne demandent aucune règle,
+  et une future route ne peut pas devenir tenant par accident. La même constante
+  pilote le reroute ET la nav du shell invité.
+- **Union discriminée `mode: 'guest' | 'member'`** renvoyée par
+  `s/[slug]/+layout.server.ts`, avec le même jeu de clés dans les deux branches.
+  `OptionalUnion` des types générés distribue sur les unions, donc `svelte-check`
+  a énuméré exactement les 8 loads à traiter. **Piège** : `Omit<union, K>` n'est
+  pas distributif, donc dans un `+page.svelte` `data.mode` ne restreint pas
+  `data.server` — le tableau de bord et les réglages ré-exposent `user`/`server`
+  depuis leur propre load.
+- **localStorage comme source de vérité invité** (`lib/game/localProgress.ts`,
+  une clé par kind), branché dans `ProgressStore` sans changer son API publique :
+  les 4 appelants, `MarkerPopup` et `GroupAvatars` sont intouchés. `group = {}`
+  fait disparaître les avatars par construction. En mode local, `startSync()`
+  écoute `storage` au lieu d'un poll 60 s (parité multi-onglets, zéro requête).
+- **Croisement** : type `ParentView` partagé, auquel `PalInstance` est
+  structurellement assignable. Les deux sources d'entrée (instances importées /
+  saisie manuelle) alimentent le même calcul et le **même bloc de résultat**,
+  sans faux `instanceId`. Le sélecteur d'espèce/passifs réutilise `TeamPicker`.
+  Le mode `path` d'un invité part de ses pals cochés au Paldex.
+- **Locale dans l'URL sur les pages publiques** : `strategy: ['url', …]` +
+  `routeStrategies` qui rebascule `/s/*`, `/servers`, `/join` sur le cookie et
+  exclut `/api`, `/ingest`. Les `urlPatterns` par défaut de Paraglide décrivaient
+  déjà le découpage voulu (FR sans préfixe, EN sous `/en/`). Paraglide possédant
+  `reroute` en stratégie URL, les deux se **composent** :
+  `deLocalizeUrl` puis `guestTarget` — et le hook renvoie toujours le chemin
+  dé-localisé, jamais `undefined`, sinon `/en/docs` ne résoudrait pas.
+
+**Conséquences / non-objectifs** :
+- Les pages tenant portent `noindex` ; les pages publiques sont les canoniques.
+- **Pas de prérendu** : ces pages vivent sous le layout tenant dont le load est
+  dynamique (cookies). Le SSR suffit à l'indexation ; le levier si le trafic
+  invité grossit est un `Cache-Control`, pas une restructuration de routes.
+- La progression invité est vide au rendu serveur et apparaît à l'hydratation
+  (même comportement que `mapState.restore()`), ce qui est **souhaitable** pour
+  un crawler : il voit le contenu statique, sans état utilisateur.
+- `LangSwitch` n'a eu besoin d'aucune modification : `setLocale` de Paraglide 2.22
+  consulte déjà `getStrategyForUrl` et navigue via `localizeUrl`.
+- Étape 1B (métadonnées par page, sitemap, robots.txt) et étape 2 (équipes
+  locales + import à l'inscription) restent à faire.
+
+## 2026-07-25 - Indexabilité : métadonnées par entité, hreflang, sitemap
+
+**Constat** : après l'ouverture aux invités, les pages de contenu étaient
+accessibles mais invisibles. Aucune n'avait de `<svelte:head>` : ni titre, ni
+description, ni canonical, ni Open Graph. Pas de sitemap, et `robots.txt`
+autorisait tout sans rien indiquer.
+
+**Décision** :
+- **Composant unique `lib/components/Seo.svelte`** (titre, description,
+  canonical, paire hreflang fr/en/x-default, Open Graph, Twitter card), posé sur
+  les 9 pages liste, les 3 types de page de détail, la landing et `/docs`.
+  Prop `indexable` : à `false` sur les pages tenant, où le layout émet déjà
+  `noindex` — y ajouter un canonical vers la page publique enverrait un signal
+  contradictoire.
+- **`lib/seo.ts`** : `SITE_URL` en dur et `absoluteUrl()` via `localizeUrl`
+  plutôt que `localizeHref`, pour que canonical/hreflang/sitemap désignent la
+  même URL depuis un preview Vercel, en local ou en production.
+- **`isGuestContext()`** (lib/nav.ts) plutôt que `data.mode` : les pages
+  items/craft/buildings n'ont aucun load, donc pas de `data` — le mode se lit
+  depuis l'URL.
+
+**Descriptions par entité, et le vrai problème du contenu mince** :
+- Pals : les 288 ont une description de jeu exploitable. Utilisée telle quelle.
+- Objets : ~2220/2344. Une garde `usableDesc()` écarte les placeholders l10n —
+  certaines entrées ne contiennent que le nom de l'objet
+  (`item:AnimalSkin` → « Animal Skin »), ce qui donnerait une meta de 11
+  caractères, pire qu'un gabarit.
+- **Constructions : AUCUNE n'a de description** (le namespace `building:`
+  n'existe pas dans l10n). La description est donc composée à partir des
+  **matériaux requis**, seule donnée qui distingue réellement les 498 pages.
+  Le nom se résout via `mapObjectId` et non `id` : les deux diffèrent pour 6
+  constructions (CampFire → Campfire, Stone_pillar → Stone_Pillar…).
+- Les variantes de rareté `_2.._5` étaient le risque de duplication supposé
+  (1039 objets sur 2344), mais la plupart ont noms ET descriptions distincts.
+  Après mesure, seuls **18 groupes / 87 pages** produisaient des metas
+  identiques (Head001..Head001_5 partagent « Couronne royale » sans
+  description) ; la rareté suffit à distinguer 17 de ces 18 groupes, donc le
+  gabarit de repli la mentionne.
+
+**Sitemap** : `routes/sitemap.xml/+server.ts`, `prerender = true` (liste
+entièrement dérivée de game-data ; vit hors de `/s/[slug]`, donc aucun conflit
+avec le layout tenant non prérenderable). 6 278 URLs = 3 139 chemins × 2
+locales, chacune annotée de ses alternates — **le même jeu que les balises
+`<head>`, x-default compris** : une divergence entre les deux invaliderait
+l'annotation. 2,5 Mo, très en dessous des limites de 50 Mo / 50 000 URLs.
+Se périme après une mise à jour du jeu : un redéploiement suffit.
+
+**`robots.txt`** : `Disallow` sur `/s/`, `/api/`, `/ingest/`, `/servers`,
+`/join/`, `/login`, `/logout` (les pages tenant redirigent déjà les anonymes et
+portent `noindex` ; c'est du budget de crawl épargné), plus la ligne `Sitemap:`.
+
+**Non-objectifs** : pas de JSON-LD (à réévaluer seulement si les rich results
+deviennent un objectif), pas de prérendu des pages publiques (cf. l'entrée
+précédente).
+
+## 2026-07-25 - Équipes locales et reprise du travail invité
+
+**Constat** : le mode invité couvrait la consultation et le suivi de
+progression, mais le team builder restait fermé — et rien ne récupérait le
+travail d'un visiteur qui finissait par créer un serveur.
+
+**Décision** :
+- **Équipes en localStorage** (`lib/game/localTeams.ts`, clé `guest-teams-v1`,
+  plafond 20). Une seule clé plutôt qu'une par équipe : les écritures restent
+  atomiques. Le contenu des slots n'est PAS validé à la lecture (seule la forme
+  l'est) — la validation des ids est le rôle du serveur, à l'import.
+- **`TeamEditorStore` gagne un backend local** dans `save()`, avec les mêmes
+  contraintes (nom trimé, 1-80 caractères) et le **même réalignement
+  post-sauvegarde** que la réponse serveur, pour que l'éditeur se comporte à
+  l'identique dans les deux modes. `crypto.randomUUID()` produit un v4, donc
+  accepté par `src/params/uuid.ts` : l'URL `/teams/<uuid>` fonctionne.
+- **Résolution de l'équipe déplacée du composant vers la page.**
+  `TeamEditorScreen` reçoit désormais une équipe concrète en prop ; c'est
+  `+page.svelte` qui la résout (base pour un membre, localStorage au montage
+  pour un invité) et ne monte l'écran que `{#if team}`, sous le `{#key teamId}`
+  existant. Le store est donc instancié une seule fois, sur une équipe connue.
+  Un `error(404)` côté load serait faux pour un invité : le serveur ne peut pas
+  savoir. Équipe introuvable => retour à la liste.
+- **`/teams` est accessible mais NON indexable** (`GUEST_NOINDEX`) : c'est un
+  espace de travail personnel, vide par définition pour un visiteur. Il reste
+  dans `GUEST_FEATURES` (reroute + nav) mais est exclu du sitemap et porte
+  `noindex`. Sans cette distinction, le sitemap aurait pointé vers une page sans
+  canonical ni hreflang.
+
+**Reprise du travail (`/api/servers/[slug]/guest-import`)** :
+- **Surface : une bannière dans la branche membre du shell**, seule à couvrir
+  les DEUX entonnoirs — création (`/servers/new` → `/s/<slug>/setup`) et
+  adhésion (`/join/<code>` → `/s/<slug>`) — plus « je me connecte plus tard
+  depuis n'importe quelle page ». Aucun des deux assistants n'a été touché.
+- **Toute la validation avant la moindre écriture**, extraite dans
+  `lib/server/guestImport.ts` : ces données viennent du navigateur, donc de
+  l'utilisateur. Progression filtrée au registre (`isValidEntity`), plafonnée,
+  dédupliquée ; kinds hors registre ignorés (`__proto__` compris). Équipes
+  passées par `validateTeamInput`, donc mêmes gardes que l'API teams (ids,
+  longueurs, clés exactes, pollution de prototype). L'extraction rend ce
+  périmètre **testable sans base** — 15 tests unitaires, alors que l'endpoint
+  lui-même exige une session.
+- **Fusion additive, jamais de suppression** : `onConflictDoNothing` par lots de
+  500 (Neon HTTP n'a pas de transaction). Réexécuter l'appel est sans effet.
+- Les ids locaux ne sont **jamais** réutilisés : `createTeam` réémet les siens.
+- `createTeam` lève un 403 au-delà de `MAX_TEAMS_PER_SERVER` ; faute de
+  transaction, on rend compte de ce qui est réellement passé (`teamsTruncated`)
+  plutôt que de faire échouer tout l'appel après avoir déjà écrit la
+  progression.
+- Purge du stockage local **seulement après un succès confirmé** ; « Plus tard »
+  mémorise le slug (`guest-import-dismissed-v1`) mais **conserve** les données,
+  pour qu'un autre serveur puisse encore les recevoir.
+
+**Non vérifié de bout en bout** : le chemin membre (bannière, endpoint réel,
+redirection `/paldex` → `/s/<slug>/paldex`) demande une session Discord. Les
+gardes sont confirmées (401 sans session, 405 sur GET) et la validation est
+couverte par tests, mais le parcours d'import lui-même reste à valider une fois
+connecté.
+
+## 2026-07-25 - Un seul en-tête pour toute la surface publique
+
+**Constat** (audit `improve-ui`, plans dans `design-plans/`) : l'ouverture aux
+invités avait laissé trois en-têtes pour un même visiteur anonyme dans une même
+tâche. Mesuré sur le rendu :
+- `/` n'avait qu'un sélecteur de langue en `position: absolute` — ni marque
+  cliquable, ni navigation, ni connexion ;
+- `/docs`, pourtant publiée au sitemap avec canonical et hreflang donc porte
+  d'entrée depuis la recherche, ne contenait **qu'un seul lien interne** (`/`) ;
+- la coquille invité empilait marque + 8 liens + recherche + Discord + langue +
+  CTA dans une rangée de 52 px : **89 px de navigation tronquée à 1280 px**, et
+  **146 px de haut (17 % du viewport) sur 3 rangées à 390 px**.
+
+La cause n'était pas trois oublis mais **l'absence de propriétaire** : le seul
+en-tête complet vivait à l'intérieur du layout tenant, donc inaccessible aux
+routes publiques hors `/s/[slug]`.
+
+**Décision** :
+- **`lib/components/AppHeader.svelte` est le propriétaire unique**, consommé par
+  la coquille tenant (invité et membre), `/` et `/docs`. `LangSwitch` n'a plus
+  qu'un seul point de montage dans tout le dépôt.
+- **La rangée principale est réservée à la navigation produit** (marque ou
+  sélecteur de serveur · nav · recherche · action primaire). Les utilitaires de
+  session — Discord, langue, et en membre lien d'import, nom, déconnexion —
+  passent dans une divulgation `<details>` calquée sur le sélecteur de serveur
+  existant : **un seul mécanisme de menu**, pas deux.
+- **Le CTA de connexion emploie `.exp-btn`** (`app.css`), la même primitive que
+  « créer un serveur » sur `/servers`. L'action qui ouvre le tunnel de
+  conversion était jusque-là présentée plus discrètement que celle qui le
+  poursuit. Le commentaire de `app.css` déclarant le périmètre de `.exp-*`
+  nomme désormais aussi l'en-tête — son silence est précisément la raison pour
+  laquelle l'en-tête avait dérivé.
+- **Variante `transparent`** pour la landing seule : son en-tête sans chrome
+  était une décision d'identité (l'illustration animée du hero doit rester
+  visible). Deux valeurs de fond/bordure sur le même composant, pas une
+  seconde primitive.
+- **Les 6 cartes de fonctionnalité à route publique deviennent cliquables**
+  (`/paldex`, `/breeding`, `/teams`, `/map`, `/tech`, `/craft`). Les 3 cartes de
+  synchronisation restent descriptives : la grille rend ainsi visible, sans
+  copie supplémentaire, ce qui est essayable tout de suite et ce qui demande un
+  compte. `routes/landing-features.test.ts` garde ces cibles alignées sur
+  `GUEST_FEATURES`.
+
+**Résultat mesuré** : débordement de nav à 1280 px 89 → **0 px** ; hauteur
+mobile 146 → **103 px** (17 % → 12 %), 3 → **2 rangées** ; liens internes sur
+`/docs` 1 → **10**.
+
+**Deux ajustements non prévus par les plans, assumés** : une branche
+`@media (max-width: 1400px)` masque le libellé du bouton de recherche (la seule
+consolidation des utilitaires laissait 60 px de débordement, le CTA passé en
+`.exp-btn` étant plus large), et une clé `auth_login_short` raccourcit le CTA
+sous 520 px pour qu'il tienne sur la rangée de la marque — sans quoi l'en-tête
+mobile restait à 3 rangées. Libellé complet conservé en `aria-label`.
+
+**Reste à valider connecté** : le mode membre n'a pas pu être mesuré (session
+Discord indisponible). À revérifier : débordement de nav à 1280 px, sélecteur de
+serveur, import et déconnexion dans le menu utilitaire.
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

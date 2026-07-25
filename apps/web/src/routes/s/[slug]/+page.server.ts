@@ -1,3 +1,4 @@
+import { redirect } from "@sveltejs/kit";
 import { and, eq, sql } from "drizzle-orm";
 import pals from "@palworld-companion/game-data/pals.json";
 import tech from "@palworld-companion/game-data/tech.json";
@@ -20,7 +21,10 @@ export type MemberStats = {
 };
 
 export async function load({ parent }: PageServerLoadEvent) {
-  const { server } = await parent();
+  const p = await parent();
+  // Le tableau de bord EST le serveur : rien à montrer à un invité.
+  if (p.mode === "guest") redirect(302, "/paldex");
+  const { server, user } = p;
   const db = getDb();
   const [perUser, groupRows, [lastRow]] = await Promise.all([
     db
@@ -93,6 +97,10 @@ export async function load({ parent }: PageServerLoadEvent) {
   }
 
   return {
+    // Re-exposé ici (non-null) : dans un +page.svelte, `Omit` sur l'union du
+    // layout n'est pas distributif, donc data.mode ne saurait pas restreindre
+    // data.user. Les données de page prennent le pas sur celles du parent.
+    user,
     members,
     group,
     totals: TOTALS,

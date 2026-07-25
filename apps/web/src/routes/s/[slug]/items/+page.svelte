@@ -3,7 +3,8 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { itemIcon } from '$lib/game/icons';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const CATS = [...new Set(items.map((i) => i.typeA).filter(Boolean))].sort() as string[];
 
@@ -23,6 +24,12 @@
 	);
 	const shown = $derived(search || cat ? visible : visible.slice(0, 120));
 </script>
+<Seo
+	title={m.items_title()}
+	description={m.seo_items_desc()}
+	path="/items"
+	indexable={isGuestContext()}
+/>
 
 <div class="head">
 	<h1>{m.items_title()}</h1>

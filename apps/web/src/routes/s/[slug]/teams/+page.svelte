@@ -3,15 +3,45 @@
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale } from '$lib/paraglide/runtime';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
 	import { palIcon } from '$lib/game/icons';
+	import { deleteLocalTeam, listLocalTeams, MAX_LOCAL_TEAMS } from '$lib/game/localTeams';
+	import type { TeamSlot } from '$lib/types';
 
 	let { data } = $props();
 
 	const df = new Intl.DateTimeFormat(getLocale(), { dateStyle: 'medium' });
+	const guest = $derived(isGuestContext());
+
+	type TeamCard = {
+		id: string;
+		name: string;
+		notes: string;
+		slots: TeamSlot[];
+		updatedAt: string | Date;
+		authorId: string | null;
+		authorName: string | null;
+	};
+
+	// Invité : les équipes vivent en localStorage, donc absentes du load serveur.
+	// Relues au montage et après une suppression (invalidateAll n'y changerait rien).
+	let localTeams = $state<TeamCard[]>([]);
+	function refreshLocalTeams() {
+		localTeams = listLocalTeams().map((t) => ({ ...t, authorId: null, authorName: null }));
+	}
+	$effect(() => {
+		if (guest) refreshLocalTeams();
+	});
+	const teams = $derived<TeamCard[]>(guest ? localTeams : data.teams);
+	const atLocalCap = $derived(guest && teams.length >= MAX_LOCAL_TEAMS);
 
 	async function deleteTeam(id: string, name: string) {
 		if (!confirm(m.teams_delete_confirm({ name }))) return;
+		if (guest) {
+			deleteLocalTeam(id);
+			refreshLocalTeams();
+			return;
+		}
 		const res = await fetch(`/api/servers/${page.params.slug}/teams/${id}`, {
 			method: 'DELETE'
 		}).catch(() => null);
@@ -23,21 +53,32 @@
 	}
 </script>
 
-<svelte:head><title>{m.teams_title()}</title></svelte:head>
+<svelte:head>
+	<title>{m.teams_title()}</title>
+	<!-- Espace de travail personnel : vide pour un visiteur, donc rien à indexer
+	     (exclu aussi du sitemap, cf. GUEST_NOINDEX). -->
+	<meta name="robots" content="noindex" />
+</svelte:head>
 
 <header class="head">
 	<div>
 		<h1>{m.teams_title()}</h1>
-		<p class="count tnum">{m.teams_count({ count: data.teams.length })}</p>
+		<p class="count tnum">{m.teams_count({ count: teams.length })}</p>
 	</div>
-	<a class="new" href={appHref('/teams/new')}>{m.teams_new()}</a>
+	{#if !atLocalCap}
+		<a class="new" href={appHref('/teams/new')}>{m.teams_new()}</a>
+	{/if}
 </header>
 
-{#if data.teams.length === 0}
+{#if guest}
+	<p class="local-note">{m.teams_guest_local({ max: MAX_LOCAL_TEAMS })}</p>
+{/if}
+
+{#if teams.length === 0}
 	<p class="empty">{m.teams_empty()}</p>
 {:else}
 	<ul class="cards">
-		{#each data.teams as t (t.id)}
+		{#each teams as t (t.id)}
 			<li class="card">
 				<a class="card-link" href={appHref(`/teams/${t.id}`)}>
 					<span class="card-name">{t.name}</span>
@@ -52,12 +93,15 @@
 					</span>
 					{#if t.notes}<span class="notes">{t.notes}</span>{/if}
 					<span class="meta">
-						{m.teams_by({ name: t.authorName })}
-						<span class="sep" aria-hidden="true">·</span>
+						<!-- Une équipe locale n'a pas d'auteur : un invité est seul. -->
+						{#if t.authorName}
+							{m.teams_by({ name: t.authorName })}
+							<span class="sep" aria-hidden="true">·</span>
+						{/if}
 						<span class="tnum">{m.teams_updated({ date: df.format(new Date(t.updatedAt)) })}</span>
 					</span>
 				</a>
-				{#if t.authorId === data.myUserId}
+				{#if guest || t.authorId === data.myUserId}
 					<button class="delete" onclick={() => deleteTeam(t.id, t.name)}>
 						{m.teams_delete()}
 					</button>
@@ -99,6 +143,11 @@
 		color: var(--text-3);
 		text-align: center;
 		padding: 48px 0;
+	}
+	.local-note {
+		margin: -4px 0 16px;
+		font-size: 12px;
+		color: var(--text-3);
 	}
 	.cards {
 		list-style: none;

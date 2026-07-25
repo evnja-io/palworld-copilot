@@ -1,12 +1,14 @@
-import { fail } from "@sveltejs/kit";
+import { fail, redirect } from "@sveltejs/kit";
 import { ClaimError, claimGuid, listSnapshots } from "$lib/server/import";
 import { requireMembership } from "$lib/server/servers";
 import { getPostHogClient } from "$lib/server/posthog";
 import type { Actions, PageServerLoadEvent } from "./$types";
 
 export async function load({ parent }: PageServerLoadEvent) {
-  const { server, membership } = await parent();
-  return { snapshots: await listSnapshots(server.id), mine: membership.palPlayerGuid };
+  const p = await parent();
+  // Synchro de sauvegarde : réservée aux membres.
+  if (p.mode === "guest") redirect(302, "/paldex");
+  return { snapshots: await listSnapshots(p.server.id), mine: p.membership.palPlayerGuid };
 }
 
 export const actions: Actions = {
