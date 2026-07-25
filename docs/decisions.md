@@ -313,6 +313,65 @@ portent `noindex` ; c'est du budget de crawl épargné), plus la ligne `Sitemap:
 deviennent un objectif), pas de prérendu des pages publiques (cf. l'entrée
 précédente).
 
+## 2026-07-25 - Équipes locales et reprise du travail invité
+
+**Constat** : le mode invité couvrait la consultation et le suivi de
+progression, mais le team builder restait fermé — et rien ne récupérait le
+travail d'un visiteur qui finissait par créer un serveur.
+
+**Décision** :
+- **Équipes en localStorage** (`lib/game/localTeams.ts`, clé `guest-teams-v1`,
+  plafond 20). Une seule clé plutôt qu'une par équipe : les écritures restent
+  atomiques. Le contenu des slots n'est PAS validé à la lecture (seule la forme
+  l'est) — la validation des ids est le rôle du serveur, à l'import.
+- **`TeamEditorStore` gagne un backend local** dans `save()`, avec les mêmes
+  contraintes (nom trimé, 1-80 caractères) et le **même réalignement
+  post-sauvegarde** que la réponse serveur, pour que l'éditeur se comporte à
+  l'identique dans les deux modes. `crypto.randomUUID()` produit un v4, donc
+  accepté par `src/params/uuid.ts` : l'URL `/teams/<uuid>` fonctionne.
+- **Résolution de l'équipe déplacée du composant vers la page.**
+  `TeamEditorScreen` reçoit désormais une équipe concrète en prop ; c'est
+  `+page.svelte` qui la résout (base pour un membre, localStorage au montage
+  pour un invité) et ne monte l'écran que `{#if team}`, sous le `{#key teamId}`
+  existant. Le store est donc instancié une seule fois, sur une équipe connue.
+  Un `error(404)` côté load serait faux pour un invité : le serveur ne peut pas
+  savoir. Équipe introuvable => retour à la liste.
+- **`/teams` est accessible mais NON indexable** (`GUEST_NOINDEX`) : c'est un
+  espace de travail personnel, vide par définition pour un visiteur. Il reste
+  dans `GUEST_FEATURES` (reroute + nav) mais est exclu du sitemap et porte
+  `noindex`. Sans cette distinction, le sitemap aurait pointé vers une page sans
+  canonical ni hreflang.
+
+**Reprise du travail (`/api/servers/[slug]/guest-import`)** :
+- **Surface : une bannière dans la branche membre du shell**, seule à couvrir
+  les DEUX entonnoirs — création (`/servers/new` → `/s/<slug>/setup`) et
+  adhésion (`/join/<code>` → `/s/<slug>`) — plus « je me connecte plus tard
+  depuis n'importe quelle page ». Aucun des deux assistants n'a été touché.
+- **Toute la validation avant la moindre écriture**, extraite dans
+  `lib/server/guestImport.ts` : ces données viennent du navigateur, donc de
+  l'utilisateur. Progression filtrée au registre (`isValidEntity`), plafonnée,
+  dédupliquée ; kinds hors registre ignorés (`__proto__` compris). Équipes
+  passées par `validateTeamInput`, donc mêmes gardes que l'API teams (ids,
+  longueurs, clés exactes, pollution de prototype). L'extraction rend ce
+  périmètre **testable sans base** — 15 tests unitaires, alors que l'endpoint
+  lui-même exige une session.
+- **Fusion additive, jamais de suppression** : `onConflictDoNothing` par lots de
+  500 (Neon HTTP n'a pas de transaction). Réexécuter l'appel est sans effet.
+- Les ids locaux ne sont **jamais** réutilisés : `createTeam` réémet les siens.
+- `createTeam` lève un 403 au-delà de `MAX_TEAMS_PER_SERVER` ; faute de
+  transaction, on rend compte de ce qui est réellement passé (`teamsTruncated`)
+  plutôt que de faire échouer tout l'appel après avoir déjà écrit la
+  progression.
+- Purge du stockage local **seulement après un succès confirmé** ; « Plus tard »
+  mémorise le slug (`guest-import-dismissed-v1`) mais **conserve** les données,
+  pour qu'un autre serveur puisse encore les recevoir.
+
+**Non vérifié de bout en bout** : le chemin membre (bannière, endpoint réel,
+redirection `/paldex` → `/s/<slug>/paldex`) demande une session Discord. Les
+gardes sont confirmées (401 sans session, 405 sur GET) et la validation est
+couverte par tests, mais le parcours d'import lui-même reste à valider une fois
+connecté.
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

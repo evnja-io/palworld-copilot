@@ -1,7 +1,7 @@
 import pals from "@palworld-companion/game-data/pals.json";
 import items from "@palworld-companion/game-data/items.json";
 import buildings from "@palworld-companion/game-data/buildings.json";
-import { GUEST_FEATURES } from "$lib/guest";
+import { GUEST_INDEXABLE_FEATURES } from "$lib/guest";
 import { absoluteUrl, alternates } from "$lib/seo";
 import { locales } from "$lib/paraglide/runtime";
 
@@ -20,7 +20,9 @@ function publicPaths(): string[] {
   ];
   // La racine et /docs ne sont pas dans GUEST_FEATURES (ce sont des pages
   // publiques hors périmètre du reroute) : on les ajoute explicitement.
-  return ["/", "/docs", ...GUEST_FEATURES, ...entities];
+  // GUEST_INDEXABLE_FEATURES exclut /teams : espace de travail personnel, vide
+  // pour un visiteur, et marqué noindex côté page.
+  return ["/", "/docs", ...GUEST_INDEXABLE_FEATURES, ...entities];
 }
 
 const escapeXml = (s: string) =>

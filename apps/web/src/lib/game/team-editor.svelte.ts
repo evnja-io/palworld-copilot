@@ -1,4 +1,6 @@
 import type { TeamSlot } from "$lib/types";
+import { GUEST_SLUG } from "$lib/guest";
+import { upsertLocalTeam } from "./localTeams";
 
 type Snapshot = { name: string; notes: string; slots: TeamSlot[] };
 
@@ -43,6 +45,38 @@ export class TeamEditorStore {
   async save(): Promise<string | null> {
     if (this.status === "saving") return this.id;
     this.status = "saving";
+
+    // Invité : persistance en localStorage. On reproduit les mêmes contraintes
+    // et le même réalignement post-sauvegarde que le serveur, pour que les deux
+    // backends se comportent à l'identique vis-à-vis de l'éditeur.
+    if (this.#slug === GUEST_SLUG) {
+      const name = this.name.trim();
+      if (name.length < 1 || name.length > 80) {
+        this.status = "error";
+        return null;
+      }
+      // crypto.randomUUID() produit un v4, donc accepté par src/params/uuid.ts.
+      const id = this.id ?? crypto.randomUUID();
+      const slots = padSlots(this.slots);
+      const ok = upsertLocalTeam({
+        id,
+        name,
+        notes: this.notes,
+        slots: JSON.parse(JSON.stringify(slots)),
+        updatedAt: new Date().toISOString(),
+      });
+      if (!ok) {
+        this.status = "error"; // plafond d'équipes locales atteint
+        return null;
+      }
+      this.id = id;
+      this.name = name;
+      this.slots = slots;
+      this.#saved = clone({ name: this.name, notes: this.notes, slots: this.slots });
+      this.status = "saved";
+      return id;
+    }
+
     const body = JSON.stringify({ name: this.name, notes: this.notes, slots: this.slots });
     const url =
       this.id === null

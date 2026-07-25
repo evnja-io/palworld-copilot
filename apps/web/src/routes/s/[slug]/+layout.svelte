@@ -7,6 +7,7 @@
 	import { GUEST_FEATURES } from '$lib/guest';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import CommandPalette from '$lib/components/CommandPalette.svelte';
+	import GuestImportBanner from '$lib/components/GuestImportBanner.svelte';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { data, children } = $props();
@@ -114,6 +115,9 @@
 	</header>
 	{#if data.mode === 'guest'}
 		<p class="guest-notice">{m.guest_local_notice()}</p>
+	{:else}
+		<!-- Proposition de reprise du travail fait en mode invité. -->
+		<GuestImportBanner slug={data.server.slug} />
 	{/if}
 	<main class:fullscreen={page.route.id === '/s/[slug]/map'}>{@render children()}</main>
 </div>

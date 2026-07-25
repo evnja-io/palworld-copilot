@@ -404,5 +404,14 @@
   "seo_item_fallback": "{name} dans Palworld : recettes qui l'utilisent, sources, rareté et statistiques.",
   "seo_building_materials": "{name} dans Palworld : nécessite {materials}. Catégorie, technologie de déblocage et coût de construction.",
   "seo_building_fallback": "{name} dans Palworld : catégorie, technologie de déblocage et coût de construction.",
-  "seo_item_fallback_rarity": "{name} (rareté {rarity}) dans Palworld : recettes qui l'utilisent, sources et statistiques."
+  "seo_item_fallback_rarity": "{name} (rareté {rarity}) dans Palworld : recettes qui l'utilisent, sources et statistiques.",
+  "teams_guest_local": "Tes équipes sont enregistrées dans ce navigateur ({max} maximum). Connecte-toi pour les partager avec ta tribu.",
+  "guest_import_title": "Reprendre ton travail",
+  "guest_import_body": "Tu as {pals} Pals, {tech} technologies, {relics} effigies et {teams} équipes enregistrés dans ce navigateur.",
+  "guest_import_cta": "Importer ici",
+  "guest_import_later": "Plus tard",
+  "guest_import_running": "Import en cours…",
+  "guest_import_done": "Import terminé.",
+  "guest_import_error": "L'import a échoué. Réessaie depuis la page d'import.",
+  "guest_import_truncated": "Limite d'équipes du serveur atteinte : certaines équipes n'ont pas été importées."
 }

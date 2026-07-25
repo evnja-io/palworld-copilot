@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { GUEST_SLUG, guestTarget, isGuestRouteId, stripGuestPrefix } from "./guest";
+import {
+  GUEST_FEATURES,
+  GUEST_INDEXABLE_FEATURES,
+  GUEST_SLUG,
+  guestTarget,
+  isGuestRouteId,
+  stripGuestPrefix,
+} from "./guest";
 
 describe("guestTarget", () => {
   it("mappe une page liste et une page de détail", () => {
@@ -92,11 +99,30 @@ describe("isGuestRouteId", () => {
     expect(isGuestRouteId("/s/[slug]/import")).toBe(false);
     expect(isGuestRouteId("/s/[slug]/upload")).toBe(false);
     expect(isGuestRouteId("/s/[slug]/setup")).toBe(false);
-    // /teams n'arrive qu'à l'étape 2.
-    expect(isGuestRouteId("/s/[slug]/teams")).toBe(false);
+  });
+
+  it("accepte les équipes et leurs sous-routes (étape 2)", () => {
+    expect(isGuestRouteId("/s/[slug]/teams")).toBe(true);
+    expect(isGuestRouteId("/s/[slug]/teams/new")).toBe(true);
+    expect(isGuestRouteId("/s/[slug]/teams/[teamId=uuid]")).toBe(true);
   });
 
   it("refuse un route id absent", () => {
     expect(isGuestRouteId(null)).toBe(false);
+  });
+});
+
+describe("GUEST_INDEXABLE_FEATURES", () => {
+  it("exclut les espaces de travail personnels du sitemap", () => {
+    // /teams reste accessible et dans la nav, mais n'a rien à faire dans l'index :
+    // la liste d'équipes d'un visiteur est vide par définition.
+    expect(GUEST_FEATURES).toContain("/teams");
+    expect(GUEST_INDEXABLE_FEATURES).not.toContain("/teams");
+  });
+
+  it("garde toutes les autres fonctionnalités", () => {
+    for (const f of ["/paldex", "/breeding", "/items", "/craft", "/tech", "/buildings", "/map"]) {
+      expect(GUEST_INDEXABLE_FEATURES).toContain(f);
+    }
   });
 });

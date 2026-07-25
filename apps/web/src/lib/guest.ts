@@ -11,12 +11,33 @@ export const GUEST_SLUG = "__guest";
 export const GUEST_FEATURES = [
   "/paldex",
   "/breeding",
+  "/teams",
   "/items",
   "/craft",
   "/tech",
   "/buildings",
   "/map",
 ] as const;
+
+/** Fonctionnalités ouvertes aux invités mais NON indexables : espaces de travail
+ *  personnels, sans contenu pour un moteur (la liste d'équipes d'un visiteur est
+ *  vide par définition). Elles restent dans GUEST_FEATURES — donc accessibles et
+ *  dans la nav — mais sont exclues du sitemap et portent `noindex`. */
+export const GUEST_NOINDEX: readonly string[] = ["/teams"];
+
+/** Chemins de fonctionnalité à publier dans le sitemap. */
+export const GUEST_INDEXABLE_FEATURES = GUEST_FEATURES.filter(
+  (f) => !GUEST_NOINDEX.includes(f),
+);
+
+/** Kinds de progression stockables côté invité. Miroir du REGISTRY de
+ *  lib/server/progress.ts, réexprimé ici pour rester importable côté client. */
+export const GUEST_PROGRESS_KINDS = ["pal_caught", "tech_unlocked", "marker"] as const;
+
+/** Plafond d'équipes locales. Défini ici (module pur) plutôt que dans
+ *  localTeams.ts, pour que l'endpoint d'import puisse le borner sans importer
+ *  un module qui touche à localStorage. */
+export const MAX_GUEST_TEAMS = 20;
 
 /** Chemin interne pour une URL publique (/paldex → /s/__guest/paldex),
  *  ou undefined si le chemin est hors du périmètre invité.

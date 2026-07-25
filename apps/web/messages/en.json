@@ -404,5 +404,14 @@
   "seo_item_fallback": "{name} in Palworld: recipes that use it, sources, rarity and stats.",
   "seo_building_materials": "{name} in Palworld: requires {materials}. Category, unlocking technology and build cost.",
   "seo_building_fallback": "{name} in Palworld: category, unlocking technology and build cost.",
-  "seo_item_fallback_rarity": "{name} (rarity {rarity}) in Palworld: recipes that use it, sources and stats."
+  "seo_item_fallback_rarity": "{name} (rarity {rarity}) in Palworld: recipes that use it, sources and stats.",
+  "teams_guest_local": "Your teams are saved in this browser ({max} max). Sign in to share them with your tribe.",
+  "guest_import_title": "Bring your work over",
+  "guest_import_body": "You have {pals} Pals, {tech} technologies, {relics} effigies and {teams} teams saved in this browser.",
+  "guest_import_cta": "Import them here",
+  "guest_import_later": "Later",
+  "guest_import_running": "Importing…",
+  "guest_import_done": "Import complete.",
+  "guest_import_error": "Import failed. Try again from the import page.",
+  "guest_import_truncated": "Server team limit reached: some teams were not imported."
 }
