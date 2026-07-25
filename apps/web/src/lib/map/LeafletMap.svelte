@@ -92,6 +92,15 @@
 	:global(.mk-checked) {
 		filter: grayscale(0.9) opacity(0.55);
 	}
+	:global(.mk-pal) {
+		padding: 1px;
+	}
+	:global(.mk-pal img) {
+		display: block;
+		width: 18px;
+		height: 18px;
+		object-fit: contain;
+	}
 	:global(.mk i) {
 		position: absolute;
 		bottom: -14px;

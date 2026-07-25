@@ -2,6 +2,7 @@
 // sync() reçoit l'état dérivé et diffe impérativement - jamais un composant
 // Svelte par marqueur (~450).
 import type * as L from "leaflet";
+import { palIcon } from "$lib/game/icons";
 
 export type MapMarker = {
   id: string;
@@ -15,6 +16,16 @@ export type MapMarker = {
 export type MarkerClickHandler = (marker: MapMarker, leafletMarker: L.Marker) => void;
 
 const GLYPH: Record<MapMarker["type"], string> = { relic: "✦", alpha: "▲", ft: "◆" };
+
+/** HTML du divIcon. Les Alpha portent le portrait de leur Pal ; les spawners
+ *  sans Pal résolu (palId « None ») et les icônes absentes gardent le glyphe. */
+export function markerHtml(mk: MapMarker, checked: boolean): string {
+  const level = mk.type === "alpha" && mk.meta?.level ? `<i>${mk.meta.level}</i>` : "";
+  const icon = mk.type === "alpha" && mk.meta?.palId ? palIcon(mk.meta.palId) : undefined;
+  const body = icon ? `<img src="${icon}" alt="" width="18" height="18" />` : GLYPH[mk.type];
+  const cls = `mk mk-${mk.type}${icon ? " mk-pal" : ""}${checked ? " mk-checked" : ""}`;
+  return `<span class="${cls}">${body}${level}</span>`;
+}
 
 export class MarkerController {
   #L: typeof L;
@@ -38,10 +49,9 @@ export class MarkerController {
   }
 
   #icon(mk: MapMarker, checked: boolean): L.DivIcon {
-    const level = mk.type === "alpha" && mk.meta?.level ? `<i>${mk.meta.level}</i>` : "";
     return this.#L.divIcon({
       className: "",
-      html: `<span class="mk mk-${mk.type}${checked ? " mk-checked" : ""}">${GLYPH[mk.type]}${level}</span>`,
+      html: markerHtml(mk, checked),
       iconSize: [22, 22],
       iconAnchor: [11, 11],
     });
