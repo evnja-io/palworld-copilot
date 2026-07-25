@@ -9,6 +9,7 @@ import {
   requireOwner,
   revokeInvite,
 } from "$lib/server/servers";
+import { getPostHogClient } from "$lib/server/posthog";
 import type { Actions, PageServerLoadEvent } from "./$types";
 
 export async function load({ locals, params }: PageServerLoadEvent) {
@@ -33,6 +34,9 @@ export const actions: Actions = {
       .update(tables.servers)
       .set({ name: name.trim() })
       .where(eq(tables.servers.id, server.id));
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "server_renamed", properties: { server_slug: params.slug } });
+    await posthog.flush();
     return { renamed: true };
   },
 
@@ -57,6 +61,9 @@ export const actions: Actions = {
     }
 
     await createInvite(server.id, locals.user!.id, { expiresAt, maxUses });
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "invite_created", properties: { server_slug: params.slug } });
+    await posthog.flush();
     return { invited: true };
   },
 
@@ -67,6 +74,9 @@ export const actions: Actions = {
     if (typeof code !== "string" || code.length === 0)
       return fail(400, { action: "revoke", error: "bad_code" });
     await revokeInvite(code, locals.user!.id);
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "invite_revoked", properties: { server_slug: params.slug } });
+    await posthog.flush();
     return { revoked: true };
   },
 
@@ -98,6 +108,9 @@ export const actions: Actions = {
       }
       throw err;
     }
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "sftp_config_saved", properties: { server_slug: params.slug, enabled } });
+    await posthog.flush();
     return { savedSftp: true };
   },
 };

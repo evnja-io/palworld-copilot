@@ -1,6 +1,7 @@
 import { fail } from "@sveltejs/kit";
 import { ClaimError, claimGuid, listSnapshots } from "$lib/server/import";
 import { requireMembership } from "$lib/server/servers";
+import { getPostHogClient } from "$lib/server/posthog";
 import type { Actions, PageServerLoadEvent } from "./$types";
 
 export async function load({ parent }: PageServerLoadEvent) {
@@ -22,6 +23,9 @@ export const actions: Actions = {
       if (err instanceof ClaimError) return fail(409, { error: err.code });
       throw err;
     }
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "pal_claimed", properties: { server_slug: params.slug } });
+    await posthog.flush();
     return { success: true };
   },
 };
