@@ -17,7 +17,9 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 
-			adapter: adapter()
+			adapter: adapter(),
+			// Requis pour que PostHog session replay fonctionne correctement avec SSR.
+			paths: { relative: false }
 		})
 	]
 });
