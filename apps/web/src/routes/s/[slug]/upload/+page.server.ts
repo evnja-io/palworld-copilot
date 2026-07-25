@@ -4,6 +4,7 @@
 import { fail } from "@sveltejs/kit";
 import { requireOwner } from "$lib/server/servers";
 import { cancelUpload, createUpload, finalizeUpload, listUploads } from "$lib/server/uploads";
+import { getPostHogClient } from "$lib/server/posthog";
 import type { Actions, PageServerLoadEvent } from "./$types";
 
 // Format UUID générique (mêmes règles que api/servers/[slug]/upload/+server.ts) :
@@ -40,6 +41,9 @@ export const actions: Actions = {
 
     const result = await finalizeUpload(server.id, uploadId);
     if (!result.ok) return fail(400, { error: result.error });
+    const posthog = getPostHogClient();
+    posthog.capture({ distinctId: locals.user!.id, event: "save_upload_finalized", properties: { server_slug: params.slug, dispatched: result.dispatched } });
+    await posthog.flush();
     return { finalized: true, dispatched: result.dispatched };
   },
 

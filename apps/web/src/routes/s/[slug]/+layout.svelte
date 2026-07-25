@@ -1,4 +1,6 @@
 <script lang="ts">
+	import posthog from 'posthog-js';
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { appHref } from '$lib/nav';
@@ -6,6 +8,13 @@
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { data, children } = $props();
+
+	// Identifier l'utilisateur authentifié à chaque montage du layout (connexion et rechargement).
+	$effect(() => {
+		if (browser) {
+			posthog.identify(data.user.id, { username: data.user.username });
+		}
+	});
 
 	const DISCORD_URL = 'https://discord.gg/SJehy5fFJ';
 
@@ -75,7 +84,7 @@
 				<img src={data.user.avatarUrl} alt="" width="26" height="26" class="avatar" />
 			{/if}
 			<span class="username">{data.user.username}</span>
-			<form method="POST" action="/logout">
+			<form method="POST" action="/logout" onsubmit={() => { posthog.capture('user_logged_out'); posthog.reset(); }}>
 				<button class="logout">{m.auth_logout()}</button>
 			</form>
 		</div>

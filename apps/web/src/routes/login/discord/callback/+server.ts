@@ -4,6 +4,8 @@ import { createSession } from "$lib/server/auth/session";
 import { generateSessionToken, sessionExpiresAt } from "$lib/server/auth/session-utils";
 import { getDb, tables } from "$lib/server/db";
 import { safeInternalPath } from "$lib/server/redirect";
+import { eq } from "drizzle-orm";
+import { getPostHogClient } from "$lib/server/posthog";
 import type { RequestEvent } from "./$types";
 
 export async function GET(event: RequestEvent) {
@@ -29,11 +31,30 @@ export async function GET(event: RequestEvent) {
   const avatarUrl = du.avatar
     ? `https://cdn.discordapp.com/avatars/${du.id}/${du.avatar}.png`
     : null;
+
+  // Déterminer si c'est un nouvel utilisateur avant l'upsert.
+  const existing = await db
+    .select({ id: tables.users.id })
+    .from(tables.users)
+    .where(eq(tables.users.discordId, du.id));
+  const isNewUser = existing.length === 0;
+
   const [user] = await db
     .insert(tables.users)
     .values({ discordId: du.id, username, avatarUrl })
     .onConflictDoUpdate({ target: tables.users.discordId, set: { username, avatarUrl } })
     .returning();
+
+  const posthog = getPostHogClient();
+  posthog.identify({
+    distinctId: user.id,
+    properties: { username },
+  });
+  if (isNewUser) {
+    posthog.capture({ distinctId: user.id, event: "user_registered", properties: { username } });
+  }
+  posthog.capture({ distinctId: user.id, event: "user_logged_in" });
+  await posthog.flush();
 
   const token = generateSessionToken();
   await createSession(token, user.id);

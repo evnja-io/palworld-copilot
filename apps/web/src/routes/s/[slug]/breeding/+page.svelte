@@ -1,4 +1,5 @@
 <script lang="ts">
+	import posthog from 'posthog-js';
 	import pals from '@palworld-companion/game-data/pals.json';
 	import { m } from '$lib/paraglide/messages';
 	import { gameDesc, gameName } from '$lib/game/names';
@@ -55,6 +56,11 @@
 	const palA = $derived(instanceOf(guidA, instA));
 	const palB = $derived(instanceOf(guidB, instB));
 	const child = $derived(palA && palB ? childOf(palA.palId, palB.palId) : null);
+	$effect(() => {
+		if (child) {
+			posthog.capture('breeding_calculated', { parent_a: palA?.palId, parent_b: palB?.palId, child_species: child });
+		}
+	});
 	// Avertissement non bloquant : il faut exactement un mâle + une femelle.
 	const genderOk = $derived(
 		!!palA &&
@@ -97,6 +103,11 @@
 	// ---- Mode path : chemin d'élevage depuis les espèces possédées.
 	let pathTarget = $state('');
 	const path = $derived(pathTarget ? breedingPath(scopedSpecies, pathTarget) : undefined);
+	$effect(() => {
+		if (pathTarget && path !== undefined) {
+			posthog.capture('breeding_path_searched', { target_species: pathTarget, steps: path?.length ?? null });
+		}
+	});
 
 	// ---- Mode index : combos uniques, filtrés sur les 3 noms localisés + 3 ids.
 	let query = $state('');

@@ -1,5 +1,6 @@
 import { fail, isHttpError, redirect } from "@sveltejs/kit";
 import { createServer } from "$lib/server/servers";
+import { getPostHogClient } from "$lib/server/posthog";
 import type { Actions, PageServerLoadEvent } from "./$types";
 
 export async function load({ locals }: PageServerLoadEvent) {
@@ -17,7 +18,11 @@ export const actions: Actions = {
     }
     let slug: string;
     try {
-      slug = (await createServer(locals.user.id, name)).slug;
+      const server = await createServer(locals.user.id, name);
+      slug = server.slug;
+      const posthog = getPostHogClient();
+      posthog.capture({ distinctId: locals.user.id, event: "server_created", properties: { server_slug: slug } });
+      await posthog.flush();
     } catch (err) {
       if (isHttpError(err, 403)) return fail(403, { error: "server_limit" });
       throw err;
