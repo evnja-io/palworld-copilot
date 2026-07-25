@@ -1418,7 +1418,7 @@ Dans `apps/web/src/routes/s/[slug]/map/+page.svelte` :
 **3a.** Ajouter aux imports :
 
 ```ts
-	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
+	import { spawnCounts, defaultPhase, hasSpawns } from '$lib/game/spawns';
 	import palsJson from '@palworld-companion/game-data/pals.json';
 	import SpawnPanel from '$lib/map/SpawnPanel.svelte';
 	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
@@ -1575,27 +1575,72 @@ Dans `apps/web/messages/en.json`, après `"pal_locations_alpha": "Alpha boss · 
   "pal_locations_zones": "View on map · {count} areas",
 ```
 
+- [ ] **Step 1b: Extraire le choix de la phase dans un module partagé**
+
+Le champ `nocturnal` de `pals.json` ne suffit pas à choisir la phase à ouvrir.
+Deux Pals réels y sont classés **diurnes** alors que leur distribution n'existe
+que la nuit : `Penguin_Electric` (0 zone de jour, 108 de nuit) et
+`WindChimes_Ice` (0 et 262). Pour eux, la carte s'ouvrirait vide, et la fiche
+masquerait la section faute de zones dans la phase par défaut.
+
+La fiche et la carte doivent appliquer **la même** règle, d'où un module
+partagé. Créer `apps/web/src/lib/game/spawns.ts` :
+
+```ts
+import spawnsIndex from "@palworld-companion/game-data/spawns-index.json";
+import type { SpawnPhase } from "$lib/map/spawnLayer";
+
+export type SpawnCounts = { day: number; night: number };
+
+export const spawnCounts = spawnsIndex as Record<string, SpawnCounts>;
+
+/** Phase à ouvrir pour un Pal : celle qu'implique `nocturnal`, sauf si elle
+ *  n'a aucune zone. Deux Pals (Penguin_Electric, WindChimes_Ice) sont classés
+ *  diurnes mais n'ont de distribution que la nuit — s'en tenir à `nocturnal`
+ *  leur ouvrirait une carte vide. */
+export function defaultPhase(counts: SpawnCounts | undefined, nocturnal: boolean): SpawnPhase {
+  const preferred: SpawnPhase = nocturnal ? "night" : "day";
+  if (!counts) return preferred;
+  const other: SpawnPhase = preferred === "day" ? "night" : "day";
+  if (counts[preferred] > 0) return preferred;
+  return counts[other] > 0 ? other : preferred;
+}
+
+/** Un Pal a des zones si l'une des deux phases en contient. */
+export function hasSpawns(counts: SpawnCounts | undefined): boolean {
+  return !!counts && counts.day + counts.night > 0;
+}
+```
+
+Puis, dans `apps/web/src/routes/s/[slug]/map/+page.svelte`, remplacer le calcul
+local de la phase par un appel à `defaultPhase(spawnCounts[palId], nocturnal.has(palId))`,
+et réutiliser `spawnCounts` du module plutôt que l'import local de l'index.
+
 - [ ] **Step 2: Ajouter le lien**
 
 Dans `apps/web/src/routes/s/[slug]/paldex/[palId]/+page.svelte`, ajouter à l'import :
 
 ```ts
-	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
+	import { spawnCounts, defaultPhase, hasSpawns } from '$lib/game/spawns';
 ```
 
 À côté de `const alphaMarker = $derived(...)` :
 
 ```ts
-	const spawnCount = $derived(
-		(spawnsIndex as Record<string, { day: number; night: number }>)[pal.id]
-	);
-	// Le lien annonce la phase que la carte ouvrira par défaut.
+	const spawnCount = $derived(spawnCounts[pal.id]);
+	// Le compteur doit annoncer la phase que la carte ouvrira réellement,
+	// sinon un Pal sans zone de jour afficherait « 0 zones » avant d'ouvrir
+	// une carte pleine de cercles.
 	const spawnZones = $derived(
-		spawnCount ? (pal.nocturnal ? spawnCount.night : spawnCount.day) : 0
+		spawnCount ? spawnCount[defaultPhase(spawnCount, !!pal.nocturnal)] : 0
 	);
 ```
 
-Remplacer la garde de la section par `{#if alphaMarker || spawnZones > 0}` et ajouter, **avant** le lien Alpha dans `.loc-links` :
+avec l'import `import { spawnCounts, defaultPhase, hasSpawns } from '$lib/game/spawns';`.
+
+Remplacer la garde de la section par `{#if alphaMarker || hasSpawns(spawnCount)}` —
+la visibilité dépend de l'existence de zones dans **l'une ou l'autre** phase, pas
+du compteur d'une seule — et ajouter, **avant** le lien Alpha dans `.loc-links` :
 
 ```svelte
 			{#if spawnZones > 0}
