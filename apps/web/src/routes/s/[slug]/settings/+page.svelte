@@ -69,17 +69,20 @@
 <svelte:head><title>{m.settings_title()}</title></svelte:head>
 
 <div class="wrap">
-	<h1>{m.settings_title()}</h1>
+	<header class="exp-hero">
+		<p class="exp-kicker">✦ {data.server.name}</p>
+		<h1 class="exp-grad">{m.settings_title()}</h1>
+	</header>
 
-	<section>
+	<section class="exp-card">
 		<h2>{m.settings_rename()}</h2>
 		<form method="POST" action="?/rename" use:enhance>
 			<input name="name" type="text" maxlength="60" value={data.server.name} required />
-			<button type="submit">{m.settings_rename_save()}</button>
+			<button type="submit" class="exp-btn">{m.settings_rename_save()}</button>
 		</form>
 	</section>
 
-	<section>
+	<section class="exp-card">
 		<h2>{m.settings_invites_title()}</h2>
 		<form class="invite-form" method="POST" action="?/createInvite" use:enhance>
 			<label>
@@ -90,7 +93,7 @@
 				{m.settings_invite_maxuses()}
 				<input name="maxUses" type="number" min="1" step="1" />
 			</label>
-			<button type="submit">{m.settings_invite_create()}</button>
+			<button type="submit" class="exp-btn">{m.settings_invite_create()}</button>
 		</form>
 
 		{#if data.invites.length === 0}
@@ -118,13 +121,13 @@
 		{/if}
 	</section>
 
-	<section>
+	<section class="exp-card">
 		<h2>{m.settings_members_title()}</h2>
 		<ul class="members">
 			{#each data.members as mem (mem.userId)}
 				<li>
 					{#if mem.avatarUrl}
-						<img src={mem.avatarUrl} alt="" width="24" height="24" />
+						<img src={mem.avatarUrl} alt="" width="28" height="28" />
 					{/if}
 					<span class="name">{mem.username}</span>
 					{#if mem.role === 'owner'}
@@ -136,7 +139,7 @@
 		</ul>
 	</section>
 
-	<section class="sftp">
+	<section class="exp-card sftp">
 		<h2>{m.settings_sftp_title()}</h2>
 		{#if data.sftp}
 			<p class="status">
@@ -189,9 +192,11 @@
 				<input name="enabled" type="checkbox" checked={data.sftp?.enabled ?? false} />
 				{m.settings_sftp_enabled()}
 			</label>
-			<button type="submit">{m.settings_sftp_save()}</button>
+			<div class="sftp-actions">
+				<button type="submit" class="exp-btn">{m.settings_sftp_save()}</button>
+				<button type="button" class="ghost" onclick={testSftpConnection}>{m.settings_sftp_test()}</button>
+			</div>
 		</form>
-		<button type="button" class="ghost" onclick={testSftpConnection}>{m.settings_sftp_test()}</button>
 		{#if testResult}<p class="test-result">{testResult}</p>{/if}
 		<p class="hint">{m.settings_sftp_test_hint()}</p>
 		<p class="hint">
@@ -205,18 +210,24 @@
 	.wrap {
 		max-width: 680px;
 		margin: 0 auto;
-		padding: 24px 16px;
+		padding: 32px 16px 56px;
 		display: grid;
-		gap: 32px;
+		gap: 20px;
 	}
-	section {
+	.exp-hero h1 {
+		font-size: 24px;
+		margin: 6px 0 0;
+	}
+
+	.exp-card {
 		display: grid;
-		gap: 12px;
+		gap: 14px;
 	}
 	h2 {
 		font-size: 15px;
 		font-weight: 600;
 		color: var(--text-1);
+		margin: 0;
 	}
 	form {
 		display: flex;
@@ -227,57 +238,78 @@
 	.invite-form label,
 	.sftp-form label {
 		display: grid;
-		gap: 4px;
+		gap: 5px;
 		font-size: 12px;
 		color: var(--text-2);
 	}
+	.sftp-form {
+		width: 100%;
+	}
+	.sftp-form label {
+		flex: 1 1 180px;
+	}
 	.sftp-form label.checkbox {
+		flex-basis: 100%;
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 		justify-content: flex-end;
-		gap: 6px;
+		gap: 8px;
+	}
+	.sftp-actions {
+		flex-basis: 100%;
+		display: flex;
+		gap: 8px;
 	}
 	input {
-		padding: 8px 10px;
+		padding: 9px 11px;
 		border: 1px solid var(--border-strong);
 		border-radius: var(--r-md);
 		background: var(--input-bg);
 		color: var(--text-1);
 		font-size: 13px;
 	}
-	button {
-		padding: 8px 14px;
-		border-radius: var(--r-md);
-		background: var(--accent);
-		color: var(--accent-ink);
-		font-weight: 600;
+	.exp-btn {
 		font-size: 13px;
+		padding: 9px 16px;
 	}
 	button.ghost {
 		background: var(--surface-2);
 		color: var(--text-2);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--r-md);
+		padding: 9px 14px;
+		font-size: 13px;
+		font-weight: 600;
 	}
 	button.danger {
-		background: color-mix(in srgb, var(--el-fire) 20%, transparent);
+		background: color-mix(in srgb, var(--el-fire) 18%, transparent);
 		color: var(--el-fire);
+		border: 1px solid color-mix(in srgb, var(--el-fire) 30%, transparent);
+		border-radius: var(--r-md);
+		padding: 9px 14px;
+		font-size: 13px;
+		font-weight: 600;
 	}
 	.empty {
 		color: var(--text-3);
+		font-size: 13px;
 	}
 	.invites,
 	.members {
 		list-style: none;
 		display: grid;
 		gap: 8px;
+		margin: 0;
+		padding: 0;
 	}
 	.invites li {
 		display: grid;
 		gap: 6px;
-		padding: 10px 12px;
+		padding: 12px;
 		border: 1px solid var(--border);
 		border-radius: var(--r-md);
-		background: var(--surface-1);
+		background: var(--surface-2);
 	}
 	.link {
 		font-size: 12px;
@@ -296,10 +328,10 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		padding: 8px 12px;
+		padding: 10px 12px;
 		border: 1px solid var(--border);
 		border-radius: var(--r-md);
-		background: var(--surface-1);
+		background: var(--surface-2);
 	}
 	.members img {
 		border-radius: 50%;
@@ -334,5 +366,9 @@
 	.sftp .hint {
 		font-size: 11px;
 		color: var(--text-3);
+		margin: 0;
+	}
+	.sftp .hint a {
+		color: var(--accent);
 	}
 </style>

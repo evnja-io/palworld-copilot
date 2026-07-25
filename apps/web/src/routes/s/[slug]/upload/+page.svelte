@@ -393,38 +393,44 @@
 <svelte:head><title>{m.upload_title()}</title></svelte:head>
 
 <div class="wrap">
-	<h1>{m.upload_title()}</h1>
-	<p class="tag">{m.upload_local_world_hint()}</p>
-	<p class="intro">{m.upload_intro()}</p>
+	<header class="exp-hero">
+		<p class="exp-kicker">✦ {m.upload_local_world_hint()}</p>
+		<h1 class="exp-grad">{m.upload_title()}</h1>
+		<p class="intro">{m.upload_intro()}</p>
+	</header>
 
-	<section>
+	<section class="exp-card">
 		<h2>{m.upload_folder_hint()}</h2>
 		<code class="path">%LOCALAPPDATA%\Pal\Saved\SaveGames\&lt;SteamID&gt;\&lt;WorldID&gt;\</code>
 	</section>
 
-	<section>
-		<label class="picker">
-			{m.upload_pick_folder()}
-			<input
-				bind:this={folderInput}
-				type="file"
-				webkitdirectory
-				multiple
-				disabled={phase === 'uploading'}
-				onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
-			/>
-		</label>
-		<label class="picker">
-			{m.upload_pick_files()}
-			<input
-				bind:this={filesInput}
-				type="file"
-				accept=".sav"
-				multiple
-				disabled={phase === 'uploading'}
-				onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
-			/>
-		</label>
+	<section class="exp-card">
+		<div class="pickers">
+			<label class="picker" class:disabled={phase === 'uploading'}>
+				<span class="pic">📁</span>
+				<span class="ptxt">{m.upload_pick_folder()}</span>
+				<input
+					bind:this={folderInput}
+					type="file"
+					webkitdirectory
+					multiple
+					disabled={phase === 'uploading'}
+					onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
+				/>
+			</label>
+			<label class="picker" class:disabled={phase === 'uploading'}>
+				<span class="pic">📄</span>
+				<span class="ptxt">{m.upload_pick_files()}</span>
+				<input
+					bind:this={filesInput}
+					type="file"
+					accept=".sav"
+					multiple
+					disabled={phase === 'uploading'}
+					onchange={(e) => handleFiles((e.currentTarget as HTMLInputElement).files)}
+				/>
+			</label>
+		</div>
 
 		{#if kept.length > 0 || ignoredCount > 0}
 			<p class="summary">
@@ -444,15 +450,20 @@
 			<p class="error">{m.upload_already_active()}</p>
 		{/if}
 
-		<button type="button" disabled={!canSubmit} onclick={startUpload}>
-			{m.upload_start()}
-		</button>
+		<div class="cta-row">
+			<button type="button" class="exp-glossy" disabled={!canSubmit} onclick={startUpload}>
+				⬆ {m.upload_start()}
+			</button>
+			{#if phase === 'uploading'}
+				<button type="button" class="danger" disabled={cancelling} onclick={cancelCurrent}>
+					{cancelling ? m.upload_cancelling() : m.upload_cancel()}
+				</button>
+			{/if}
+		</div>
 
 		{#if phase === 'uploading'}
+			<div class="bar"><span style="width:{progressPercent}%"></span></div>
 			<p class="progress">{m.upload_uploading({ percent: progressPercent })}</p>
-			<button type="button" class="danger" disabled={cancelling} onclick={cancelCurrent}>
-				{cancelling ? m.upload_cancelling() : m.upload_cancel()}
-			</button>
 		{/if}
 
 		{#if phase === 'error' && errorMessage}
@@ -471,7 +482,7 @@
 		{/if}
 	</section>
 
-	<section>
+	<section class="exp-card">
 		<h2>{m.upload_history_title()}</h2>
 		{#if data.uploads.length === 0}
 			<p class="empty">{m.upload_history_empty()}</p>
@@ -535,31 +546,31 @@
 	.wrap {
 		max-width: 680px;
 		margin: 0 auto;
-		padding: 24px 16px;
+		padding: 32px 16px 56px;
 		display: grid;
-		gap: 32px;
+		gap: 20px;
 	}
-	.tag {
-		display: inline-block;
-		width: fit-content;
-		font-size: 11px;
-		color: var(--accent);
-		background: var(--accent-soft);
-		padding: 2px 10px;
-		border-radius: 999px;
+	.exp-hero h1 {
+		font-size: 24px;
+		margin: 6px 0 8px;
 	}
 	.intro {
 		color: var(--text-2);
 		font-size: 13px;
+		line-height: 1.5;
+		margin: 0;
+		max-width: 52ch;
 	}
-	section {
+
+	.exp-card {
 		display: grid;
-		gap: 10px;
+		gap: 12px;
 	}
 	h2 {
 		font-size: 15px;
 		font-weight: 600;
 		color: var(--text-1);
+		margin: 0;
 	}
 	.path {
 		display: block;
@@ -568,65 +579,118 @@
 		background: var(--input-bg);
 		border: 1px solid var(--border-strong);
 		border-radius: var(--r-sm);
-		padding: 8px 10px;
+		padding: 10px 12px;
 		word-break: break-all;
+	}
+
+	.pickers {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
 	}
 	.picker {
 		display: grid;
-		gap: 4px;
-		font-size: 13px;
+		justify-items: center;
+		gap: 6px;
+		text-align: center;
+		padding: 20px 14px;
+		border: 1px dashed var(--border-strong);
+		border-radius: var(--r-md);
+		background: hsl(222 30% 6% / 0.5);
 		color: var(--text-2);
+		font-size: 13px;
+		cursor: pointer;
+		transition: border-color 140ms, background 140ms;
 	}
+	.picker:hover {
+		border-color: var(--accent);
+		background: hsl(222 26% 12% / 0.6);
+	}
+	.picker.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+	.picker .pic {
+		font-size: 22px;
+	}
+	.picker input {
+		display: none;
+	}
+
 	.summary {
 		font-size: 12px;
 		color: var(--text-2);
+		margin: 0;
 	}
 	.progress {
 		font-size: 12px;
 		color: var(--text-2);
+		margin: 0;
+	}
+	.bar {
+		height: 6px;
+		border-radius: 999px;
+		background: var(--surface-3);
+		overflow: hidden;
+	}
+	.bar span {
+		display: block;
+		height: 100%;
+		background: linear-gradient(90deg, hsl(199 90% 46%), hsl(199 92% 62%));
+		transition: width 200ms cubic-bezier(0.23, 1, 0.32, 1);
 	}
 	.error {
 		color: var(--el-fire);
 		font-size: 12px;
+		margin: 0;
 	}
 	.ok {
 		color: var(--el-leaf);
 		font-size: 13px;
+		margin: 0;
 	}
-	button {
-		width: fit-content;
-		padding: 8px 14px;
-		border-radius: var(--r-md);
-		background: var(--accent);
-		color: var(--accent-ink);
-		font-weight: 600;
-		font-size: 13px;
+
+	.cta-row {
+		display: flex;
+		gap: 8px;
+		align-items: center;
 	}
-	button:disabled {
-		opacity: 0.5;
+	.exp-glossy {
+		font-size: 14px;
 	}
 	button.danger {
-		background: color-mix(in srgb, var(--el-fire) 20%, transparent);
+		background: color-mix(in srgb, var(--el-fire) 18%, transparent);
 		color: var(--el-fire);
+		border: 1px solid color-mix(in srgb, var(--el-fire) 30%, transparent);
+		border-radius: var(--r-md);
+		padding: 9px 14px;
+		font-size: 13px;
+		font-weight: 600;
 	}
 	button.ghost {
 		background: var(--surface-2);
 	}
+	button.ghost.danger {
+		background: color-mix(in srgb, var(--el-fire) 14%, transparent);
+	}
 	.empty {
 		color: var(--text-3);
+		font-size: 13px;
 	}
 	.uploads {
 		list-style: none;
 		display: grid;
 		gap: 8px;
+		margin: 0;
+		padding: 0;
 	}
 	.uploads li {
 		display: grid;
 		gap: 6px;
-		padding: 10px 12px;
+		padding: 12px;
 		border: 1px solid var(--border);
 		border-radius: var(--r-md);
-		background: var(--surface-1);
+		background: var(--surface-2);
 	}
 	.row {
 		display: flex;
@@ -635,8 +699,9 @@
 	}
 	.badge {
 		font-size: 11px;
-		padding: 1px 8px;
+		padding: 2px 9px;
 		border-radius: 999px;
+		font-weight: 600;
 	}
 	.badge.ok {
 		color: var(--el-leaf);
@@ -666,5 +731,11 @@
 	}
 	.meta .err {
 		color: var(--el-fire);
+	}
+
+	@media (max-width: 480px) {
+		.pickers {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

@@ -124,6 +124,91 @@ input::placeholder {
 	font-variant-numeric: tabular-nums;
 }
 
+/* ── Direction expressive « expédition nocturne » : primitives partagées entre
+   l'onboarding (assistant) et les écrans serveur (liste, réglages, envoi).
+   L'animation .exp-glossy est neutralisée par le bloc prefers-reduced-motion. ── */
+.exp-hero {
+	position: relative;
+	overflow: hidden;
+	padding: 22px 24px;
+	border-radius: var(--r-lg);
+	border: 1px solid var(--border-strong);
+	background: radial-gradient(120% 90% at 50% -20%, hsl(222 30% 15%), var(--surface-1) 60%);
+}
+.exp-hero::before {
+	content: '';
+	position: absolute;
+	top: -150px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 420px;
+	height: 280px;
+	background: radial-gradient(closest-side, hsl(199 90% 55% / 0.18), transparent);
+	pointer-events: none;
+}
+.exp-kicker {
+	color: var(--accent);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.exp-grad {
+	background: linear-gradient(180deg, var(--text-1), hsl(199 60% 78%));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.exp-card {
+	background: var(--surface-1);
+	border: 1px solid var(--border);
+	border-radius: var(--r-lg);
+	padding: 18px 20px;
+}
+.exp-btn,
+.exp-glossy {
+	position: relative;
+	overflow: hidden;
+	border: none;
+	padding: 10px 18px;
+	border-radius: var(--r-md);
+	background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%));
+	color: var(--accent-ink);
+	font-weight: 600;
+	font-family: var(--font-display);
+}
+.exp-glossy {
+	box-shadow: 0 6px 20px hsl(199 90% 45% / 0.35);
+}
+.exp-btn:hover,
+.exp-glossy:hover {
+	background: linear-gradient(180deg, hsl(199 94% 66%), hsl(199 90% 50%));
+	border-color: transparent;
+}
+.exp-btn:disabled,
+.exp-glossy:disabled {
+	opacity: 0.45;
+	box-shadow: none;
+}
+.exp-glossy::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -60%;
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(105deg, transparent, hsl(0 0% 100% / 0.35), transparent);
+	transform: skewX(-18deg);
+	animation: exp-sweep 3.2s ease-in-out infinite;
+}
+.exp-glossy:disabled::after {
+	display: none;
+}
+@keyframes exp-sweep {
+	0%, 60% { left: -60%; }
+	85%, 100% { left: 130%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
 	* {
 		transition-duration: 0.01ms !important;
