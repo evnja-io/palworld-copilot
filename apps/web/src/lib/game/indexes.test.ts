@@ -1,5 +1,7 @@
+import pals from "@palworld-companion/game-data/pals.json";
 import { describe, expect, it } from "vitest";
 import {
+  markersByPal,
   palsDropping,
   recipesByProduct,
   recipesUsingItem,
@@ -30,5 +32,17 @@ describe("index inversés", () => {
   it("retrouve la techno débloquant une recette", () => {
     const anyTech = techUnlocking.size;
     expect(anyTech).toBeGreaterThan(300);
+  });
+  it("indexe les marqueurs Alpha par Pal, sans la clé « None »", () => {
+    // Anubis n'existe qu'en boss de terrain : il doit avoir un marqueur.
+    const anubis = markersByPal.get("Anubis");
+    expect(anubis?.length).toBeGreaterThan(0);
+    expect(anubis![0].type).toBe("alpha");
+    expect(anubis![0].meta?.level).toBeGreaterThan(0);
+    // SheepBall (nom affiché « Lamball ») est un id valide sans spawner Alpha.
+    expect(pals.some((p) => p.id === "SheepBall")).toBe(true);
+    expect(markersByPal.get("SheepBall")).toBeUndefined();
+    // Les 69 spawners sans Pal résolu ne doivent pas créer d'entrée.
+    expect(markersByPal.has("None")).toBe(false);
   });
 });

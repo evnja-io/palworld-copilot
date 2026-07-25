@@ -1,8 +1,9 @@
-import { mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { basename, join } from "node:path";
 import sharp from "sharp";
 import { TEXTURE_ROOTS, findExports, loadDataTableRows, pick, writeGameData } from "./lib.js";
-import { ICONS_OUT } from "./paths.js";
+import { caseAliases } from "./icons.lib.js";
+import { ICONS_OUT, OUT_DIR } from "./paths.js";
 
 const pngByName = new Map(
   findExports(/\.png$/, TEXTURE_ROOTS).map((f) => [basename(f, ".png").toLowerCase(), f]),
@@ -91,6 +92,24 @@ const ITEM_ICON_ALIASES: Record<string, string> = {
   }
   console.log(`  alias d'icônes items : ${aliased}`);
 }
+
+/** Alias de casse pour les Pals : la table d'icônes et DT_PalMonsterParameter
+ *  ne s'accordent pas toujours (VolcanicMonster / Volcanicmonster). On croise
+ *  avec pals.json, artefact déjà commité — absent = étape simplement ignorée. */
+{
+  const palsPath = join(OUT_DIR, "pals.json");
+  if (existsSync(palsPath)) {
+    const ids = (JSON.parse(readFileSync(palsPath, "utf8")) as Array<{ id: string }>).map(
+      (p) => p.id,
+    );
+    const aliases = caseAliases(pals, "pal:", ids);
+    Object.assign(pals, aliases);
+    console.log(`  alias d'icônes pals (casse) : ${Object.keys(aliases).length}`);
+  } else {
+    console.warn("  (pals.json absent - alias de casse des Pals ignorés)");
+  }
+}
+
 if (Object.keys(pals).length < 100 || Object.keys(items).length < 300) {
   throw new Error("Trop peu d'icônes converties - vérifier l'export des textures (runbook, section icônes)");
 }

@@ -92,6 +92,15 @@
 	:global(.mk-checked) {
 		filter: grayscale(0.9) opacity(0.55);
 	}
+	:global(.mk-pal) {
+		padding: 1px;
+	}
+	:global(.mk-pal img) {
+		display: block;
+		width: 18px;
+		height: 18px;
+		object-fit: contain;
+	}
 	:global(.mk i) {
 		position: absolute;
 		bottom: -14px;
@@ -101,5 +110,11 @@
 		background: rgb(0 0 0 / 0.55);
 		border-radius: 999px;
 		padding: 0 4px;
+	}
+	/* Zones de spawn (vecteurs Leaflet - hors scope Svelte, d'où :global).
+	   L'opacité s'accumule aux recouvrements : la densité se lit d'elle-même. */
+	:global(.spawn-zone) {
+		fill: var(--accent);
+		fill-opacity: 0.13;
 	}
 </style>

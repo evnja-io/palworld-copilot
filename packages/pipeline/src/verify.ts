@@ -1,7 +1,8 @@
 import { execSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { OUT_DIR } from "./paths.js";
+import { OUT_DIR, SPAWNS_OUT } from "./paths.js";
+import { SIZE } from "./transform/coord.js";
 
 const load = (p: string) => JSON.parse(readFileSync(join(OUT_DIR, p), "utf8"));
 const fail = (msg: string) => {
@@ -25,6 +26,34 @@ if (tech.length < 100) fail(`tech: ${tech.length}`);
 if (buildings.length < 100) fail(`buildings: ${buildings.length}`);
 const markers = load("markers.json");
 if (markers.length < 400) fail(`markers: ${markers.length}`);
+
+// Zones de spawn : couverture, ids connus, coordonnées dans la texture.
+const spawnsIndex = load("spawns-index.json") as Record<string, { day: number; night: number }>;
+const spawnPalIds = Object.keys(spawnsIndex);
+// Plancher à 200 : l'export réel en donne 249. Un seuil à 100 ne détecterait
+// pas une régression qui perdrait la moitié des données.
+if (spawnPalIds.length < 200) fail(`spawns: ${spawnPalIds.length} Pals`);
+const palIdSet = new Set((pals as Array<{ id: string }>).map((p) => p.id));
+for (const id of spawnPalIds) {
+  if (!palIdSet.has(id)) fail(`spawns: id inconnu dans pals.json (${id})`);
+  const c = spawnsIndex[id];
+  if (c.day + c.night === 0) fail(`spawns: entrée vide (${id})`);
+}
+// Contrôle exhaustif : un échantillon d'un seul Pal laisserait passer toute
+// régression de projection qui n'affecte pas le premier du tri.
+for (const id of spawnPalIds) {
+  const data = JSON.parse(readFileSync(join(SPAWNS_OUT, `${id}.json`), "utf8")) as {
+    r: number;
+    day: number[][];
+    night: number[][];
+  };
+  if (!(data.r > 0)) fail(`spawns: rayon invalide (${id})`);
+  if (data.day.length !== spawnsIndex[id].day || data.night.length !== spawnsIndex[id].night)
+    fail(`spawns: index et fichier divergent (${id})`);
+  for (const [px, py] of [...data.day, ...data.night]) {
+    if (px < 0 || px > SIZE || py < 0 || py > SIZE) fail(`spawns: point hors texture (${id})`);
+  }
+}
 
 // 1b. Descriptions & effets de passifs
 const passiveEffects = load("passive-effects.json");

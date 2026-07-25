@@ -2,6 +2,8 @@ import recipesJson from "@palworld-companion/game-data/recipes.json";
 import palsJson from "@palworld-companion/game-data/pals.json";
 import techJson from "@palworld-companion/game-data/tech.json";
 import buildingsJson from "@palworld-companion/game-data/buildings.json";
+import markersJson from "@palworld-companion/game-data/markers.json";
+import type { MapMarker } from "$lib/map/markerController";
 
 export type Recipe = {
   id: string;
@@ -65,3 +67,12 @@ export const techUnlocking = new Map<string, Tech>();
 for (const t of tech) for (const u of t.unlocks) techUnlocking.set(u, t);
 
 export const buildingByMapObjectId = new Map(buildings.map((b) => [b.mapObjectId, b]));
+
+/** Marqueurs de la carte portant un Pal (spawners de boss Alpha), indexés par
+ *  Pal. Le palId « None » désigne un spawner sans boss résolu : écarté. */
+export const markersByPal = new Map<string, MapMarker[]>();
+for (const mk of markersJson as MapMarker[]) {
+  const palId = mk.meta?.palId;
+  if (!palId || palId === "None") continue;
+  push(markersByPal, palId, mk);
+}
