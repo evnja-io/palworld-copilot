@@ -1,28 +1,6 @@
 import { readFileSync } from "node:fs";
 import { loadDataTableRows, must, pick, writeGameData } from "../lib.js";
-
-// Transform monde -> coordonnées in-game v1.0 (constantes de
-// PalworldSaveTools/palworld_coord, variante « new » : scale 725) ; la
-// texture T_WorldMap couvre exactement la plage in-game [-1000, 1000]².
-// Les POI hors plage appartiennent à la carte de l'Arbre-Monde (T_TreeMap,
-// hors v1 - exclus avec comptage). CALIBRÉ VISUELLEMENT en Task 4.
-const SIZE = 8192;
-const SCALE = 725;
-const TRANSL_X = 375247;
-const TRANSL_Y = -18;
-const RANGE = 1000;
-
-export function worldToGame(worldX: number, worldY: number): [number, number] {
-  return [(worldY - TRANSL_Y) / SCALE, (worldX + TRANSL_X) / SCALE];
-}
-
-export function worldToPixel(worldX: number, worldY: number): [number, number] | null {
-  const [gx, gy] = worldToGame(worldX, worldY);
-  if (Math.abs(gx) > RANGE || Math.abs(gy) > RANGE) return null; // Arbre-Monde
-  const px = ((gx + RANGE) / (2 * RANGE)) * SIZE;
-  const py = ((RANGE - gy) / (2 * RANGE)) * SIZE;
-  return [Math.round(px * 10) / 10, Math.round(py * 10) / 10];
-}
+import { worldToPixel } from "./coord.js";
 
 type Marker = {
   id: string;
