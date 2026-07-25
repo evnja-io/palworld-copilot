@@ -4,12 +4,16 @@
 	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
+	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
+	import palsJson from '@palworld-companion/game-data/pals.json';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import LeafletMap from '$lib/map/LeafletMap.svelte';
 	import MarkerPopup from '$lib/map/MarkerPopup.svelte';
 	import FilterPanel from '$lib/map/FilterPanel.svelte';
+	import SpawnPanel from '$lib/map/SpawnPanel.svelte';
 	import { MapState } from '$lib/map/mapState.svelte';
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
+	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
 	import { isGuestContext } from '$lib/nav';
 	import Seo from '$lib/components/Seo.svelte';
 
@@ -25,6 +29,16 @@
 	const store = new ProgressStore();
 	const mapState = new MapState();
 	let markerController: MarkerController | undefined = $state();
+	let spawnLayer: SpawnLayer | undefined = $state();
+
+	const spawnCounts = spawnsIndex as Record<string, { day: number; night: number }>;
+	const nocturnal = new Set(
+		(palsJson as Array<{ id: string; nocturnal?: boolean }>)
+			.filter((p) => p.nocturnal)
+			.map((p) => p.id)
+	);
+	const spawnPal = $derived(mapState.filters.spawnPal);
+	const spawnPhase = $derived(mapState.filters.spawnPhase);
 
 	$effect(() => {
 		mapState.restore();
@@ -33,6 +47,7 @@
 		return () => {
 			store.stopSync();
 			markerController?.destroy();
+			spawnLayer?.destroy();
 		};
 	});
 
@@ -74,6 +89,7 @@
 		leafletRef = leaflet;
 		mapRef = map;
 		markerController = new MarkerController(leaflet, map, toLatLng, onMarkerClick);
+		spawnLayer = new SpawnLayer(leaflet, map, toLatLng);
 	}
 
 	// Svelte -> Leaflet : re-sync sur tout changement de filtre/progression.
@@ -81,12 +97,61 @@
 		markerController?.sync(visible, store.mine);
 	});
 
+	// Svelte -> Leaflet : zones de spawn du Pal sélectionné.
+	$effect(() => {
+		spawnLayer?.setPal(spawnPal, spawnPhase);
+	});
+
+	// Zones depuis la fiche d'un Pal : /map?pal=<palId>.
+	// `zonedPal` est un `let` nu, PAS un $state : l'effet l'écrit, et le rendre
+	// réactif créerait une auto-dépendance — « Effacer » le remettrait à null,
+	// l'effet se relancerait avec ?pal= toujours dans l'URL, et les zones
+	// reviendraient aussitôt.
+	let zonedPal: string | null = null;
+	$effect(() => {
+		const palId = page.url.searchParams.get('pal');
+		const layer = spawnLayer;
+		if (!layer) return;
+		if (!palId) {
+			zonedPal = null;
+			return;
+		}
+		if (palId === zonedPal || !spawnCounts[palId]) return;
+		zonedPal = palId;
+		mapState.filters.spawnPal = palId;
+		// La phase persistée est écrasée : un Pal nocturne n'a souvent rien à
+		// montrer de jour, et hériter du Pal précédent donnerait une carte vide.
+		mapState.filters.spawnPhase = nocturnal.has(palId) ? 'night' : 'day';
+		mapState.persist();
+		// Après le flush des effets, la couche a chargé et dessiné les cercles.
+		setTimeout(() => {
+			const b = layer.bounds();
+			if (b && mapRef) mapRef.fitBounds(b.pad(0.15));
+		}, 0);
+	});
+
+	// Ne pas toucher à `zonedPal` ici : le laisser sur le Pal effacé est ce qui
+	// empêche l'effet de le réafficher tant que ?pal= n'a pas changé.
+	function clearSpawns() {
+		mapState.filters.spawnPal = null;
+		mapState.persist();
+	}
+
+	function setPhase(p: SpawnPhase) {
+		mapState.filters.spawnPhase = p;
+		mapState.persist();
+	}
+
 	// Focus depuis la palette de recherche : /map?focus=<markerId>.
 	let focusedId: string | null = null;
 	$effect(() => {
 		const id = page.url.searchParams.get('focus');
 		const controller = markerController;
-		if (!id || !controller || id === focusedId) return;
+		if (!id) {
+			focusedId = null;
+			return;
+		}
+		if (!controller || id === focusedId) return;
 		const mk = markers.find((m) => m.id === id);
 		if (!mk) return;
 		focusedId = id;
@@ -117,6 +182,15 @@
 <div class="map-wrap">
 	<LeafletMap onready={onMapReady} />
 	<FilterPanel filters={mapState.filters} {counts} onchange={() => mapState.persist()} />
+	{#if spawnPal && spawnCounts[spawnPal]}
+		<SpawnPanel
+			palId={spawnPal}
+			phase={spawnPhase}
+			counts={spawnCounts[spawnPal]}
+			onphase={setPhase}
+			onclear={clearSpawns}
+		/>
+	{/if}
 </div>
 
 <style>
