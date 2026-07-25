@@ -4,7 +4,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
-	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
+	import { spawnCounts, defaultPhase } from '$lib/game/spawns';
 	import palsJson from '@palworld-companion/game-data/pals.json';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import LeafletMap from '$lib/map/LeafletMap.svelte';
@@ -31,7 +31,6 @@
 	let markerController: MarkerController | undefined = $state();
 	let spawnLayer: SpawnLayer | undefined = $state();
 
-	const spawnCounts = spawnsIndex as Record<string, { day: number; night: number }>;
 	const nocturnal = new Set(
 		(palsJson as Array<{ id: string; nocturnal?: boolean }>)
 			.filter((p) => p.nocturnal)
@@ -121,7 +120,7 @@
 		mapState.filters.spawnPal = palId;
 		// La phase persistée est écrasée : un Pal nocturne n'a souvent rien à
 		// montrer de jour, et hériter du Pal précédent donnerait une carte vide.
-		const phase = nocturnal.has(palId) ? 'night' : 'day';
+		const phase = defaultPhase(spawnCounts[palId], nocturnal.has(palId));
 		mapState.filters.spawnPhase = phase;
 		mapState.persist();
 		// Attendre la fin du dessin, pas un minuteur : setPal fait un fetch, et
