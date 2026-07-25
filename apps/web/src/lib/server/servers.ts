@@ -3,7 +3,8 @@ import { and, desc, eq, gt, inArray, isNull, lt, sql, or } from "drizzle-orm";
 import { error } from "@sveltejs/kit";
 import { getDb, tables } from "$lib/server/db";
 
-export type ServerSummary = { id: string; slug: string; name: string };
+export type ServerKind = "local" | "dedicated";
+export type ServerSummary = { id: string; slug: string; name: string; kind: ServerKind };
 export type Membership = { role: "owner" | "member"; palPlayerGuid: string | null };
 
 export type InviteErrorCode =
@@ -77,7 +78,12 @@ function isUniqueViolation(err: unknown): boolean {
 export async function listMyServers(userId: string): Promise<ServerSummary[]> {
   const db = getDb();
   return db
-    .select({ id: tables.servers.id, slug: tables.servers.slug, name: tables.servers.name })
+    .select({
+      id: tables.servers.id,
+      slug: tables.servers.slug,
+      name: tables.servers.name,
+      kind: tables.servers.kind,
+    })
     .from(tables.serverMembers)
     .innerJoin(tables.servers, eq(tables.serverMembers.serverId, tables.servers.id))
     .where(eq(tables.serverMembers.userId, userId))
@@ -98,6 +104,7 @@ export async function requireMembership(
       id: tables.servers.id,
       slug: tables.servers.slug,
       name: tables.servers.name,
+      kind: tables.servers.kind,
       role: tables.serverMembers.role,
       palPlayerGuid: tables.serverMembers.palPlayerGuid,
     })
@@ -113,7 +120,7 @@ export async function requireMembership(
   const hit = rows[0];
   if (!hit) error(404);
   return {
-    server: { id: hit.id, slug: hit.slug, name: hit.name },
+    server: { id: hit.id, slug: hit.slug, name: hit.name, kind: hit.kind },
     membership: { role: hit.role, palPlayerGuid: hit.palPlayerGuid },
   };
 }
@@ -133,7 +140,11 @@ export async function requireOwner(
  *  utilisateur. Slug unique tiré au sort avec retry sur collision.
  *  Sans transactions : insère le serveur puis l'adhésion (onConflictDoNothing,
  *  rejouable). */
-export async function createServer(userId: string, name: string): Promise<ServerSummary> {
+export async function createServer(
+  userId: string,
+  name: string,
+  kind: ServerKind = "local",
+): Promise<ServerSummary> {
   const db = getDb();
   const trimmed = name.trim();
   if (trimmed.length === 0) error(400, "Nom de serveur requis");
@@ -149,11 +160,12 @@ export async function createServer(userId: string, name: string): Promise<Server
     try {
       const [srv] = await db
         .insert(tables.servers)
-        .values({ name: trimmed, slug, ownerId: userId })
+        .values({ name: trimmed, slug, ownerId: userId, kind })
         .returning({
           id: tables.servers.id,
           slug: tables.servers.slug,
           name: tables.servers.name,
+          kind: tables.servers.kind,
         });
       await db
         .insert(tables.serverMembers)
