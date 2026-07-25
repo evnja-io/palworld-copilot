@@ -125,7 +125,8 @@ input::placeholder {
 }
 
 /* ── Direction expressive « expédition nocturne » : primitives partagées entre
-   l'onboarding (assistant) et les écrans serveur (liste, réglages, envoi).
+   l'onboarding (assistant), les écrans serveur (liste, réglages, envoi) et
+   l'en-tête (lib/components/AppHeader.svelte, action primaire de connexion).
    L'animation .exp-glossy est neutralisée par le bloc prefers-reduced-motion. ── */
 .exp-hero {
 	position: relative;

@@ -372,6 +372,64 @@ gardes sont confirmées (401 sans session, 405 sur GET) et la validation est
 couverte par tests, mais le parcours d'import lui-même reste à valider une fois
 connecté.
 
+## 2026-07-25 - Un seul en-tête pour toute la surface publique
+
+**Constat** (audit `improve-ui`, plans dans `design-plans/`) : l'ouverture aux
+invités avait laissé trois en-têtes pour un même visiteur anonyme dans une même
+tâche. Mesuré sur le rendu :
+- `/` n'avait qu'un sélecteur de langue en `position: absolute` — ni marque
+  cliquable, ni navigation, ni connexion ;
+- `/docs`, pourtant publiée au sitemap avec canonical et hreflang donc porte
+  d'entrée depuis la recherche, ne contenait **qu'un seul lien interne** (`/`) ;
+- la coquille invité empilait marque + 8 liens + recherche + Discord + langue +
+  CTA dans une rangée de 52 px : **89 px de navigation tronquée à 1280 px**, et
+  **146 px de haut (17 % du viewport) sur 3 rangées à 390 px**.
+
+La cause n'était pas trois oublis mais **l'absence de propriétaire** : le seul
+en-tête complet vivait à l'intérieur du layout tenant, donc inaccessible aux
+routes publiques hors `/s/[slug]`.
+
+**Décision** :
+- **`lib/components/AppHeader.svelte` est le propriétaire unique**, consommé par
+  la coquille tenant (invité et membre), `/` et `/docs`. `LangSwitch` n'a plus
+  qu'un seul point de montage dans tout le dépôt.
+- **La rangée principale est réservée à la navigation produit** (marque ou
+  sélecteur de serveur · nav · recherche · action primaire). Les utilitaires de
+  session — Discord, langue, et en membre lien d'import, nom, déconnexion —
+  passent dans une divulgation `<details>` calquée sur le sélecteur de serveur
+  existant : **un seul mécanisme de menu**, pas deux.
+- **Le CTA de connexion emploie `.exp-btn`** (`app.css`), la même primitive que
+  « créer un serveur » sur `/servers`. L'action qui ouvre le tunnel de
+  conversion était jusque-là présentée plus discrètement que celle qui le
+  poursuit. Le commentaire de `app.css` déclarant le périmètre de `.exp-*`
+  nomme désormais aussi l'en-tête — son silence est précisément la raison pour
+  laquelle l'en-tête avait dérivé.
+- **Variante `transparent`** pour la landing seule : son en-tête sans chrome
+  était une décision d'identité (l'illustration animée du hero doit rester
+  visible). Deux valeurs de fond/bordure sur le même composant, pas une
+  seconde primitive.
+- **Les 6 cartes de fonctionnalité à route publique deviennent cliquables**
+  (`/paldex`, `/breeding`, `/teams`, `/map`, `/tech`, `/craft`). Les 3 cartes de
+  synchronisation restent descriptives : la grille rend ainsi visible, sans
+  copie supplémentaire, ce qui est essayable tout de suite et ce qui demande un
+  compte. `routes/landing-features.test.ts` garde ces cibles alignées sur
+  `GUEST_FEATURES`.
+
+**Résultat mesuré** : débordement de nav à 1280 px 89 → **0 px** ; hauteur
+mobile 146 → **103 px** (17 % → 12 %), 3 → **2 rangées** ; liens internes sur
+`/docs` 1 → **10**.
+
+**Deux ajustements non prévus par les plans, assumés** : une branche
+`@media (max-width: 1400px)` masque le libellé du bouton de recherche (la seule
+consolidation des utilitaires laissait 60 px de débordement, le CTA passé en
+`.exp-btn` étant plus large), et une clé `auth_login_short` raccourcit le CTA
+sous 520 px pour qu'il tienne sur la rangée de la marque — sans quoi l'en-tête
+mobile restait à 3 rangées. Libellé complet conservé en `aria-label`.
+
+**Reste à valider connecté** : le mode membre n'a pas pu être mesuré (session
+Discord indisponible). À revérifier : débordement de nav à 1280 px, sélecteur de
+serveur, import et déconnexion dans le menu utilitaire.
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

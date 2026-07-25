@@ -413,5 +413,7 @@
   "guest_import_running": "Importing…",
   "guest_import_done": "Import complete.",
   "guest_import_error": "Import failed. Try again from the import page.",
-  "guest_import_truncated": "Server team limit reached: some teams were not imported."
+  "guest_import_truncated": "Server team limit reached: some teams were not imported.",
+  "header_menu": "More options",
+  "auth_login_short": "Sign in"
 }

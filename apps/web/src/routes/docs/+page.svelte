@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
-	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import AppHeader from '$lib/components/AppHeader.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
@@ -19,11 +18,10 @@
 
 <Seo title={m.docs_title()} description={m.docs_intro()} path="/docs" />
 
+<!-- La marque de l'en-tête ramène à l'accueil : le lien « retour » devient redondant. -->
+<AppHeader />
+
 <div class="docs">
-	<header class="top">
-		<a class="back" href={localizeHref('/')}>← {m.docs_back_home()}</a>
-		<LangSwitch />
-	</header>
 
 	<main>
 		<h1>{m.docs_title()}</h1>
@@ -76,22 +74,6 @@
 		min-height: 100dvh;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.top {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 14px 16px;
-		width: min(760px, 100%);
-		margin: 0 auto;
-	}
-	.back {
-		font-size: 13px;
-		color: var(--text-3);
-	}
-	.back:hover {
-		color: var(--accent);
 	}
 
 	main {

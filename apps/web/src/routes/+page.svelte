@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
-	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import AppHeader from '$lib/components/AppHeader.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
@@ -23,14 +23,19 @@
 		{ label: m.landing_stat_relics, count: 138 }
 	];
 
-	const features = [
+	// `href` : renseigné pour les fonctionnalités accessibles sans compte, donc
+	// membres de GUEST_FEATURES (garde vérifiée par landing-features.test.ts).
+	// Les trois cartes de synchronisation (serveurs, import, parties locales)
+	// n'ont volontairement pas de cible : elles décrivent ce que débloque la
+	// connexion, dont le CTA Discord du héros est la porte d'entrée.
+	const features: Array<{ icon: string; title: () => string; body: () => string; href?: string }> = [
 		{ icon: '/icons/build/believer_flag.webp', title: m.landing_feat_servers_title, body: m.landing_feat_servers_body },
-		{ icon: '/icons/items/PalSphere_Mega.webp', title: m.landing_feat_paldex_title, body: m.landing_feat_paldex_body },
-		{ icon: '/icons/build/breedfarm.webp', title: m.landing_feat_breeding_title, body: m.landing_feat_breeding_body },
-		{ icon: '/icons/build/buildablegoddessstatue.webp', title: m.landing_feat_teams_title, body: m.landing_feat_teams_body },
-		{ icon: '/icons/items/Relic.webp', title: m.landing_feat_map_title, body: m.landing_feat_map_body },
-		{ icon: '/icons/items/Blueprint.webp', title: m.landing_feat_tech_title, body: m.landing_feat_tech_body },
-		{ icon: '/icons/build/workbench.webp', title: m.landing_feat_craft_title, body: m.landing_feat_craft_body },
+		{ icon: '/icons/items/PalSphere_Mega.webp', title: m.landing_feat_paldex_title, body: m.landing_feat_paldex_body, href: '/paldex' },
+		{ icon: '/icons/build/breedfarm.webp', title: m.landing_feat_breeding_title, body: m.landing_feat_breeding_body, href: '/breeding' },
+		{ icon: '/icons/build/buildablegoddessstatue.webp', title: m.landing_feat_teams_title, body: m.landing_feat_teams_body, href: '/teams' },
+		{ icon: '/icons/items/Relic.webp', title: m.landing_feat_map_title, body: m.landing_feat_map_body, href: '/map' },
+		{ icon: '/icons/items/Blueprint.webp', title: m.landing_feat_tech_title, body: m.landing_feat_tech_body, href: '/tech' },
+		{ icon: '/icons/build/workbench.webp', title: m.landing_feat_craft_title, body: m.landing_feat_craft_body, href: '/craft' },
 		{ icon: '/icons/build/palboxterminal.webp', title: m.landing_feat_import_title, body: m.landing_feat_import_body },
 		{ icon: '/icons/build/dimensionpalstorage.webp', title: m.landing_feat_local_title, body: m.landing_feat_local_body }
 	];
@@ -76,9 +81,8 @@
 		{/each}
 	</div>
 
-	<header class="top">
-		<LangSwitch />
-	</header>
+	<!-- Variante transparente : l'illustration animée reste visible derrière. -->
+	<AppHeader variant="transparent" />
 
 	<main>
 		<section class="hero">
@@ -111,11 +115,22 @@
 
 		<section class="features">
 			{#each features as f, i (i)}
-				<article class="feature" style="--delay: {0.35 + i * 0.08}s">
+				{#snippet body()}
 					<img src={f.icon} alt="" width="42" height="42" loading="lazy" decoding="async" />
 					<h3>{f.title()}</h3>
 					<p>{f.body()}</p>
-				</article>
+				{/snippet}
+				<!-- Une carte dont la fonctionnalité est publique s'ouvre ; les autres
+				     restent descriptives. Apparence identique au repos. -->
+				{#if f.href}
+					<a class="feature" href={localizeHref(f.href)} style="--delay: {0.35 + i * 0.08}s">
+						{@render body()}
+					</a>
+				{:else}
+					<article class="feature" style="--delay: {0.35 + i * 0.08}s">
+						{@render body()}
+					</article>
+				{/if}
 			{/each}
 		</section>
 
@@ -285,14 +300,6 @@
 		to {
 			transform: translateY(-50%);
 		}
-	}
-
-	/* --- Entête --- */
-	.top {
-		position: absolute;
-		top: 14px;
-		right: 16px;
-		z-index: 2;
 	}
 
 	/* --- Héros --- */
@@ -468,6 +475,12 @@
 		padding-bottom: 48px;
 	}
 	.feature {
+		/* `display: block` + `color: inherit` : une carte rendue en <a> doit rester
+		   indiscernable d'une carte rendue en <article> au repos (la règle globale
+		   a:hover colorerait sinon la carte en accent). h3 et p portent déjà leur
+		   propre couleur ; c'est la carte elle-même qu'on neutralise. */
+		display: block;
+		color: inherit;
 		padding: 18px 16px;
 		border-radius: var(--r-md);
 		border: 1px solid var(--border);

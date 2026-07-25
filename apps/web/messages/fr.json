@@ -413,5 +413,7 @@
   "guest_import_running": "Import en cours…",
   "guest_import_done": "Import terminé.",
   "guest_import_error": "L'import a échoué. Réessaie depuis la page d'import.",
-  "guest_import_truncated": "Limite d'équipes du serveur atteinte : certaines équipes n'ont pas été importées."
+  "guest_import_truncated": "Limite d'équipes du serveur atteinte : certaines équipes n'ont pas été importées.",
+  "header_menu": "Plus d'options",
+  "auth_login_short": "Se connecter"
 }
