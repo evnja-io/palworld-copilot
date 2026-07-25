@@ -1021,19 +1021,24 @@ for (const id of spawnPalIds) {
   const c = spawnsIndex[id];
   if (c.day + c.night === 0) fail(`spawns: entrée vide (${id})`);
 }
-{
-  const sample = spawnPalIds[0];
-  const data = JSON.parse(
-    readFileSync(join(SPAWNS_OUT, `${sample}.json`), "utf8"),
-  ) as { r: number; day: number[][]; night: number[][] };
-  if (!(data.r > 0)) fail(`spawns: rayon invalide (${sample})`);
+// Contrôle exhaustif : un échantillon d'un seul Pal laisserait passer toute
+// régression de projection qui n'affecte pas le premier du tri.
+for (const id of spawnPalIds) {
+  const data = JSON.parse(readFileSync(join(SPAWNS_OUT, `${id}.json`), "utf8")) as {
+    r: number;
+    day: number[][];
+    night: number[][];
+  };
+  if (!(data.r > 0)) fail(`spawns: rayon invalide (${id})`);
+  if (data.day.length !== spawnsIndex[id].day || data.night.length !== spawnsIndex[id].night)
+    fail(`spawns: index et fichier divergent (${id})`);
   for (const [px, py] of [...data.day, ...data.night]) {
-    if (px < 0 || px > 8192 || py < 0 || py > 8192) fail(`spawns: point hors texture (${sample})`);
+    if (px < 0 || px > SIZE || py < 0 || py > SIZE) fail(`spawns: point hors texture (${id})`);
   }
 }
 ```
 
-Ajouter `SPAWNS_OUT` à l'import de `./paths.js` en tête de `verify.ts` (`readFileSync` et `join` y sont déjà importés).
+Ajouter `SPAWNS_OUT` à l'import de `./paths.js` en tête de `verify.ts` (`readFileSync` et `join` y sont déjà importés), et importer `SIZE` depuis `./transform/coord.js` plutôt que de répéter `8192` en dur.
 
 - [ ] **Step 5: Documenter l'asset dans le runbook**
 
