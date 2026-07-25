@@ -1,0 +1,998 @@
+{
+ "Alpaca": {
+  "day": 190,
+  "night": 190
+ },
+ "AmaterasuWolf": {
+  "day": 8,
+  "night": 24
+ },
+ "AmaterasuWolf_Dark": {
+  "day": 255,
+  "night": 255
+ },
+ "Anubis": {
+  "day": 19,
+  "night": 19
+ },
+ "BadCatgirl": {
+  "day": 199,
+  "night": 199
+ },
+ "Baphomet": {
+  "day": 84,
+  "night": 84
+ },
+ "Baphomet_Dark": {
+  "day": 8,
+  "night": 8
+ },
+ "Bastet_Ice": {
+  "day": 3,
+  "night": 3
+ },
+ "BerryGoat": {
+  "day": 228,
+  "night": 228
+ },
+ "BerryGoat_Dark": {
+  "day": 40,
+  "night": 40
+ },
+ "BirdDragon": {
+  "day": 412,
+  "night": 412
+ },
+ "BirdDragon_Ice": {
+  "day": 194,
+  "night": 217
+ },
+ "BlackCentaur": {
+  "day": 1,
+  "night": 1
+ },
+ "BlackGriffon": {
+  "day": 8,
+  "night": 8
+ },
+ "BlackMetalDragon": {
+  "day": 1,
+  "night": 1
+ },
+ "BlackPuppy": {
+  "day": 1188,
+  "night": 1188
+ },
+ "BlackPuppy_Ice": {
+  "day": 8,
+  "night": 8
+ },
+ "BlueDragon": {
+  "day": 35,
+  "night": 35
+ },
+ "BlueDragon_Ice": {
+  "day": 43,
+  "night": 43
+ },
+ "BluePlatypus": {
+  "day": 96,
+  "night": 96
+ },
+ "BluePlatypus_Fire": {
+  "day": 35,
+  "night": 35
+ },
+ "BlueThunderHorse": {
+  "day": 86,
+  "night": 86
+ },
+ "BlueberryFairy": {
+  "day": 479,
+  "night": 479
+ },
+ "Boar": {
+  "day": 84,
+  "night": 84
+ },
+ "BrownRabbit": {
+  "day": 16,
+  "night": 16
+ },
+ "CactusDoll": {
+  "day": 301,
+  "night": 301
+ },
+ "CactusDoll_Dark": {
+  "day": 0,
+  "night": 272
+ },
+ "CandleGhost": {
+  "day": 8,
+  "night": 457
+ },
+ "CaptainPenguin": {
+  "day": 129,
+  "night": 129
+ },
+ "CaptainPenguin_Black": {
+  "day": 46,
+  "night": 46
+ },
+ "Carbunclo": {
+  "day": 126,
+  "night": 126
+ },
+ "CatBat": {
+  "day": 0,
+  "night": 109
+ },
+ "CatMage": {
+  "day": 37,
+  "night": 357
+ },
+ "CatVampire": {
+  "day": 96,
+  "night": 96
+ },
+ "ChickenPal": {
+  "day": 165,
+  "night": 165
+ },
+ "ClioneTwins": {
+  "day": 27,
+  "night": 27
+ },
+ "CloverFairy": {
+  "day": 32,
+  "night": 32
+ },
+ "ClownRabbit": {
+  "day": 18,
+  "night": 18
+ },
+ "ColorfulBird": {
+  "day": 729,
+  "night": 729
+ },
+ "CowPal": {
+  "day": 72,
+  "night": 72
+ },
+ "CubeTurtle": {
+  "day": 272,
+  "night": 272
+ },
+ "CuteButterfly": {
+  "day": 102,
+  "night": 102
+ },
+ "CuteFox": {
+  "day": 35,
+  "night": 35
+ },
+ "CuteMole": {
+  "day": 258,
+  "night": 258
+ },
+ "DandelionGirl": {
+  "day": 35,
+  "night": 35
+ },
+ "DarkCrow": {
+  "day": 204,
+  "night": 1097
+ },
+ "DarkFlameFox": {
+  "day": 8,
+  "night": 8
+ },
+ "DarkScorpion": {
+  "day": 461,
+  "night": 461
+ },
+ "DarkScorpion_Ground": {
+  "day": 9,
+  "night": 9
+ },
+ "Deer": {
+  "day": 158,
+  "night": 158
+ },
+ "Deer_Ground": {
+  "day": 10,
+  "night": 10
+ },
+ "DreamDemon": {
+  "day": 0,
+  "night": 78
+ },
+ "DrillGame": {
+  "day": 528,
+  "night": 528
+ },
+ "Eagle": {
+  "day": 169,
+  "night": 169
+ },
+ "ElecCat": {
+  "day": 24,
+  "night": 24
+ },
+ "ElecLizard": {
+  "day": 19,
+  "night": 19
+ },
+ "ElecPanda": {
+  "day": 1,
+  "night": 1
+ },
+ "ElecPomeranian": {
+  "day": 78,
+  "night": 78
+ },
+ "ElecSnail": {
+  "day": 18,
+  "night": 18
+ },
+ "FairyDragon": {
+  "day": 110,
+  "night": 110
+ },
+ "FairyDragon_Water": {
+  "day": 35,
+  "night": 35
+ },
+ "FeatherOstrich": {
+  "day": 324,
+  "night": 324
+ },
+ "FengyunDeeper": {
+  "day": 9,
+  "night": 9
+ },
+ "FengyunDeeper_Electric": {
+  "day": 200,
+  "night": 200
+ },
+ "FireKirin": {
+  "day": 79,
+  "night": 79
+ },
+ "FireKirin_Dark": {
+  "day": 8,
+  "night": 330
+ },
+ "FlameBambi": {
+  "day": 100,
+  "night": 100
+ },
+ "FlameBuffalo": {
+  "day": 86,
+  "night": 86
+ },
+ "FlowerDinosaur": {
+  "day": 192,
+  "night": 192
+ },
+ "FlowerDinosaur_Electric": {
+  "day": 479,
+  "night": 479
+ },
+ "FlowerDoll": {
+  "day": 55,
+  "night": 55
+ },
+ "FlowerRabbit": {
+  "day": 44,
+  "night": 44
+ },
+ "FluffyBird": {
+  "day": 115,
+  "night": 115
+ },
+ "FlyingManta": {
+  "day": 220,
+  "night": 220
+ },
+ "FlyingManta_Thunder": {
+  "day": 146,
+  "night": 146
+ },
+ "FoxExorcist": {
+  "day": 1,
+  "night": 1
+ },
+ "FoxMage": {
+  "day": 51,
+  "night": 51
+ },
+ "FoxMage_Dark": {
+  "day": 0,
+  "night": 121
+ },
+ "Ganesha": {
+  "day": 113,
+  "night": 113
+ },
+ "Garm": {
+  "day": 250,
+  "night": 250
+ },
+ "GhostAnglerfish": {
+  "day": 61,
+  "night": 96
+ },
+ "GhostAnglerfish_Fire": {
+  "day": 73,
+  "night": 73
+ },
+ "GhostBeast": {
+  "day": 0,
+  "night": 290
+ },
+ "GhostBlackCat": {
+  "day": 0,
+  "night": 108
+ },
+ "GhostDragon": {
+  "day": 1,
+  "night": 1
+ },
+ "GhostRabbit": {
+  "day": 79,
+  "night": 79
+ },
+ "GhostRabbit_Grass": {
+  "day": 11,
+  "night": 11
+ },
+ "GoldenHorse": {
+  "day": 268,
+  "night": 268
+ },
+ "Gorilla": {
+  "day": 52,
+  "night": 52
+ },
+ "Gorilla_Ground": {
+  "day": 59,
+  "night": 59
+ },
+ "GrassGolem": {
+  "day": 28,
+  "night": 28
+ },
+ "GrassGolem_Dark": {
+  "day": 1,
+  "night": 1
+ },
+ "GrassMammoth": {
+  "day": 316,
+  "night": 316
+ },
+ "GrassMammoth_Ice": {
+  "day": 73,
+  "night": 73
+ },
+ "GrassMinotaur": {
+  "day": 56,
+  "night": 56
+ },
+ "GrassPanda": {
+  "day": 41,
+  "night": 41
+ },
+ "GrassPanda_Electric": {
+  "day": 1,
+  "night": 1
+ },
+ "GrassRabbitMan": {
+  "day": 55,
+  "night": 55
+ },
+ "GrimGirl": {
+  "day": 0,
+  "night": 579
+ },
+ "GuardianDog": {
+  "day": 32,
+  "night": 32
+ },
+ "HadesBird": {
+  "day": 384,
+  "night": 722
+ },
+ "HadesBird_Electric": {
+  "day": 52,
+  "night": 52
+ },
+ "HawkBird": {
+  "day": 165,
+  "night": 165
+ },
+ "Hedgehog": {
+  "day": 11,
+  "night": 11
+ },
+ "Hedgehog_Ice": {
+  "day": 51,
+  "night": 51
+ },
+ "HerculesBeetle": {
+  "day": 10,
+  "night": 10
+ },
+ "HerculesBeetle_Ground": {
+  "day": 46,
+  "night": 46
+ },
+ "HoodGhost": {
+  "day": 16,
+  "night": 68
+ },
+ "Horus_Water": {
+  "day": 115,
+  "night": 115
+ },
+ "IceCrocodile": {
+  "day": 46,
+  "night": 46
+ },
+ "IceDeer": {
+  "day": 53,
+  "night": 53
+ },
+ "IceFox": {
+  "day": 157,
+  "night": 157
+ },
+ "IceHorse": {
+  "day": 1,
+  "night": 1
+ },
+ "IceHorse_Dark": {
+  "day": 1,
+  "night": 1
+ },
+ "IceNarwhal": {
+  "day": 31,
+  "night": 6
+ },
+ "IceSeal": {
+  "day": 50,
+  "night": 50
+ },
+ "IceSeal_Ground": {
+  "day": 12,
+  "night": 12
+ },
+ "IceWitch": {
+  "day": 34,
+  "night": 34
+ },
+ "JellyfishFairy": {
+  "day": 194,
+  "night": 92
+ },
+ "JellyfishGhost": {
+  "day": 5,
+  "night": 402
+ },
+ "JetDragon": {
+  "day": 1,
+  "night": 1
+ },
+ "Kelpie": {
+  "day": 237,
+  "night": 237
+ },
+ "Kelpie_Fire": {
+  "day": 149,
+  "night": 149
+ },
+ "KendoFrog": {
+  "day": 161,
+  "night": 161
+ },
+ "KendoFrog_Dark": {
+  "day": 357,
+  "night": 357
+ },
+ "KingAlpaca": {
+  "day": 1,
+  "night": 1
+ },
+ "KingAlpaca_Ice": {
+  "day": 1,
+  "night": 1
+ },
+ "KingBahamut": {
+  "day": 15,
+  "night": 15
+ },
+ "KingSunfish": {
+  "day": 20,
+  "night": 20
+ },
+ "KingSunfish_Thunder": {
+  "day": 12,
+  "night": 12
+ },
+ "Kirin": {
+  "day": 41,
+  "night": 41
+ },
+ "Kitsunebi": {
+  "day": 49,
+  "night": 49
+ },
+ "Kitsunebi_Ice": {
+  "day": 32,
+  "night": 32
+ },
+ "LavaGirl": {
+  "day": 178,
+  "night": 178
+ },
+ "LazyCatfish": {
+  "day": 209,
+  "night": 209
+ },
+ "LazyCatfish_Gold": {
+  "day": 146,
+  "night": 146
+ },
+ "LazyDragon": {
+  "day": 36,
+  "night": 36
+ },
+ "LazyDragon_Electric": {
+  "day": 17,
+  "night": 17
+ },
+ "LeafMomonga": {
+  "day": 97,
+  "night": 97
+ },
+ "LeafPrincess": {
+  "day": 11,
+  "night": 11
+ },
+ "LilyQueen": {
+  "day": 1,
+  "night": 1
+ },
+ "LilyQueen_Dark": {
+  "day": 0,
+  "night": 1
+ },
+ "LittleBriarRose": {
+  "day": 100,
+  "night": 100
+ },
+ "LizardMan": {
+  "day": 131,
+  "night": 708
+ },
+ "LizardMan_Fire": {
+  "day": 36,
+  "night": 36
+ },
+ "LongCat": {
+  "day": 17,
+  "night": 17
+ },
+ "LotusDragon": {
+  "day": 1,
+  "night": 1
+ },
+ "Manticore": {
+  "day": 47,
+  "night": 47
+ },
+ "Manticore_Dark": {
+  "day": 86,
+  "night": 408
+ },
+ "MimicDog": {
+  "day": 3512,
+  "night": 3512
+ },
+ "Monkey": {
+  "day": 53,
+  "night": 53
+ },
+ "Monkey_Fire": {
+  "day": 21,
+  "night": 21
+ },
+ "MopBaby": {
+  "day": 71,
+  "night": 71
+ },
+ "MopKing": {
+  "day": 71,
+  "night": 71
+ },
+ "MummyPal": {
+  "day": 272,
+  "night": 272
+ },
+ "MushroomDragon": {
+  "day": 46,
+  "night": 46
+ },
+ "MushroomDragon_Dark": {
+  "day": 148,
+  "night": 148
+ },
+ "Mutant": {
+  "day": 53,
+  "night": 53
+ },
+ "MysteryMask": {
+  "day": 1188,
+  "night": 1188
+ },
+ "NaughtyCat": {
+  "day": 47,
+  "night": 367
+ },
+ "NegativeKoala": {
+  "day": 0,
+  "night": 293
+ },
+ "NegativeOctopus": {
+  "day": 139,
+  "night": 168
+ },
+ "NegativeOctopus_Neutral": {
+  "day": 150,
+  "night": 150
+ },
+ "NightBlueHorse": {
+  "day": 1,
+  "night": 137
+ },
+ "NightFox": {
+  "day": 0,
+  "night": 104
+ },
+ "OctopusGirl": {
+  "day": 195,
+  "night": 257
+ },
+ "OctopusGirl_Neutral": {
+  "day": 18,
+  "night": 18
+ },
+ "OniGhostGirl": {
+  "day": 16,
+  "night": 68
+ },
+ "PandaGirl": {
+  "day": 76,
+  "night": 76
+ },
+ "Penguin": {
+  "day": 379,
+  "night": 379
+ },
+ "Penguin_Electric": {
+  "day": 0,
+  "night": 108
+ },
+ "PinkCat": {
+  "day": 217,
+  "night": 217
+ },
+ "PinkLizard": {
+  "day": 0,
+  "night": 626
+ },
+ "PinkRabbit": {
+  "day": 280,
+  "night": 280
+ },
+ "PinkRabbit_Grass": {
+  "day": 108,
+  "night": 108
+ },
+ "PlantSlime": {
+  "day": 68,
+  "night": 68
+ },
+ "Plesiosaur": {
+  "day": 174,
+  "night": 174
+ },
+ "PurpleSpider": {
+  "day": 36,
+  "night": 39
+ },
+ "QueenBee": {
+  "day": 36,
+  "night": 36
+ },
+ "RaijinDaughter": {
+  "day": 91,
+  "night": 91
+ },
+ "RaijinDaughter_Water": {
+  "day": 108,
+  "night": 108
+ },
+ "RedArmorBird": {
+  "day": 123,
+  "night": 123
+ },
+ "RedFlowerBird": {
+  "day": 32,
+  "night": 32
+ },
+ "RobinHood": {
+  "day": 41,
+  "night": 41
+ },
+ "RobinHood_Ground": {
+  "day": 460,
+  "night": 460
+ },
+ "RockBeast": {
+  "day": 15,
+  "night": 15
+ },
+ "RockBeast_Ice": {
+  "day": 32,
+  "night": 32
+ },
+ "Ronin": {
+  "day": 1453,
+  "night": 1453
+ },
+ "Ronin_Dark": {
+  "day": 1188,
+  "night": 1431
+ },
+ "SaintCentaur": {
+  "day": 1,
+  "night": 1
+ },
+ "SakuraSaurus": {
+  "day": 274,
+  "night": 274
+ },
+ "SakuraSaurus_Water": {
+  "day": 7,
+  "night": 7
+ },
+ "SamuraiDog": {
+  "day": 7,
+  "night": 7
+ },
+ "ScorpionMan": {
+  "day": 51,
+  "night": 51
+ },
+ "ScorpionMan_Electric": {
+  "day": 18,
+  "night": 18
+ },
+ "Sekhmet": {
+  "day": 290,
+  "night": 290
+ },
+ "Serpent": {
+  "day": 152,
+  "night": 170
+ },
+ "Serpent_Ground": {
+  "day": 404,
+  "night": 404
+ },
+ "SharkKid": {
+  "day": 48,
+  "night": 48
+ },
+ "SharkKid_Fire": {
+  "day": 51,
+  "night": 51
+ },
+ "SheepBall": {
+  "day": 221,
+  "night": 221
+ },
+ "SifuDog": {
+  "day": 32,
+  "night": 32
+ },
+ "SkyDragon": {
+  "day": 323,
+  "night": 323
+ },
+ "SkyDragon_Grass": {
+  "day": 44,
+  "night": 44
+ },
+ "SleeveRabbit": {
+  "day": 21,
+  "night": 21
+ },
+ "SmallArmadillo": {
+  "day": 51,
+  "night": 51
+ },
+ "SmallYeti": {
+  "day": 16,
+  "night": 16
+ },
+ "SnowPeafowl": {
+  "day": 68,
+  "night": 68
+ },
+ "SoldierBee": {
+  "day": 36,
+  "night": 36
+ },
+ "StuffedShark": {
+  "day": 97,
+  "night": 97
+ },
+ "StuffedShark_Fire": {
+  "day": 73,
+  "night": 73
+ },
+ "SumoDog": {
+  "day": 32,
+  "night": 32
+ },
+ "Suzaku": {
+  "day": 13,
+  "night": 13
+ },
+ "Suzaku_Water": {
+  "day": 32,
+  "night": 32
+ },
+ "SweetsSheep": {
+  "day": 62,
+  "night": 62
+ },
+ "SweetsSheep_Ground": {
+  "day": 12,
+  "night": 12
+ },
+ "SwordCutlassfish": {
+  "day": 38,
+  "night": 38
+ },
+ "SwordCutlassfish_Fire": {
+  "day": 14,
+  "night": 14
+ },
+ "TentacleTurtle": {
+  "day": 230,
+  "night": 230
+ },
+ "TentacleTurtle_Ground": {
+  "day": 159,
+  "night": 159
+ },
+ "ThunderBird": {
+  "day": 417,
+  "night": 417
+ },
+ "ThunderDog": {
+  "day": 180,
+  "night": 180
+ },
+ "ThunderDog_Ice": {
+  "day": 66,
+  "night": 66
+ },
+ "ThunderFluffyBird": {
+  "day": 18,
+  "night": 18
+ },
+ "TropicalOstrich": {
+  "day": 33,
+  "night": 33
+ },
+ "Umihebi": {
+  "day": 1,
+  "night": 1
+ },
+ "Umihebi_Fire": {
+  "day": 17,
+  "night": 17
+ },
+ "VenusFlytrap": {
+  "day": 8,
+  "night": 8
+ },
+ "VioletFairy": {
+  "day": 10,
+  "night": 21
+ },
+ "VolcanicMonster": {
+  "day": 21,
+  "night": 21
+ },
+ "VolcanicMonster_Ice": {
+  "day": 105,
+  "night": 105
+ },
+ "VolcanoDragon": {
+  "day": 85,
+  "night": 85
+ },
+ "WeaselDragon": {
+  "day": 90,
+  "night": 90
+ },
+ "WeaselDragon_Fire": {
+  "day": 32,
+  "night": 32
+ },
+ "Werewolf": {
+  "day": 0,
+  "night": 654
+ },
+ "Werewolf_Ice": {
+  "day": 97,
+  "night": 380
+ },
+ "WhiteDeer": {
+  "day": 1185,
+  "night": 1185
+ },
+ "WhiteMoth": {
+  "day": 44,
+  "night": 44
+ },
+ "WhiteShieldDragon": {
+  "day": 1,
+  "night": 1
+ },
+ "WhiteTiger": {
+  "day": 35,
+  "night": 35
+ },
+ "WhiteTiger_Ground": {
+  "day": 113,
+  "night": 113
+ },
+ "WindChimes": {
+  "day": 106,
+  "night": 106
+ },
+ "WindChimes_Ice": {
+  "day": 0,
+  "night": 262
+ },
+ "WingGolem": {
+  "day": 9,
+  "night": 9
+ },
+ "WingGolem_Fire": {
+  "day": 32,
+  "night": 32
+ },
+ "WizardOwl": {
+  "day": 0,
+  "night": 177
+ },
+ "WoolFox": {
+  "day": 145,
+  "night": 145
+ },
+ "Yeti": {
+  "day": 47,
+  "night": 47
+ },
+ "Yeti_Grass": {
+  "day": 56,
+  "night": 56
+ }
+}

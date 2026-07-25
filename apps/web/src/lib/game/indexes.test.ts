@@ -1,3 +1,4 @@
+import pals from "@palworld-companion/game-data/pals.json";
 import { describe, expect, it } from "vitest";
 import {
   markersByPal,
@@ -38,8 +39,9 @@ describe("index inversés", () => {
     expect(anubis?.length).toBeGreaterThan(0);
     expect(anubis![0].type).toBe("alpha");
     expect(anubis![0].meta?.level).toBeGreaterThan(0);
-    // Lamball n'a aucun spawner Alpha.
-    expect(markersByPal.get("Lamball")).toBeUndefined();
+    // SheepBall (nom affiché « Lamball ») est un id valide sans spawner Alpha.
+    expect(pals.some((p) => p.id === "SheepBall")).toBe(true);
+    expect(markersByPal.get("SheepBall")).toBeUndefined();
     // Les 69 spawners sans Pal résolu ne doivent pas créer d'entrée.
     expect(markersByPal.has("None")).toBe(false);
   });

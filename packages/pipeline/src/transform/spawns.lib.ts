@@ -12,7 +12,10 @@ export type DistributionRow = {
   nightTimeLocations?: PhaseBlock;
 };
 
-/** Rayon par défaut : uniforme à 15000 dans toutes les lignes observées. */
+/** Repli quand un bloc ne porte pas de rayon. Les valeurs réellement
+ *  présentes sont 15000, 8000 et 0 ; aucun Pal ne mélange deux rayons non
+ *  nuls, et les blocs à 0 n'ont jamais de point — le Math.max ci-dessous
+ *  retourne donc bien le rayon propre à chaque Pal. */
 const DEFAULT_RADIUS = 15000;
 
 export function buildPalIdIndex(ids: string[]): Map<string, string> {
