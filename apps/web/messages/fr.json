@@ -225,6 +225,7 @@
   "pal_toggle_caught": "Capturé",
   "pal_locations": "Où le trouver",
   "pal_locations_alpha": "Boss Alpha · Niv. {level}",
+  "pal_locations_zones": "Voir sur la carte · {count} zones",
   "breeding_title": "Reproduction",
   "breeding_tab_calc": "Parents → enfant",
   "breeding_tab_parents": "Enfant → parents",

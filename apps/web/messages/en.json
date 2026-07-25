@@ -225,6 +225,7 @@
   "pal_toggle_caught": "Caught",
   "pal_locations": "Where to find",
   "pal_locations_alpha": "Alpha boss · Lv. {level}",
+  "pal_locations_zones": "View on map · {count} areas",
   "breeding_title": "Breeding",
   "breeding_tab_calc": "Parents → child",
   "breeding_tab_parents": "Child → parents",

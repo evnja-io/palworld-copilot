@@ -2,6 +2,7 @@
 	import pals from '@palworld-companion/game-data/pals.json';
 	import skills from '@palworld-companion/game-data/skills.json';
 	import moves from '@palworld-companion/game-data/pal-moves.json';
+	import spawnsIndex from '@palworld-companion/game-data/spawns-index.json';
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameName, gameDesc } from '$lib/game/names';
@@ -42,6 +43,14 @@
 	const child = $derived(partner ? childOf(pal.id, partner) : null);
 	const caught = $derived(store.mine.has(pal.id));
 	const alphaMarker = $derived(markersByPal.get(pal.id)?.[0]);
+
+	const spawnCount = $derived(
+		(spawnsIndex as Record<string, { day: number; night: number }>)[pal.id]
+	);
+	// Le lien annonce la phase que la carte ouvrira par défaut.
+	const spawnZones = $derived(
+		spawnCount ? (pal.nocturnal ? spawnCount.night : spawnCount.day) : 0
+	);
 
 	const STAT_LABELS: Record<string, string> = {
 		hp: 'HP',
@@ -84,13 +93,20 @@
 	</div>
 </header>
 
-{#if alphaMarker}
+{#if alphaMarker || spawnZones > 0}
 	<section class="locations">
 		<h2>{m.pal_locations()}</h2>
 		<div class="loc-links">
-			<a class="loc-link" href={appHref(`/map?focus=${alphaMarker.id}`)}>
-				{m.pal_locations_alpha({ level: alphaMarker.meta?.level ?? 0 })}
-			</a>
+			{#if spawnZones > 0}
+				<a class="loc-link" href={appHref(`/map?pal=${pal.id}`)}>
+					{m.pal_locations_zones({ count: spawnZones })}
+				</a>
+			{/if}
+			{#if alphaMarker}
+				<a class="loc-link" href={appHref(`/map?focus=${alphaMarker.id}`)}>
+					{m.pal_locations_alpha({ level: alphaMarker.meta?.level ?? 0 })}
+				</a>
+			{/if}
 		</div>
 	</section>
 {/if}
