@@ -198,6 +198,66 @@ items.ts encyclopédise les variantes dont l'override résout (items.json
 toujours non nommable sont écartées (6 : FlameThrower jamais nommé + Hotmilk
 sans ligne d'item). Icônes déjà couvertes par la passe d'alias IconName.
 
+## 2026-07-25 - Mode invité : tout le produit sans compte, en URL propre
+
+**Constat** : tout vivait sous `routes/s/[slug]/`, dont le layout redirigeait
+tout anonyme vers `/login`. Or 5 pages sur 13 ne touchent jamais la base et 4
+autres seulement pour une case à cocher. Conséquence : aucune page de contenu
+(288 pals, 2344 objets, 498 constructions) n'était accessible ni indexable.
+**Décision** : ouvrir toutes les fonctionnalités aux visiteurs, ne garder
+derrière le login que la **synchro de sauvegarde** (SFTP, upload, revendication
+de GUID, réglages, invitations, tableau de bord, progression *de groupe*).
+
+**Mécanique retenue** :
+- **Sentinelle `__guest` + hook `reroute`** (`src/hooks.ts`, `src/lib/guest.ts`) :
+  `/paldex` est résolu en interne vers `/s/__guest/paldex`. **Un seul arbre de
+  routes**, zéro fichier dupliqué, donc les deux modes ne peuvent pas diverger.
+  `generateSlug()` tire dans BASE62 (sans `_`) : la sentinelle ne peut jamais
+  collisionner avec un slug réel. Kit n'utilise la valeur de retour que pour
+  résoudre la route (`respond.js`) : `page.url` reste l'URL affichée, donc
+  `page.route.id === '/s/[slug]/map'` continue de fonctionner.
+- **Liste blanche `GUEST_FEATURES`**, pas de liste noire : `/`, `/docs`,
+  `/servers`, `/join`, `/api`, `/s/*` et les assets ne demandent aucune règle,
+  et une future route ne peut pas devenir tenant par accident. La même constante
+  pilote le reroute ET la nav du shell invité.
+- **Union discriminée `mode: 'guest' | 'member'`** renvoyée par
+  `s/[slug]/+layout.server.ts`, avec le même jeu de clés dans les deux branches.
+  `OptionalUnion` des types générés distribue sur les unions, donc `svelte-check`
+  a énuméré exactement les 8 loads à traiter. **Piège** : `Omit<union, K>` n'est
+  pas distributif, donc dans un `+page.svelte` `data.mode` ne restreint pas
+  `data.server` — le tableau de bord et les réglages ré-exposent `user`/`server`
+  depuis leur propre load.
+- **localStorage comme source de vérité invité** (`lib/game/localProgress.ts`,
+  une clé par kind), branché dans `ProgressStore` sans changer son API publique :
+  les 4 appelants, `MarkerPopup` et `GroupAvatars` sont intouchés. `group = {}`
+  fait disparaître les avatars par construction. En mode local, `startSync()`
+  écoute `storage` au lieu d'un poll 60 s (parité multi-onglets, zéro requête).
+- **Croisement** : type `ParentView` partagé, auquel `PalInstance` est
+  structurellement assignable. Les deux sources d'entrée (instances importées /
+  saisie manuelle) alimentent le même calcul et le **même bloc de résultat**,
+  sans faux `instanceId`. Le sélecteur d'espèce/passifs réutilise `TeamPicker`.
+  Le mode `path` d'un invité part de ses pals cochés au Paldex.
+- **Locale dans l'URL sur les pages publiques** : `strategy: ['url', …]` +
+  `routeStrategies` qui rebascule `/s/*`, `/servers`, `/join` sur le cookie et
+  exclut `/api`, `/ingest`. Les `urlPatterns` par défaut de Paraglide décrivaient
+  déjà le découpage voulu (FR sans préfixe, EN sous `/en/`). Paraglide possédant
+  `reroute` en stratégie URL, les deux se **composent** :
+  `deLocalizeUrl` puis `guestTarget` — et le hook renvoie toujours le chemin
+  dé-localisé, jamais `undefined`, sinon `/en/docs` ne résoudrait pas.
+
+**Conséquences / non-objectifs** :
+- Les pages tenant portent `noindex` ; les pages publiques sont les canoniques.
+- **Pas de prérendu** : ces pages vivent sous le layout tenant dont le load est
+  dynamique (cookies). Le SSR suffit à l'indexation ; le levier si le trafic
+  invité grossit est un `Cache-Control`, pas une restructuration de routes.
+- La progression invité est vide au rendu serveur et apparaît à l'hydratation
+  (même comportement que `mapState.restore()`), ce qui est **souhaitable** pour
+  un crawler : il voit le contenu statique, sans état utilisateur.
+- `LangSwitch` n'a eu besoin d'aucune modification : `setLocale` de Paraglide 2.22
+  consulte déjà `getStrategyForUrl` et navigue via `localizeUrl`.
+- Étape 1B (métadonnées par page, sitemap, robots.txt) et étape 2 (équipes
+  locales + import à l'inscription) restent à faire.
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

@@ -15,6 +15,9 @@ import type { Actions, PageServerLoadEvent } from "./$types";
 export async function load({ locals, params }: PageServerLoadEvent) {
   const { server } = await requireOwner(locals.user, params.slug);
   return {
+    // Re-exposé ici (non-null) : le layout renvoie désormais une union
+    // invité/membre, et `Omit` n'est pas distributif dans un +page.svelte.
+    server,
     invites: await listInvites(server.id),
     members: await listMembers(server.id),
     sftp: await getImportConfig(server.id),

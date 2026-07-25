@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
-	import { getLocale } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
@@ -99,13 +99,16 @@
 					{m.auth_login_discord()}
 					<span class="shine"></span>
 				</a>
+				<!-- Essai sans friction : tout le produit est utilisable sans compte,
+				     seule la synchro de sauvegarde demande une connexion. -->
+				<a class="cta-guest" href={localizeHref('/paldex')}>{m.landing_try_guest()}</a>
 				<p class="private">{m.landing_private()}</p>
 				<ul class="stats">
 					{#each stats as s, i (i)}
 						<li class="tnum">{s.label({ count: nf.format(s.count) })}</li>
 					{/each}
 				</ul>
-				<a class="docs-link" href="/docs">{m.landing_docs_link()}</a>
+				<a class="docs-link" href={localizeHref('/docs')}>{m.landing_docs_link()}</a>
 			</div>
 		</section>
 
@@ -431,6 +434,20 @@
 		border-radius: 50%;
 		background: var(--text-4);
 		margin: 0 12px;
+	}
+
+	/* CTA secondaire : entrer sans compte. Volontairement plus discret que le
+	   bouton Discord, mais juste en dessous pour rester visible. */
+	.cta-guest {
+		display: block;
+		margin-top: 10px;
+		font-size: 13.5px;
+		font-weight: 500;
+		color: var(--text-2);
+	}
+	.cta-guest:hover {
+		color: var(--accent);
+		text-decoration: underline;
 	}
 
 	.docs-link {

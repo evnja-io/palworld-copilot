@@ -1,18 +1,40 @@
 <script lang="ts">
 	import posthog from 'posthog-js';
 	import pals from '@palworld-companion/game-data/pals.json';
+	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { gameDesc, gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
 	import { appHref } from '$lib/nav';
 	import { childOf, parentsOf, breedingPath, uniqueComboList } from '$lib/game/breeding';
-	import { passiveUnion, pInheritSubset } from '$lib/game/passives';
+	import { MAX_PASSIVES, passiveUnion, pInheritSubset } from '$lib/game/passives';
+	import { defaultPassivesFor, PAL_IDS } from '$lib/game/team-data';
+	import { ProgressStore } from '$lib/game/progress.svelte';
+	import TeamPicker from '$lib/components/teams/TeamPicker.svelte';
 	// Import de types uniquement : effacé à la compilation, aucun code serveur embarqué.
 	import type { PalInstance, PalOwner } from '$lib/server/pals';
 
 	let { data } = $props();
 
 	const owners = $derived(data.owners as PalOwner[]);
+	const guest = $derived(data.mode === 'guest');
+
+	// Pals « possédés » : instances de la sauvegarde pour un membre, cases cochées
+	// du Paldex (localStorage) pour un invité. Le store choisit son backend selon
+	// le slug, donc un seul chemin de code ici.
+	const caughtStore = new ProgressStore();
+	$effect(() => {
+		caughtStore.init(
+			'pal_caught',
+			page.params.slug!,
+			data.caught.mine,
+			data.caught.group,
+			PAL_IDS
+		);
+		caughtStore.startSync();
+		return () => caughtStore.stopSync();
+	});
+	const caught = $derived({ mine: [...caughtStore.mine], group: caughtStore.group });
 
 	type Mode = 'calc' | 'parents' | 'path' | 'index';
 	let mode = $state<Mode>('calc');
@@ -34,14 +56,44 @@
 	const myGuid = $derived(data.membership?.palPlayerGuid ?? null);
 	let scope = $state<'mine' | 'server'>('mine');
 	const scopedSpecies = $derived(
-		new Set(
-			owners
-				.filter((o) => scope === 'server' || o.guid === myGuid)
-				.flatMap((o) => o.instances.map((i) => i.palId))
-		)
+		guest
+			? caughtStore.mine
+			: new Set(
+					owners
+						.filter((o) => scope === 'server' || o.guid === myGuid)
+						.flatMap((o) => o.instances.map((i) => i.palId))
+				)
 	);
 
-	// ---- Mode calc : deux instances parentes -> enfant + probabilités de passifs.
+	// ---- Mode calc : deux parents -> enfant + probabilités de passifs.
+	// Un parent est vu au travers du strict minimum dont le calcul a besoin.
+	// PalInstance y est structurellement assignable : les deux sources d'entrée
+	// (instances importées / saisie manuelle) alimentent le MÊME calcul et le
+	// même bloc de résultat.
+	type ParentView = { palId: string; gender: PalInstance['gender']; passives: string[] };
+
+	// Saisie manuelle : seule option pour un invité (aucune sauvegarde importée),
+	// défaut pour un membre qui n'a encore rien importé, option pour les autres.
+	let manualPref = $state<boolean | null>(null);
+	const manual = $derived(manualPref ?? owners.length === 0);
+	let manualA = $state<ParentView>({ palId: '', gender: 'female', passives: [] });
+	let manualB = $state<ParentView>({ palId: '', gender: 'male', passives: [] });
+
+	const GENDERS = ['female', 'male'] as const;
+
+	// Sélecteur ouvert : quel parent, et quoi choisir.
+	let picker = $state<{ side: 'A' | 'B'; mode: 'pal' | 'passive' } | null>(null);
+	const pickerTarget = $derived(picker?.side === 'B' ? manualB : manualA);
+
+	function pickSpecies(side: 'A' | 'B', palId: string) {
+		const target = side === 'A' ? manualA : manualB;
+		target.palId = palId;
+		// Même convention que defaultSlotFor du team builder : on préremplit les
+		// passifs innés d'espèce plutôt que de repartir de zéro.
+		target.passives = defaultPassivesFor(palId);
+	}
+
+	// Sélecteurs d'instances (membres avec sauvegarde importée).
 	let guidA = $state('');
 	let instA = $state('');
 	let guidB = $state('');
@@ -55,22 +107,34 @@
 	}
 	const palA = $derived(instanceOf(guidA, instA));
 	const palB = $derived(instanceOf(guidB, instB));
-	const child = $derived(palA && palB ? childOf(palA.palId, palB.palId) : null);
+
+	// Les deux parents effectifs, quelle que soit la source.
+	const parentA = $derived<ParentView | null>(manual ? (manualA.palId ? manualA : null) : palA);
+	const parentB = $derived<ParentView | null>(manual ? (manualB.palId ? manualB : null) : palB);
+
+	const child = $derived(parentA && parentB ? childOf(parentA.palId, parentB.palId) : null);
 	$effect(() => {
 		if (child) {
-			posthog.capture('breeding_calculated', { parent_a: palA?.palId, parent_b: palB?.palId, child_species: child });
+			posthog.capture('breeding_calculated', {
+				parent_a: parentA?.palId,
+				parent_b: parentB?.palId,
+				child_species: child,
+				manual
+			});
 		}
 	});
 	// Avertissement non bloquant : il faut exactement un mâle + une femelle.
 	const genderOk = $derived(
-		!!palA &&
-			!!palB &&
-			((palA.gender === 'male' && palB.gender === 'female') ||
-				(palA.gender === 'female' && palB.gender === 'male'))
+		!!parentA &&
+			!!parentB &&
+			((parentA.gender === 'male' && parentB.gender === 'female') ||
+				(parentA.gender === 'female' && parentB.gender === 'male'))
 	);
 
 	// Pool héritable = union dédupliquée des passifs des deux parents.
-	const union = $derived(palA && palB ? passiveUnion(palA.passives, palB.passives) : []);
+	const union = $derived(
+		parentA && parentB ? passiveUnion(parentA.passives, parentB.passives) : []
+	);
 	let wanted = $state<string[]>([]);
 	// Changer de parents change le pool : on réinitialise la sélection.
 	$effect(() => {
@@ -138,9 +202,62 @@
 
 {#snippet emptyBox()}
 	<div class="empty">
-		<p>{m.breeding_no_instances()}</p>
-		<a href={appHref('/import')} class="import">{m.import_title()}</a>
+		{#if guest}
+			<!-- Un invité n'a pas de sauvegarde : son « possédé » vient du Paldex. -->
+			<p>{m.breeding_path_guest_empty()}</p>
+			<a href={appHref('/paldex')} class="import">{m.nav_paldex()}</a>
+		{:else}
+			<p>{m.breeding_no_instances()}</p>
+			<a href={appHref('/import')} class="import">{m.import_title()}</a>
+		{/if}
 	</div>
+{/snippet}
+
+{#snippet manualParent(side: 'A' | 'B', p: ParentView, title: string)}
+	<section class="parent">
+		<h2>{title}</h2>
+		<button class="pick" onclick={() => (picker = { side, mode: 'pal' })}>
+			{#if p.palId}
+				{#if palIcon(p.palId)}<img src={palIcon(p.palId)} alt="" width="24" height="24" />{/if}
+				{gameName(`pal:${p.palId}`)}
+			{:else}
+				{m.breeding_manual_species()}
+			{/if}
+		</button>
+		{#if p.palId}
+			<div class="gender-row" role="group" aria-label={m.breeding_manual_gender()}>
+				{#each GENDERS as g (g)}
+					<button
+						class="seg"
+						class:on={p.gender === g}
+						aria-pressed={p.gender === g}
+						onclick={() => (p.gender = g)}
+					>
+						{genderSym(g)} {genderLabel(g)}
+					</button>
+				{/each}
+			</div>
+			<ul class="chips">
+				{#each p.passives as pv (pv)}
+					<li title={gameDesc(`passive:${pv}`)}>
+						{gameName(`passive:${pv}`)}
+						<button
+							class="chip-x"
+							aria-label={gameName(`passive:${pv}`)}
+							onclick={() => (p.passives = p.passives.filter((x) => x !== pv))}>×</button
+						>
+					</li>
+				{/each}
+				{#if p.passives.length < MAX_PASSIVES}
+					<li class="chip-add">
+						<button onclick={() => (picker = { side, mode: 'passive' })}>
+							+ {m.breeding_manual_add_passive()}
+						</button>
+					</li>
+				{/if}
+			</ul>
+		{/if}
+	</section>
 {/snippet}
 
 {#snippet instCard(p: PalInstance)}
@@ -183,7 +300,7 @@
 			{t.label()}
 		</button>
 	{/each}
-	{#if mode !== 'calc'}
+	{#if mode !== 'calc' && !guest}
 		<div class="scope" role="group" aria-label={m.breeding_scope_mine()}>
 			<button
 				class="seg"
@@ -205,7 +322,7 @@
 	{/if}
 </div>
 
-{#if mode !== 'calc' && scope === 'mine' && !myGuid}
+{#if mode !== 'calc' && scope === 'mine' && !myGuid && !guest}
 	<p class="muted">
 		{m.breeding_scope_unclaimed()}
 		<a href={appHref('/import')} class="claim">{m.import_title()}</a>
@@ -213,8 +330,26 @@
 {/if}
 
 {#if mode === 'calc'}
-	{#if owners.length === 0}
-		{@render emptyBox()}
+	{#if owners.length > 0}
+		<!-- Membre avec sauvegarde : choix entre ses instances réelles ou la saisie
+		     libre (utile pour simuler un croisement qu'on ne possède pas encore). -->
+		<div class="source" role="group" aria-label={m.breeding_manual_toggle_owned()}>
+			<button class="seg" class:on={!manual} aria-pressed={!manual} onclick={() => (manualPref = false)}>
+				{m.breeding_manual_toggle_owned()}
+			</button>
+			<button class="seg" class:on={manual} aria-pressed={manual} onclick={() => (manualPref = true)}>
+				{m.breeding_manual_toggle_manual()}
+			</button>
+		</div>
+	{/if}
+	{#if manual}
+		<div class="parents-grid">
+			{@render manualParent('A', manualA, m.breeding_parent_a())}
+			{@render manualParent('B', manualB, m.breeding_parent_b())}
+		</div>
+		{#if !parentA || !parentB}
+			<p class="muted">{m.breeding_manual_hint()}</p>
+		{/if}
 	{:else}
 		<div class="parents-grid">
 			<section class="parent">
@@ -254,7 +389,8 @@
 				{/if}
 			</section>
 		</div>
-		{#if palA && palB}
+	{/if}
+	{#if parentA && parentB}
 			{#if !genderOk}
 				<p class="warn">{m.breeding_gender_warning()}</p>
 			{/if}
@@ -295,7 +431,6 @@
 				{/if}
 			</div>
 		{/if}
-	{/if}
 {:else if mode === 'parents'}
 	<div class="filters">
 		<select bind:value={parentsTarget}>
@@ -318,7 +453,9 @@
 		</ul>
 	{/if}
 {:else if mode === 'path'}
-	{#if owners.length === 0}
+	<!-- Le chemin part des espèces possédées : instances importées pour un
+	     membre, pals cochés dans le Paldex pour un invité. -->
+	{#if guest ? scopedSpecies.size === 0 : owners.length === 0}
 		{@render emptyBox()}
 	{:else}
 		<p class="muted tnum">
@@ -374,6 +511,24 @@
 	</ul>
 {/if}
 
+{#if picker}
+	<TeamPicker
+		mode={picker.mode}
+		palId={pickerTarget.palId || null}
+		{caught}
+		exclude={picker.mode === 'passive' ? pickerTarget.passives : []}
+		onselect={(id) => {
+			// On capture la cible avant de refermer : pickerTarget dérive de `picker`.
+			const { side, mode: what } = picker!;
+			const target = side === 'A' ? manualA : manualB;
+			if (what === 'pal') pickSpecies(side, id);
+			else target.passives = [...target.passives, id];
+			picker = null;
+		}}
+		onclose={() => (picker = null)}
+	/>
+{/if}
+
 <style>
 	.head {
 		display: flex;
@@ -412,6 +567,71 @@
 		display: flex;
 		gap: 6px;
 		margin-left: auto;
+	}
+	/* Source des parents en mode calc (instances importées / saisie manuelle) */
+	.source {
+		display: flex;
+		gap: 6px;
+		margin: 0 0 16px;
+	}
+	/* Saisie manuelle : bouton d'espèce, genre, puces de passifs */
+	.pick {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--text-1);
+		background: var(--input-bg);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--r-sm);
+		padding: 8px 12px;
+		text-align: left;
+	}
+	.pick:hover {
+		border-color: var(--focus-ring);
+		color: var(--accent);
+	}
+	.gender-row {
+		display: flex;
+		gap: 6px;
+	}
+	.chips {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+	.chips li {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 12px;
+		color: var(--text-2);
+		background: var(--surface-2);
+		border: 1px solid var(--border);
+		border-radius: var(--r-sm);
+		padding: 3px 8px;
+	}
+	.chip-x {
+		color: var(--text-4);
+		font-size: 14px;
+		line-height: 1;
+		padding: 0;
+	}
+	.chip-x:hover {
+		color: var(--el-fire);
+	}
+	.chips .chip-add {
+		background: none;
+		border-style: dashed;
+	}
+	.chips .chip-add button {
+		color: var(--accent);
+		font-size: 12px;
+		padding: 0;
 	}
 	.claim {
 		color: var(--accent);

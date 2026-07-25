@@ -377,5 +377,20 @@
   "teams_fruits_toggle": "All skills (skill fruits)",
   "teams_learnset_empty": "This Pal has no learnset — showing all skills.",
   "teams_caught_by_me": "Caught by me",
-  "teams_level_badge": "Lv. {level}"
+  "teams_level_badge": "Lv. {level}",
+  "guest_badge": "Guest",
+  "guest_local_notice": "Your progress is saved in this browser. Sign in to share it with your tribe.",
+  "landing_try_guest": "Try without an account",
+  "breeding_manual_toggle_owned": "My Pals",
+  "breeding_manual_toggle_manual": "Enter manually",
+  "breeding_manual_species": "Choose a Pal",
+  "breeding_manual_gender": "Gender",
+  "breeding_manual_add_passive": "Add a passive",
+  "breeding_manual_hint": "Fill in both parents to see the child and passive probabilities.",
+  "breeding_path_guest_empty": "Tick the Pals you have caught in the Paldex: breeding paths start from there.",
+  "error_404_title": "Page not found",
+  "error_404_body": "This page does not exist or is not available.",
+  "error_generic_title": "Something went wrong",
+  "error_back_home": "Back to home",
+  "error_browse_paldex": "Browse the Paldex"
 }

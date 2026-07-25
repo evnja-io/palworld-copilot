@@ -4,14 +4,17 @@
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import { appHref } from '$lib/nav';
+	import { GUEST_FEATURES } from '$lib/guest';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import CommandPalette from '$lib/components/CommandPalette.svelte';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
 
 	let { data, children } = $props();
 
 	// Identifier l'utilisateur authentifié à chaque montage du layout (connexion et rechargement).
+	// Un invité n'a pas d'identité : appeler identify(null) planterait à l'hydratation.
 	$effect(() => {
-		if (browser) {
+		if (browser && data.mode === 'member') {
 			posthog.identify(data.user.id, { username: data.user.username });
 		}
 	});
@@ -31,28 +34,42 @@
 		{ href: '/buildings', label: m.nav_buildings },
 		{ href: '/map', label: m.nav_map }
 	];
+	// Un invité ne voit que les fonctionnalités ouvertes (GUEST_FEATURES est la
+	// même source que le reroute) : /teams n'arrive qu'à l'étape 2.
+	const navItems = $derived(
+		data.mode === 'guest'
+			? nav.filter((i) => (GUEST_FEATURES as readonly string[]).includes(i.href))
+			: nav
+	);
 </script>
 
 <div class="shell">
 	<header class="topbar">
-		<details class="switcher">
-			<summary>
-				<span class="brand">{data.server.name}</span>
-				<span class="chevron" aria-hidden="true">▾</span>
-			</summary>
-			<div class="menu">
-				{#each data.myServers as s (s.id)}
-					<a href="/s/{s.slug}" class:current={s.slug === data.server.slug}>{s.name}</a>
-				{/each}
-				<hr />
-				{#if data.membership.role === 'owner'}
-					<a href={appHref('/settings')}>{m.settings_nav()}</a>
-				{/if}
-				<a href="/servers">{m.switcher_all()}</a>
-			</div>
-		</details>
+		{#if data.mode === 'member'}
+			<details class="switcher">
+				<summary>
+					<span class="brand">{data.server.name}</span>
+					<span class="chevron" aria-hidden="true">▾</span>
+				</summary>
+				<div class="menu">
+					{#each data.myServers as s (s.id)}
+						<a href="/s/{s.slug}" class:current={s.slug === data.server.slug}>{s.name}</a>
+					{/each}
+					<hr />
+					{#if data.membership.role === 'owner'}
+						<a href={appHref('/settings')}>{m.settings_nav()}</a>
+					{/if}
+					<a href="/servers">{m.switcher_all()}</a>
+				</div>
+			</details>
+		{:else}
+			<a href={localizeHref('/')} class="brand-home">
+				<span class="brand">{m.app_title()}</span>
+				<span class="guest-chip">{m.guest_badge()}</span>
+			</a>
+		{/if}
 		<nav>
-			{#each nav as item (item.href)}
+			{#each navItems as item (item.href)}
 				<a href={appHref(item.href)} class:active={page.url.pathname.startsWith(appHref(item.href))}>
 					{item.label()}
 				</a>
@@ -78,20 +95,37 @@
 					/>
 				</svg>
 			</a>
-			<a href={appHref('/import')} class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
-			<LangSwitch />
-			{#if data.user.avatarUrl}
-				<img src={data.user.avatarUrl} alt="" width="26" height="26" class="avatar" />
+			{#if data.mode === 'member'}
+				<a href={appHref('/import')} class="import-link" title={m.import_title()} aria-label={m.import_title()}>📥</a>
 			{/if}
-			<span class="username">{data.user.username}</span>
-			<form method="POST" action="/logout" onsubmit={() => { posthog.capture('user_logged_out'); posthog.reset(); }}>
-				<button class="logout">{m.auth_logout()}</button>
-			</form>
+			<LangSwitch />
+			{#if data.mode === 'member'}
+				{#if data.user.avatarUrl}
+					<img src={data.user.avatarUrl} alt="" width="26" height="26" class="avatar" />
+				{/if}
+				<span class="username">{data.user.username}</span>
+				<form method="POST" action="/logout" onsubmit={() => { posthog.capture('user_logged_out'); posthog.reset(); }}>
+					<button class="logout">{m.auth_logout()}</button>
+				</form>
+			{:else}
+				<a href="/login/discord" class="cta-login">{m.auth_login_discord()}</a>
+			{/if}
 		</div>
 	</header>
+	{#if data.mode === 'guest'}
+		<p class="guest-notice">{m.guest_local_notice()}</p>
+	{/if}
 	<main class:fullscreen={page.route.id === '/s/[slug]/map'}>{@render children()}</main>
 </div>
 <CommandPalette bind:this={palette} />
+
+<svelte:head>
+	{#if data.mode === 'member'}
+		<!-- Les pages tenant sont privées : jamais d'indexation. Les pages
+		     publiques équivalentes (/paldex, …) sont les canoniques. -->
+		<meta name="robots" content="noindex, nofollow" />
+	{/if}
+</svelte:head>
 
 <style>
 	.shell {
@@ -236,6 +270,42 @@
 	.username {
 		color: var(--text-2);
 		font-size: 13px;
+	}
+	/* --- Mode invité --- */
+	.brand-home {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		white-space: nowrap;
+		color: var(--text-1);
+	}
+	.guest-chip {
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--text-3);
+		border: 1px solid var(--border);
+		border-radius: 4px;
+		padding: 1px 5px;
+	}
+	.cta-login {
+		font-size: 13px;
+		font-weight: 500;
+		white-space: nowrap;
+		color: var(--accent);
+		background: var(--accent-soft);
+		border: 1px solid var(--focus-ring);
+		border-radius: var(--r-sm);
+		padding: 5px 12px;
+	}
+	.guest-notice {
+		margin: 0;
+		padding: 8px 16px;
+		border-bottom: 1px solid var(--border);
+		background: var(--surface-2);
+		color: var(--text-3);
+		font-size: 12px;
+		text-align: center;
 	}
 	.logout {
 		font-size: 12px;

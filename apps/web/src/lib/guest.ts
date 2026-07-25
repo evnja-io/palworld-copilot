@@ -1,0 +1,59 @@
+import type { GroupUser } from "$lib/types";
+
+/** Slug sentinelle du mode invité. Impossible à générer : generateSlug() tire
+ *  dans BASE62, qui ne contient pas « _ ». Voir lib/server/servers.ts. */
+export const GUEST_SLUG = "__guest";
+
+/** Fonctionnalités accessibles sans compte, en URL propre (/paldex, /items, …).
+ *  Source UNIQUE : pilote le reroute, la nav du shell invité et le sitemap.
+ *  Liste blanche : tout le reste (/, /docs, /servers, /join, /api, /s/*, assets)
+ *  reste fermé sans avoir à écrire une seule règle. */
+export const GUEST_FEATURES = [
+  "/paldex",
+  "/breeding",
+  "/items",
+  "/craft",
+  "/tech",
+  "/buildings",
+  "/map",
+] as const;
+
+/** Chemin interne pour une URL publique (/paldex → /s/__guest/paldex),
+ *  ou undefined si le chemin est hors du périmètre invité.
+ *  Le chemin reçu doit déjà être dé-localisé (cf. src/hooks.ts). */
+export function guestTarget(pathname: string): string | undefined {
+  // Slash final retiré : /paldex/ doit matcher comme /paldex.
+  const path = pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  for (const feature of GUEST_FEATURES) {
+    // `startsWith(feature + "/")` et pas `startsWith(feature)` : sinon
+    // /paldexical serait capturé par /paldex.
+    if (path === feature || path.startsWith(`${feature}/`)) return `/s/${GUEST_SLUG}${path}`;
+  }
+  return undefined;
+}
+
+/** Ce route id (/s/[slug]/paldex/[palId]) est-il ouvert aux invités ?
+ *  Garde-fou pour /s/__guest/settings tapé à la main. */
+export function isGuestRouteId(routeId: string | null): boolean {
+  if (!routeId) return false;
+  return GUEST_FEATURES.some(
+    (feature) => routeId === `/s/[slug]${feature}` || routeId.startsWith(`/s/[slug]${feature}/`),
+  );
+}
+
+/** Retire le préfixe interne du mode invité d'un chemin déjà dé-localisé :
+ *  '/s/__guest/paldex/SheepBall' → '/paldex/SheepBall'.
+ *  Sert à rediriger un membre connecté vers SON serveur sur le même sous-chemin.
+ *  Sans ce nettoyage on obtiendrait '/s/<réel>/s/__guest/paldex'. */
+export function stripGuestPrefix(pathname: string): string {
+  const prefix = `/s/${GUEST_SLUG}`;
+  if (pathname === prefix) return "";
+  return pathname.startsWith(`${prefix}/`) ? pathname.slice(prefix.length) : pathname;
+}
+
+/** Progression vide renvoyée par les loads en mode invité. Typée explicitement
+ *  pour que les deux branches (invité / membre) sérialisent la même forme. */
+export const EMPTY_PROGRESS: { mine: string[]; group: Record<string, GroupUser[]> } = {
+  mine: [],
+  group: {},
+};

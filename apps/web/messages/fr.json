@@ -377,5 +377,20 @@
   "teams_fruits_toggle": "Tous les skills (fruits de compétence)",
   "teams_learnset_empty": "Ce Pal n'a pas de learnset — tous les skills sont proposés.",
   "teams_caught_by_me": "Capturés par moi",
-  "teams_level_badge": "Niv. {level}"
+  "teams_level_badge": "Niv. {level}",
+  "guest_badge": "Invité",
+  "guest_local_notice": "Ta progression est enregistrée dans ce navigateur. Connecte-toi pour la partager avec ta tribu.",
+  "landing_try_guest": "Essayer sans compte",
+  "breeding_manual_toggle_owned": "Mes Pals",
+  "breeding_manual_toggle_manual": "Saisie manuelle",
+  "breeding_manual_species": "Choisir un Pal",
+  "breeding_manual_gender": "Genre",
+  "breeding_manual_add_passive": "Ajouter un passif",
+  "breeding_manual_hint": "Renseigne les deux parents pour voir l'enfant et les probabilités de passifs.",
+  "breeding_path_guest_empty": "Coche les Pals que tu as capturés dans le Paldex : le chemin d'élevage part de là.",
+  "error_404_title": "Page introuvable",
+  "error_404_body": "Cette page n'existe pas ou n'est pas accessible.",
+  "error_generic_title": "Une erreur est survenue",
+  "error_back_home": "Retour à l'accueil",
+  "error_browse_paldex": "Explorer le Paldex"
 }

@@ -8,7 +8,8 @@
 		onchange
 	}: {
 		filters: MapFilters;
-		counts: { mine: number; group: number; total: number };
+		// group: null en mode invité (pas de groupe à afficher).
+		counts: { mine: number; group: number | null; total: number };
 		onchange: () => void;
 	} = $props();
 </script>
@@ -16,7 +17,9 @@
 <div class="panel">
 	<p class="counter tnum">
 		<span class="me">{m.map_counter_me({ count: counts.mine, total: counts.total })}</span>
-		<span class="grp">{m.map_counter_group({ count: counts.group, total: counts.total })}</span>
+		{#if counts.group !== null}
+			<span class="grp">{m.map_counter_group({ count: counts.group, total: counts.total })}</span>
+		{/if}
 	</p>
 	<label><input type="checkbox" bind:checked={filters.relic} onchange={onchange} /> <span class="dot relic"></span>{m.map_filter_relic()}</label>
 	<label><input type="checkbox" bind:checked={filters.alpha} onchange={onchange} /> <span class="dot alpha"></span>{m.map_filter_alpha()}</label>
