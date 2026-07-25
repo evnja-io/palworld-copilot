@@ -6,7 +6,8 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, rmSync } from "node:fs";
 import { basename, join } from "node:path";
 import type { NeonQueryFunction } from "@neondatabase/serverless";
-import { extractPalInstances } from "./extract-pals-lib.ts";
+import { extractBaseData } from "./extract-bases-lib.ts";
+import { extractPalInstances, normalizeGuid } from "./extract-pals-lib.ts";
 
 type Sql = NeonQueryFunction<false, false>;
 export type ImportStats = {
@@ -25,10 +26,10 @@ function requireVenv(): void {
   if (!existsSync(venvPython)) throw new Error("venv palsav absent - cf. runbook, section saves");
 }
 
-/** UUID "00afd495-0000-…" -> "00AFD495000000000000000000000000". */
-export function normalizeGuid(uuid: string): string {
-  return uuid.replaceAll("-", "").toUpperCase();
-}
+/** UUID "00afd495-0000-…" -> "00AFD495000000000000000000000000".
+ *  Définition consolidée dans extract-pals-lib.ts, ré-exportée ici pour les
+ *  appelants historiques (coques CLI, tests). */
+export { normalizeGuid };
 
 /** Extraction pure d'une save JSON convertie -> lignes de snapshot. */
 export function computeSnapshotRows(
@@ -194,10 +195,24 @@ export async function importPlayerSaves(sql: Sql, serverId: string, dir: string)
   };
 }
 
+export type LevelSections = { cmap: any[]; groups: any[]; baseCamps: any[]; charContainers: any[] };
+
+/** Sélection pure des sections utiles d'un Level.sav parsé (testable sans venv). */
+export function pickLevelSections(level: any): LevelSections {
+  const w = level?.properties?.worldSaveData?.value;
+  return {
+    cmap: w?.CharacterSaveParameterMap?.value ?? [],
+    groups: w?.GroupSaveDataMap?.value ?? [],
+    baseCamps: w?.BaseCampSaveData?.value ?? [],
+    charContainers: w?.CharacterContainerSaveData?.value ?? [],
+  };
+}
+
 /** Convertit Level.sav en JSON temporaire (supprimé après parse) et retourne
- *  CharacterSaveParameterMap.value. Une seule conversion pour les deux syncs
- *  qui en dépendent (pseudos + instances de Pals) : le JSON fait ~170 Mo. */
-export function loadLevelCmap(dir: string): any[] {
+ *  les sections utiles. UNE conversion (~170 Mo de JSON temporaire) pour les
+ *  trois syncs (pseudos + instances de Pals + bases/guildes) : seule la
+ *  rétention des sections change. */
+export function loadLevelSections(dir: string): LevelSections {
   requireVenv();
   if (!existsSync(join(dir, "Level.sav"))) throw new Error(`Level.sav absent de ${dir}`);
 
@@ -213,7 +228,12 @@ export function loadLevelCmap(dir: string): any[] {
   ]);
   const level = JSON.parse(readFileSync(jsonPath, "utf8"));
   rmSync(jsonPath); // 170 Mo - ne pas laisser traîner
-  return level?.properties?.worldSaveData?.value?.CharacterSaveParameterMap?.value ?? [];
+  return pickLevelSections(level);
+}
+
+/** Conservé pour extract-players.ts / extract-pals.ts (une seule section chacun). */
+export function loadLevelCmap(dir: string): any[] {
+  return loadLevelSections(dir).cmap;
 }
 
 /** Extrait les pseudos in-game d'une cmap (cf. loadLevelCmap) et les upsert
@@ -312,4 +332,131 @@ export async function syncPalInstances(
   const owners = new Set(rows.map((r) => r.ownerGuid)).size;
   console.log(`${rows.length} instances de Pals (${owners} propriétaires) synchronisées dans save_pals`);
   return { pals: rows.length, owners };
+}
+
+/** Extrait guildes/membres/bases/affectations des sections d'un Level.sav
+ *  (cf. loadLevelSections) et remplace le contenu des quatre tables save_*
+ *  correspondantes pour ce serveur (idempotent, miroir de syncPalInstances).
+ *  base_demands (config utilisateur, non dérivée de la save) n'est JAMAIS
+ *  touchée. Jette si aucune guilde n'est extraite : Palworld crée une guilde
+ *  par joueur, 0 guilde sur un serveur peuplé signifie enveloppe malformée,
+ *  jamais un wipe légitime (bases/affectations peuvent être légitimement à 0). */
+export async function syncBaseData(
+  sql: Sql,
+  serverId: string,
+  sections: Pick<LevelSections, "groups" | "baseCamps" | "charContainers">,
+): Promise<{ guilds: number; guildMembers: number; bases: number; assignments: number }> {
+  const { guilds, members, bases, assignments, stats } = extractBaseData(
+    sections.groups,
+    sections.baseCamps,
+    sections.charContainers,
+  );
+  console.log(
+    `ignorés : ${stats.nonGuildGroups} groupes non guilde, ${stats.malformedGroups} groupes malformés, ` +
+      `${stats.malformedBases} bases malformées, ${stats.basesWithoutDirector} bases sans WorkerDirector, ` +
+      `${stats.missingContainers} conteneurs introuvables, ${stats.emptySlots} slots vides, ` +
+      `${stats.malformedSlots} slots malformés, ${stats.duplicateAssignments} affectations dupliquées, ` +
+      `${stats.duplicateMembers} membres dupliqués`,
+  );
+  if (guilds.length === 0) {
+    throw new Error("Aucune guilde extraite de Level.sav : save_guilds/bases/assignments laissés intacts");
+  }
+
+  // Remplacement idempotent pour CE serveur : 4 deletes + inserts par tranches
+  // de 1000 lignes (unnest de tableaux parallèles) dans une seule transaction
+  // non-interactive (batch neon). Valeurs vides -> NULL via nullif ; ticks
+  // FDateTime portés en string décimale puis castés ::bigint côté serveur.
+  const CHUNK = 1000;
+  const queries = [
+    sql.query("delete from save_pal_assignments where server_id = $1::uuid", [serverId]),
+    sql.query("delete from save_bases where server_id = $1::uuid", [serverId]),
+    sql.query("delete from save_guild_members where server_id = $1::uuid", [serverId]),
+    sql.query("delete from save_guilds where server_id = $1::uuid", [serverId]),
+  ];
+  for (let i = 0; i < guilds.length; i += CHUNK) {
+    const chunk = guilds.slice(i, i + CHUNK);
+    queries.push(
+      sql.query(
+        `insert into save_guilds (server_id, guild_id, name, base_camp_level, admin_player_guid)
+         select $1::uuid, t.gid, nullif(t.n, ''), t.lvl, nullif(t.adm, '')
+         from unnest($2::text[], $3::text[], $4::int[], $5::text[]) as t(gid, n, lvl, adm)`,
+        [
+          serverId,
+          chunk.map((g) => g.guildId),
+          chunk.map((g) => g.name ?? ""),
+          chunk.map((g) => g.baseCampLevel),
+          chunk.map((g) => g.adminPlayerGuid ?? ""),
+        ],
+      ),
+    );
+  }
+  for (let i = 0; i < members.length; i += CHUNK) {
+    const chunk = members.slice(i, i + CHUNK);
+    queries.push(
+      sql.query(
+        `insert into save_guild_members (server_id, guild_id, player_guid, player_name, last_online_ticks)
+         select $1::uuid, t.gid, t.pg, nullif(t.pn, ''), nullif(t.lo, '')::bigint
+         from unnest($2::text[], $3::text[], $4::text[], $5::text[]) as t(gid, pg, pn, lo)`,
+        [
+          serverId,
+          chunk.map((m) => m.guildId),
+          chunk.map((m) => m.playerGuid),
+          chunk.map((m) => m.playerName ?? ""),
+          chunk.map((m) => m.lastOnlineTicks ?? ""),
+        ],
+      ),
+    );
+  }
+  for (let i = 0; i < bases.length; i += CHUNK) {
+    const chunk = bases.slice(i, i + CHUNK);
+    queries.push(
+      sql.query(
+        `insert into save_bases
+           (server_id, base_id, guild_id, name, world_x, world_y, world_z, area_range, slot_count)
+         select $1::uuid, t.bid, t.gid, nullif(t.n, ''), t.wx, t.wy, t.wz, t.ar, t.sc
+         from unnest($2::text[], $3::text[], $4::text[], $5::float8[], $6::float8[],
+                     $7::float8[], $8::float8[], $9::int[])
+              as t(bid, gid, n, wx, wy, wz, ar, sc)`,
+        [
+          serverId,
+          chunk.map((b) => b.baseId),
+          chunk.map((b) => b.guildId),
+          chunk.map((b) => b.name ?? ""),
+          chunk.map((b) => b.worldX),
+          chunk.map((b) => b.worldY),
+          chunk.map((b) => b.worldZ),
+          chunk.map((b) => b.areaRange),
+          chunk.map((b) => b.slotCount),
+        ],
+      ),
+    );
+  }
+  for (let i = 0; i < assignments.length; i += CHUNK) {
+    const chunk = assignments.slice(i, i + CHUNK);
+    queries.push(
+      sql.query(
+        `insert into save_pal_assignments (server_id, instance_id, base_id, slot_index)
+         select $1::uuid, t.iid, t.bid, t.si
+         from unnest($2::text[], $3::text[], $4::int[]) as t(iid, bid, si)`,
+        [
+          serverId,
+          chunk.map((a) => a.instanceId),
+          chunk.map((a) => a.baseId),
+          chunk.map((a) => a.slotIndex),
+        ],
+      ),
+    );
+  }
+  await sql.transaction(queries);
+
+  console.log(
+    `${guilds.length} guildes, ${members.length} membres, ${bases.length} bases, ` +
+      `${assignments.length} affectations synchronisées (save_guilds/save_guild_members/save_bases/save_pal_assignments)`,
+  );
+  return {
+    guilds: guilds.length,
+    guildMembers: members.length,
+    bases: bases.length,
+    assignments: assignments.length,
+  };
 }

@@ -32,6 +32,25 @@ export function normalizeGuid(uuid: string): string {
 // GUID nul renvoyé par le jeu pour les pals sans propriétaire.
 const ZERO_GUID = "0".repeat(32);
 
+// Scalaires typés défensivement : une valeur inattendue (enveloppe divergente)
+// retombe sur le défaut plutôt que de casser le cast SQL (int[]/text[]) de
+// toute la transaction d'insertion. Deux formes observées sur saves réelles :
+// IntProperty/StrProperty à plat (value = scalaire) et ByteProperty/EnumProperty
+// imbriquée (value = { type, value }) - Level et Talent_* sont des ByteProperty.
+// Exportés pour réutilisation par extract-bases-lib.ts (mêmes enveloppes).
+export const unwrap = (v: unknown): unknown =>
+  v !== null && typeof v === "object" && "value" in (v as Record<string, unknown>)
+    ? (v as Record<string, unknown>).value
+    : v;
+export const num = (v: unknown): number | null => {
+  const s = unwrap(v);
+  return typeof s === "number" ? s : null;
+};
+export const str = (v: unknown): string | null => {
+  const s = unwrap(v);
+  return typeof s === "string" && s !== "" ? s : null;
+};
+
 /** cmap = CharacterSaveParameterMap.value ; palIdsLower = lowercase -> id
  *  canonique pals.json. Lectures défensives : l'enveloppe des entrées pal
  *  n'est pas garantie (cf. plan, risque n°1) - tout champ inattendu est
@@ -104,25 +123,7 @@ export function extractPalInstances(
       (p): p is string => typeof p === "string",
     );
 
-    // Scalaires typés défensivement : une valeur inattendue (enveloppe
-    // divergente) retombe sur le défaut plutôt que de casser le cast SQL
-    // (int[]/text[]) de toute la transaction d'insertion.
-    // Deux formes observées sur saves réelles : IntProperty/StrProperty à plat
-    // (value = scalaire) et ByteProperty/EnumProperty imbriquée
-    // (value = { type, value }) - Level et Talent_* sont des ByteProperty.
-    const unwrap = (v: unknown): unknown =>
-      v !== null && typeof v === "object" && "value" in (v as Record<string, unknown>)
-        ? (v as Record<string, unknown>).value
-        : v;
-    const num = (v: unknown): number | null => {
-      const s = unwrap(v);
-      return typeof s === "number" ? s : null;
-    };
-    const str = (v: unknown): string | null => {
-      const s = unwrap(v);
-      return typeof s === "string" && s !== "" ? s : null;
-    };
-
+    // Scalaires via les helpers unwrap/num/str de portée module (cf. plus haut).
     rows.push({
       instanceId,
       ownerGuid,
