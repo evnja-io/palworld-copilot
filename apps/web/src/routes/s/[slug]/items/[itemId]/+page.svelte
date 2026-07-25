@@ -4,8 +4,10 @@
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { itemIcon, palIcon } from '$lib/game/icons';
 	import { palsDropping, recipesByProduct, recipesUsingItem } from '$lib/game/indexes';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
+	import { itemSeoDescription } from '$lib/game/seoText';
 	import RecipeCard from '$lib/components/RecipeCard.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -15,6 +17,14 @@
 	const usedIn = $derived(recipesUsingItem.get(data.itemId) ?? []);
 	const usedInShown = $derived(usedIn.slice(0, 40));
 </script>
+
+<Seo
+	title={gameName(`item:${item.id}`)}
+	description={itemSeoDescription(item.id)}
+	path={`/items/${item.id}`}
+	image={itemIcon(item.id) ?? '/logo.svg'}
+	indexable={isGuestContext()}
+/>
 
 <a href={appHref('/items')} class="back">← {m.items_title()}</a>
 

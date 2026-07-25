@@ -13,3 +13,11 @@ import { localizeHref } from "$lib/paraglide/runtime";
 export function appHref(path: string): string {
   return page.params.slug === GUEST_SLUG ? localizeHref(path) : `/s/${page.params.slug}${path}`;
 }
+
+/** La page courante est-elle rendue en mode invité (donc publique et
+ *  indexable) ? Se lit depuis l'URL, ce qui évite de faire descendre `data`
+ *  jusqu'aux pages purement statiques (items, craft, buildings) qui n'ont
+ *  aucun load. Réactif : page.params vient de $app/state. */
+export function isGuestContext(): boolean {
+  return page.params.slug === GUEST_SLUG;
+}

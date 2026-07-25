@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { mount, unmount } from 'svelte';
 	import { page } from '$app/state';
+	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
 	import { ProgressStore } from '$lib/game/progress.svelte';
@@ -9,6 +10,8 @@
 	import FilterPanel from '$lib/map/FilterPanel.svelte';
 	import { MapState } from '$lib/map/mapState.svelte';
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
+	import { isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -104,6 +107,12 @@
 		}, 0);
 	});
 </script>
+<Seo
+	title={m.map_title()}
+	description={m.seo_map_desc()}
+	path="/map"
+	indexable={isGuestContext()}
+/>
 
 <div class="map-wrap">
 	<LeafletMap onready={onMapReady} />

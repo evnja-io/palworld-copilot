@@ -2,7 +2,8 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { buildings, type Building } from '$lib/game/indexes';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let search = $state('');
 
@@ -31,6 +32,12 @@
 		);
 	});
 </script>
+<Seo
+	title={m.buildings_title()}
+	description={m.seo_buildings_desc()}
+	path="/buildings"
+	indexable={isGuestContext()}
+/>
 
 <h1>{m.buildings_title()}</h1>
 

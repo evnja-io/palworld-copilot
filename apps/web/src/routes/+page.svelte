@@ -2,6 +2,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
 	const DISCORD_URL = 'https://discord.gg/SJehy5fFJ';
@@ -52,11 +53,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{m.app_title()} - {m.landing_title()}</title>
-	<meta name="description" content={m.landing_meta_description()} />
-	<link rel="canonical" href="https://palwork.evnja.gg/" />
-</svelte:head>
+<Seo title={m.landing_title()} description={m.landing_meta_description()} path="/" />
 
 <div class="landing">
 	<!-- Ciel : aurores + étoiles -->

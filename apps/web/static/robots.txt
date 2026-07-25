@@ -1,3 +1,14 @@
-# allow crawling everything by default
+# Les pages publiques (/paldex, /items, /breeding…) sont les canoniques et sont
+# indexables en FR et en EN. Tout ce qui suit est privé ou technique : les pages
+# tenant portent déjà noindex et redirigent les anonymes, ce Disallow évite juste
+# le crawl inutile.
 User-agent: *
-Disallow:
+Disallow: /s/
+Disallow: /api/
+Disallow: /ingest/
+Disallow: /servers
+Disallow: /join/
+Disallow: /login
+Disallow: /logout
+
+Sitemap: https://palwork.evnja.gg/sitemap.xml

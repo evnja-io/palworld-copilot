@@ -5,7 +5,7 @@
 	import { m } from '$lib/paraglide/messages';
 	import { gameDesc, gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
 	import { childOf, parentsOf, breedingPath, uniqueComboList } from '$lib/game/breeding';
 	import { MAX_PASSIVES, passiveUnion, pInheritSubset } from '$lib/game/passives';
 	import { defaultPassivesFor, PAL_IDS } from '$lib/game/team-data';
@@ -13,6 +13,7 @@
 	import TeamPicker from '$lib/components/teams/TeamPicker.svelte';
 	// Import de types uniquement : effacé à la compilation, aucun code serveur embarqué.
 	import type { PalInstance, PalOwner } from '$lib/server/pals';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -185,6 +186,12 @@
 		})
 	);
 </script>
+<Seo
+	title={m.breeding_title()}
+	description={m.seo_breeding_desc()}
+	path="/breeding"
+	indexable={isGuestContext()}
+/>
 
 {#snippet palLink(id: string)}
 	<a href={appHref(`/paldex/${id}`)} class="pal-link">

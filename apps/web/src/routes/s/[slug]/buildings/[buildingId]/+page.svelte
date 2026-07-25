@@ -3,13 +3,22 @@
 	import { gameName, gameDesc } from '$lib/game/names';
 	import { itemIcon } from '$lib/game/icons';
 	import { buildings, techUnlocking } from '$lib/game/indexes';
-	import { appHref } from '$lib/nav';
+	import { appHref, isGuestContext } from '$lib/nav';
+	import { buildingSeoDescription } from '$lib/game/seoText';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
 	const building = $derived(buildings.find((b) => b.id === data.buildingId)!);
 	const tech = $derived(techUnlocking.get(data.buildingId));
 </script>
+
+<Seo
+	title={gameName(`building:${building.mapObjectId}`)}
+	description={buildingSeoDescription(building.id)}
+	path={`/buildings/${building.id}`}
+	indexable={isGuestContext()}
+/>
 
 <a href={appHref('/buildings')} class="back">← {m.buildings_title()}</a>
 

@@ -392,5 +392,17 @@
   "error_404_body": "This page does not exist or is not available.",
   "error_generic_title": "Something went wrong",
   "error_back_home": "Back to home",
-  "error_browse_paldex": "Browse the Paldex"
+  "error_browse_paldex": "Browse the Paldex",
+  "seo_paldex_desc": "All 288 Palworld Pals: elements, stats, work suitabilities, drops, skills and breeding combos. Track your captures, no account needed.",
+  "seo_breeding_desc": "Palworld breeding calculator: child from two parents, passive inheritance odds, breeding path to any species and the full combo index.",
+  "seo_items_desc": "Every Palworld item: materials, weapons, armour, consumables and spheres — recipes, stats, rarity and sources.",
+  "seo_craft_desc": "Every Palworld crafting recipe: required materials, unlocking technology and workstations, searchable by item.",
+  "seo_tech_desc": "Palworld technology tree: normal and ancient technologies by level, required points and unlocks. Track your progress, no account needed.",
+  "seo_buildings_desc": "Every Palworld structure: required materials, category and unlocking technology, from furniture to base infrastructure.",
+  "seo_map_desc": "Interactive Palworld map: Lifmunk effigies, Alpha bosses and fast travel points, with filters. Track your finds, no account needed.",
+  "seo_pal_fallback": "{name} in Palworld: elements, stats, work suitabilities, drops and breeding combos.",
+  "seo_item_fallback": "{name} in Palworld: recipes that use it, sources, rarity and stats.",
+  "seo_building_materials": "{name} in Palworld: requires {materials}. Category, unlocking technology and build cost.",
+  "seo_building_fallback": "{name} in Palworld: category, unlocking technology and build cost.",
+  "seo_item_fallback_rarity": "{name} (rarity {rarity}) in Palworld: recipes that use it, sources and stats."
 }

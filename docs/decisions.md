@@ -258,6 +258,61 @@ de GUID, réglages, invitations, tableau de bord, progression *de groupe*).
 - Étape 1B (métadonnées par page, sitemap, robots.txt) et étape 2 (équipes
   locales + import à l'inscription) restent à faire.
 
+## 2026-07-25 - Indexabilité : métadonnées par entité, hreflang, sitemap
+
+**Constat** : après l'ouverture aux invités, les pages de contenu étaient
+accessibles mais invisibles. Aucune n'avait de `<svelte:head>` : ni titre, ni
+description, ni canonical, ni Open Graph. Pas de sitemap, et `robots.txt`
+autorisait tout sans rien indiquer.
+
+**Décision** :
+- **Composant unique `lib/components/Seo.svelte`** (titre, description,
+  canonical, paire hreflang fr/en/x-default, Open Graph, Twitter card), posé sur
+  les 9 pages liste, les 3 types de page de détail, la landing et `/docs`.
+  Prop `indexable` : à `false` sur les pages tenant, où le layout émet déjà
+  `noindex` — y ajouter un canonical vers la page publique enverrait un signal
+  contradictoire.
+- **`lib/seo.ts`** : `SITE_URL` en dur et `absoluteUrl()` via `localizeUrl`
+  plutôt que `localizeHref`, pour que canonical/hreflang/sitemap désignent la
+  même URL depuis un preview Vercel, en local ou en production.
+- **`isGuestContext()`** (lib/nav.ts) plutôt que `data.mode` : les pages
+  items/craft/buildings n'ont aucun load, donc pas de `data` — le mode se lit
+  depuis l'URL.
+
+**Descriptions par entité, et le vrai problème du contenu mince** :
+- Pals : les 288 ont une description de jeu exploitable. Utilisée telle quelle.
+- Objets : ~2220/2344. Une garde `usableDesc()` écarte les placeholders l10n —
+  certaines entrées ne contiennent que le nom de l'objet
+  (`item:AnimalSkin` → « Animal Skin »), ce qui donnerait une meta de 11
+  caractères, pire qu'un gabarit.
+- **Constructions : AUCUNE n'a de description** (le namespace `building:`
+  n'existe pas dans l10n). La description est donc composée à partir des
+  **matériaux requis**, seule donnée qui distingue réellement les 498 pages.
+  Le nom se résout via `mapObjectId` et non `id` : les deux diffèrent pour 6
+  constructions (CampFire → Campfire, Stone_pillar → Stone_Pillar…).
+- Les variantes de rareté `_2.._5` étaient le risque de duplication supposé
+  (1039 objets sur 2344), mais la plupart ont noms ET descriptions distincts.
+  Après mesure, seuls **18 groupes / 87 pages** produisaient des metas
+  identiques (Head001..Head001_5 partagent « Couronne royale » sans
+  description) ; la rareté suffit à distinguer 17 de ces 18 groupes, donc le
+  gabarit de repli la mentionne.
+
+**Sitemap** : `routes/sitemap.xml/+server.ts`, `prerender = true` (liste
+entièrement dérivée de game-data ; vit hors de `/s/[slug]`, donc aucun conflit
+avec le layout tenant non prérenderable). 6 278 URLs = 3 139 chemins × 2
+locales, chacune annotée de ses alternates — **le même jeu que les balises
+`<head>`, x-default compris** : une divergence entre les deux invaliderait
+l'annotation. 2,5 Mo, très en dessous des limites de 50 Mo / 50 000 URLs.
+Se périme après une mise à jour du jeu : un redéploiement suffit.
+
+**`robots.txt`** : `Disallow` sur `/s/`, `/api/`, `/ingest/`, `/servers`,
+`/join/`, `/login`, `/logout` (les pages tenant redirigent déjà les anonymes et
+portent `noindex` ; c'est du budget de crawl épargné), plus la ligne `Sitemap:`.
+
+**Non-objectifs** : pas de JSON-LD (à réévaluer seulement si les rich results
+deviennent un objectif), pas de prérendu des pages publiques (cf. l'entrée
+précédente).
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

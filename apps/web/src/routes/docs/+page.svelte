@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	const GITHUB_URL = 'https://github.com/evnja-io/palworld-copilot';
 
@@ -15,14 +17,11 @@
 	const sharing = [m.docs_sharing_list_1, m.docs_sharing_list_2, m.docs_sharing_list_3, m.docs_sharing_list_4];
 </script>
 
-<svelte:head>
-	<title>{m.docs_title()} - {m.app_title()}</title>
-	<meta name="description" content={m.docs_intro()} />
-</svelte:head>
+<Seo title={m.docs_title()} description={m.docs_intro()} path="/docs" />
 
 <div class="docs">
 	<header class="top">
-		<a class="back" href="/">← {m.docs_back_home()}</a>
+		<a class="back" href={localizeHref('/')}>← {m.docs_back_home()}</a>
 		<LangSwitch />
 	</header>
 

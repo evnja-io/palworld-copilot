@@ -11,6 +11,8 @@
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import PalCard from '$lib/components/PalCard.svelte';
 	import type { Locale } from '$lib/search/tokens';
+	import { isGuestContext } from '$lib/nav';
+	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
@@ -59,6 +61,12 @@
 	);
 	const groupCaught = $derived(Object.keys(store.group).length);
 </script>
+<Seo
+	title={m.paldex_title()}
+	description={m.seo_paldex_desc()}
+	path="/paldex"
+	indexable={isGuestContext()}
+/>
 
 <div class="head">
 	<h1>{m.paldex_title()}</h1>
