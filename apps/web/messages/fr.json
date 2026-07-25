@@ -223,6 +223,8 @@
   "pal_breeding_parents": "Paires de parents possibles",
   "pal_not_found": "Pal introuvable",
   "pal_toggle_caught": "Capturé",
+  "pal_locations": "Où le trouver",
+  "pal_locations_alpha": "Boss Alpha · Niv. {level}",
   "breeding_title": "Reproduction",
   "breeding_tab_calc": "Parents → enfant",
   "breeding_tab_parents": "Enfant → parents",

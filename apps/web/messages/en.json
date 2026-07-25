@@ -223,6 +223,8 @@
   "pal_breeding_parents": "Possible parent pairs",
   "pal_not_found": "Pal not found",
   "pal_toggle_caught": "Caught",
+  "pal_locations": "Where to find",
+  "pal_locations_alpha": "Alpha boss · Lv. {level}",
   "breeding_title": "Breeding",
   "breeding_tab_calc": "Parents → child",
   "breeding_tab_parents": "Child → parents",

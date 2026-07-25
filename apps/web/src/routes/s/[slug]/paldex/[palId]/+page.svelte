@@ -10,6 +10,7 @@
 	import { workIcon, workLabel } from '$lib/game/work';
 	import type { Locale } from '$lib/search/tokens';
 	import { childOf, parentsOf } from '$lib/game/breeding';
+	import { markersByPal } from '$lib/game/indexes';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import { appHref, isGuestContext } from '$lib/nav';
 	import { palSeoDescription } from '$lib/game/seoText';
@@ -40,6 +41,7 @@
 	let partner = $state('');
 	const child = $derived(partner ? childOf(pal.id, partner) : null);
 	const caught = $derived(store.mine.has(pal.id));
+	const alphaMarker = $derived(markersByPal.get(pal.id)?.[0]);
 
 	const STAT_LABELS: Record<string, string> = {
 		hp: 'HP',
@@ -81,6 +83,17 @@
 		<GroupAvatars users={store.group[pal.id] ?? []} />
 	</div>
 </header>
+
+{#if alphaMarker}
+	<section class="locations">
+		<h2>{m.pal_locations()}</h2>
+		<div class="loc-links">
+			<a class="loc-link" href={appHref(`/map?focus=${alphaMarker.id}`)}>
+				{m.pal_locations_alpha({ level: alphaMarker.meta?.level ?? 0 })}
+			</a>
+		</div>
+	</section>
+{/if}
 
 {#if gameDesc(`pal:${pal.id}`)}
 	<p class="desc">{gameDesc(`pal:${pal.id}`)}</p>
@@ -255,6 +268,29 @@
 	.sphere.on .ball {
 		border-color: var(--accent);
 		background: linear-gradient(to bottom, #f4f8fb 0 45%, var(--accent-ink) 45% 55%, var(--accent) 55%);
+	}
+	.locations {
+		margin: 18px 0 0;
+	}
+	.loc-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.loc-link {
+		display: inline-flex;
+		align-items: center;
+		min-height: 36px;
+		padding: 6px 14px;
+		background: var(--accent);
+		color: var(--accent-ink);
+		border-radius: var(--r-sm);
+		font-weight: 600;
+		font-size: 13px;
+	}
+	.loc-link:hover {
+		background: color-mix(in srgb, var(--accent) 85%, white);
+		color: var(--accent-ink);
 	}
 	.desc {
 		color: var(--text-2);
