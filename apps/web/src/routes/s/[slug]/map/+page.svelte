@@ -121,13 +121,16 @@
 		mapState.filters.spawnPal = palId;
 		// La phase persistée est écrasée : un Pal nocturne n'a souvent rien à
 		// montrer de jour, et hériter du Pal précédent donnerait une carte vide.
-		mapState.filters.spawnPhase = nocturnal.has(palId) ? 'night' : 'day';
+		const phase = nocturnal.has(palId) ? 'night' : 'day';
+		mapState.filters.spawnPhase = phase;
 		mapState.persist();
-		// Après le flush des effets, la couche a chargé et dessiné les cercles.
-		setTimeout(() => {
+		// Attendre la fin du dessin, pas un minuteur : setPal fait un fetch, et
+		// un setTimeout(0) s'exécuterait avant lui — l'emprise serait vide et le
+		// cadrage n'aurait jamais lieu.
+		void layer.setPal(palId, phase).then(() => {
 			const b = layer.bounds();
 			if (b && mapRef) mapRef.fitBounds(b.pad(0.15));
-		}, 0);
+		});
 	});
 
 	// Ne pas toucher à `zonedPal` ici : le laisser sur le Pal effacé est ce qui
