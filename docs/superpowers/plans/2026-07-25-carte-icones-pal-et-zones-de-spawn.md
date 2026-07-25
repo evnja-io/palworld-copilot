@@ -864,7 +864,20 @@ git commit -m "feat(pipeline): logique des zones de spawn (résolution, fusion B
 
 ### Task 6: Transform des zones de spawn (I/O)
 
-⚠️ **Prérequis manuel :** exporter `Pal/Content/Pal/DataTable/UI/DT_PaldexDistributionData` depuis FModel vers `RAW_DIR` (`/mnt/c/PalExports/Exports` par défaut), via **Save Properties (.json)**. Voir `docs/extraction-runbook.md`. Sans cet export, `pnpm all` échouera sur ce transform avec « Aucun export ne matche ».
+✅ **Export disponible et validé** : `DT_PaldexDistributionData.json` (17,8 Mo) est présent sous `RAW_DIR`. Un essai à blanc de `buildSpawns` sur ces données réelles donne :
+
+| Mesure | Valeur réelle |
+|---|---|
+| Lignes dans la table | 365 |
+| Points bruts | 151 695 |
+| **Pals couverts** | **249 / 288** |
+| Zones après clustering | 72 736 (réduction ×2,1) |
+| Poids total | 1,09 Mo — moyenne 4,5 Ko/Pal |
+| Pire cas | `MimicDog`, 7024 zones, 107 Ko |
+| Points de l'Arbre-Monde écartés | 5 238 |
+| Clés non résolues | 2 (`PlantSlime_Flower`, `RowName`) — attendu |
+
+**Rayons réellement présents : `15000` (638 blocs), `8000` (71 blocs), `0` (21 blocs).** Le rayon n'est donc **pas** uniforme, contrairement à ce que supposait la conception initiale. Deux faits mesurés rendent le code existant correct malgré tout : aucun Pal ne mélange deux rayons non nuls, et aucun bloc de rayon `0` ne contient de point. Le `Math.max` de `buildSpawns` retourne donc bien le rayon propre à chaque Pal, et le repli `|| DEFAULT_RADIUS` ne s'applique qu'à des blocs vides, écartés ensuite. Seul le commentaire de `spawns.lib.ts` est faux et doit être corrigé (étape 0 ci-dessous).
 
 **Files:**
 - Create: `packages/pipeline/src/transform/spawns.ts`
@@ -880,6 +893,50 @@ git commit -m "feat(pipeline): logique des zones de spawn (résolution, fusion B
   - `SPAWNS_OUT` — exportée par `paths.ts`, pointe sur `apps/web/static/spawns/`
   - `apps/web/static/spawns/<PalId>.json` → `{ "r": number, "day": [[number, number]], "night": [[number, number]] }`
   - `packages/game-data/spawns-index.json` → `{ "<PalId>": { "day": number, "night": number } }`
+
+- [ ] **Step 0: Corriger deux défauts révélés par les données réelles**
+
+Deux constats issus de l'essai à blanc, dans du code déjà livré.
+
+**(a) Commentaire faux dans `packages/pipeline/src/transform/spawns.lib.ts`.** Remplacer :
+
+```ts
+/** Rayon par défaut : uniforme à 15000 dans toutes les lignes observées. */
+const DEFAULT_RADIUS = 15000;
+```
+
+par :
+
+```ts
+/** Repli quand un bloc ne porte pas de rayon. Les valeurs réellement
+ *  présentes sont 15000, 8000 et 0 ; aucun Pal ne mélange deux rayons non
+ *  nuls, et les blocs à 0 n'ont jamais de point — le Math.max ci-dessous
+ *  retourne donc bien le rayon propre à chaque Pal. */
+const DEFAULT_RADIUS = 15000;
+```
+
+**(b) Assertion tautologique dans `apps/web/src/lib/game/indexes.test.ts`.** `"Lamball"` est le nom **affiché** du Pal ; son identifiant interne est `SheepBall`. L'assertion actuelle passe donc sur n'importe quelle implémentation, puisque `"Lamball"` n'est jamais une clé de l'index. Remplacer :
+
+```ts
+    // Lamball n'a aucun spawner Alpha.
+    expect(markersByPal.get("Lamball")).toBeUndefined();
+```
+
+par :
+
+```ts
+    // SheepBall (nom affiché « Lamball ») est un id valide sans spawner Alpha.
+    expect(pals.some((p) => p.id === "SheepBall")).toBe(true);
+    expect(markersByPal.get("SheepBall")).toBeUndefined();
+```
+
+et ajouter l'import nécessaire en tête du fichier :
+
+```ts
+import pals from "@palworld-companion/game-data/pals.json";
+```
+
+L'assertion d'existence est le cœur du correctif : sans elle, le test retomberait dans le même piège si l'identifiant changeait un jour.
 
 - [ ] **Step 1: Ajouter le chemin de sortie**
 
@@ -929,7 +986,7 @@ for (const [palId, data] of Object.entries(spawns)) {
 writeGameData("spawns-index.json", index);
 
 const total = Object.values(index).reduce((s, c) => s + c.day + c.night, 0);
-if (Object.keys(index).length < 100) {
+if (Object.keys(index).length < 200) {
   throw new Error(`zones de spawn : seulement ${Object.keys(index).length} Pals couverts`);
 }
 if (unresolved.length > 0) {
@@ -955,7 +1012,9 @@ Dans `packages/pipeline/src/verify.ts`, après le bloc des marqueurs (`if (marke
 // Zones de spawn : couverture, ids connus, coordonnées dans la texture.
 const spawnsIndex = load("spawns-index.json") as Record<string, { day: number; night: number }>;
 const spawnPalIds = Object.keys(spawnsIndex);
-if (spawnPalIds.length < 100) fail(`spawns: ${spawnPalIds.length} Pals`);
+// Plancher à 200 : l'export réel en donne 249. Un seuil à 100 ne détecterait
+// pas une régression qui perdrait la moitié des données.
+if (spawnPalIds.length < 200) fail(`spawns: ${spawnPalIds.length} Pals`);
 const palIdSet = new Set((pals as Array<{ id: string }>).map((p) => p.id));
 for (const id of spawnPalIds) {
   if (!palIdSet.has(id)) fail(`spawns: id inconnu dans pals.json (${id})`);
