@@ -34,7 +34,7 @@ identifiées par `nameId` (ids stables, pas de regex sur des noms localisés) :
 | `FTPoint76` | Paradis Déchu |
 | `SkyIsland_BOSS` | Alliance Azurée |
 
-S'y ajoutent 22 tours d'observation (`WatchTower_*`), catégorie distincte : elles
+S'y ajoutent 20 tours d'observation (`WatchTower_*`), catégorie distincte : elles
 dévoilent le brouillard de carte, ce n'est pas un combat de boss. Aucune
 extraction nouvelle n'est nécessaire — seulement une classification.
 
@@ -79,8 +79,8 @@ Sept catégories réelles, une future :
 | `alpha` | Alpha (Pal) | 83 | oui | niveau, élément |
 | `boss` | Boss humains | 69 | oui | niveau |
 | `tower` | Tours de boss | 8 | oui | — |
-| `watchtower` | Tours d'observation | 22 | oui | — |
-| `ft` | Voyage rapide | 127 | oui | — |
+| `watchtower` | Tours d'observation | 20 | oui | — |
+| `ft` | Voyage rapide | 129 | oui | — |
 | `spawn` | Zones de spawn d'un Pal | 249 Pals | non | jour / nuit |
 | `resource` | Ressources | 0 | — | grisée, « bientôt » |
 
@@ -105,7 +105,7 @@ Visuel « HUD de jeu » posé sur une disposition à rail. Deux colonnes :
 │ ⌖  ├──────────────────────────────┤
 │ 20 │ 83 CIBLES   ☐ masquer faits  │
 │ ◆  ├──────────────────────────────┤
-│127 │ 🐾 Chillet      Glace    11  │   liste : portrait, nom, méta,
+│129 │ 🐾 Chillet      Glace    11  │   liste : portrait, nom, méta,
 │ ◈  │ 🐾 Neptilius    Eau      60  │   badge de niveau, case à cocher
 │  — │ 🐾 Vaelet       Plante   27  │
 │    │ …                            │
@@ -265,7 +265,7 @@ barre latérale. Le suivi manuel couvre déjà les mondes locaux et les invités
 3. **Classer les points de voyage rapide** en `tower` (liste d'ids ci-dessus) /
    `watchtower` (préfixe `WatchTower_`) / `ft`.
 4. **Étendre les assertions de volumétrie** : `tower === 8`,
-   `watchtower === 22`, `alpha` ∈ [80, 90], `boss` ∈ [65, 75], total ≥ 440.
+   `watchtower === 20`, `alpha` ∈ [80, 90], `boss` ∈ [65, 75], total ≥ 440.
 
 Consommateurs à mettre à jour avec le type élargi :
 `packages/pipeline/src/search-index.ts` (union `MarkerType`, libellés),

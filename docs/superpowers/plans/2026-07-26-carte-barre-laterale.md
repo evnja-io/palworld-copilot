@@ -373,7 +373,7 @@ Ajouter dans `packages/pipeline/package.json`, dans `scripts`, juste après `"ve
 - [ ] **Step 7 : Lancer le script sur les données commitées**
 
 Run: `pnpm --filter @palworld-companion/pipeline markers:normalize`
-Expected: `markers.json normalisé : 447 marqueurs — 138 effigies, 83 alphas, 69 boss PNJ, 8 tours, 22 observation, 127 voyage rapide (33 ids réaffectés)`
+Expected: `markers.json normalisé : 447 marqueurs — 138 effigies, 83 alphas, 69 boss PNJ, 8 tours, 20 observation, 129 voyage rapide (33 ids réaffectés)`
 
 Vérifier l'unicité et les volumes :
 
@@ -387,7 +387,7 @@ console.log(by);
 if (ids.size !== m.length) throw new Error('ids dupliqués');
 "
 ```
-Expected: `447 | 447` et `{ relic: 138, alpha: 83, boss: 69, tower: 8, watchtower: 22, ft: 127 }`
+Expected: `447 | 447` et `{ relic: 138, alpha: 83, boss: 69, tower: 8, watchtower: 20, ft: 129 }`
 
 Relancer le script pour prouver l'idempotence :
 
@@ -438,7 +438,7 @@ git commit -m "fix(carte): ids de marqueurs uniques et classification en 6 types
 
 33 SpawnerID occupaient deux emplacements : autant de marqueurs jamais
 affichés (MarkerController indexe par id) et un each_key_duplicate sur
-toute liste keyée. Les huit arènes de tours et les 22 tours d'observation
+toute liste keyée. Les huit arènes de tours et les 20 tours d'observation
 sortent des points de voyage rapide, les 69 boss humains sortent des alphas."
 ```
 
@@ -872,8 +872,8 @@ describe("catégories", () => {
 		expect(n("alpha")).toBe(83);
 		expect(n("boss")).toBe(69);
 		expect(n("tower")).toBe(8);
-		expect(n("watchtower")).toBe(22);
-		expect(n("ft")).toBe(127);
+		expect(n("watchtower")).toBe(20);
+		expect(n("ft")).toBe(129);
 	});
 
 	it("marque ressources comme future et sans données", () => {
