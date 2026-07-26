@@ -18,9 +18,12 @@
 	});
 
 	let palette: CommandPalette | undefined = $state();
+	// Partagée avec `main.fullscreen` ci-dessous : seule la carte a besoin d'une
+	// chaîne de hauteurs fermes (voir le commentaire sur `.mapshell`).
+	const isMapRoute = $derived(page.route.id === '/s/[slug]/map');
 </script>
 
-<div class="shell">
+<div class="shell" class:mapshell={isMapRoute}>
 	{#if data.mode === 'member'}
 		<AppHeader
 			mode="member"
@@ -39,7 +42,7 @@
 		<!-- Proposition de reprise du travail fait en mode invité. -->
 		<GuestImportBanner slug={data.server.slug} />
 	{/if}
-	<main class:fullscreen={page.route.id === '/s/[slug]/map'}>{@render children()}</main>
+	<main class:fullscreen={isMapRoute}>{@render children()}</main>
 </div>
 <CommandPalette bind:this={palette} />
 
@@ -53,15 +56,22 @@
 
 <style>
 	.shell {
-		/* Hauteur ferme (pas juste un plancher) : la barre latérale de la carte a
-		   besoin d'une chaîne de hauteurs définies (main.fullscreen -> .map-wrap
-		   -> .sidebar -> .res) pour que sa liste défile en interne au lieu de
-		   pousser toute la page. Sans changement pour les pages normales : rien
-		   ne coupe leur contenu, qui continue de dépasser et de faire défiler
-		   le document comme avant. */
-		height: 100dvh;
+		/* Un plancher, pas une hauteur ferme : `.topbar` (AppHeader) est
+		   `position: sticky` et enfant direct de `.shell` - une hauteur ferme
+		   bornerait sa zone de défilement à .shell (donc à un seul viewport) et
+		   ferait disparaître l'en-tête sur toute page dont le contenu dépasse
+		   100dvh (paldex, items, tech, breeding...). */
+		min-height: 100dvh;
 		display: flex;
 		flex-direction: column;
+	}
+	/* Hauteur ferme, réservée à la carte : sa barre latérale a besoin d'une
+	   chaîne de hauteurs définies (main.fullscreen -> .map-wrap -> .sidebar ->
+	   .res) pour que sa liste défile en interne au lieu de pousser toute la
+	   page. `main.fullscreen` (ci-dessous) a déjà `min-height: 0` pour pouvoir
+	   se rétrécir dans cette hauteur fixée. */
+	.shell.mapshell {
+		height: 100dvh;
 	}
 	.guest-notice {
 		margin: 0;

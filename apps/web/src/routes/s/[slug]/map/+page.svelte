@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { mount, unmount } from 'svelte';
+	import { mount, unmount, onMount, onDestroy } from 'svelte';
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
@@ -16,6 +16,7 @@
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
 	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
 	import { categoryOf, countsByCategory, type CatKey } from '$lib/map/categories';
+	import { bossLabel, inGameCoords } from '$lib/map/coords';
 	import { runQuery, visibleMarkers } from '$lib/map/query';
 	import { isGuestContext } from '$lib/nav';
 	import Seo from '$lib/components/Seo.svelte';
@@ -32,7 +33,10 @@
 	const mapState = new MapState();
 	let markerController: MarkerController | undefined = $state();
 	let spawnLayer: SpawnLayer | undefined = $state();
-	let copied = $state(false);
+	/** Statut du bouton de partage. `''` : rien à annoncer - le `<p role="status">`
+	 *  du gabarit reste monté en permanence pour que le lecteur d'écran
+	 *  perçoive le changement de texte (voir le commentaire sur `.toast`). */
+	let toast: '' | 'copied' | 'failed' = $state('');
 
 	const pals = palsJson as Array<{ id: string; elements: string[]; nocturnal?: boolean }>;
 	const elementByPal = new Map(pals.map((p) => [p.id, p.elements[0]]));
@@ -40,12 +44,15 @@
 
 	/** Nom affiché d'un marqueur, par catégorie. Les boss humains n'ont ni palId
 	 *  (le sentinelle « None » est retiré par le pipeline) ni entrée L10N : leur
-	 *  nom est dérivé du SpawnerID. */
+	 *  nom est dérivé du SpawnerID. Les effigies n'ont ni l'un ni l'autre non
+	 *  plus : sans les coordonnées, les 138 lignes porteraient le même libellé
+	 *  (même convention que packages/pipeline/src/search-index.ts). */
 	function nameOf(mk: MapMarker): string {
 		if (mk.meta?.palId) return gameName(`pal:${mk.meta.palId}`);
 		if (mk.nameId) return gameName(`ft:${mk.nameId}`);
-		if (mk.type === 'boss') return mk.id.replace(/^alpha_(?:BOSS_)?/i, '').replaceAll('_', ' ');
-		return m.map_relic_name();
+		if (mk.type === 'boss') return bossLabel(mk.id);
+		const [x, y] = inGameCoords(mk.px, mk.py);
+		return `${m.map_relic_name()} (${x}, ${y})`;
 	}
 	const elementOf = (mk: MapMarker) =>
 		mk.meta?.palId ? elementByPal.get(mk.meta.palId) : undefined;
@@ -57,15 +64,35 @@
 		return first?.meta?.palId ? palIcon(first.meta.palId) : undefined;
 	}
 
-	$effect(() => {
+	// Restauration (URL partagée ou localStorage) : un one-shot volontaire, PAS
+	// un $effect. `page.url` change à chaque navigation `?focus=`/`?pal=` sur
+	// cette même route (palette de recherche, fiche Pal) - dans un $effect qui
+	// lirait `page.url`, chacune de ces navigations relancerait restore() et
+	// écraserait l'état courant de la barre par ce qui est en localStorage.
+	onMount(() => {
 		mapState.restore(page.url);
+	});
+
+	// Store de progression : re-scopé sur `page.params.slug` (une primitive), pas
+	// sur `page.url` - il ne doit se réinitialiser que si le tenant change (ex.
+	// changement de serveur via le sélecteur d'en-tête), jamais sur un simple
+	// changement de query params.
+	$effect(() => {
 		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group, MARKER_IDS);
 		store.startSync();
-		return () => {
-			store.stopSync();
-			markerController?.destroy();
-			spawnLayer?.destroy();
-		};
+		return () => store.stopSync();
+	});
+
+	// markerController / spawnLayer sont des objets Leaflet construits une seule
+	// fois par `onMapReady` (montage de <LeafletMap>, jamais remonté sur une
+	// navigation même route) : leur destruction doit être couplée à celle du
+	// composant, pas à un effet qui se relance sur chaque changement de query
+	// params - sinon une navigation `?focus=` vers cette même route (c'est
+	// justement ce que fait la palette de recherche, cf. lib/search/resolve.ts)
+	// viderait la carte : plus aucun marqueur, plus de zones de spawn.
+	onDestroy(() => {
+		markerController?.destroy();
+		spawnLayer?.destroy();
 	});
 
 	const counts = $derived(countsByCategory(markers, store.mine, store.group));
@@ -146,13 +173,17 @@
 		const href = mapState.shareHref(page.url);
 		try {
 			await navigator.clipboard.writeText(href);
-			copied = true;
-			setTimeout(() => (copied = false), 2000);
+			toast = 'copied';
 		} catch {
-			// Presse-papiers refusé : l'URL devient l'adresse courante, copiable
-			// depuis la barre du navigateur.
+			// Presse-papiers refusé (permission navigateur, contexte non sécurisé...) :
+			// l'URL devient l'adresse courante, copiable depuis la barre du
+			// navigateur. `history.replaceState` contourne volontairement le
+			// routeur de SvelteKit - `page.url` reste donc périmé après cet appel,
+			// mais rien ici n'en dépend au-delà de cette fonction.
 			history.replaceState(history.state, '', href);
+			toast = 'failed';
 		}
+		setTimeout(() => (toast = ''), 2000);
 	}
 
 	// Zones depuis la fiche d'un Pal : /map?pal=<palId>.
@@ -210,7 +241,7 @@
 <div class="map-wrap">
 	<div class="sidebar">
 		<MapSidebar
-			query={mapState.query}
+			bind:query={mapState.query}
 			spawn={mapState.spawn}
 			{counts}
 			{rows}
@@ -231,9 +262,12 @@
 	<div class="canvas">
 		<LeafletMap onready={onMapReady} />
 	</div>
-	{#if copied}
-		<p class="toast" role="status">{m.map_link_copied()}</p>
-	{/if}
+	<!-- Monté en permanence (jamais {#if}) : un lecteur d'écran manque souvent
+	     l'apparition d'un nœud région-live inséré et annoncé dans le même tick -
+	     seul le CHANGEMENT DE TEXTE d'une région déjà présente est fiable. -->
+	<p class="toast" class:show={toast !== ''} role="status">
+		{toast === 'failed' ? m.map_link_copy_failed() : toast === 'copied' ? m.map_link_copied() : ''}
+	</p>
 </div>
 
 <style>
@@ -266,6 +300,14 @@
 		background: var(--surface-2);
 		border: 1px solid var(--border-strong);
 		border-radius: 999px;
+		/* Toujours dans le DOM (voir le gabarit) : masqué visuellement par
+		   défaut, sans `display: none` qui le retirerait aussi de l'arbre
+		   d'accessibilité et empêcherait son annonce. */
+		opacity: 0;
+		pointer-events: none;
+	}
+	.toast.show {
+		opacity: 1;
 	}
 	/* Popups Leaflet aux couleurs du design system */
 	:global(.pal-popup .leaflet-popup-content-wrapper) {

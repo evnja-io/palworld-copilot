@@ -75,7 +75,9 @@ for (const passiveId of heldPassives) {
   if (n) index.push({ id: `passive:${passiveId}`, ...n });
 }
 
-/** Coordonnées in-game (mêmes formules que la carte web). */
+/** Coordonnées in-game (même formule que `inGameCoords` dans
+ *  apps/web/src/lib/map/coords.ts - copie indépendante : ce package n'a pas
+ *  accès à $lib). */
 const coords = (px: number, py: number): string =>
   `(${Math.round((px / 8192) * 2000 - 1000)}, ${Math.round(1000 - (py / 8192) * 2000)})`;
 
@@ -86,7 +88,9 @@ for (const mk of load("markers.json")) {
     if (!n) continue;
     index.push({ ...base, ...n, lvl: mk.meta.level, pal: mk.meta.palId });
   } else if (mk.type === "boss") {
-    // Les boss humains n'ont pas d'entrée L10N : nom dérivé du SpawnerID.
+    // Les boss humains n'ont pas d'entrée L10N : nom dérivé du SpawnerID (même
+    // formule que `bossLabel` dans apps/web/src/lib/map/coords.ts - copie
+    // indépendante : ce package n'a pas accès à $lib).
     const label = mk.id.replace(/^alpha_(?:BOSS_)?/i, "").replaceAll("_", " ").trim();
     index.push({ ...base, fr: label, en: label, lvl: mk.meta?.level });
   } else if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {

@@ -316,6 +316,7 @@
   "map_on_map": "Map",
   "map_copy_link": "Copy link to this view",
   "map_link_copied": "Link copied",
+  "map_link_copy_failed": "Couldn't copy — the URL is in the address bar",
   "map_search_in": "Search in {category}…",
   "map_spawn_search": "Search a Pal…",
   "map_level_min": "Level",

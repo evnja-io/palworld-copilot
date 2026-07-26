@@ -17,7 +17,7 @@
 	import SpawnPicker from './SpawnPicker.svelte';
 
 	let {
-		query,
+		query = $bindable(),
 		spawn,
 		counts,
 		rows,

@@ -316,6 +316,7 @@
   "map_on_map": "Carte",
   "map_copy_link": "Copier le lien de cette vue",
   "map_link_copied": "Lien copié",
+  "map_link_copy_failed": "Copie impossible — l'URL est dans la barre d'adresse",
   "map_search_in": "Chercher dans {category}…",
   "map_spawn_search": "Chercher un Pal…",
   "map_level_min": "Niveau",

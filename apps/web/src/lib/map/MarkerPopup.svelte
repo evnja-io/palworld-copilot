@@ -5,16 +5,13 @@
 	import { appHref } from '$lib/nav';
 	import type { ProgressStore } from '$lib/game/progress.svelte';
 	import type { MapMarker } from './markerController';
+	import { bossLabel, inGameCoords } from './coords';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
 	let { marker, store }: { marker: MapMarker; store: ProgressStore } = $props();
 
 	const checked = $derived(store.mine.has(marker.id));
-	/** Coordonnées in-game affichées comme dans le jeu. */
-	const coords = $derived([
-		Math.round((marker.px / 8192) * 2000 - 1000),
-		Math.round(1000 - (marker.py / 8192) * 2000)
-	]);
+	const coords = $derived(inGameCoords(marker.px, marker.py));
 </script>
 
 <div class="popup">
@@ -31,9 +28,7 @@
 			{#if marker.meta?.palId && palIcon(marker.meta.palId)}
 				<img src={palIcon(marker.meta.palId)} alt="" width="28" height="28" />
 			{/if}
-			{marker.meta?.palId
-				? gameName(`pal:${marker.meta.palId}`)
-				: marker.id.replace(/^alpha_(?:BOSS_)?/i, '').replaceAll('_', ' ')}
+			{marker.meta?.palId ? gameName(`pal:${marker.meta.palId}`) : bossLabel(marker.id)}
 		</strong>
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
