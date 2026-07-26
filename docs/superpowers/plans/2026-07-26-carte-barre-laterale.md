@@ -3311,6 +3311,54 @@ et appliquer l'état sur le conteneur : `<div class="sidebar" class:collapsed={n
 `fr.json` : `"map_sheet_toggle": "Déplier ou replier le panneau",`
 `en.json` : `"map_sheet_toggle": "Expand or collapse the panel",`
 
+- [ ] **Step 5 bis : Étendre la coche de la popup à toutes les catégories**
+
+`MarkerPopup.svelte` n'offre sa coche que pour les effigies : un joueur qui clique
+l'épingle d'un boss n'a aucun moyen de le marquer vaincu, alors que la barre
+latérale le permet. Incohérence introduite par l'élargissement du kind `marker`
+(Task 3) ; à corriger avant la mise en service.
+
+Dans `apps/web/src/lib/map/MarkerPopup.svelte`, remplacer la condition de la
+coche par la capacité déclarée de la catégorie, et sortir le bloc du branchement
+`relic` pour qu'il s'applique à toutes les catégories cochables :
+
+```svelte
+<script lang="ts">
+	// … imports existants …
+	import { CATEGORIES, categoryOf } from './categories';
+
+	// … props existantes …
+	const trackable = $derived(CATEGORIES[categoryOf(marker)].trackable);
+</script>
+```
+
+puis, dans le gabarit, après les branches de titre/coordonnées et avant la
+fermeture de `.popup` :
+
+```svelte
+	{#if trackable}
+		<button
+			class="sphere"
+			class:on={checked}
+			onclick={() => store.toggle(marker.id)}
+			aria-pressed={checked}
+		>
+			<span class="ball" aria-hidden="true"></span>
+			{m.map_found()}
+		</button>
+		<GroupAvatars users={store.group[marker.id] ?? []} />
+	{/if}
+```
+
+en retirant le bouton et les avatars de la branche `relic`, qui les portait
+jusqu'ici. Les six catégories réelles étant toutes `trackable: true`, la coche
+apparaît partout ; la condition documente néanmoins l'intention et couvre une
+future catégorie non cochable.
+
+Vérifier au navigateur : cliquer une épingle de boss, cocher, constater que la
+ligne correspondante de la barre latérale grise, et qu'un rechargement conserve
+l'état.
+
 - [ ] **Step 6 : Renommer les clés i18n devenues obsolètes**
 
 `map_filter_relic`, `map_filter_alpha`, `map_filter_ft` et `map_hide_checked` sont remplacées par `map_cat_*` et `map_hide_tracked`.
