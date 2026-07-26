@@ -131,6 +131,11 @@
 		border-color: var(--accent);
 		color: var(--accent);
 	}
+	@media (pointer: coarse) {
+		.seg button {
+			min-height: 44px;
+		}
+	}
 	.find {
 		flex: none;
 	}
@@ -161,6 +166,12 @@
 	.prow.on {
 		background: var(--accent-soft);
 		border-left-color: var(--accent);
+	}
+	@media (pointer: coarse) {
+		/* Cible tactile principale de cette vue : une ligne de la liste de Pals. */
+		.prow {
+			min-height: 44px;
+		}
 	}
 	.pn {
 		flex: 1;

@@ -167,7 +167,11 @@
 							{rows.length === 1 ? m.map_results_one() : m.map_results_many({ count: rows.length })}
 						</span>
 					{/if}
-					{#if meta.trackable}
+					{#if meta.trackable || query.hideTracked}
+						<!-- `hideTracked` s'applique à toutes les catégories visibles (voir
+						     query.ts), pas seulement à celle-ci : si le filtre est déjà actif,
+						     le contrôle doit rester atteignable même sur une catégorie non
+						     cochable, sinon il devient impossible à désactiver. -->
 						<label class="hide">
 							<input
 								type="checkbox"
@@ -306,6 +310,13 @@
 		gap: 5px;
 		font-size: 11px;
 		color: var(--text-3);
+	}
+	@media (pointer: coarse) {
+		/* Le `<label>` entier est la cible tactile (clic natif sur la case à
+		   cocher) : agrandir sa boîte suffit, pas besoin de ::after. */
+		.hide {
+			min-height: 44px;
+		}
 	}
 	.soon {
 		margin: 0;

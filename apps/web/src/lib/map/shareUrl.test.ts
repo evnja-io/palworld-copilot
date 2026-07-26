@@ -117,6 +117,25 @@ describe("fromSearchParams", () => {
   it("un ?vis= valide constitue bien une vue", () => {
     expect(fromSearchParams(new URLSearchParams("vis=alpha,tower"))).not.toBeNull();
   });
+
+  // MUST-FIX (revue de branche complète, 2026-07-26) : `?vis=garbage` filtrait
+  // silencieusement en `[]`, indiscernable d'un `?vis=` explicitement vide -
+  // un paramètre corrompu écrasait alors localStorage par une carte vide.
+  it("un ?vis= explicitement vide reste une vue valide (rien de visible)", () => {
+    const parsed = fromSearchParams(new URLSearchParams("vis="));
+    expect(parsed).not.toBeNull();
+    expect(parsed?.query.visible).toEqual([]);
+  });
+
+  it("un ?vis= sans aucun segment connu ne valide rien", () => {
+    expect(fromSearchParams(new URLSearchParams("vis=garbage"))).toBeNull();
+    expect(fromSearchParams(new URLSearchParams("vis=licorne,dragon-rose"))).toBeNull();
+  });
+
+  it("un ?el= inconnu est ignoré, un ?el= connu est accepté", () => {
+    expect(fromSearchParams(new URLSearchParams("sel=alpha&el=garbage"))?.query.element).toBeUndefined();
+    expect(fromSearchParams(new URLSearchParams("sel=alpha&el=Fire"))?.query.element).toBe("Fire");
+  });
 });
 
 describe("sanitizeQuery", () => {

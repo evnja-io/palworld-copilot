@@ -76,6 +76,16 @@
 		return first?.meta?.palId ? palIcon(first.meta.palId) : undefined;
 	}
 
+	/** Bascule programmatique de catégorie (hors clic utilisateur sur le rail) :
+	 *  vide aussi la recherche, comme `MapSidebar.select()` le fait déjà pour un
+	 *  changement manuel. Sans ça, un texte tapé pour l'ancienne catégorie fuite
+	 *  dans la nouvelle - et en mode spawn, `query.search` est le champ du
+	 *  sélecteur de Pal, pas un filtre carte : il afficherait la mauvaise liste. */
+	function selectCategory(key: CatKey) {
+		mapState.query.selected = key;
+		mapState.query.search = '';
+	}
+
 	// Restauration (URL partagée ou localStorage) : un one-shot volontaire, PAS
 	// un $effect. `page.url` change à chaque navigation `?focus=`/`?pal=` sur
 	// cette même route (palette de recherche, fiche Pal) - dans un $effect qui
@@ -213,7 +223,7 @@
 		}
 		if (palId === zonedPal || !spawnCounts[palId]) return;
 		zonedPal = palId;
-		mapState.query.selected = 'spawn';
+		selectCategory('spawn');
 		// `?phase=` n'est lu que s'il est valide : un lien partagé ne porte que
 		// `?pal=&phase=` quand le reste de la vue est aux défauts, et
 		// `fromSearchParams` l'ignore alors (pal seul ne décrit pas une vue).
@@ -236,7 +246,7 @@
 		focusedId = id;
 		// La catégorie du marqueur passe au premier plan, et « masquer les faits »
 		// est levé s'il est déjà suivi - sinon la cible resterait invisible.
-		mapState.query.selected = categoryOf(mk);
+		selectCategory(categoryOf(mk));
 		if (mapState.query.hideTracked && store.mine.has(id)) mapState.query.hideTracked = false;
 		mapState.persist();
 		focusMarker(mk);

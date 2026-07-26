@@ -3,6 +3,7 @@
 import { CATEGORIES, type CatKey } from "./categories";
 import { defaultQuery, type Query } from "./query";
 import type { SpawnPhase } from "./spawnLayer";
+import { ELEMENT_LABELS } from "$lib/search/tokens";
 
 export type SpawnState = { spawnPal: string | null; spawnPhase: SpawnPhase };
 
@@ -11,6 +12,10 @@ const LEVEL_MAX = 70;
 
 function isCatKey(v: unknown): v is CatKey {
   return typeof v === "string" && Object.prototype.hasOwnProperty.call(CATEGORIES, v);
+}
+
+function isElementKey(v: unknown): v is string {
+  return typeof v === "string" && Object.prototype.hasOwnProperty.call(ELEMENT_LABELS, v);
 }
 
 function isPhase(v: unknown): v is SpawnPhase {
@@ -41,7 +46,8 @@ export function toSearchParams(q: Query, spawn: SpawnState): URLSearchParams {
 // « décrit une vue ». `pal`/`phase` sont des clés de spawn : elles voyagent
 // avec une vue partagée mais ne suffisent pas à en constituer une - la fiche
 // Pal utilise `?pal=` seul pour dessiner des zones sans toucher aux filtres
-// de l'utilisateur (cf. docs/decisions.md, Fix round 1 tâche 5).
+// de l'utilisateur (cf. docs/decisions.md, « Ce qu'une URL de carte a le
+// droit d'écraser »).
 
 /** `null` si l'URL ne décrit aucune vue valide : l'appelant garde alors
  *  localStorage. La simple présence d'une clé ne suffit pas - `?sel=` (vide)
@@ -55,8 +61,17 @@ export function fromSearchParams(
   const sel = params.get("sel");
   if (sel && isCatKey(sel)) query.selected = sel;
 
+  // `?vis=` (vide) est une vue valide : « rien de visible ». `?vis=garbage`
+  // ne l'est pas - sans distinction, les deux filtrent en `[]` et un
+  // paramètre corrompu écraserait localStorage par une carte vide, exactement
+  // ce que ce garde-fou existe pour éviter (voir le commentaire au-dessus).
   const vis = params.get("vis");
-  if (vis !== null) query.visible = vis.split(",").filter(isCatKey);
+  if (vis === "") {
+    query.visible = [];
+  } else if (vis !== null) {
+    const segments = vis.split(",").filter(isCatKey);
+    if (segments.length > 0) query.visible = segments;
+  }
 
   const lvl = params.get("lvl");
   if (lvl !== null && /^\d+$/.test(lvl)) {
@@ -64,7 +79,7 @@ export function fromSearchParams(
   }
 
   const el = params.get("el");
-  if (el) query.element = el;
+  if (el && isElementKey(el)) query.element = el;
 
   if (params.get("todo") === "1") query.hideTracked = true;
 

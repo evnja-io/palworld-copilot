@@ -156,6 +156,13 @@
 		font-size: 10px;
 		color: var(--text-3);
 	}
+	@media (pointer: coarse) {
+		/* Le `<label>` entier est la cible tactile (clic natif sur la case à
+		   cocher) : agrandir sa boîte suffit, pas besoin de ::after. */
+		.eye {
+			min-height: 44px;
+		}
+	}
 	.compact {
 		padding: 8px 10px;
 		gap: 9px;
