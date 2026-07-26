@@ -249,7 +249,14 @@ export function classifyBossSpawner(palId: string | undefined): "alpha" | "boss"
 
 function reclassify(mk: Marker): Marker {
   if (mk.type === "alpha" || mk.type === "boss") {
-    return { ...mk, type: classifyBossSpawner(mk.meta?.palId) };
+    const type = classifyBossSpawner(mk.meta?.palId);
+    // « None » est un sentinelle de DataTable, pas un id de Pal : le laisser
+    // fuiter donnerait un nom « None » et un lien /paldex/None en 404 côté web.
+    if (type === "boss" && mk.meta?.palId) {
+      const { palId: _drop, ...meta } = mk.meta;
+      return { ...mk, type, meta };
+    }
+    return { ...mk, type };
   }
   if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {
     return { ...mk, type: classifyFt(mk.nameId) };
@@ -597,7 +604,7 @@ for (const mk of load("markers.json")) {
     index.push({ ...base, ...n, lvl: mk.meta.level, pal: mk.meta.palId });
   } else if (mk.type === "boss") {
     // Les boss humains n'ont pas d'entrée L10N : nom dérivé du SpawnerID.
-    const label = mk.id.replace(/^alpha_BOSS_/i, "").replaceAll("_", " ").trim();
+    const label = mk.id.replace(/^alpha_(?:BOSS_)?/i, "").replaceAll("_", " ").trim();
     index.push({ ...base, fr: label, en: label, lvl: mk.meta?.level });
   } else if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {
     const n = mk.nameId ? names(`ft:${mk.nameId}`) : null;
@@ -659,7 +666,7 @@ Dans `apps/web/src/lib/map/MarkerPopup.svelte`, remplacer la branche `alpha` et 
 			{/if}
 			{marker.meta?.palId
 				? gameName(`pal:${marker.meta.palId}`)
-				: marker.id.replace(/^alpha_BOSS_/i, '').replaceAll('_', ' ')}
+				: marker.id.replace(/^alpha_(?:BOSS_)?/i, '').replaceAll('_', ' ')}
 		</strong>
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
@@ -2779,11 +2786,13 @@ Remplacer l'intégralité du bloc `<script>` de `apps/web/src/routes/s/[slug]/ma
 	const elementByPal = new Map(pals.map((p) => [p.id, p.elements[0]]));
 	const nocturnal = new Set(pals.filter((p) => p.nocturnal).map((p) => p.id));
 
-	/** Nom affiché d'un marqueur, par catégorie. */
+	/** Nom affiché d'un marqueur, par catégorie. Les boss humains n'ont ni palId
+	 *  (le sentinelle « None » est retiré par le pipeline) ni entrée L10N : leur
+	 *  nom est dérivé du SpawnerID. */
 	function nameOf(mk: MapMarker): string {
 		if (mk.meta?.palId) return gameName(`pal:${mk.meta.palId}`);
 		if (mk.nameId) return gameName(`ft:${mk.nameId}`);
-		if (mk.type === 'boss') return mk.id.replace(/^alpha_BOSS_/i, '').replaceAll('_', ' ');
+		if (mk.type === 'boss') return mk.id.replace(/^alpha_(?:BOSS_)?/i, '').replaceAll('_', ' ');
 		return m.map_relic_name();
 	}
 	const elementOf = (mk: MapMarker) =>
