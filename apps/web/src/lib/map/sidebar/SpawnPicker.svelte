@@ -108,7 +108,11 @@
 		.x::after {
 			content: '';
 			position: absolute;
-			inset: -11px;
+			top: 50%;
+			left: 50%;
+			min-width: 44px;
+			min-height: 44px;
+			transform: translate(-50%, -50%);
 		}
 	}
 	.seg {

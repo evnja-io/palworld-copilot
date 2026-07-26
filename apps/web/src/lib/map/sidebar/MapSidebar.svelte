@@ -138,9 +138,11 @@
 				{/if}
 
 				<div class="rbar">
-					<span class="tnum rc">
-						{rows.length <= 1 ? m.map_results_one() : m.map_results_many({ count: rows.length })}
-					</span>
+					{#if rows.length > 0}
+						<span class="tnum rc">
+							{rows.length === 1 ? m.map_results_one() : m.map_results_many({ count: rows.length })}
+						</span>
+					{/if}
 					{#if meta.trackable}
 						<label class="hide">
 							<input

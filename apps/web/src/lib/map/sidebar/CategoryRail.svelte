@@ -30,9 +30,9 @@
 <nav class="rail" aria-label={m.map_categories()}>
 	{#each CATEGORY_ORDER as key (key)}
 		{@const meta = CATEGORIES[key]}
-		{@const thumb = thumbOf(key)}
 		{#if key !== 'spawn'}
 			{@const c = counts[key]}
+			{@const thumb = thumbOf(key)}
 			<button
 				class="tile"
 				class:active={selected === key}

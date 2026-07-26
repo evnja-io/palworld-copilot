@@ -181,6 +181,11 @@
 		display: inline-flex;
 	}
 	@media (pointer: coarse) {
+		.res {
+			/* Absorbe le débordement de .chk::after (inset -16px) pour que la
+			   zone de tap élargie reste dans la largeur défilable de la liste. */
+			padding-right: 16px;
+		}
 		.chk::after {
 			content: '';
 			position: absolute;

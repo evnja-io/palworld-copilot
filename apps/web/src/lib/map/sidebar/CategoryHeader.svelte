@@ -131,10 +131,19 @@
 		padding: 2px 4px;
 	}
 	@media (pointer: coarse) {
+		.hero {
+			/* .share::after déborde de son bouton pour atteindre 44px : sans cette
+			   marge, .exp-hero (overflow: hidden) le rogne d'un pixel côté droit. */
+			padding-right: 18px;
+		}
 		.share::after {
 			content: '';
 			position: absolute;
-			inset: -9px -11px;
+			top: 50%;
+			left: 50%;
+			min-width: 44px;
+			min-height: 44px;
+			transform: translate(-50%, -50%);
 		}
 	}
 	.eye {
