@@ -2,7 +2,13 @@
 // cases à cocher à une catégorie sélectionnée + un ensemble de catégories
 // visibles - un état v2 restauré tel quel laisserait ces champs absents.
 import { defaultQuery, type Query } from "./query";
-import { fromSearchParams, toSearchParams, type SpawnState } from "./shareUrl";
+import {
+  fromSearchParams,
+  sanitizeQuery,
+  sanitizeSpawn,
+  toSearchParams,
+  type SpawnState,
+} from "./shareUrl";
 import type { SpawnPhase } from "./spawnLayer";
 
 const STORAGE_KEY = "map-filters-v3";
@@ -23,11 +29,16 @@ export class MapState {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
-      const parsed = JSON.parse(raw) as { query?: Partial<Query>; spawn?: Partial<SpawnState> };
-      this.query = { ...defaultQuery(), ...parsed.query };
-      this.spawn = { spawnPal: null, spawnPhase: "day", ...parsed.spawn };
+      // Payload non fiable (extension tierce, ancienne version du site...) :
+      // on valide champ par champ plutôt que de faire confiance au JSON brut,
+      // sinon un `visible` corrompu (ex. une chaîne au lieu d'un tableau) se
+      // propage jusqu'à `toSearchParams` et y fait planter `.join(",")`.
+      const parsed: unknown = JSON.parse(raw);
+      const r = parsed && typeof parsed === "object" ? (parsed as Record<string, unknown>) : {};
+      this.query = { ...defaultQuery(), ...sanitizeQuery(r.query) };
+      this.spawn = { spawnPal: null, spawnPhase: "day", ...sanitizeSpawn(r.spawn) };
     } catch {
-      /* localStorage indisponible : défauts */
+      /* JSON invalide ou localStorage indisponible : défauts */
     }
   }
 
@@ -39,7 +50,9 @@ export class MapState {
     }
   }
 
-  /** Lien absolu reproduisant la vue courante. */
+  /** Lien absolu reproduisant la vue courante. Les paramètres étrangers à la
+   *  vue (ex. `?focus=` d'un lien de marqueur) sont volontairement absents :
+   *  `base` ne fournit que l'origine/le chemin, pas sa querystring. */
   shareHref(base: URL): string {
     const url = new URL(base.pathname, base.origin);
     url.search = toSearchParams(this.query, this.spawn).toString();
