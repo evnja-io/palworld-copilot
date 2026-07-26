@@ -494,5 +494,11 @@
   "bases_reco_swap": "Remplacer {out} par {in}",
   "bases_reco_covers": "couvre {works}",
   "bases_reco_none": "Aucune amélioration trouvée avec ce pool.",
-  "bases_demand_saved_error": "Échec de l'enregistrement du poids — réessaie."
+  "bases_demand_saved_error": "Échec de l'enregistrement du poids — réessaie.",
+  "header_nav_open": "Ouvrir le menu",
+  "header_nav_close": "Fermer le menu",
+  "header_nav_title": "Navigation",
+  "header_account": "Compte",
+  "map_sheet_expand": "Agrandir le panneau",
+  "map_sheet_collapse": "Réduire le panneau"
 }

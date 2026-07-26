@@ -120,6 +120,23 @@ input::placeholder {
 	color: var(--text-3);
 }
 
+/* Contrôles de saisie sur écran tactile. Deux règles, une seule cause : sur
+   iOS, Safari ZOOME la page à la mise au point d'un champ dont la police est
+   sous 16 px. Avec le corps à 14 px hérité par `font: inherit`, chaque
+   recherche (paldex, objets, carte…) déclenchait ce zoom — la mise en page
+   partait de travers et n'y revenait pas seule. 16 px le neutralise ; la
+   hauteur de 44 px vient avec, c'est le plancher tactile.
+   Cases, boutons radio et curseurs sont exclus : leur boîte est dessinée par
+   l'UA et leur zone de tap est déjà élargie là où il faut (voir ResultList,
+   RefineControls). */
+@media (pointer: coarse) {
+	input:not([type='checkbox']):not([type='radio']):not([type='range']),
+	select {
+		font-size: 16px;
+		min-height: 44px;
+	}
+}
+
 .tnum {
 	font-variant-numeric: tabular-nums;
 }

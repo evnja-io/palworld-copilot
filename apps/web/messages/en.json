@@ -494,5 +494,11 @@
   "bases_reco_swap": "Swap {out} for {in}",
   "bases_reco_covers": "covers {works}",
   "bases_reco_none": "No improvement found with this pool.",
-  "bases_demand_saved_error": "Failed to save the weight — try again."
+  "bases_demand_saved_error": "Failed to save the weight — try again.",
+  "header_nav_open": "Open menu",
+  "header_nav_close": "Close menu",
+  "header_nav_title": "Navigation",
+  "header_account": "Account",
+  "map_sheet_expand": "Expand panel",
+  "map_sheet_collapse": "Collapse panel"
 }

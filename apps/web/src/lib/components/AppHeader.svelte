@@ -6,6 +6,7 @@
 	import { GUEST_FEATURES } from '$lib/guest';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import LangSwitch from '$lib/components/LangSwitch.svelte';
+	import MobileNav from '$lib/components/MobileNav.svelte';
 	// Types uniquement : effacés à la compilation, aucun code serveur embarqué
 	// (même convention que breeding/+page.svelte).
 	import type { Membership, ServerSummary } from '$lib/server/servers';
@@ -59,11 +60,17 @@
 	// renverrait « /s/undefined/… ». On localise alors le chemin directement.
 	const inTenantShell = $derived(page.params.slug !== undefined);
 	const featureHref = (path: string) => (inTenantShell ? appHref(path) : localizeHref(path));
+	const isActive = (path: string) => page.url.pathname.startsWith(featureHref(path));
 
 	let utilities: HTMLDetailsElement | undefined = $state();
 	function closeUtilities() {
 		if (utilities) utilities.open = false;
 	}
+
+	/** Menu mobile (< 900 px). Monté en permanence : le <dialog> ne coûte rien
+	 *  fermé, et le monter à l'ouverture priverait la feuille de son animation
+	 *  d'entrée. */
+	let navOpen = $state(false);
 </script>
 
 <svelte:window onclick={(e) => {
@@ -91,7 +98,10 @@
 			</div>
 		</details>
 	{:else}
-		<a href={localizeHref('/')} class="brand-home">
+		<!-- `aria-label` explicite : sous 900 px le libellé textuel est masqué et le
+		     lien n'aurait plus de nom accessible (le logo est décoratif). -->
+		<a href={localizeHref('/')} class="brand-home" aria-label={m.app_title()}>
+			<img class="mark" src="/logo.svg" alt="" width="28" height="28" />
 			<span class="brand">{m.app_title()}</span>
 			<span class="guest-chip">{m.guest_badge()}</span>
 		</a>
@@ -99,10 +109,7 @@
 
 	<nav>
 		{#each navItems as item (item.href)}
-			<a
-				href={featureHref(item.href)}
-				class:active={page.url.pathname.startsWith(featureHref(item.href))}
-			>
+			<a href={featureHref(item.href)} class:active={isActive(item.href)}>
 				{item.label()}
 			</a>
 		{/each}
@@ -126,6 +133,21 @@
 			<span class="cta-short">{m.auth_login_short()}</span>
 		</a>
 	{/if}
+
+	<!-- Sous 900 px, ce bouton remplace À LA FOIS la rangée de navigation et le
+	     menu utilitaire : les deux vivent dans la feuille (voir MobileNav). -->
+	<button
+		class="burger"
+		aria-label={m.header_nav_open()}
+		aria-expanded={navOpen}
+		onclick={() => (navOpen = true)}
+	>
+		{#if mode === 'member' && user?.avatarUrl}
+			<img src={user.avatarUrl} alt="" width="26" height="26" class="avatar" />
+		{:else}
+			<span class="bars" aria-hidden="true"></span>
+		{/if}
+	</button>
 
 	<!-- Utilitaires de session, hors de la rangée de navigation. Même motif de
 	     divulgation que .switcher ci-dessus : un seul mécanisme de menu. -->
@@ -169,6 +191,20 @@
 	</details>
 </header>
 
+<MobileNav
+	bind:open={navOpen}
+	{mode}
+	items={navItems}
+	hrefOf={featureHref}
+	{isActive}
+	{user}
+	{myServers}
+	currentSlug={server?.slug ?? null}
+	settingsHref={membership?.role === 'owner' ? appHref('/settings') : null}
+	importHref={mode === 'member' && inTenantShell ? appHref('/import') : null}
+	discordUrl={DISCORD_URL}
+/>
+
 <style>
 	.topbar {
 		display: flex;
@@ -181,6 +217,9 @@
 		position: sticky;
 		top: 0;
 		z-index: 10;
+		/* Encoche en paysage : sans ça la marque passe sous l'oreille de l'écran. */
+		padding-left: max(16px, env(safe-area-inset-left));
+		padding-right: max(16px, env(safe-area-inset-right));
 	}
 	/* Landing : l'illustration animée du hero doit rester visible derrière. */
 	.topbar.transparent {
@@ -227,6 +266,12 @@
 		gap: 8px;
 		white-space: nowrap;
 		color: var(--text-1);
+	}
+	/* Pas de `border-radius` : l'emblème porte des pointes en diagonale, qu'un
+	   masque circulaire rognerait. */
+	.mark {
+		flex: none;
+		display: block;
 	}
 	.guest-chip {
 		font-size: 10px;
@@ -316,6 +361,45 @@
 		border-radius: 50%;
 	}
 
+	/* --- Déclencheur du menu mobile --- */
+	.burger {
+		display: none;
+		flex: none;
+		place-items: center;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		background: none;
+		border: 1px solid var(--border-strong);
+		border-radius: var(--r-sm);
+		color: var(--text-2);
+	}
+	.burger:hover {
+		background: var(--surface-2);
+		color: var(--text-1);
+	}
+	/* Trois traits dessinés en bordures : un glyphe « ☰ » dépend de la police et
+	   se centre mal d'un appareil à l'autre. */
+	.bars {
+		width: 16px;
+		height: 10px;
+		border-top: 1.5px solid currentColor;
+		border-bottom: 1.5px solid currentColor;
+		position: relative;
+	}
+	.bars::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		border-top: 1.5px solid currentColor;
+		transform: translateY(-50%);
+	}
+	.burger .avatar {
+		display: block;
+	}
+
 	/* --- Navigation --- */
 	nav {
 		display: flex;
@@ -384,24 +468,51 @@
 		}
 	}
 
+	/* Sous 900 px, la rangée de navigation ne tient plus. La faire défiler
+	   horizontalement (état précédent) masquait 4 entrées sur 9 sans le moindre
+	   indice : elle part donc dans la feuille du menu, et l'en-tête garde UNE
+	   seule rangée de 52 px — ~50 px rendus au contenu, ce qui compte sur la
+	   carte (chaîne de hauteurs 100dvh). */
 	@media (max-width: 900px) {
-		/* La nav passe sur sa propre rangée avant que le débordement horizontal
-		   commence à masquer des entrées. */
-		.topbar {
-			flex-wrap: wrap;
-			height: auto;
-			padding: 8px 12px;
-			gap: 8px 12px;
-		}
 		nav {
-			order: 3;
-			flex-basis: 100%;
-			margin: 0 -12px -8px;
-			padding: 0 12px 8px;
+			display: none;
 		}
+		/* Pousse recherche / connexion / menu à droite sans introduire un élément
+		   d'espacement : un flex item de largeur nulle coûterait quand même un
+		   `gap` de chaque côté — 10 px qui font déborder un écran de 390 px. */
 		.brand-home,
 		.switcher {
 			margin-right: auto;
+		}
+		.burger {
+			display: grid;
+		}
+		/* Le menu utilitaire et son contenu vivent dans la feuille. */
+		.utilities {
+			display: none;
+		}
+		.topbar {
+			gap: 10px;
+			padding-left: max(12px, env(safe-area-inset-left));
+			padding-right: max(12px, env(safe-area-inset-right));
+		}
+		/* Un nom de serveur long doit tronquer, pas pousser recherche et menu
+		   hors de l'écran. */
+		.switcher,
+		.switcher summary {
+			min-width: 0;
+		}
+		.switcher .brand {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		/* Côté invité, le logo remplace le titre : ~115 px rendus à la rangée,
+		   de quoi loger recherche + connexion + menu sans rien tronquer. Le
+		   sélecteur de serveur (membre) garde son libellé — c'est le nom du
+		   monde, pas une marque, et rien ne peut le remplacer. */
+		.brand-home .brand,
+		.brand-home .guest-chip {
+			display: none;
 		}
 	}
 	@media (max-width: 520px) {
@@ -410,11 +521,21 @@
 		.search-btn kbd {
 			display: none;
 		}
-		.guest-chip {
-			display: none;
+		/* La recherche devient une cible carrée de 40 px, alignée sur le bouton
+		   de menu à l'autre bout de la rangée. */
+		.search-btn {
+			padding: 0;
+			display: grid;
+			place-items: center;
+			width: 40px;
+			height: 40px;
+			border-radius: var(--r-sm);
+		}
+		.topbar {
+			gap: 8px;
 		}
 		.cta-login {
-			padding: 6px 12px;
+			padding: 6px 11px;
 			font-size: 12.5px;
 		}
 		/* Libellé court : permet à l'action primaire de rester sur la rangée de la

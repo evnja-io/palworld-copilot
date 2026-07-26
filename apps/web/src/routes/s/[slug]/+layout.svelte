@@ -81,6 +81,7 @@
 		color: var(--text-3);
 		font-size: 12px;
 		text-align: center;
+		text-wrap: pretty;
 	}
 	main {
 		flex: 1;
@@ -88,6 +89,9 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 20px 16px 48px;
+		/* Encoche en paysage : le contenu ne doit pas passer sous l'oreille. */
+		padding-left: max(16px, env(safe-area-inset-left));
+		padding-right: max(16px, env(safe-area-inset-right));
 	}
 	main.fullscreen {
 		max-width: none;
@@ -95,5 +99,30 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 0;
+	}
+	@media (max-width: 640px) {
+		main {
+			padding-top: 16px;
+			padding-bottom: 40px;
+			padding-left: max(14px, env(safe-area-inset-left));
+			padding-right: max(14px, env(safe-area-inset-right));
+		}
+		main.fullscreen {
+			padding: 0;
+		}
+		.guest-notice {
+			padding: 7px 14px;
+			font-size: 11.5px;
+			line-height: 1.4;
+		}
+	}
+	/* Carte : la chaîne de hauteurs est fermée à 100dvh et l'écran sert de
+	   second moniteur pendant la partie. Ces deux lignes coûtaient 53 px de
+	   carte en portrait, 33 en paysage — le même message reste dans le menu,
+	   juste au-dessus du bouton de connexion. */
+	@media (max-width: 900px) {
+		.mapshell .guest-notice {
+			display: none;
+		}
 	}
 </style>

@@ -12,6 +12,7 @@
 	let container: HTMLDivElement;
 	let map: LType.Map | undefined;
 	let ro: ResizeObserver | undefined;
+	let raf = 0;
 
 	onMount(async () => {
 		const leaflet = (await import('leaflet')).default;
@@ -38,15 +39,30 @@
 			.addTo(map);
 		map.setMaxBounds(bounds.pad(0.05));
 		map.fitBounds(bounds);
-		// La hauteur du conteneur dépend du flex (topbar à hauteur variable) :
-		// resync Leaflet sur tout redimensionnement, pas seulement window.resize.
-		ro = new ResizeObserver(() => map?.invalidateSize());
+		// La hauteur du conteneur dépend du flex (topbar à hauteur variable) et,
+		// sur mobile, de la feuille de filtres qui la borne en direct pendant un
+		// glissement : resync Leaflet sur tout redimensionnement, pas seulement
+		// window.resize.
+		//
+		// Une seule resync par frame (`requestAnimationFrame`) : un glissement de
+		// feuille émet des dizaines de notifications par seconde. `pan: false`
+		// garde le coin haut-gauche fixe — la carte reste immobile pendant que la
+		// feuille la rogne, alors que le recentrage par défaut la ferait glisser
+		// sous le doigt.
+		ro = new ResizeObserver(() => {
+			if (raf) return;
+			raf = requestAnimationFrame(() => {
+				raf = 0;
+				map?.invalidateSize({ animate: false, pan: false });
+			});
+		});
 		ro.observe(container);
 		onready(leaflet, map, toLatLng);
 	});
 
 	onDestroy(() => {
 		ro?.disconnect();
+		if (raf) cancelAnimationFrame(raf);
 		map?.remove();
 	});
 </script>

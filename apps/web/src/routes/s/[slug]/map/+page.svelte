@@ -13,6 +13,7 @@
 	import MarkerPopup from '$lib/map/MarkerPopup.svelte';
 	import MapSidebar from '$lib/map/sidebar/MapSidebar.svelte';
 	import { MapState } from '$lib/map/mapState.svelte';
+	import { SheetState } from '$lib/map/sheet.svelte';
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
 	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
 	import { categoryOf, countsByCategory, type CatKey } from '$lib/map/categories';
@@ -25,15 +26,36 @@
 
 	// Feuille glissante sous 900 px : la carte est un second écran pendant la
 	// partie, la barre ne peut pas y voler la moitié de l'écran.
+	//
+	// `min-height` dans la condition : un téléphone en paysage n'a que ~340 px
+	// de haut sous l'en-tête. Une feuille y laisserait 150 px de carte à la
+	// position « moitié ». La largeur, elle, ne manque pas — on revient donc au
+	// rail + panneau latéral, qui prend sur l'axe abondant. **Ce media query est
+	// dupliqué dans le bloc de styles ci-dessous : garder les deux identiques.**
+	const SHEET_MQ = '(max-width: 900px) and (min-height: 520px)';
 	let narrow = $state(false);
-	let sheetStop = $state<'collapsed' | 'half' | 'full'>('half');
+	const sheet = new SheetState();
 	$effect(() => {
-		const mq = window.matchMedia('(max-width: 900px)');
+		const mq = window.matchMedia(SHEET_MQ);
 		const apply = () => (narrow = mq.matches);
 		apply();
 		mq.addEventListener('change', apply);
 		return () => mq.removeEventListener('change', apply);
 	});
+	/** Hauteur du conteneur, mesurée : les positions de la feuille en dépendent,
+	 *  et elle change à la rotation comme à l'apparition de la barre d'URL. */
+	let wrapH = $state(0);
+	$effect(() => {
+		sheet.available = wrapH;
+	});
+	/** Hauteur effective, publiée en variable CSS : les contrôles Leaflet s'en
+	 *  servent pour rester au-dessus de la feuille (voir `.leaflet-bottom`). */
+	// Le canevas Leaflet est borné par cette valeur (voir `.canvas` plus bas) :
+	// c'est ce qui rend Leaflet cohérent avec l'écran. Il recouvrait auparavant
+	// toute la hauteur, feuille comprise, et centrait donc l'île SOUS la
+	// feuille ; contrôles de zoom, auto-pan des popups et centrage sur un
+	// résultat visaient tous le mauvais rectangle.
+	const sheetH = $derived(narrow && wrapH ? sheet.height : 0);
 
 	const markers = markersJson as MapMarker[];
 	// Tous les marqueurs sont cochables : sert de garde-fou aux ids en
@@ -260,12 +282,17 @@
 	indexable={isGuestContext()}
 />
 
-<div class="map-wrap">
+<div
+	class="map-wrap"
+	class:sheet-full={narrow && sheet.stop === 'full' && sheet.dragging === null}
+	bind:clientHeight={wrapH}
+	style="--sheet-h:{sheetH}px"
+>
 	<div
 		class="sidebar"
-		class:collapsed={narrow && sheetStop === 'collapsed'}
-		class:half={narrow && sheetStop === 'half'}
-		class:full={narrow && sheetStop === 'full'}
+		class:sheet={narrow}
+		class:dragging={sheet.dragging !== null}
+		style={narrow && wrapH ? `height:${sheetH}px` : undefined}
 	>
 		<MapSidebar
 			bind:query={mapState.query}
@@ -284,9 +311,8 @@
 			onspawn={selectSpawnPal}
 			onphase={(p: SpawnPhase) => mapState.setPhase(p)}
 			onshare={share}
-			sheet={narrow}
-			stop={sheetStop}
-			onstop={(s) => (sheetStop = s)}
+			asSheet={narrow}
+			{sheet}
 		/>
 	</div>
 	<div class="canvas">
@@ -309,8 +335,16 @@
 	}
 	.sidebar {
 		flex: none;
-		width: 340px;
+		/* 340 px est la largeur de confort ; la borne relative sert au repli
+		   paysage (téléphone couché), où la barre ne doit pas manger la moitié
+		   d'un écran de 667 px. */
+		width: min(340px, 42vw);
 		min-height: 0;
+	}
+	@media (min-width: 900px) {
+		.sidebar {
+			width: 340px;
+		}
 	}
 	.canvas {
 		position: relative;
@@ -318,36 +352,55 @@
 		min-width: 0;
 	}
 
-	@media (max-width: 900px) {
+	/* Doit rester identique à SHEET_MQ dans le script. */
+	@media (max-width: 900px) and (min-height: 520px) {
 		.map-wrap {
 			display: block;
 		}
+		/* Le canevas s'arrête au sommet de la feuille : c'est ce rectangle-là que
+		   Leaflet doit connaître (cadrage, contrôles, auto-pan des popups). Le
+		   faire passer sous la feuille — l'état précédent — revenait à mentir à
+		   Leaflet sur la moitié de son écran. */
 		.canvas {
 			position: absolute;
-			inset: 0;
+			inset: 0 0 var(--sheet-h, 0px) 0;
 		}
-		.sidebar {
+		/* Ce qui apparaît dans les coins arrondis de la feuille. */
+		.map-wrap {
+			background: var(--bg);
+		}
+		/* Feuille dépliée à fond : il ne reste qu'un bandeau de carte de ~60 px,
+		   trop court pour porter les boutons de zoom sans les coller à l'en-tête.
+		   La carte n'est plus le sujet à cette position — les contrôles s'effacent
+		   et reviennent dès qu'on la rabaisse. */
+		.map-wrap.sheet-full :global(.leaflet-control-container) {
+			opacity: 0;
+			pointer-events: none;
+		}
+		:global(.leaflet-control-container) {
+			transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		/* La hauteur est posée en style inline depuis SheetState : trois classes
+		   de palier ne suffisaient plus une fois le glissement au doigt ajouté
+		   (il faut une hauteur continue). */
+		.sidebar.sheet {
 			position: absolute;
 			inset: auto 0 0 0;
 			width: 100%;
 			z-index: 500;
-			transition: height 220ms cubic-bezier(0.23, 1, 0.32, 1);
-			/* Barre home iOS */
-			padding-bottom: env(safe-area-inset-bottom, 0px);
+			transition: height 240ms cubic-bezier(0.23, 1, 0.32, 1);
 		}
-		.sidebar.collapsed {
-			height: 64px;
-		}
-		.sidebar.half {
-			height: 58%;
-		}
-		.sidebar.full {
-			height: 92%;
+		/* Pendant le glissement, la hauteur suit le doigt : toute transition
+		   ferait traîner la feuille derrière lui. */
+		.sidebar.sheet.dragging {
+			transition: none;
 		}
 	}
 	.toast {
 		position: absolute;
-		bottom: 16px;
+		/* Au-dessus de la feuille : plafonné pour rester à l'écran quand elle est
+		   dépliée à fond. */
+		bottom: calc(16px + min(var(--sheet-h, 0px), 55%));
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 600;
@@ -392,11 +445,14 @@
 	:global(.leaflet-bar a:hover) {
 		background: var(--surface-3);
 	}
-	/* Contrôles à l'écart de l'encoche / barre home iOS en plein écran */
-	:global(.leaflet-bottom) {
+	/* Contrôles à l'écart de l'encoche / barre home iOS en plein écran.
+	   Sélecteur à deux classes, volontairement : leaflet.css est importé à
+	   l'exécution (LeafletMap) donc INSÉRÉ APRÈS les styles du composant — à
+	   spécificité égale, son `bottom: 0` gagnait et cette règle était morte. */
+	:global(.leaflet-container .leaflet-bottom) {
 		bottom: env(safe-area-inset-bottom, 0px);
 	}
-	:global(.leaflet-right) {
+	:global(.leaflet-container .leaflet-right) {
 		right: env(safe-area-inset-right, 0px);
 	}
 </style>

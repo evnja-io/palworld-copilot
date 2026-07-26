@@ -8,6 +8,7 @@
 	import { getLocale } from '$lib/paraglide/runtime';
 	import type { MapMarker } from '$lib/map/markerController';
 	import type { Query } from '$lib/map/query';
+	import type { SheetState } from '$lib/map/sheet.svelte';
 	import type { SpawnPhase } from '$lib/map/spawnLayer';
 	import type { GroupUser } from '$lib/types';
 	import CategoryRail from './CategoryRail.svelte';
@@ -33,9 +34,8 @@
 		onspawn,
 		onphase,
 		onshare,
-		sheet = false,
-		stop = 'half',
-		onstop
+		asSheet = false,
+		sheet
 	}: {
 		query: Query;
 		spawn: { spawnPal: string | null; spawnPhase: SpawnPhase };
@@ -54,9 +54,9 @@
 		onphase: (phase: SpawnPhase) => void;
 		onshare: () => void;
 		/** Rendu en feuille glissante (mobile). */
-		sheet?: boolean;
-		stop?: 'collapsed' | 'half' | 'full';
-		onstop?: (stop: 'collapsed' | 'half' | 'full') => void;
+		asSheet?: boolean;
+		/** Positions et glissement de la feuille ; ignoré hors mode feuille. */
+		sheet?: SheetState;
 	} = $props();
 
 	const locale = getLocale() as Locale;
@@ -77,22 +77,75 @@
 		query.visible = [...next];
 		onchange();
 	}
+
+	// --- Poignée de la feuille : glissement au doigt + appui simple ---
+	// Événements pointeur (pas touch) : le même code sert souris, stylet et
+	// doigt, et `setPointerCapture` garantit de recevoir la fin du geste même si
+	// le doigt sort de la poignée.
+	function onPointerDown(e: PointerEvent) {
+		if (!sheet || e.button !== 0) return;
+		// Capture au mieux : elle garantit de recevoir la fin du geste même si le
+		// doigt sort de la poignée, mais son échec (pointeur déjà relâché) ne doit
+		// pas empêcher le glissement — d'où le suivi par `sheet.active`.
+		try {
+			(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+		} catch {
+			/* sans capture, on suit quand même le geste */
+		}
+		sheet.start(e.clientY, e.timeStamp);
+	}
+	function onPointerMove(e: PointerEvent) {
+		sheet?.move(e.clientY, e.timeStamp);
+	}
+	function onPointerUp(e: PointerEvent) {
+		if (!sheet?.active) return;
+		try {
+			(e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+		} catch {
+			/* déjà relâchée */
+		}
+		sheet.end(e.clientY, e.timeStamp);
+	}
+	function onHandleClick() {
+		if (!sheet) return;
+		// Un glissement se termine par un `click` sur la poignée : sans ce garde,
+		// tirer la feuille à mi-course la ferait aussitôt sauter au palier suivant.
+		if (sheet.moved) {
+			sheet.moved = false;
+			return;
+		}
+		sheet.cycle();
+	}
+	function onHandleKey(e: KeyboardEvent) {
+		if (!sheet) return;
+		if (e.key === 'ArrowUp') sheet.step(1);
+		else if (e.key === 'ArrowDown') sheet.step(-1);
+		else return;
+		e.preventDefault();
+	}
 </script>
 
-<aside class="sb" class:sheet>
-	{#if sheet}
+<aside
+	class="sb"
+	class:sheet={asSheet}
+	class:peeking={asSheet && sheet?.stop === 'collapsed' && sheet?.dragging === null}
+>
+	{#if asSheet && sheet}
 		<button
 			class="handle"
 			aria-label={m.map_sheet_toggle()}
-			aria-expanded={stop !== 'collapsed'}
-			onclick={() => onstop?.(stop === 'full' ? 'collapsed' : stop === 'half' ? 'full' : 'half')}
+			aria-expanded={sheet.stop !== 'collapsed'}
+			onpointerdown={onPointerDown}
+			onpointermove={onPointerMove}
+			onpointerup={onPointerUp}
+			onpointercancel={() => sheet?.cancel()}
+			onclick={onHandleClick}
+			onkeydown={onHandleKey}
 		>
 			<span class="grip" aria-hidden="true"></span>
-			{#if stop === 'collapsed'}
-				<span class="peek tnum">
-					{catShort(query.selected)} · {counts[query.selected].mine}/{counts[query.selected].total}
-				</span>
-			{/if}
+			<span class="peek tnum" class:hidden={sheet.stop !== 'collapsed'}>
+				{catShort(query.selected)} · {counts[query.selected].mine}/{counts[query.selected].total}
+			</span>
 		</button>
 	{/if}
 	<div class="cols">
@@ -103,7 +156,7 @@
 			spawnPal={spawn.spawnPal}
 			{thumbOf}
 			onselect={select}
-			horizontal={sheet}
+			horizontal={asSheet}
 		/>
 
 		<section class="panel">
@@ -131,7 +184,7 @@
 					{guest}
 					onvisibility={toggleVisibility}
 					{onshare}
-					compact={sheet}
+					compact={asSheet}
 				/>
 
 				<input
@@ -224,41 +277,66 @@
 		border-top: 1px solid var(--border-strong);
 		border-radius: var(--r-lg) var(--r-lg) 0 0;
 		overflow: hidden;
+		/* Barre home iOS : le rembourrage vit DANS la feuille. Posé sur son
+		   conteneur, il laissait une bande de carte visible sous le fond. */
+		padding-bottom: env(safe-area-inset-bottom, 0px);
 	}
 	.handle {
 		display: none;
 	}
 	.sheet .handle {
-		display: flex;
+		display: grid;
+		place-items: center;
+		gap: 3px;
 		flex: none;
-		flex-direction: column;
-		align-items: center;
-		gap: 4px;
 		width: 100%;
-		min-height: 32px;
-		padding: 8px 0 4px;
+		/* Zone de préhension : c'est ce que le pouce attrape pour faire glisser
+		   la feuille, elle doit être généreuse dès la souris. */
+		min-height: 40px;
+		padding: 9px 0 5px;
 		background: none;
 		border: none;
 		border-radius: 0;
+		/* Le geste vertical appartient à la feuille, pas au défilement de la
+		   page : sans ça le navigateur préempte le glissement. */
+		touch-action: none;
+	}
+	.sheet .handle:hover .grip {
+		background: var(--text-3);
 	}
 	.grip {
 		width: 40px;
 		height: 4px;
 		border-radius: 999px;
 		background: var(--text-4);
+		transition: background 140ms;
 	}
 	.peek {
 		font-size: 11px;
 		color: var(--text-2);
 	}
+	/* Réservée plutôt que retirée : la faire apparaître/disparaître du flux
+	   faisait sauter la hauteur de la poignée pendant le glissement. */
+	.peek.hidden {
+		visibility: hidden;
+		height: 0;
+	}
 	/* Feuille : le rail passe à l'horizontale, sinon il mange la largeur utile. */
 	.sheet .cols {
 		flex-direction: column;
 	}
+	/* Position repliée : la feuille fait 68 px, juste la poignée et son résumé.
+	   Laisser le contenu dans le flux y montrait une rangée de tuiles tranchée
+	   en deux par `overflow: hidden` — ça se lit comme un bug, pas comme un
+	   repli. Retiré seulement une fois posé : pendant un glissement, le contenu
+	   doit rester visible sous le doigt. */
+	.peeking .cols {
+		display: none;
+	}
 	@media (pointer: coarse) {
-		/* 32px de base est trop court pour un doigt ; la poignée est la seule
-		   ligne à cette hauteur (rien en dessous à ne pas recouvrir), donc on
-		   agrandit la vraie boîte plutôt qu'un ::after superposé. */
+		/* 40px reste sous le plancher de 44 px ; la poignée est la seule ligne à
+		   cette hauteur (rien en dessous à ne pas recouvrir), donc on agrandit la
+		   vraie boîte plutôt qu'un ::after superposé. */
 		.sheet .handle {
 			min-height: 44px;
 		}
@@ -271,6 +349,13 @@
 		flex-direction: column;
 		gap: 9px;
 		padding: 10px 11px;
+	}
+	/* En feuille, tout ce qui n'est pas la liste est du chrome : à la position
+	   « moitié » il ne reste que ~180 px de résultats, chaque interligne compte.
+	   L'encoche en paysage est absorbée ici, au plus près du texte. */
+	.sheet .panel {
+		gap: 7px;
+		padding: 8px max(10px, env(safe-area-inset-right)) 8px max(10px, env(safe-area-inset-left));
 	}
 	.spawnhead {
 		flex: none;

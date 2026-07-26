@@ -548,6 +548,48 @@ lui-même. Le payload localStorage est validé champ par champ au même titre qu
 l'URL (un `visible` stocké en chaîne empoisonnait l'état et faisait lever
 `.join(",")`).
 
+## 2026-07-26 - Mobile : une seule rangée d'en-tête, et Leaflet borné à l'écran visible
+
+**Constat** : sous 900 px, la nav de l'en-tête passait sur une seconde rangée en
+défilement horizontal. Mesuré à 390 px : 637 px de contenu dans 390 px de piste,
+soit 4 entrées sur 9 invisibles — sans barre de défilement sur mobile, donc sans
+le moindre indice qu'il y avait autre chose. L'en-tête coûtait 103 px, plus 53 px
+de bandeau invité, avant même que la carte commence. Sur la carte, les contrôles
+de zoom de Leaflet (z-index 1000) flottaient par-dessus la feuille de filtres
+(z-index 500), la tuile « Spawn » du rail était poussée hors écran par un
+`margin-left: auto` dans un conteneur défilant, et le canevas s'étendait sous la
+feuille : Leaflet centrait donc l'île sur une hauteur dont il ne voyait que 44 %.
+
+**Décision** :
+1. **La nav part dans une feuille de menu** (`MobileNav`, `<dialog>` natif pour
+   le piège de focus et Échap) ancrée en bas, comme la barre de la carte : c'est
+   l'idiome mobile déjà retenu par le produit. L'en-tête garde une rangée de
+   52 px — logo, recherche, action primaire, bouton de menu — et le libellé
+   « Palworld Companion » cède la place au logo sous 900 px (~115 px rendus).
+   Le sélecteur de serveur, lui, garde son libellé : c'est le nom du monde.
+2. **Le canevas Leaflet s'arrête au sommet de la feuille** (`inset: 0 0
+   var(--sheet-h) 0`) au lieu de passer dessous. Cadrage initial, contrôles,
+   auto-pan des popups et centrage sur un résultat redeviennent corrects *par
+   construction* — la piste de compensation (padding de `fitBounds`, `panBy`,
+   décalage CSS des contrôles) a été abandonnée : `setMaxBounds` ré-centrait de
+   toute façon la vue dès que le monde tenait dans le viewport, au zoom 1.
+3. **La feuille se tire au doigt** (`SheetState`, événements pointeur, seuil de
+   4 px, aimantation avec biais de vitesse), au lieu d'un simple appui cyclique.
+4. **Paysage téléphone : retour au rail + panneau latéral** — le media query
+   devient `(max-width: 900px) and (min-height: 520px)`. Une feuille sur 340 px
+   de haut laissait 150 px de carte ; la largeur, elle, ne manque pas.
+
+**Conséquence** : la carte gagne ~155 px en portrait. `SHEET_MQ` (script) et le
+media query du bloc de styles de `map/+page.svelte` sont dupliqués et doivent
+rester identiques. Les règles visant `.leaflet-*` exigent **deux classes**
+(`.leaflet-container .leaflet-bottom`) : `leaflet.css` est importé à l'exécution,
+donc inséré après les styles du composant — la règle historique à une classe
+était morte. Enfin, les champs de saisie passent à 16 px sur pointeur grossier :
+en dessous, Safari iOS zoome la page à la mise au point et n'en revient pas.
+Pièges vérifiés : un `<style>` littéral dans un commentaire du bloc `<script>`
+fait échouer le parseur Svelte (`element_unclosed`) ; `setPointerCapture` peut
+lever, le glissement ne doit donc pas en dépendre.
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

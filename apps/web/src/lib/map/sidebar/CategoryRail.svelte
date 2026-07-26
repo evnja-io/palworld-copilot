@@ -28,9 +28,21 @@
 	} = $props();
 
 	const shown = $derived(new Set(visible));
+
+	// En bande horizontale (feuille mobile), les 8 tuiles débordent : la tuile
+	// sélectionnée doit être ramenée à l'écran, sinon un lien partagé ou un
+	// `?focus=` laisse le rail sur une tuile invisible.
+	let railEl: HTMLElement | undefined = $state();
+	$effect(() => {
+		const key = selected;
+		if (!horizontal || !railEl) return;
+		railEl
+			.querySelector<HTMLElement>(`[data-cat="${key}"]`)
+			?.scrollIntoView({ inline: 'nearest', block: 'nearest', behavior: 'smooth' });
+	});
 </script>
 
-<nav class="rail" class:horizontal aria-label={m.map_categories()}>
+<nav class="rail" class:horizontal bind:this={railEl} aria-label={m.map_categories()}>
 	{#each CATEGORY_ORDER as key (key)}
 		{@const meta = CATEGORIES[key]}
 		{#if key !== 'spawn'}
@@ -42,6 +54,7 @@
 				class:hidden={!shown.has(key)}
 				class:future={meta.future}
 				disabled={meta.future}
+				data-cat={key}
 				style="--c:{meta.color}"
 				aria-current={selected === key}
 				aria-label="{catLabel(key)} — {meta.future
@@ -63,6 +76,7 @@
 	<button
 		class="tile spawnt"
 		class:active={selected === 'spawn'}
+		data-cat="spawn"
 		aria-current={selected === 'spawn'}
 		aria-label={spawnPal ? `${m.map_cat_spawn()} — ${gameName(`pal:${spawnPal}`)}` : m.map_cat_spawn()}
 		onclick={() => onselect('spawn')}
@@ -83,7 +97,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
-		padding: 10px 6px;
+		/* Le rail borde l'écran à gauche : en paysage, l'encoche mordrait dessus. */
+		padding: 10px 6px 10px max(6px, env(safe-area-inset-left));
 		overflow: auto;
 		background: var(--bg);
 		border-right: 1px solid var(--border);
@@ -148,13 +163,33 @@
 		border-right: none;
 		border-bottom: 1px solid var(--border);
 		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x proximity;
+		/* Les 8 tuiles dépassent la largeur d'un téléphone. Un dégradé de bord
+		   remplace la barre de défilement (invisible sur mobile) : sans indice,
+		   la bande passe pour tronquée. */
+		-webkit-mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+		mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+	}
+	.horizontal::-webkit-scrollbar {
+		display: none;
 	}
 	.horizontal .tile {
 		flex: none;
 		width: 48px;
+		scroll-snap-align: center;
+		scroll-margin-inline: 14px;
 	}
+	/* `margin-left: auto` (version colonne) poussait la tuile Spawn HORS de la
+	   zone visible dans un conteneur défilant : elle devenait introuvable au
+	   doigt. Elle reste la dernière du rail, séparée par un simple filet. */
 	.horizontal .spawnt {
 		margin-top: 0;
-		margin-left: auto;
+		margin-left: 2px;
+		border: none;
+		border-left: 1px dashed var(--border-strong);
+		border-radius: 0 var(--r-md) var(--r-md) 0;
+		padding-left: 6px;
+		width: 54px;
 	}
 </style>
