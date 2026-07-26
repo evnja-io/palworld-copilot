@@ -36,4 +36,15 @@ describe("markerHtml", () => {
   it("propage l'état coché", () => {
     expect(markerHtml({ id: "r", type: "relic", px: 0, py: 0 }, true)).toContain("mk-checked");
   });
+
+  it("rend un glyphe distinct pour chaque nouveau type", () => {
+    expect(markerHtml({ id: "b", type: "boss", px: 0, py: 0 }, false)).toContain("mk-boss");
+    expect(markerHtml({ id: "t", type: "tower", px: 0, py: 0 }, false)).toContain("mk-tower");
+    expect(markerHtml({ id: "w", type: "watchtower", px: 0, py: 0 }, false)).toContain("mk-watchtower");
+  });
+
+  it("affiche le niveau d'un boss PNJ comme celui d'un alpha", () => {
+    const html = markerHtml({ id: "b", type: "boss", px: 0, py: 0, meta: { level: 30 } }, false);
+    expect(html).toContain("<i>30</i>");
+  });
 });

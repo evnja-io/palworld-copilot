@@ -8,6 +8,9 @@ const STORAGE_KEY = "map-filters-v2";
 export type MapFilters = {
   relic: boolean;
   alpha: boolean;
+  boss: boolean;
+  tower: boolean;
+  watchtower: boolean;
   ft: boolean;
   hideChecked: boolean;
   /** Pal dont les zones de spawn sont affichées, null si aucune. */
@@ -18,6 +21,11 @@ export type MapFilters = {
 const DEFAULTS: MapFilters = {
   relic: true,
   alpha: true,
+  // Boss PNJ et tours n'ont pas encore de case dédiée dans FilterPanel (barre
+  // latérale à venir) : visibles par défaut, comme les autres types de marqueur.
+  boss: true,
+  tower: true,
+  watchtower: true,
   ft: true,
   hideChecked: false,
   spawnPal: null,

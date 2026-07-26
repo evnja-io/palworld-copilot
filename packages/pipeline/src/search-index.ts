@@ -15,7 +15,7 @@ type Entry = {
   el?: string[]; // éléments (pal, skill)
   wk?: Record<string, number>; // aptitudes de travail (pal)
   cat?: string; // catégorie (item typeA)
-  mk?: "alpha" | "ft" | "relic"; // type de marqueur
+  mk?: "alpha" | "boss" | "tower" | "watchtower" | "ft" | "relic"; // type de marqueur
   pw?: number; // puissance (skill)
   ct?: number; // cooldown (skill)
   lvl?: number; // niveau (tech, boss alpha)
@@ -85,7 +85,11 @@ for (const mk of load("markers.json")) {
     const n = mk.meta?.palId ? names(`pal:${mk.meta.palId}`) : null;
     if (!n) continue;
     index.push({ ...base, ...n, lvl: mk.meta.level, pal: mk.meta.palId });
-  } else if (mk.type === "ft") {
+  } else if (mk.type === "boss") {
+    // Les boss humains n'ont pas d'entrée L10N : nom dérivé du SpawnerID.
+    const label = mk.id.replace(/^alpha_BOSS_/i, "").replaceAll("_", " ").trim();
+    index.push({ ...base, fr: label, en: label, lvl: mk.meta?.level });
+  } else if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {
     const n = mk.nameId ? names(`ft:${mk.nameId}`) : null;
     if (!n) continue;
     index.push({ ...base, ...n });

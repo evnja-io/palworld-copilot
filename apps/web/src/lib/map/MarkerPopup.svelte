@@ -26,12 +26,14 @@
 			{m.map_found()}
 		</button>
 		<GroupAvatars users={store.group[marker.id] ?? []} />
-	{:else if marker.type === 'alpha'}
+	{:else if marker.type === 'alpha' || marker.type === 'boss'}
 		<strong class="alpha-name">
 			{#if marker.meta?.palId && palIcon(marker.meta.palId)}
 				<img src={palIcon(marker.meta.palId)} alt="" width="28" height="28" />
 			{/if}
-			{marker.meta?.palId ? gameName(`pal:${marker.meta.palId}`) : marker.id}
+			{marker.meta?.palId
+				? gameName(`pal:${marker.meta.palId}`)
+				: marker.id.replace(/^alpha_BOSS_/i, '').replaceAll('_', ' ')}
 		</strong>
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>

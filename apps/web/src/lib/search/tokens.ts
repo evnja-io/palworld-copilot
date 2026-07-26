@@ -2,7 +2,7 @@
 // suggestion de tokens depuis le texte tapé. Module pur (testable sans Svelte).
 
 export type Ns = "pal" | "item" | "skill" | "passive" | "tech" | "building" | "marker";
-export type MarkerType = "alpha" | "ft" | "relic";
+export type MarkerType = "alpha" | "boss" | "tower" | "watchtower" | "ft" | "relic";
 export type Locale = "fr" | "en";
 
 export type Token =
@@ -72,6 +72,9 @@ export const CAT_LABELS: Record<string, L10n> = {
 
 export const MARKER_LABELS: Record<MarkerType, L10n> = {
   alpha: { fr: "Boss Alpha", en: "Alpha Boss" },
+  boss: { fr: "Boss humains", en: "Human bosses" },
+  tower: { fr: "Tours de boss", en: "Boss towers" },
+  watchtower: { fr: "Tours d'observation", en: "Watchtowers" },
   ft: { fr: "Voyage rapide", en: "Fast Travel" },
   relic: { fr: "Effigie", en: "Effigy" },
 };

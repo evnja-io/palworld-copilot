@@ -78,8 +78,9 @@ function matchesToken(e: SearchEntry, t: Token, ctx: SearchContext): boolean {
     case "marker":
       return e.mk === t.value;
     case "progress": {
-      // Seules les effigies sont cochables : le filtre de progression s'y limite.
-      if (e.mk !== "relic") return false;
+      // Tous les marqueurs sont cochables depuis la barre latérale ; seules les
+      // entrées non-marqueur (pals, techs…) sortent de ce filtre.
+      if (!e.mk) return false;
       const checked = ctx.checked?.has(rawId(e)) ?? false;
       return t.value === "checked" ? checked : !checked;
     }

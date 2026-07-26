@@ -89,6 +89,15 @@
 	:global(.mk-ft) {
 		--mk-color: var(--accent);
 	}
+	:global(.mk-boss) {
+		--mk-color: var(--el-dark);
+	}
+	:global(.mk-tower) {
+		--mk-color: var(--el-electricity);
+	}
+	:global(.mk-watchtower) {
+		--mk-color: var(--el-ice);
+	}
 	:global(.mk-checked) {
 		filter: grayscale(0.9) opacity(0.55);
 	}
