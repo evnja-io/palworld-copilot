@@ -1,68 +1,125 @@
 <script lang="ts">
-	import { mount, unmount } from 'svelte';
+	import { mount, unmount, onMount, onDestroy } from 'svelte';
 	import { page } from '$app/state';
 	import { m } from '$lib/paraglide/messages';
 	import type * as LType from 'leaflet';
 	import markersJson from '@palworld-companion/game-data/markers.json';
-	import { spawnCounts, defaultPhase } from '$lib/game/spawns';
 	import palsJson from '@palworld-companion/game-data/pals.json';
+	import { spawnCounts, defaultPhase } from '$lib/game/spawns';
+	import { gameName } from '$lib/game/names';
+	import { palIcon } from '$lib/game/icons';
 	import { ProgressStore } from '$lib/game/progress.svelte';
 	import LeafletMap from '$lib/map/LeafletMap.svelte';
 	import MarkerPopup from '$lib/map/MarkerPopup.svelte';
-	import FilterPanel from '$lib/map/FilterPanel.svelte';
-	import SpawnPanel from '$lib/map/SpawnPanel.svelte';
+	import MapSidebar from '$lib/map/sidebar/MapSidebar.svelte';
 	import { MapState } from '$lib/map/mapState.svelte';
 	import { MarkerController, type MapMarker } from '$lib/map/markerController';
 	import { SpawnLayer, type SpawnPhase } from '$lib/map/spawnLayer';
+	import { categoryOf, countsByCategory, type CatKey } from '$lib/map/categories';
+	import { bossLabel, inGameCoords } from '$lib/map/coords';
+	import { runQuery, visibleMarkers } from '$lib/map/query';
 	import { isGuestContext } from '$lib/nav';
 	import Seo from '$lib/components/Seo.svelte';
 
 	let { data } = $props();
 
+	// Feuille glissante sous 900 px : la carte est un second écran pendant la
+	// partie, la barre ne peut pas y voler la moitié de l'écran.
+	let narrow = $state(false);
+	let sheetStop = $state<'collapsed' | 'half' | 'full'>('half');
+	$effect(() => {
+		const mq = window.matchMedia('(max-width: 900px)');
+		const apply = () => (narrow = mq.matches);
+		apply();
+		mq.addEventListener('change', apply);
+		return () => mq.removeEventListener('change', apply);
+	});
+
 	const markers = markersJson as MapMarker[];
-	const relics = markers.filter((mk) => mk.type === 'relic');
-	const relicTotal = relics.length;
-	// Seules les effigies sont cochables : sert de garde-fou aux ids en localStorage.
-	const RELIC_IDS = new Set(relics.map((mk) => mk.id));
+	// Tous les marqueurs sont cochables : sert de garde-fou aux ids en
+	// localStorage après une régénération de game-data.
+	const MARKER_IDS = new Set(markers.map((mk) => mk.id));
 
 	const guest = $derived(data.mode === 'guest');
 	const store = new ProgressStore();
 	const mapState = new MapState();
 	let markerController: MarkerController | undefined = $state();
 	let spawnLayer: SpawnLayer | undefined = $state();
+	/** Statut du bouton de partage. `''` : rien à annoncer - le `<p role="status">`
+	 *  du gabarit reste monté en permanence pour que le lecteur d'écran
+	 *  perçoive le changement de texte (voir le commentaire sur `.toast`). */
+	let toast: '' | 'copied' | 'failed' = $state('');
 
-	const nocturnal = new Set(
-		(palsJson as Array<{ id: string; nocturnal?: boolean }>)
-			.filter((p) => p.nocturnal)
-			.map((p) => p.id)
-	);
-	const spawnPal = $derived(mapState.filters.spawnPal);
-	const spawnPhase = $derived(mapState.filters.spawnPhase);
+	const pals = palsJson as Array<{ id: string; elements: string[]; nocturnal?: boolean }>;
+	const elementByPal = new Map(pals.map((p) => [p.id, p.elements[0]]));
+	const nocturnal = new Set(pals.filter((p) => p.nocturnal).map((p) => p.id));
 
+	/** Nom affiché d'un marqueur, par catégorie. Les boss humains n'ont ni palId
+	 *  (le sentinelle « None » est retiré par le pipeline) ni entrée L10N : leur
+	 *  nom est dérivé du SpawnerID. Les effigies n'ont ni l'un ni l'autre non
+	 *  plus : sans les coordonnées, les 138 lignes porteraient le même libellé
+	 *  (même convention que packages/pipeline/src/search-index.ts). */
+	function nameOf(mk: MapMarker): string {
+		if (mk.meta?.palId) return gameName(`pal:${mk.meta.palId}`);
+		if (mk.nameId) return gameName(`ft:${mk.nameId}`);
+		if (mk.type === 'boss') return bossLabel(mk.id);
+		const [x, y] = inGameCoords(mk.px, mk.py);
+		return `${m.map_relic_name()} (${x}, ${y})`;
+	}
+	const elementOf = (mk: MapMarker) =>
+		mk.meta?.palId ? elementByPal.get(mk.meta.palId) : undefined;
+
+	/** Portrait d'aperçu d'une catégorie pour le rail (le premier disponible). */
+	function thumbOf(key: CatKey): string | undefined {
+		if (key !== 'alpha') return undefined;
+		const first = markers.find((mk) => categoryOf(mk) === 'alpha' && mk.meta?.palId);
+		return first?.meta?.palId ? palIcon(first.meta.palId) : undefined;
+	}
+
+	/** Bascule programmatique de catégorie (hors clic utilisateur sur le rail) :
+	 *  vide aussi la recherche, comme `MapSidebar.select()` le fait déjà pour un
+	 *  changement manuel. Sans ça, un texte tapé pour l'ancienne catégorie fuite
+	 *  dans la nouvelle - et en mode spawn, `query.search` est le champ du
+	 *  sélecteur de Pal, pas un filtre carte : il afficherait la mauvaise liste. */
+	function selectCategory(key: CatKey) {
+		mapState.query.selected = key;
+		mapState.query.search = '';
+	}
+
+	// Restauration (URL partagée ou localStorage) : un one-shot volontaire, PAS
+	// un $effect. `page.url` change à chaque navigation `?focus=`/`?pal=` sur
+	// cette même route (palette de recherche, fiche Pal) - dans un $effect qui
+	// lirait `page.url`, chacune de ces navigations relancerait restore() et
+	// écraserait l'état courant de la barre par ce qui est en localStorage.
+	onMount(() => {
+		mapState.restore(page.url);
+	});
+
+	// Store de progression : re-scopé sur `page.params.slug` (une primitive), pas
+	// sur `page.url` - il ne doit se réinitialiser que si le tenant change (ex.
+	// changement de serveur via le sélecteur d'en-tête), jamais sur un simple
+	// changement de query params.
 	$effect(() => {
-		mapState.restore();
-		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group, RELIC_IDS);
+		store.init('marker', page.params.slug!, data.progress.mine, data.progress.group, MARKER_IDS);
 		store.startSync();
-		return () => {
-			store.stopSync();
-			markerController?.destroy();
-			spawnLayer?.destroy();
-		};
+		return () => store.stopSync();
 	});
 
-	const visible = $derived(
-		markers.filter((mk) => {
-			if (!mapState.filters[mk.type]) return false;
-			if (mapState.filters.hideChecked && mk.type === 'relic' && store.mine.has(mk.id)) return false;
-			return true;
-		})
-	);
-	const counts = $derived({
-		mine: store.mine.size,
-		// null pour un invité : le panneau masque alors la ligne « groupe ».
-		group: guest ? null : Object.keys(store.group).length,
-		total: relicTotal
+	// markerController / spawnLayer sont des objets Leaflet construits une seule
+	// fois par `onMapReady` (montage de <LeafletMap>, jamais remonté sur une
+	// navigation même route) : leur destruction doit être couplée à celle du
+	// composant, pas à un effet qui se relance sur chaque changement de query
+	// params - sinon une navigation `?focus=` vers cette même route (c'est
+	// justement ce que fait la palette de recherche, cf. lib/search/resolve.ts)
+	// viderait la carte : plus aucun marqueur, plus de zones de spawn.
+	onDestroy(() => {
+		markerController?.destroy();
+		spawnLayer?.destroy();
 	});
+
+	const counts = $derived(countsByCategory(markers, store.mine, store.group));
+	const rows = $derived(runQuery(markers, mapState.query, store.mine, nameOf, elementOf));
+	const visible = $derived(visibleMarkers(markers, mapState.query, store.mine));
 
 	// Pont popup : montage d'un composant Svelte dans la popup Leaflet.
 	let leafletRef: typeof LType | undefined;
@@ -98,82 +155,104 @@
 
 	// Svelte -> Leaflet : zones de spawn du Pal sélectionné.
 	$effect(() => {
-		spawnLayer?.setPal(spawnPal, spawnPhase);
+		spawnLayer?.setPal(mapState.spawn.spawnPal, mapState.spawn.spawnPhase);
 	});
+
+	/** Centre la carte sur un marqueur et ouvre sa popup. Rend la catégorie
+	 *  visible au besoin : cliquer une ligne dont les épingles sont masquées
+	 *  ne doit pas donner une carte vide. */
+	function focusMarker(mk: MapMarker) {
+		const cat = categoryOf(mk);
+		if (!mapState.query.visible.includes(cat)) {
+			mapState.query.visible = [...mapState.query.visible, cat];
+			mapState.persist();
+		}
+		// Après le flush des effets, le sync a (re)créé le marqueur.
+		setTimeout(() => {
+			const lm = markerController?.get(mk.id);
+			if (!lm || !mapRef) return;
+			mapRef.setView(lm.getLatLng(), 4);
+			onMarkerClick(mk, lm);
+		}, 0);
+	}
+
+	/** `phase` forcée : uniquement pour relayer un lien partagé. Sinon la phase
+	 *  est déduite (un Pal nocturne n'a souvent rien à montrer de jour). */
+	function selectSpawnPal(palId: string | null, phase?: SpawnPhase) {
+		mapState.spawn.spawnPal = palId;
+		if (palId) {
+			mapState.spawn.spawnPhase = phase ?? defaultPhase(spawnCounts[palId], nocturnal.has(palId));
+		}
+		mapState.persist();
+		if (!palId) return;
+		void spawnLayer?.setPal(palId, mapState.spawn.spawnPhase).then(() => {
+			const b = spawnLayer?.bounds();
+			if (b && mapRef) mapRef.fitBounds(b.pad(0.15));
+		});
+	}
+
+	async function share() {
+		const href = mapState.shareHref(page.url);
+		try {
+			await navigator.clipboard.writeText(href);
+			toast = 'copied';
+		} catch {
+			// Presse-papiers refusé (permission navigateur, contexte non sécurisé...) :
+			// l'URL devient l'adresse courante, copiable depuis la barre du
+			// navigateur. `history.replaceState` contourne volontairement le
+			// routeur de SvelteKit - `page.url` reste donc périmé après cet appel,
+			// mais rien ici n'en dépend au-delà de cette fonction.
+			history.replaceState(history.state, '', href);
+			toast = 'failed';
+		}
+		setTimeout(() => (toast = ''), 2000);
+	}
 
 	// Zones depuis la fiche d'un Pal : /map?pal=<palId>.
 	// `zonedPal` est un `let` nu, PAS un $state : l'effet l'écrit, et le rendre
-	// réactif créerait une auto-dépendance — « Effacer » le remettrait à null,
+	// réactif créerait une auto-dépendance - « Effacer » le remettrait à null,
 	// l'effet se relancerait avec ?pal= toujours dans l'URL, et les zones
 	// reviendraient aussitôt.
 	let zonedPal: string | null = null;
 	$effect(() => {
 		const palId = page.url.searchParams.get('pal');
-		const layer = spawnLayer;
-		if (!layer) return;
+		if (!spawnLayer) return;
 		if (!palId) {
 			zonedPal = null;
 			return;
 		}
 		if (palId === zonedPal || !spawnCounts[palId]) return;
 		zonedPal = palId;
-		mapState.filters.spawnPal = palId;
-		// La phase persistée est écrasée : un Pal nocturne n'a souvent rien à
-		// montrer de jour, et hériter du Pal précédent donnerait une carte vide.
-		const phase = defaultPhase(spawnCounts[palId], nocturnal.has(palId));
-		mapState.filters.spawnPhase = phase;
-		mapState.persist();
-		// Attendre la fin du dessin, pas un minuteur : setPal fait un fetch, et
-		// un setTimeout(0) s'exécuterait avant lui — l'emprise serait vide et le
-		// cadrage n'aurait jamais lieu.
-		void layer.setPal(palId, phase).then(() => {
-			const b = layer.bounds();
-			if (b && mapRef) mapRef.fitBounds(b.pad(0.15));
-		});
+		selectCategory('spawn');
+		// `?phase=` n'est lu que s'il est valide : un lien partagé ne porte que
+		// `?pal=&phase=` quand le reste de la vue est aux défauts, et
+		// `fromSearchParams` l'ignore alors (pal seul ne décrit pas une vue).
+		// Sans ce relais, la phase choisie par l'expéditeur serait perdue.
+		const shared = page.url.searchParams.get('phase');
+		selectSpawnPal(palId, shared === 'day' || shared === 'night' ? shared : undefined);
 	});
-
-	// Ne pas toucher à `zonedPal` ici : le laisser sur le Pal effacé est ce qui
-	// empêche l'effet de le réafficher tant que ?pal= n'a pas changé.
-	function clearSpawns() {
-		mapState.filters.spawnPal = null;
-		mapState.persist();
-	}
-
-	function setPhase(p: SpawnPhase) {
-		mapState.filters.spawnPhase = p;
-		mapState.persist();
-	}
 
 	// Focus depuis la palette de recherche : /map?focus=<markerId>.
 	let focusedId: string | null = null;
 	$effect(() => {
 		const id = page.url.searchParams.get('focus');
-		const controller = markerController;
 		if (!id) {
 			focusedId = null;
 			return;
 		}
-		if (!controller || id === focusedId) return;
-		const mk = markers.find((m) => m.id === id);
+		if (!markerController || id === focusedId) return;
+		const mk = markers.find((x) => x.id === id);
 		if (!mk) return;
 		focusedId = id;
-		if (!mapState.filters[mk.type]) {
-			mapState.filters[mk.type] = true;
-			mapState.persist();
-		}
-		if (mk.type === 'relic' && mapState.filters.hideChecked && store.mine.has(id)) {
-			mapState.filters.hideChecked = false;
-			mapState.persist();
-		}
-		// Après le flush des effets, le sync a (re)créé le marqueur.
-		setTimeout(() => {
-			const lm = controller.get(id);
-			if (!lm || !mapRef) return;
-			mapRef.setView(lm.getLatLng(), 4);
-			onMarkerClick(mk, lm);
-		}, 0);
+		// La catégorie du marqueur passe au premier plan, et « masquer les faits »
+		// est levé s'il est déjà suivi - sinon la cible resterait invisible.
+		selectCategory(categoryOf(mk));
+		if (mapState.query.hideTracked && store.mine.has(id)) mapState.query.hideTracked = false;
+		mapState.persist();
+		focusMarker(mk);
 	});
 </script>
+
 <Seo
 	title={m.map_title()}
 	description={m.seo_map_desc()}
@@ -182,24 +261,111 @@
 />
 
 <div class="map-wrap">
-	<LeafletMap onready={onMapReady} />
-	<FilterPanel filters={mapState.filters} {counts} onchange={() => mapState.persist()} />
-	{#if spawnPal && spawnCounts[spawnPal]}
-		<SpawnPanel
-			palId={spawnPal}
-			phase={spawnPhase}
-			counts={spawnCounts[spawnPal]}
-			onphase={setPhase}
-			onclear={clearSpawns}
+	<div
+		class="sidebar"
+		class:collapsed={narrow && sheetStop === 'collapsed'}
+		class:half={narrow && sheetStop === 'half'}
+		class:full={narrow && sheetStop === 'full'}
+	>
+		<MapSidebar
+			bind:query={mapState.query}
+			spawn={mapState.spawn}
+			{counts}
+			{rows}
+			mine={store.mine}
+			group={store.group}
+			{guest}
+			{nameOf}
+			{elementOf}
+			{thumbOf}
+			onchange={() => mapState.persist()}
+			onfocus={focusMarker}
+			ontoggle={(mk) => store.toggle(mk.id)}
+			onspawn={selectSpawnPal}
+			onphase={(p: SpawnPhase) => mapState.setPhase(p)}
+			onshare={share}
+			sheet={narrow}
+			stop={sheetStop}
+			onstop={(s) => (sheetStop = s)}
 		/>
-	{/if}
+	</div>
+	<div class="canvas">
+		<LeafletMap onready={onMapReady} />
+	</div>
+	<!-- Monté en permanence (jamais {#if}) : un lecteur d'écran manque souvent
+	     l'apparition d'un nœud région-live inséré et annoncé dans le même tick -
+	     seul le CHANGEMENT DE TEXTE d'une région déjà présente est fiable. -->
+	<p class="toast" class:show={toast !== ''} role="status">
+		{toast === 'failed' ? m.map_link_copy_failed() : toast === 'copied' ? m.map_link_copied() : ''}
+	</p>
 </div>
 
 <style>
 	.map-wrap {
-		position: relative;
+		display: flex;
 		flex: 1;
 		min-height: 420px;
+		position: relative;
+	}
+	.sidebar {
+		flex: none;
+		width: 340px;
+		min-height: 0;
+	}
+	.canvas {
+		position: relative;
+		flex: 1;
+		min-width: 0;
+	}
+
+	@media (max-width: 900px) {
+		.map-wrap {
+			display: block;
+		}
+		.canvas {
+			position: absolute;
+			inset: 0;
+		}
+		.sidebar {
+			position: absolute;
+			inset: auto 0 0 0;
+			width: 100%;
+			z-index: 500;
+			transition: height 220ms cubic-bezier(0.23, 1, 0.32, 1);
+			/* Barre home iOS */
+			padding-bottom: env(safe-area-inset-bottom, 0px);
+		}
+		.sidebar.collapsed {
+			height: 64px;
+		}
+		.sidebar.half {
+			height: 58%;
+		}
+		.sidebar.full {
+			height: 92%;
+		}
+	}
+	.toast {
+		position: absolute;
+		bottom: 16px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 600;
+		margin: 0;
+		padding: 8px 14px;
+		font-size: 12px;
+		color: var(--text-1);
+		background: var(--surface-2);
+		border: 1px solid var(--border-strong);
+		border-radius: 999px;
+		/* Toujours dans le DOM (voir le gabarit) : masqué visuellement par
+		   défaut, sans `display: none` qui le retirerait aussi de l'arbre
+		   d'accessibilité et empêcherait son annonce. */
+		opacity: 0;
+		pointer-events: none;
+	}
+	.toast.show {
+		opacity: 1;
 	}
 	/* Popups Leaflet aux couleurs du design system */
 	:global(.pal-popup .leaflet-popup-content-wrapper) {

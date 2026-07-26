@@ -16999,6 +16999,303 @@
   "py": 491.6
  },
  {
+  "en": "Believer CrossBow",
+  "fr": "Believer CrossBow",
+  "id": "marker:alpha_BOSS_Believer_CrossBow",
+  "lvl": 23,
+  "mk": "boss",
+  "px": 4958,
+  "py": 2903.5
+ },
+ {
+  "en": "Believer Fat GiantClub",
+  "fr": "Believer Fat GiantClub",
+  "id": "marker:alpha_BOSS_Believer_Fat_GiantClub",
+  "lvl": 30,
+  "mk": "boss",
+  "px": 5184.6,
+  "py": 2425.7
+ },
+ {
+  "en": "DarkTrader",
+  "fr": "DarkTrader",
+  "id": "marker:alpha_BOSS_DarkTrader",
+  "lvl": 59,
+  "mk": "boss",
+  "px": 1780,
+  "py": 5742.8
+ },
+ {
+  "en": "Female DesertPeople",
+  "fr": "Female DesertPeople",
+  "id": "marker:alpha_BOSS_Female_DesertPeople",
+  "lvl": 37,
+  "mk": "boss",
+  "px": 6059.2,
+  "py": 1144.8
+ },
+ {
+  "en": "Female People",
+  "fr": "Female People",
+  "id": "marker:alpha_BOSS_Female_People",
+  "lvl": 38,
+  "mk": "boss",
+  "px": 3640.1,
+  "py": 4635
+ },
+ {
+  "en": "Female People02",
+  "fr": "Female People02",
+  "id": "marker:alpha_BOSS_Female_People02",
+  "lvl": 16,
+  "mk": "boss",
+  "px": 4298,
+  "py": 3696.5
+ },
+ {
+  "en": "Female People03",
+  "fr": "Female People03",
+  "id": "marker:alpha_BOSS_Female_People03",
+  "lvl": 15,
+  "mk": "boss",
+  "px": 4984.3,
+  "py": 3676.3
+ },
+ {
+  "en": "Female Soldier",
+  "fr": "Female Soldier",
+  "id": "marker:alpha_BOSS_Female_Soldier",
+  "lvl": 19,
+  "mk": "boss",
+  "px": 4151.8,
+  "py": 2978.1
+ },
+ {
+  "en": "Female Soldier02",
+  "fr": "Female Soldier02",
+  "id": "marker:alpha_BOSS_Female_Soldier02",
+  "lvl": 56,
+  "mk": "boss",
+  "px": 2796.9,
+  "py": 5998.8
+ },
+ {
+  "en": "Female Soldier03",
+  "fr": "Female Soldier03",
+  "id": "marker:alpha_BOSS_Female_Soldier03",
+  "lvl": 39,
+  "mk": "boss",
+  "px": 3453.1,
+  "py": 3284.8
+ },
+ {
+  "en": "Female Soldier04",
+  "fr": "Female Soldier04",
+  "id": "marker:alpha_BOSS_Female_Soldier04",
+  "lvl": 52,
+  "mk": "boss",
+  "px": 3631.1,
+  "py": 2404.2
+ },
+ {
+  "en": "FireCult FlameThrower",
+  "fr": "FireCult FlameThrower",
+  "id": "marker:alpha_BOSS_FireCult_FlameThrower",
+  "lvl": 41,
+  "mk": "boss",
+  "px": 3867.8,
+  "py": 3849.9
+ },
+ {
+  "en": "Hunter Fat GatlingGun",
+  "fr": "Hunter Fat GatlingGun",
+  "id": "marker:alpha_BOSS_Hunter_Fat_GatlingGun",
+  "lvl": 20,
+  "mk": "boss",
+  "px": 4300.7,
+  "py": 3345.1
+ },
+ {
+  "en": "Hunter Rifle",
+  "fr": "Hunter Rifle",
+  "id": "marker:alpha_BOSS_Hunter_Rifle",
+  "lvl": 12,
+  "mk": "boss",
+  "px": 5122.8,
+  "py": 4005.3
+ },
+ {
+  "en": "Male DesertPeople",
+  "fr": "Male DesertPeople",
+  "id": "marker:alpha_BOSS_Male_DesertPeople",
+  "lvl": 36,
+  "mk": "boss",
+  "px": 6369.7,
+  "py": 2329.8
+ },
+ {
+  "en": "Male NinjaElite",
+  "fr": "Male NinjaElite",
+  "id": "marker:alpha_BOSS_Male_NinjaElite",
+  "lvl": 53,
+  "mk": "boss",
+  "px": 3240.7,
+  "py": 2078.6
+ },
+ {
+  "en": "Male People",
+  "fr": "Male People",
+  "id": "marker:alpha_BOSS_Male_People",
+  "lvl": 26,
+  "mk": "boss",
+  "px": 5894,
+  "py": 2691.1
+ },
+ {
+  "en": "Male People02",
+  "fr": "Male People02",
+  "id": "marker:alpha_BOSS_Male_People02",
+  "lvl": 43,
+  "mk": "boss",
+  "px": 4482.7,
+  "py": 1427.4
+ },
+ {
+  "en": "Male People03",
+  "fr": "Male People03",
+  "id": "marker:alpha_BOSS_Male_People03",
+  "lvl": 10,
+  "mk": "boss",
+  "px": 4936.1,
+  "py": 3872.4
+ },
+ {
+  "en": "Male People2",
+  "fr": "Male People2",
+  "id": "marker:alpha_BOSS_Male_People2",
+  "lvl": 26,
+  "mk": "boss",
+  "px": 5893,
+  "py": 2680.8
+ },
+ {
+  "en": "Male Soldier",
+  "fr": "Male Soldier",
+  "id": "marker:alpha_BOSS_Male_Soldier",
+  "lvl": 15,
+  "mk": "boss",
+  "px": 4236.3,
+  "py": 4289.1
+ },
+ {
+  "en": "Male Soldier02",
+  "fr": "Male Soldier02",
+  "id": "marker:alpha_BOSS_Male_Soldier02",
+  "lvl": 23,
+  "mk": "boss",
+  "px": 5664.9,
+  "py": 3242.2
+ },
+ {
+  "en": "Male Soldier03",
+  "fr": "Male Soldier03",
+  "id": "marker:alpha_BOSS_Male_Soldier03",
+  "lvl": 49,
+  "mk": "boss",
+  "px": 4048.9,
+  "py": 1852.5
+ },
+ {
+  "en": "Male Soldier04",
+  "fr": "Male Soldier04",
+  "id": "marker:alpha_BOSS_Male_Soldier04",
+  "lvl": 21,
+  "mk": "boss",
+  "px": 4814.1,
+  "py": 3202.6
+ },
+ {
+  "en": "Male Trader01",
+  "fr": "Male Trader01",
+  "id": "marker:alpha_BOSS_Male_Trader01",
+  "lvl": 42,
+  "mk": "boss",
+  "px": 4753.8,
+  "py": 2301.1
+ },
+ {
+  "en": "Male Trader02",
+  "fr": "Male Trader02",
+  "id": "marker:alpha_BOSS_Male_Trader02",
+  "lvl": 57,
+  "mk": "boss",
+  "px": 1894.3,
+  "py": 7102.1
+ },
+ {
+  "en": "Male Trader03",
+  "fr": "Male Trader03",
+  "id": "marker:alpha_BOSS_Male_Trader03",
+  "lvl": 57,
+  "mk": "boss",
+  "px": 2188.4,
+  "py": 5020.2
+ },
+ {
+  "en": "Ninja",
+  "fr": "Ninja",
+  "id": "marker:alpha_BOSS_Ninja",
+  "lvl": 28,
+  "mk": "boss",
+  "px": 5409.7,
+  "py": 2680.1
+ },
+ {
+  "en": "Police Old",
+  "fr": "Police Old",
+  "id": "marker:alpha_BOSS_Police_Old",
+  "lvl": 57,
+  "mk": "boss",
+  "px": 1947.8,
+  "py": 5854.7
+ },
+ {
+  "en": "Police Rifle",
+  "fr": "Police Rifle",
+  "id": "marker:alpha_BOSS_Police_Rifle",
+  "lvl": 40,
+  "mk": "boss",
+  "px": 5819.1,
+  "py": 1716.6
+ },
+ {
+  "en": "Scientist LaserRifle",
+  "fr": "Scientist LaserRifle",
+  "id": "marker:alpha_BOSS_Scientist_LaserRifle",
+  "lvl": 45,
+  "mk": "boss",
+  "px": 4964.9,
+  "py": 1918.3
+ },
+ {
+  "en": "Viking",
+  "fr": "Viking",
+  "id": "marker:alpha_BOSS_Viking",
+  "lvl": 57,
+  "mk": "boss",
+  "px": 3069.8,
+  "py": 5276.4
+ },
+ {
+  "en": "VikingElite",
+  "fr": "VikingElite",
+  "id": "marker:alpha_BOSS_VikingElite",
+  "lvl": 58,
+  "mk": "boss",
+  "px": 1392.9,
+  "py": 6525.6
+ },
+ {
   "en": "Prixter Lux",
   "fr": "Prixter Lux",
   "id": "marker:alpha_desertisland_1_FBOSS",
@@ -17017,6 +17314,33 @@
   "pal": "CactusDoll",
   "px": 6112.4,
   "py": 4520.4
+ },
+ {
+  "en": "REGION Oilrig 1",
+  "fr": "REGION Oilrig 1",
+  "id": "marker:alpha_REGION_Oilrig_1",
+  "lvl": 55,
+  "mk": "boss",
+  "px": 6496.9,
+  "py": 3791.1
+ },
+ {
+  "en": "REGION Oilrig 2",
+  "fr": "REGION Oilrig 2",
+  "id": "marker:alpha_REGION_Oilrig_2",
+  "lvl": 30,
+  "mk": "boss",
+  "px": 5408.5,
+  "py": 3392.2
+ },
+ {
+  "en": "REGION Oilrig 3",
+  "fr": "REGION Oilrig 3",
+  "id": "marker:alpha_REGION_Oilrig_3",
+  "lvl": 60,
+  "mk": "boss",
+  "px": 501.6,
+  "py": 6438.4
  },
  {
   "en": "Dualith",
@@ -17386,7 +17710,7 @@
   "en": "Deep Bamboo Thicket Watchtower",
   "fr": "Tour d'observation du Bosquet Reculé",
   "id": "marker:ft_0c0af9f34c0491bcad80b1bf355b9a98",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4177.3,
   "py": 3075.2
  },
@@ -17410,7 +17734,7 @@
   "en": "Windswept Island Watchtower",
   "fr": "Tour d'observation de l'Île Venteuse",
   "id": "marker:ft_11e3e3c44f040b34e3809cb69cd87435",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4952.9,
   "py": 3942.4
  },
@@ -17586,7 +17910,7 @@
   "en": "Loess Plains Watchtower",
   "fr": "Tour d'observation de la Plaine de Lœss",
   "id": "marker:ft_328bcac94e01988d944c4f85d49e457c",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 2495.1,
   "py": 6164
  },
@@ -17642,7 +17966,7 @@
   "en": "Dry Sandy Beach Watchtower",
   "fr": "Tour d'observation de la Plage Asséchée",
   "id": "marker:ft_3bf1495e406ad5f437da5aa2134954a2",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 3195.4,
   "py": 4465.6
  },
@@ -17698,7 +18022,7 @@
   "en": "Arid Wasteland Watchtower",
   "fr": "Tour d'observation des Terres aux Courants Chauds",
   "id": "marker:ft_479a228c4032aaf144b3808e753e1690",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 2342.6,
   "py": 5561.3
  },
@@ -17706,7 +18030,7 @@
   "en": "Moonflower Tower Entrance",
   "fr": "Tour du Clan des Fleurs Lunaires – Entrée",
   "id": "marker:ft_49c3516d459f15c70abee88cd7f4d331",
-  "mk": "ft",
+  "mk": "tower",
   "px": 3427.4,
   "py": 2120.2
  },
@@ -17722,7 +18046,7 @@
   "en": "Sea Breeze Archipelago Watchtower",
   "fr": "Tour d'observation de l'Archipel de la Brise Saline",
   "id": "marker:ft_4c204c3842eab210a7a9da9d2cf9cbbe",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4554.3,
   "py": 4396.1
  },
@@ -17794,7 +18118,7 @@
   "en": "Eastern Wild Island Watchtower",
   "fr": "Tour d'observation de l'Île Tempétueuse de l'Est",
   "id": "marker:ft_58a29b814e069d61ec75b1a6e9658fc1",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 6317.5,
   "py": 3063.1
  },
@@ -17810,7 +18134,7 @@
   "en": "Eternal Pyre Tower Entrance",
   "fr": "Tour de la Confrérie des Flammes Éternelles - Entrée",
   "id": "marker:ft_5970e8e648d2a83afdff7c9151d9bef5",
-  "mk": "ft",
+  "mk": "tower",
   "px": 3446.7,
   "py": 4053.4
  },
@@ -17834,7 +18158,7 @@
   "en": "Frozen Coral Hill Watchtower",
   "fr": "Tour d'observation de la Colline de Corail Gelé",
   "id": "marker:ft_5fa6eb494384e4134baa589f02a580dc",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 2092,
   "py": 6409.8
  },
@@ -17842,7 +18166,7 @@
   "en": "Rayne Syndicate Tower Entrance",
   "fr": "Tour du Syndicat de Rayne - Entrée",
   "id": "marker:ft_603ed0cd4cfb9afdc9e11f805594cce5",
-  "mk": "ft",
+  "mk": "tower",
   "px": 5294.4,
   "py": 3771.3
  },
@@ -17874,7 +18198,7 @@
   "en": "PIDF Tower Entrance",
   "fr": "Tour de la Milice Populaire - Entrée",
   "id": "marker:ft_65b10bb14abda9c2109167b21901d195",
-  "mk": "ft",
+  "mk": "tower",
   "px": 6395,
   "py": 1807.7
  },
@@ -17882,7 +18206,7 @@
   "en": "Burning Fault Watchtower",
   "fr": "Tour d'observation de la Faille Incandescente",
   "id": "marker:ft_6948b7914c8d1701db7f4081e4d970e5",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 2916.8,
   "py": 5521.5
  },
@@ -18042,7 +18366,7 @@
   "en": "Astral Mountains Garden Watchtower",
   "fr": "Tour d'observation du Versant du Mont Argenté",
   "id": "marker:ft_84d48ea34666191781868e809acbcbce",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4216.3,
   "py": 1523.3
  },
@@ -18058,7 +18382,7 @@
   "en": "Sandstone Plateau Watchtower",
   "fr": "Tour d'observation du Plateau de Grès",
   "id": "marker:ft_8a9ae3b44ad758edd7fe44ba9b75000b",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 5828.3,
   "py": 1493
  },
@@ -18114,7 +18438,7 @@
   "en": "Feybreak Tower Entrance",
   "fr": "Tour du Paradis Déchu – Entrée",
   "id": "marker:ft_9521febf4a6d0d02ae9f80ae9513b99c",
-  "mk": "ft",
+  "mk": "tower",
   "px": 1649.3,
   "py": 6993.3
  },
@@ -18170,7 +18494,7 @@
   "en": "Free Pal Alliance Tower Entrance",
   "fr": "Tour de la Ligue pour la Protection des Pals - Entrée",
   "id": "marker:ft_a51fc0c147435750046c48b254793a8b",
-  "mk": "ft",
+  "mk": "tower",
   "px": 5076.5,
   "py": 3474.4
  },
@@ -18186,7 +18510,7 @@
   "en": "Azure Covenant Tower Entrance",
   "fr": "Tour de l'Alliance Azurée - Entrée",
   "id": "marker:ft_aebcc3ff41acf9252b3499a89e0bad55",
-  "mk": "ft",
+  "mk": "tower",
   "px": 3866.8,
   "py": 6368.5
  },
@@ -18314,7 +18638,7 @@
   "en": "Scorched Plateau Watchtower",
   "fr": "Tour d'observation du Plateau Torride",
   "id": "marker:ft_c5e2aba14a8f6d35ef4a81ad47ec19c9",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 1691.5,
   "py": 5530.7
  },
@@ -18354,7 +18678,7 @@
   "en": "Searing Dunes Watchtower",
   "fr": "Tour d'observation des Dunes Ardentes",
   "id": "marker:ft_cccd29e444ceb548d5b5e589daf086f2",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 6155.7,
   "py": 2147.9
  },
@@ -18386,7 +18710,7 @@
   "en": "Crescent Moon Shore Watchtower",
   "fr": "Tour d'observation de la Rive du Clair de Lune",
   "id": "marker:ft_d8c1a86541daca78b1250ab9b85b7e67",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4889.9,
   "py": 3090.4
  },
@@ -18434,7 +18758,7 @@
   "en": "Verdant Stream Watchtower",
   "fr": "Tour d'observation du Ruisseau Feuillu",
   "id": "marker:ft_dee0f8bb4609c83285ce6ca80b84b679",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 5515.5,
   "py": 2931.7
  },
@@ -18450,7 +18774,7 @@
   "en": "PAL Genetic Research Unit Tower Entrance",
   "fr": "Tour de l’Unité de Recherche Génétique - Entrée",
   "id": "marker:ft_e0819efb41581aeac3a029b0ee2fe195",
-  "mk": "ft",
+  "mk": "tower",
   "px": 4629.2,
   "py": 1469.6
  },
@@ -18466,7 +18790,7 @@
   "en": "Scorched Obsidian Watchtower",
   "fr": "Tour d'observation de la Terre Brûlée Noire",
   "id": "marker:ft_e8351df348b268672f0a219840c6be47",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 3781.9,
   "py": 4034.6
  },
@@ -18482,7 +18806,7 @@
   "en": "Icy Weasel Hill Watchtower",
   "fr": "Tour d'observation de la Colline des Belettes de Glace",
   "id": "marker:ft_e9fc08444bfe7e3ee6e06f84ac8688ec",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4887.6,
   "py": 2125.4
  },
@@ -18506,7 +18830,7 @@
   "en": "Bamboo Groves Watchtower",
   "fr": "Tour d'observation de la Vallée aux Bambous",
   "id": "marker:ft_ede1ab2c44b1846879bb789c3951b2f7",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4379.7,
   "py": 3621.8
  },
@@ -18554,7 +18878,7 @@
   "en": "Sakurajima Watchtower",
   "fr": "Tour d'observation de l'Île aux Cerisiers",
   "id": "marker:ft_f46296ff4274fedbf32dc5957835a18a",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 3503.4,
   "py": 2257.4
  },
@@ -18610,7 +18934,7 @@
   "en": "Sunreach Watchtower",
   "fr": "Tour d'observation des Terres Astrales",
   "id": "marker:ft_fd235a5b4f02cd76312a459d77398ca6",
-  "mk": "ft",
+  "mk": "watchtower",
   "px": 4231.4,
   "py": 6548.9
  },

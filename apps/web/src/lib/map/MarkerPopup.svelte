@@ -5,33 +5,27 @@
 	import { appHref } from '$lib/nav';
 	import type { ProgressStore } from '$lib/game/progress.svelte';
 	import type { MapMarker } from './markerController';
+	import { bossLabel, inGameCoords } from './coords';
+	import { CATEGORIES, categoryOf } from './categories';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
 	let { marker, store }: { marker: MapMarker; store: ProgressStore } = $props();
 
 	const checked = $derived(store.mine.has(marker.id));
-	/** Coordonnées in-game affichées comme dans le jeu. */
-	const coords = $derived([
-		Math.round((marker.px / 8192) * 2000 - 1000),
-		Math.round(1000 - (marker.py / 8192) * 2000)
-	]);
+	const coords = $derived(inGameCoords(marker.px, marker.py));
+	const trackable = $derived(CATEGORIES[categoryOf(marker)].trackable);
 </script>
 
 <div class="popup">
 	{#if marker.type === 'relic'}
 		<strong>{m.map_relic_name()}</strong>
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
-		<button class="sphere" class:on={checked} onclick={() => store.toggle(marker.id)} aria-pressed={checked}>
-			<span class="ball" aria-hidden="true"></span>
-			{m.map_found()}
-		</button>
-		<GroupAvatars users={store.group[marker.id] ?? []} />
-	{:else if marker.type === 'alpha'}
+	{:else if marker.type === 'alpha' || marker.type === 'boss'}
 		<strong class="alpha-name">
 			{#if marker.meta?.palId && palIcon(marker.meta.palId)}
 				<img src={palIcon(marker.meta.palId)} alt="" width="28" height="28" />
 			{/if}
-			{marker.meta?.palId ? gameName(`pal:${marker.meta.palId}`) : marker.id}
+			{marker.meta?.palId ? gameName(`pal:${marker.meta.palId}`) : bossLabel(marker.id)}
 		</strong>
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
@@ -39,8 +33,15 @@
 			<a href={appHref(`/paldex/${marker.meta.palId}`)} class="link">{m.map_view_pal()}</a>
 		{/if}
 	{:else}
-		<strong>{marker.nameId ? gameName(`ft:${marker.nameId}`) : m.map_filter_ft()}</strong>
+		<strong>{marker.nameId ? gameName(`ft:${marker.nameId}`) : m.map_cat_ft()}</strong>
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
+	{/if}
+	{#if trackable}
+		<button class="sphere" class:on={checked} onclick={() => store.toggle(marker.id)} aria-pressed={checked}>
+			<span class="ball" aria-hidden="true"></span>
+			{m.map_found()}
+		</button>
+		<GroupAvatars users={store.group[marker.id] ?? []} />
 	{/if}
 </div>
 

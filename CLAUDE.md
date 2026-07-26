@@ -22,6 +22,7 @@ pnpm --filter web db:migrate     # apply migrations (reads .env)
 
 pnpm --filter @palworld-companion/pipeline all      # regenerate all game-data JSON (after a game update)
 pnpm --filter @palworld-companion/pipeline verify   # validate generated game-data
+pnpm --filter @palworld-companion/pipeline markers:normalize   # reclasse markers.json + ids uniques (sans réextraction)
 ```
 
 Run a single test file: `pnpm --filter web test src/lib/game/breeding.test.ts`
@@ -63,3 +64,8 @@ Import correlation details (what lives in `RecordData` vs `SaveData`, effigy/bos
 - Client-only game logic (breeding, passives, team data, progress) lives in `apps/web/src/lib/game/`; `.svelte.ts` files there use Svelte 5 runes for reactive stores. Server-only logic is in `apps/web/src/lib/server/` (never import it into client code).
 - After editing `schema.ts`, run `db:generate` then `db:migrate`. Migrations live in `apps/web/drizzle/`.
 - Decisions and their rationale are logged chronologically in `docs/decisions.md`; deploy runbooks are the other `docs/*.md` files.
+- Les catégories de la carte sont portées par `type` dans `markers.json`
+  (`relic`, `alpha`, `boss`, `tower`, `watchtower`, `ft`) et classées dans
+  `packages/pipeline/src/transform/markers.lib.ts` — jamais côté web. Les ids
+  doivent rester uniques : `MarkerController` indexe par id et toute liste
+  Svelte keyée dessus casse sur un doublon.

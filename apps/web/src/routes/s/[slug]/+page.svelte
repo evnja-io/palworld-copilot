@@ -32,7 +32,7 @@
 		},
 		{
 			href: '/map',
-			title: m.map_filter_relic(),
+			title: m.map_title(),
 			icon: '/icons/items/Relic.webp',
 			mine: me.counts.marker,
 			group: data.group.marker,
@@ -95,7 +95,7 @@
 					<span class="stats tnum">
 						{m.import_kind_pal_caught({ count: mb.counts.pal_caught })}
 						· {m.import_kind_tech_unlocked({ count: mb.counts.tech_unlocked })}
-						· {m.home_member_relics({ count: mb.counts.marker })}
+						· {m.home_member_markers({ count: mb.counts.marker })}
 					</span>
 				</li>
 			{/each}

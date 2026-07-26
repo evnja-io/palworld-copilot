@@ -470,6 +470,84 @@ dossier au lieu de la cmap à `syncPlayerNames` depuis le changement de
 signature de la PR #9 : la sync des pseudos y échouait en silence). Les syncs
 pals/bases du chemin upload restent différées.
 
+## 2026-07-26 - Catégories de marqueurs et ids uniques
+
+**Constat** : `markers.json` mélangeait deux populations sous `alpha` (83
+spawners de Pals avec `palId`, 69 entrées à `palId: "None"`) et cachait les
+tours dans les points de voyage rapide - les 8 arènes de boss sont des `ft` dont
+le `nameId` est connu (`FTPoint45`, `Boss_Forest`, `SkyIsland_BOSS`, `FTPoint3`,
+`FTPoint9`, `FTPoint20`, `FTPoint67`, `FTPoint76`), et 20 autres sont des tours
+d'observation (`WatchTower_*`). Par ailleurs 33 des 69 entrées à `palId: "None"`
+étaient des **doublons exacts** : `DT_BossSpawnerLoactionData` contient chaque
+boss PNJ deux fois (même `SpawnerID`, même position, même niveau) - pas deux
+spawners à des emplacements différents comme on l'a d'abord cru. L'id étant
+dérivé du `SpawnerID`, 33 entrées portaient donc le même id que leur jumelle :
+`MarkerController` (indexé par id) les
+fusionnait déjà silencieusement, correctement pour cette donnée, mais tout
+`{#each}` Svelte keyé par id lève `each_key_duplicate` sur le même doublon.
+**Décisions** : (a) la classification vit dans le pipeline
+(`transform/markers.lib.ts`), `type` prend six valeurs : `relic`, `alpha`,
+`boss`, `tower`, `watchtower`, `ft` ; (b) deux entrées identiques en
+`(type, position, méta)` sont dédoublonnées (une seule conservée, sans
+suffixe) - le vrai boss n'existe qu'une fois côté jeu ; (c) un même id à deux
+positions réellement différentes reçoit toujours un suffixe `_2`, `_3` —
+déterministe (tri avant affectation) et idempotent, garantie conservée pour
+une collision qui n'existe pas aujourd'hui mais pourrait apparaître ; (d)
+comme les DataTables du jeu ne sont pas dans le dépôt, un script
+`pnpm --filter @palworld-companion/pipeline markers:normalize` répare le fichier
+commité sans réextraction ; (e) `verify.ts` échoue désormais sur un id dupliqué.
+**Conséquence** : `boss` passe de 69 à 36 entrées (69 brutes, 36 positions
+distinctes) et le total de `markers.json` de 447 à 414. Aucune migration de
+base : les entrées fusionnées sont toutes des boss PNJ, jamais cochés, absents
+de la table `progress`.
+**Limite connue de la clé de fusion** : elle ne comprend ni `id` ni `nameId`.
+Deux entités réellement distinctes du même `type` tombant sur le même pixel
+arrondi seraient donc fusionnées à tort, la première dans l'ordre de tri
+gagnant. Inoffensif aujourd'hui — aucune des 414 entrées ne partage de position
+avec une autre (la paire la plus proche est à 6,9 px, et un pixel arrondi vaut
+~18 cm de monde) — mais le risque se matérialiserait à une future
+régénération, sans qu'aucune borne de volumétrie ne le signale. Ajouter
+`nameId` (et `id` hors `boss`) à la clé refermerait la porte : à faire à la
+prochaine intervention sur le pipeline.
+
+## 2026-07-26 - Tous les marqueurs cochables
+
+**Constat** : seules les effigies étaient cochables (`REGISTRY.marker` limité aux
+ids `relic_*`), or la barre latérale répond à « que me reste-t-il ? » pour les
+alphas, les boss et les tours.
+**Décision** : élargir le kind `marker` existant à tous les ids de
+`markers.json` plutôt que créer un kind par catégorie. Pas de migration, pas de
+changement de schéma, les lignes `relic_*` restent valides, les deux fusions
+d'import (pipeline + revendication de GUID) restent inchangées, un seul
+`ProgressStore` et un seul aller-retour d'API. Les compteurs par catégorie se
+dérivent côté client (`countsByCategory`).
+**Conséquence** : la tuile carte du tableau de bord porte sur l'ensemble des
+marqueurs (414) et non plus sur les seules effigies. L'auto-remplissage depuis
+les saves (`FastTravelPointUnlockFlag`, `NormalBossDefeatFlag`,
+`TowerBossDefeatFlag`) reste à faire : le format de clé des drapeaux de boss n'est
+pas vérifié. `ResultList`/`CategoryRail` n'ont pas de test au niveau composant :
+il n'y a ni jsdom/happy-dom ni testing-library dans ce dépôt et en ajouter un
+sort du périmètre - ce comportement a été vérifié en navigateur à la place.
+
+## 2026-07-26 - Ce qu'une URL de carte a le droit d'écraser
+
+**Constat** : `/map?pal=<palId>` est un lien profond existant, généré depuis
+chaque fiche de Pal, et il préserve les filtres de l'utilisateur. En faisant de
+`pal` une clé de filtre parmi d'autres, la restauration depuis l'URL remettait
+toute la vue (catégories, niveau, élément, « masquer les faits », recherche) aux
+valeurs par défaut au simple clic sur « voir les zones ». Symétriquement, tester
+la *présence* des clés plutôt que leur validité laissait `?sel=` ou
+`?sel=licorne` écraser les préférences enregistrées.
+**Décision** : deux familles de clés. Les **clés de vue** (`sel`, `vis`, `lvl`,
+`el`, `todo`, `q`) décrivent une vue et seules elles autorisent l'URL à primer
+sur localStorage ; `pal` et `phase` n'en décrivent pas une. `fromSearchParams`
+rend `null` tant qu'aucune clé de vue n'a **validé** — la présence ne suffit pas.
+**Conséquence** : un lien ne portant que `?pal=&phase=` est ignoré par la
+restauration ; l'effet `?pal=` de la page relaie alors la phase partagée
+lui-même. Le payload localStorage est validé champ par champ au même titre que
+l'URL (un `visible` stocké en chaîne empoisonnait l'état et faisait lever
+`.join(",")`).
+
 ## Backlog / Évolutions
 
 - Multi-tenant phase 1 : rollout selon `docs/deploy-multi-tenant.md` ;

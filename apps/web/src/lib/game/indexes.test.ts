@@ -42,7 +42,7 @@ describe("index inversés", () => {
     // SheepBall (nom affiché « Lamball ») est un id valide sans spawner Alpha.
     expect(pals.some((p) => p.id === "SheepBall")).toBe(true);
     expect(markersByPal.get("SheepBall")).toBeUndefined();
-    // Les 69 spawners sans Pal résolu ne doivent pas créer d'entrée.
+    // Les spawners sans Pal résolu (boss PNJ) ne doivent pas créer d'entrée.
     expect(markersByPal.has("None")).toBe(false);
   });
 });

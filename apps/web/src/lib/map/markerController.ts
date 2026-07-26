@@ -6,7 +6,7 @@ import { palIcon } from "$lib/game/icons";
 
 export type MapMarker = {
   id: string;
-  type: "relic" | "alpha" | "ft";
+  type: "relic" | "alpha" | "boss" | "tower" | "watchtower" | "ft";
   px: number;
   py: number;
   nameId?: string;
@@ -15,12 +15,20 @@ export type MapMarker = {
 
 export type MarkerClickHandler = (marker: MapMarker, leafletMarker: L.Marker) => void;
 
-const GLYPH: Record<MapMarker["type"], string> = { relic: "✦", alpha: "▲", ft: "◆" };
+const GLYPH: Record<MapMarker["type"], string> = {
+  relic: "✦",
+  alpha: "▲",
+  boss: "☠",
+  tower: "⌂",
+  watchtower: "⌖",
+  ft: "◆",
+};
 
-/** HTML du divIcon. Les Alpha portent le portrait de leur Pal ; les spawners
- *  sans Pal résolu (palId « None ») et les icônes absentes gardent le glyphe. */
+/** HTML du divIcon. Les Alpha portent le portrait de leur Pal ; les boss PNJ et
+ *  les icônes absentes gardent le glyphe. */
 export function markerHtml(mk: MapMarker, checked: boolean): string {
-  const level = mk.type === "alpha" && mk.meta?.level ? `<i>${mk.meta.level}</i>` : "";
+  const hasLevel = mk.type === "alpha" || mk.type === "boss";
+  const level = hasLevel && mk.meta?.level ? `<i>${mk.meta.level}</i>` : "";
   const icon = mk.type === "alpha" && mk.meta?.palId ? palIcon(mk.meta.palId) : undefined;
   const body = icon ? `<img src="${icon}" alt="" width="18" height="18" />` : GLYPH[mk.type];
   const cls = `mk mk-${mk.type}${icon ? " mk-pal" : ""}${checked ? " mk-checked" : ""}`;

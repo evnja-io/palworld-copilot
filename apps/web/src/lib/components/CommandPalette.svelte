@@ -39,7 +39,14 @@
 		tech: '🔬',
 		building: '🏗️'
 	};
-	const MK_GLYPH: Record<string, string> = { relic: '✦', alpha: '▲', ft: '◆' };
+	const MK_GLYPH: Record<string, string> = {
+		relic: '✦',
+		alpha: '▲',
+		boss: '☠',
+		tower: '⌂',
+		watchtower: '⌖',
+		ft: '◆'
+	};
 
 	let open = $state(false);
 	let text = $state('');
@@ -322,10 +329,10 @@
 											<span class="check" class:on={checked.has(rawId(e))} aria-hidden="true">
 												{checked.has(rawId(e)) ? '✓' : '○'}
 											</span>
-										{:else if e.mk === 'alpha' && e.lvl}
+										{:else if (e.mk === 'alpha' || e.mk === 'boss') && e.lvl}
 											<span class="muted tnum">{m.map_level({ level: e.lvl })}</span>
-										{:else if e.mk === 'ft'}
-											<span class="muted">{MARKER_LABELS.ft[locale]}</span>
+										{:else if e.mk === 'ft' || e.mk === 'tower' || e.mk === 'watchtower'}
+											<span class="muted">{MARKER_LABELS[e.mk][locale]}</span>
 										{/if}
 										{#if entryNs(e) === 'skill'}
 											{#if e.pw}<span class="muted tnum">💥 {e.pw}</span>{/if}

@@ -26,6 +26,19 @@ if (tech.length < 100) fail(`tech: ${tech.length}`);
 if (buildings.length < 100) fail(`buildings: ${buildings.length}`);
 const markers = load("markers.json");
 if (markers.length < 400) fail(`markers: ${markers.length}`);
+// Unicité des ids : MarkerController indexe par id et toute liste keyée côté web
+// lève each_key_duplicate sur un doublon (33 doublons constatés le 2026-07-26).
+{
+  const ids = new Set<string>();
+  const dups = (markers as Array<{ id: string }>).filter((mk) => !ids.has(mk.id) ? (ids.add(mk.id), false) : true);
+  if (dups.length) fail(`markers: ${dups.length} ids dupliqués (ex. ${dups[0].id})`);
+  const byType = (markers as Array<{ type: string }>).reduce<Record<string, number>>((acc, mk) => {
+    acc[mk.type] = (acc[mk.type] ?? 0) + 1;
+    return acc;
+  }, {});
+  if (byType.tower !== 8) fail(`markers: ${byType.tower} tours (attendu 8)`);
+  if (!byType.boss) fail("markers: aucun boss PNJ - classification perdue ?");
+}
 
 // Zones de spawn : couverture, ids connus, coordonnées dans la texture.
 const spawnsIndex = load("spawns-index.json") as Record<string, { day: number; night: number }>;

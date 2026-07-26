@@ -472,662 +472,299 @@
  {
   "id": "alpha_BOSS_Believer_CrossBow",
   "meta": {
-   "level": 23,
-   "palId": "None"
+   "level": 23
   },
   "px": 4958,
   "py": 2903.5,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Believer_CrossBow",
-  "meta": {
-   "level": 23,
-   "palId": "None"
-  },
-  "px": 4958,
-  "py": 2903.5,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Believer_Fat_GiantClub",
   "meta": {
-   "level": 30,
-   "palId": "None"
+   "level": 30
   },
   "px": 5184.6,
   "py": 2425.7,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Believer_Fat_GiantClub",
-  "meta": {
-   "level": 30,
-   "palId": "None"
-  },
-  "px": 5184.6,
-  "py": 2425.7,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_DarkTrader",
   "meta": {
-   "level": 59,
-   "palId": "None"
+   "level": 59
   },
   "px": 1780,
   "py": 5742.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_DarkTrader",
-  "meta": {
-   "level": 59,
-   "palId": "None"
-  },
-  "px": 1780,
-  "py": 5742.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_DesertPeople",
   "meta": {
-   "level": 37,
-   "palId": "None"
+   "level": 37
   },
   "px": 6059.2,
   "py": 1144.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_DesertPeople",
-  "meta": {
-   "level": 37,
-   "palId": "None"
-  },
-  "px": 6059.2,
-  "py": 1144.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_People",
   "meta": {
-   "level": 38,
-   "palId": "None"
+   "level": 38
   },
   "px": 3640.1,
   "py": 4635,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_People",
-  "meta": {
-   "level": 38,
-   "palId": "None"
-  },
-  "px": 3640.1,
-  "py": 4635,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_People02",
   "meta": {
-   "level": 16,
-   "palId": "None"
+   "level": 16
   },
   "px": 4298,
   "py": 3696.5,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_People02",
-  "meta": {
-   "level": 16,
-   "palId": "None"
-  },
-  "px": 4298,
-  "py": 3696.5,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_People03",
   "meta": {
-   "level": 15,
-   "palId": "None"
+   "level": 15
   },
   "px": 4984.3,
   "py": 3676.3,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_People03",
-  "meta": {
-   "level": 15,
-   "palId": "None"
-  },
-  "px": 4984.3,
-  "py": 3676.3,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_Soldier",
   "meta": {
-   "level": 19,
-   "palId": "None"
+   "level": 19
   },
   "px": 4151.8,
   "py": 2978.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier",
-  "meta": {
-   "level": 19,
-   "palId": "None"
-  },
-  "px": 4151.8,
-  "py": 2978.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_Soldier02",
   "meta": {
-   "level": 56,
-   "palId": "None"
+   "level": 56
   },
   "px": 2796.9,
   "py": 5998.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier02",
-  "meta": {
-   "level": 56,
-   "palId": "None"
-  },
-  "px": 2796.9,
-  "py": 5998.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_Soldier03",
   "meta": {
-   "level": 39,
-   "palId": "None"
+   "level": 39
   },
   "px": 3453.1,
   "py": 3284.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier03",
-  "meta": {
-   "level": 39,
-   "palId": "None"
-  },
-  "px": 3453.1,
-  "py": 3284.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Female_Soldier04",
   "meta": {
-   "level": 52,
-   "palId": "None"
+   "level": 52
   },
   "px": 3631.1,
   "py": 2404.2,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier04",
-  "meta": {
-   "level": 52,
-   "palId": "None"
-  },
-  "px": 3631.1,
-  "py": 2404.2,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_FireCult_FlameThrower",
   "meta": {
-   "level": 41,
-   "palId": "None"
+   "level": 41
   },
   "px": 3867.8,
   "py": 3849.9,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_FireCult_FlameThrower",
-  "meta": {
-   "level": 41,
-   "palId": "None"
-  },
-  "px": 3867.8,
-  "py": 3849.9,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Hunter_Fat_GatlingGun",
   "meta": {
-   "level": 20,
-   "palId": "None"
+   "level": 20
   },
   "px": 4300.7,
   "py": 3345.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Hunter_Fat_GatlingGun",
-  "meta": {
-   "level": 20,
-   "palId": "None"
-  },
-  "px": 4300.7,
-  "py": 3345.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Hunter_Rifle",
   "meta": {
-   "level": 12,
-   "palId": "None"
+   "level": 12
   },
   "px": 5122.8,
   "py": 4005.3,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Hunter_Rifle",
-  "meta": {
-   "level": 12,
-   "palId": "None"
-  },
-  "px": 5122.8,
-  "py": 4005.3,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_DesertPeople",
   "meta": {
-   "level": 36,
-   "palId": "None"
+   "level": 36
   },
   "px": 6369.7,
   "py": 2329.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_DesertPeople",
-  "meta": {
-   "level": 36,
-   "palId": "None"
-  },
-  "px": 6369.7,
-  "py": 2329.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_NinjaElite",
   "meta": {
-   "level": 53,
-   "palId": "None"
+   "level": 53
   },
   "px": 3240.7,
   "py": 2078.6,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_NinjaElite",
-  "meta": {
-   "level": 53,
-   "palId": "None"
-  },
-  "px": 3240.7,
-  "py": 2078.6,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_People",
   "meta": {
-   "level": 26,
-   "palId": "None"
+   "level": 26
   },
   "px": 5894,
   "py": 2691.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_People",
-  "meta": {
-   "level": 26,
-   "palId": "None"
-  },
-  "px": 5894,
-  "py": 2691.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_People02",
   "meta": {
-   "level": 43,
-   "palId": "None"
+   "level": 43
   },
   "px": 4482.7,
   "py": 1427.4,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_People02",
-  "meta": {
-   "level": 43,
-   "palId": "None"
-  },
-  "px": 4482.7,
-  "py": 1427.4,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_People03",
   "meta": {
-   "level": 10,
-   "palId": "None"
+   "level": 10
   },
   "px": 4936.1,
   "py": 3872.4,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_People03",
-  "meta": {
-   "level": 10,
-   "palId": "None"
-  },
-  "px": 4936.1,
-  "py": 3872.4,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_People2",
   "meta": {
-   "level": 26,
-   "palId": "None"
+   "level": 26
   },
   "px": 5893,
   "py": 2680.8,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_People2",
-  "meta": {
-   "level": 26,
-   "palId": "None"
-  },
-  "px": 5893,
-  "py": 2680.8,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Soldier",
   "meta": {
-   "level": 15,
-   "palId": "None"
+   "level": 15
   },
   "px": 4236.3,
   "py": 4289.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier",
-  "meta": {
-   "level": 15,
-   "palId": "None"
-  },
-  "px": 4236.3,
-  "py": 4289.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Soldier02",
   "meta": {
-   "level": 23,
-   "palId": "None"
+   "level": 23
   },
   "px": 5664.9,
   "py": 3242.2,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier02",
-  "meta": {
-   "level": 23,
-   "palId": "None"
-  },
-  "px": 5664.9,
-  "py": 3242.2,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Soldier03",
   "meta": {
-   "level": 49,
-   "palId": "None"
+   "level": 49
   },
   "px": 4048.9,
   "py": 1852.5,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier03",
-  "meta": {
-   "level": 49,
-   "palId": "None"
-  },
-  "px": 4048.9,
-  "py": 1852.5,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Soldier04",
   "meta": {
-   "level": 21,
-   "palId": "None"
+   "level": 21
   },
   "px": 4814.1,
   "py": 3202.6,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier04",
-  "meta": {
-   "level": 21,
-   "palId": "None"
-  },
-  "px": 4814.1,
-  "py": 3202.6,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Trader01",
   "meta": {
-   "level": 42,
-   "palId": "None"
+   "level": 42
   },
   "px": 4753.8,
   "py": 2301.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Trader01",
-  "meta": {
-   "level": 42,
-   "palId": "None"
-  },
-  "px": 4753.8,
-  "py": 2301.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Trader02",
   "meta": {
-   "level": 57,
-   "palId": "None"
+   "level": 57
   },
   "px": 1894.3,
   "py": 7102.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Trader02",
-  "meta": {
-   "level": 57,
-   "palId": "None"
-  },
-  "px": 1894.3,
-  "py": 7102.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Male_Trader03",
   "meta": {
-   "level": 57,
-   "palId": "None"
+   "level": 57
   },
   "px": 2188.4,
   "py": 5020.2,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Male_Trader03",
-  "meta": {
-   "level": 57,
-   "palId": "None"
-  },
-  "px": 2188.4,
-  "py": 5020.2,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Ninja",
   "meta": {
-   "level": 28,
-   "palId": "None"
+   "level": 28
   },
   "px": 5409.7,
   "py": 2680.1,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Ninja",
-  "meta": {
-   "level": 28,
-   "palId": "None"
-  },
-  "px": 5409.7,
-  "py": 2680.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Police_Old",
   "meta": {
-   "level": 57,
-   "palId": "None"
+   "level": 57
   },
   "px": 1947.8,
   "py": 5854.7,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Police_Old",
-  "meta": {
-   "level": 57,
-   "palId": "None"
-  },
-  "px": 1947.8,
-  "py": 5854.7,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Police_Rifle",
   "meta": {
-   "level": 40,
-   "palId": "None"
+   "level": 40
   },
   "px": 5819.1,
   "py": 1716.6,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Police_Rifle",
-  "meta": {
-   "level": 40,
-   "palId": "None"
-  },
-  "px": 5819.1,
-  "py": 1716.6,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Scientist_LaserRifle",
   "meta": {
-   "level": 45,
-   "palId": "None"
+   "level": 45
   },
   "px": 4964.9,
   "py": 1918.3,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Scientist_LaserRifle",
-  "meta": {
-   "level": 45,
-   "palId": "None"
-  },
-  "px": 4964.9,
-  "py": 1918.3,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_Viking",
   "meta": {
-   "level": 57,
-   "palId": "None"
+   "level": 57
   },
   "px": 3069.8,
   "py": 5276.4,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_Viking",
-  "meta": {
-   "level": 57,
-   "palId": "None"
-  },
-  "px": 3069.8,
-  "py": 5276.4,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_BOSS_VikingElite",
   "meta": {
-   "level": 58,
-   "palId": "None"
+   "level": 58
   },
   "px": 1392.9,
   "py": 6525.6,
-  "type": "alpha"
- },
- {
-  "id": "alpha_BOSS_VikingElite",
-  "meta": {
-   "level": 58,
-   "palId": "None"
-  },
-  "px": 1392.9,
-  "py": 6525.6,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_desertisland_1_FBOSS",
@@ -1152,32 +789,29 @@
  {
   "id": "alpha_REGION_Oilrig_1",
   "meta": {
-   "level": 55,
-   "palId": "None"
+   "level": 55
   },
   "px": 6496.9,
   "py": 3791.1,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_REGION_Oilrig_2",
   "meta": {
-   "level": 30,
-   "palId": "None"
+   "level": 30
   },
   "px": 5408.5,
   "py": 3392.2,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_REGION_Oilrig_3",
   "meta": {
-   "level": 60,
-   "palId": "None"
+   "level": 60
   },
   "px": 501.6,
   "py": 6438.4,
-  "type": "alpha"
+  "type": "boss"
  },
  {
   "id": "alpha_remainsIsland_1_GrassGolem_FBOSS",
@@ -1545,7 +1179,7 @@
   "nameId": "WatchTower_11",
   "px": 4177.3,
   "py": 3075.2,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_0ebf6f3d441aca707517b9b7baa6590d",
@@ -1566,7 +1200,7 @@
   "nameId": "WatchTower_1",
   "px": 4952.9,
   "py": 3942.4,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_15314be94e2fb8d018d5749be9a318f0",
@@ -1720,7 +1354,7 @@
   "nameId": "WatchTower_17",
   "px": 2495.1,
   "py": 6164,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_33a82fd24431633f5738f8ae02ffac42",
@@ -1769,7 +1403,7 @@
   "nameId": "WatchTower_15",
   "px": 3195.4,
   "py": 4465.6,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_3e8e504b4a3975fd3862e1bc85a5d4f6",
@@ -1818,14 +1452,14 @@
   "nameId": "WatchTower_21",
   "px": 2342.6,
   "py": 5561.3,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_49c3516d459f15c70abee88cd7f4d331",
   "nameId": "FTPoint67",
   "px": 3427.4,
   "py": 2120.2,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_4c1930b54689c3825400f6b3954fc07b",
@@ -1839,7 +1473,7 @@
   "nameId": "WatchTower_10",
   "px": 4554.3,
   "py": 4396.1,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_4ccf456a440c6cd5f2347aaa3e163f21",
@@ -1902,7 +1536,7 @@
   "nameId": "WatchTower_2",
   "px": 6317.5,
   "py": 3063.1,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_596996b948716d3fd2283c8b5c6e829c",
@@ -1916,7 +1550,7 @@
   "nameId": "FTPoint3",
   "px": 3446.7,
   "py": 4053.4,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_59aabd184966fe16e9ba8ea0bd0efded",
@@ -1937,14 +1571,14 @@
   "nameId": "WatchTower_20",
   "px": 2092,
   "py": 6409.8,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_603ed0cd4cfb9afdc9e11f805594cce5",
   "nameId": "FTPoint45",
   "px": 5294.4,
   "py": 3771.3,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_618f02c546f191912d42398685a2bba2",
@@ -1972,14 +1606,14 @@
   "nameId": "FTPoint9",
   "px": 6395,
   "py": 1807.7,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_6948b7914c8d1701db7f4081e4d970e5",
   "nameId": "WatchTower_18",
   "px": 2916.8,
   "py": 5521.5,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_69a3b9e64018ba4c158bdda7cd713463",
@@ -2119,7 +1753,7 @@
   "nameId": "WatchTower_8",
   "px": 4216.3,
   "py": 1523.3,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_866881db443444aa7f4e7c8e5dcdaa29",
@@ -2133,7 +1767,7 @@
   "nameId": "WatchTower_5",
   "px": 5828.3,
   "py": 1493,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_8c1ee640439f980ea6ba3d9b256d4fad",
@@ -2182,7 +1816,7 @@
   "nameId": "FTPoint76",
   "px": 1649.3,
   "py": 6993.3,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_979bf2044c8e8fe559b598a95a83ede3",
@@ -2231,7 +1865,7 @@
   "nameId": "Boss_Forest",
   "px": 5076.5,
   "py": 3474.4,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_acae5fb04d48de4197443e9c0993086b",
@@ -2245,7 +1879,7 @@
   "nameId": "SkyIsland_BOSS",
   "px": 3866.8,
   "py": 6368.5,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_aecfed0d41afee11f30b4f9687bc3243",
@@ -2357,7 +1991,7 @@
   "nameId": "WatchTower_19",
   "px": 1691.5,
   "py": 5530.7,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_c6a854194e8af1b5cef381a1a276cb92",
@@ -2392,7 +2026,7 @@
   "nameId": "WatchTower_4",
   "px": 6155.7,
   "py": 2147.9,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_cd9fe0d4490874187ed9919d0e4d2a09",
@@ -2420,7 +2054,7 @@
   "nameId": "WatchTower_3",
   "px": 4889.9,
   "py": 3090.4,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_dc0ecf9241b4410c59ee619f56d1106a",
@@ -2462,7 +2096,7 @@
   "nameId": "WatchTower_6",
   "px": 5515.5,
   "py": 2931.7,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_df9fb9cb41b43052a9c74fa79a826a50",
@@ -2476,7 +2110,7 @@
   "nameId": "FTPoint20",
   "px": 4629.2,
   "py": 1469.6,
-  "type": "ft"
+  "type": "tower"
  },
  {
   "id": "ft_e74d687d4caaf5ea085e0b8a76f8b652",
@@ -2490,7 +2124,7 @@
   "nameId": "WatchTower_13",
   "px": 3781.9,
   "py": 4034.6,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_e8a85ff544c205e1b04f7e93109b8197",
@@ -2504,7 +2138,7 @@
   "nameId": "WatchTower_7",
   "px": 4887.6,
   "py": 2125.4,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_ec4896f44c4c9bd993dae2b2c1f31bba",
@@ -2525,7 +2159,7 @@
   "nameId": "WatchTower_9",
   "px": 4379.7,
   "py": 3621.8,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_f1a1ab834e138b2a938d0aa90e9a65e3",
@@ -2567,7 +2201,7 @@
   "nameId": "WatchTower_12",
   "px": 3503.4,
   "py": 2257.4,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "ft_f6afbcda4d7af6c373407dbc8556fbae",
@@ -2616,7 +2250,7 @@
   "nameId": "WatchTower_22",
   "px": 4231.4,
   "py": 6548.9,
-  "type": "ft"
+  "type": "watchtower"
  },
  {
   "id": "relic_013ff2fc4ddccc22c290a09264f499bc",
