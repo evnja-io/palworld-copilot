@@ -212,15 +212,25 @@ export function extractBaseData(
 
     // Module WorkerDirector : premier module dont la clé contient
     // "WorkerDirector" OU dont le RawData porte un container_id.
-    const modules = entry?.value?.ModuleMap?.value;
-    let containerId: string | null = null;
-    for (const mod of Array.isArray(modules) ? modules : []) {
-      const keyRaw = unwrap(mod?.key);
-      const key = typeof keyRaw === "string" ? keyRaw : "";
-      const cid = guidField(mod?.value?.RawData?.value?.container_id);
-      if (/workerdirector/i.test(key) || cid !== null) {
-        containerId = cid;
-        break;
+    // WorkerDirector : propriété DIRECTE du camp dans l'enveloppe réelle
+    // (validé sur l'import du 2026-07-26 : les 11 bases tombaient en
+    // basesWithoutDirector avec la seule hypothèse ModuleMap). Chemin réel :
+    // entry.value.WorkerDirector.value.RawData.value.container_id (cf.
+    // enregistrement du parseur .BaseCampSaveData.Value.WorkerDirector.RawData).
+    // Le balayage de ModuleMap est conservé en repli défensif.
+    let containerId: string | null = guidField(
+      (entry as any)?.value?.WorkerDirector?.value?.RawData?.value?.container_id,
+    );
+    if (containerId === null) {
+      const modules = entry?.value?.ModuleMap?.value;
+      for (const mod of Array.isArray(modules) ? modules : []) {
+        const keyRaw = unwrap(mod?.key);
+        const key = typeof keyRaw === "string" ? keyRaw : "";
+        const cid = guidField(mod?.value?.RawData?.value?.container_id);
+        if (/workerdirector/i.test(key) || cid !== null) {
+          containerId = cid;
+          break;
+        }
       }
     }
     if (containerId === null) {

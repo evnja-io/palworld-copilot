@@ -101,6 +101,7 @@ type BaseOpts = {
   areaRange?: unknown;
   modules?: unknown[] | null; // null -> pas de ModuleMap ; défaut WorkerDirector
   containerId?: string;
+  directorDirect?: string; // WorkerDirector en propriété directe (enveloppe réelle)
 };
 
 function baseEntry(opts: BaseOpts = {}) {
@@ -117,6 +118,9 @@ function baseEntry(opts: BaseOpts = {}) {
           return r;
         })();
   const value: Record<string, unknown> = { RawData: { value: raw } };
+  if (opts.directorDirect !== undefined) {
+    value.WorkerDirector = { value: { RawData: { value: { container_id: opts.directorDirect } } } };
+  }
   if (opts.modules !== null) {
     value.ModuleMap = {
       value: opts.modules ?? [
@@ -281,6 +285,34 @@ describe("extractBaseData", () => {
     expect(bases.map((b) => b.slotCount)).toEqual([null, null]);
     expect(assignments).toHaveLength(0);
     expect(stats.basesWithoutDirector).toBe(2);
+  });
+
+  it("lit WorkerDirector en propriété directe du camp (enveloppe réelle du 2026-07-26)", () => {
+    // Sur save réelle, WorkerDirector n'est PAS un module de ModuleMap mais une
+    // propriété sœur de RawData (les 11 bases de l'import de validation
+    // tombaient toutes en basesWithoutDirector avec la seule hypothèse module).
+    const { bases, assignments, stats } = extractBaseData(
+      [groupEntry()],
+      [
+        baseEntry({ modules: null, directorDirect: CONT1 }), // sans ModuleMap
+        baseEntry({
+          id: BASE2,
+          directorDirect: CONT2,
+          // ModuleMap présent mais inutile : la propriété directe doit primer
+          modules: [{ key: "EPalBaseCampModuleType::PassiveEffect", value: { RawData: { value: {} } } }],
+        }),
+      ],
+      [
+        containerEntry({ key: { ID: { value: CONT1 } }, slots: [slot(PAL1), slot(ZERO)] }),
+        containerEntry({ key: { ID: { value: CONT2 } }, slots: [slot(PAL2)] }),
+      ],
+    );
+    expect(stats.basesWithoutDirector).toBe(0);
+    expect(bases.map((b) => b.slotCount)).toEqual([2, 1]);
+    expect(assignments.map((a) => [a.baseId, a.instanceId])).toEqual([
+      [BASE1_NORM, PAL1_NORM],
+      [BASE2_NORM, PAL2_NORM],
+    ]);
   });
 
   it("compte un container_id sans entrée CharacterContainerSaveData (stat missingContainers)", () => {
