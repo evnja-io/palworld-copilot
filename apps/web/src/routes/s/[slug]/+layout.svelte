@@ -53,7 +53,13 @@
 
 <style>
 	.shell {
-		min-height: 100dvh;
+		/* Hauteur ferme (pas juste un plancher) : la barre latérale de la carte a
+		   besoin d'une chaîne de hauteurs définies (main.fullscreen -> .map-wrap
+		   -> .sidebar -> .res) pour que sa liste défile en interne au lieu de
+		   pousser toute la page. Sans changement pour les pages normales : rien
+		   ne coupe leur contenu, qui continue de dépasser et de faire défiler
+		   le document comme avant. */
+		height: 100dvh;
 		display: flex;
 		flex-direction: column;
 	}
