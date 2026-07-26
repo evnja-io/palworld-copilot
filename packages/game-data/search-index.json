@@ -17613,8 +17613,8 @@
   "py": 4520.4
  },
  {
-  "en": "alpha REGION Oilrig 1",
-  "fr": "alpha REGION Oilrig 1",
+  "en": "REGION Oilrig 1",
+  "fr": "REGION Oilrig 1",
   "id": "marker:alpha_REGION_Oilrig_1",
   "lvl": 55,
   "mk": "boss",
@@ -17622,8 +17622,8 @@
   "py": 3791.1
  },
  {
-  "en": "alpha REGION Oilrig 2",
-  "fr": "alpha REGION Oilrig 2",
+  "en": "REGION Oilrig 2",
+  "fr": "REGION Oilrig 2",
   "id": "marker:alpha_REGION_Oilrig_2",
   "lvl": 30,
   "mk": "boss",
@@ -17631,8 +17631,8 @@
   "py": 3392.2
  },
  {
-  "en": "alpha REGION Oilrig 3",
-  "fr": "alpha REGION Oilrig 3",
+  "en": "REGION Oilrig 3",
+  "fr": "REGION Oilrig 3",
   "id": "marker:alpha_REGION_Oilrig_3",
   "lvl": 60,
   "mk": "boss",

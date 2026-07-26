@@ -33,7 +33,7 @@
 			{/if}
 			{marker.meta?.palId
 				? gameName(`pal:${marker.meta.palId}`)
-				: marker.id.replace(/^alpha_BOSS_/i, '').replaceAll('_', ' ')}
+				: marker.id.replace(/^alpha_(?:BOSS_)?/i, '').replaceAll('_', ' ')}
 		</strong>
 		{#if marker.meta?.level}<span class="level tnum">{m.map_level({ level: marker.meta.level })}</span>{/if}
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>

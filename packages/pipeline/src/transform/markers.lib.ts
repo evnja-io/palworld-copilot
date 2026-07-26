@@ -52,7 +52,14 @@ export function classifyBossSpawner(palId: string | undefined): "alpha" | "boss"
 
 function reclassify(mk: Marker): Marker {
   if (mk.type === "alpha" || mk.type === "boss") {
-    return { ...mk, type: classifyBossSpawner(mk.meta?.palId) };
+    const type = classifyBossSpawner(mk.meta?.palId);
+    // « None » est un sentinelle de DataTable, pas un id de Pal : le laisser
+    // fuiter donnerait un nom « None » et un lien /paldex/None en 404 côté web.
+    if (type === "boss" && mk.meta?.palId) {
+      const { palId: _drop, ...meta } = mk.meta;
+      return { ...mk, type, meta };
+    }
+    return { ...mk, type };
   }
   if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {
     return { ...mk, type: classifyFt(mk.nameId) };

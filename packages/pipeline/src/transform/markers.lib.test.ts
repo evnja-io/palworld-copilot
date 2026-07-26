@@ -80,6 +80,21 @@ describe("normalizeMarkers", () => {
     expect(out.find((m) => m.id === "alpha_2")!.type).toBe("boss");
   });
 
+  it("retire le sentinelle palId=None d'un boss et garde son niveau", () => {
+    const out = normalizeMarkers([mk("alpha_3", "alpha", { meta: { palId: "None", level: 23 } })]);
+    const boss = out.find((m) => m.id === "alpha_3")!;
+    expect(boss.type).toBe("boss");
+    expect(boss.meta?.palId).toBeUndefined();
+    expect(boss.meta?.level).toBe(23);
+  });
+
+  it("reste idempotent une fois le sentinelle palId retiré", () => {
+    const once = normalizeMarkers([mk("alpha_4", "alpha", { meta: { palId: "None", level: 10 } })]);
+    const twice = normalizeMarkers(once);
+    expect(twice).toEqual(once);
+    expect(twice.find((m) => m.id === "alpha_4")!.type).toBe("boss");
+  });
+
   it("reclasse les points de voyage rapide en tours", () => {
     const out = normalizeMarkers([
       mk("ft_a", "ft", { nameId: "FTPoint45" }),

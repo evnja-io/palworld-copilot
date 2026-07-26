@@ -87,7 +87,7 @@ for (const mk of load("markers.json")) {
     index.push({ ...base, ...n, lvl: mk.meta.level, pal: mk.meta.palId });
   } else if (mk.type === "boss") {
     // Les boss humains n'ont pas d'entrée L10N : nom dérivé du SpawnerID.
-    const label = mk.id.replace(/^alpha_BOSS_/i, "").replaceAll("_", " ").trim();
+    const label = mk.id.replace(/^alpha_(?:BOSS_)?/i, "").replaceAll("_", " ").trim();
     index.push({ ...base, fr: label, en: label, lvl: mk.meta?.level });
   } else if (mk.type === "ft" || mk.type === "tower" || mk.type === "watchtower") {
     const n = mk.nameId ? names(`ft:${mk.nameId}`) : null;
