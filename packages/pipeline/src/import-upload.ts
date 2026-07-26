@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import { del, list } from "@vercel/blob";
 import { neon, type NeonQueryFunction } from "@neondatabase/serverless";
 import { computeExitCode } from "./import-all.ts";
-import { importPlayerSaves, syncPlayerNames } from "./import-lib.ts";
+import { importPlayerSaves, loadLevelCmap, syncPlayerNames } from "./import-lib.ts";
 
 type Sql = NeonQueryFunction<false, false>;
 
@@ -125,7 +125,7 @@ export async function processUpload(sql: Sql, uploadId: string, serverId: string
     // absent/inattendu ne doit pas invalider un import par ailleurs réussi.
     let players = 0;
     try {
-      const syncResult = await syncPlayerNames(sql, serverId, dest);
+      const syncResult = await syncPlayerNames(sql, serverId, loadLevelCmap(dest));
       players = syncResult.players;
     } catch (syncErr) {
       const syncMessage = syncErr instanceof Error ? syncErr.message : String(syncErr);

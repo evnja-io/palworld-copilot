@@ -18,6 +18,7 @@
     "import-upload": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-upload.ts",
     "extract-players": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-players.ts",
     "extract-pals": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-pals.ts",
+    "extract-bases": "node --env-file=../../apps/web/.env --experimental-strip-types src/extract-bases.ts",
     "tiles": "tsx --env-file=../../apps/web/.env src/tile-map.ts",
     "fetch-community": "tsx src/fetch-community.ts"
   },

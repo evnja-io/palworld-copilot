@@ -430,6 +430,46 @@ mobile restait à 3 rangées. Libellé complet conservé en `aria-label`.
 Discord indisponible). À revérifier : débordement de nav à 1280 px, sélecteur de
 serveur, import et déconnexion dans le menu utilitaire.
 
+## 2026-07-25 - Orchestration des bases : guildes, affectations et offre/demande
+
+**Extraction** : trois nouvelles sections de Level.sav (même conversion palsav
+unique, cf. `loadLevelSections`) : `GroupSaveDataMap` (guildes : nom, niveau de
+camp, admin, membres avec pseudo et last_online), `BaseCampSaveData` (camps :
+coordonnées monde, `group_id_belong_to`) et `CharacterContainerSaveData`. La
+chaîne d'affectation est : camp -> module `WorkerDirector.container_id` ->
+slots du conteneur -> `instance_id` (= PK de `save_pals`). Les slots vides
+(GUID nul) donnent la capacité de travailleurs (`slot_count`). Le champ
+`base_ids` des guildes n'est pas utilisé : `group_id_belong_to` suffit (une
+enveloppe de moins à faire confiance).
+
+**Garde anti-wipe** : `syncBaseData` jette si zéro guilde extraite (Palworld
+crée une guilde par joueur, donc zéro sur un serveur peuplé = enveloppe
+malformée, jamais un état légitime) ; `bases`/`affectations` peuvent être
+légitimement vides. Une RawData non décodée par le fork (sérialisée
+`{ values: [octets] }`) est rejetée explicitement : sans ce rejet, des guildes
+creuses passeraient le garde et videraient les tables en silence. Les membres
+sont dédupliqués côté extraction (doublons de `players[]` = anomalie de save
+connue) : la PK de `save_guild_members` ferait sinon échouer toute la
+transaction.
+
+**`base_demands`** : profil de demande MANUEL par base (poids 0..3 par type de
+travail), config utilisateur et non donnée de save : pas de FK vers
+`save_bases` (le remplacement idempotent de l'import ne doit jamais cascader
+dans la config), jamais touché par les syncs. La demande automatique depuis
+les constructions posées (MapObjectSaveData + mapping mapObjectId -> travaux)
+est différée.
+
+**Moteur** (`basework.ts`) : puissance effective = aptitude x
+(1 + somme CraftSpeed/100) (ranch : rang inné + AddRank, choix conservateur) ;
+cible par travail = poids x `UNIT_SUPPLY` (3, heuristique documentée) ;
+recommandations gloutonnes déterministes (ajouts puis échanges par perte
+marginale pondérée).
+
+**Au passage** : correctif du chemin upload (`import-upload.ts` passait le
+dossier au lieu de la cmap à `syncPlayerNames` depuis le changement de
+signature de la PR #9 : la sync des pseudos y échouait en silence). Les syncs
+pals/bases du chemin upload restent différées.
+
 ## 2026-07-26 - Catégories de marqueurs et ids uniques
 
 **Constat** : `markers.json` mélangeait deux populations sous `alpha` (83
