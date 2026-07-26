@@ -191,5 +191,10 @@
 			position: absolute;
 			inset: -16px;
 		}
+		.row {
+			/* Cible tactile principale de la feuille (centre la carte sur le
+			   marqueur) : 34px de base est sous le plancher de 44px. */
+			min-height: 44px;
+		}
 	}
 </style>
