@@ -12,6 +12,7 @@
     "spike:import": "tsx spike/import-mapping.ts",
     "all": "tsx src/all.ts",
     "verify": "tsx src/verify.ts",
+    "markers:normalize": "tsx src/normalize-markers.ts",
     "icons": "tsx src/icons.ts",
     "import-save": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-save.ts",
     "import-upload": "node --env-file=../../apps/web/.env --experimental-strip-types src/import-upload.ts",

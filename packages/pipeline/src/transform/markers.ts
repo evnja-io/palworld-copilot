@@ -1,15 +1,7 @@
 import { readFileSync } from "node:fs";
 import { loadDataTableRows, must, pick, writeGameData } from "../lib.js";
 import { worldToPixel } from "./coord.js";
-
-type Marker = {
-  id: string;
-  type: "relic" | "alpha" | "ft";
-  px: number;
-  py: number;
-  nameId?: string;
-  meta?: Record<string, unknown>;
-};
+import { assertMarkerCounts, normalizeMarkers, type Marker } from "./markers.lib.js";
 
 const markers: Marker[] = [];
 const communityDir = new URL("../../raw/community/", import.meta.url).pathname;
@@ -61,17 +53,12 @@ for (const [guid, p] of Object.entries(ftPoints)) {
   });
 }
 
-markers.sort((a, b) => a.id.localeCompare(b.id));
-const counts = markers.reduce<Record<string, number>>((acc, mk) => {
-  acc[mk.type] = (acc[mk.type] ?? 0) + 1;
-  return acc;
-}, {});
-if (!(counts.relic >= 120 && counts.relic <= 200)) throw new Error(`relics suspects : ${counts.relic}`);
-if (!(counts.alpha >= 150 && counts.alpha <= 200)) throw new Error(`alphas suspects : ${counts.alpha}`);
-if (!(counts.ft > 50)) throw new Error(`ft suspects : ${counts.ft}`);
+const out = normalizeMarkers(markers);
+const counts = assertMarkerCounts(out);
 console.log(`  (${treeSkipped} POI de l'Arbre-Monde exclus - carte séparée, hors v1)`);
 
-writeGameData("markers.json", markers);
+writeGameData("markers.json", out);
 console.log(
-  `markers OK (${counts.relic} effigies, ${counts.alpha} alphas, ${counts.ft} voyages rapides)`,
+  `markers OK (${counts.relic} effigies, ${counts.alpha} alphas, ${counts.boss} boss PNJ, ` +
+    `${counts.tower} tours, ${counts.watchtower} tours d'observation, ${counts.ft} voyages rapides)`,
 );
