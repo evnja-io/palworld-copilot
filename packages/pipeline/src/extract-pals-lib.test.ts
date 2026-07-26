@@ -128,6 +128,21 @@ describe("extractPalInstances", () => {
     expect(stats.noOwner).toBe(2);
   });
 
+  it("conserve un travailleur de base sans propriétaire via keepIds (owner = GUID nul)", () => {
+    // Le jeu efface OwnerPlayerUId à l'affectation en base (validé sur
+    // l'import du 2026-07-26 : 164 affectations = 164 skips « sans
+    // propriétaire ») : les instances affectées sont conservées.
+    const other = "99999999-9999-9999-9999-999999999999";
+    const { rows, stats } = extractPalInstances(
+      [entry({ owner: null }), entry({ owner: ZERO, instanceId: other })],
+      palIdsLower,
+      new Set([IID_NORM]), // seule la première instance est affectée à une base
+    );
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({ instanceId: IID_NORM, ownerGuid: "0".repeat(32) });
+    expect(stats.noOwner).toBe(1); // l'autre reste un pal sauvage, skippé
+  });
+
   it("saute l'entrée sans InstanceId", () => {
     const { rows, stats } = extractPalInstances([entry({ instanceId: null })], palIdsLower);
     expect(rows).toHaveLength(0);

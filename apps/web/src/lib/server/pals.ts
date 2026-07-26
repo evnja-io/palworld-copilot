@@ -1,5 +1,10 @@
-import { and, asc, desc, eq } from "drizzle-orm";
+import { and, asc, desc, eq, ne } from "drizzle-orm";
 import { getDb, tables } from "$lib/server/db";
+
+// Travailleurs de base sans propriétaire (owner_guid = GUID nul, cf.
+// extract-pals-lib) : exclus des groupes par propriétaire — ils apparaissent
+// sur la page Bases via save_pal_assignments, pas dans les sélecteurs membre.
+const ZERO_GUID = "0".repeat(32);
 
 /** Instance individuelle de Pal importée de Level.sav (ligne save_pals). */
 export type PalInstance = {
@@ -70,7 +75,9 @@ export async function listPalInstances(serverId: string): Promise<PalOwner[]> {
         eq(tables.savePlayers.playerGuid, tables.savePals.ownerGuid),
       ),
     )
-    .where(eq(tables.savePals.serverId, serverId))
+    .where(
+      and(eq(tables.savePals.serverId, serverId), ne(tables.savePals.ownerGuid, ZERO_GUID)),
+    )
     .orderBy(asc(tables.savePals.ownerGuid), desc(tables.savePals.level));
 
   // Groupage en JS : les lignes arrivent contiguës par owner_guid, level desc.
