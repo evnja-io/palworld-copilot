@@ -50,11 +50,13 @@ describe("parseGuestImport — progression", () => {
     expect(Object.keys(out.progress).sort()).toEqual(["marker", "pal_caught", "tech_unlocked"]);
   });
 
-  it("refuse un marker non cochable (boss, voyage rapide)", () => {
+  it("accepte un marker non-effigie (boss, voyage rapide) — toutes les catégories sont cochables", () => {
+    // Le registre (progress.ts) accepte désormais tout id de markers.json,
+    // pas seulement les effigies : cf. Task 3 (2026-07-26).
     const out = parseGuestImport({
       progress: { marker: ["alpha_yamijima_IceLand_pink_D_BOSS"] },
     });
-    expect(out.progress.marker).toEqual([]);
+    expect(out.progress.marker).toEqual(["alpha_yamijima_IceLand_pink_D_BOSS"]);
   });
 
   it("refuse une liste d'ids trop longue", () => {

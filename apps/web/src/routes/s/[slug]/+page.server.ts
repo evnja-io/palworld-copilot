@@ -9,7 +9,9 @@ import type { PageServerLoadEvent } from "./$types";
 const TOTALS = {
   pal_caught: (pals as Array<{ id: string }>).length,
   tech_unlocked: (tech as Array<{ id: string }>).length,
-  marker: (markers as Array<{ type: string }>).filter((mk) => mk.type === "relic").length,
+  // Toutes les catégories sont cochables : le total couvre l'ensemble des
+  // marqueurs, pas seulement les effigies.
+  marker: (markers as Array<{ id: string }>).length,
 };
 
 export type MemberStats = {

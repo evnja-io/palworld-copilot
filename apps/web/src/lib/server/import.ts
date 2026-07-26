@@ -2,6 +2,9 @@ import { and, eq, isNull, or, sql } from "drizzle-orm";
 import markers from "@palworld-companion/game-data/markers.json";
 import { getDb, tables } from "$lib/server/db";
 
+// Volontairement limité aux effigies : les snapshots de save ne portent que des
+// GUID d'effigies (kind raw:relic). Le registre de progress.ts, lui, accepte
+// désormais tous les marqueurs (cochage manuel depuis la barre latérale).
 const RELIC_IDS = (markers as Array<{ id: string; type: string }>)
   .filter((mk) => mk.type === "relic")
   .map((mk) => mk.id);
