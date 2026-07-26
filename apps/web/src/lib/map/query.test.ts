@@ -110,7 +110,7 @@ describe("visibleMarkers", () => {
 });
 
 describe("defaultQuery", () => {
-  it("part sur les catégories de progression, pas sur les 447 marqueurs", () => {
+  it("part sur les catégories de progression, pas sur les 414 marqueurs", () => {
     const d = defaultQuery();
     expect(d.selected).toBe("relic");
     expect(d.visible).toEqual(["relic", "alpha", "boss", "tower"]);

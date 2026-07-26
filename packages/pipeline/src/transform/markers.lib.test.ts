@@ -71,6 +71,25 @@ describe("normalizeMarkers", () => {
     expect(out.map((m) => m.id)).toContain("a_3");
   });
 
+  it("dédoublonne un couple co-localisé (même type, position et méta) sans suffixe", () => {
+    // Cas réel : DT_BossSpawnerLoactionData contient chaque boss PNJ deux
+    // fois - même SpawnerID, même position, même niveau. Ce n'est pas une
+    // collision entre deux entités, c'est le même spawner répété.
+    const out = normalizeMarkers([
+      mk("alpha_BOSS_DarkTrader", "boss", { px: 1780, py: 5742.8, meta: { level: 59 } }),
+      mk("alpha_BOSS_DarkTrader", "boss", { px: 1780, py: 5742.8, meta: { level: 59 } }),
+    ]);
+    expect(out.map((m) => m.id)).toEqual(["alpha_BOSS_DarkTrader"]);
+  });
+
+  it("garde le suffixe pour un même id à deux positions réellement différentes", () => {
+    const out = normalizeMarkers([
+      mk("alpha_BOSS_X", "boss", { px: 1, py: 1, meta: { level: 23 } }),
+      mk("alpha_BOSS_X", "boss", { px: 2, py: 2, meta: { level: 23 } }),
+    ]);
+    expect(out.map((m) => m.id)).toEqual(["alpha_BOSS_X", "alpha_BOSS_X_2"]);
+  });
+
   it("reclasse les spawners PNJ en boss et garde les Pals en alpha", () => {
     const out = normalizeMarkers([
       mk("alpha_1", "alpha", { meta: { palId: "Anubis", level: 47 } }),
@@ -115,8 +134,25 @@ describe("normalizeMarkers", () => {
     expect(twice).toEqual(once);
   });
 
+  it("reste idempotent après dédoublonnage exact", () => {
+    const input = [
+      mk("d", "relic", { px: 5, py: 5 }),
+      mk("d", "relic", { px: 5, py: 5 }),
+    ];
+    const once = normalizeMarkers(input);
+    expect(once.map((m) => m.id)).toEqual(["d"]);
+    const twice = normalizeMarkers(once);
+    expect(twice).toEqual(once);
+  });
+
   it("trie par id pour un diff stable", () => {
-    const out = normalizeMarkers([mk("z", "relic"), mk("a", "relic")]);
+    // Positions distinctes : deux marqueurs par ailleurs identiques (mêmes
+    // px/py par défaut de `mk`) seraient maintenant dédoublonnés, ce qui
+    // masquerait le tri que ce test vérifie.
+    const out = normalizeMarkers([
+      mk("z", "relic", { px: 1, py: 1 }),
+      mk("a", "relic", { px: 2, py: 2 }),
+    ]);
     expect(out.map((m) => m.id)).toEqual(["a", "z"]);
   });
 });
@@ -133,7 +169,7 @@ describe("assertMarkerCounts", () => {
     const markers = [
       ...fixture("relic", 150),
       ...fixture("alpha", 80),
-      ...fixture("boss", 70),
+      ...fixture("boss", 36),
       ...fixture("tower", 1), // hors bornes [8,8] - seule catégorie fautive
       ...fixture("watchtower", 22),
       ...fixture("ft", 120),

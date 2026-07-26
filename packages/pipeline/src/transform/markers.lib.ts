@@ -31,7 +31,7 @@ export const TOWER_FT_IDS: ReadonlySet<string> = new Set([
 const EXPECTED: Record<MarkerType, [min: number, max: number]> = {
   relic: [120, 200],
   alpha: [75, 95],
-  boss: [60, 80],
+  boss: [30, 45],
   tower: [8, 8],
   watchtower: [20, 24],
   ft: [110, 140],
@@ -67,21 +67,52 @@ function reclassify(mk: Marker): Marker {
   return mk;
 }
 
-/** Reclasse, dédoublonne les ids, trie. Idempotent : appliquer deux fois donne
- *  le même résultat, ce qui permet de réparer un fichier déjà commité. */
+/** Clé d'égalité stricte d'un marqueur, méta comprise (ordre des clés
+ *  neutralisé). Deux marqueurs qui partagent cette clé sont la même entité
+ *  répétée dans la DataTable source, pas deux emplacements distincts. */
+function exactKey(mk: Marker): string {
+  const meta = mk.meta
+    ? Object.entries(mk.meta)
+        .filter(([, v]) => v !== undefined)
+        .sort(([a], [b]) => a.localeCompare(b))
+    : [];
+  return JSON.stringify([mk.type, mk.px, mk.py, meta]);
+}
+
+/** Reclasse, dédoublonne les entrées identiques, rend les ids uniques, trie.
+ *  Idempotent : appliquer deux fois donne le même résultat, ce qui permet de
+ *  réparer un fichier déjà commité. */
 export function normalizeMarkers(markers: Marker[]): Marker[] {
-  // Tri AVANT dédoublonnage : l'affectation des suffixes doit être
-  // déterministe, sinon une régénération produit un diff pour rien.
+  // Tri AVANT dédoublonnage : le choix du survivant et l'affectation des
+  // suffixes doivent être déterministes, sinon une régénération produit un
+  // diff pour rien.
   const sorted = [...markers]
     .map(reclassify)
     .sort((a, b) => a.id.localeCompare(b.id) || a.px - b.px || a.py - b.py);
 
+  // Deux entrées identiques en (type, position, méta) sont un doublon exact
+  // de la DataTable source - ex. `DT_BossSpawnerLoactionData` contient
+  // chaque boss PNJ deux fois, même SpawnerID, même position, même niveau.
+  // On n'en garde qu'une, sans lui attribuer de suffixe : ce n'est pas une
+  // collision d'id entre deux entités différentes.
+  const seenExact = new Set<string>();
+  const deduped = sorted.filter((mk) => {
+    const key = exactKey(mk);
+    if (seenExact.has(key)) return false;
+    seenExact.add(key);
+    return true;
+  });
+
+  // Un même id à deux positions différentes reste une vraie collision : le
+  // mécanisme de suffixe est conservé pour ce cas, qui n'existe pas
+  // aujourd'hui dans les données mais garantirait l'unicité si le jeu en
+  // introduisait un jour.
   // `allIds` (figé avant renommage) empêche d'attribuer à un doublon un
   // suffixe qu'un id original plus loin dans le tri utilise déjà lui-même -
   // sans ça le renommage n'est pas déterministe selon l'ordre de rencontre.
-  const allIds = new Set(sorted.map((mk) => mk.id));
+  const allIds = new Set(deduped.map((mk) => mk.id));
   const used = new Set<string>();
-  return sorted.map((mk) => {
+  return deduped.map((mk) => {
     if (!used.has(mk.id)) {
       used.add(mk.id);
       return mk;

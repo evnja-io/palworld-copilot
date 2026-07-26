@@ -380,7 +380,18 @@ Ajouter dans `packages/pipeline/package.json`, dans `scripts`, juste après `"ve
 - [ ] **Step 7 : Lancer le script sur les données commitées**
 
 Run: `pnpm --filter @palworld-companion/pipeline markers:normalize`
-Expected: `markers.json normalisé : 447 marqueurs — 138 effigies, 83 alphas, 69 boss PNJ, 8 tours, 20 observation, 129 voyage rapide (33 ids réaffectés)`
+Expected: `markers.json normalisé : 414 marqueurs — 138 effigies, 83 alphas, 36 boss PNJ, 8 tours, 20 observation, 129 voyage rapide (33 doublons fusionnés)`
+
+> **Correction post-implémentation (revue de branche complète, 2026-07-26) :**
+> les 33 « ids réaffectés » n'étaient pas 33 spawners à des emplacements
+> différents partageant un `SpawnerID` - c'était 33 doublons **exacts**
+> (`DT_BossSpawnerLoactionData` contient chaque boss PNJ deux fois : même id,
+> même position, même niveau). Le suffixe `_2` était donc la mauvaise
+> réparation : la bonne est de dédoublonner ces entrées, pas de les
+> renommer pour les garder toutes les deux. Voir `docs/decisions.md`,
+> « Catégories de marqueurs et ids uniques », pour le détail vérifié sur les
+> données. Tous les comptages ci-dessous (447/69) datent d'avant cette
+> correction et sont historiques.
 
 Vérifier l'unicité et les volumes :
 
@@ -394,7 +405,7 @@ console.log(by);
 if (ids.size !== m.length) throw new Error('ids dupliqués');
 "
 ```
-Expected: `447 | 447` et `{ relic: 138, alpha: 83, boss: 69, tower: 8, watchtower: 20, ft: 129 }`
+Expected (historique, avant correction du 2026-07-26 — voir note ci-dessus) : `447 | 447` et `{ relic: 138, alpha: 83, boss: 69, tower: 8, watchtower: 20, ft: 129 }`. Valeur actuelle après dédoublonnage des 33 boss PNJ identiques : `414 | 414` et `{ relic: 138, alpha: 83, boss: 36, tower: 8, watchtower: 20, ft: 129 }`.
 
 Relancer le script pour prouver l'idempotence :
 
@@ -620,7 +631,7 @@ for (const mk of load("markers.json")) {
 - [ ] **Step 9 : Régénérer l'index de recherche**
 
 Run: `pnpm --filter @palworld-companion/pipeline exec tsx src/search-index.ts`
-Expected: `search-index OK (… marker <n> …)` avec `n` ≈ 447.
+Expected: `search-index OK (… marker <n> …)` avec `n` ≈ 414.
 
 Vérifier qu'une tour est indexée :
 
@@ -634,7 +645,7 @@ const b=i.filter(e=>e.mk==='boss');
 console.log('boss PNJ indexés', b.length, '| ex.', b[0] && b[0].fr);
 "
 ```
-Expected: `tours indexées 8`, huit noms de tours, `boss PNJ indexés 69`.
+Expected: `tours indexées 8`, huit noms de tours, `boss PNJ indexés 36`.
 
 - [ ] **Step 10 : Adapter les badges de la palette**
 
@@ -877,7 +888,7 @@ describe("catégories", () => {
 		const n = (k: string) => markers.filter((mk) => categoryOf(mk) === k).length;
 		expect(n("relic")).toBe(138);
 		expect(n("alpha")).toBe(83);
-		expect(n("boss")).toBe(69);
+		expect(n("boss")).toBe(36);
 		expect(n("tower")).toBe(8);
 		expect(n("watchtower")).toBe(20);
 		expect(n("ft")).toBe(129);
@@ -1105,7 +1116,7 @@ describe("visibleMarkers", () => {
 });
 
 describe("defaultQuery", () => {
-	it("part sur les catégories de progression, pas sur les 447 marqueurs", () => {
+	it("part sur les catégories de progression, pas sur les 414 marqueurs", () => {
 		const d = defaultQuery();
 		expect(d.selected).toBe("relic");
 		expect(d.visible).toEqual(["relic", "alpha", "boss", "tower"]);
@@ -1144,7 +1155,7 @@ export type Query = {
 export function defaultQuery(): Query {
   return {
     selected: "relic",
-    // Les quatre catégories de progression : afficher les 447 marqueurs d'entrée
+    // Les quatre catégories de progression : afficher les 414 marqueurs d'entrée
     // de jeu noierait la carte.
     visible: ["relic", "alpha", "boss", "tower"],
     levelMin: 1,
@@ -3402,6 +3413,15 @@ git commit -m "feat(carte): feuille glissante mobile et nettoyage des clés i18n
 
 Ajouter en tête de `docs/decisions.md` (le registre est chronologique, entrées les plus récentes en haut de section ou à la suite selon la convention du fichier — respecter l'ordre existant) :
 
+> **Correction post-implémentation (revue de branche complète, 2026-07-26) :**
+> le texte ci-dessous est celui réellement ajouté par le Task 1 initial, et son
+> « Constat » sur les 33 ids dupliqués était **faux** : ce ne sont pas 33
+> spawners à deux emplacements distincts, mais 33 doublons **exacts**
+> (`DT_BossSpawnerLoactionData` contient chaque boss PNJ deux fois). L'entrée
+> a depuis été corrigée dans `docs/decisions.md` — voir « Catégories de
+> marqueurs et ids uniques » là-bas pour la version à jour. Conservé ici tel
+> quel pour l'historique du plan, pas comme référence exacte.
+
 ```markdown
 ## 2026-07-26 - Catégories de marqueurs et ids uniques
 
@@ -3436,7 +3456,8 @@ d'import (pipeline + revendication de GUID) restent inchangées, un seul
 `ProgressStore` et un seul aller-retour d'API. Les compteurs par catégorie se
 dérivent côté client (`countsByCategory`).
 **Conséquence** : la tuile carte du tableau de bord porte sur l'ensemble des
-marqueurs (447) et non plus sur les seules effigies. L'auto-remplissage depuis
+marqueurs (414, après correction du dédoublonnage — 447 dans le texte
+original de cette section) et non plus sur les seules effigies. L'auto-remplissage depuis
 les saves (`FastTravelPointUnlockFlag`, `NormalBossDefeatFlag`,
 `TowerBossDefeatFlag`) reste à faire : le format de clé des drapeaux de boss n'est
 pas vérifié.
@@ -3513,7 +3534,7 @@ git commit -m "docs: décisions catégories de marqueurs et cochage étendu"
 **Écarts assumés, décidés en écrivant le plan :**
 1. La spec disait `search` dans `Query` sans préciser sa portée : le plan en fait une recherche **par catégorie**, remise à zéro au changement de catégorie (T6, `select()`).
 2. La spec ne tranchait pas l'effet de `hideTracked` sur la carte : `visibleMarkers` l'applique aussi, sinon « masquer les faits » ne masquerait que la liste (T4).
-3. La tuile carte du tableau de bord passe de « Effigies / 138 » à « Carte / 447 » — sinon elle mentirait dès la première coche de boss (T3).
-4. `defaultQuery().visible` ne contient que les quatre catégories de progression : afficher 447 épingles d'entrée noierait la carte.
+3. La tuile carte du tableau de bord passe de « Effigies / 138 » à « Carte / 414 » (447 avant la correction du dédoublonnage du 2026-07-26) — sinon elle mentirait dès la première coche de boss (T3).
+4. `defaultQuery().visible` ne contient que les quatre catégories de progression : afficher 414 épingles d'entrée noierait la carte.
 
 **Cohérence des types** — `MapMarker["type"]` (T2) = `CatKey` moins `spawn` et `resource`, ce qui rend `categoryOf` trivial (T4). `Query` est produit en T4 et consommé sans variation en T5/T6/T7. `CatCount` produit en T4, consommé en T6. `SpawnState` produit en T5, consommé en T6/T7. `rowMeta` est exporté d'un bloc `<script module>` — seule manière de tester une fonction de composant Svelte sans DOM.

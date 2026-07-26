@@ -17008,27 +17008,9 @@
   "py": 2903.5
  },
  {
-  "en": "Believer CrossBow 2",
-  "fr": "Believer CrossBow 2",
-  "id": "marker:alpha_BOSS_Believer_CrossBow_2",
-  "lvl": 23,
-  "mk": "boss",
-  "px": 4958,
-  "py": 2903.5
- },
- {
   "en": "Believer Fat GiantClub",
   "fr": "Believer Fat GiantClub",
   "id": "marker:alpha_BOSS_Believer_Fat_GiantClub",
-  "lvl": 30,
-  "mk": "boss",
-  "px": 5184.6,
-  "py": 2425.7
- },
- {
-  "en": "Believer Fat GiantClub 2",
-  "fr": "Believer Fat GiantClub 2",
-  "id": "marker:alpha_BOSS_Believer_Fat_GiantClub_2",
   "lvl": 30,
   "mk": "boss",
   "px": 5184.6,
@@ -17044,27 +17026,9 @@
   "py": 5742.8
  },
  {
-  "en": "DarkTrader 2",
-  "fr": "DarkTrader 2",
-  "id": "marker:alpha_BOSS_DarkTrader_2",
-  "lvl": 59,
-  "mk": "boss",
-  "px": 1780,
-  "py": 5742.8
- },
- {
   "en": "Female DesertPeople",
   "fr": "Female DesertPeople",
   "id": "marker:alpha_BOSS_Female_DesertPeople",
-  "lvl": 37,
-  "mk": "boss",
-  "px": 6059.2,
-  "py": 1144.8
- },
- {
-  "en": "Female DesertPeople 2",
-  "fr": "Female DesertPeople 2",
-  "id": "marker:alpha_BOSS_Female_DesertPeople_2",
   "lvl": 37,
   "mk": "boss",
   "px": 6059.2,
@@ -17080,27 +17044,9 @@
   "py": 4635
  },
  {
-  "en": "Female People 2",
-  "fr": "Female People 2",
-  "id": "marker:alpha_BOSS_Female_People_2",
-  "lvl": 38,
-  "mk": "boss",
-  "px": 3640.1,
-  "py": 4635
- },
- {
   "en": "Female People02",
   "fr": "Female People02",
   "id": "marker:alpha_BOSS_Female_People02",
-  "lvl": 16,
-  "mk": "boss",
-  "px": 4298,
-  "py": 3696.5
- },
- {
-  "en": "Female People02 2",
-  "fr": "Female People02 2",
-  "id": "marker:alpha_BOSS_Female_People02_2",
   "lvl": 16,
   "mk": "boss",
   "px": 4298,
@@ -17116,27 +17062,9 @@
   "py": 3676.3
  },
  {
-  "en": "Female People03 2",
-  "fr": "Female People03 2",
-  "id": "marker:alpha_BOSS_Female_People03_2",
-  "lvl": 15,
-  "mk": "boss",
-  "px": 4984.3,
-  "py": 3676.3
- },
- {
   "en": "Female Soldier",
   "fr": "Female Soldier",
   "id": "marker:alpha_BOSS_Female_Soldier",
-  "lvl": 19,
-  "mk": "boss",
-  "px": 4151.8,
-  "py": 2978.1
- },
- {
-  "en": "Female Soldier 2",
-  "fr": "Female Soldier 2",
-  "id": "marker:alpha_BOSS_Female_Soldier_2",
   "lvl": 19,
   "mk": "boss",
   "px": 4151.8,
@@ -17152,27 +17080,9 @@
   "py": 5998.8
  },
  {
-  "en": "Female Soldier02 2",
-  "fr": "Female Soldier02 2",
-  "id": "marker:alpha_BOSS_Female_Soldier02_2",
-  "lvl": 56,
-  "mk": "boss",
-  "px": 2796.9,
-  "py": 5998.8
- },
- {
   "en": "Female Soldier03",
   "fr": "Female Soldier03",
   "id": "marker:alpha_BOSS_Female_Soldier03",
-  "lvl": 39,
-  "mk": "boss",
-  "px": 3453.1,
-  "py": 3284.8
- },
- {
-  "en": "Female Soldier03 2",
-  "fr": "Female Soldier03 2",
-  "id": "marker:alpha_BOSS_Female_Soldier03_2",
   "lvl": 39,
   "mk": "boss",
   "px": 3453.1,
@@ -17188,27 +17098,9 @@
   "py": 2404.2
  },
  {
-  "en": "Female Soldier04 2",
-  "fr": "Female Soldier04 2",
-  "id": "marker:alpha_BOSS_Female_Soldier04_2",
-  "lvl": 52,
-  "mk": "boss",
-  "px": 3631.1,
-  "py": 2404.2
- },
- {
   "en": "FireCult FlameThrower",
   "fr": "FireCult FlameThrower",
   "id": "marker:alpha_BOSS_FireCult_FlameThrower",
-  "lvl": 41,
-  "mk": "boss",
-  "px": 3867.8,
-  "py": 3849.9
- },
- {
-  "en": "FireCult FlameThrower 2",
-  "fr": "FireCult FlameThrower 2",
-  "id": "marker:alpha_BOSS_FireCult_FlameThrower_2",
   "lvl": 41,
   "mk": "boss",
   "px": 3867.8,
@@ -17224,27 +17116,9 @@
   "py": 3345.1
  },
  {
-  "en": "Hunter Fat GatlingGun 2",
-  "fr": "Hunter Fat GatlingGun 2",
-  "id": "marker:alpha_BOSS_Hunter_Fat_GatlingGun_2",
-  "lvl": 20,
-  "mk": "boss",
-  "px": 4300.7,
-  "py": 3345.1
- },
- {
   "en": "Hunter Rifle",
   "fr": "Hunter Rifle",
   "id": "marker:alpha_BOSS_Hunter_Rifle",
-  "lvl": 12,
-  "mk": "boss",
-  "px": 5122.8,
-  "py": 4005.3
- },
- {
-  "en": "Hunter Rifle 2",
-  "fr": "Hunter Rifle 2",
-  "id": "marker:alpha_BOSS_Hunter_Rifle_2",
   "lvl": 12,
   "mk": "boss",
   "px": 5122.8,
@@ -17260,27 +17134,9 @@
   "py": 2329.8
  },
  {
-  "en": "Male DesertPeople 2",
-  "fr": "Male DesertPeople 2",
-  "id": "marker:alpha_BOSS_Male_DesertPeople_2",
-  "lvl": 36,
-  "mk": "boss",
-  "px": 6369.7,
-  "py": 2329.8
- },
- {
   "en": "Male NinjaElite",
   "fr": "Male NinjaElite",
   "id": "marker:alpha_BOSS_Male_NinjaElite",
-  "lvl": 53,
-  "mk": "boss",
-  "px": 3240.7,
-  "py": 2078.6
- },
- {
-  "en": "Male NinjaElite 2",
-  "fr": "Male NinjaElite 2",
-  "id": "marker:alpha_BOSS_Male_NinjaElite_2",
   "lvl": 53,
   "mk": "boss",
   "px": 3240.7,
@@ -17296,27 +17152,9 @@
   "py": 2691.1
  },
  {
-  "en": "Male People 2",
-  "fr": "Male People 2",
-  "id": "marker:alpha_BOSS_Male_People_2",
-  "lvl": 26,
-  "mk": "boss",
-  "px": 5894,
-  "py": 2691.1
- },
- {
   "en": "Male People02",
   "fr": "Male People02",
   "id": "marker:alpha_BOSS_Male_People02",
-  "lvl": 43,
-  "mk": "boss",
-  "px": 4482.7,
-  "py": 1427.4
- },
- {
-  "en": "Male People02 2",
-  "fr": "Male People02 2",
-  "id": "marker:alpha_BOSS_Male_People02_2",
   "lvl": 43,
   "mk": "boss",
   "px": 4482.7,
@@ -17332,27 +17170,9 @@
   "py": 3872.4
  },
  {
-  "en": "Male People03 2",
-  "fr": "Male People03 2",
-  "id": "marker:alpha_BOSS_Male_People03_2",
-  "lvl": 10,
-  "mk": "boss",
-  "px": 4936.1,
-  "py": 3872.4
- },
- {
   "en": "Male People2",
   "fr": "Male People2",
   "id": "marker:alpha_BOSS_Male_People2",
-  "lvl": 26,
-  "mk": "boss",
-  "px": 5893,
-  "py": 2680.8
- },
- {
-  "en": "Male People2 2",
-  "fr": "Male People2 2",
-  "id": "marker:alpha_BOSS_Male_People2_2",
   "lvl": 26,
   "mk": "boss",
   "px": 5893,
@@ -17368,27 +17188,9 @@
   "py": 4289.1
  },
  {
-  "en": "Male Soldier 2",
-  "fr": "Male Soldier 2",
-  "id": "marker:alpha_BOSS_Male_Soldier_2",
-  "lvl": 15,
-  "mk": "boss",
-  "px": 4236.3,
-  "py": 4289.1
- },
- {
   "en": "Male Soldier02",
   "fr": "Male Soldier02",
   "id": "marker:alpha_BOSS_Male_Soldier02",
-  "lvl": 23,
-  "mk": "boss",
-  "px": 5664.9,
-  "py": 3242.2
- },
- {
-  "en": "Male Soldier02 2",
-  "fr": "Male Soldier02 2",
-  "id": "marker:alpha_BOSS_Male_Soldier02_2",
   "lvl": 23,
   "mk": "boss",
   "px": 5664.9,
@@ -17404,27 +17206,9 @@
   "py": 1852.5
  },
  {
-  "en": "Male Soldier03 2",
-  "fr": "Male Soldier03 2",
-  "id": "marker:alpha_BOSS_Male_Soldier03_2",
-  "lvl": 49,
-  "mk": "boss",
-  "px": 4048.9,
-  "py": 1852.5
- },
- {
   "en": "Male Soldier04",
   "fr": "Male Soldier04",
   "id": "marker:alpha_BOSS_Male_Soldier04",
-  "lvl": 21,
-  "mk": "boss",
-  "px": 4814.1,
-  "py": 3202.6
- },
- {
-  "en": "Male Soldier04 2",
-  "fr": "Male Soldier04 2",
-  "id": "marker:alpha_BOSS_Male_Soldier04_2",
   "lvl": 21,
   "mk": "boss",
   "px": 4814.1,
@@ -17440,27 +17224,9 @@
   "py": 2301.1
  },
  {
-  "en": "Male Trader01 2",
-  "fr": "Male Trader01 2",
-  "id": "marker:alpha_BOSS_Male_Trader01_2",
-  "lvl": 42,
-  "mk": "boss",
-  "px": 4753.8,
-  "py": 2301.1
- },
- {
   "en": "Male Trader02",
   "fr": "Male Trader02",
   "id": "marker:alpha_BOSS_Male_Trader02",
-  "lvl": 57,
-  "mk": "boss",
-  "px": 1894.3,
-  "py": 7102.1
- },
- {
-  "en": "Male Trader02 2",
-  "fr": "Male Trader02 2",
-  "id": "marker:alpha_BOSS_Male_Trader02_2",
   "lvl": 57,
   "mk": "boss",
   "px": 1894.3,
@@ -17476,27 +17242,9 @@
   "py": 5020.2
  },
  {
-  "en": "Male Trader03 2",
-  "fr": "Male Trader03 2",
-  "id": "marker:alpha_BOSS_Male_Trader03_2",
-  "lvl": 57,
-  "mk": "boss",
-  "px": 2188.4,
-  "py": 5020.2
- },
- {
   "en": "Ninja",
   "fr": "Ninja",
   "id": "marker:alpha_BOSS_Ninja",
-  "lvl": 28,
-  "mk": "boss",
-  "px": 5409.7,
-  "py": 2680.1
- },
- {
-  "en": "Ninja 2",
-  "fr": "Ninja 2",
-  "id": "marker:alpha_BOSS_Ninja_2",
   "lvl": 28,
   "mk": "boss",
   "px": 5409.7,
@@ -17512,27 +17260,9 @@
   "py": 5854.7
  },
  {
-  "en": "Police Old 2",
-  "fr": "Police Old 2",
-  "id": "marker:alpha_BOSS_Police_Old_2",
-  "lvl": 57,
-  "mk": "boss",
-  "px": 1947.8,
-  "py": 5854.7
- },
- {
   "en": "Police Rifle",
   "fr": "Police Rifle",
   "id": "marker:alpha_BOSS_Police_Rifle",
-  "lvl": 40,
-  "mk": "boss",
-  "px": 5819.1,
-  "py": 1716.6
- },
- {
-  "en": "Police Rifle 2",
-  "fr": "Police Rifle 2",
-  "id": "marker:alpha_BOSS_Police_Rifle_2",
   "lvl": 40,
   "mk": "boss",
   "px": 5819.1,
@@ -17548,15 +17278,6 @@
   "py": 1918.3
  },
  {
-  "en": "Scientist LaserRifle 2",
-  "fr": "Scientist LaserRifle 2",
-  "id": "marker:alpha_BOSS_Scientist_LaserRifle_2",
-  "lvl": 45,
-  "mk": "boss",
-  "px": 4964.9,
-  "py": 1918.3
- },
- {
   "en": "Viking",
   "fr": "Viking",
   "id": "marker:alpha_BOSS_Viking",
@@ -17566,27 +17287,9 @@
   "py": 5276.4
  },
  {
-  "en": "Viking 2",
-  "fr": "Viking 2",
-  "id": "marker:alpha_BOSS_Viking_2",
-  "lvl": 57,
-  "mk": "boss",
-  "px": 3069.8,
-  "py": 5276.4
- },
- {
   "en": "VikingElite",
   "fr": "VikingElite",
   "id": "marker:alpha_BOSS_VikingElite",
-  "lvl": 58,
-  "mk": "boss",
-  "px": 1392.9,
-  "py": 6525.6
- },
- {
-  "en": "VikingElite 2",
-  "fr": "VikingElite 2",
-  "id": "marker:alpha_BOSS_VikingElite_2",
   "lvl": 58,
   "mk": "boss",
   "px": 1392.9,

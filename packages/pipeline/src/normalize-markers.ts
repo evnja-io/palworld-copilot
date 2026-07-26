@@ -12,11 +12,19 @@ const before = JSON.parse(readFileSync(join(OUT_DIR, "markers.json"), "utf8")) a
 const after = normalizeMarkers(before);
 const counts = assertMarkerCounts(after);
 
-const renamed = after.filter((mk, i) => before[i]?.id !== mk.id).length;
+// Comparaison par id, pas par index : `after` peut être plus court que
+// `before` (doublons exacts fusionnés), ce qui désaligne les positions.
+const beforeIds = new Set(before.map((mk) => mk.id));
+const dropped = before.length - after.length;
+const resuffixed = after.filter((mk) => !beforeIds.has(mk.id)).length;
+const notes = [
+  dropped && `${dropped} doublons fusionnés`,
+  resuffixed && `${resuffixed} ids réaffectés`,
+].filter(Boolean);
 writeGameData("markers.json", after);
 console.log(
   `markers.json normalisé : ${after.length} marqueurs — ` +
     `${counts.relic} effigies, ${counts.alpha} alphas, ${counts.boss} boss PNJ, ` +
     `${counts.tower} tours, ${counts.watchtower} observation, ${counts.ft} voyage rapide` +
-    (renamed ? ` (${renamed} ids réaffectés)` : ""),
+    (notes.length ? ` (${notes.join(", ")})` : ""),
 );

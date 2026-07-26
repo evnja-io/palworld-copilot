@@ -19,7 +19,7 @@ export type Query = {
 export function defaultQuery(): Query {
   return {
     selected: "relic",
-    // Les quatre catégories de progression : afficher les 447 marqueurs d'entrée
+    // Les quatre catégories de progression : afficher les 414 marqueurs d'entrée
     // de jeu noierait la carte.
     visible: ["relic", "alpha", "boss", "tower"],
     levelMin: 1,

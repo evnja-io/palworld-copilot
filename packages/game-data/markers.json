@@ -479,25 +479,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Believer_CrossBow_2",
-  "meta": {
-   "level": 23
-  },
-  "px": 4958,
-  "py": 2903.5,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Believer_Fat_GiantClub",
-  "meta": {
-   "level": 30
-  },
-  "px": 5184.6,
-  "py": 2425.7,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Believer_Fat_GiantClub_2",
   "meta": {
    "level": 30
   },
@@ -515,25 +497,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_DarkTrader_2",
-  "meta": {
-   "level": 59
-  },
-  "px": 1780,
-  "py": 5742.8,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Female_DesertPeople",
-  "meta": {
-   "level": 37
-  },
-  "px": 6059.2,
-  "py": 1144.8,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Female_DesertPeople_2",
   "meta": {
    "level": 37
   },
@@ -551,25 +515,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Female_People_2",
-  "meta": {
-   "level": 38
-  },
-  "px": 3640.1,
-  "py": 4635,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Female_People02",
-  "meta": {
-   "level": 16
-  },
-  "px": 4298,
-  "py": 3696.5,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Female_People02_2",
   "meta": {
    "level": 16
   },
@@ -587,25 +533,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Female_People03_2",
-  "meta": {
-   "level": 15
-  },
-  "px": 4984.3,
-  "py": 3676.3,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Female_Soldier",
-  "meta": {
-   "level": 19
-  },
-  "px": 4151.8,
-  "py": 2978.1,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier_2",
   "meta": {
    "level": 19
   },
@@ -623,25 +551,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Female_Soldier02_2",
-  "meta": {
-   "level": 56
-  },
-  "px": 2796.9,
-  "py": 5998.8,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Female_Soldier03",
-  "meta": {
-   "level": 39
-  },
-  "px": 3453.1,
-  "py": 3284.8,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Female_Soldier03_2",
   "meta": {
    "level": 39
   },
@@ -659,25 +569,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Female_Soldier04_2",
-  "meta": {
-   "level": 52
-  },
-  "px": 3631.1,
-  "py": 2404.2,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_FireCult_FlameThrower",
-  "meta": {
-   "level": 41
-  },
-  "px": 3867.8,
-  "py": 3849.9,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_FireCult_FlameThrower_2",
   "meta": {
    "level": 41
   },
@@ -695,25 +587,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Hunter_Fat_GatlingGun_2",
-  "meta": {
-   "level": 20
-  },
-  "px": 4300.7,
-  "py": 3345.1,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Hunter_Rifle",
-  "meta": {
-   "level": 12
-  },
-  "px": 5122.8,
-  "py": 4005.3,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Hunter_Rifle_2",
   "meta": {
    "level": 12
   },
@@ -731,25 +605,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_DesertPeople_2",
-  "meta": {
-   "level": 36
-  },
-  "px": 6369.7,
-  "py": 2329.8,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_NinjaElite",
-  "meta": {
-   "level": 53
-  },
-  "px": 3240.7,
-  "py": 2078.6,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_NinjaElite_2",
   "meta": {
    "level": 53
   },
@@ -767,25 +623,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_People_2",
-  "meta": {
-   "level": 26
-  },
-  "px": 5894,
-  "py": 2691.1,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_People02",
-  "meta": {
-   "level": 43
-  },
-  "px": 4482.7,
-  "py": 1427.4,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_People02_2",
   "meta": {
    "level": 43
   },
@@ -803,25 +641,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_People03_2",
-  "meta": {
-   "level": 10
-  },
-  "px": 4936.1,
-  "py": 3872.4,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_People2",
-  "meta": {
-   "level": 26
-  },
-  "px": 5893,
-  "py": 2680.8,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_People2_2",
   "meta": {
    "level": 26
   },
@@ -839,25 +659,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_Soldier_2",
-  "meta": {
-   "level": 15
-  },
-  "px": 4236.3,
-  "py": 4289.1,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_Soldier02",
-  "meta": {
-   "level": 23
-  },
-  "px": 5664.9,
-  "py": 3242.2,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier02_2",
   "meta": {
    "level": 23
   },
@@ -875,25 +677,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_Soldier03_2",
-  "meta": {
-   "level": 49
-  },
-  "px": 4048.9,
-  "py": 1852.5,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_Soldier04",
-  "meta": {
-   "level": 21
-  },
-  "px": 4814.1,
-  "py": 3202.6,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_Soldier04_2",
   "meta": {
    "level": 21
   },
@@ -911,25 +695,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_Trader01_2",
-  "meta": {
-   "level": 42
-  },
-  "px": 4753.8,
-  "py": 2301.1,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Male_Trader02",
-  "meta": {
-   "level": 57
-  },
-  "px": 1894.3,
-  "py": 7102.1,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Male_Trader02_2",
   "meta": {
    "level": 57
   },
@@ -947,25 +713,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Male_Trader03_2",
-  "meta": {
-   "level": 57
-  },
-  "px": 2188.4,
-  "py": 5020.2,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Ninja",
-  "meta": {
-   "level": 28
-  },
-  "px": 5409.7,
-  "py": 2680.1,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Ninja_2",
   "meta": {
    "level": 28
   },
@@ -983,25 +731,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Police_Old_2",
-  "meta": {
-   "level": 57
-  },
-  "px": 1947.8,
-  "py": 5854.7,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Police_Rifle",
-  "meta": {
-   "level": 40
-  },
-  "px": 5819.1,
-  "py": 1716.6,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_Police_Rifle_2",
   "meta": {
    "level": 40
   },
@@ -1019,15 +749,6 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Scientist_LaserRifle_2",
-  "meta": {
-   "level": 45
-  },
-  "px": 4964.9,
-  "py": 1918.3,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_Viking",
   "meta": {
    "level": 57
@@ -1037,25 +758,7 @@
   "type": "boss"
  },
  {
-  "id": "alpha_BOSS_Viking_2",
-  "meta": {
-   "level": 57
-  },
-  "px": 3069.8,
-  "py": 5276.4,
-  "type": "boss"
- },
- {
   "id": "alpha_BOSS_VikingElite",
-  "meta": {
-   "level": 58
-  },
-  "px": 1392.9,
-  "py": 6525.6,
-  "type": "boss"
- },
- {
-  "id": "alpha_BOSS_VikingElite_2",
   "meta": {
    "level": 58
   },

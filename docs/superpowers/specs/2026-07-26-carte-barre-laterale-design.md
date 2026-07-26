@@ -5,7 +5,7 @@ Statut : validé (exploration design menée dans un lab temporaire, variante F r
 
 ## Problème
 
-La carte affiche 447 marqueurs derrière trois cases à cocher
+La carte affiche 414 marqueurs derrière trois cases à cocher
 (`FilterPanel.svelte`) et un panneau de zones de spawn (`SpawnPanel.svelte`).
 Trois limites :
 
@@ -45,21 +45,30 @@ Sur les 152 marqueurs `alpha` de `DT_BossSpawnerLoactionData`, **83 portent un
 humains (`BOSS_Believer_CrossBow`, `BOSS_DarkTrader`, `BOSS_Female_Soldier`…).
 Deux catégories, pas une.
 
-### 33 ids dupliqués — bug bloquant
+### 33 ids dupliqués — doublons exacts, pas deux emplacements
 
-`transform/markers.ts` dérive l'id du `SpawnerID`, or 33 spawners PNJ occupent
-deux emplacements avec le même `SpawnerID`. Conséquences :
+`transform/markers.ts` dérive l'id du `SpawnerID`, or `DT_BossSpawnerLoactionData`
+contient chaque boss PNJ **deux fois** : même `SpawnerID`, même position, même
+niveau — un doublon exact de la DataTable source, pas deux spawners à des
+emplacements différents (vérifié sur les données : sur 69 entrées `boss`
+brutes, seules 36 positions sont distinctes, et les 33 paires restantes sont
+identiques px/py/niveau au bit près). Conséquences :
 
-- `MarkerController` indexe par id (`#byId`) : **33 marqueurs ne sont jamais
-  affichés** aujourd'hui.
-- Tout `{#each}` keyé sur ces ids lève `each_key_duplicate`. Constaté
-  concrètement : dans le lab, deux variantes rendaient une colonne vide avant
-  correction. **La liste de résultats est donc impossible tant que ce bug
-  existe.**
+- `MarkerController` indexait par id (`#byId`) : la seconde occurrence de
+  chaque doublon était silencieusement absorbée par la première. Ce n'était
+  pas un bug qui masquait des marqueurs légitimes — c'était le comportement
+  correct pour cette donnée, arrivé par accident plutôt que par conception.
+- Tout `{#each}` keyé sur ces ids lève en revanche `each_key_duplicate`.
+  Constaté concrètement : dans le lab, deux variantes rendaient une colonne
+  vide avant correction. **L'unicité des ids reste une vraie contrainte pour
+  la liste de résultats**, même si la fusion en elle-même était juste.
 
-Aucune migration de données à prévoir : les ids modifiés sont tous des boss PNJ,
-jamais cochés, donc absents de la table `progress` (seuls des ids `relic_*` y
-figurent).
+Décision : dédoublonner les entrées identiques en `(type, position, méta)`
+avant d'attribuer un suffixe `_2`/`_3` - ce dernier mécanisme reste nécessaire
+pour une vraie collision (même id, positions différentes), garantie utile si
+le jeu en introduit une un jour. Aucune migration de données à prévoir : les
+entrées fusionnées sont toutes des boss PNJ, jamais cochés, donc absents de la
+table `progress` (seuls des ids `relic_*` y figurent).
 
 ### Les ressources restent hors périmètre
 
@@ -77,14 +86,14 @@ Sept catégories réelles, une future :
 | --- | --- | --- | --- | --- |
 | `relic` | Effigies de Lifmunk | 138 | oui | — |
 | `alpha` | Alpha (Pal) | 83 | oui | niveau, élément |
-| `boss` | Boss humains | 69 | oui | niveau |
+| `boss` | Boss humains | 36 | oui | niveau |
 | `tower` | Tours de boss | 8 | oui | — |
 | `watchtower` | Tours d'observation | 20 | oui | — |
 | `ft` | Voyage rapide | 129 | oui | — |
 | `spawn` | Zones de spawn d'un Pal | 249 Pals | non | jour / nuit |
 | `resource` | Ressources | 0 | — | grisée, « bientôt » |
 
-`relic + alpha + boss + tower + watchtower + ft = 447`, soit exactement le
+`relic + alpha + boss + tower + watchtower + ft = 414`, soit exactement le
 contenu actuel de `markers.json` : la classification redistribue, elle n'invente
 rien.
 
@@ -99,7 +108,7 @@ Visuel « HUD de jeu » posé sur une disposition à rail. Deux colonnes :
 │ 🐾 │ 20 trouvés par le groupe     │
 │ 83 ├──────────────────────────────┤
 │ ☠  │ [ Chercher dans alpha…    ]  │   recherche
-│ 69 ├──────────────────────────────┤
+│ 36 ├──────────────────────────────┤
 │ ⌂  │ Niveau 1+  ──●──────────     │   affinage (alpha / boss seulement)
 │  8 │ ● ● ● ● ● ● ● ● ●            │
 │ ⌖  ├──────────────────────────────┤
