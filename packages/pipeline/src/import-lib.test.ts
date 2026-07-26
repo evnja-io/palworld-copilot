@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeSnapshotRows, normalizeGuid } from "./import-lib.ts";
+import { computeSnapshotRows, normalizeGuid, pickLevelSections } from "./import-lib.ts";
 
 const palIds = new Map<string, string>([["anubis", "Anubis"], ["sheepball", "Sheepball"]]);
 const techIds = new Map<string, string>([["workbench", "Workbench"]]);
@@ -50,5 +50,46 @@ describe("computeSnapshotRows", () => {
 
   it("jette sur une structure de haut niveau malformée (fail loud, pas de wipe silencieux)", () => {
     expect(() => computeSnapshotRows({}, palIds, techIds)).toThrow();
+  });
+});
+
+describe("pickLevelSections", () => {
+  it("retourne les quatre sections quand elles sont présentes", () => {
+    const level = {
+      properties: {
+        worldSaveData: {
+          value: {
+            CharacterSaveParameterMap: { value: [1] },
+            GroupSaveDataMap: { value: [2] },
+            BaseCampSaveData: { value: [3] },
+            CharacterContainerSaveData: { value: [4] },
+          },
+        },
+      },
+    };
+    expect(pickLevelSections(level)).toEqual({
+      cmap: [1],
+      groups: [2],
+      baseCamps: [3],
+      charContainers: [4],
+    });
+  });
+
+  it("retombe sur [] pour chaque section absente", () => {
+    const level = {
+      properties: { worldSaveData: { value: { GroupSaveDataMap: { value: [2] } } } },
+    };
+    expect(pickLevelSections(level)).toEqual({
+      cmap: [],
+      groups: [2],
+      baseCamps: [],
+      charContainers: [],
+    });
+  });
+
+  it("retourne quatre tableaux vides sur une racine malformée", () => {
+    const empty = { cmap: [], groups: [], baseCamps: [], charContainers: [] };
+    expect(pickLevelSections({})).toEqual(empty);
+    expect(pickLevelSections(null)).toEqual(empty);
   });
 });

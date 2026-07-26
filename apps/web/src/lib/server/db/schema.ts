@@ -1,6 +1,7 @@
 import {
   bigint,
   boolean,
+  doublePrecision,
   index,
   integer,
   jsonb,
@@ -233,4 +234,102 @@ export const savePals = pgTable(
     primaryKey({ columns: [t.serverId, t.instanceId] }),
     index("save_pals_owner_idx").on(t.serverId, t.ownerGuid),
   ],
+);
+
+// Guildes extraites de Level.sav (GroupSaveDataMap, group_type Guild). Remplacement
+// idempotent par serveur à chaque import (cf. syncBaseData) : mêmes règles que save_pals.
+export const saveGuilds = pgTable(
+  "save_guilds",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    guildId: text("guild_id").notNull(), // GUID UPPER sans tirets
+    name: text("name"), // guild_name, vide -> NULL
+    baseCampLevel: integer("base_camp_level").notNull().default(1),
+    adminPlayerGuid: text("admin_player_guid"), // joint server_members.pal_player_guid (soft)
+    importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.serverId, t.guildId] })],
+);
+
+// Membres de guilde (players[] du GroupSaveDataMap). player_guid joint soft
+// server_members.pal_player_guid ET save_players.player_guid.
+export const saveGuildMembers = pgTable(
+  "save_guild_members",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    guildId: text("guild_id").notNull(),
+    playerGuid: text("player_guid").notNull(),
+    playerName: text("player_name"),
+    // Ticks FDateTime bruts (~6.4e17 > 2^53) : mode bigint, non sélectionné par le
+    // web en v1 (précision préservée pour un futur « vu en ligne »).
+    lastOnlineTicks: bigint("last_online_ticks", { mode: "bigint" }),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.guildId, t.playerGuid] }),
+    index("save_guild_members_player_idx").on(t.serverId, t.playerGuid), // résolution « ma guilde »
+  ],
+);
+
+// Camps de base (BaseCampSaveData). Coordonnées monde brutes (transform.translation) :
+// la projection carte (worldToMap) reste côté client si on trace un jour sur la carte.
+export const saveBases = pgTable(
+  "save_bases",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    baseId: text("base_id").notNull(),
+    guildId: text("guild_id").notNull(), // group_id_belong_to (soft join save_guilds)
+    name: text("name"),
+    worldX: doublePrecision("world_x"),
+    worldY: doublePrecision("world_y"),
+    worldZ: doublePrecision("world_z"),
+    areaRange: doublePrecision("area_range"),
+    // Longueur du tableau de slots du conteneur WorkerDirector = capacité de travailleurs.
+    slotCount: integer("slot_count"),
+    importedAt: timestamp("imported_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.baseId] }),
+    index("save_bases_guild_idx").on(t.serverId, t.guildId),
+  ],
+);
+
+// Affectation pal -> base (slots du conteneur WorkerDirector). Table SÉPARÉE de
+// save_pals : les deux syncs restent indépendants (un échec n'invalide pas l'autre).
+export const savePalAssignments = pgTable(
+  "save_pal_assignments",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    instanceId: text("instance_id").notNull(), // soft join save_pals.instance_id
+    baseId: text("base_id").notNull(),
+    slotIndex: integer("slot_index").notNull(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.serverId, t.instanceId] }), // un pal ne travaille qu'à une base
+    index("save_pal_assignments_base_idx").on(t.serverId, t.baseId),
+  ],
+);
+
+// Profil de demande MANUEL par base (config utilisateur, PAS dérivé de la save :
+// survit aux imports). Poids 0..3 par type de travail ; absence de ligne = poids 1.
+// Éditable par tout membre (requireMembership suffit, décision produit).
+export const baseDemands = pgTable(
+  "base_demands",
+  {
+    serverId: uuid("server_id")
+      .notNull()
+      .references(() => servers.id, { onDelete: "cascade" }),
+    baseId: text("base_id").notNull(), // soft : PAS de FK vers save_bases (wipe import)
+    workType: text("work_type").notNull(), // clé work de pals.json (12 valeurs)
+    weight: integer("weight").notNull().default(1), // 0..3, validé côté endpoint
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.serverId, t.baseId, t.workType] })],
 );

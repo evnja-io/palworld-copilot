@@ -8,7 +8,7 @@ import { existsSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { neon } from "@neondatabase/serverless";
 import { decrypt } from "./creds.ts";
-import { importPlayerSaves, loadLevelCmap, syncPalInstances, syncPlayerNames } from "./import-lib.ts";
+import { importPlayerSaves, loadLevelSections, syncBaseData, syncPalInstances, syncPlayerNames } from "./import-lib.ts";
 
 const fetchScript = new URL("../scripts/fetch-saves.py", import.meta.url).pathname;
 const venvPython = new URL("../.venv/bin/python", import.meta.url).pathname;
@@ -84,32 +84,44 @@ export async function main(): Promise<void> {
 
       const importStats = await importPlayerSaves(sql, cfg.server_id, dest);
 
-      // Syncs Level.sav non bloquants (pseudos + instances de Pals) : un
-      // Level.sav absent/inattendu ne doit pas invalider un import de saves
-      // par ailleurs réussi (cf. ancien workflow extract-players en
-      // continue-on-error). Conversion unique partagée par les deux syncs
-      // (le JSON temporaire fait ~170 Mo).
+      // Syncs Level.sav non bloquants (pseudos + instances de Pals +
+      // bases/guildes) : un Level.sav absent/inattendu ne doit pas invalider
+      // un import de saves par ailleurs réussi (cf. ancien workflow
+      // extract-players en continue-on-error). Conversion unique partagée par
+      // les trois syncs (le JSON temporaire fait ~170 Mo).
       let players = 0;
       let palInstances = 0;
+      let guilds = 0;
+      let bases = 0;
+      let basePals = 0;
       try {
-        const cmap = loadLevelCmap(dest);
+        const sections = loadLevelSections(dest);
         try {
-          players = (await syncPlayerNames(sql, cfg.server_id, cmap)).players;
+          players = (await syncPlayerNames(sql, cfg.server_id, sections.cmap)).players;
         } catch (syncErr) {
           const syncMessage = syncErr instanceof Error ? syncErr.message : String(syncErr);
           console.error(`tenant ${cfg.server_id}: sync des pseudos échouée (non bloquant): ${syncMessage}`);
         }
         try {
-          palInstances = (await syncPalInstances(sql, cfg.server_id, cmap)).pals;
+          palInstances = (await syncPalInstances(sql, cfg.server_id, sections.cmap)).pals;
         } catch (palErr) {
           const palMessage = palErr instanceof Error ? palErr.message : String(palErr);
           console.error(`tenant ${cfg.server_id}: sync des instances de Pals échouée (non bloquant): ${palMessage}`);
+        }
+        try {
+          const r = await syncBaseData(sql, cfg.server_id, sections);
+          guilds = r.guilds;
+          bases = r.bases;
+          basePals = r.assignments;
+        } catch (baseErr) {
+          const baseMessage = baseErr instanceof Error ? baseErr.message : String(baseErr);
+          console.error(`tenant ${cfg.server_id}: sync des bases/guildes échouée (non bloquant): ${baseMessage}`);
         }
       } catch (cmapErr) {
         const cmapMessage = cmapErr instanceof Error ? cmapErr.message : String(cmapErr);
         console.error(`tenant ${cfg.server_id}: Level.sav inexploitable (non bloquant): ${cmapMessage}`);
       }
-      const stats = { ...importStats, players, palInstances };
+      const stats = { ...importStats, players, palInstances, guilds, bases, basePals };
 
       // Un import où TOUS les fichiers ont échoué à la conversion doit être
       // signalé en erreur (importPlayerSaves ne throw que si 0 .sav ou venv

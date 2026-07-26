@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { classifyStale, localPathFor } from "./import-upload";
+import { classifyStale, localPathFor } from "./import-upload.ts";
 
 describe("localPathFor", () => {
   const uploadId = "9e6a9f0a-6b1a-4b7b-9c1a-000000000001";
