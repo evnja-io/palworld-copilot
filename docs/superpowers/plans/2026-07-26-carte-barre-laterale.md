@@ -2875,10 +2875,12 @@ Remplacer l'intégralité du bloc `<script>` de `apps/web/src/routes/s/[slug]/ma
 		}, 0);
 	}
 
-	function selectSpawnPal(palId: string | null) {
+	/** `phase` forcée : uniquement pour relayer un lien partagé. Sinon la phase
+	 *  est déduite (un Pal nocturne n'a souvent rien à montrer de jour). */
+	function selectSpawnPal(palId: string | null, phase?: SpawnPhase) {
 		mapState.spawn.spawnPal = palId;
 		if (palId) {
-			mapState.spawn.spawnPhase = defaultPhase(spawnCounts[palId], nocturnal.has(palId));
+			mapState.spawn.spawnPhase = phase ?? defaultPhase(spawnCounts[palId], nocturnal.has(palId));
 		}
 		mapState.persist();
 		if (!palId) return;
@@ -2917,7 +2919,12 @@ Remplacer l'intégralité du bloc `<script>` de `apps/web/src/routes/s/[slug]/ma
 		if (palId === zonedPal || !spawnCounts[palId]) return;
 		zonedPal = palId;
 		mapState.query.selected = 'spawn';
-		selectSpawnPal(palId);
+		// `?phase=` n'est lu que s'il est valide : un lien partagé ne porte que
+		// `?pal=&phase=` quand le reste de la vue est aux défauts, et
+		// `fromSearchParams` l'ignore alors (pal seul ne décrit pas une vue).
+		// Sans ce relais, la phase choisie par l'expéditeur serait perdue.
+		const shared = page.url.searchParams.get('phase');
+		selectSpawnPal(palId, shared === 'day' || shared === 'night' ? shared : undefined);
 	});
 
 	// Focus depuis la palette de recherche : /map?focus=<markerId>.
@@ -3385,6 +3392,25 @@ marqueurs (447) et non plus sur les seules effigies. L'auto-remplissage depuis
 les saves (`FastTravelPointUnlockFlag`, `NormalBossDefeatFlag`,
 `TowerBossDefeatFlag`) reste à faire : le format de clé des drapeaux de boss n'est
 pas vérifié.
+
+## 2026-07-26 - Ce qu'une URL de carte a le droit d'écraser
+
+**Constat** : `/map?pal=<palId>` est un lien profond existant, généré depuis
+chaque fiche de Pal, et il préserve les filtres de l'utilisateur. En faisant de
+`pal` une clé de filtre parmi d'autres, la restauration depuis l'URL remettait
+toute la vue (catégories, niveau, élément, « masquer les faits », recherche) aux
+valeurs par défaut au simple clic sur « voir les zones ». Symétriquement, tester
+la *présence* des clés plutôt que leur validité laissait `?sel=` ou
+`?sel=licorne` écraser les préférences enregistrées.
+**Décision** : deux familles de clés. Les **clés de vue** (`sel`, `vis`, `lvl`,
+`el`, `todo`, `q`) décrivent une vue et seules elles autorisent l'URL à primer
+sur localStorage ; `pal` et `phase` n'en décrivent pas une. `fromSearchParams`
+rend `null` tant qu'aucune clé de vue n'a **validé** — la présence ne suffit pas.
+**Conséquence** : un lien ne portant que `?pal=&phase=` est ignoré par la
+restauration ; l'effet `?pal=` de la page relaie alors la phase partagée
+lui-même. Le payload localStorage est validé champ par champ au même titre que
+l'URL (un `visible` stocké en chaîne empoisonnait l'état et faisait lever
+`.join(",")`).
 ```
 
 - [ ] **Step 2 : Documenter la commande de normalisation**
