@@ -286,7 +286,10 @@
 												</span>
 											</td>
 											<td class="owner-cell">
-												{ownerNames.get(p.ownerGuid) ?? `${p.ownerGuid.slice(0, 8)}…`}
+												<!-- GUID nul = travailleur de base sans propriétaire dans la save -->
+												{p.ownerGuid === '0'.repeat(32)
+													? '-'
+													: (ownerNames.get(p.ownerGuid) ?? `${p.ownerGuid.slice(0, 8)}…`)}
 											</td>
 											<td>
 												<span class="works">

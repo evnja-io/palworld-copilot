@@ -52,12 +52,18 @@ export const str = (v: unknown): string | null => {
 };
 
 /** cmap = CharacterSaveParameterMap.value ; palIdsLower = lowercase -> id
- *  canonique pals.json. Lectures défensives : l'enveloppe des entrées pal
- *  n'est pas garantie (cf. plan, risque n°1) - tout champ inattendu est
- *  ignoré ou compté dans les stats plutôt que de faire échouer l'extraction. */
+ *  canonique pals.json ; keepIds = instances à conserver MÊME sans
+ *  propriétaire (travailleurs de base : le jeu efface OwnerPlayerUId à
+ *  l'affectation, validé sur l'import du 2026-07-26 où les 164 affectations
+ *  correspondaient exactement aux 164 skips « sans propriétaire »). Ces pals
+ *  sont émis avec le GUID nul comme owner_guid (convention de la save).
+ *  Lectures défensives : l'enveloppe des entrées pal n'est pas garantie
+ *  (cf. plan, risque n°1) - tout champ inattendu est ignoré ou compté dans
+ *  les stats plutôt que de faire échouer l'extraction. */
 export function extractPalInstances(
   cmap: unknown[],
   palIdsLower: Map<string, string>,
+  keepIds?: ReadonlySet<string>,
 ): { rows: PalInstanceRow[]; stats: ExtractStats } {
   const stats: ExtractStats = { players: 0, noOwner: 0, unknownSpecies: 0, duplicates: 0 };
   const rows: PalInstanceRow[] = [];
@@ -72,13 +78,26 @@ export function extractPalInstances(
       continue;
     }
 
+    // Identifiant d'instance lu AVANT le filtre de propriétaire : il sert de
+    // clé de rattrapage pour les travailleurs de base sans owner.
+    const rawInstanceIdEarly = entry?.key?.InstanceId?.value;
+    const instanceIdEarly =
+      typeof rawInstanceIdEarly === "string" && rawInstanceIdEarly !== ""
+        ? normalizeGuid(rawInstanceIdEarly)
+        : null;
+
     // Propriétaire requis (proxy « équipe + palbox ») : les pals sauvages ont
-    // un OwnerPlayerUId absent ou nul.
+    // un OwnerPlayerUId absent ou nul. Exception : les instances affectées à
+    // une base (keepIds) sont conservées avec le GUID nul.
     const rawOwner = sp?.OwnerPlayerUId?.value;
-    const ownerGuid = typeof rawOwner === "string" ? normalizeGuid(rawOwner) : "";
+    let ownerGuid = typeof rawOwner === "string" ? normalizeGuid(rawOwner) : "";
     if (ownerGuid === "" || ownerGuid === ZERO_GUID) {
-      stats.noOwner++;
-      continue;
+      if (instanceIdEarly !== null && keepIds?.has(instanceIdEarly)) {
+        ownerGuid = ZERO_GUID;
+      } else {
+        stats.noOwner++;
+        continue;
+      }
     }
 
     // Espèce : casse variable dans la save ("Sheepball") ; les pals alpha ont
@@ -93,10 +112,9 @@ export function extractPalInstances(
       continue;
     }
 
-    // Identifiant d'instance : clé de la map - requis (PK), dédupliqué.
-    const rawInstanceId = entry?.key?.InstanceId?.value;
-    if (typeof rawInstanceId !== "string" || rawInstanceId === "") continue;
-    const instanceId = normalizeGuid(rawInstanceId);
+    // Identifiant d'instance (lu plus haut) : requis (PK), dédupliqué.
+    if (instanceIdEarly === null) continue;
+    const instanceId = instanceIdEarly;
     if (seen.has(instanceId)) {
       stats.duplicates++;
       continue;

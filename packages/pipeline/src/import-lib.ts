@@ -269,13 +269,16 @@ export async function syncPlayerNames(
 }
 
 /** Extrait les instances de Pals possédées d'une cmap (cf. loadLevelCmap) et
- *  remplace le contenu de save_pals pour ce serveur (idempotent). Jette si
- *  aucune instance n'est extraite : on n'écrase PAS un snapshot existant avec
- *  un delete à vide (fail loud, pas de wipe silencieux). */
+ *  remplace le contenu de save_pals pour ce serveur (idempotent). keepIds
+ *  (affectations de base, cf. syncBaseData) conserve les travailleurs de base
+ *  sans propriétaire avec le GUID nul. Jette si aucune instance n'est
+ *  extraite : on n'écrase PAS un snapshot existant avec un delete à vide
+ *  (fail loud, pas de wipe silencieux). */
 export async function syncPalInstances(
   sql: Sql,
   serverId: string,
   cmap: any[],
+  keepIds?: ReadonlySet<string>,
 ): Promise<{ pals: number; owners: number }> {
   const palIdsLower = new Map<string, string>(
     (JSON.parse(
@@ -283,7 +286,7 @@ export async function syncPalInstances(
     ) as Array<{ id: string }>).map((p) => [p.id.toLowerCase(), p.id]),
   );
 
-  const { rows, stats } = extractPalInstances(cmap, palIdsLower);
+  const { rows, stats } = extractPalInstances(cmap, palIdsLower, keepIds);
   console.log(
     `ignorés : ${stats.players} joueurs, ${stats.noOwner} sans propriétaire, ` +
       `${stats.unknownSpecies} espèces inconnues, ${stats.duplicates} doublons`,
@@ -345,7 +348,13 @@ export async function syncBaseData(
   sql: Sql,
   serverId: string,
   sections: Pick<LevelSections, "groups" | "baseCamps" | "charContainers">,
-): Promise<{ guilds: number; guildMembers: number; bases: number; assignments: number }> {
+): Promise<{
+  guilds: number;
+  guildMembers: number;
+  bases: number;
+  assignments: number;
+  assignedIds: Set<string>;
+}> {
   const { guilds, members, bases, assignments, stats } = extractBaseData(
     sections.groups,
     sections.baseCamps,
@@ -458,5 +467,8 @@ export async function syncBaseData(
     guildMembers: members.length,
     bases: bases.length,
     assignments: assignments.length,
+    // Ids d'instances affectées : passés à syncPalInstances pour conserver les
+    // travailleurs de base sans propriétaire (le jeu efface OwnerPlayerUId).
+    assignedIds: new Set(assignments.map((a) => a.instanceId)),
   };
 }

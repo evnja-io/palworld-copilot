@@ -102,20 +102,25 @@ export async function main(): Promise<void> {
           const syncMessage = syncErr instanceof Error ? syncErr.message : String(syncErr);
           console.error(`tenant ${cfg.server_id}: sync des pseudos échouée (non bloquant): ${syncMessage}`);
         }
-        try {
-          palInstances = (await syncPalInstances(sql, cfg.server_id, sections.cmap)).pals;
-        } catch (palErr) {
-          const palMessage = palErr instanceof Error ? palErr.message : String(palErr);
-          console.error(`tenant ${cfg.server_id}: sync des instances de Pals échouée (non bloquant): ${palMessage}`);
-        }
+        // Bases AVANT instances : les ids d'affectations permettent de garder
+        // les travailleurs de base sans propriétaire dans save_pals. Si la
+        // sync des bases échoue, keepIds reste vide (comportement antérieur).
+        let assignedIds: ReadonlySet<string> = new Set();
         try {
           const r = await syncBaseData(sql, cfg.server_id, sections);
           guilds = r.guilds;
           bases = r.bases;
           basePals = r.assignments;
+          assignedIds = r.assignedIds;
         } catch (baseErr) {
           const baseMessage = baseErr instanceof Error ? baseErr.message : String(baseErr);
           console.error(`tenant ${cfg.server_id}: sync des bases/guildes échouée (non bloquant): ${baseMessage}`);
+        }
+        try {
+          palInstances = (await syncPalInstances(sql, cfg.server_id, sections.cmap, assignedIds)).pals;
+        } catch (palErr) {
+          const palMessage = palErr instanceof Error ? palErr.message : String(palErr);
+          console.error(`tenant ${cfg.server_id}: sync des instances de Pals échouée (non bloquant): ${palMessage}`);
         }
       } catch (cmapErr) {
         const cmapMessage = cmapErr instanceof Error ? cmapErr.message : String(cmapErr);

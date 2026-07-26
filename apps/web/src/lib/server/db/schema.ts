@@ -209,8 +209,9 @@ export const saveUploads = pgTable(
 );
 
 // Instances individuelles de Pals extraites de Level.sav (CharacterSaveParameterMap).
-// Portée : pals possédés par un joueur (OwnerPlayerUId), équipe + palbox ; les
-// pals postés en base peuvent apparaître (même owner), limitation documentée.
+// Portée : pals possédés par un joueur (OwnerPlayerUId), équipe + palbox, PLUS
+// les travailleurs de base sans propriétaire (le jeu efface OwnerPlayerUId à
+// l'affectation) conservés via save_pal_assignments avec owner_guid = GUID nul.
 // owner_guid : UPPER sans tirets, joint server_members.pal_player_guid.
 export const savePals = pgTable(
   "save_pals",
