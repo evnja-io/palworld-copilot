@@ -13,7 +13,8 @@
 		counts,
 		spawnPal,
 		thumbOf,
-		onselect
+		onselect,
+		horizontal = false
 	}: {
 		selected: CatKey;
 		visible: CatKey[];
@@ -22,12 +23,14 @@
 		/** Portrait d'aperçu d'une catégorie, si elle en a un. */
 		thumbOf: (key: CatKey) => string | undefined;
 		onselect: (key: CatKey) => void;
+		/** Feuille glissante mobile : le rail passe à l'horizontale. */
+		horizontal?: boolean;
 	} = $props();
 
 	const shown = $derived(new Set(visible));
 </script>
 
-<nav class="rail" aria-label={m.map_categories()}>
+<nav class="rail" class:horizontal aria-label={m.map_categories()}>
 	{#each CATEGORY_ORDER as key (key)}
 		{@const meta = CATEGORIES[key]}
 		{#if key !== 'spawn'}
@@ -136,5 +139,22 @@
 	.spawnt {
 		margin-top: auto;
 		border: 1px dashed var(--border-strong);
+	}
+	.horizontal {
+		flex-direction: row;
+		width: auto;
+		gap: 6px;
+		padding: 8px 10px;
+		border-right: none;
+		border-bottom: 1px solid var(--border);
+		overflow-x: auto;
+	}
+	.horizontal .tile {
+		flex: none;
+		width: 48px;
+	}
+	.horizontal .spawnt {
+		margin-top: 0;
+		margin-left: auto;
 	}
 </style>

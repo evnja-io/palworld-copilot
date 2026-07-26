@@ -23,6 +23,18 @@
 
 	let { data } = $props();
 
+	// Feuille glissante sous 900 px : la carte est un second écran pendant la
+	// partie, la barre ne peut pas y voler la moitié de l'écran.
+	let narrow = $state(false);
+	let sheetStop = $state<'collapsed' | 'half' | 'full'>('half');
+	$effect(() => {
+		const mq = window.matchMedia('(max-width: 900px)');
+		const apply = () => (narrow = mq.matches);
+		apply();
+		mq.addEventListener('change', apply);
+		return () => mq.removeEventListener('change', apply);
+	});
+
 	const markers = markersJson as MapMarker[];
 	// Tous les marqueurs sont cochables : sert de garde-fou aux ids en
 	// localStorage après une régénération de game-data.
@@ -239,7 +251,12 @@
 />
 
 <div class="map-wrap">
-	<div class="sidebar">
+	<div
+		class="sidebar"
+		class:collapsed={narrow && sheetStop === 'collapsed'}
+		class:half={narrow && sheetStop === 'half'}
+		class:full={narrow && sheetStop === 'full'}
+	>
 		<MapSidebar
 			bind:query={mapState.query}
 			spawn={mapState.spawn}
@@ -257,6 +274,9 @@
 			onspawn={selectSpawnPal}
 			onphase={(p: SpawnPhase) => mapState.setPhase(p)}
 			onshare={share}
+			sheet={narrow}
+			stop={sheetStop}
+			onstop={(s) => (sheetStop = s)}
 		/>
 	</div>
 	<div class="canvas">
@@ -286,6 +306,34 @@
 		position: relative;
 		flex: 1;
 		min-width: 0;
+	}
+
+	@media (max-width: 900px) {
+		.map-wrap {
+			display: block;
+		}
+		.canvas {
+			position: absolute;
+			inset: 0;
+		}
+		.sidebar {
+			position: absolute;
+			inset: auto 0 0 0;
+			width: 100%;
+			z-index: 500;
+			transition: height 220ms cubic-bezier(0.23, 1, 0.32, 1);
+			/* Barre home iOS */
+			padding-bottom: env(safe-area-inset-bottom, 0px);
+		}
+		.sidebar.collapsed {
+			height: 64px;
+		}
+		.sidebar.half {
+			height: 58%;
+		}
+		.sidebar.full {
+			height: 92%;
+		}
 	}
 	.toast {
 		position: absolute;

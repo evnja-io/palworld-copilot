@@ -6,23 +6,20 @@
 	import type { ProgressStore } from '$lib/game/progress.svelte';
 	import type { MapMarker } from './markerController';
 	import { bossLabel, inGameCoords } from './coords';
+	import { CATEGORIES, categoryOf } from './categories';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 
 	let { marker, store }: { marker: MapMarker; store: ProgressStore } = $props();
 
 	const checked = $derived(store.mine.has(marker.id));
 	const coords = $derived(inGameCoords(marker.px, marker.py));
+	const trackable = $derived(CATEGORIES[categoryOf(marker)].trackable);
 </script>
 
 <div class="popup">
 	{#if marker.type === 'relic'}
 		<strong>{m.map_relic_name()}</strong>
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
-		<button class="sphere" class:on={checked} onclick={() => store.toggle(marker.id)} aria-pressed={checked}>
-			<span class="ball" aria-hidden="true"></span>
-			{m.map_found()}
-		</button>
-		<GroupAvatars users={store.group[marker.id] ?? []} />
 	{:else if marker.type === 'alpha' || marker.type === 'boss'}
 		<strong class="alpha-name">
 			{#if marker.meta?.palId && palIcon(marker.meta.palId)}
@@ -36,8 +33,15 @@
 			<a href={appHref(`/paldex/${marker.meta.palId}`)} class="link">{m.map_view_pal()}</a>
 		{/if}
 	{:else}
-		<strong>{marker.nameId ? gameName(`ft:${marker.nameId}`) : m.map_filter_ft()}</strong>
+		<strong>{marker.nameId ? gameName(`ft:${marker.nameId}`) : m.map_cat_ft()}</strong>
 		<span class="coords tnum">({coords[0]}, {coords[1]})</span>
+	{/if}
+	{#if trackable}
+		<button class="sphere" class:on={checked} onclick={() => store.toggle(marker.id)} aria-pressed={checked}>
+			<span class="ball" aria-hidden="true"></span>
+			{m.map_found()}
+		</button>
+		<GroupAvatars users={store.group[marker.id] ?? []} />
 	{/if}
 </div>
 

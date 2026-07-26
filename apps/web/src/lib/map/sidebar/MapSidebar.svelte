@@ -32,7 +32,10 @@
 		ontoggle,
 		onspawn,
 		onphase,
-		onshare
+		onshare,
+		sheet = false,
+		stop = 'half',
+		onstop
 	}: {
 		query: Query;
 		spawn: { spawnPal: string | null; spawnPhase: SpawnPhase };
@@ -50,6 +53,10 @@
 		onspawn: (palId: string | null) => void;
 		onphase: (phase: SpawnPhase) => void;
 		onshare: () => void;
+		/** Rendu en feuille glissante (mobile). */
+		sheet?: boolean;
+		stop?: 'collapsed' | 'half' | 'full';
+		onstop?: (stop: 'collapsed' | 'half' | 'full') => void;
 	} = $props();
 
 	const locale = getLocale() as Locale;
@@ -72,7 +79,22 @@
 	}
 </script>
 
-<aside class="sb">
+<aside class="sb" class:sheet>
+	{#if sheet}
+		<button
+			class="handle"
+			aria-label={m.map_sheet_toggle()}
+			aria-expanded={stop !== 'collapsed'}
+			onclick={() => onstop?.(stop === 'full' ? 'collapsed' : stop === 'half' ? 'full' : 'half')}
+		>
+			<span class="grip" aria-hidden="true"></span>
+			{#if stop === 'collapsed'}
+				<span class="peek tnum">
+					{catShort(query.selected)} · {counts[query.selected].mine}/{counts[query.selected].total}
+				</span>
+			{/if}
+		</button>
+	{/if}
 	<div class="cols">
 		<CategoryRail
 			selected={query.selected}
@@ -81,6 +103,7 @@
 			spawnPal={spawn.spawnPal}
 			{thumbOf}
 			onselect={select}
+			horizontal={sheet}
 		/>
 
 		<section class="panel">
@@ -108,6 +131,7 @@
 					{guest}
 					onvisibility={toggleVisibility}
 					{onshare}
+					compact={sheet}
 				/>
 
 				<input
@@ -190,6 +214,50 @@
 		display: flex;
 		flex: 1;
 		min-height: 0;
+	}
+	.sheet {
+		border-right: none;
+		border-top: 1px solid var(--border-strong);
+		border-radius: var(--r-lg) var(--r-lg) 0 0;
+		overflow: hidden;
+	}
+	.handle {
+		display: none;
+	}
+	.sheet .handle {
+		display: flex;
+		flex: none;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+		width: 100%;
+		min-height: 32px;
+		padding: 8px 0 4px;
+		background: none;
+		border: none;
+		border-radius: 0;
+	}
+	.grip {
+		width: 40px;
+		height: 4px;
+		border-radius: 999px;
+		background: var(--text-4);
+	}
+	.peek {
+		font-size: 11px;
+		color: var(--text-2);
+	}
+	/* Feuille : le rail passe à l'horizontale, sinon il mange la largeur utile. */
+	.sheet .cols {
+		flex-direction: column;
+	}
+	@media (pointer: coarse) {
+		/* 32px de base est trop court pour un doigt ; la poignée est la seule
+		   ligne à cette hauteur (rien en dessous à ne pas recouvrir), donc on
+		   agrandit la vraie boîte plutôt qu'un ::after superposé. */
+		.sheet .handle {
+			min-height: 44px;
+		}
 	}
 	.panel {
 		flex: 1;

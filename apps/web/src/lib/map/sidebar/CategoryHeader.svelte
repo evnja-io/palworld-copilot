@@ -11,7 +11,8 @@
 		visible,
 		guest,
 		onvisibility,
-		onshare
+		onshare,
+		compact = false
 	}: {
 		category: CatKey;
 		count: CatCount;
@@ -19,13 +20,15 @@
 		guest: boolean;
 		onvisibility: () => void;
 		onshare: () => void;
+		/** Feuille glissante mobile : en-tête replié. */
+		compact?: boolean;
 	} = $props();
 
 	const meta = $derived(CATEGORIES[category]);
 	const pct = $derived(count.total ? Math.round((count.mine / count.total) * 100) : 0);
 </script>
 
-<header class="hero exp-hero">
+<header class="hero exp-hero" class:compact>
 	<div class="ring" style="--p:{pct};--c:{meta.color}" role="img" aria-label={m.map_counter_of({ count: count.mine, total: count.total })}>
 		<!-- Disque intérieur plutôt qu'un mask : un mask découperait aussi le chiffre. -->
 		<span class="tnum">{pct}<i>%</i></span>
@@ -152,5 +155,24 @@
 		gap: 4px;
 		font-size: 10px;
 		color: var(--text-3);
+	}
+	.compact {
+		padding: 8px 10px;
+		gap: 9px;
+	}
+	.compact .ring {
+		width: 38px;
+		height: 38px;
+	}
+	.compact .ring::after {
+		inset: 4px;
+	}
+	.compact .hsub {
+		display: none;
+	}
+	.compact .hact {
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
 	}
 </style>
