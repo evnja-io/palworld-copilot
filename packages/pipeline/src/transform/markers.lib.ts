@@ -27,14 +27,12 @@ export const TOWER_FT_IDS: ReadonlySet<string> = new Set([
 ]);
 
 /** Volumétrie attendue par catégorie. Bornes larges sur alpha/boss : une mise à
- *  jour du jeu peut en ajouter, un écart franc signale une régression.
- *  `tower` en tête : borne exacte [8,8], le signal de régression le plus net -
- *  on veut ce message-là en premier si plusieurs catégories dévient à la fois. */
+ *  jour du jeu peut en ajouter, un écart franc signale une régression. */
 const EXPECTED: Record<MarkerType, [min: number, max: number]> = {
-  tower: [8, 8],
   relic: [120, 200],
   alpha: [75, 95],
   boss: [60, 80],
+  tower: [8, 8],
   watchtower: [20, 24],
   ft: [110, 140],
 };

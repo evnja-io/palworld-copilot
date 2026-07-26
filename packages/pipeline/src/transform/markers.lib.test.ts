@@ -16,6 +16,10 @@ const mk = (id: string, type: Marker["type"], extra: Partial<Marker> = {}): Mark
   ...extra,
 });
 
+/** `n` marqueurs distincts du même type, pour peupler une catégorie dans ses bornes. */
+const fixture = (type: Marker["type"], n: number): Marker[] =>
+  Array.from({ length: n }, (_, i) => mk(`${type}_${i}`, type));
+
 describe("classifyFt", () => {
   it("classe les huit entrées de tours de boss", () => {
     expect(TOWER_FT_IDS.size).toBe(8);
@@ -109,7 +113,16 @@ describe("assertMarkerCounts", () => {
   });
 
   it("refuse un nombre de tours inattendu", () => {
-    const markers = [mk("t", "tower")];
+    // Toutes les autres catégories dans leurs bornes : seule `tower` doit
+    // faire échouer l'assertion, quel que soit l'ordre d'itération de EXPECTED.
+    const markers = [
+      ...fixture("relic", 150),
+      ...fixture("alpha", 80),
+      ...fixture("boss", 70),
+      ...fixture("tower", 1), // hors bornes [8,8] - seule catégorie fautive
+      ...fixture("watchtower", 22),
+      ...fixture("ft", 120),
+    ];
     expect(() => assertMarkerCounts(markers)).toThrow(/tower/i);
   });
 });
