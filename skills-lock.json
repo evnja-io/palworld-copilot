@@ -7,6 +7,12 @@
       "skillPath": "design-and-refine/skills/design-lab/SKILL.md",
       "computedHash": "2f91bff63e6e749642f966510755b8912d5d53e56de3f0fb4a86bc8c604da192"
     },
+    "improve-ui": {
+      "source": "ibelick/ui-skills",
+      "sourceType": "github",
+      "skillPath": "skills/improve-ui/SKILL.md",
+      "computedHash": "5bd7689c5508c6bd8166f796b3d1bd32255077447595b14b60fac9847dce63f1"
+    },
     "interface-design": {
       "source": "Dammyjay93/interface-design",
       "sourceType": "github",
