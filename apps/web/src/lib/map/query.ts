@@ -30,7 +30,7 @@ export function defaultQuery(): Query {
 }
 
 /** Repli sans accents ni casse, pour que « volcan noir » trouve « Volcan Noir ». */
-function norm(s: string): string {
+export function norm(s: string): string {
   return s
     .toLowerCase()
     .normalize("NFD")

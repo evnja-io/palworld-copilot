@@ -6,11 +6,7 @@
 	 *  Exporté depuis un bloc `module` pour être testable sans DOM.
 	 *  Paraglide n'a pas de pluriel implicite dans ce projet : deux clés
 	 *  explicites, le choix se fait ici. */
-	export function rowMeta(
-		_mk: MapMarker,
-		elementLabel: string | undefined,
-		groupCount: number
-	): string {
+	export function rowMeta(elementLabel: string | undefined, groupCount: number): string {
 		const team =
 			groupCount === 0
 				? null
@@ -57,7 +53,7 @@
 <ul class="res">
 	{#each rows as mk (mk.id)}
 		{@const done = mine.has(mk.id)}
-		{@const meta = rowMeta(mk, elementLabelOf(elementOf(mk)), group[mk.id]?.length ?? 0)}
+		{@const meta = rowMeta(elementLabelOf(elementOf(mk)), group[mk.id]?.length ?? 0)}
 		<li style="--c:{tint(mk)}" class:done>
 			<button class="row" onclick={() => onfocus(mk)}>
 				<span class="por">
@@ -74,12 +70,14 @@
 				{#if mk.meta?.level}<span class="lvb tnum">{mk.meta.level}</span>{/if}
 			</button>
 			{#if trackable}
-				<input
-					type="checkbox"
-					checked={done}
-					aria-label="{m.map_done()} — {nameOf(mk)}"
-					onchange={() => ontoggle(mk)}
-				/>
+				<span class="chk">
+					<input
+						type="checkbox"
+						checked={done}
+						aria-label="{m.map_done()} — {nameOf(mk)}"
+						onchange={() => ontoggle(mk)}
+					/>
+				</span>
 			{/if}
 		</li>
 	{:else}
@@ -176,5 +174,17 @@
 		border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
 		border-radius: 999px;
 		padding: 0 7px;
+	}
+	.chk {
+		position: relative;
+		flex: none;
+		display: inline-flex;
+	}
+	@media (pointer: coarse) {
+		.chk::after {
+			content: '';
+			position: absolute;
+			inset: -16px;
+		}
 	}
 </style>

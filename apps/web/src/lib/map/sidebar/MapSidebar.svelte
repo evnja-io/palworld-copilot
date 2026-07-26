@@ -10,7 +10,6 @@
 	import type { Query } from '$lib/map/query';
 	import type { SpawnPhase } from '$lib/map/spawnLayer';
 	import type { GroupUser } from '$lib/types';
-	import { SvelteSet } from 'svelte/reactivity';
 	import CategoryRail from './CategoryRail.svelte';
 	import CategoryHeader from './CategoryHeader.svelte';
 	import RefineControls from './RefineControls.svelte';
@@ -66,7 +65,7 @@
 		onchange();
 	}
 	function toggleVisibility() {
-		const next = new SvelteSet(query.visible);
+		const next = new Set(query.visible);
 		next.has(query.selected) ? next.delete(query.selected) : next.add(query.selected);
 		query.visible = [...next];
 		onchange();
@@ -74,7 +73,6 @@
 </script>
 
 <aside class="sb">
-	<div class="handle" aria-hidden="true"></div>
 	<div class="cols">
 		<CategoryRail
 			selected={query.selected}
@@ -141,7 +139,7 @@
 
 				<div class="rbar">
 					<span class="tnum rc">
-						{rows.length === 1 ? m.map_results_one() : m.map_results_many({ count: rows.length })}
+						{rows.length <= 1 ? m.map_results_one() : m.map_results_many({ count: rows.length })}
 					</span>
 					{#if meta.trackable}
 						<label class="hide">
@@ -185,10 +183,6 @@
 		height: 100%;
 		background: var(--surface-1);
 		border-right: 1px solid var(--border-strong);
-	}
-	/* Poignée : visible seulement en feuille (mobile), cf. media query. */
-	.handle {
-		display: none;
 	}
 	.cols {
 		display: flex;

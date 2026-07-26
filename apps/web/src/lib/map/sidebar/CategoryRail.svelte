@@ -30,6 +30,7 @@
 <nav class="rail" aria-label={m.map_categories()}>
 	{#each CATEGORY_ORDER as key (key)}
 		{@const meta = CATEGORIES[key]}
+		{@const thumb = thumbOf(key)}
 		{#if key !== 'spawn'}
 			{@const c = counts[key]}
 			<button
@@ -45,8 +46,8 @@
 					: m.map_counter_of({ count: c.mine, total: c.total })}"
 				onclick={() => onselect(key)}
 			>
-				{#if thumbOf(key)}
-					<img src={thumbOf(key)} alt="" width="22" height="22" />
+				{#if thumb}
+					<img src={thumb} alt="" width="22" height="22" />
 				{:else}
 					<span class="gl" aria-hidden="true">{meta.glyph}</span>
 				{/if}
@@ -79,7 +80,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
-		padding: 10px 7px;
+		padding: 10px 6px;
 		overflow: auto;
 		background: var(--bg);
 		border-right: 1px solid var(--border);

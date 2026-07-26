@@ -71,6 +71,7 @@
 		gap: 5px;
 	}
 	.el {
+		position: relative;
 		width: 22px;
 		height: 22px;
 		padding: 0;
@@ -81,5 +82,12 @@
 	.el.on {
 		background: var(--c);
 		border-color: var(--text-1);
+	}
+	@media (pointer: coarse) {
+		.el::after {
+			content: '';
+			position: absolute;
+			inset: -11px;
+		}
 	}
 </style>

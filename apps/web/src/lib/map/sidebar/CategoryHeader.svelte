@@ -25,7 +25,7 @@
 	const pct = $derived(count.total ? Math.round((count.mine / count.total) * 100) : 0);
 </script>
 
-<header class="hero">
+<header class="hero exp-hero">
 	<div class="ring" style="--p:{pct};--c:{meta.color}" role="img" aria-label={m.map_counter_of({ count: count.mine, total: count.total })}>
 		<!-- Disque intérieur plutôt qu'un mask : un mask découperait aussi le chiffre. -->
 		<span class="tnum">{pct}<i>%</i></span>
@@ -50,26 +50,11 @@
 
 <style>
 	.hero {
-		position: relative;
 		flex: none;
 		display: flex;
 		align-items: center;
 		gap: 11px;
-		overflow: hidden;
 		padding: 11px 12px;
-		border-radius: var(--r-md);
-		border: 1px solid var(--border-strong);
-		background: radial-gradient(120% 130% at 30% -40%, hsl(222 30% 17%), var(--surface-1) 68%);
-	}
-	.hero::before {
-		content: '';
-		position: absolute;
-		top: -110px;
-		left: 30%;
-		width: 220px;
-		height: 180px;
-		background: radial-gradient(closest-side, hsl(199 90% 55% / 0.2), transparent);
-		pointer-events: none;
 	}
 	.ring {
 		position: relative;
@@ -79,7 +64,7 @@
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-		background: conic-gradient(var(--c) calc(var(--p) * 1%), hsl(220 30% 90% / 0.08) 0);
+		background: conic-gradient(var(--c) calc(var(--p) * 1%), var(--border) 0);
 	}
 	.ring::after {
 		content: '';
@@ -139,10 +124,18 @@
 		gap: 6px;
 	}
 	.share {
+		position: relative;
 		background: none;
 		border: none;
 		color: var(--text-3);
 		padding: 2px 4px;
+	}
+	@media (pointer: coarse) {
+		.share::after {
+			content: '';
+			position: absolute;
+			inset: -9px -11px;
+		}
 	}
 	.eye {
 		display: flex;

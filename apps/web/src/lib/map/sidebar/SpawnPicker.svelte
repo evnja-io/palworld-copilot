@@ -4,6 +4,7 @@
 	import { palIcon } from '$lib/game/icons';
 	import { gameName } from '$lib/game/names';
 	import { spawnCounts, hasSpawns } from '$lib/game/spawns';
+	import { norm } from '$lib/map/query';
 	import type { SpawnPhase } from '$lib/map/spawnLayer';
 
 	let {
@@ -32,7 +33,7 @@
 
 	const matches = $derived(
 		search.trim()
-			? ALL.filter((p) => p.name.toLowerCase().includes(search.trim().toLowerCase())).slice(0, 40)
+			? ALL.filter((p) => norm(p.name).includes(norm(search.trim()))).slice(0, 40)
 			: ALL.slice(0, 40)
 	);
 </script>
@@ -44,9 +45,9 @@
 		<span class="tnum n">{m.map_spawn_zones({ count: phase === 'day' ? counts.day : counts.night })}</span>
 		<button class="x" aria-label={m.map_spawn_clear()} onclick={() => onpal(null)}>×</button>
 	</div>
-	<div class="seg">
-		<button class:on={phase === 'day'} onclick={() => onphase('day')}>☀ {m.map_spawn_day()}</button>
-		<button class:on={phase === 'night'} onclick={() => onphase('night')}>☾ {m.map_spawn_night()}</button>
+	<div class="seg" role="group" aria-label={m.map_spawn_phase()}>
+		<button class:on={phase === 'day'} aria-pressed={phase === 'day'} onclick={() => onphase('day')}>☀ {m.map_spawn_day()}</button>
+		<button class:on={phase === 'night'} aria-pressed={phase === 'night'} onclick={() => onphase('night')}>☾ {m.map_spawn_night()}</button>
 	</div>
 {/if}
 
@@ -97,10 +98,18 @@
 		color: var(--text-3);
 	}
 	.x {
+		position: relative;
 		background: none;
 		border: none;
 		color: var(--text-3);
 		padding: 0 4px;
+	}
+	@media (pointer: coarse) {
+		.x::after {
+			content: '';
+			position: absolute;
+			inset: -11px;
+		}
 	}
 	.seg {
 		flex: none;
@@ -137,6 +146,7 @@
 		min-height: 34px;
 		background: none;
 		border: none;
+		border-left: 2px solid transparent;
 		padding: 4px 6px;
 		border-radius: var(--r-sm);
 		text-align: left;
@@ -146,7 +156,7 @@
 	}
 	.prow.on {
 		background: var(--accent-soft);
-		box-shadow: inset 2px 0 0 var(--accent);
+		border-left-color: var(--accent);
 	}
 	.pn {
 		flex: 1;
