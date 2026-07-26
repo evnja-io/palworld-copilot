@@ -224,14 +224,16 @@
 		{:else}
 			<!-- Cartes de sélection de base : nom + occupation. -->
 			<div class="bases-row" role="group" aria-label={m.bases_title()}>
-				{#each guild.bases as b (b.baseId)}
+				{#each guild.bases as b, bi (b.baseId)}
 					<button
 						class="base-card"
 						class:on={b.baseId === base?.baseId}
 						aria-pressed={b.baseId === base?.baseId}
 						onclick={() => (basePick = b.baseId)}
 					>
-						<span class="base-name">{b.name ?? m.bases_base_unnamed()}</span>
+						<!-- Sans nom exploitable (gabarit interne du jeu filtré à l'import) :
+						     numérotation stable par guilde. -->
+						<span class="base-name">{b.name ?? m.bases_base_n({ n: bi + 1 })}</span>
 						<span class="base-cap tnum">
 							{m.bases_assigned_count({
 								count: b.assigned.length,

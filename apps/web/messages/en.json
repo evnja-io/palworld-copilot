@@ -468,7 +468,7 @@
   "bases_empty_body": "Guilds and bases will appear after the next save import.",
   "bases_unclaimed": "Claim your player GUID to auto-select your guild.",
   "bases_no_my_guild": "Your GUID doesn't belong to any imported guild — showing the first guild.",
-  "bases_base_unnamed": "Unnamed base",
+  "bases_base_n": "Base {n}",
   "bases_assigned_title": "Assigned Pals",
   "bases_assigned_count": "{count} / {slots} slots",
   "bases_assigned_empty": "No Pals assigned to this base.",

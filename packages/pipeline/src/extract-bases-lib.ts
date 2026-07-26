@@ -70,6 +70,13 @@ function decodedRaw(entry: unknown): Record<string, any> | null {
   return raw;
 }
 
+/** Nom de base exploitable : les camps ne sont pas renommables en jeu et la
+ *  save porte un gabarit interne (« 新規生成拠点テンプレート名11(仮) », validé
+ *  sur import réel du 2026-07-26) ; traité comme absent. */
+function cleanBaseName(name: string | null): string | null {
+  return name !== null && /テンプレート名/.test(name) ? null : name;
+}
+
 /** GUID normalisé depuis un champ RawData (string éventuellement enveloppée). */
 function guidField(v: unknown): string | null {
   const s = str(v);
@@ -201,7 +208,9 @@ export function extractBaseData(
     const base: SaveBaseRow = {
       baseId,
       guildId,
-      name: str(raw.name),
+      // Le jeu stocke un nom-gabarit interne (« 新規生成拠点テンプレート名11(仮) »,
+      // observé sur save réelle) : traité comme absent, l'UI numérote les bases.
+      name: cleanBaseName(str(raw.name)),
       worldX: num(tr?.x),
       worldY: num(tr?.y),
       worldZ: num(tr?.z),

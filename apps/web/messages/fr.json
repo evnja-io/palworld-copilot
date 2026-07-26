@@ -468,7 +468,7 @@
   "bases_empty_body": "Les guildes et bases apparaîtront après le prochain import de sauvegarde.",
   "bases_unclaimed": "Revendique ton GUID de joueur pour retrouver ta guilde automatiquement.",
   "bases_no_my_guild": "Ton GUID n'appartient à aucune guilde importée — première guilde affichée.",
-  "bases_base_unnamed": "Base sans nom",
+  "bases_base_n": "Base {n}",
   "bases_assigned_title": "Pals assignés",
   "bases_assigned_count": "{count} / {slots} emplacements",
   "bases_assigned_empty": "Aucun Pal assigné à cette base.",

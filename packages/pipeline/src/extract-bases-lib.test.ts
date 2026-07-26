@@ -219,6 +219,18 @@ describe("extractBaseData", () => {
     expect(stats.malformedGroups).toBe(2);
   });
 
+  it("filtre le nom-gabarit interne du jeu (テンプレート名) en nom absent", () => {
+    const { bases } = extractBaseData(
+      [groupEntry()],
+      [
+        baseEntry({ name: "新規生成拠点テンプレート名11(仮)" }),
+        baseEntry({ id: BASE2, name: "Vraie base" }),
+      ],
+      [],
+    );
+    expect(bases.map((b) => b.name)).toEqual([null, "Vraie base"]);
+  });
+
   it("compte une base à la RawData non décodée ({ values }) sans jeter", () => {
     const { bases, stats } = extractBaseData([], [baseEntry({ raw: { values: [9, 9] } })], []);
     expect(bases).toHaveLength(0);
