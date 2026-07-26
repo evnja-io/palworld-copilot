@@ -3345,7 +3345,7 @@ Ajouter en tête de `docs/decisions.md` (le registre est chronologique, entrées
 spawners de Pals avec `palId`, 69 boss humains à `palId: "None"`) et cachait les
 tours dans les points de voyage rapide - les 8 arènes de boss sont des `ft` dont
 le `nameId` est connu (`FTPoint45`, `Boss_Forest`, `SkyIsland_BOSS`, `FTPoint3`,
-`FTPoint9`, `FTPoint20`, `FTPoint67`, `FTPoint76`), et 22 autres sont des tours
+`FTPoint9`, `FTPoint20`, `FTPoint67`, `FTPoint76`), et 20 autres sont des tours
 d'observation (`WatchTower_*`). Par ailleurs 33 `SpawnerID` occupaient deux
 emplacements : autant d'ids dupliqués, donc **33 marqueurs jamais affichés**
 (`MarkerController` indexe par id) et un `each_key_duplicate` sur toute liste
