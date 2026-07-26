@@ -440,8 +440,9 @@ le `nameId` est connu (`FTPoint45`, `Boss_Forest`, `SkyIsland_BOSS`, `FTPoint3`,
 d'observation (`WatchTower_*`). Par ailleurs 33 des 69 entrées à `palId: "None"`
 étaient des **doublons exacts** : `DT_BossSpawnerLoactionData` contient chaque
 boss PNJ deux fois (même `SpawnerID`, même position, même niveau) - pas deux
-spawners à des emplacements différents comme on l'a d'abord cru. `type` prenait
-donc un id dupliqué pour 33 entrées : `MarkerController` (indexé par id) les
+spawners à des emplacements différents comme on l'a d'abord cru. L'id étant
+dérivé du `SpawnerID`, 33 entrées portaient donc le même id que leur jumelle :
+`MarkerController` (indexé par id) les
 fusionnait déjà silencieusement, correctement pour cette donnée, mais tout
 `{#each}` Svelte keyé par id lève `each_key_duplicate` sur le même doublon.
 **Décisions** : (a) la classification vit dans le pipeline
@@ -459,6 +460,15 @@ commité sans réextraction ; (e) `verify.ts` échoue désormais sur un id dupli
 distinctes) et le total de `markers.json` de 447 à 414. Aucune migration de
 base : les entrées fusionnées sont toutes des boss PNJ, jamais cochés, absents
 de la table `progress`.
+**Limite connue de la clé de fusion** : elle ne comprend ni `id` ni `nameId`.
+Deux entités réellement distinctes du même `type` tombant sur le même pixel
+arrondi seraient donc fusionnées à tort, la première dans l'ordre de tri
+gagnant. Inoffensif aujourd'hui — aucune des 414 entrées ne partage de position
+avec une autre (la paire la plus proche est à 6,9 px, et un pixel arrondi vaut
+~18 cm de monde) — mais le risque se matérialiserait à une future
+régénération, sans qu'aucune borne de volumétrie ne le signale. Ajouter
+`nameId` (et `id` hors `boss`) à la clé refermerait la porte : à faire à la
+prochaine intervention sur le pipeline.
 
 ## 2026-07-26 - Tous les marqueurs cochables
 

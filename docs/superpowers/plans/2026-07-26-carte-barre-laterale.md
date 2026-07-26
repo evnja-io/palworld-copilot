@@ -390,8 +390,9 @@ Expected: `markers.json normalisé : 414 marqueurs — 138 effigies, 83 alphas, 
 > réparation : la bonne est de dédoublonner ces entrées, pas de les
 > renommer pour les garder toutes les deux. Voir `docs/decisions.md`,
 > « Catégories de marqueurs et ids uniques », pour le détail vérifié sur les
-> données. Tous les comptages ci-dessous (447/69) datent d'avant cette
-> correction et sont historiques.
+> données. Les valeurs `Expected:` de ce plan ont été remises à jour (414 au
+> total, 36 boss) ; seuls les blocs explicitement marqués comme historiques
+> conservent les anciens chiffres.
 
 Vérifier l'unicité et les volumes :
 
