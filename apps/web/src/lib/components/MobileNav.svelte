@@ -56,20 +56,9 @@
 	// Un <dialog> modal neutralise les clics du fond mais PAS son défilement :
 	// arrivé au bout de la feuille, le geste continuait sur la page derrière.
 	// Le nettoyage passe par le retour de l'effet, donc il s'exécute aussi au
-	// démontage (navigation la feuille ouverte).
-	$effect(() => {
-		if (!open) return;
-		const previous = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
-		return () => {
-			document.body.style.overflow = previous;
-		};
-	});
-
-	// Un <dialog> modal neutralise les clics du fond mais PAS son défilement :
-	// sans ce verrou, faire défiler la feuille jusqu'au bout emporte la page
-	// derrière elle. Le nettoyage passe par le retour de l'effet, donc il
-	// s'exécute aussi au démontage du composant.
+	// démontage (navigation la feuille ouverte). Un seul effet : deux verrous
+	// mémorisent chacun l'état laissé par l'autre et se restaurent en cascade,
+	// ce qui rend le `hidden` permanent.
 	$effect(() => {
 		if (!open) return;
 		const previous = document.body.style.overflow;
@@ -186,10 +175,19 @@
 		border: none;
 		background: none;
 		overflow: hidden;
-		display: flex;
+		/* `display` doit rester conditionnel à [open]. Une feuille de style
+		   d'auteur l'emporte sur celle de l'UA : un `display: flex` inconditionnel
+		   écrase `dialog:not([open]) { display: none }`, et le calque plein écran
+		   survit à la fermeture — invisible (opacity: 0) mais toujours
+		   `position: fixed; inset: 0`, donc avalant tous les clics de la page
+		   jusqu'au rechargement. */
+		display: none;
 		flex-direction: column;
 		justify-content: flex-end;
 		color: var(--text-1);
+	}
+	.sheet[open] {
+		display: flex;
 	}
 	.sheet::backdrop {
 		background: hsl(222 40% 4% / 0.6);
