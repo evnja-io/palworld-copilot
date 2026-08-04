@@ -1,50 +1,88 @@
-/* Palworld Companion - direction « expédition nocturne ».
-   Une teinte de base (bleu-ardoise 222°), accent unique bleu Pal Sphere,
-   profondeur par bordures + paliers de surface (pas d'ombres). */
+/* Palworld Companion — direction « Atlas ».
+   Vitrine éditoriale sombre, orange de marque, cartes et héros teintés par
+   élément de Pal. Les tokens vivent dans palwork-theme.css (livré par le
+   handoff, importé tel quel) ; ce fichier ne porte que le pont vers les
+   variables historiques et les primitives globales. */
 
+/* ── Tailwind v4, SANS préflight ──────────────────────────────────────────
+   Le reset de préflight (« * { margin:0; padding:0 } », « ol,ul { list-style:none } »,
+   « img,svg { display:block } ») casserait le rythme vertical des écrans pas
+   encore refondus, qui héritent des marges par défaut de l'UA — sans aucun
+   signal à la compilation. En échange il n'apporte rien aux écrans Atlas :
+   box-sizing est déjà global ci-dessous, et le HTML de référence pose
+   « margin:0 » explicitement sur chaque h1/p qu'il style.
+
+   ⚠ Ne PAS « simplifier » ces trois lignes en « @import "tailwindcss" » : ça
+   réintroduit le reset, et la régression est silencieuse.
+   La couche « components » doit être déclarée : palwork-theme.css y range
+   .el-card / .el-badge / .el-hero / .lift. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+/* theme(static) : sans ça, Tailwind ne publie que les tokens qu'il VOIT
+   utilisés dans le graphe CSS qu'il analyse — et il n'analyse ni les blocs
+   <style> scopés de Svelte, ni les `var(--color-el-…)` fabriqués à l'exécution
+   par lib/game/elements.ts. La moitié de la palette (--color-brand,
+   --radius-card, --color-el-eau…) disparaissait donc du build, et chaque
+   var() concernée tombait dans le vide, sans erreur. */
+@import './palwork-theme.css' theme(static);
+
+/* ── Pont vers les variables historiques ──────────────────────────────────
+   ~40 composants consomment encore --bg / --surface-* / --text-* / --accent /
+   --el-* / --r-*. On les redéfinit sur la palette Atlas plutôt que de les
+   supprimer : les écrans pas encore réécrits basculent immédiatement sur la
+   nouvelle identité, et la migration écran par écran ne casse jamais l'app en
+   cours de route. Ce bloc disparaîtra quand plus rien ne le référencera.
+
+   Il n'est volontairement PAS dans une @layer : il doit l'emporter sur les
+   valeurs de @theme là où les deux définissent la même chose (typo). */
 :root {
-	/* Surfaces (paliers whisper-quiet) */
-	--bg: hsl(222 30% 7%);
-	--surface-1: hsl(222 26% 10%);
-	--surface-2: hsl(222 24% 13%);
-	--surface-3: hsl(222 22% 16%);
-	--input-bg: hsl(222 30% 6%);
+	/* Surfaces */
+	--bg: #0d0e12;
+	--surface-1: #15161c;
+	--surface-2: #1a1b22;
+	--surface-3: #232430; /* dérivé : Atlas n'a que deux paliers */
+	--input-bg: #0d0e12; /* cf. 3d, l'input du wizard est sur le fond */
 
-	/* Texte - 4 niveaux */
-	--text-1: hsl(220 25% 93%);
-	--text-2: hsl(220 15% 72%);
-	--text-3: hsl(220 10% 52%);
-	--text-4: hsl(220 8% 38%);
+	/* Texte — 4 niveaux */
+	--text-1: #eceef2;
+	--text-2: #c7ccd6; /* cf. 3a, libellés « Bois / Pierre » */
+	--text-3: #8f96a3;
+	--text-4: #5c636e; /* cf. 4a, onglets inactifs et « Slot vide » */
 
 	/* Bordures */
-	--border: hsl(220 30% 90% / 0.08);
-	--border-strong: hsl(220 30% 90% / 0.15);
-	--focus-ring: hsl(199 90% 55% / 0.55);
+	--border: color-mix(in oklab, white 7%, transparent);
+	--border-strong: color-mix(in oklab, white 14%, transparent);
+	--focus-ring: color-mix(in oklab, #ff7a2f 60%, transparent);
 
-	/* Accent : bleu Pal Sphere */
-	--accent: hsl(199 90% 55%);
-	--accent-soft: hsl(199 90% 55% / 0.14);
-	--accent-ink: hsl(222 40% 8%);
+	/* Accent : orange de marque (remplace le bleu Pal Sphere) */
+	--accent: #ff5a0f;
+	--accent-soft: color-mix(in oklab, #ff5a0f 14%, transparent);
+	/* Était sombre : le CTA de marque porte désormais du blanc. */
+	--accent-ink: #ffffff;
 
-	/* Éléments du jeu (couleurs canoniques) */
-	--el-fire: #f45b3d;
-	--el-water: #38a4e6;
-	--el-leaf: #6cbf43;
-	--el-electricity: #f0c33c;
-	--el-ice: #7fd4e8;
-	--el-earth: #b5763c;
-	--el-dark: #a06bd6;
-	--el-dragon: #7f6df2;
-	--el-normal: #b8b1a4;
+	/* Éléments — teintes Atlas, clés anglaises conservées (elles sont
+	   stockées en dur dans lib/map/categories.ts). */
+	--el-fire: #ff5a0f;
+	--el-water: #2f8fff;
+	--el-leaf: #3fb950;
+	--el-electricity: #f5c518;
+	--el-ice: #56c8e8;
+	--el-earth: #c98a3d;
+	--el-dark: #8b5cf6;
+	--el-dragon: #7c5cff;
+	--el-normal: #a8a29e;
 
-	/* Rayons */
-	--r-sm: 6px;
-	--r-md: 10px;
-	--r-lg: 14px;
+	/* Rayons — Atlas est nettement plus rond */
+	--r-sm: 8px;
+	--r-md: 14px; /* = --radius-panel */
+	--r-lg: 20px; /* = --radius-card */
 
-	/* Typo */
-	--font-display: 'Space Grotesk Variable', system-ui, sans-serif;
-	--font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+	/* Typo — MÊMES valeurs que le @theme, volontairement. Ce bloc n'étant pas
+	   layered, il l'emporte : les deux doivent rester synchronisés, sinon
+	   h1/h2/h3 et l'utilitaire font-display divergent. */
+	--font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+	--font-body: 'Space Grotesk', system-ui, sans-serif;
 }
 
 * {
@@ -65,15 +103,27 @@ body {
 	line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: var(--font-display);
+	font-weight: 800;
 	letter-spacing: -0.02em;
 	text-wrap: balance;
 	margin: 0 0 0.5em;
 }
-h1 { font-size: 24px; font-weight: 600; }
-h2 { font-size: 17px; font-weight: 600; color: var(--text-2); }
-h3 { font-size: 14px; font-weight: 500; color: var(--text-2); }
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 17px;
+	color: var(--text-2);
+}
+h3 {
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--text-2);
+}
 
 a {
 	color: inherit;
@@ -91,7 +141,9 @@ button {
 	border-radius: var(--r-sm);
 	padding: 6px 12px;
 	cursor: pointer;
-	transition: background 140ms cubic-bezier(0.23, 1, 0.32, 1), border-color 140ms;
+	transition:
+		background 140ms var(--ease-out-soft),
+		border-color 140ms;
 }
 button:hover {
 	background: var(--surface-3);
@@ -108,7 +160,8 @@ select:focus-visible {
 	outline-offset: 1px;
 }
 
-input, select {
+input,
+select {
 	font: inherit;
 	color: var(--text-1);
 	background: var(--input-bg);
@@ -125,7 +178,8 @@ input::placeholder {
    sous 16 px. Avec le corps à 14 px hérité par `font: inherit`, chaque
    recherche (paldex, objets, carte…) déclenchait ce zoom — la mise en page
    partait de travers et n'y revenait pas seule. 16 px le neutralise ; la
-   hauteur de 44 px vient avec, c'est le plancher tactile.
+   hauteur de 44 px vient avec, c'est le plancher tactile — et c'est aussi ce
+   qui tient la contrainte « hit targets ≥ 44 px » du handoff.
    Cases, boutons radio et curseurs sont exclus : leur boîte est dessinée par
    l'UA et leur zone de tap est déjà élargie là où il faut (voir ResultList,
    RefineControls). */
@@ -141,17 +195,70 @@ input::placeholder {
 	font-variant-numeric: tabular-nums;
 }
 
-/* ── Direction expressive « expédition nocturne » : primitives partagées entre
-   l'onboarding (assistant), les écrans serveur (liste, réglages, envoi) et
-   l'en-tête (lib/components/AppHeader.svelte, action primaire de connexion).
-   L'animation .exp-glossy est neutralisée par le bloc prefers-reduced-motion. ── */
+/* ── Primitives Atlas ─────────────────────────────────────────────────────
+   Complètent les recettes du thème (.el-card / .el-badge / .el-hero / .lift),
+   qui ne doivent pas être modifiées. */
+
+/* Survol des rangées et des CTA : −2 px là où les cartes font −4 px. */
+.lift-sm {
+	transition: transform var(--duration-hover) var(--ease-out-soft);
+}
+.lift-sm:hover {
+	transform: translateY(-2px);
+}
+
+/* Reprend la gouttière de <main> en marge négative : sert aux sections qui
+   doivent aller plus large que la colonne de texte (héros de la fiche Pal, à
+   20 px des bords ; cadre de la carte). `--pull` permet de ne pas aller
+   jusqu'au bord : 20px de marge = gouttière 36 - 16 de rattrapage. */
+.full-bleed {
+	margin-left: calc(-1 * (var(--gutter, 36px) - var(--pull, 0px)));
+	margin-right: calc(-1 * (var(--gutter, 36px) - var(--pull, 0px)));
+}
+
+/* Teinte bi-type. Le thème n'a que la recette mono-type ; 87 Pals sur 288 ont
+   deux éléments. --el2 retombe sur --el en mono-type et --el2-a porte l'alpha
+   de fin (4 % mono, 8 % bi) — valeurs relevées dans le HTML de référence
+   (2b slots 2 et 3). */
+.el-card-dual {
+	background:
+		linear-gradient(
+			170deg,
+			color-mix(in srgb, var(--el) var(--el-a, 24%), transparent),
+			color-mix(in srgb, var(--el2, var(--el)) var(--el2-a, 4%), transparent)
+		),
+		var(--color-surface);
+}
+
+/* Animations globales plutôt que dans des <style> scopés : Svelte réécrit les
+   noms de keyframes déclarés localement, ce qui casserait la référence. */
+@keyframes pw-glow {
+	0%,
+	100% {
+		opacity: 0.55;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+.pw-float {
+	animation: pw-float 6s ease-in-out infinite;
+}
+.pw-glow {
+	animation: pw-glow 2.4s ease-in-out infinite;
+}
+
+/* ── Direction expressive héritée — primitives partagées par les écrans pas
+   encore refondus (liste serveurs, envoi, import, CTA de connexion de
+   l'en-tête). Rebasées sur l'orange de marque ; le balayage brillant
+   (.exp-glossy::after) a disparu, Atlas n'en a pas. ── */
 .exp-hero {
 	position: relative;
 	overflow: hidden;
 	padding: 22px 24px;
 	border-radius: var(--r-lg);
 	border: 1px solid var(--border-strong);
-	background: radial-gradient(120% 90% at 50% -20%, hsl(222 30% 15%), var(--surface-1) 60%);
+	background: radial-gradient(120% 90% at 50% -20%, #1a1b22, var(--surface-1) 60%);
 }
 .exp-hero::before {
 	content: '';
@@ -161,18 +268,18 @@ input::placeholder {
 	transform: translateX(-50%);
 	width: 420px;
 	height: 280px;
-	background: radial-gradient(closest-side, hsl(199 90% 55% / 0.18), transparent);
+	background: radial-gradient(closest-side, rgba(255, 90, 15, 0.18), transparent);
 	pointer-events: none;
 }
 .exp-kicker {
 	color: var(--accent);
 	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: 0.05em;
+	font-weight: 700;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
 }
 .exp-grad {
-	background: linear-gradient(180deg, var(--text-1), hsl(199 60% 78%));
+	background: linear-gradient(180deg, #eceef2, #ff8a3d);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -189,50 +296,38 @@ input::placeholder {
 	overflow: hidden;
 	border: none;
 	padding: 10px 18px;
-	border-radius: var(--r-md);
-	background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%));
-	color: var(--accent-ink);
-	font-weight: 600;
-	font-family: var(--font-display);
+	border-radius: 999px;
+	background: linear-gradient(135deg, #ff5a0f, #ff8a3d);
+	color: #fff;
+	font-weight: 700;
+	font-family: var(--font-body);
 }
 .exp-glossy {
-	box-shadow: 0 6px 20px hsl(199 90% 45% / 0.35);
+	box-shadow: 0 8px 24px rgba(255, 90, 15, 0.3);
 }
 .exp-btn:hover,
 .exp-glossy:hover {
-	background: linear-gradient(180deg, hsl(199 94% 66%), hsl(199 90% 50%));
+	background: linear-gradient(135deg, #ff6a24, #ff9a55);
 	border-color: transparent;
 	/* Ces boutons servent aussi de liens <a> : neutralise la règle globale
 	   a:hover (couleur accent) qui rendait le libellé illisible au survol. */
-	color: var(--accent-ink);
+	color: #fff;
+	transform: translateY(-2px);
 }
 .exp-btn:disabled,
 .exp-glossy:disabled {
 	opacity: 0.45;
 	box-shadow: none;
-}
-.exp-glossy::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -60%;
-	width: 40%;
-	height: 100%;
-	background: linear-gradient(105deg, transparent, hsl(0 0% 100% / 0.35), transparent);
-	transform: skewX(-18deg);
-	animation: exp-sweep 3.2s ease-in-out infinite;
-}
-.exp-glossy:disabled::after {
-	display: none;
-}
-@keyframes exp-sweep {
-	0%, 60% { left: -60%; }
-	85%, 100% { left: 130%; }
+	transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
 	* {
 		transition-duration: 0.01ms !important;
 		animation-duration: 0.01ms !important;
+		/* Sans ça, une animation infinie (pw-float, pw-glow) continue de tourner
+		   à 0,01 ms par cycle au lieu de s'arrêter. */
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
 	}
 }

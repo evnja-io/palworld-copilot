@@ -807,4 +807,26 @@
 		gap: 6px;
 		flex-wrap: wrap;
 	}
+
+	/* ── Passe « Atlas » — voir la note identique dans breeding/+page.svelte. */
+	h1 {
+		font-size: 40px;
+		letter-spacing: -0.03em;
+		margin-bottom: 4px;
+	}
+	.box,
+	.base-card {
+		background: var(--color-surface);
+		border: none;
+		border-radius: var(--radius-card);
+	}
+	.chip {
+		border-radius: 999px;
+		font-weight: 600;
+	}
+	@media (max-width: 1023.98px) {
+		h1 {
+			font-size: 34px;
+		}
+	}
 </style>

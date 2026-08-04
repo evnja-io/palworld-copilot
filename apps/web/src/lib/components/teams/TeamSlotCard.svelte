@@ -1,9 +1,16 @@
 <script lang="ts">
+	// Héros du slot sélectionné — 2b l.596 (desktop) et 4c l.262 (mobile).
+	//
+	// Le dessin ne montre que le nom, la compétence de partenaire et les
+	// attaques. Les passifs, eux, sont une fonctionnalité livrée (4 par slot) :
+	// ils descendent sous les attaques plutôt que de disparaître.
 	import { m } from '$lib/paraglide/messages';
 	import { gameName } from '$lib/game/names';
 	import { palIcon } from '$lib/game/icons';
 	import { partnerSkillNsId, passiveRank } from '$lib/game/team-data';
-	import ElementBadge from '$lib/components/ElementBadge.svelte';
+	import { elVars } from '$lib/game/elements';
+	import ElementHero from '$lib/components/atlas/ElementHero.svelte';
+	import AttackRow from '$lib/components/atlas/AttackRow.svelte';
 	import GroupAvatars from '$lib/components/GroupAvatars.svelte';
 	import pals from '@palworld-companion/game-data/pals.json';
 	import skills from '@palworld-companion/game-data/skills.json';
@@ -36,340 +43,341 @@
 	const mine = $derived(new Set(caught.mine));
 </script>
 
-<div class="detail">
-	{#if slot === null}
-		<div class="empty">
-			<p class="slot-num">#<span class="tnum">{index + 1}</span></p>
-			<p class="empty-label">{m.teams_slot_empty()}</p>
-			{#if !readonly}
-				<button class="primary" onclick={() => onpick('pal', index)}>{m.teams_add_pal()}</button>
+{#if slot === null}
+	<div class="empty">
+		<p class="slot-num">{m.teams_slot_n({ n: index + 1 })}</p>
+		<p class="empty-label">{m.teams_slot_empty()}</p>
+		{#if !readonly}
+			<button class="cta-white" onclick={() => onpick('pal', index)}>{m.teams_add_pal()}</button>
+		{/if}
+	</div>
+{:else}
+	<ElementHero {elements} variant="team" stripes={false}>
+		{#snippet media()}
+			<span class="portrait">
+				{#if palIcon(slot.palId)}
+					<img class:uncaught={!mine.has(slot.palId)} src={palIcon(slot.palId)} alt="" />
+				{:else}
+					<span class="no-icon" aria-hidden="true">?</span>
+				{/if}
+			</span>
+		{/snippet}
+
+		<div class="eyebrow" style={elVars(elements)}>
+			{m.teams_slot_n({ n: index + 1 })} · {m.teams_partner_skill()} —
+			<span class="ps">{gameName(partnerSkillNsId(slot.palId))}</span>
+		</div>
+		<h2>{gameName(`pal:${slot.palId}`)}</h2>
+		<!-- Enveloppé : en `display: contents`, la racine du composant prendrait
+		     sa propre cellule de grille et retomberait en colonne 1. -->
+		<span class="avatars"><GroupAvatars users={caught.group[slot.palId] ?? []} /></span>
+
+		<div class="rows">
+			{#each slot.actives as sid (sid)}
+				{@const sk = SKILLS[sid]}
+				<div class="rowwrap">
+					<AttackRow
+						variant="hero"
+						name={gameName(`skill:${sid}`)}
+						power={sk?.power ?? 0}
+						cooldown={sk?.ct}
+						element={sk?.element ?? elements[0]}
+					/>
+					{#if !readonly}
+						<button
+							class="x"
+							onclick={() => onremoveid('active', index, sid)}
+							aria-label="{m.teams_delete()} — {gameName(`skill:${sid}`)}"
+						>
+							×
+						</button>
+					{/if}
+				</div>
+			{/each}
+			{#if !readonly && slot.actives.length < 3}
+				<button class="add" onclick={() => onpick('active', index)}>
+					+ {m.teams_add_active()} <span class="count tnum">{slot.actives.length}/3</span>
+				</button>
 			{/if}
 		</div>
-	{:else}
-		<header class="head">
-			{#if palIcon(slot.palId)}
-				<img
-					class="portrait"
-					class:uncaught={!mine.has(slot.palId)}
-					src={palIcon(slot.palId)}
-					alt=""
-					width="88"
-					height="88"
-				/>
-			{:else}
-				<span class="no-icon" aria-hidden="true">?</span>
+
+		<div class="passives">
+			<span class="plabel">
+				{m.teams_passive_skills()}
+				<span class="count tnum">{slot.passives.length}/4</span>
+			</span>
+			{#each slot.passives as pid (pid)}
+				<span class="chip" class:high={passiveRank(pid) >= 4}>
+					{gameName(`passive:${pid}`)}
+					{#if !readonly}
+						<button
+							class="x"
+							onclick={() => onremoveid('passive', index, pid)}
+							aria-label="{m.teams_delete()} — {gameName(`passive:${pid}`)}"
+						>
+							×
+						</button>
+					{/if}
+				</span>
+			{/each}
+			{#if !readonly && slot.passives.length < 4}
+				<button class="add small" onclick={() => onpick('passive', index)}>
+					+ {m.teams_add_passive()}
+				</button>
 			{/if}
-			<div class="id">
-				<p class="slot-num">#<span class="tnum">{index + 1}</span></p>
-				<p class="name">{gameName(`pal:${slot.palId}`)}</p>
-				<div class="tags">
-					{#each elements as el (el)}<ElementBadge element={el} />{/each}
-					<GroupAvatars users={caught.group[slot.palId] ?? []} />
-				</div>
+		</div>
+
+		{#if !readonly}
+			<div class="actions">
+				<button class="cta-white" onclick={() => onpick('pal', index)}>
+					{m.teams_change_pal()}
+				</button>
+				<button class="cta-ghost" onclick={() => onclear(index)}>{m.teams_remove_pal()}</button>
 			</div>
-			{#if !readonly}
-				<div class="actions">
-					<button onclick={() => onpick('pal', index)}>{m.teams_change_pal()}</button>
-					<button class="danger" onclick={() => onclear(index)}>{m.teams_remove_pal()}</button>
-				</div>
-			{/if}
-		</header>
-
-		<p class="partner">
-			<span class="partner-label">{m.teams_partner_skill()}</span>
-			<span class="partner-name">{gameName(partnerSkillNsId(slot.palId))}</span>
-		</p>
-
-		<div class="cols">
-			<section>
-				<h3 class="col-title">
-					{m.teams_passive_skills()}
-					<span class="count tnum">{slot.passives.length}/4</span>
-				</h3>
-				{#if slot.passives.length}
-					<ul class="chips">
-						{#each slot.passives as pid (pid)}
-							<li class="chip" class:high={passiveRank(pid) >= 4}>
-								<span class="chip-name">{gameName(`passive:${pid}`)}</span>
-								{#if !readonly}
-									<button
-										class="x"
-										onclick={() => onremoveid('passive', index, pid)}
-										aria-label="{m.teams_delete()} — {gameName(`passive:${pid}`)}"
-									>
-										×
-									</button>
-								{/if}
-							</li>
-						{/each}
-					</ul>
-				{/if}
-				{#if !readonly && slot.passives.length < 4}
-					<button class="add" onclick={() => onpick('passive', index)}>
-						+ {m.teams_add_passive()}
-					</button>
-				{/if}
-			</section>
-
-			<section>
-				<h3 class="col-title">
-					{m.teams_active_skills()}
-					<span class="count tnum">{slot.actives.length}/3</span>
-				</h3>
-				{#if slot.actives.length}
-					<ul class="moves">
-						{#each slot.actives as sid (sid)}
-							{@const sk = SKILLS[sid]}
-							<li class="move">
-								<span class="move-name">{gameName(`skill:${sid}`)}</span>
-								{#if sk?.element}<ElementBadge element={sk.element} />{/if}
-								{#if sk?.power}<span class="muted tnum">💥 {sk.power}</span>{/if}
-								{#if sk?.ct}<span class="muted tnum">⏱ {sk.ct}s</span>{/if}
-								{#if !readonly}
-									<button
-										class="x"
-										onclick={() => onremoveid('active', index, sid)}
-										aria-label="{m.teams_delete()} — {gameName(`skill:${sid}`)}"
-									>
-										×
-									</button>
-								{/if}
-							</li>
-						{/each}
-					</ul>
-				{/if}
-				{#if !readonly && slot.actives.length < 3}
-					<button class="add" onclick={() => onpick('active', index)}>
-						+ {m.teams_add_active()}
-					</button>
-				{/if}
-			</section>
-		</div>
-	{/if}
-</div>
+		{/if}
+	</ElementHero>
+{/if}
 
 <style>
-	.detail {
-		background: var(--surface-1);
-		border: 1px solid var(--border);
-		border-radius: var(--r-lg);
-		padding: 16px;
-	}
 	.empty {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		display: grid;
+		place-items: center;
 		gap: 8px;
-		padding: 28px 0;
+		padding: 48px 20px;
+		text-align: center;
+		background: #121318;
+		border: 1.5px dashed rgba(255, 255, 255, 0.12);
+		border-radius: 22px;
 	}
 	.slot-num {
 		margin: 0;
-		font-family: var(--font-display);
-		font-size: 11px;
-		font-weight: 600;
-		letter-spacing: 0.08em;
-		color: var(--text-4);
-		text-transform: uppercase;
+		font: 10.5px ui-monospace, Menlo, monospace;
+		color: rgba(255, 255, 255, 0.4);
 	}
 	.empty-label {
 		margin: 0;
-		color: var(--text-3);
+		color: #5c636e;
+		font-size: 13px;
 	}
-	.primary {
-		background: var(--accent);
-		color: var(--accent-ink);
-		border-color: transparent;
-		font-weight: 600;
-		min-height: 44px;
-		padding: 8px 18px;
-	}
-	.primary:hover {
-		background: color-mix(in srgb, var(--accent) 85%, white);
-		border-color: transparent;
-	}
-	.head {
-		display: flex;
-		align-items: flex-start;
-		gap: 14px;
-		flex-wrap: wrap;
-	}
+
 	.portrait {
-		border-radius: var(--r-md);
-		background: var(--surface-2);
-		/* Signature Paldex : non capturé = désaturé. */
-		flex-shrink: 0;
+		display: grid;
+		place-items: center;
+		width: 100%;
+		aspect-ratio: 1;
+		border-radius: 18px;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(255, 255, 255, 0.08) 0 14px,
+			rgba(255, 255, 255, 0.02) 14px 28px
+		);
 	}
-	.portrait.uncaught {
+	.portrait img {
+		width: 78%;
+		height: 78%;
+		object-fit: contain;
+		filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.5));
+	}
+	.portrait img.uncaught {
 		filter: grayscale(1) opacity(0.45);
 	}
 	.no-icon {
-		width: 88px;
-		height: 88px;
-		flex-shrink: 0;
+		font-family: var(--font-display);
+		font-size: 34px;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.2);
+	}
+
+	.eyebrow {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: color-mix(in srgb, var(--el) 35%, white);
+	}
+	.ps {
+		white-space: nowrap;
+	}
+	h2 {
+		margin: 6px 0 14px;
+		font-size: 40px;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		color: #fff;
+	}
+
+	.rows {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		max-width: 440px;
+	}
+	/* La croix de retrait se superpose à la rangée : AttackRow ne connaît pas
+	   l'édition, et lui passer un slot juste pour ça l'alourdirait. */
+	.rowwrap {
+		position: relative;
+	}
+	.rowwrap .x {
+		position: absolute;
+		right: 6px;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	.rowwrap:hover .x,
+	.rowwrap:focus-within .x {
+		opacity: 1;
+	}
+
+	.x {
+		width: 22px;
+		height: 22px;
+		padding: 0;
 		display: grid;
 		place-items: center;
-		font-size: 24px;
-		color: var(--text-4);
-		background: var(--surface-2);
-		border-radius: var(--r-md);
+		border-radius: 50%;
+		border: none;
+		background: rgba(0, 0, 0, 0.45);
+		color: #fff;
+		font-size: 14px;
+		line-height: 1;
 	}
-	.id {
-		flex: 1;
-		min-width: 140px;
+	.x:hover {
+		background: rgba(0, 0, 0, 0.7);
 	}
-	.name {
-		margin: 2px 0 6px;
-		font-family: var(--font-display);
-		font-size: 20px;
-		font-weight: 600;
-		letter-spacing: -0.02em;
-	}
-	.tags {
-		display: flex;
+
+	.add {
+		align-self: flex-start;
+		display: inline-flex;
 		align-items: center;
-		gap: 6px;
-		flex-wrap: wrap;
-	}
-	.actions {
-		display: flex;
 		gap: 8px;
-		flex-wrap: wrap;
-	}
-	.actions button {
-		min-height: 44px;
-	}
-	.danger {
-		color: var(--el-fire);
-		border-color: color-mix(in srgb, var(--el-fire) 30%, transparent);
-	}
-	.danger:hover {
-		background: color-mix(in srgb, var(--el-fire) 12%, var(--surface-2));
-		border-color: color-mix(in srgb, var(--el-fire) 45%, transparent);
-	}
-	.partner {
-		display: flex;
-		align-items: baseline;
-		gap: 10px;
-		flex-wrap: wrap;
-		margin: 14px 0 0;
-		padding: 8px 12px;
-		background: color-mix(in srgb, var(--accent) 6%, var(--surface-2));
-		border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-		border-radius: var(--r-md);
-	}
-	.partner-label {
-		font-size: 10px;
+		padding: 9px 16px;
+		border-radius: 999px;
+		border: 1px dashed rgba(255, 255, 255, 0.28);
+		background: rgba(0, 0, 0, 0.2);
+		color: rgba(255, 255, 255, 0.85);
+		font-size: 12.5px;
 		font-weight: 600;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--accent);
 	}
-	.partner-name {
-		font-size: 13px;
-		color: var(--text-1);
+	.add:hover {
+		background: rgba(0, 0, 0, 0.35);
+		border-color: rgba(255, 255, 255, 0.45);
 	}
-	.cols {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 16px;
-		margin-top: 16px;
-	}
-	@media (max-width: 700px) {
-		.cols {
-			grid-template-columns: 1fr;
-		}
-	}
-	.col-title {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		gap: 8px;
-		margin: 0 0 8px;
+	.add.small {
+		padding: 6px 12px;
+		font-size: 11.5px;
 	}
 	.count {
-		font-size: 11px;
-		color: var(--text-4);
+		opacity: 0.6;
 	}
-	.chips {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+
+	.passives {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 6px;
+		align-items: center;
+		gap: 7px;
+		margin-top: 16px;
+		max-width: 440px;
+	}
+	.plabel {
+		font-size: 10.5px;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.55);
+		width: 100%;
 	}
 	.chip {
 		display: inline-flex;
 		align-items: center;
-		gap: 4px;
-		background: var(--surface-2);
-		border: 1px solid var(--border);
+		gap: 6px;
+		background: rgba(0, 0, 0, 0.28);
 		border-radius: 999px;
-		padding: 4px 10px;
+		padding: 6px 8px 6px 14px;
 		font-size: 12px;
-		color: var(--text-2);
+		color: #f1ecff;
 	}
 	.chip.high {
-		color: var(--el-electricity);
-		border-color: color-mix(in srgb, var(--el-electricity) 35%, transparent);
-		background: color-mix(in srgb, var(--el-electricity) 10%, var(--surface-2));
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 	}
-	.x {
-		background: none;
-		border: none;
-		padding: 2px 4px;
-		margin: -2px -4px -2px 0;
-		font-size: 13px;
-		line-height: 1;
-		color: var(--text-3);
+	.chip .x {
+		width: 18px;
+		height: 18px;
+		font-size: 12px;
 	}
-	.x:hover {
-		background: none;
-		color: var(--el-fire);
-		border: none;
-	}
-	.moves {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+
+	/* Colonne d'actions en haut à droite du héros (2b l.608). Détachée du flux :
+	   côté balisage elle suit le texte, mais le dessin la veut en troisième
+	   colonne. Le héros est `position: relative`. */
+	.actions {
+		position: absolute;
+		top: 28px;
+		right: 32px;
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
+		gap: 10px;
+		z-index: 1;
 	}
-	.move {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		background: var(--surface-2);
-		border: 1px solid var(--border);
-		border-radius: var(--r-md);
-		padding: 7px 10px;
+	.cta-white,
+	.cta-ghost {
+		padding: 10px 20px;
+		border-radius: 999px;
 		font-size: 13px;
-	}
-	.move-name {
-		flex: 1;
-		min-width: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		text-align: center;
 		white-space: nowrap;
+		transition: transform var(--duration-hover) var(--ease-out-soft);
 	}
-	.muted {
-		color: var(--text-3);
-		font-size: 11px;
-		white-space: nowrap;
+	.cta-white {
+		background: rgba(255, 255, 255, 0.92);
+		color: #1a1024;
+		border: none;
+		font-weight: 700;
 	}
-	.add {
-		margin-top: 8px;
-		width: 100%;
-		min-height: 44px;
+	.cta-white:hover {
+		background: #fff;
+		transform: translateY(-2px);
+	}
+	.cta-ghost {
 		background: none;
-		border: 1px dashed var(--border-strong);
-		color: var(--text-3);
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		color: #fff;
+		font-weight: 600;
 	}
-	.add:hover {
-		background: var(--surface-2);
-		color: var(--text-2);
-		border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-		border-style: dashed;
+	.cta-ghost:hover {
+		background: rgba(255, 255, 255, 0.12);
+	}
+
+	@media (max-width: 1023.98px) {
+		h2 {
+			font-size: 27px;
+			margin: 3px 0 0;
+		}
+		.eyebrow {
+			font-size: 9.5px;
+			letter-spacing: 0.13em;
+		}
+		.rows {
+			margin-top: 16px;
+			max-width: none;
+		}
+		.passives {
+			max-width: none;
+		}
+		/* Actions en duo pleine largeur, remises dans le flux (4c l.273). */
+		.actions {
+			position: static;
+			flex-direction: row;
+			margin-top: 16px;
+		}
+		.cta-white,
+		.cta-ghost {
+			flex: 1;
+			padding: 12px;
+			font-size: 12.5px;
+		}
+		/* La croix reste visible : pas de survol au doigt. */
+		.rowwrap .x {
+			opacity: 1;
+		}
 	}
 </style>

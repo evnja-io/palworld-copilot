@@ -232,4 +232,40 @@
 		background: color-mix(in srgb, var(--el-fire) 12%, var(--surface-2));
 		border-color: color-mix(in srgb, var(--el-fire) 45%, transparent);
 	}
+
+	/* ── Passe « Atlas » — même approche que breeding/bases : vocabulaire de la
+	   direction (titre display, cartes rondes, CTA en pilule), sans toucher à
+	   la structure. */
+	h1 {
+		font-size: 40px;
+		letter-spacing: -0.03em;
+	}
+	.card {
+		background: var(--color-surface);
+		border: 1px solid transparent;
+		border-radius: var(--radius-card);
+		transition:
+			border-color var(--duration-hover) var(--ease-out-soft),
+			transform var(--duration-hover) var(--ease-out-soft);
+	}
+	.card:hover {
+		background: var(--color-surface);
+		border-color: rgba(255, 122, 47, 0.35);
+		transform: translateY(-4px);
+	}
+	.card-name {
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 17px;
+	}
+	.new {
+		border-radius: 999px;
+		padding: 10px 20px;
+		font-weight: 700;
+	}
+	@media (max-width: 1023.98px) {
+		h1 {
+			font-size: 34px;
+		}
+	}
 </style>

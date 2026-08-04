@@ -1,6 +1,7 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import adapter from '@sveltejs/adapter-vercel';
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 // Locale par cookie : conservée telle quelle sur tout ce qui est privé ou
@@ -9,6 +10,9 @@ const COOKIE_LOCALE = ['cookie', 'preferredLanguage', 'baseLocale'] as const;
 
 export default defineConfig({
 	plugins: [
+		// Avant sveltekit() : le plugin doit voir le CSS avant que Svelte ne compile
+		// les blocs <style> scopés.
+		tailwindcss(),
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',

@@ -141,7 +141,7 @@
 	}
 	.card:hover {
 		color: inherit;
-		border-color: hsl(199 90% 55% / 0.45);
+		border-color: rgba(255, 90, 15, 0.45);
 		transform: translateY(-2px);
 	}
 	.card-head {

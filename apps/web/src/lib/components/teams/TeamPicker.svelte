@@ -264,7 +264,7 @@
 		position: fixed;
 		inset: 0;
 		z-index: 1100;
-		background: hsl(222 40% 4% / 0.6);
+		background: rgba(6, 7, 10, 0.6);
 		backdrop-filter: blur(3px);
 		display: flex;
 		align-items: flex-start;
@@ -281,7 +281,7 @@
 		border-radius: var(--r-lg);
 		overflow: hidden;
 		/* Seule ombre autorisée du design system : l'overlay. */
-		box-shadow: 0 24px 64px hsl(222 40% 2% / 0.6);
+		box-shadow: 0 24px 64px rgba(3, 4, 6, 0.6);
 	}
 	.head {
 		display: flex;

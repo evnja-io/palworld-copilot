@@ -409,4 +409,31 @@
 		font-size: 12px;
 		color: var(--text-4);
 	}
+
+	/* ── Passe « Atlas » (3c / 5b) ─────────────────────────────────────────
+	   Le canevas de la maquette est une illustration : la vraie carte est
+	   Leaflet sur tuiles. Ce qui est reprenable, c'est le CHROME — surfaces
+	   translucides, rayons généreux, poignée de feuille. La logique de
+	   glissement (SheetState), le rail et la liste ne bougent pas. */
+	.sb {
+		background: rgba(18, 19, 25, 0.92);
+		backdrop-filter: blur(10px);
+		border-right: 1px solid var(--color-line);
+	}
+	/* Feuille mobile : verre 95 %, coins à 24 px et ombre portée vers le haut
+	   (5b l.128). */
+	.sheet {
+		background: rgba(18, 19, 25, 0.95);
+		backdrop-filter: blur(12px);
+		border-top: 1px solid rgba(255, 255, 255, 0.09);
+		border-radius: 24px 24px 0 0;
+		box-shadow: 0 -16px 50px rgba(0, 0, 0, 0.5);
+	}
+	/* Barrette de préhension du dessin : 38 × 4, blanc 15 %. */
+	.sheet .grip {
+		width: 38px;
+		height: 4px;
+		border-radius: 99px;
+		background: rgba(255, 255, 255, 0.15);
+	}
 </style>

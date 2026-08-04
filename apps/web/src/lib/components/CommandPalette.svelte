@@ -366,13 +366,16 @@
 {/if}
 
 <style>
+	/* Palette ⌘K en langage « Atlas » : surface surélevée, pilules, teinte de
+	   marque. Le comportement (navigation clavier, facettes, groupes) n'est pas
+	   touché — seule la peau change. */
 	.overlay {
 		position: fixed;
 		inset: 0;
 		/* Au-dessus des panes Leaflet (z-index <= 1000) sur la page carte. */
 		z-index: 1100;
-		background: hsl(222 40% 4% / 0.6);
-		backdrop-filter: blur(3px);
+		background: rgba(6, 7, 10, 0.66);
+		backdrop-filter: blur(6px);
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
@@ -383,22 +386,24 @@
 		max-height: 70vh;
 		display: flex;
 		flex-direction: column;
-		background: var(--surface-1);
-		border: 1px solid var(--border-strong);
-		border-radius: var(--r-lg);
+		background: rgba(21, 22, 28, 0.96);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.09);
+		border-radius: 22px;
 		overflow: hidden;
-		box-shadow: 0 24px 64px hsl(222 40% 2% / 0.6);
+		box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
 	}
 	.inputbar {
 		display: flex;
 		align-items: center;
-		gap: 6px;
+		gap: 8px;
 		flex-wrap: wrap;
-		padding: 12px 14px;
-		border-bottom: 1px solid var(--border);
+		padding: 16px 20px;
+		border-bottom: 1px solid var(--color-line);
 	}
 	.lens {
 		font-size: 14px;
+		color: var(--color-muted);
 	}
 	.inputbar input {
 		flex: 1;
@@ -406,21 +411,26 @@
 		background: none;
 		border: none;
 		outline: none;
-		color: var(--text-1);
-		font-size: 15px;
+		color: var(--color-text);
+		font-size: 16px;
 		padding: 4px 0;
 	}
+	.inputbar input::placeholder {
+		color: var(--color-muted);
+	}
+
+	/* Facette active : pilule de marque. */
 	.chip {
 		display: inline-flex;
 		align-items: center;
 		gap: 6px;
-		background: var(--accent-soft);
-		color: var(--accent);
-		border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+		background: color-mix(in srgb, var(--color-brand) 16%, transparent);
+		color: #ff9450;
+		border: 1px solid color-mix(in srgb, var(--color-brand) 32%, transparent);
 		border-radius: 999px;
-		padding: 3px 10px;
+		padding: 4px 12px;
 		font-size: 12px;
-		font-weight: 500;
+		font-weight: 600;
 		white-space: nowrap;
 	}
 	.chip span {
@@ -429,24 +439,25 @@
 	.chip:hover span {
 		opacity: 1;
 	}
+
 	.body {
 		overflow-y: auto;
-		padding: 6px;
+		padding: 8px;
 	}
 	.state {
-		color: var(--text-3);
+		color: var(--color-muted);
 		font-size: 13px;
 		text-align: center;
-		padding: 24px 0;
+		padding: 28px 0;
 		margin: 0;
 	}
 	.group-title {
-		color: var(--text-4);
-		font-size: 11px;
-		font-weight: 600;
+		color: var(--color-muted);
+		font-size: 10.5px;
+		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		margin: 10px 8px 4px;
+		letter-spacing: 0.12em;
+		margin: 12px 10px 6px;
 	}
 	.row {
 		display: flex;
@@ -456,32 +467,38 @@
 		text-align: left;
 		background: none;
 		border: none;
-		border-radius: var(--r-sm);
-		padding: 7px 8px;
-		font-size: 13px;
-		color: var(--text-1);
+		border-radius: 12px;
+		padding: 9px 10px;
+		font-size: 13.5px;
+		color: var(--color-text);
+		/* Plancher tactile : la palette s'ouvre aussi au doigt. */
+		min-height: 44px;
 	}
 	.row:hover,
 	.row.selected {
-		background: var(--surface-3);
+		background: rgba(255, 255, 255, 0.07);
+	}
+	.row.selected {
+		box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-brand) 35%, transparent);
 	}
 	.row-icon {
-		width: 22px;
-		height: 22px;
+		width: 24px;
+		height: 24px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 13px;
 		flex-shrink: 0;
 	}
+	/* Teintes de marqueur, reprises des tokens d'élément Atlas. */
 	.mk-relic {
-		color: var(--el-electricity);
+		color: var(--color-el-elec);
 	}
 	.mk-alpha {
-		color: var(--el-fire);
+		color: var(--color-el-feu);
 	}
 	.mk-ft {
-		color: var(--accent);
+		color: var(--color-el-eau);
 	}
 	.row-name {
 		flex: 1;
@@ -492,8 +509,8 @@
 	}
 	.row-name mark {
 		background: none;
-		color: var(--accent);
-		font-weight: 600;
+		color: #ff9450;
+		font-weight: 700;
 	}
 	.badges {
 		display: inline-flex;
@@ -502,24 +519,25 @@
 		flex-shrink: 0;
 	}
 	.muted {
-		color: var(--text-3);
+		color: var(--color-muted);
 		font-size: 11px;
 		white-space: nowrap;
 	}
 	.check {
 		font-size: 12px;
-		color: var(--text-4);
+		color: var(--color-muted);
 	}
 	.check.on {
-		color: var(--accent);
+		color: var(--color-el-eau);
 	}
 	.tab-hint {
 		font-size: 10px;
-		color: var(--text-4);
-		border: 1px solid var(--border-strong);
-		border-radius: 4px;
-		padding: 1px 5px;
+		color: var(--color-muted);
+		border: 1px solid var(--color-line);
+		border-radius: 6px;
+		padding: 1px 6px;
 	}
+
 	@media (max-width: 480px) {
 		.overlay {
 			padding: 0;

@@ -596,7 +596,7 @@
 		padding: 20px 14px;
 		border: 1px dashed var(--border-strong);
 		border-radius: var(--r-md);
-		background: hsl(222 30% 6% / 0.5);
+		background: rgba(13, 14, 18, 0.5);
 		color: var(--text-2);
 		font-size: 13px;
 		cursor: pointer;
@@ -604,7 +604,7 @@
 	}
 	.picker:hover {
 		border-color: var(--accent);
-		background: hsl(222 26% 12% / 0.6);
+		background: rgba(21, 22, 28, 0.6);
 	}
 	.picker.disabled {
 		opacity: 0.5;
@@ -636,7 +636,7 @@
 	.bar span {
 		display: block;
 		height: 100%;
-		background: linear-gradient(90deg, hsl(199 90% 46%), hsl(199 92% 62%));
+		background: linear-gradient(90deg, #ff5a0f, #ff8a3d);
 		transition: width 200ms cubic-bezier(0.23, 1, 0.32, 1);
 	}
 	.error {

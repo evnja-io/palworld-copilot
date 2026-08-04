@@ -1,21 +1,30 @@
 <script lang="ts">
-	let { element }: { element: string } = $props();
+	// Pastille d'élément — écrans 2a / 1c / 2b du handoff « Atlas ».
+	// La teinte passe par --el, posée en style inline : c'est la convention de
+	// la recette .el-badge (palwork-theme.css), qui porte fond, couleur, rayon,
+	// graisse et interlettrage.
+	import { elLabel, elVar } from '$lib/game/elements';
+
+	let { element, size = 'md' }: { element: string; size?: 'sm' | 'md' } = $props();
 </script>
 
-<span class="element" style="--el: var(--el-{element.toLowerCase()}, var(--el-normal))">
-	{element}
-</span>
+<span class="el-badge {size}" style="--el:{elVar(element)}">{elLabel(element)}</span>
 
 <style>
-	.element {
-		font-size: 10px;
-		font-weight: 600;
-		letter-spacing: 0.04em;
+	.el-badge {
+		display: inline-block;
 		text-transform: uppercase;
-		padding: 2px 7px;
-		border-radius: 999px;
-		color: var(--el);
-		background: color-mix(in srgb, var(--el) 16%, transparent);
-		border: 1px solid color-mix(in srgb, var(--el) 30%, transparent);
+		white-space: nowrap;
+	}
+	/* Cartes du Paldex (2a l.539) */
+	.md {
+		font-size: 10.5px;
+		padding: 4px 10px;
+	}
+	/* Slots d'équipe, plus serré (2b l.579) */
+	.sm {
+		font-size: 9.5px;
+		letter-spacing: 0.07em;
+		padding: 3px 8px;
 	}
 </style>

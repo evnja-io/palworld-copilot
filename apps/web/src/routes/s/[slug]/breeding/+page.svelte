@@ -889,4 +889,42 @@
 		border-radius: 4px;
 		padding: 1px 6px;
 	}
+
+	/* ── Passe « Atlas » ───────────────────────────────────────────────────
+	   Cet écran n'a pas de maquette : on lui applique le vocabulaire de la
+	   direction (titre display, cartes rondes, contrôles en pilules) plutôt
+	   que de le restructurer. Règles volontairement en fin de bloc : même
+	   spécificité que celles ci-dessus, l'ordre suffit à les emporter. */
+	h1 {
+		font-size: 40px;
+		letter-spacing: -0.03em;
+		margin-bottom: 4px;
+	}
+	.box {
+		background: var(--color-surface);
+		border: none;
+		border-radius: var(--radius-card);
+		padding: 20px 22px;
+	}
+	.seg {
+		border-radius: 999px;
+		padding: 7px 15px;
+		font-weight: 600;
+		background: var(--color-surface);
+		border-color: transparent;
+	}
+	.seg.on {
+		background: #fff;
+		color: var(--color-bg);
+		border-color: transparent;
+		font-weight: 700;
+	}
+	.modes {
+		gap: 8px;
+	}
+	@media (max-width: 1023.98px) {
+		h1 {
+			font-size: 34px;
+		}
+	}
 </style>

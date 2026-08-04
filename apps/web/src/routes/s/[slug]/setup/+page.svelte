@@ -176,20 +176,20 @@
 		position: relative; overflow: hidden; padding: 24px; min-height: 420px;
 		display: flex; flex-direction: column;
 		border-radius: var(--r-lg); border: 1px solid var(--border-strong);
-		background: radial-gradient(120% 90% at 50% -10%, hsl(222 30% 15%), var(--surface-1) 55%);
+		background: radial-gradient(120% 90% at 50% -10%, #1a1b22, var(--surface-1) 55%);
 	}
-	.glow { position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 380px; height: 260px; background: radial-gradient(closest-side, hsl(199 90% 55% / 0.22), transparent); pointer-events: none; }
+	.glow { position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 380px; height: 260px; background: radial-gradient(closest-side, rgba(255, 90, 15, 0.22), transparent); pointer-events: none; }
 
 	.hd { display: flex; align-items: center; justify-content: space-between; position: relative; gap: 12px; }
 	.kick { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 	.dots { display: flex; gap: 6px; flex: none; }
 	.d { width: 22px; height: 4px; border-radius: 999px; background: var(--surface-3); transition: background 200ms; }
-	.d.on { background: var(--accent); box-shadow: 0 0 10px hsl(199 90% 55% / 0.7); }
+	.d.on { background: var(--accent); box-shadow: 0 0 10px rgba(255, 90, 15, 0.7); }
 	.d.done { background: color-mix(in srgb, var(--el-leaf) 60%, transparent); }
 
 	.stage { position: relative; flex: 1; display: flex; flex-direction: column; padding-top: 18px; }
 	h1 { font-size: 22px; font-family: var(--font-display); }
-	.grad { background: linear-gradient(180deg, var(--text-1), hsl(199 60% 78%)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+	.grad { background: linear-gradient(180deg, var(--text-1), #ff8a3d); -webkit-background-clip: text; background-clip: text; color: transparent; }
 	.sub { color: var(--text-2); font-size: 13px; margin: 6px 0 18px; line-height: 1.5; }
 
 	form { display: flex; flex-direction: column; flex: 1; }
@@ -197,7 +197,7 @@
 	.fld { display: grid; gap: 6px; }
 	.fld.wide { grid-column: 1 / -1; }
 	.fld span { font-size: 12px; color: var(--text-2); }
-	.fld input { padding: 10px 13px; border: 1px solid var(--border-strong); border-radius: var(--r-md); background: hsl(222 30% 6% / 0.8); color: var(--text-1); font-size: 14px; }
+	.fld input { padding: 10px 13px; border: 1px solid var(--border-strong); border-radius: var(--r-md); background: rgba(13, 14, 18, 0.8); color: var(--text-1); font-size: 14px; }
 	.fld input:focus { border-color: var(--accent); }
 
 	.error { margin-top: 12px; color: var(--el-fire); background: color-mix(in srgb, var(--el-fire) 12%, transparent); border: 1px solid color-mix(in srgb, var(--el-fire) 30%, transparent); border-radius: var(--r-sm); padding: 8px 12px; font-size: 13px; }
@@ -206,28 +206,28 @@
 	.test { padding: 9px 16px; font-size: 13px; border-radius: var(--r-md); border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--text-1); }
 	.test-result { font-size: 12px; color: var(--text-2); }
 
-	.drop { display: grid; justify-items: center; gap: 8px; text-align: center; padding: 34px; border-radius: var(--r-lg); color: var(--text-1); font-size: 14px; font-weight: 600; text-decoration: none; border: 1px dashed var(--border-strong); background: hsl(222 30% 6% / 0.5); transition: border-color 160ms, background 160ms; }
-	.drop:hover { border-color: var(--accent); background: hsl(222 26% 12% / 0.7); }
+	.drop { display: grid; justify-items: center; gap: 8px; text-align: center; padding: 34px; border-radius: var(--r-lg); color: var(--text-1); font-size: 14px; font-weight: 600; text-decoration: none; border: 1px dashed var(--border-strong); background: rgba(13, 14, 18, 0.5); transition: border-color 160ms, background 160ms; }
+	.drop:hover { border-color: var(--accent); background: rgba(21, 22, 28, 0.7); }
 	.drop .dic { font-size: 26px; color: var(--accent); }
 
 	.ft { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 18px; position: relative; }
 	.sp { flex: 1; }
-	.ghost { padding: 10px 16px; border-radius: var(--r-md); background: hsl(222 24% 19% / 0.6); border: 1px solid var(--border-strong); color: var(--text-2); font-size: 13px; }
+	.ghost { padding: 10px 16px; border-radius: var(--r-md); background: rgba(35, 36, 48, 0.6); border: 1px solid var(--border-strong); color: var(--text-2); font-size: 13px; }
 	.glossy {
 		position: relative; overflow: hidden; padding: 12px 22px; border-radius: var(--r-md); border: none;
-		background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%)); color: var(--accent-ink);
+		background: linear-gradient(135deg, #ff5a0f, #ff8a3d); color: var(--accent-ink);
 		font-weight: 600; font-size: 14px; font-family: var(--font-display); text-decoration: none;
-		box-shadow: 0 6px 20px hsl(199 90% 45% / 0.35);
+		box-shadow: 0 6px 20px rgba(255, 90, 15, 0.35);
 	}
-	.glossy:hover { background: linear-gradient(180deg, hsl(199 94% 66%), hsl(199 90% 50%)); color: var(--accent-ink); border-color: transparent; }
+	.glossy:hover { background: linear-gradient(135deg, #ff6a24, #ff9a55); color: var(--accent-ink); border-color: transparent; }
 	.shine { position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(105deg, transparent, hsl(0 0% 100% / 0.35), transparent); transform: skewX(-18deg); animation: sweep 3.2s ease-in-out infinite; }
 
 	.done { align-items: center; text-align: center; }
-	.burst { font-size: 46px; filter: drop-shadow(0 0 20px hsl(199 90% 55% / 0.5)); }
+	.burst { font-size: 46px; filter: drop-shadow(0 0 20px rgba(255, 90, 15, 0.5)); }
 	.invitebox { width: 100%; max-width: 420px; margin: 16px 0 8px; }
 	.ihint { font-size: 12px; color: var(--text-3); margin-bottom: 8px; }
 	.invite { display: flex; gap: 8px; }
-	.invite code { flex: 1; padding: 10px 12px; border-radius: var(--r-md); background: hsl(222 30% 6% / 0.8); border: 1px solid var(--border); font-size: 12px; color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.invite code { flex: 1; padding: 10px 12px; border-radius: var(--r-md); background: rgba(13, 14, 18, 0.8); border: 1px solid var(--border); font-size: 12px; color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 	.copy { padding: 10px 12px; border-radius: var(--r-md); background: var(--accent-soft); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); font-size: 12px; }
 	.finish { margin-top: 12px; }
 

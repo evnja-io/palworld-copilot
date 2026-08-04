@@ -190,7 +190,7 @@
 		display: flex;
 	}
 	.sheet::backdrop {
-		background: hsl(222 40% 4% / 0.6);
+		background: rgba(6, 7, 10, 0.6);
 	}
 	.panel {
 		display: flex;

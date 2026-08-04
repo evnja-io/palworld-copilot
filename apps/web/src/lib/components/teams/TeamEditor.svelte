@@ -6,6 +6,7 @@
 	import TeamSlotCard from './TeamSlotCard.svelte';
 	import TeamPicker from './TeamPicker.svelte';
 	import { defaultSlotFor } from '$lib/game/team-data';
+	import { elVars } from '$lib/game/elements';
 	import pals from '@palworld-companion/game-data/pals.json';
 	import type { TeamEditorStore } from '$lib/game/team-editor.svelte';
 	import type { GroupUser } from '$lib/types';
@@ -157,6 +158,8 @@
 			<button
 				class="seat"
 				class:active={i === selected}
+				class:filled={!!slot}
+				style={slot ? elVars(ELEMENTS.get(slot.palId) ?? []) : ''}
 				id="team-seat-{i}"
 				role="tab"
 				aria-selected={i === selected}
@@ -165,26 +168,28 @@
 				onclick={() => (selected = i)}
 				onkeydown={onBenchKeydown}
 			>
-				<span class="seat-num tnum">{i + 1}</span>
+				<span class="seat-num tnum">{m.teams_slot_n({ n: i + 1 })}</span>
 				{#if slot}
-					{#if palIcon(slot.palId)}
-						<img
-							class:uncaught={!mine.has(slot.palId)}
-							src={palIcon(slot.palId)}
-							alt=""
-							width="64"
-							height="64"
-							loading="lazy"
-						/>
-					{:else}
-						<span class="no-icon" aria-hidden="true">?</span>
-					{/if}
+					<span class="portrait">
+						{#if palIcon(slot.palId)}
+							<img
+								class:uncaught={!mine.has(slot.palId)}
+								src={palIcon(slot.palId)}
+								alt=""
+								loading="lazy"
+							/>
+						{:else}
+							<span class="no-icon" aria-hidden="true">?</span>
+						{/if}
+					</span>
 					<span class="seat-name">{gameName(`pal:${slot.palId}`)}</span>
 					<span class="seat-els">
-						{#each ELEMENTS.get(slot.palId) ?? [] as el (el)}<ElementBadge element={el} />{/each}
+						{#each ELEMENTS.get(slot.palId) ?? [] as el (el)}
+							<ElementBadge element={el} size="sm" />
+						{/each}
 					</span>
 				{:else}
-					<span class="empty-circle" aria-hidden="true">+</span>
+					<span class="empty-plus" aria-hidden="true">+</span>
 					<span class="seat-name empty">{m.teams_slot_empty()}</span>
 				{/if}
 			</button>
@@ -221,88 +226,114 @@
 		flex-direction: column;
 		gap: 14px;
 	}
+
+	/* En-tête de l'équipe — 2b l.566. */
 	.topbar {
 		position: sticky;
 		top: 0;
 		z-index: 10;
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 16px;
 		flex-wrap: wrap;
 		padding: 10px 0;
-		background: var(--bg);
-		border-bottom: 1px solid var(--border);
+		background: var(--color-bg);
 	}
-	.ro-name {
-		margin: 0;
-		font-size: 20px;
-	}
+	.ro-name,
 	.name {
+		margin: 0;
 		flex: 1;
 		min-width: 180px;
 		font-family: var(--font-display);
-		font-size: 18px;
-		font-weight: 600;
-		letter-spacing: -0.02em;
+		font-size: 40px;
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+	/* Le nom reste éditable en place : c'est une fonctionnalité livrée que la
+	   maquette ne montre pas (elle affiche un titre figé). */
+	.name {
 		background: none;
 		border: 1px solid transparent;
-		padding: 6px 8px;
+		border-radius: var(--radius-panel);
+		padding: 2px 8px;
+		margin-left: -8px;
 	}
 	.name:hover {
-		border-color: var(--border);
+		border-color: var(--color-line);
 	}
 	.name:focus {
-		background: var(--input-bg);
-		border-color: var(--border-strong);
+		background: var(--color-surface);
+		border-color: rgba(255, 122, 47, 0.6);
+		box-shadow: 0 0 0 4px rgba(255, 122, 47, 0.12);
+		outline: none;
 	}
 	.meta {
 		margin: 0;
-		font-size: 12px;
-		color: var(--text-3);
+		font-size: 12.5px;
+		color: var(--color-muted);
 	}
 	.dirty {
 		display: inline-flex;
 		align-items: center;
 		gap: 5px;
 		font-size: 12px;
-		color: var(--el-electricity);
+		color: var(--color-el-elec);
 		white-space: nowrap;
 	}
 	.dot {
 		font-size: 9px;
 	}
+
+	.notes-toggle,
+	.save {
+		padding: 10px 20px;
+		border-radius: 999px;
+		font-size: 13px;
+		min-height: 40px;
+	}
+	.notes-toggle {
+		background: none;
+		border: 1px solid rgba(255, 255, 255, 0.14);
+		font-weight: 600;
+	}
+	.notes-toggle:hover {
+		background: rgba(255, 255, 255, 0.08);
+	}
 	.notes-toggle[aria-expanded='true'] {
-		background: var(--surface-3);
-		border-color: var(--border-strong);
+		background: rgba(255, 255, 255, 0.08);
+		border-color: var(--color-line);
 	}
 	.save {
-		background: var(--accent);
-		color: var(--accent-ink);
+		background: #fff;
+		color: var(--color-bg);
 		border-color: transparent;
-		font-weight: 600;
-		min-height: 40px;
-		padding: 8px 18px;
+		font-weight: 700;
+		transition: transform var(--duration-hover) var(--ease-out-soft);
 	}
 	.save:hover:not(:disabled) {
-		background: color-mix(in srgb, var(--accent) 85%, white);
+		background: #fff;
 		border-color: transparent;
+		transform: translateY(-2px);
 	}
 	.save:disabled {
-		background: var(--surface-3);
-		color: var(--text-3);
+		background: var(--color-surface);
+		color: var(--color-muted);
 		cursor: default;
+		transform: none;
 	}
+
 	.notes {
 		font: inherit;
-		color: var(--text-1);
-		background: var(--input-bg);
-		border: 1px solid var(--border);
-		border-radius: var(--r-sm);
-		padding: 8px 10px;
+		color: var(--color-text);
+		background: var(--color-surface);
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius-panel);
+		padding: 12px 14px;
 		resize: vertical;
 	}
 	.notes::placeholder {
-		color: var(--text-3);
+		color: var(--color-muted);
 	}
 	.notes:focus-visible {
 		outline: 2px solid var(--focus-ring);
@@ -311,96 +342,174 @@
 	.notes-ro {
 		margin: 0;
 		font-size: 13px;
-		color: var(--text-2);
+		color: var(--color-muted);
 		white-space: pre-wrap;
 	}
+
+	/* Les 5 slots — 2b l.574. */
 	.bench {
 		display: grid;
 		grid-template-columns: repeat(5, minmax(0, 1fr));
-		gap: 8px;
-	}
-	@media (max-width: 700px) {
-		.bench {
-			grid-template-columns: repeat(5, minmax(76px, 1fr));
-			overflow-x: auto;
-			padding-bottom: 4px;
-		}
+		gap: 14px;
 	}
 	.seat {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 6px;
-		min-height: 44px;
-		padding: 10px 6px;
-		background: var(--surface-1);
-		border: 1px solid var(--border);
-		border-radius: var(--r-md);
+		min-height: 190px;
+		padding: 16px 14px;
+		text-align: center;
+		background: #121318;
+		border: 1.5px dashed rgba(255, 255, 255, 0.12);
+		border-radius: 18px;
+		justify-content: center;
+		transition:
+			border-color var(--duration-hover) var(--ease-out-soft),
+			transform var(--duration-hover) var(--ease-out-soft);
 	}
 	.seat:hover {
-		background: var(--surface-2);
-		border-color: var(--border-strong);
+		background: #121318;
+		border-color: rgba(255, 255, 255, 0.3);
 	}
-	.seat.active {
-		background: color-mix(in srgb, var(--accent) 8%, var(--surface-1));
-		border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+	/* Slot occupé : teinte de l'élément (bi-type = mélange des deux). */
+	.seat.filled {
+		justify-content: flex-start;
+		background:
+			linear-gradient(
+				170deg,
+				color-mix(in srgb, var(--el) var(--el-a, 24%), transparent),
+				color-mix(in srgb, var(--el2, var(--el)) var(--el2-a, 4%), transparent)
+			),
+			var(--color-surface);
+		border: 1px solid rgba(255, 255, 255, 0.06);
 	}
+	.seat.filled:hover {
+		border-color: color-mix(in srgb, var(--el) 40%, transparent);
+		transform: translateY(-4px);
+	}
+	.seat.filled.active {
+		--el-a: 30%;
+		--el2-a: 5%;
+		border: 1.5px solid color-mix(in srgb, var(--el) 55%, transparent);
+		box-shadow: 0 0 30px color-mix(in srgb, var(--el) 18%, transparent);
+	}
+	.seat.active:not(.filled) {
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+
 	.seat-num {
-		font-family: var(--font-display);
-		font-size: 11px;
-		font-weight: 600;
-		color: var(--text-4);
+		font: 10.5px ui-monospace, Menlo, monospace;
+		color: rgba(255, 255, 255, 0.4);
 	}
-	.seat.active .seat-num {
-		color: var(--accent);
+
+	.portrait {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		aspect-ratio: 1;
+		margin: 10px 0;
+		border-radius: 14px;
+		background: repeating-linear-gradient(
+			45deg,
+			rgba(255, 255, 255, 0.06) 0 12px,
+			transparent 12px 24px
+		);
 	}
-	.seat img {
+	.portrait img {
+		width: 72%;
+		height: 72%;
+		object-fit: contain;
+		filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
 		/* Signature Paldex : non capturé = désaturé. */
-		transition: filter 200ms cubic-bezier(0.23, 1, 0.32, 1);
+		transition: filter 200ms var(--ease-out-soft);
 	}
-	.seat img.uncaught {
+	.portrait img.uncaught {
 		filter: grayscale(1) opacity(0.45);
 	}
 	.no-icon {
-		width: 64px;
-		height: 64px;
-		display: grid;
-		place-items: center;
-		color: var(--text-4);
-		background: var(--surface-2);
-		border-radius: var(--r-sm);
+		font-family: var(--font-display);
+		font-size: 28px;
+		font-weight: 800;
+		color: rgba(255, 255, 255, 0.18);
 	}
-	.empty-circle {
-		width: 64px;
-		height: 64px;
-		display: grid;
-		place-items: center;
-		font-size: 20px;
-		color: var(--text-4);
-		border: 1px dashed var(--border-strong);
-		border-radius: 50%;
+	.empty-plus {
+		font-size: 26px;
+		line-height: 1;
+		color: #5c636e;
 	}
+
 	.seat-name {
 		max-width: 100%;
-		font-size: 12px;
-		font-weight: 500;
-		color: var(--text-2);
+		font-size: 14px;
+		font-weight: 700;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
 	.seat-name.empty {
-		color: var(--text-4);
+		font-size: 12px;
+		font-weight: 400;
+		color: #5c636e;
+		margin-top: 6px;
 	}
 	.seat-els {
 		display: flex;
 		gap: 4px;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-top: 6px;
 	}
-	@media (max-width: 700px) {
+
+	/* Carrousel horizontal de vignettes 88 px — 4c l.247. */
+	@media (max-width: 1023.98px) {
+		.ro-name,
+		.name {
+			font-size: 28px;
+			letter-spacing: -0.02em;
+		}
+		.bench {
+			display: flex;
+			gap: 10px;
+			overflow-x: auto;
+			scrollbar-width: none;
+			margin-left: calc(-1 * var(--gutter, 20px));
+			margin-right: calc(-1 * var(--gutter, 20px));
+			padding: 0 var(--gutter, 20px) 4px;
+		}
+		.bench::-webkit-scrollbar {
+			display: none;
+		}
+		.seat {
+			flex: none;
+			width: 88px;
+			min-height: 118px;
+			padding: 10px 8px;
+			border-radius: 16px;
+		}
+		.portrait {
+			margin: 0;
+			border-radius: 11px;
+			background: none;
+		}
+		.portrait img {
+			width: 82%;
+			height: 82%;
+		}
+		.seat-name {
+			font-size: 11.5px;
+			margin-top: 5px;
+		}
+		.seat-num,
 		.seat-els {
 			display: none;
+		}
+		.empty-plus {
+			font-size: 20px;
+		}
+		.seat-name.empty {
+			font-size: 10px;
+			margin-top: 4px;
 		}
 	}
 </style>

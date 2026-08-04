@@ -121,7 +121,7 @@
 		padding: 16px 18px;
 		border-radius: var(--r-md);
 		border: 1px solid var(--border);
-		background: linear-gradient(180deg, hsl(222 26% 12% / 0.6), hsl(222 28% 9% / 0.7));
+		background: linear-gradient(180deg, rgba(21, 22, 28, 0.6), rgba(13, 14, 18, 0.7));
 	}
 	.steps h3 {
 		display: flex;
@@ -143,7 +143,7 @@
 		font-size: 12px;
 		font-weight: 600;
 		color: var(--accent-ink);
-		background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%));
+		background: linear-gradient(135deg, #ff5a0f, #ff8a3d);
 	}
 	.steps p {
 		margin: 0;
@@ -174,11 +174,11 @@
 		font-weight: 600;
 		color: var(--text-1);
 		border: 1px solid var(--border-strong);
-		background: hsl(222 24% 19% / 0.6);
+		background: rgba(35, 36, 48, 0.6);
 		transition: border-color 140ms, transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
 	}
 	.ghost:hover {
-		border-color: hsl(199 90% 55% / 0.45);
+		border-color: rgba(255, 90, 15, 0.45);
 		transform: translateY(-1px);
 	}
 

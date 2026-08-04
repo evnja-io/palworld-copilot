@@ -215,14 +215,14 @@
 		inset: 0;
 		z-index: -2;
 		background:
-			radial-gradient(1px 1px at 12% 22%, hsl(220 40% 85% / 0.5), transparent 100%),
-			radial-gradient(1px 1px at 31% 68%, hsl(220 40% 85% / 0.3), transparent 100%),
-			radial-gradient(1.5px 1.5px at 47% 12%, hsl(220 40% 85% / 0.4), transparent 100%),
-			radial-gradient(1px 1px at 63% 41%, hsl(220 40% 85% / 0.35), transparent 100%),
-			radial-gradient(1px 1px at 78% 76%, hsl(220 40% 85% / 0.45), transparent 100%),
-			radial-gradient(1.5px 1.5px at 89% 28%, hsl(220 40% 85% / 0.3), transparent 100%),
-			radial-gradient(1px 1px at 22% 88%, hsl(220 40% 85% / 0.3), transparent 100%),
-			linear-gradient(180deg, hsl(222 34% 5%), var(--bg) 55%, hsl(222 30% 8%));
+			radial-gradient(1px 1px at 12% 22%, rgba(236, 238, 242, 0.5), transparent 100%),
+			radial-gradient(1px 1px at 31% 68%, rgba(236, 238, 242, 0.3), transparent 100%),
+			radial-gradient(1.5px 1.5px at 47% 12%, rgba(236, 238, 242, 0.4), transparent 100%),
+			radial-gradient(1px 1px at 63% 41%, rgba(236, 238, 242, 0.35), transparent 100%),
+			radial-gradient(1px 1px at 78% 76%, rgba(236, 238, 242, 0.45), transparent 100%),
+			radial-gradient(1.5px 1.5px at 89% 28%, rgba(236, 238, 242, 0.3), transparent 100%),
+			radial-gradient(1px 1px at 22% 88%, rgba(236, 238, 242, 0.3), transparent 100%),
+			linear-gradient(180deg, #08090c, var(--bg) 55%, #0d0e12);
 	}
 	.aurora {
 		position: absolute;
@@ -316,7 +316,7 @@
 		padding: 44px 40px 36px;
 		border-radius: var(--r-lg);
 		border: 1px solid var(--border-strong);
-		background: linear-gradient(180deg, hsl(222 26% 14% / 0.62), hsl(222 30% 8% / 0.72));
+		background: linear-gradient(180deg, rgba(26, 27, 34, 0.62), rgba(13, 14, 18, 0.72));
 		backdrop-filter: blur(14px);
 		-webkit-backdrop-filter: blur(14px);
 		animation: rise 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
@@ -328,7 +328,7 @@
 		inset: 0 0 auto;
 		height: 1px;
 		border-radius: inherit;
-		background: linear-gradient(90deg, transparent 8%, hsl(199 90% 75% / 0.55), transparent 92%);
+		background: linear-gradient(90deg, transparent 8%, rgba(255, 138, 61, 0.55), transparent 92%);
 	}
 	.mark {
 		margin-bottom: 14px;
@@ -356,7 +356,7 @@
 		font-size: clamp(28px, 5vw, 42px);
 		line-height: 1.12;
 		margin-bottom: 12px;
-		background: linear-gradient(180deg, var(--text-1), hsl(220 25% 74%));
+		background: linear-gradient(180deg, var(--text-1), #c7ccd6);
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
@@ -382,8 +382,8 @@
 		font-size: 15px;
 		font-weight: 600;
 		color: var(--accent-ink);
-		background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%));
-		border: 1px solid hsl(199 90% 70% / 0.6);
+		background: linear-gradient(135deg, #ff5a0f, #ff8a3d);
+		border: 1px solid rgba(255, 138, 61, 0.6);
 		transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1), filter 140ms;
 	}
 	.cta:hover {
@@ -484,21 +484,21 @@
 		padding: 18px 16px;
 		border-radius: var(--r-md);
 		border: 1px solid var(--border);
-		background: linear-gradient(180deg, hsl(222 26% 12% / 0.6), hsl(222 28% 9% / 0.7));
+		background: linear-gradient(180deg, rgba(21, 22, 28, 0.6), rgba(13, 14, 18, 0.7));
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		transition: border-color 140ms, transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
 		animation: rise 0.7s cubic-bezier(0.23, 1, 0.32, 1) var(--delay) both;
 	}
 	.feature:hover {
-		border-color: hsl(199 90% 55% / 0.35);
+		border-color: rgba(255, 90, 15, 0.35);
 		transform: translateY(-2px);
 	}
 	.feature img {
 		box-sizing: content-box;
 		padding: 7px;
 		border-radius: var(--r-sm);
-		background: hsl(222 24% 19% / 0.8);
+		background: rgba(35, 36, 48, 0.8);
 		border: 1px solid var(--border);
 		filter: saturate(0.9);
 		margin-bottom: 10px;
@@ -549,7 +549,7 @@
 		padding: 20px 18px;
 		border-radius: var(--r-md);
 		border: 1px solid var(--border);
-		background: linear-gradient(180deg, hsl(222 26% 12% / 0.6), hsl(222 28% 9% / 0.7));
+		background: linear-gradient(180deg, rgba(21, 22, 28, 0.6), rgba(13, 14, 18, 0.7));
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 	}
@@ -564,7 +564,7 @@
 		font-size: 14px;
 		font-weight: 600;
 		color: var(--accent-ink);
-		background: linear-gradient(180deg, hsl(199 92% 62%), hsl(199 90% 46%));
+		background: linear-gradient(135deg, #ff5a0f, #ff8a3d);
 	}
 	.step h3 {
 		font-size: 14px;
@@ -587,7 +587,7 @@
 	.qa details {
 		border: 1px solid var(--border);
 		border-radius: var(--r-md);
-		background: linear-gradient(180deg, hsl(222 26% 12% / 0.6), hsl(222 28% 9% / 0.7));
+		background: linear-gradient(180deg, rgba(21, 22, 28, 0.6), rgba(13, 14, 18, 0.7));
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		padding: 0 16px;
@@ -639,7 +639,7 @@
 		padding: 28px 24px;
 		border-radius: var(--r-lg);
 		border: 1px dashed var(--border-strong);
-		background: hsl(222 26% 12% / 0.45);
+		background: rgba(21, 22, 28, 0.45);
 	}
 	.selfhost-card h2 {
 		font-family: var(--font-display);
@@ -665,11 +665,11 @@
 		font-weight: 600;
 		color: var(--text-1);
 		border: 1px solid var(--border-strong);
-		background: hsl(222 24% 19% / 0.6);
+		background: rgba(35, 36, 48, 0.6);
 		transition: border-color 140ms, transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
 	}
 	.ghost:hover {
-		border-color: hsl(199 90% 55% / 0.45);
+		border-color: rgba(255, 90, 15, 0.45);
 		transform: translateY(-1px);
 	}
 

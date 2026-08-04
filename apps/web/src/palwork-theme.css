@@ -1,0 +1,69 @@
+/* Palwork — design tokens Tailwind v4
+   Import dans src/app.css :  @import "tailwindcss";  @import "./palwork-theme.css";  */
+
+@theme {
+  /* Surfaces */
+  --color-bg: #0d0e12;
+  --color-surface: #15161c;
+  --color-raised: #1a1b22;
+  --color-line: color-mix(in oklab, white 7%, transparent);
+  --color-text: #eceef2;
+  --color-muted: #8f96a3;
+
+  /* Marque */
+  --color-brand: #ff5a0f;
+  --color-brand-soft: #ff8a3d;
+  --color-brand-tint: color-mix(in oklab, #ff5a0f 14%, transparent);
+
+  /* Éléments (teintent cartes, badges, héros) */
+  --color-el-feu: #ff5a0f;
+  --color-el-eau: #2f8fff;
+  --color-el-feuille: #3fb950;
+  --color-el-elec: #f5c518;
+  --color-el-glace: #56c8e8;
+  --color-el-tenebres: #8b5cf6;
+  --color-el-terre: #c98a3d;
+  --color-el-dragon: #7c5cff;
+  --color-el-normal: #a8a29e;
+
+  /* Typographie */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+
+  /* Rayons */
+  --radius-card: 20px;
+  --radius-panel: 14px;
+  --radius-hero: 24px;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-hover: 150ms;
+  --duration-reveal: 400ms;
+}
+
+/* Recettes de teinte élément — ex. class="el-card" style="--el:var(--color-el-feu)" */
+@layer components {
+  .el-card {
+    background:
+      linear-gradient(160deg, color-mix(in oklab, var(--el) 30%, transparent), color-mix(in oklab, var(--el) 5%, transparent)),
+      var(--color-surface);
+  }
+  .el-badge {
+    background: color-mix(in oklab, var(--el) 17%, transparent);
+    color: color-mix(in oklab, var(--el) 65%, white);
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .el-hero {
+    background:
+      radial-gradient(70% 90% at 80% 10%, color-mix(in oklab, white 30%, transparent), transparent 55%),
+      linear-gradient(160deg, var(--el) 0%, color-mix(in oklab, var(--el) 55%, black) 45%, color-mix(in oklab, var(--el) 18%, black) 100%);
+    border-radius: var(--radius-hero);
+  }
+  .lift { transition: transform var(--duration-hover) var(--ease-out-soft); }
+  .lift:hover { transform: translateY(-4px); }
+}
+
+@keyframes pw-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes pw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }

@@ -13,3 +13,7 @@ __pycache__/
 !.env.example
 .playwright-mcp/
 .claude/worktrees/
+
+# Métadonnées WSL/Windows collées aux fichiers copiés depuis l'hôte
+# (déjà nettoyées une fois : voir la branche fix/remove-zone-identifier).
+*:Zone.Identifier

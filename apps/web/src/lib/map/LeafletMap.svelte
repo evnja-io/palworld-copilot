@@ -137,9 +137,22 @@
 		padding: 0 4px;
 	}
 	/* Zones de spawn (vecteurs Leaflet - hors scope Svelte, d'où :global).
-	   L'opacité s'accumule aux recouvrements : la densité se lit d'elle-même. */
+	   L'opacité s'accumule aux recouvrements : la densité se lit d'elle-même.
+	   Le battement de 2,4 s est celui du dessin 3c (l.445) ; il porte sur
+	   `fill-opacity` et non sur `opacity`, sans quoi le cumul aux recouvrements
+	   — qui EST la lecture de densité — se mettrait à clignoter aussi. */
 	:global(.spawn-zone) {
-		fill: var(--accent);
+		fill: #ff7a2f;
 		fill-opacity: 0.13;
+		animation: spawn-pulse 2.4s ease-in-out infinite;
+	}
+	@keyframes spawn-pulse {
+		0%,
+		100% {
+			fill-opacity: 0.1;
+		}
+		50% {
+			fill-opacity: 0.18;
+		}
 	}
 </style>

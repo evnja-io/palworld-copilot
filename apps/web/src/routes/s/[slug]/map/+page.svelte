@@ -333,6 +333,15 @@
 		min-height: 420px;
 		position: relative;
 	}
+	/* Cadre arrondi du dessin 3c (l.441 : marges 20 px, rayon 24). Desktop
+	   seulement : sous 1024 px, l'écran 5b est bord à bord. */
+	@media (min-width: 1024px) {
+		.map-wrap {
+			margin: 6px 20px 20px;
+			border-radius: var(--radius-hero);
+			overflow: hidden;
+		}
+	}
 	.sidebar {
 		flex: none;
 		/* 340 px est la largeur de confort ; la borne relative sert au repli
@@ -454,5 +463,41 @@
 	}
 	:global(.leaflet-container .leaflet-right) {
 		right: env(safe-area-inset-right, 0px);
+	}
+
+	/* ── Contrôles de zoom en langage « Atlas » (3c l.465) : carrés de 36 px,
+	   fond translucide, rayon 12. Même piège de spécificité que ci-dessus —
+	   leaflet.css est inséré APRÈS les styles du composant, d'où les deux
+	   classes sur chaque sélecteur. */
+	:global(.leaflet-container .leaflet-control-zoom) {
+		border: none;
+		box-shadow: none;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin: 24px;
+	}
+	:global(.leaflet-container .leaflet-control-zoom a) {
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		background: rgba(13, 14, 18, 0.85);
+		backdrop-filter: blur(6px);
+		color: #c7ccd6;
+		font-family: var(--font-body);
+		font-size: 17px;
+		font-weight: 600;
+	}
+	:global(.leaflet-container .leaflet-control-zoom a:hover) {
+		background: rgba(255, 255, 255, 0.1);
+		color: var(--color-text);
+	}
+	/* leaflet.css arrondit le premier/dernier d'une pile collée : ici ils sont
+	   séparés par un gap, chacun garde son propre rayon. */
+	:global(.leaflet-container .leaflet-control-zoom a:first-child),
+	:global(.leaflet-container .leaflet-control-zoom a:last-child) {
+		border-radius: 12px;
 	}
 </style>

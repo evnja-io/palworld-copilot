@@ -89,11 +89,11 @@
 		padding: 44px 24px;
 		border: 1px dashed var(--border-strong);
 		border-radius: var(--r-lg);
-		background: hsl(222 30% 6% / 0.4);
+		background: rgba(13, 14, 18, 0.4);
 	}
 	.empty .eic {
 		font-size: 40px;
-		filter: drop-shadow(0 0 18px hsl(199 90% 55% / 0.4));
+		filter: drop-shadow(0 0 18px rgba(255, 90, 15, 0.4));
 	}
 	.empty p {
 		color: var(--text-2);
